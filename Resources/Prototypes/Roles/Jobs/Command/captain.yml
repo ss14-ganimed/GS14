@@ -4,18 +4,15 @@
   description: job-description-captain
   playTimeTracker: JobCaptain
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 54000 # 15 hours
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 54000 # 15 hours
+    - !type:RoleTimeRequirement
+      role: JobHeadOfPersonnel
+      time: 21000 #6 часов Ganimed
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 54000 # 15 hours
+      time: 21000 #6 часов Ganimed
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 54000 # 15 hours
+      time: 43000 #12 часов Ganimed
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

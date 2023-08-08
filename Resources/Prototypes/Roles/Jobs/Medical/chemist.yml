@@ -4,9 +4,12 @@
   description: job-description-chemist
   playTimeTracker: JobChemist
   requirements:
+    - !type:RoleTimeRequirement # Ganined-RoleTime (10h)
+      role: JobMedicalDoctor
+      time: 10800 #3 часа Ganimed
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 14400 #4 hrs
+      time: 30000 #8,3 часа Ganimed
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo

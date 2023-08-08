@@ -4,9 +4,11 @@
   description: job-description-engineer
   playTimeTracker: JobStationEngineer
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 14400 #4 hrs
+    - !type:RoleTimeRequirement
+      role: JobTechnicalAssistant
+      time: 21600 #6 часов Ganimed
+    - !type:OverallPlaytimeRequirement
+      time: 14400 #8 часов Ganimed
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce

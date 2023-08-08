@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 14400 #4 hrs
+      time: 25200 #8,3 часов Ganimed
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd

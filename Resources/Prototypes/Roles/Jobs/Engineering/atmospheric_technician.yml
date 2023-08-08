@@ -4,9 +4,12 @@
   description: job-description-atmostech
   playTimeTracker: JobAtmosphericTechnician
   requirements:
+    - !type:RoleTimeRequirement
+      role: JobStationEngineer
+      time: 14400 #4 часа Ganimed
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 54000 # 15 hrs
+      time: 43200 #12 часов Ganimed
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce

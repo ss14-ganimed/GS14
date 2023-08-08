@@ -5,22 +5,20 @@
   playTimeTracker: JobChiefEngineer
   requirements:
     - !type:RoleTimeRequirement
-      role: JobAtmosphericTechnician
-      time: 21600 #6 hrs
+      role: JobSeniorEngineer
+      time: 24000 #6,6 часов Ganimed
     - !type:RoleTimeRequirement
       role: JobStationEngineer
-      time: 21600 #6 hrs
+      time: 30000 #8,3 часа Ganimed
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 36000 #10 hrs
-    - !type:OverallPlaytimeRequirement
-      time: 144000 #40 hrs      
+      time: 86400 #24 часа Ganimed    
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
-  canBeAntag: false
+  canBeAntag: true
   access:
   - Maintenance
   - Engineering

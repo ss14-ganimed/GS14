@@ -4,8 +4,11 @@
   description: job-description-lawyer
   playTimeTracker: JobLawyer
   requirements:
+    - !type:DepartamentPlaytimeRequirement
+      departament: Security
+      time: 19200 #5,3 часа Ganimed
     - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
+      time: 21600 #6 часов Ganimed
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hop

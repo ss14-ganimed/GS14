@@ -4,11 +4,11 @@
   description: job-description-salvagespec
   playTimeTracker: JobSalvageSpecialist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Cargo
-      time: 10800 # 3 hrs
+    - !type:RoleTimeRequirement
+      role: JobCargoTechnician
+      time: 18000 # 5 часов Ganimed
     - !type:OverallPlaytimeRequirement
-      time: 36000 #10 hrs
+      time: 36000 #5,3 часа Ganimed
   icon: "JobIconShaftMiner"
   startingGear: SalvageSpecialistGear
   supervisors: job-supervisors-qm
