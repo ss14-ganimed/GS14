@@ -21,7 +21,6 @@
   - Quartermaster
   - Maintenance
   - External
-  - Command
 
 - type: startingGear
   id: QuartermasterGear
