@@ -1706,6 +1706,12 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> ReplayAutoRecord =
             CVarDef.Create("replay.auto_record", false, CVar.SERVERONLY);
+			
+		/// <summary>
+        /// Time to afk before automatic stasisstorage transfer
+        /// </summary>
+		public static readonly CVarDef<float> AutoTransferToStasisDelay =
+            CVarDef.Create("stasischamberssd.auto_transfer_to_stasis_delay", 900f, CVar.SERVERONLY);
 
         /// <summary>
         /// The file name to record automatic replays to. The path is relative to <see cref="CVars.ReplayDirectory"/>.

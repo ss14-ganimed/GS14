@@ -176,6 +176,14 @@
   event: !type:WakeActionEvent
 
 - type: instantAction
+  id: StasisChamberLeave
+  name: action-name-stasisChamberLeave
+  description: action-desc-stasisChamberLeave
+  icon: { sprite: Ganimed/Structures/Machines/stasisChamber.rsi, state: icon }
+  checkCanInteract: false
+  event: !type:StasisChamberLeaveActionEvent
+
+- type: instantAction
   id: ActivateHonkImplant
   name: action-name-honk
   description: action-desc-honk

@@ -94,5 +94,8 @@ namespace Content.Server.Objectives.Conditions
         {
             return Target?.GetHashCode() ?? 0;
         }
+		
+		public bool IsTarget(EntityUid uid)
+            => Target is not null && Target.OwnedEntity == uid;
     }
 }

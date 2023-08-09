@@ -1980,7 +1980,7 @@ Entries:
 - author: EmoGarbage404
   changes:
   - {message: Midround anomaly spawns no longer have a high chance of spawning in
-      escape pods., type: Fix}
+      escape Chambers., type: Fix}
   id: 4305
   time: '2023-07-23T03:57:13.0000000+00:00'
 - author: FillerVK

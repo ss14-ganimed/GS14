@@ -1,0 +1,73 @@
+- type: entity
+  noSpawn: true
+  id: BaseStasisConsole
+  name: stasis network terminal
+  description: Smart touchscreen connected to the station global stasis network. Has a listing of all locally-saved bodies and allows you to retrieve valuable station's posessings that got mixed in.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: AccessReader
+      access: [ [ "Command" ] ]
+    - type: Appearance
+    - type: Sprite
+      sprite: Ganimed/Structures/Machines/stasisStorageConsole.rsi
+      drawdepth: WallMountedItems
+      layers:
+        - state: stasisStorageConsole
+    - type: Icon
+      sprite: Ganimed/Structures/Machines/stasisStorageConsole.rsi
+      state: icon
+    - type: Transform
+      anchored: true
+    - type: Storage
+      capacity: 2000
+      clickInsert: false
+    - type: ActivatableUI
+      key: enum.StasisStorageConsoleKey.Key
+    - type: UserInterface
+      interfaces:
+        - key: enum.StasisStorageConsoleKey.Key
+          type: StasisChamberBoundUserInterface
+    - type: StasisStorageConsole
+      whitelist:
+        tags:
+          - HighRiskItem
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+    - type: WallMount
+      arc: 90
+      direction: 0
+    - type: InteractionOutline
+    - type: Clickable
+    
+  
+- type: entity
+  parent: BaseStasisConsole
+  id: StasisStorageConsole
+    
+      
+- type: entity
+  parent: [ StasisStorageConsole, BaseStructure ]
+  id: StasisChamber
+  name: stasis chamber
+  description: Portative stasis chamber. Can temporarily freeze all the processes inside of a humanoid body. Auto connected to the global station stasis network.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Structures/Machines/stasisChamber.rsi
+      layers:
+      - state: chamber-open
+        map: [ "enum.StasisChamberVisualLayers.Cover" ]
+    - type: Icon
+      sprite: Ganimed/Structures/Machines/stasisChamber.rsi
+      state: icon
+    - type: StasisChamber
+      autoTransferToStasisDelay: 900
+    - type: StasisStorageConsole
+      isItReallyStasisChamber: true
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+        Chamber-body:
+          !type:ContainerSlot
+          showEnts: false

@@ -16,6 +16,12 @@ namespace Content.Server.Objectives.Conditions
             var allHumans = EntityManager.EntityQuery<MindContainerComponent>(true).Where(mc =>
             {
                 var entity = mc.Mind?.OwnedEntity;
+				
+				if (entity == default)
+                    return false;
+				
+                if (EntityManager.IsQueuedForDeletion(entity!.Value))
+                    return false;
 
                 if (entity == default)
                     return false;
