@@ -1,4 +1,5 @@
 - type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
   noSpawn: true
   id: BaseStasisConsole
   name: stasis network terminal
@@ -9,21 +10,66 @@
     - type: AccessReader
       access: [ [ "Command" ] ]
     - type: Appearance
+    - type: WiresVisuals
     - type: Sprite
       sprite: Ganimed/Structures/Machines/stasisStorageConsole.rsi
-      drawdepth: WallMountedItems
       layers:
         - state: stasisStorageConsole
     - type: Icon
       sprite: Ganimed/Structures/Machines/stasisStorageConsole.rsi
       state: icon
-    - type: Transform
-      anchored: true
+    - type: ApcPowerReceiver
+      powerLoad: 300
+      priority: Low
+    - type: StaticPrice
+      price: 300
+    - type: Anchorable
+      delay: 2
+    - type: WiresPanel
+    - type: Wires
+      BoardName: "StasisChamber"
+      LayoutId: StasisChamber
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+    
+  
+- type: entity
+  parent: BaseStasisConsole
+  id: StasisStorageTerminal
+  components:
+    - type: ApcPowerReceiver
+      powerLoad: 1000
+      priority: High
+    - type: WiresPanel
+    - type: Wires
+      BoardName: "StasisStorageTerminal"
+      LayoutId: StasisStorageTerminal
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 700
+        behaviors:
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+    - type: StaticPrice
+      price: 0
     - type: Storage
       capacity: 2000
       clickInsert: false
     - type: ActivatableUI
       key: enum.StasisStorageConsoleKey.Key
+    - type: ActivatableUIRequiresPower
     - type: UserInterface
       interfaces:
         - key: enum.StasisStorageConsoleKey.Key
@@ -35,20 +81,10 @@
     - type: ContainerContainer
       containers:
         storagebase: !type:Container
-    - type: WallMount
-      arc: 90
-      direction: 0
-    - type: InteractionOutline
-    - type: Clickable
-    
-  
-- type: entity
-  parent: BaseStasisConsole
-  id: StasisStorageConsole
     
       
 - type: entity
-  parent: [ StasisStorageConsole, BaseStructure ]
+  parent: BaseStasisConsole
   id: StasisChamber
   name: stasis chamber
   description: Portative stasis chamber. Can temporarily freeze all the processes inside of a humanoid body. Auto connected to the global station stasis network.
@@ -71,3 +107,46 @@
         Chamber-body:
           !type:ContainerSlot
           showEnts: false
+
+- type: entity
+  id: StasisChamberMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: stasis chamber circuit board
+  description: A machine printed circuit board for the stasis chamber.
+  components:
+  - type: Sprite
+    state: medical
+  - type: MachineBoard
+    prototype: StasisChamber
+    requirements:
+      Manipulator: 3
+      MatterBin: 2
+    materialRequirements:
+      ReinforcedUraniumGlass: 10
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 30
+      Plastic: 50
+      Silver: 10
+  - type: StaticPrice
+    price: 20
+
+- type: entity
+  id: StasisStorageTerminalMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: stasis terminal circuit board
+  description: An obscure circuit board for the stasis network terminal.
+  components:
+  - type: Sprite
+    state: abductor_mod
+  - type: MachineBoard
+    prototype: StasisStorageTerminal
+    requirements:
+      Capacitor: 3
+      MatterBin: 5
+    materialRequirements:
+      Plasma: 15
+      Uranium: 10
+      Gold: 10
+  - type: StaticPrice
+    price: 0

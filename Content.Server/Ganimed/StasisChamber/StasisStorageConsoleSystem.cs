@@ -177,7 +177,7 @@ public sealed class StasisStorageConsoleSystem : EntitySystem
                 Loc.GetString("stasisChamber-sender"));
             
 			string formatRTime = string.Format("{0:hh\\:mm\\:ss}", _gameTiming.RealTime);
-            component.StoredEntities.Add($"{MetaData(entityToTransfer).EntityName} [{jobName}] - {formatRTime}");
+            component.StoredEntities.Add($"[{jobName}] {MetaData(entityToTransfer).EntityName} - {formatRTime}");
         }
 
         UndressEntity(uid, component, entityToTransfer);
