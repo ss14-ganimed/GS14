@@ -1,0 +1,41 @@
+- type: job
+  id: BridgeOfficer
+  name: job-name-bridge-officer
+  description: job-description-captain
+  playTimeTracker: JobBridgeOfficer
+  requirements:
+    - !type:OverallTimeRequirement
+      time: 36000 # 10ч Ganimed
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 25200 # 7ч Ganimed
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 7200 # 2ч Ganimed
+  weight: 15
+  startingGear: CaptainGear
+  icon: "JobIconCaptain"
+  requireAdminNotify: true
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Engineering
+  - Command
+
+- type: startingGear
+  id: BridgeOfficerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptain
+    back: ClothingBackpackCaptainFilled
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatCaptain
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCaptain
+    outerClothing: ClothingOuterArmorCaptainCarapace
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+    pocket1: disabler
+  innerclothingskirt: ClothingUniformJumpskirtCaptain
+  satchel: ClothingBackpackSatchelCaptainFilled
+  duffelbag: ClothingBackpackDuffelCaptainFilled

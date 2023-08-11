@@ -34,6 +34,7 @@
   description: department-Command-description
   color: "#334E6D"
   roles:
+  - BridgeOfficer
   - Captain
   - CentralCommandOfficial
   - ChiefEngineer

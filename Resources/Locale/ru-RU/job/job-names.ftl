@@ -47,10 +47,12 @@ job-name-senior-engineer = ведущий инженер
 job-name-senior-researcher = ведущий учёный
 job-name-senior-physician = ведущий врач
 job-name-senior-officer = инструктор СБ
+job-name-bridge-officer = офицер мостика
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = атмосферный техник
 JobBartender = бармен
 JobBotanist = ботаник
+JobBridgeOfficer = офицер мостика
 JobCaptain = капитан
 JobCargoTechnician = грузчик
 JobCentralCommandOfficial = представитель Центком
