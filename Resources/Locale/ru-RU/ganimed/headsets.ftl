@@ -1,0 +1,15 @@
+ent-ClothingHeadsetERT = гарнитура ОБР
+    .desc = Гарнитура, используемая Отрядами Быстрого Реагирования.
+ent-ClothingHeadsetAltERT = полноразмерная гарнитура ОБР
+    .desc = { ent-ClothingHeadsetAlt.desc }
+ent-ClothingHeadsetSRT = гарнитура ГСН
+    .desc = Гарнитура, используемая Группами Специального Назначения.
+ent-ClothingHeadsetAltSRT = полноразмерная гарнитура ГСН
+    .desc = { ent-ClothingHeadsetAlt.desc }
+ent-ClothingHeadsetDeathCommando = пепельно-черная гарнитура
+    .desc = Гарнитура, используемая *надпись затёрта*.
+ent-ClothingHeadsetAltDeathCommando = полноразмерная пепельно-черная гарнитура
+    .desc = { ent-ClothingHeadsetAlt.desc }
+ent-ClothingHeadsetAltNukeOps = полноразмерная кроваво-красная гарнитура
+    .desc = { ent-ClothingHeadsetAltSyndicate.desc }
+    .suffix = Ядерный Оперативник

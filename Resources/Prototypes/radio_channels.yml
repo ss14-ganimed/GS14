@@ -86,3 +86,35 @@
   color: "#2ed2fd"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+
+#Эксклюзив Ganimed'а >:)
+
+- type: radioChannel
+  id: NukeOps
+  name: chat-radio-nukeops
+  keycode: 'я'
+  frequency: 1245
+  color: "#d40606"
+  longRange: true
+
+- type: radioChannel
+  id: ERT
+  name: chat-radio-ert
+  frequency: 1441
+  color: "#ddadaf"
+  longRange: true
+
+- type: radioChannel
+  id: SRT
+  name: chat-radio-srt
+  frequency: 1110
+  color: "#ace5ee"
+  longRange: true
+
+- type: radioChannel
+  id: DeathCommando
+  name: chat-radio-deathcommando
+  frequency: 2324
+  color: "#5e5e5e"
+  longRange: true
+ 

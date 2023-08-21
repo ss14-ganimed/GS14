@@ -271,3 +271,47 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/service.rsi
 
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetERT
+  name: ERT headset
+  description: Headset used by Emergency Responce Team.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyERT
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetSRT
+  name: SRT headset
+  description: Headset used by Special Responce Team.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySRT
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetDeathCommando
+  name: Unknown headset
+  description: Headset used by *unintelligible*.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyDeathCommando
+  - type: Sprite
+    sprite: Ganimed/Clothing/headset_black.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/headset_black.rsi
