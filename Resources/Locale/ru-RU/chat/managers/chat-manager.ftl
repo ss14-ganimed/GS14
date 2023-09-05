@@ -106,3 +106,7 @@ chat-speech-verb-ghost-1 = ропщет
 chat-speech-verb-ghost-2 = вздыхает
 chat-speech-verb-ghost-3 = напевает
 chat-speech-verb-ghost-4 = бурчит
+
+chat-speech-verb-fungus-2 = шуршит
+chat-speech-verb-fungus-3 = шепчет
+chat-speech-verb-fungus-4 = урчит

@@ -1,0 +1,45 @@
+﻿- type: body
+  id: Fungus
+  name: fungus
+  root: torso
+  slots:
+    head:
+      part: HeadFungus
+      connections:
+      - torso
+      organs:
+        brain: OrganDionaBrain
+        eyes: OrganDionaEyes
+    torso:
+      part: TorsoFungus
+      connections:
+      - left arm
+      - right arm
+      - left leg
+      - right leg
+      organs:
+        stomach: OrganDionaStomach
+    right arm:
+      part: RightArmFungus
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmFungus
+      connections:
+      - left hand
+    right hand:
+      part: RightHandFungus
+    left hand:
+      part: LeftHandFungus
+    right leg:
+      part: RightLegFungus
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegFungus
+      connections:
+      - left foot
+    right foot:
+      part: RightFootFungus
+    left foot:
+      part: LeftFootFungus

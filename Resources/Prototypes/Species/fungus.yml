@@ -1,0 +1,158 @@
+- type: species
+  id: Fungus
+  name: species-name-fungus
+  roundStart: true
+  prototype: MobFungus
+  sprites: MobFungusSprites
+  defaultSkinTone: "#ffda93"
+  markingLimits: MobFungusMarkingLimits
+  dollPrototype: MobFungusDummy
+  skinColoration: Hues
+  maleFirstNames: names_fungus_first_male
+  femaleFirstNames: names_fungus_first_female
+  maleLastNames: names_fungus_last
+  femaleLastNames: names_fungus_last
+
+- type: speciesBaseSprites
+  id: MobFungusSprites
+  sprites:
+    Head: MobFungusHead
+    Snout: MobHumanoidAnyMarking
+    Chest: MobFungusTorso
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    Eyes: MobFungusEyes
+    LArm: MobFungusLArm
+    RArm: MobFungusRArm
+    LHand: MobFungusLHand
+    RHand: MobFungusRHand
+    LLeg: MobFungusLLeg
+    RLeg: MobFungusRLeg
+    LFoot: MobFungusLFoot
+    RFoot: MobFungusRFoot
+
+- type: humanoidBaseSprite
+  id: MobFungusEyes
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: eyes
+
+- type: markingPoints
+  id: MobFungusMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Hair:
+      points: 0
+      required: false
+    FacialHair:
+      points: 0
+      required: false
+    Tail:
+      points: 0
+      required: false
+    Snout:
+      points: 0
+      required: false
+    HeadTop:
+      points: 0
+      required: false
+    HeadSide:
+      points: 0
+      required: false
+    Head:
+      points: 0
+      required: false
+    Chest:
+      points: 0
+      required: false
+    Legs:
+      points: 0
+      required: false
+    Arms:
+      points: 0
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobFungusHead
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobFungusHeadMale
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobFungusHeadFemale
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobFungusTorso
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobFungusTorsoMale
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobFungusTorsoFemale
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobFungusLLeg
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobFungusLHand
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobFungusLArm
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobFungusLFoot
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobFungusRLeg
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobFungusRHand
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobFungusRArm
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobFungusRFoot
+  baseSprite:
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: r_foot

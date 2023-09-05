@@ -149,6 +149,17 @@
     Poison: 1.1
 
 - type: damageModifierSet
+  id: Fungus # Very flammable, can be easily hacked and slashed, but shooting or hitting it is another story.
+  coefficients:
+    Blunt: 0.7
+    Slash: 1.2
+    Piercing: 0.8
+    Heat: 1.4
+    Poison: 0.6
+    Cold: 0.9
+    Radiation: 0.8
+
+- type: damageModifierSet
   id: Zombie #Blunt resistant and immune to biological threats, but can be hacked apart and burned
   coefficients:
     Blunt: 0.7

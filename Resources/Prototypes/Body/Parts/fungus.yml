@@ -1,0 +1,103 @@
+- type: entity
+  id: PartFungus
+  parent: [BaseItem, BasePart]
+  name: "fungus body part"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Fungus/parts.rsi
+
+- type: entity
+  id: TorsoFungus
+  name: "fungus torso"
+  parent: [PartFungus, BaseTorso]
+  components:
+  - type: Sprite
+    state: "torso"
+
+- type: entity
+  id: HeadFungus
+  name: "fungus head"
+  parent: [PartFungus, BaseHead]
+  components:
+  - type: Sprite
+    state: "head"
+
+- type: entity
+  id: LeftArmFungus
+  name: "left fungus arm"
+  parent: [PartFungus, BaseLeftArm]
+  components:
+  - type: Sprite
+    state: "l_arm"
+
+- type: entity
+  id: RightArmFungus
+  name: "right fungus arm"
+  parent: [PartFungus, BaseRightArm]
+  components:
+  - type: Sprite
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandFungus
+  name: "left fungus hand"
+  parent: [PartFungus, BaseLeftHand]
+  components:
+  - type: Sprite
+    state: "l_hand"
+
+- type: entity
+  id: RightHandFungus
+  name: "right fungus hand"
+  parent: [PartFungus, BaseRightHand]
+  components:
+  - type: Sprite
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegFungus
+  name: "left fungus leg"
+  parent: [PartFungus, BaseLeftLeg]
+  components:
+  - type: Sprite
+    state: "l_leg"
+  - type: MovementBodyPart
+    walkSpeed : 1.5
+    sprintSpeed : 3.5
+
+- type: entity
+  id: RightLegFungus
+  name: "right fungus leg"
+  parent: [PartFungus, BaseRightLeg]
+  components:
+  - type: Sprite
+    state: "r_leg"
+  - type: BodyPart
+    partType: Leg
+    symmetry: Right
+  - type: MovementBodyPart
+    walkSpeed : 1.5
+    sprintSpeed : 3.5
+
+- type: entity
+  id: LeftFootFungus
+  name: "left fungus foot"
+  parent: [PartFungus, BaseLeftFoot]
+  components:
+  - type: Sprite
+    state: "l_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Left
+
+- type: entity
+  id: RightFootFungus
+  name: "right fungus foot"
+  parent: [PartFungus, BaseRightFoot]
+  components:
+  - type: Sprite
+    state: "r_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Right

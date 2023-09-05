@@ -1,0 +1,51 @@
+- type: entity
+  save: false
+  name: Urist McFungus
+  parent: BaseMobOrganic
+  id: BaseMobFungus
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Fungus
+  - type: Hunger
+    starvationDamage:
+      types:
+        Cold: 0.5
+        Bloodloss: 0.5
+  - type: Thirst
+  - type: Icon
+    sprite: Mobs/Species/Fungus/parts.rsi
+    state: full
+  - type: Body
+    prototype: Fungus
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Fungus
+  - type: Speech
+    speechVerb: Fungus
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 5
+  - type: Vocal
+    sounds:
+      Male: UnisexMoth
+      Female: UnisexMoth
+      Unsexed: UnisexMoth
+  - type: Flammable
+    damage:
+      types:
+        Heat: 1.5
+
+- type: entity
+  save: false
+  name: Urist McFungus
+  parent: MobHumanDummy
+  id: MobFungusDummy
+  noSpawn: true
+  description: A dummy fungus meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Fungus
