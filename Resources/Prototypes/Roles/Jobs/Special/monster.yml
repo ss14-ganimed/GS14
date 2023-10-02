@@ -1,0 +1,26 @@
+- type: job
+  id: Monster
+  name: job-name-monster
+  description: job-description-monster
+  playTimeTracker: JobMonster
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000 # 10 Hours
+  weight: 5
+  canBeAntag: true
+  startingGear: MonsterGear
+  icon: "JobIconMonster"
+  supervisors: job-supervisors-hivemind
+
+- type: startingGear
+  id: MonsterGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeaderOriginal
+    outerClothing: ClothingOuterArmorChangeling
+    shoes: ClothingShoesGaloshes
+    gloves: ClothingHandsGlovesCombat
+    mask: ClothingMaskGasMerc
+    eyes: ClothingEyesHudSecurity
+    neck: ClothingNeckStethoscope
+    head: ClothingHeadHelmetLing
+  innerclothingskirt: ClothingUniformJumpsuitERTLeaderOriginal

@@ -60,12 +60,6 @@
                                     <Control HorizontalExpand="True"/>
                                     <Button Name="ShowClothes" Pressed="True" ToggleMode="True" Text="{Loc 'Показать'}" HorizontalAlignment="Right" />
                                 </BoxContainer>
-                                <!-- Clothing -->
-                                <BoxContainer HorizontalExpand="True">
-                                    <Label Text="{Loc 'humanoid-profile-editor-clothing-label'}" />
-                                    <Control HorizontalExpand="True"/>
-                                    <OptionButton Name="CClothingButton" HorizontalAlignment="Right" />
-                                </BoxContainer>
                                 <!-- Backpack -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-backpack-label'}" />

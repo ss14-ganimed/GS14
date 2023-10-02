@@ -1,0 +1,415 @@
+- type: job
+  id: Civilian
+  name: job-name-civilian
+  description: job-description-civilian
+  playTimeTracker: JobCivilian
+  startingGear: CivilianGear
+  icon: "JobIconCivilian"
+  weight: 1
+  supervisors: job-supervisors-none
+  canBeAntag: true
+  access:
+  - Human
+
+- type: startingGear
+  id: CivilianGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOfficeWorker
+    outerClothing: ClothingOuterHoodieGrey
+    neck: ClothingNeckTieBlack
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpackCivilian
+    id: CivilianPDA
+  satchel: ClothingBackpackSatchelCivilian
+  duffelbag: ClothingBackpackDuffelCivilian
+
+
+- type: entity
+  id: ClothingBackpackCivilian
+  parent: ClothingBackpack
+  suffix: Civilian
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: SpaceCash10
+      - id: FoodSnackChocolate
+      - id: Lighter
+      - id: BoxFolderBlue
+      - id: BoxSpawnCivilian
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackSatchelCivilian
+  parent: ClothingBackpackSatchel
+  suffix: Civilian
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: SpaceCash10
+      - id: FoodSnackChocolate
+      - id: Lighter
+      - id: BoxFolderBlue
+      - id: BoxSpawnCivilian
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelCivilian
+  parent: ClothingBackpackDuffel
+  suffix: Civilian
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: SpaceCash10
+      - id: FoodSnackChocolate
+      - id: Lighter
+      - id: BoxFolderBlue
+      - id: BoxSpawnCivilian
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnGeneric
+  name: tightly-packed box
+  parent: BaseItem
+  description: A very tightly-packed box with stuff. It will take an effort to open it.
+  suffix: Generic
+  components:
+  - type: Item
+    size: 5
+  - type: Sprite
+    sprite: Objects/Storage/boxicons.rsi
+    state: box
+  - type: SpawnItemsOnUse
+    items:
+      - id: SyringeEphedrine
+        orGroup: SpawnGen
+      - id: ClothingHeadSafari
+        orGroup: SpawnGen
+      - id: ClothingOuterArmorBulletproof
+        orGroup: SpawnGen
+      - id: ClothingOuterArmorBasicSlim
+        orGroup: SpawnGen
+      - id: ClothingOuterArmorBasic
+        orGroup: SpawnGen
+      - id: ClothingOuterArmorBasicOriginal
+        orGroup: SpawnGen
+      - id: DrinkTeacup
+        orGroup: SpawnGen
+      - id: Floodlight
+        orGroup: SpawnGen
+      - id: FlashlightLantern
+        orGroup: SpawnGen
+      - id: ClothingMaskGasExplorer
+        orGroup: SpawnGen
+      - id: DrinkTeapot
+        orGroup: SpawnGen
+      - id: ClothingBeltSuspenders
+        orGroup: SpawnGen
+      - id: FoodSnackPopcorn
+        orGroup: SpawnGen
+      - id: FoodMealEnchiladas
+        orGroup: SpawnGen
+      - id: BoxLethalshot
+        orGroup: SpawnGen
+      - id: BoxShotgunSlug
+        orGroup: SpawnGen
+      - id: HydroponicsToolHatchet
+        orGroup: SpawnGen
+      - id: StrangePill
+        orGroup: SpawnGen
+      - id: WeaponDisabler
+        orGroup: SpawnGen
+      - id: FoodSnackChocolate
+        orGroup: SpawnGen
+      - id: ClothingMaskGas
+        orGroup: SpawnGen
+      - id: SupermatterGrenade
+        orGroup: SpawnGen
+      - id: FoodCakeSuppermatter
+        orGroup: SpawnGen
+      - id: Lighter
+        orGroup: SpawnGen
+      - id: RadioHandheld
+        orGroup: SpawnGen
+      - id: PillCharcoal
+        orGroup: SpawnGen
+      - id: CigarGold
+        orGroup: SpawnGen
+      - id: BurnAutoInjector
+        orGroup: SpawnGen
+      - id: PotatoSeeds
+        orGroup: SpawnGen
+      - id: HandLabeler
+        orGroup: SpawnGen
+      - id: ClothingHeadHelmetRiot
+        orGroup: SpawnGen
+      - id: FoodBoxDonut
+        orGroup: SpawnGen
+      - id: MagazineBoxPistol
+        orGroup: SpawnGen
+      - id: MagazineBoxCaselessRifle
+        orGroup: SpawnGen
+      - id: Gauze
+        orGroup: SpawnGen
+      - id: PillSpaceDrugs
+        orGroup: SpawnGen
+      - id: CyberPen
+        orGroup: SpawnGen
+      - id: Ointment
+        orGroup: SpawnGen
+      - id: HydroponicsToolMiniHoe
+        orGroup: SpawnGen
+      - id: HydroponicsToolSpade
+        orGroup: SpawnGen
+      - id: Crowbar
+        orGroup: SpawnGen
+      - id: ExGrenade
+        orGroup: SpawnGen
+      - id: ClothingHeadHelmetBone
+        orGroup: SpawnGen
+      - id: MonkeyCubeBox
+        orGroup: SpawnGen
+      - id: MagazineBoxMagnum
+        orGroup: SpawnGen
+      - id: MagazineBoxLightRifle
+        orGroup: SpawnGen
+      - id: GrenadeFlashBang
+        orGroup: SpawnGen
+      - id: ClothingNeckHeadphones
+        orGroup: SpawnGen
+      - id: ThrowingStar
+        count: 2
+        orGroup: SpawnGen
+      - id: SheetSteel
+        orGroup: SpawnGen
+      - id: BoxFolderBlue
+        orGroup: SpawnGen
+      - id: SpaceCash10
+        orGroup: SpawnGen
+      - id: SpaceCash100
+        orGroup: SpawnGen
+      - id: SheetGlass
+        orGroup: SpawnGen
+      - id: Joint
+        orGroup: SpawnGen
+      - id: MagazineBoxRifle
+        orGroup: SpawnGen
+      - id: NewsReadCartridge
+        orGroup: SpawnGen
+      - id: Spear
+        orGroup: SpawnGen
+      - id: Machete
+        orGroup: SpawnGen
+      - id: Multitool
+        orGroup: SpawnGen
+      - id: FoodSnackSemki
+        orGroup: SpawnGen
+      - id: KitchenKnife
+        orGroup: SpawnGen
+      - id: WeaponFlareGun
+        orGroup: SpawnGen
+      - id: Flash
+        orGroup: SpawnGen
+      - id: SawElectric
+        orGroup: SpawnGen
+      - id: InflatableWallStack5
+        orGroup: SpawnGen
+      - id: Truncheon
+        orGroup: SpawnGen
+      - id: Stimpack
+        orGroup: SpawnGen
+      - id: AppraisalTool
+        orGroup: SpawnGen
+      - id: BaseBallBat
+        orGroup: SpawnGen
+      - id: Cigar
+        orGroup: SpawnGen
+      - id: ClothingHeadHelmetMerc
+        orGroup: SpawnGen
+      - id: ClothingEyesGlassesMeson
+        orGroup: SpawnGen
+      - id: WelderMini
+        orGroup: SpawnGen
+      - id: WeaponPistolMk58
+        orGroup: SpawnGen
+      - id: Flare
+        orGroup: SpawnGen
+      - id: ClothingShoesBootsCombatFilled
+        orGroup: SpawnGen
+      - id: ClothingShoesBootsSalvage
+        orGroup: SpawnGen
+      - id: EmpGrenade
+        orGroup: SpawnGen
+      - id: CrowbarRed
+        orGroup: SpawnGen
+      - id: Brutepack
+        orGroup: SpawnGen
+      - id: SurvivalKnife
+        orGroup: SpawnGen
+      - id: ScalpelShiv
+        orGroup: SpawnGen
+      - id: BookHowToRockAndStone
+        orGroup: SpawnGen
+      - id: ClothingShoesGaloshes
+        orGroup: SpawnGen
+      - id: ClothingNeckBronzeheart
+        orGroup: SpawnGen
+      - id: Handcuffs
+        orGroup: SpawnGen
+      - id: MonkeyCube
+        orGroup: SpawnGen
+      - id: SyndicateSponge
+        orGroup: SpawnGen
+      - id: BookSpaceEncyclopedia
+        orGroup: SpawnGen
+      - id: MedkitFilled
+        orGroup: SpawnGen
+      - id: Shiv
+        orGroup: SpawnGen
+      - id: AcousticGuitarInstrument
+        orGroup: SpawnGen
+      - id: KukriKnife
+        orGroup: SpawnGen
+      - id: PlushieSharkGrey
+        orGroup: SpawnGen
+      - id: OmnizineChemistryBottle
+        orGroup: SpawnGen
+      - id: StimpackMini
+        orGroup: SpawnGen
+      - id: Screwdriver
+        orGroup: SpawnGen
+      - id: EphedrineChemistryBottle
+        orGroup: SpawnGen
+      - id: WeaponPistolCobra
+        orGroup: SpawnGen
+      - id: ClothingHeadHatWatermelon
+        orGroup: SpawnGen
+      - id: EmergencyOxygenTankFilled
+        orGroup: SpawnGen
+      - id: ClothingHandsGlovesCombat
+        orGroup: SpawnGen
+      - id: EpinephrineChemistryBottle
+        orGroup: SpawnGen
+      - id: MaterialBiomass
+        orGroup: SpawnGen
+      - id: IngotGold1
+        orGroup: SpawnGen
+      - id: FoodBurgerBig
+        orGroup: SpawnGen
+      - id: Bola
+        orGroup: SpawnGen
+      - id: CombatKnife
+        orGroup: SpawnGen
+      - id: BoxSpawnMRE
+        orGroup: SpawnGen
+      - id: ResearchDisk
+        orGroup: SpawnGen
+      - id: FoodSnackMREBrownie
+        orGroup: SpawnGen
+      - id: FireExtinguisher
+        orGroup: SpawnGen
+      - id: WhiteholeGrenade
+        orGroup: SpawnGen
+      - id: CableApcStack10
+        orGroup: SpawnGen
+      - id: ClothingEyesGlassesChemical
+        orGroup: SpawnGen
+      - id: DrinkBeerBottleFull
+        orGroup: SpawnGen
+      - id: CigPackBlue
+        orGroup: SpawnGen
+      - id: CigPackRed
+        orGroup: SpawnGen
+      - id: CigPackBlack
+        orGroup: SpawnGen
+      - id: CigPackGreen
+        orGroup: SpawnGen
+      - id: BoxSurvival
+        orGroup: SpawnGen
+  
+- type: entity
+  id: BoxSpawnCivilian
+  parent: BoxSpawnGeneric
+  suffix: Civilian
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: BookSpaceEncyclopedia
+        orGroup: SpawnCiv
+      - id: SpaceCash10
+        orGroup: SpawnCiv
+      - id: SpaceCash100
+        orGroup: SpawnCiv
+      - id: FoodSnackSemki
+        orGroup: SpawnCiv
+      - id: FoodBurgerBig
+        orGroup: SpawnCiv
+      - id: BoxSpawnMRE
+        orGroup: SpawnCiv
+      - id: PotatoSeeds
+        orGroup: SpawnCiv
+      - id: ClothingBeltSuspenders
+        orGroup: SpawnCiv
+      - id: ClothingEyesGlasses
+        orGroup: SpawnCiv
+      - id: FlashlightLantern
+        orGroup: SpawnCiv
+      - id: RadioHandheld
+        orGroup: SpawnCiv
+      - id: FoodSnackPopcorn
+        orGroup: SpawnCiv
+      - id: WeaponDisabler
+        orGroup: SpawnCiv
+      - id: StrangePill
+        orGroup: SpawnCiv
+      - id: DrinkTeapot
+        orGroup: SpawnCiv
+      - id: PillSpaceDrugs
+        orGroup: SpawnCiv
+      - id: PlushieSharkGrey
+        orGroup: SpawnCiv
+      - id: CigarGold
+        orGroup: SpawnCiv
+      - id: FoodBoxDonut
+        orGroup: SpawnCiv
+      - id: ClothingNeckBronzeheart
+        orGroup: SpawnCiv
+      - id: CigPackBlue
+        orGroup: SpawnCiv
+      - id: ClothingShoesGaloshes
+        orGroup: SpawnCiv
+      - id: ClothingOuterArmorBasicSlim
+        orGroup: SpawnCiv
+      - id: DrinkBeerBottleFull
+        orGroup: SpawnCiv
+      - id: ClothingMaskGas
+        orGroup: SpawnCiv
+      - id: WeaponPistolMk58
+        orGroup: SpawnCiv
+      - id: Cigar
+        orGroup: SpawnCiv
+      - id: MagazineBoxPistol
+        orGroup: SpawnCiv
+      - id: MedkitFilled
+        orGroup: SpawnCiv
+      - id: AcousticGuitarInstrument
+        orGroup: SpawnCiv
+      - id: CableApcStack10
+        orGroup: SpawnCiv
+
+- type: entity
+  id: BoxSpawnMRE
+  parent: BoxSpawnGeneric
+  suffix: MRE
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: BoxMRE

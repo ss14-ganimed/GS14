@@ -2,7 +2,7 @@
   parent: Clothing
   id: IDCardStandard
   name: identification card
-  description: A card necessary to access various areas aboard the station.
+  description: Your own id card. Depending on the situation may be totally useless to you.
   noSpawn: true
   components:
   - type: Sprite
@@ -759,3 +759,123 @@
     - state: idseniorofficer
   - type: PresetIdCard
     job: SeniorOfficer
+
+- type: entity
+  parent: IDCardStandard
+  id: CivilianIDCard
+  name: ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcivilian
+  - type: PresetIdCard
+    job: Civilian
+
+- type: entity
+  parent: IDCardStandard
+  id: TechnicianIDCard
+  name: technician ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: facility
+    - state: idtechnician
+  - type: PresetIdCard
+    job: Technician
+
+- type: entity
+  parent: IDCardStandard
+  id: ScientistIDCard
+  name: technician ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: facility
+    - state: idscientist
+  - type: PresetIdCard
+    job: Scientist
+
+- type: entity
+  parent: IDCardStandard
+  id: EngineerIDCard
+  name: engineer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: facility
+    - state: idengineer
+  - type: PresetIdCard
+    job: Engineer
+
+- type: entity
+  parent: IDCardStandard
+  id: HunterIDCard
+  name: hunter ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: foresters
+    - state: idhunter
+  - type: PresetIdCard
+    job: Hunter
+
+- type: entity
+  parent: IDCardStandard
+  id: RangerIDCard
+  name: ranger ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: foresters
+    - state: idranger
+  - type: PresetIdCard
+    job: Ranger
+
+- type: entity
+  parent: IDCardStandard
+  id: ManagerIDCard
+  name: manager ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: facility
+    - state: idmanager
+  - type: PresetIdCard
+    job: Manager
+
+- type: entity
+  parent: IDCardStandard
+  id: ChiefIDCard
+  name: chief ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: idchief
+  - type: PresetIdCard
+    job: Chief
+
+- type: entity
+  parent: IDCardStandard
+  id: OfficerIDCard
+  name: officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: idofficer
+  - type: PresetIdCard
+    job: Officer
+
+- type: entity
+  parent: IDCardStandard
+  id: MedicIDCard
+  name: medic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: idmedic
+  - type: PresetIdCard
+    job: Medic

@@ -1,0 +1,13 @@
+- type: startingGear
+  id: QuartermasterGear
+  equipment:
+    head: ClothingHeadHatQMsoft
+    jumpsuit: ClothingUniformJumpsuitQM
+    back: ClothingBackpackQuartermasterFilled
+    shoes: ClothingShoesColorBrown
+    id: QuartermasterPDA
+    ears: ClothingHeadsetQM
+    pocket1: AppraisalTool
+  innerclothingskirt: ClothingUniformJumpskirtQM
+  satchel: ClothingBackpackSatchelQuartermasterFilled
+  duffelbag: ClothingBackpackDuffelQuartermasterFilled

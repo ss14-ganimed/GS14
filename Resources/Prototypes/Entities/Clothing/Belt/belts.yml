@@ -79,9 +79,9 @@
   description: Holds tools, looks snazzy.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/ce.rsi
+    sprite: Clothing/Belt/assault.rsi
   - type: Clothing
-    sprite: Clothing/Belt/ce.rsi
+    sprite: Clothing/Belt/assault.rsi
   - type: Storage
     capacity: 105
     # TODO: Fill this out more.

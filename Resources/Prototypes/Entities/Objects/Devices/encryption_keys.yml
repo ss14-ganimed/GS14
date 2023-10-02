@@ -171,21 +171,6 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeySecurity
-  name: security encryption key
-  description: An encryption key used by security.
-  components:
-  - type: EncryptionKey
-    channels:
-    - Security
-    defaultChannel: Security
-  - type: Sprite
-    layers:
-    - state: crypt_gray
-    - state: sec_label
-
-- type: entity
-  parent: EncryptionKey
   id: EncryptionKeyService
   name: service encryption key
   description: An encryption key used by the service staff, tasked with keeping the station full, happy and clean.
@@ -228,3 +213,48 @@
     layers:
     - state: crypt_silver
     - state: rd_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyFacility
+  name: facility encryption key
+  description: An encryption key used by various facility employees.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Facility
+    defaultChannel: Facility
+  - type: Sprite
+    layers:
+    - state: crypt_facility
+    - state: facility_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeySecurity
+  name: security encryption key
+  description: An encryption key used by elite security forces.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Security
+    defaultChannel: Security
+  - type: Sprite
+    layers:
+    - state: crypt_security
+    - state: security_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyForesters
+  name: foresters encryption key
+  description: An encryption key handcrafted for use by foresters.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Foresters
+    defaultChannel: Foresters
+  - type: Sprite
+    layers:
+    - state: crypt_foresters
+    - state: foresters_label

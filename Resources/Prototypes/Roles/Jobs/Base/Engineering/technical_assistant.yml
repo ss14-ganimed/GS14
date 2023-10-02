@@ -1,0 +1,13 @@
+- type: startingGear
+  id: TechnicalAssistantGear
+  equipment:
+    head: ClothingHeadHatWelding
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+    back: ClothingBackpackEngineeringFilled
+    shoes: ClothingShoesBootsWork
+    id: TechnicalAssistantPDA
+    belt: ClothingBeltUtilityEngineering
+    ears: ClothingHeadsetEngineering
+  innerclothingskirt: ClothingUniformJumpskirtColorYellow
+  satchel: ClothingBackpackSatchelEngineeringFilled
+  duffelbag: ClothingBackpackDuffelEngineeringFilled

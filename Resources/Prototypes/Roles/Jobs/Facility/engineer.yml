@@ -1,0 +1,96 @@
+- type: job
+  id: Engineer
+  name: job-name-engineer
+  description: job-description-engineer
+  playTimeTracker: JobEngineer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobTechnician
+      time: 14400 # 4 hours
+  weight: 10
+  canBeAntag: true
+  startingGear: EngineerGear
+  icon: "JobIconEngineer"
+  supervisors: job-supervisors-manager
+  access:
+  - Human
+  - Facility
+  - Engineering
+
+- type: startingGear
+  id: EngineerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorEngineer
+    outerClothing: ClothingOuterArmorBasicSlim
+    shoes: ClothingShoesBootsWork
+    belt: ClothingBeltUtilityScarceFilled
+    gloves: ClothingHandsGlovesRobohands
+    back: ClothingBackpackGeneticsEngineer
+    ears: ClothingHeadsetFacility
+    id: EngineerPDA
+  satchel: ClothingBackpackSatchelGeneticsEngineer
+  duffelbag: ClothingBackpackDuffelGeneticsEngineer
+
+- type: entity
+  id: ClothingBackpackGeneticsEngineer
+  parent: ClothingBackpackGenetics
+  suffix: Engineer
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesMeson
+      - id: BoxSurvival
+      - id: Lighter
+      - id: ClothingMaskGas
+      - id: Screwdriver
+      - id: Multitool
+        orGroup: AdvancedToolPool
+      - id: NetworkConfigurator
+        orGroup: AdvancedToolPool
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+
+- type: entity
+  id: ClothingBackpackSatchelGeneticsEngineer
+  parent: ClothingBackpackSatchelGenetics
+  suffix: Engineer
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesMeson
+      - id: BoxSurvival
+      - id: Lighter
+      - id: ClothingMaskGas
+      - id: Screwdriver
+      - id: Multitool
+        orGroup: AdvancedToolPool
+      - id: NetworkConfigurator
+        orGroup: AdvancedToolPool
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelGeneticsEngineer
+  parent: ClothingBackpackDuffelGenetics
+  suffix: Engineer
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesMeson
+      - id: BoxSurvival
+      - id: Lighter
+      - id: ClothingMaskGas
+      - id: Screwdriver
+      - id: Multitool
+        orGroup: AdvancedToolPool
+      - id: NetworkConfigurator
+        orGroup: AdvancedToolPool
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2

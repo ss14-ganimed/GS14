@@ -21,12 +21,7 @@
     sprite: Ganimed/Clothing/Uniforms/military.rsi
 
 - type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtNightDress
-  name: deep blue aquilegia dress
-  description: A dress of futuristic dark neon tones and high royal court designs. Truly a dangerous mix of different times.
-  components:
-  - type: Sprite
-    sprite: Ganimed/Clothing/Uniforms/nightdress.rsi
-  - type: Clothing
-    sprite: Ganimed/Clothing/Uniforms/nightdress.rsi
+  parent: ClothingUniformJumpsuitSecBlue
+  id: ClothingUniformJumpsuitOfficeWorker
+  name: blue office suit
+  description: Shows just how much you've been working lately.

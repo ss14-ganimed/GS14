@@ -71,7 +71,6 @@ namespace Content.Client.Preferences.UI
         private OptionButton _sexButton => CSexButton;
         private OptionButton _genderButton => CPronounsButton;
         private Slider _skinColor => CSkin;
-        private OptionButton _clothingButton => CClothingButton;
         private OptionButton _backpackButton => CBackpackButton;
         private SingleMarkingPicker _hairPicker => CHairStylePicker;
         private SingleMarkingPicker _facialHairPicker => CFacialHairPicker;
@@ -318,19 +317,6 @@ namespace Content.Client.Preferences.UI
             };
 
             #endregion Hair
-
-            #region Clothing
-
-            _clothingButton.AddItem(Loc.GetString("humanoid-profile-editor-preference-jumpsuit"), (int) ClothingPreference.Jumpsuit);
-            _clothingButton.AddItem(Loc.GetString("humanoid-profile-editor-preference-jumpskirt"), (int) ClothingPreference.Jumpskirt);
-
-            _clothingButton.OnItemSelected += args =>
-            {
-                _clothingButton.SelectId(args.Id);
-                SetClothing((ClothingPreference) args.Id);
-            };
-
-            #endregion Clothing
 
             #region Backpack
 
@@ -893,12 +879,6 @@ namespace Content.Client.Preferences.UI
             IsDirty = true;
         }
 
-        private void SetClothing(ClothingPreference newClothing)
-        {
-            Profile = Profile?.WithClothingPreference(newClothing);
-            IsDirty = true;
-        }
-
         private void SetBackpack(BackpackPreference newBackpack)
         {
             Profile = Profile?.WithBackpackPreference(newBackpack);
@@ -1060,16 +1040,6 @@ namespace Content.Client.Preferences.UI
             _genderButton.SelectId((int) Profile.Gender);
         }
 
-        private void UpdateClothingControls()
-        {
-            if (Profile == null)
-            {
-                return;
-            }
-
-            _clothingButton.SelectId((int) Profile.Clothing);
-        }
-
         private void UpdateBackpackControls()
         {
             if (Profile == null)
@@ -1217,7 +1187,6 @@ namespace Content.Client.Preferences.UI
             UpdateGenderControls();
             UpdateSkinColor();
             UpdateSpecies();
-            UpdateClothingControls();
             UpdateBackpackControls();
             UpdateAgeEdit();
             UpdateEyePickers();

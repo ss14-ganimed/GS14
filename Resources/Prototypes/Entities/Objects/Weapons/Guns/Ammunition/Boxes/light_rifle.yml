@@ -10,7 +10,7 @@
       tags:
         - CartridgeLightRifle
     proto: CartridgeLightRifle
-    capacity: 50
+    capacity: 5
   - type: Item
     size: 5
   - type: ContainerContainer
@@ -31,7 +31,7 @@
   name: ammunition box (.30 rifle)
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 20
     proto: CartridgeLightRifle
   - type: Sprite
     layers:

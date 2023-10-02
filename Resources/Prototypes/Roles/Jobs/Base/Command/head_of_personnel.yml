@@ -1,0 +1,12 @@
+- type: startingGear
+  id: HoPGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoP
+    back: ClothingBackpackHOPFilled
+    shoes: ClothingShoesColorBrown
+    head: ClothingHeadHatHopcap
+    id: HoPPDA
+    ears: ClothingHeadsetAltCommand
+  innerclothingskirt: ClothingUniformJumpskirtHoP
+  satchel: ClothingBackpackSatchelHOPFilled
+  duffelbag: ClothingBackpackDuffelHOPFilled

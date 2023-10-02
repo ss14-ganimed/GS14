@@ -16,56 +16,49 @@
 - type: radioChannel
   id: Command
   name: chat-radio-command
-  keycode: 'к'
+  keycode: 'c'
   frequency: 1353
   color: "#fcdf03"
 
 - type: radioChannel
   id: Engineering
   name: chat-radio-engineering
-  keycode: 'и'
+  keycode: 'e'
   frequency: 1357
   color: "#f37746"
 
 - type: radioChannel
   id: Medical
   name: chat-radio-medical
-  keycode: 'м'
+  keycode: 'm'
   frequency: 1355
   color: "#57b8f0"
 
 - type: radioChannel
   id: Science
   name: chat-radio-science
-  keycode: 'н'
+  keycode: 'r'
   frequency: 1351
   color: "#c68cfa"
 
 - type: radioChannel
-  id: Security
-  name: chat-radio-security
-  keycode: 'о'
-  frequency: 1359
-  color: "#dd3535"
-
-- type: radioChannel
   id: Service
   name: chat-radio-service
-  keycode: 'с'
+  keycode: 'v'
   frequency: 1349
   color: "#6ca729"
 
 - type: radioChannel
   id: Supply
   name: chat-radio-supply
-  keycode: 'п'
+  keycode: 'p'
   frequency: 1347
   color: "#b88646"
 
 - type: radioChannel
   id: Syndicate
   name: chat-radio-syndicate
-  keycode: 'т'
+  keycode: 't'
   frequency: 1213
   color: "#8f4a4b"
   longRange: true
@@ -86,3 +79,31 @@
   color: "#2ed2fd"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+
+- type: radioChannel
+  id: Foresters
+  name: chat-radio-foresters
+  keycode: 'л'
+  frequency: 934
+  color: "#79a066"
+
+- type: radioChannel
+  id: Facility
+  name: chat-radio-facility
+  keycode: 'и'
+  frequency: 907
+  color: "#8ab5bc"
+
+- type: radioChannel
+  id: Security
+  name: chat-radio-security
+  keycode: 'с'
+  frequency: 904
+  color: "#d72d1d"
+
+- type: radioChannel
+  id: Monster
+  name: chat-radio-monster
+  keycode: 'м'
+  frequency: 801
+  color: "#e1ca96"

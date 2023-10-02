@@ -1,0 +1,37 @@
+- type: gameMap
+  id: LowDesert
+  mapName: Low Desert
+  mapPath: /Maps/Nonstations/lowdesert.yml
+  minPlayers: 0
+  stations:
+    lowdesert:
+      stationProto: StandardStationSurvivalist
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Tauros Enimi {1}'
+          nameGenerator:
+            !type:ExoNameGenerator
+        - type: StationJobs
+          overflowJobs:
+            - Civilian
+            - Survivalist
+          availableJobs:
+            Civilian: [ -1, -1 ]
+            Survivor: [ -1, -1 ]
+            
+            Hunter: [ 6, 6 ]
+            Ranger: [ 1, 1 ]
+            
+            Technician: [ 4, 4 ]
+            Scientist: [ 3, 3 ]
+            Engineer: [ 3, 3 ]
+            Manager: [ 1, 1 ]
+            
+            Officer: [ 5, 5 ]
+            Medic: [ 3, 3 ]
+            Chief: [ 1, 1 ]
+            
+            Butcher: [ 1, 2 ]
+            Zombie: [ 2, 4 ]
+            Paramedic: [ 1, 2 ]
+            Monster: [ 4, 6 ]

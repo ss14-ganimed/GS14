@@ -14,6 +14,9 @@
     {"name": "crypt_silver"},
     {"name": "crypt_red"},
     {"name": "crypt_blue"},
+    {"name": "crypt_facility"},
+    {"name": "crypt_security"},
+    {"name": "crypt_foresters"},
     {"name": "common_label"},
     {"name": "cap_label"},
     {"name": "cargo_label"},
@@ -34,6 +37,9 @@
     {"name": "sci_label"},
     {"name": "sec_label"},
     {"name": "service_label"},
-    {"name": "synd_label"}
+    {"name": "synd_label"},
+    {"name": "security_label"},
+    {"name": "facility_label"},
+    {"name": "foresters_label"}
   ]
 }

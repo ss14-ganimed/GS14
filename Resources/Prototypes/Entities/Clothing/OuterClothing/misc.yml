@@ -68,7 +68,7 @@
     sprite: Clothing/OuterClothing/Misc/black_hoodie.rsi
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: ClothingOuterHoodieGrey
   name: grey hoodie
   description: A grey hoodie.

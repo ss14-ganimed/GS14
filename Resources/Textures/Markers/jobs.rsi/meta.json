@@ -186,6 +186,42 @@
     },
     {
       "name": "seniorofficer"
+    },
+    {
+      "name": "civilian"
+    },
+    {
+      "name": "survivor"
+    },
+    {
+      "name": "technician"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "chief"
+    },
+    {
+      "name": "officer"
+    },
+    {
+      "name": "medic"
+    },
+    {
+      "name": "butcher"
+    },
+    {
+      "name": "zombie"
+    },
+    {
+      "name": "monster"
+    },
+    {
+      "name": "ranger"
+    },
+    {
+      "name": "hunter"
     }
   ]
 }

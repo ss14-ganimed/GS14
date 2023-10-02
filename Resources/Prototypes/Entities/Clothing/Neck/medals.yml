@@ -34,6 +34,17 @@
 
 - type: entity
   parent: ClothingNeckBase
+  id: ClothingNeckRangermedal
+  name: ranger's medal
+  description: A solid piece of copper with a ranger face on top. Goes long way to show who's the wisest out here.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Medals/cargomedal.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Medals/cargomedal.rsi
+
+- type: entity
+  parent: ClothingNeckBase
   id: ClothingNeckEngineermedal
   name: engineer medal
   description: Given for the best work in the engineering department.

@@ -1,0 +1,177 @@
+- type: job
+  id: Officer
+  name: job-name-officer
+  description: job-description-officer
+  playTimeTracker: JobOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSurvivor
+      time: 14400 # 4 hours
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 Hours
+  weight: 10
+  canBeAntag: true
+  startingGear: OfficerGear
+  icon: "JobIconOfficer"
+  supervisors: job-supervisors-chief
+  access:
+  - Human
+  - Security
+
+- type: startingGear
+  id: OfficerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorOfficer
+    outerClothing: ClothingOuterArmorBasicSlim
+    shoes: ClothingShoesBootsCombatFilled
+    gloves: ClothingHandsTacticalMaidGloves
+    back: ClothingBackpackSecurityOfficer
+    belt: ClothingBeltSecurityFilled
+    head: ClothingHeadHatBeret
+    mask: ClothingMaskNeckGaiter
+    ears: ClothingHeadsetSecurity
+    id: OfficerPDA
+  satchel: ClothingBackpackSatchelSecurityOfficer
+  duffelbag: ClothingBackpackDuffelSecurityOfficer
+- type: entity
+  id: ClothingBackpackSecurityOfficer
+  parent: ClothingBackpackSecurity
+  suffix: Officer
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponPistolMk58
+      - id: WeaponDisabler
+      - id: BoxSpawnMRE
+      - id: Bola
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Flash
+      - id: BoxSurvivalSecurity
+      - id: Handcuffs
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazineBoxPistol
+        amount: 2
+      - id: Truncheon
+      - id: BoxSpawnOfficer
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+    
+- type: entity
+  id: ClothingBackpackSatchelSecurityOfficer
+  parent: ClothingBackpackSatchelSecurity
+  suffix: Officer
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponPistolMk58
+      - id: WeaponDisabler
+      - id: BoxSpawnMRE
+      - id: Bola
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Flash
+      - id: BoxSurvivalSecurity
+      - id: Handcuffs
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazineBoxPistol
+        amount: 2
+      - id: Truncheon
+      - id: BoxSpawnOfficer
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelSecurityOfficer
+  parent: ClothingBackpackDuffelSecurity
+  suffix: Officer
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponPistolMk58
+      - id: Handcuffs
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazineBoxPistol
+        amount: 2
+      - id: BoxSpawnSecurity
+      - id: BoxSpawnOfficer
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnOfficer
+  parent: BoxSpawnGeneric
+  suffix: Officer
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: WeaponPistolMk58
+        orGroup: SpawnOff
+      - id: MagazineBoxPistol
+        orGroup: SpawnOff
+      - id: MagazineBoxPistolRubber
+        orGroup: SpawnOff
+      - id: MagazineBoxPistolIncendiary
+        orGroup: SpawnOff
+      - id: WeaponDisabler
+        orGroup: SpawnOff
+      - id: Flare
+        orGroup: SpawnOff
+      - id: BoxSurvivalSecurity
+        orGroup: SpawnOff
+      - id: BoxSpawnMRE
+        orGroup: SpawnOff
+      - id: GrenadeFlashBang
+        orGroup: SpawnOff
+      - id: ExGrenade
+        orGroup: SpawnOff
+      - id: RadioHandheld
+        orGroup: SpawnOff
+      - id: ClothingHeadHelmetMerc
+        orGroup: SpawnOff
+      - id: Flash
+        orGroup: SpawnOff
+      - id: WhiteholeGrenade
+        orGroup: SpawnOff
+      - id: SpaceCash10
+        orGroup: SpawnOff
+      - id: SpaceCash100
+        orGroup: SpawnOff
+      - id: Ointment
+        orGroup: SpawnOff
+      - id: Brutepack
+        orGroup: SpawnOff
+      - id: Gauze
+        orGroup: SpawnOff
+      - id: ClothingShoesBootsSalvage
+        orGroup: SpawnOff
+      - id: ClothingHeadHelmetRiot
+        orGroup: SpawnOff
+      - id: BurnAutoInjector
+        orGroup: SpawnOff
+      - id: Handcuffs
+        orGroup: SpawnOff
+      
+- type: entity
+  id: BoxSpawnSecurity
+  parent: BoxSpawnGeneric
+  suffix: Security
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: Bola
+      - id: BoxSpawnMRE
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Truncheon
+      - id: Flash
+      - id: WeaponDisabler
+      - id: BoxSurvivalSecurity
+      

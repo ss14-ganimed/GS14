@@ -1,0 +1,108 @@
+- type: job
+  id: Survivor
+  name: job-name-survivor
+  description: job-description-survivor
+  playTimeTracker: JobSurvivor
+  startingGear: SurvivorGear
+  icon: "JobIconSurvivor"
+  weight: 1
+  supervisors: job-supervisors-none
+  canBeAntag: true
+  access:
+  - Human
+
+- type: startingGear
+  id: SurvivorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    outerClothing: ClothingOuterCoatBomber
+    shoes: ClothingShoesBootsWork
+    back: ClothingBackpackSatchelLeatherSurvivor
+    hands: ClothingHandsGlovesFingerless
+    head: ClothingHeadBandBlack
+    belt: ClothingBeltBandolierImprovisedShellFilled
+    suitstorage: WeaponShotgunImprovisedLoaded
+    id: CivilianIDCard
+
+- type: entity
+  id: ClothingBackpackSatchelLeatherSurvivor
+  parent: ClothingBackpackSatchelLeather
+  suffix: Survivor
+  components:
+  - type: StorageFill
+    contents:
+      - id: Crowbar
+      - id: FoodSnackChocolate
+      - id: HydroponicsToolHatchet
+      - id: Gauze
+      - id: SurvivalKnife
+      - id: StimpackMini
+      - id: StrangePill
+      - id: BoxSpawnSurvivor
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnSurvivor
+  parent: BoxSpawnGeneric
+  suffix: Survivor
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: BoxShotgunSlug
+        orGroup: SpawnSur
+      - id: PillCharcoal
+        orGroup: SpawnSur
+      - id: BoxLethalshot
+        orGroup: SpawnSur
+      - id: Lighter
+        orGroup: SpawnSur
+      - id: RadioHandheld
+        orGroup: SpawnSur
+      - id: ThrowingStar
+        orGroup: SpawnSur
+      - id: ClothingShoesBootsCombatFilled
+        orGroup: SpawnSur
+      - id: ClothingShoesBootsSalvage
+        orGroup: SpawnSur
+      - id: DrinkBeerBottleFull
+        orGroup: SpawnSur
+      - id: ClothingShoesGaloshes
+        orGroup: SpawnSur
+      - id: Gauze
+        orGroup: SpawnSur
+      - id: FoodSnackChocolate
+        orGroup: SpawnSur
+      - id: FlashlightLantern
+        orGroup: SpawnSur
+      - id: StrangePill
+        orGroup: SpawnSur
+      - id: ClothingMaskGasExplorer
+        orGroup: SpawnSur
+      - id: ClothingMaskGas
+        orGroup: SpawnSur
+      - id: BoxSpawnMRE
+        orGroup: SpawnSur
+      - id: StimpackMini
+        orGroup: SpawnSur
+      - id: CableApcStack10
+        orGroup: SpawnSur
+      - id: WeaponPistolMk58
+        orGroup: SpawnSur
+      - id: ClothingHandsGlovesCombat
+        orGroup: SpawnSur
+      - id: SurvivalKnife
+        orGroup: SpawnSur
+      - id: AcousticGuitarInstrument
+        orGroup: SpawnSur
+      - id: Brutepack
+        orGroup: SpawnSur
+      - id: MedkitFilled
+        orGroup: SpawnSur
+      - id: ClothingHeadHelmetBone
+        orGroup: SpawnSur
+      - id: ClothingHeadHelmetMerc
+        orGroup: SpawnSur
+      - id: ClothingEyesGlassesMeson
+        orGroup: SpawnSur

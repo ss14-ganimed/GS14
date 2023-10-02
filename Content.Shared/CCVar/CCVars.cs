@@ -154,7 +154,7 @@ namespace Content.Shared.CCVar
         ///     Controls the default game preset.
         /// </summary>
         public static readonly CVarDef<string>
-            GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "secret", CVar.ARCHIVE);
+            GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "survivalist", CVar.ARCHIVE);
 
         /// <summary>
         ///     Controls if the game can force a different preset if the current preset's criteria are not met.
@@ -166,7 +166,7 @@ namespace Content.Shared.CCVar
         ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
         /// </summary>
         public static readonly CVarDef<string>
-            GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Traitor,Extended", CVar.ARCHIVE);
+            GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "survivalist", CVar.ARCHIVE);
 
         /// <summary>
         ///     Controls if people can win the game in Suspicion or Deathmatch.
@@ -1230,7 +1230,7 @@ namespace Content.Shared.CCVar
         /// Whether the arrivals shuttle is enabled.
         /// </summary>
         public static readonly CVarDef<bool> ArrivalsShuttles =
-            CVarDef.Create("shuttle.arrivals", true, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals", false, CVar.SERVERONLY);
 
         /// <summary>
         /// The map to use for the arrivals station.
@@ -1254,7 +1254,7 @@ namespace Content.Shared.CCVar
         /// Whether to automatically spawn escape shuttles.
         /// </summary>
         public static readonly CVarDef<bool> GridFill =
-            CVarDef.Create("shuttle.grid_fill", true, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.grid_fill", false, CVar.SERVERONLY);
 
         /*
          * Emergency
@@ -1294,7 +1294,7 @@ namespace Content.Shared.CCVar
         /// Whether the emergency shuttle is enabled or should the round just end.
         /// </summary>
         public static readonly CVarDef<bool> EmergencyShuttleEnabled =
-            CVarDef.Create("shuttle.emergency", true, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.emergency", false, CVar.SERVERONLY);
 
         /// <summary>
         ///     The percentage of time passed from the initial call to when the shuttle can no longer be recalled.
@@ -1329,14 +1329,14 @@ namespace Content.Shared.CCVar
         ///     hide the button in UI windows.
         /// </summary>
         public static readonly CVarDef<bool> CrewManifestWithoutEntity =
-            CVarDef.Create("crewmanifest.no_entity", true, CVar.REPLICATED);
+            CVarDef.Create("crewmanifest.no_entity", false, CVar.REPLICATED);
 
         /// <summary>
         ///     Setting this allows the crew manifest to be viewed from 'unsecure'
         ///     entities, such as the PDA.
         /// </summary>
         public static readonly CVarDef<bool> CrewManifestUnsecure =
-            CVarDef.Create("crewmanifest.unsecure", true, CVar.REPLICATED);
+            CVarDef.Create("crewmanifest.unsecure", false, CVar.REPLICATED);
 
         /// <summary>
         ///     Dictates the order the crew manifest will appear in, in terms of its sections.

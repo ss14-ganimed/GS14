@@ -1,0 +1,11 @@
+- type: startingGear
+  id: PassengerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGrey
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesColorBlack
+    id: PassengerPDA
+    ears: ClothingHeadsetGrey
+  innerclothingskirt: ClothingUniformJumpskirtColorGrey
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

@@ -25,7 +25,7 @@
     - secret
     - sekrit
   name: secret-title
-  showInVote: true
+  showInVote: false
   description: secret-description
   rules:
     - Secret
@@ -36,7 +36,7 @@
     - sandbox
   name: sandbox-title
   description: sandbox-description
-  showInVote: true
+  showInVote: false
   maxPlayers: 5
   rules:
     - Sandbox
@@ -60,7 +60,7 @@
   name: death-match-title
   description: death-match-description
   maxPlayers: 15
-  showInVote: true
+  showInVote: false
   supportedMaps: DeathMatchMapPool
   rules:
     - DeathMatch31
@@ -101,3 +101,14 @@
   rules:
     - Pirates
     - BasicStationEventScheduler
+
+- type: gamePreset
+  id: Survivalist
+  alias:
+    - survivalist
+    - LowDesert
+    - ld
+  name: survivalist-title
+  description: survivalist-description
+  showInVote: true
+  supportedMaps: LowDesertMapPool

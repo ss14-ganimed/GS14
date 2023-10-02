@@ -1,0 +1,167 @@
+- type: job
+  id: Technician
+  name: job-name-technician
+  description: job-description-technician
+  playTimeTracker: JobTechnician
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSurvivor
+      time: 14400 # 4 hours
+  weight: 10
+  canBeAntag: true
+  startingGear: TechnicianGear
+  icon: "JobIconTechnician"
+  supervisors: job-supervisors-manager
+  access:
+  - Human
+  - Facility
+
+- type: startingGear
+  id: TechnicianGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitScientistOriginal
+    shoes: ClothingShoesColorBlack
+    gloves: ClothingHandsGlovesFingerless
+    belt: ClothingBeltUtilityScarceFilled
+    back: ClothingBackpackGeneticsTechnician
+    head: ClothingHeadHatCorpsoft
+    ears: ClothingHeadsetFacility
+    id: TechnicianPDA
+  satchel: ClothingBackpackSatchelGeneticsTechnician
+  duffelbag: ClothingBackpackDuffelGeneticsTechnician
+
+- type: entity
+  id: ClothingBackpackGeneticsTechnician
+  parent: ClothingBackpackGenetics
+  suffix: Technician
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: Lighter
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+
+- type: entity
+  id: ClothingBackpackSatchelGeneticsTechnician
+  parent: ClothingBackpackSatchelGenetics
+  suffix: Technician
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: Lighter
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelGeneticsTechnician
+  parent: ClothingBackpackDuffelGenetics
+  suffix: Technician
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: Lighter
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnFacility
+  parent: BoxSpawnGeneric
+  suffix: Facility
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: ClothingNeckHeadphones
+        orGroup: SpawnFac
+      - id: CableApcStack10
+        orGroup: SpawnFac
+      - id: ClothingEyesGlassesMeson
+        orGroup: SpawnFac
+      - id: CigPackGreen
+        orGroup: SpawnFac
+      - id: CigPackRed
+        orGroup: SpawnFac
+      - id: CigPackBlue
+        orGroup: SpawnFac
+      - id: CigPackBlack
+        orGroup: SpawnFac
+      - id: Lighter
+        orGroup: SpawnFac
+      - id: BoxSurvival
+        orGroup: SpawnFac
+      - id: OmnizineChemistryBottle
+        orGroup: SpawnFac
+      - id: EphedrineChemistryBottle
+        orGroup: SpawnFac
+      - id: EpinephrineChemistryBottle
+        orGroup: SpawnFac
+      - id: SyndicateSponge
+        orGroup: SpawnFac
+      - id: MonkeyCube
+        orGroup: SpawnFac
+      - id: MonkeyCubeBox
+        orGroup: SpawnFac
+      - id: MagazineBoxPistol
+        orGroup: SpawnFac
+      - id: DrinkBeerBottleFull
+        orGroup: SpawnFac
+      - id: ResearchDisk
+        orGroup: SpawnFac
+      - id: ClothingEyesGlassesChemical
+        orGroup: SpawnFac
+      - id: Gauze
+        orGroup: SpawnFac
+      - id: FlashlightLantern
+        orGroup: SpawnFac
+      - id: NewsReadCartridge
+        orGroup: SpawnFac
+      - id: Flash
+        orGroup: SpawnFac
+      - id: EmergencyOxygenTankFilled
+        orGroup: SpawnFac
+      - id: AppraisalTool
+        orGroup: SpawnFac
+      - id: FoodBoxDonut
+        orGroup: SpawnFac
+      - id: MedkitFilled
+        orGroup: SpawnFac
+      - id: FoodSnackChocolate
+        orGroup: SpawnFac
+      - id: Joint
+        orGroup: SpawnFac
+      - id: Flare
+        orGroup: SpawnFac
+      - id: Ointment
+        orGroup: SpawnFac
+      - id: Cigar
+        orGroup: SpawnFac
+      - id: SpaceCash10
+        orGroup: SpawnFac
+      - id: WeaponFlareGun
+        orGroup: SpawnFac
+      - id: Multitool
+        orGroup: SpawnFac
+      - id: InflatableWallStack5
+        orGroup: SpawnFac
+      - id: HandLabeler
+        orGroup: SpawnFac
+      - id: SheetGlass
+        orGroup: SpawnFac
+      - id: SheetSteel
+        orGroup: SpawnFac
+      - id: RadioHandheld
+        orGroup: SpawnFac
+      - id: ClothingOuterArmorBasicSlim
+        orGroup: SpawnFac

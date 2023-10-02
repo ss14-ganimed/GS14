@@ -1,0 +1,4 @@
+- type: gameMapPool
+  id: LowDesertMapPool
+  maps:
+  - LowDesert

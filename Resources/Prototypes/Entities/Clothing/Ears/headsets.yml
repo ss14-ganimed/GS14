@@ -224,22 +224,6 @@
 
 - type: entity
   parent: ClothingHeadset
-  id: ClothingHeadsetSecurity
-  name: security headset
-  description: This is used by your elite security force.
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeySecurity
-      - EncryptionKeyCommon
-  - type: Sprite
-    sprite: Clothing/Ears/Headsets/security.rsi
-  - type: Clothing
-    sprite: Clothing/Ears/Headsets/security.rsi
-
-- type: entity
-  parent: ClothingHeadset
   id: ClothingHeadsetBrigmedic
   name: brigmedic headset
   description: A headset that helps to hear the death cries.
@@ -270,4 +254,49 @@
     sprite: Clothing/Ears/Headsets/service.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/service.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetFacility
+  name: facility headset
+  description: Headset used by the facility staff, tasked with various tedious jobs.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFacility
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/facility.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/facility.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetSecurity
+  name: security headset
+  description: This is used by your elite security force.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySecurity
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetForesters
+  name: forester headset
+  description: Headset used by the foresters, made with lots of tape and hard knowledge.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyForesters
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/foresters.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/foresters.rsi
 

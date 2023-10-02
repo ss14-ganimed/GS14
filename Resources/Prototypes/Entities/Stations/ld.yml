@@ -1,0 +1,10 @@
+﻿- type: entity
+  id: StandardStationSurvivalist
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationNanotrasen
+  noSpawn: true
+  components:
+    - type: Transform

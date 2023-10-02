@@ -1,0 +1,162 @@
+- type: job
+  id: Chief
+  name: job-name-chief
+  description: job-description-chief
+  playTimeTracker: JobChief
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 86400 # 24 Hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 43200 #12 hours
+  weight: 20
+  canBeAntag: true
+  requireAdminNotify: true
+  startingGear: ChiefGear
+  icon: "JobIconChief"
+  supervisors: job-supervisors-nt
+  access:
+  - Human
+  - Security
+  - Medical
+  - Chief
+
+- type: startingGear
+  id: ChiefGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoS
+    outerClothing: ClothingOuterCoatHoSTrench
+    shoes: ClothingShoesBootsCombatFilled
+    gloves: ClothingHandsTacticalMaidGloves
+    back: ClothingBackpackSecurityChief
+    belt: ClothingBeltSecurityFilled
+    head: ClothingHeadHatBeretHoS
+    neck: ClothingNeckChiefbadge
+    ears: ClothingHeadsetAltSecurity
+    eyes: ClothingEyesGlassesSunglasses
+    id: ChiefPDA
+  satchel: ClothingBackpackSatchelSecurityChief
+  duffelbag: ClothingBackpackDuffelSecurityChief
+
+- type: entity
+  id: ClothingBackpackSecurityChief
+  parent: ClothingBackpackSecurity
+  suffix: Chief
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunWt550
+      - id: WeaponDisabler
+      - id: BoxSpawnMRE
+      - id: Bola
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Flash
+      - id: BoxSurvivalSecurity
+      - id: Handcuffs
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazinePistolSubMachineGunTopMounted
+      - id: Truncheon
+      - id: BoxSpawnChief
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+
+- type: entity
+  id: ClothingBackpackSatchelSecurityChief
+  parent: ClothingBackpackSatchelSecurity
+  suffix: Chief
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunWt550
+      - id: Handcuffs
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazinePistolSubMachineGunTopMounted
+      - id: BoxSpawnSecurity
+      - id: BoxSpawnChief
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelSecurityChief
+  parent: ClothingBackpackDuffelSecurity
+  suffix: Chief
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponSubMachineGunWt550
+      - id: WeaponDisabler
+      - id: BoxSpawnMRE
+      - id: Bola
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Flash
+      - id: BoxSurvivalSecurity
+      - id: Handcuffs
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazinePistolSubMachineGunTopMounted
+      - id: Truncheon
+      - id: BoxSpawnChief
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnChief
+  parent: BoxSpawnGeneric
+  suffix: Chief
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: MagazinePistolSubMachineGunTopMounted
+        orGroup: SpawnChi
+      - id: MagazineBoxPistol
+        orGroup: SpawnChi
+      - id: MagazineBoxPistolRubber
+        orGroup: SpawnChi
+      - id: MagazineBoxPistolIncendiary
+        orGroup: SpawnChi
+      - id: WeaponDisabler
+        orGroup: SpawnChi
+      - id: Flare
+        orGroup: SpawnChi
+      - id: BoxSurvivalSecurity
+        orGroup: SpawnChi
+      - id: BoxSpawnMRE
+        orGroup: SpawnChi
+      - id: GrenadeFlashBang
+        orGroup: SpawnChi
+      - id: ExGrenade
+        orGroup: SpawnChi
+      - id: RadioHandheld
+        orGroup: SpawnChi
+      - id: ClothingHeadHelmetMerc
+        orGroup: SpawnChi
+      - id: Flash
+        orGroup: SpawnChi
+      - id: WhiteholeGrenade
+        orGroup: SpawnChi
+      - id: SpaceCash10
+        orGroup: SpawnChi
+      - id: SpaceCash100
+        orGroup: SpawnChi
+      - id: Ointment
+        orGroup: SpawnChi
+      - id: Brutepack
+        orGroup: SpawnChi
+      - id: Gauze
+        orGroup: SpawnChi
+      - id: ClothingShoesBootsSalvage
+        orGroup: SpawnChi
+      - id: ClothingHeadHelmetRiot
+        orGroup: SpawnChi
+      - id: BurnAutoInjector
+        orGroup: SpawnChi
+      - id: Handcuffs
+        orGroup: SpawnChi

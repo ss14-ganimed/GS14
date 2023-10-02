@@ -10,7 +10,7 @@
       tags:
         - CartridgeCaselessRifle
     proto: CartridgeCaselessRifle
-    capacity: 60
+    capacity: 5
   - type: Item
     size: 5
   - type: ContainerContainer
@@ -31,7 +31,7 @@
   name: ammunition box (.25 caseless)
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 20
     proto: CartridgeCaselessRifle
   - type: Sprite
     layers:
@@ -51,7 +51,7 @@
   name: ammunition box (.25 caseless)
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 20
     proto: CartridgeCaselessRifle
   - type: Sprite
     layers:
@@ -71,7 +71,7 @@
   name: ammunition box (.25 caseless rubber)
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 20
     proto: CartridgeCaselessRifleRubber
   - type: Sprite
     layers:

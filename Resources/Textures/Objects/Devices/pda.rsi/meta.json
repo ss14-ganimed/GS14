@@ -71,9 +71,6 @@
       "name": "pda-detective"
     },
     {
-      "name": "pda-engineer"
-    },
-    {
       "name": "pda-genetics"
     },
     {
@@ -219,6 +216,33 @@
     },
     {
       "name": "pda-seniorofficer"
+    },
+    {
+      "name": "pda-hunter"
+    },
+    {
+      "name": "pda-ranger"
+    },
+    {
+      "name": "pda-technician"
+    },
+    {
+      "name": "pda-scientist"
+    },
+    {
+      "name": "pda-engineer"
+    },
+    {
+      "name": "pda-manager"
+    },
+    {
+      "name": "pda-chief"
+    },
+    {
+      "name": "pda-medic"
+    },
+    {
+      "name": "pda-officer"
     }
   ]
 }

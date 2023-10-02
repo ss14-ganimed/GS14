@@ -14,6 +14,15 @@
       "name": "centcom"
     },
     {
+      "name": "foresters"
+    },
+    {
+      "name": "security"
+    },
+    {
+      "name": "facility"
+    },
+    {
       "name": "ert_chaplain"
     },
     {
@@ -128,9 +137,6 @@
       "name": "idroboticist"
     },
     {
-      "name": "idscientist"
-    },
-    {
       "name": "idsecurityofficer"
     },
     {
@@ -210,6 +216,36 @@
     },
     {
       "name": "idseniorphysician"
+    },
+    {
+      "name": "idcivilian"
+    },
+    {
+      "name": "idofficer"
+    },
+    {
+      "name": "idmedic"
+    },
+    {
+      "name": "idchief"
+    },
+    {
+      "name": "idmanager"
+    },
+    {
+      "name": "idengineer"
+    },
+    {
+      "name": "idscientist"
+    },
+    {
+      "name": "idtechnician"
+    },
+    {
+      "name": "idranger"
+    },
+    {
+      "name": "idhunter"
     },
     {
       "name": "idseniorofficer"

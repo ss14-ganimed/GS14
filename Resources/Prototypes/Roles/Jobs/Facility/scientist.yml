@@ -1,0 +1,92 @@
+- type: job
+  id: Scientist
+  name: job-name-scientist
+  description: job-description-scientist
+  playTimeTracker: JobScientist
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobTechnician
+      time: 14400 # 4 hours
+  weight: 10
+  canBeAntag: true
+  startingGear: ScientistGear
+  icon: "JobIconScientist"
+  supervisors: job-supervisors-manager
+  access:
+  - Human
+  - Facility
+  - Science
+
+- type: startingGear
+  id: ScientistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitScientistFormal
+    outerClothing: ClothingOuterCoatLabGene
+    shoes: ClothingShoesBootsLaceup
+    neck: ClothingNeckTieBlack
+    gloves: ClothingHandsGlovesNitrile
+    back: ClothingBackpackGeneticsScientist
+    ears: ClothingHeadsetFacility
+    eyes: ClothingEyesGlasses
+    mask: ClothingMaskSterile
+    id: ScientistPDA
+  satchel: ClothingBackpackSatchelGeneticsScientist
+  duffelbag: ClothingBackpackDuffelGeneticsScientist
+
+- type: entity
+  id: ClothingBackpackGeneticsScientist
+  parent: ClothingBackpackGenetics
+  suffix: Scientist
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: ResearchDisk
+      - id: StrangePill
+      - id: BoxFolderBlue
+      - id: SawElectric
+      - id: Flash
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+
+- type: entity
+  id: ClothingBackpackSatchelGeneticsScientist
+  parent: ClothingBackpackSatchelGenetics
+  suffix: Scientist
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: ResearchDisk
+      - id: StrangePill
+      - id: BoxFolderBlue
+      - id: SawElectric
+      - id: Flash
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelGeneticsScientist
+  parent: ClothingBackpackDuffelGenetics
+  suffix: Scientist
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: ResearchDisk
+      - id: StrangePill
+      - id: BoxFolderBlue
+      - id: SawElectric
+      - id: Flash
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2

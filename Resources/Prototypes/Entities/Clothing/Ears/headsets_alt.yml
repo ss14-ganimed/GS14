@@ -98,22 +98,6 @@
 
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ClothingHeadsetAltSecurity
-  name: head of security's over-ear headset
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeySecurity
-      - EncryptionKeyCommand
-      - EncryptionKeyCommon
-  - type: Sprite
-    sprite: Clothing/Ears/Headsets/security.rsi
-  - type: Clothing
-    sprite: Clothing/Ears/Headsets/security.rsi
-
-- type: entity
-  parent: ClothingHeadsetAlt
   id: ClothingHeadsetAltScience
   name: research director's over-ear headset
   components:
@@ -145,3 +129,48 @@
     sprite: Clothing/Ears/Headsets/syndicate.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/syndicate.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltSecurity
+  name: chief's over-ear headset
+  description: Used by the most qualified tactitian out there.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySecurity
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltFacility
+  name: manager's over-ear headset
+  description: Used by the most qualified researcher out there.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyFacility
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/facility.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/facility.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltForesters
+  name: manager's over-ear headset
+  description: Used by the most wise leader out there.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyForesters
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/foresters.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/foresters.rsi

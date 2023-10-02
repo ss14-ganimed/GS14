@@ -1,0 +1,11 @@
+- type: startingGear
+  id: ChaplainGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChaplain
+    back: ClothingBackpackChaplainFilled
+    shoes: ClothingShoesColorBlack
+    id: ChaplainPDA
+    ears: ClothingHeadsetService
+  innerclothingskirt: ClothingUniformJumpskirtChaplain
+  satchel: ClothingBackpackSatchelChaplainFilled
+  duffelbag: ClothingBackpackDuffelChaplainFilled

@@ -1,99 +1,44 @@
 - type: department
-  id: Cargo
-  description: department-Cargo-description
-  color: "#A46106"
-  roles:
-  - CargoTechnician
-  - Quartermaster
-  - SalvageSpecialist
-
-- type: department
   id: Civilian
   description: department-Civilian-description
-  color: "#9FED58"
+  color: "#acabad"
   roles:
-  - Bartender
-  - Botanist
-  - Boxer
-  - Chaplain
-  - Chef
-  - Clown
-  - HeadOfPersonnel
-  - Janitor
-  - Lawyer
-  - Librarian
-  - Mime
-  - Musician
-  - Passenger
-  - Reporter
-  - Zookeeper
-  - ServiceWorker
+  - Civilian
+  - Survivor
 
 - type: department
-  id: Command
-  description: department-Command-description
-  color: "#334E6D"
+  id: Foresters
+  description: department-Foresters-description
+  color: "#79a066"
   roles:
-  - Captain
-  - CentralCommandOfficial
-  - ChiefEngineer
-  - ChiefMedicalOfficer
-  - HeadOfPersonnel
-  - HeadOfSecurity
-  - ResearchDirector
+  - Hunter
+  - Ranger
 
 - type: department
-  id: Engineering
-  description: department-Engineering-description
-  color: "#EFB341"
+  id: Facility
+  description: department-Facility-description
+  color: "#8ab5bc"
   roles:
-  - AtmosphericTechnician
-  - ChiefEngineer
-  - SeniorEngineer
-  - StationEngineer
-  - TechnicalAssistant
-
-- type: department
-  id: Medical
-  description: department-Medical-description
-  color: "#52B4E9"
-  roles:
-  - Chemist
-  - ChiefMedicalOfficer
-  - MedicalDoctor
-  - MedicalIntern
-  - Psychologist
-  - Paramedic
-  - SeniorPhysician
+  - Technician
+  - Scientist
+  - Engineer
+  - Manager
 
 - type: department
   id: Security
   description: department-Security-description
-  color: "#DE3A3A"
+  color: "#d72d1d"
   roles:
-  - HeadOfSecurity
-  - SecurityCadet
-  - SecurityOfficer
-  - SeniorOfficer
-  - Detective
-  - Warden
+  - Chief
+  - Officer
+  - Medic
 
 - type: department
-  id: Science
-  description: department-Science-description
-  color: "#D381C9"
+  id: Special
+  description: department-Special-description
+  color: "#e1ca96"
   roles:
-  - ResearchDirector
-  - SeniorResearcher
-  - Scientist
-  - ResearchAssistant
-
-- type: department
-  id: Specific
-  description: department-Specific-description
-  color: "#9FED58"
-  roles:
-  - Boxer
-  - Reporter
-  - Zookeeper
-  - Psychologist
+  - Butcher
+  - Zombie
+  - Monster
+  - Paramedic

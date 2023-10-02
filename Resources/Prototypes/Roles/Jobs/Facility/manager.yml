@@ -1,0 +1,97 @@
+- type: job
+  id: Manager
+  name: job-name-manager
+  description: job-description-manager
+  playTimeTracker: JobManager
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 86400 # 24 Hours
+    - !type:DepartmentTimeRequirement
+      department: Facility
+      time: 43200 #12 hours
+  weight: 20
+  startingGear: ManagerGear
+  icon: "JobIconManager"
+  supervisors: job-supervisors-nt
+  canBeAntag: true
+  requireAdminNotify: true
+  access:
+  - Human
+  - Facility
+  - Science
+  - Engineering
+  - Manager
+
+- type: startingGear
+  id: ManagerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoSBlue
+    outerClothing: ClothingOuterCoatRobo
+    shoes: ClothingShoesBootsLaceup
+    neck: ClothingNeckTieBlack
+    head: ClothingHeadHatBeretEngineering
+    gloves: ClothingHandsGlovesNitrile
+    back: ClothingBackpackGeneticsManager
+    belt: ClothingBeltChiefEngineerFilled
+    ears: ClothingHeadsetAltFacility
+    id: ManagerPDA
+  satchel: ClothingBackpackSatchelGeneticsManager
+  duffelbag: ClothingBackpackDuffelGeneticsManager
+
+- type: entity
+  id: ClothingBackpackGeneticsManager
+  parent: ClothingBackpackGenetics
+  suffix: Manager
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: ResearchDisk
+      - id: CyberPen
+      - id: BoxFolderBlue
+      - id: WeaponPistolMk58
+      - id: Flash
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+
+- type: entity
+  id: ClothingBackpackSatchelGeneticsManager
+  parent: ClothingBackpackSatchelGenetics
+  suffix: Manager
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: ResearchDisk
+      - id: CyberPen
+      - id: BoxFolderBlue
+      - id: WeaponPistolMk58
+      - id: Flash
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelGeneticsManager
+  parent: ClothingBackpackDuffelGenetics
+  suffix: Manager
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: ClothingMaskGas
+      - id: ResearchDisk
+      - id: CyberPen
+      - id: BoxFolderBlue
+      - id: WeaponPistolMk58
+      - id: Flash
+      - id: BoxSpawnFacility
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2

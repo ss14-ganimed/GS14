@@ -1,0 +1,179 @@
+- type: job
+  id: Medic
+  name: job-name-medic
+  description: job-description-medic
+  playTimeTracker: JobMedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSurvivor
+      time: 14400 # 4 hours
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 Hours
+  weight: 10
+  canBeAntag: true
+  startingGear: MedicGear
+  icon: "JobIconMedic"
+  supervisors: job-supervisors-chief
+  access:
+  - Human
+  - Security
+  - Medical
+
+- type: startingGear
+  id: MedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedic
+    outerClothing: ClothingOuterCoatRedCoat
+    shoes: ClothingShoesBootsCombatFilled
+    gloves: ClothingHandsTacticalMaidGloves
+    back: ClothingBackpackSecurityMedic
+    belt: ClothingBeltRedSecBag
+    head: ClothingHeadHatBeretSecurity
+    neck: ClothingNeckTieRed
+    ears: ClothingHeadsetSecurity
+    eyes: ClothingEyesHudMedicalRed
+    id: MedicPDA
+  satchel: ClothingBackpackSatchelSecurityMedic
+  duffelbag: ClothingBackpackDuffelSecurityMedic
+
+- type: entity
+  id: ClothingBackpackSecurityMedic
+  parent: ClothingBackpackSecurity
+  suffix: Medic
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRevolverInspector
+      - id: WeaponDisabler
+      - id: BoxSpawnMRE
+      - id: Bola
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Flash
+      - id: BoxSurvivalSecurity
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazineBoxMagnumIncendiary
+      - id: Stimpack
+      - id: SpeedLoaderMagnumAP
+      - id: MedkitFilled
+      - id: Truncheon
+      - id: BoxSpawnMedic
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+
+- type: entity
+  id: ClothingBackpackSatchelSecurityMedic
+  parent: ClothingBackpackSatchelSecurity
+  suffix: Medic
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRevolverInspector
+      - id: BoxSpawnSecurity
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazineBoxMagnumIncendiary
+      - id: Stimpack
+      - id: SpeedLoaderMagnumAP
+      - id: MedkitFilled
+      - id: BoxSpawnMedic
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: ClothingBackpackDuffelSecurityMedic
+  parent: ClothingBackpackDuffelSecurity
+  suffix: Medic
+  components:
+  - type: StorageFill
+    contents:
+      - id: WeaponRevolverInspector
+      - id: WeaponDisabler
+      - id: BoxSpawnMRE
+      - id: Bola
+      - id: ExGrenade
+      - id: GrenadeFlashBang
+      - id: Flash
+      - id: BoxSurvivalSecurity
+      - id: StimpackMini
+      - id: Brutepack
+      - id: MagazineBoxMagnumIncendiary
+      - id: Stimpack
+      - id: SpeedLoaderMagnumAP
+      - id: MedkitFilled
+      - id: Truncheon
+      - id: BoxSpawnMedic
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnMedic
+  parent: BoxSpawnGeneric
+  suffix: Medic
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: WeaponPistolMk58
+        orGroup: SpawnMed
+      - id: MagazineBoxMagnum
+        orGroup: SpawnMed
+      - id: MagazineBoxMagnumRubber
+        orGroup: SpawnMed
+      - id: MagazineBoxMagnumIncendiary
+        orGroup: SpawnMed
+      - id: MedkitFilled
+        orGroup: SpawnMed
+      - id: SyringeEphedrine
+        orGroup: SpawnMed
+      - id: EphedrineChemistryBottle
+        orGroup: SpawnMed
+      - id: EpinephrineChemistryBottle
+        orGroup: SpawnMed
+      - id: OmnizineChemistryBottle
+        orGroup: SpawnMed
+      - id: SpeedLoaderMagnumAP
+        orGroup: SpawnMed
+      - id: WeaponDisabler
+        orGroup: SpawnMed
+      - id: Flare
+        orGroup: SpawnMed
+      - id: BoxSurvivalSecurity
+        orGroup: SpawnMed
+      - id: BoxSpawnMRE
+        orGroup: SpawnMed
+      - id: GrenadeFlashBang
+        orGroup: SpawnMed
+      - id: ExGrenade
+        orGroup: SpawnMed
+      - id: RadioHandheld
+        orGroup: SpawnMed
+      - id: ClothingHeadHelmetMerc
+        orGroup: SpawnMed
+      - id: Flash
+        orGroup: SpawnMed
+      - id: WhiteholeGrenade
+        orGroup: SpawnMed
+      - id: SpaceCash10
+        orGroup: SpawnMed
+      - id: SpaceCash100
+        orGroup: SpawnMed
+      - id: Ointment
+        orGroup: SpawnMed
+      - id: Brutepack
+        orGroup: SpawnMed
+      - id: Gauze
+        orGroup: SpawnMed
+      - id: ClothingShoesBootsSalvage
+        orGroup: SpawnMed
+      - id: ClothingHeadHelmetRiot
+        orGroup: SpawnMed
+      - id: BurnAutoInjector
+        orGroup: SpawnMed
+      - id: Handcuffs
+        orGroup: SpawnMed
+      

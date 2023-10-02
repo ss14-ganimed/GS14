@@ -46,6 +46,17 @@
     proto: lawyer
 
 - type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckChiefbadge
+  name: chief badge
+  description: A badge to show that the owner is a 'legitimate' NanoTrasen representative everywhere it matters.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Misc/lawyerbadge.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Misc/lawyerbadge.rsi
+
+- type: entity
   id: ActionStethoscope
   name: Listen with stethoscope
   noSpawn: true

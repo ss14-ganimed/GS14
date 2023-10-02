@@ -36,234 +36,57 @@
   - type: SpawnPoint
     spawn_type: LateJoin
 
-# Cargo
-
-- type: entity
-  id: SpawnPointQuartermaster
-  parent: SpawnPointJobBase
-  name: quartermaster
-  components:
-  - type: SpawnPoint
-    job_id: Quartermaster
-  - type: Sprite
-    layers:
-      - state: green
-      - state: qm
-
-
-- type: entity
-  id: SpawnPointCargoTechnician
-  parent: SpawnPointJobBase
-  name: cargotechnician
-  components:
-  - type: SpawnPoint
-    job_id: CargoTechnician
-  - type: Sprite
-    layers:
-      - state: green
-      - state: cargo_tech
-
-- type: entity
-  id: SpawnPointSalvageSpecialist
-  parent: SpawnPointJobBase
-  name: salvagespecialist
-  components:
-  - type: SpawnPoint
-    job_id: SalvageSpecialist
-  - type: Sprite
-    layers:
-      - state: green
-      - state: miner
-
 # Civilian
 
 - type: entity
-  id: SpawnPointAssistant # TODO rename, but requires map changes.
+  id: SpawnPointCivilian
   parent: SpawnPointJobBase
-  name: passenger
+  name: civillian
   components:
   - type: SpawnPoint
-    job_id: Passenger
+    job_id: Civilian
   - type: Sprite
     layers:
       - state: green
-      - state: passenger
+      - state: civilian
 
 - type: entity
-  id: SpawnPointTechnicalAssistant
-  parent: SpawnPointAssistant
-  name: technical assistant
+  id: SpawnPointSurvivor
+  parent: SpawnPointJobBase
+  name: survivor
   components:
   - type: SpawnPoint
-    job_id: TechnicalAssistant
-
-- type: entity
-  id: SpawnPointMedicalIntern
-  parent: SpawnPointAssistant
-  name: medical intern
-  components:
-  - type: SpawnPoint
-    job_id: MedicalIntern
-
-- type: entity
-  id: SpawnPointSecurityCadet
-  parent: SpawnPointAssistant
-  name: security cadet
-  components:
-  - type: SpawnPoint
-    job_id: SecurityCadet
+    job_id: Survivor
   - type: Sprite
     layers:
       - state: green
-      - state: security_cadet
+      - state: survivor
+
+# Foresters
 
 - type: entity
-  id: SpawnPointResearchAssistant
-  parent: SpawnPointAssistant
-  name: research assistant
-  components:
-  - type: SpawnPoint
-    job_id: ResearchAssistant
-
-- type: entity
-  id: SpawnPointServiceWorker
-  parent: SpawnPointAssistant
-  name: service worker
-  components:
-  - type: SpawnPoint
-    job_id: ServiceWorker
-
-- type: entity
-  id: SpawnPointBartender
+  id: SpawnPointHunter
   parent: SpawnPointJobBase
-  name: bartender
+  name: hunter
   components:
   - type: SpawnPoint
-    job_id: Bartender
+    job_id: Hunter
   - type: Sprite
     layers:
       - state: green
-      - state: bartender
+      - state: hunter
 
 - type: entity
-  id: SpawnPointChef
+  id: SpawnPointRanger
   parent: SpawnPointJobBase
-  name: chef
+  name: ranger
   components:
   - type: SpawnPoint
-    job_id: Chef
+    job_id: Ranger
   - type: Sprite
     layers:
       - state: green
-      - state: chef
-
-- type: entity
-  id: SpawnPointBotanist
-  parent: SpawnPointJobBase
-  name: botanist
-  components:
-  - type: SpawnPoint
-    job_id: Botanist
-  - type: Sprite
-    layers:
-      - state: green
-      - state: botanist
-
-- type: entity
-  id: SpawnPointClown
-  parent: SpawnPointJobBase
-  name: clown
-  components:
-  - type: SpawnPoint
-    job_id: Clown
-  - type: Sprite
-    layers:
-      - state: green
-      - state: clown
-
-- type: entity
-  id: SpawnPointMime
-  parent: SpawnPointJobBase
-  name: mime
-  components:
-  - type: SpawnPoint
-    job_id: Mime
-  - type: Sprite
-    layers:
-      - state: green
-      - state: mime
-
-- type: entity
-  id: SpawnPointChaplain
-  parent: SpawnPointJobBase
-  name: chaplain
-  components:
-  - type: SpawnPoint
-    job_id: Chaplain
-  - type: Sprite
-    layers:
-      - state: green
-      - state: chaplain
-
-- type: entity
-  id: SpawnPointLibrarian
-  parent: SpawnPointJobBase
-  name: librarian
-  components:
-  - type: SpawnPoint
-    job_id: Librarian
-  - type: Sprite
-    layers:
-      - state: green
-      - state: librarian
-
-- type: entity
-  id: SpawnPointLawyer
-  parent: SpawnPointJobBase
-  name: lawyer
-  components:
-  - type: SpawnPoint
-    job_id: Lawyer
-  - type: Sprite
-    layers:
-      - state: green
-      - state: lawyer
-
-- type: entity
-  id: SpawnPointJanitor
-  parent: SpawnPointJobBase
-  name: janitor
-  components:
-  - type: SpawnPoint
-    job_id: Janitor
-  - type: Sprite
-    layers:
-      - state: green
-      - state: janitor
-
-- type: entity
-  id: SpawnPointMusician
-  parent: SpawnPointJobBase
-  name: musician
-  components:
-    - type: SpawnPoint
-      job_id: Musician
-    - type: Sprite
-      layers:
-        - state: green
-        - state: musician
-
-- type: entity
-  id: SpawnPointBoxer
-  parent: SpawnPointJobBase
-  name: boxer
-  components:
-    - type: SpawnPoint
-      job_id: Boxer
-    - type: Sprite
-      layers:
-        - state: green
-        - state: boxer
+      - state: ranger
 
 - type: entity
   id: SpawnPointBorg
@@ -280,119 +103,119 @@
     - sprite: Mobs/Silicon/chassis.rsi
       state: robot_e
 
-# Command
+# Facility
 
 - type: entity
-  id: SpawnPointCaptain
+  id: SpawnPointTechnician
   parent: SpawnPointJobBase
-  name: captain
+  name: technician
   components:
   - type: SpawnPoint
-    job_id: Captain
+    job_id: Technician
   - type: Sprite
     layers:
       - state: green
-      - state: captain
+      - state: technician
 
 - type: entity
-  id: SpawnPointHeadOfPersonnel
+  id: SpawnPointScientist
   parent: SpawnPointJobBase
-  name: headofpersonnel
+  name: scientist
   components:
   - type: SpawnPoint
-    job_id: HeadOfPersonnel
+    job_id: Scientist
   - type: Sprite
     layers:
       - state: green
-      - state: hop
-
-# Engineering
+      - state: scientist
 
 - type: entity
-  id: SpawnPointChiefEngineer
+  id: SpawnPointEngineer
   parent: SpawnPointJobBase
-  name: chiefengineer
+  name: engineer
   components:
   - type: SpawnPoint
-    job_id: ChiefEngineer
-  - type: Sprite
-    layers:
-      - state: green
-      - state: ce
-
-- type: entity
-  id: SpawnPointSeniorEngineer
-  parent: SpawnPointJobBase
-  name: seniorengineer
-  components:
-  - type: SpawnPoint
-    job_id: SeniorEngineer
-  - type: Sprite
-    layers:
-      - state: green
-      - state: seniorengineer
-
-- type: entity
-  id: SpawnPointStationEngineer
-  parent: SpawnPointJobBase
-  name: stationengineer
-  components:
-  - type: SpawnPoint
-    job_id: StationEngineer
+    job_id: Engineer
   - type: Sprite
     layers:
       - state: green
       - state: engineer
 
 - type: entity
-  id: SpawnPointAtmos
+  id: SpawnPointManager
   parent: SpawnPointJobBase
-  name: atmospherics
-  components:
-    - type: SpawnPoint
-      job_id: AtmosphericTechnician
-    - type: Sprite
-      layers:
-        - state: green
-        - state: atmospherics
-
-# Medical
-
-- type: entity
-  id: SpawnPointChiefMedicalOfficer
-  parent: SpawnPointJobBase
-  name: chiefmedicalofficer
+  name: manager
   components:
   - type: SpawnPoint
-    job_id: ChiefMedicalOfficer
+    job_id: Manager
   - type: Sprite
     layers:
       - state: green
-      - state: cmo
+      - state: manager
+
+# Security
 
 - type: entity
-  id: SpawnPointSeniorPhysician
+  id: SpawnPointOfficer
   parent: SpawnPointJobBase
-  name: seniorphysician
+  name: officer
   components:
   - type: SpawnPoint
-    job_id: SeniorPhysician
+    job_id: Officer
   - type: Sprite
     layers:
       - state: green
-      - state: seniorphysician
+      - state: officer
 
 - type: entity
-  id: SpawnPointMedicalDoctor
+  id: SpawnPointMedic
   parent: SpawnPointJobBase
-  name: medicaldoctor
+  name: medic
   components:
   - type: SpawnPoint
-    job_id: MedicalDoctor
+    job_id: Medic
   - type: Sprite
     layers:
       - state: green
-      - state: doctor
+      - state: medic
+
+- type: entity
+  id: SpawnPointChief
+  parent: SpawnPointJobBase
+  name: chief
+  components:
+  - type: SpawnPoint
+    job_id: Chief
+  - type: Sprite
+    layers:
+      - state: green
+      - state: chief
+
+# Special
+
+- type: entity
+  id: SpawnPointMonster
+  parent: SpawnPointJobBase
+  name: monster
+  components:
+  - type: SpawnPoint
+    job_id: Monster
+  - type: Sprite
+    layers:
+      - state: green
+      - state: monster
+
+- type: entity
+  id: SpawnPointButcher
+  parent: SpawnPointJobBase
+  name: butcher
+  components:
+  - type: SpawnPoint
+    job_id: Butcher
+  - type: Sprite
+    layers:
+      - state: green
+      - state: butcher
 
 - type: entity
   id: SpawnPointParamedic
@@ -407,223 +230,13 @@
       - state: paramedic
 
 - type: entity
-  id: SpawnPointChemist
+  id: SpawnPointZombie
   parent: SpawnPointJobBase
-  name: chemist
+  name: zombie
   components:
   - type: SpawnPoint
-    job_id: Chemist
+    job_id: Zombie
   - type: Sprite
     layers:
       - state: green
-      - state: chemist
-
-# Science
-
-- type: entity
-  id: SpawnPointResearchDirector
-  parent: SpawnPointJobBase
-  name: researchdirector
-  components:
-  - type: SpawnPoint
-    job_id: ResearchDirector
-  - type: Sprite
-    layers:
-      - state: green
-      - state: rd
-
-- type: entity
-  id: SpawnPointSeniorResearcher
-  parent: SpawnPointJobBase
-  name: seniorresearcher
-  components:
-  - type: SpawnPoint
-    job_id: SeniorResearcher
-  - type: Sprite
-    layers:
-      - state: green
-      - state: seniorresearcher
-
-- type: entity
-  id: SpawnPointScientist
-  parent: SpawnPointJobBase
-  name: scientist
-  components:
-  - type: SpawnPoint
-    job_id: Scientist
-  - type: Sprite
-    layers:
-      - state: green
-      - state: scientist
-
-# Security
-
-- type: entity
-  id: SpawnPointHeadOfSecurity
-  parent: SpawnPointJobBase
-  name: headofsecurity
-  components:
-  - type: SpawnPoint
-    job_id: HeadOfSecurity
-  - type: Sprite
-    layers:
-      - state: green
-      - state: hos
-
-- type: entity
-  id: SpawnPointWarden
-  parent: SpawnPointJobBase
-  name: warden
-  components:
-  - type: SpawnPoint
-    job_id: Warden
-  - type: Sprite
-    layers:
-      - state: green
-      - state: warden
-
-- type: entity
-  id: SpawnPointSeniorOfficer
-  parent: SpawnPointJobBase
-  name: seniorofficer
-  components:
-  - type: SpawnPoint
-    job_id: SeniorOfficer
-  - type: Sprite
-    layers:
-      - state: green
-      - state: seniorofficer
-
-- type: entity
-  id: SpawnPointSecurityOfficer
-  parent: SpawnPointJobBase
-  name: securityofficer
-  components:
-  - type: SpawnPoint
-    job_id: SecurityOfficer
-  - type: Sprite
-    layers:
-      - state: green
-      - state: security_officer
-
-- type: entity
-  id: SpawnPointDetective
-  parent: SpawnPointJobBase
-  name: detective
-  components:
-  - type: SpawnPoint
-    job_id: Detective
-  - type: Sprite
-    layers:
-      - state: green
-      - state: detective
-
-- type: entity
-  id: SpawnPointBrigmedic
-  parent: SpawnPointJobBase
-  name: brigmedic
-  components:
-  - type: Sprite
-    layers:
-      - state: green
-      - state: brigmedic
-
-# SPECIAL
-# ERT
-- type: entity
-  id: SpawnPointERTLeader
-  parent: SpawnPointJobBase
-  name: ERTleader
-  components:
-  - type: SpawnPoint
-    job_id: ERTLeader
-  - type: Sprite
-    layers:
-      - state: green
-      - state: ertleader
-
-- type: entity
-  id: SpawnPointERTEngineer
-  parent: SpawnPointJobBase
-  name: ERTengineer
-  components:
-  - type: SpawnPoint
-    job_id: ERTEngineer
-  - type: Sprite
-    layers:
-      - state: green
-      - state: ertengineer
-
-- type: entity
-  id: SpawnPointERTMedical
-  parent: SpawnPointJobBase
-  name: ERTmedical
-  components:
-  - type: SpawnPoint
-    job_id: ERTMedical
-  - type: Sprite
-    layers:
-      - state: green
-      - state: ertmedical
-
-- type: entity
-  id: SpawnPointERTSecurity
-  parent: SpawnPointJobBase
-  name: ERTsecurity
-  components:
-  - type: SpawnPoint
-    job_id: ERTSecurity
-  - type: Sprite
-    layers:
-      - state: green
-      - state: ertsecurity
-
-- type: entity
-  id: SpawnPointERTJanitor
-  parent: SpawnPointJobBase
-  name: ERTjanitor
-  components:
-  - type: SpawnPoint
-    job_id: ERTJanitor
-  - type: Sprite
-    layers:
-      - state: green
-      - state: ertjanitor
-
-# STATION SPECIFIC
-
-- type: entity
-  id: SpawnPointReporter
-  parent: SpawnPointJobBase
-  name: reporter
-  components:
-  - type: SpawnPoint
-    job_id: Reporter
-  - type: Sprite
-    layers:
-      - state: green
-      - state: reporter
-
-- type: entity
-  id: SpawnPointPsychologist
-  parent: SpawnPointJobBase
-  name: psychologist
-  components:
-  - type: SpawnPoint
-    job_id: Psychologist
-  - type: Sprite
-    layers:
-      - state: green
-      - state: psychologist
-
-- type: entity
-  id: SpawnPointZookeeper
-  parent: SpawnPointJobBase
-  name: zookeeper
-  components:
-  - type: SpawnPoint
-    job_id: Zookeeper
-  - type: Sprite
-    layers:
-      - state: green
-      - state: zookeeper
+      - state: zombie

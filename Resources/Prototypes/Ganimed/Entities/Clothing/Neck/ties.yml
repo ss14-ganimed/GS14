@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckTieBlack
+  name: black tie
+  description: Black loosely tied necktie, a perfect accessory for the over-worked salarymen.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Ties/dettie.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Ties/dettie.rsi

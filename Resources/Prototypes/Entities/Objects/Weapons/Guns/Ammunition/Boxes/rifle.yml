@@ -9,7 +9,7 @@
       tags:
         - CartridgeRifle
     proto: CartridgeRifle
-    capacity: 60
+    capacity: 5
   - type: Item
     size: 5
   - type: ContainerContainer
@@ -30,7 +30,7 @@
   name: ammunition box (.20 rifle)
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 20
     proto: CartridgeRifle
   - type: Sprite
     layers:
@@ -50,7 +50,7 @@
   name: ammunition box (.20 rifle rubber)
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
+    capacity: 20
     proto: CartridgeRiflePractice
   - type: Sprite
     layers:

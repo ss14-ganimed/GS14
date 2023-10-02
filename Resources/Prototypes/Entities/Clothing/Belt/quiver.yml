@@ -20,3 +20,16 @@
   - type: StorageContainerVisuals
     maxFillLevels: 3
     fillBaseName: fill-
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltRedSecBag
+  name: red security bag
+  description: Red security bag made for everyone involved.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/redsecbag.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/redsecbag.rsi
+  - type: Storage
+    capacity: 40

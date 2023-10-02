@@ -1,0 +1,120 @@
+- type: job
+  id: Hunter
+  name: job-name-hunter
+  description: job-description-hunter
+  playTimeTracker: JobHunter
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSurvivor
+      time: 14400 # 4 hours
+  weight: 10
+  startingGear: HunterGear
+  icon: "JobIconHunter"
+  supervisors: job-supervisors-ranger
+  canBeAntag: true
+  access:
+  - Human
+  - Foresters
+
+- type: startingGear
+  id: HunterGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    outerClothing: ClothingOuterVestDetectiveOriginal
+    shoes: ClothingShoesBootsMercFilled
+    gloves: ClothingHandsGlovesMercFingerless
+    head: ClothingHeadBandMerc
+    back: WeaponSniperMosin
+    ears: ClothingHeadsetForesters
+    id: HunterPDA
+    pocket1: BoxSpawnHunter
+
+- type: entity
+  id: BoxSpawnHunter
+  parent: BoxSpawnGeneric
+  suffix: Hunter
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: MagazineBoxLightRifle
+        amount: 2
+      - id: Crowbar
+      - id: StimpackMini
+      - id: RadioHandheld
+      - id: FlashlightLantern
+      - id: WeaponFlareGun
+      - id: Brutepack
+      - id: BoxSpawnForesters
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2
+
+- type: entity
+  id: BoxSpawnForesters
+  parent: BoxSpawnGeneric
+  suffix: Foresters
+  components:
+  - type: SpawnItemsOnUse
+    items:
+      - id: ClothingShoesGaloshes
+        orGroup: SpawnFor
+      - id: ClothingMaskGasExplorer
+        orGroup: SpawnFor
+      - id: ClothingMaskGas
+        orGroup: SpawnFor
+      - id: Gauze
+        orGroup: SpawnFor
+      - id: InflatableWallStack5
+        orGroup: SpawnFor
+      - id: ClothingOuterArmorBasic
+        orGroup: SpawnFor
+      - id: ClothingOuterArmorBasicSlim
+        orGroup: SpawnFor
+      - id: ClothingOuterArmorBasicOriginal
+        orGroup: SpawnFor
+      - id: ClothingOuterArmorBulletproof
+        orGroup: SpawnFor
+      - id: ClothingHeadSafari
+        orGroup: SpawnFor
+      - id: ClothingEyesVisorNinja
+        orGroup: SpawnFor
+      - id: ClothingHeadHelmetMerc
+        orGroup: SpawnFor
+      - id: SyringeEphedrine
+        orGroup: SpawnFor
+      - id: Joint
+        orGroup: SpawnFor
+      - id: ClothingNeckBronzeheart
+        orGroup: SpawnFor
+      - id: PillSpaceDrugs
+        orGroup: SpawnFor
+      - id: StrangePill
+        orGroup: SpawnFor
+      - id: ClothingShoesBootsSalvage
+        orGroup: SpawnFor
+      - id: AcousticGuitarInstrument
+        orGroup: SpawnFor
+      - id: DrinkBeerBottleFull
+        orGroup: SpawnFor
+      - id: Chainsaw
+        orGroup: SpawnFor
+      - id: Truncheon
+        orGroup: SpawnFor
+      - id: ExGrenade
+        orGroup: SpawnFor
+      - id: GrenadeFlashBang
+        orGroup: SpawnFor
+      - id: MagazineBoxLightRifle
+        orGroup: SpawnFor
+      - id: HydroponicsToolSpade
+        orGroup: SpawnFor
+      - id: Bola
+        orGroup: SpawnFor
+      - id: Spear
+        orGroup: SpawnFor
+      - id: CigarGold
+        orGroup: SpawnFor
+      - id: Lighter
+        orGroup: SpawnFor
+      - id: Handcuffs
+        orGroup: SpawnFor

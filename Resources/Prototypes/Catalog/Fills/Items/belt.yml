@@ -13,6 +13,30 @@
       - id: NetworkConfigurator
 
 - type: entity
+  id: ClothingBeltUtilityScarceFilled
+  parent: ClothingBeltUtility
+  suffix: Scarce, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Crowbar
+        prob: 0.1
+      - id: Wrench
+        prob: 0.1
+      - id: Screwdriver
+        prob: 0.1
+      - id: Wirecutter
+        prob: 0.1
+      - id: Welder
+        prob: 0.05
+      - id: NetworkConfigurator
+        prob: 0.05
+      - id: Multitool
+        prob: 0.05
+      - id: CableApcStack
+        prob: 0.05
+
+- type: entity
   id: ClothingBeltUtilityEngineering
   parent: ClothingBeltUtility
   suffix: Engineering
@@ -170,3 +194,13 @@
         - id: WeaponRevolverInspector
         - id: SpeedLoaderMagnum
         - id: SpeedLoaderMagnumRubber
+
+- type: entity
+  id: ClothingBeltBandolierImprovisedShellFilled
+  parent: ClothingBeltBandolier
+  suffix: Improvised Shell Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: ShellShotgunImprovised
+        amount: 10

@@ -1,0 +1,57 @@
+- type: job
+  id: Ranger
+  name: job-name-ranger
+  description: job-description-ranger
+  playTimeTracker: JobRanger
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 86400 # 24 Hours
+    - !type:DepartmentTimeRequirement
+      department: Foresters
+      time: 43200 #12 hours
+  weight: 20
+  canBeAntag: true
+  requireAdminNotify: true
+  startingGear: RangerGear
+  icon: "JobIconRanger"
+  supervisors: job-supervisors-none
+  access:
+  - Human
+  - Foresters
+  - Ranger
+
+- type: startingGear
+  id: RangerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitary
+    outerClothing: ClothingOuterVestWebMerc
+    shoes: ClothingShoesBootsMercFilled
+    neck: ClothingNeckRangermedal
+    gloves: ClothingHandsMercGlovesCombat
+    belt: ClothingBeltMercWebbing
+    back: ClothingBackpackSatchelSalvageRanger
+    head: ClothingHeadHatBeretMerc
+    ears: ClothingHeadsetAltForesters
+    eyes: ClothingEyesGlassesMercenary
+    suitstorage: WeaponRifleAk
+    id: RangerPDA
+
+- type: entity
+  id: ClothingBackpackSatchelSalvageRanger
+  parent: ClothingBackpackSatchelSalvage
+  suffix: Ranger
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazineLightRifle
+      - id: Crowbar
+      - id: StimpackMini
+      - id: RadioHandheld
+      - id: FlashlightLantern
+      - id: WeaponFlareGun
+      - id: Brutepack
+      - id: BoxSpawnMRE
+      - id: BoxSpawnForesters
+        amount: 3
+      - id: BoxSpawnGeneric
+        amount: 2

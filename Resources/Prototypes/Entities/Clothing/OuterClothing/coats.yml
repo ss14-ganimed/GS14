@@ -163,6 +163,7 @@
     sprite: Clothing/OuterClothing/Coats/labcoat_gene.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/labcoat_gene.rsi
+    equippedPrefix: open
   - type: Armor
     modifiers:
       coefficients:

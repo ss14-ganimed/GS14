@@ -9,10 +9,14 @@ chat-radio-command = Командный
 chat-radio-engineering = Инженерный
 chat-radio-medical = Медицинский
 chat-radio-science = Научный
-chat-radio-security = Безопасность
 chat-radio-service = Сервис
 chat-radio-supply = Снабжение
 chat-radio-syndicate = Синдикат
 chat-radio-binary = Бинарный
 # not headset but whatever
 chat-radio-handheld = Портативный
+
+chat-radio-foresters = Лесники
+chat-radio-facility = Исследователи
+chat-radio-security = Силовики
+chat-radio-monster = Сознание

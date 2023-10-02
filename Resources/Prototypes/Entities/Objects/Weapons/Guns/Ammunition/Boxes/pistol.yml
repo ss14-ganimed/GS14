@@ -10,7 +10,7 @@
       tags:
         - CartridgePistol
     proto: CartridgePistol
-    capacity: 60
+    capacity: 10
   - type: Item
     size: 5
   - type: ContainerContainer

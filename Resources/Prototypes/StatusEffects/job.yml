@@ -381,3 +381,87 @@
   icon:
     sprite: Interface/Misc/job_icons.rsi
     state: SeniorResearcher
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconCivilian
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Civilian
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconSurvivor
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Survivor
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconTechnician
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Technician
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconHunter
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Hunter
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconRanger
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Ranger
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconEngineer
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Engineer
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconManager
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Manager
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconOfficer
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Officer
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMedic
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Medic
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconChief
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Chief
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMonster
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Monster
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconButcher
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Butcher

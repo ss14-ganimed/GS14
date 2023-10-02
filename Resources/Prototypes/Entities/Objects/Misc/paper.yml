@@ -385,7 +385,7 @@
     sprite: Objects/Misc/bureaucracy.rsi
     layers:
     - state: folder-colormap
-      color: "#355d99"
+      color: "#007089"
     - state: folder-base
 
 - type: entity

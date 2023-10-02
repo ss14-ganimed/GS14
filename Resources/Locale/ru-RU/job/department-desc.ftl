@@ -1,8 +1,5 @@
-department-Cargo-description = Покупайте и доставляйте экипажу полезные припасы.
-department-Civilian-description = Выполняйте небольшие полезные задания для поддержания нормальной работы станции.
-department-Command-description = Управляйте экипажем и обеспечивайте его эффективную работу.
-department-Engineering-description = Поддерживайте станцию в рабочем состоянии.
-department-Medical-description = Поддерживайте здоровье экипажа.
-department-Security-description = Поддерживайте порядок на станции.
-department-Science-description = Изучайте новые технологии и опасные артефакты.
-department-Specific-description = Должности, которые есть не на всех станциях.
+department-Civilian-description = Выживите, оставаясь наедине против дикой природы.
+department-Security-description = Выживите, прибегая к силе порядка.
+department-Facility-description = Выживите, когда ваше начальство бросило вас.
+department-Special-description = Выживите, исполнив свой долг.
+department-Foresters-description = Выживите, объединившись с такими же как и сами.

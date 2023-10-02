@@ -1,0 +1,35 @@
+- type: job
+  id: Paramedic
+  name: job-name-paramedic
+  description: job-description-paramedic
+  playTimeTracker: JobParamedic
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 86400 # 24 Hours
+    - !type:RoleTimeRequirement
+      role: JobMedic
+      time: 28800 # 8 hours
+  weight: 5
+  canBeAntag: true
+  requireAdminNotify: true
+  startingGear: ParamedicGear
+  icon: "JobIconParamedic"
+  supervisors: job-supervisors-medicoath
+  access:
+  - Human
+
+- type: startingGear
+  id: ParamedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitParamedic
+    outerClothing: ClothingOuterArmorBasicSlim
+    shoes: ClothingShoesColorWhite
+    gloves: ClothingHandsGlovesNitrile
+    back: ClothingBackpackMedical
+    belt: ClothingBeltParamedicFilled
+    mask: ClothingMaskBreathMedicalSecurity
+    eyes: ClothingEyesHudMedical
+    head: ClothingHeadHatBeretCmo
+    id: ParamedicPDA
+  satchel: ClothingBackpackSatchelMedical
+  duffelbag: ClothingBackpackDuffelMedical

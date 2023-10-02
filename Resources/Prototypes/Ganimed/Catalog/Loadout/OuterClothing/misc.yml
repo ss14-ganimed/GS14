@@ -55,3 +55,10 @@
   cost: 1
   exclusive: true
   prototype: ClothingOuterPonchoClassic
+
+- type: loadout
+  id: LoadoutUniformClothingOuterNightDress
+  category: loadout-category-uniform
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterNightDress

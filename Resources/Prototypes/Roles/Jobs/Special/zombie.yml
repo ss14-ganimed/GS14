@@ -1,0 +1,27 @@
+- type: job
+  id: Zombie
+  name: job-name-zombie
+  description: job-description-zombie
+  playTimeTracker: JobZombie
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 36000 # 10 Hours
+  weight: 5
+  canBeAntag: true
+  startingGear: ZombieGear
+  icon: "JobIconZombie"
+  supervisors: job-supervisors-zombie
+
+- type: startingGear
+  id: ZombieGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitary
+    outerClothing: ClothingOuterVestDetectiveOriginal
+    shoes: ClothingShoesBootsWork
+    gloves: ClothingHandsMercGlovesCombat
+    back: ClothingBackpackSatchelSalvage
+    belt: ClothingBeltSalvageWebbing
+    mask: ClothingMaskGasExplorer
+    eyes: ClothingEyesVisorNinja
+    neck: ClothingNeckScarfStripedGreen
+    head: ClothingHeadHelmetMerc

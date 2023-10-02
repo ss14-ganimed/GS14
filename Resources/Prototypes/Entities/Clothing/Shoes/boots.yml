@@ -2,13 +2,16 @@
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesBootsWork
   name: workboots
-  description: Engineering lace-up work boots for the especially blue-collar.
+  description: Tough lace-up work boots. Make it easier to run on tough terrain.
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Boots/workboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/workboots.rsi
   - type: Matchbox
+  - type: ClothingSpeedModifier
+    sprintModifier: 1.05
+    walkModifier: 1.00
 
 - type: entity
   parent: ClothingShoesStorageBase
@@ -29,14 +32,17 @@
 - type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesBootsSalvage
-  name: salvage boots
-  description: Steel-toed salvage boots for salvaging in hazardous environments.
+  name: explorer boots
+  description: Steel-toed salvage boots for various hazardous environments.
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Boots/explorer.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/explorer.rsi
   - type: Matchbox
+  - type: ClothingSpeedModifier
+    sprintModifier: 1.10
+    walkModifier: 1.05
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -91,3 +97,6 @@
     sprite: Clothing/Shoes/Boots/laceups.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/laceups.rsi
+  - type: ClothingSpeedModifier
+    sprintModifier: 0.95
+    walkModifier: 1.00

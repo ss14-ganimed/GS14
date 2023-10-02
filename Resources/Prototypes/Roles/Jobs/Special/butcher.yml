@@ -1,0 +1,29 @@
+- type: job
+  id: Butcher
+  name: job-name-butcher
+  description: job-description-butcher
+  playTimeTracker: JobButcher
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 Hours
+  weight: 10
+  canBeAntag: true
+  requireAdminNotify: true
+  startingGear: ButcherGear
+  icon: "JobIconButcher"
+  supervisors: job-supervisors-hunger
+  access:
+  - Human
+
+- type: startingGear
+  id: ButcherGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOfficeWorker
+    outerClothing: ClothingOuterApronBar
+    shoes: ClothingShoesColorBlack
+    gloves: ClothingHandsGlovesFingerless
+    back: ClothingBackpack
+    belt: ClothingBeltBandolier
+    id: CivilianIDCard
+  satchel: ClothingBackpackSatchel
+  duffelbag: ClothingBackpackDuffel

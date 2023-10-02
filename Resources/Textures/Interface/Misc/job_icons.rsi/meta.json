@@ -168,6 +168,42 @@
         },
         {
             "name": "SeniorOfficer"
+        },
+        {
+            "name": "Civilian"
+        },
+        {
+            "name": "Survivor"
+        },
+        {
+            "name": "Technician"
+        },
+        {
+            "name": "Engineer"
+        },
+        {
+            "name": "Manager"
+        },
+        {
+            "name": "Hunter"
+        },
+        {
+            "name": "Ranger"
+        },
+        {
+            "name": "Chief"
+        },
+        {
+            "name": "Medic"
+        },
+        {
+            "name": "Officer"
+        },
+        {
+            "name": "Butcher"
+        },
+        {
+            "name": "Monster"
         }
     ]
 }
