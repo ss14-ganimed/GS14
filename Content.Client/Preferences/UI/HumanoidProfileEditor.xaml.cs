@@ -32,6 +32,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Ganimed.SponsorManager;
+using Robust.Client.Player;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 using Direction = Robust.Shared.Maths.Direction;
 
@@ -57,9 +59,11 @@ namespace Content.Client.Preferences.UI
     {
         private readonly IClientPreferencesManager _preferencesManager;
         private readonly IEntityManager _entMan;
+		private readonly IPlayerManager _playerManager;
         private readonly IConfigurationManager _configurationManager;
         private readonly MarkingManager _markingManager;
         private readonly JobRequirementsManager _requirements;
+		private readonly SponsorManager _sponsorManager;
 
         private LineEdit _ageEdit => CAgeEdit;
         private LineEdit _nameEdit => CNameEdit;
@@ -75,6 +79,7 @@ namespace Content.Client.Preferences.UI
         private SingleMarkingPicker _hairPicker => CHairStylePicker;
         private SingleMarkingPicker _facialHairPicker => CFacialHairPicker;
         private EyeColorPicker _eyesPicker => CEyeColorPicker;
+        private SpeakerColorPicker _speakerPicker => CSpeakerColorPicker;
 
         private TabContainer _tabContainer => CTabContainer;
         private BoxContainer _jobList => CJobList;
@@ -83,7 +88,8 @@ namespace Content.Client.Preferences.UI
 		private ProgressBar _loadoutPoints => LoadoutPoints;
         private BoxContainer _loadoutsTab => CLoadoutsTab;
         private TabContainer _loadoutsTabs => CLoadoutsTabs;
-        private readonly int StartLoadoutPoints = 14;
+        private int BaseStartLoadoutPoints = 14;
+		private int SponsorStartLoadoutPoints = 20;
         private readonly List<JobPrioritySelector> _jobPriorities;
         private OptionButton _preferenceUnavailableButton => CPreferenceUnavailableButton;
         private readonly Dictionary<string, BoxContainer> _jobCategories;
@@ -111,11 +117,12 @@ namespace Content.Client.Preferences.UI
         public event Action<HumanoidCharacterProfile, int>? OnProfileChanged;
 
         public HumanoidProfileEditor(IClientPreferencesManager preferencesManager, IPrototypeManager prototypeManager,
-            IEntityManager entityManager, IConfigurationManager configurationManager)
+            IEntityManager entityManager, IConfigurationManager configurationManager, IPlayerManager playerManager)
         {
             RobustXamlLoader.Load(this);
             _prototypeManager = prototypeManager;
             _entMan = entityManager;
+            _playerManager = playerManager;
             _preferencesManager = preferencesManager;
             _configurationManager = configurationManager;
             _markingManager = IoCManager.Resolve<MarkingManager>();
@@ -334,10 +341,19 @@ namespace Content.Client.Preferences.UI
 
             #region Eyes
 
-            _eyesPicker.OnEyeColorPicked += newColor =>
+            _sponsorManager = IoCManager.Resolve<SponsorManager>();
+			
+			_eyesPicker.OnEyeColorPicked += newColor =>
             {
                 if (Profile is null)
-                    return;
+                return;
+				if (_playerManager.LocalPlayer is null)
+					return;
+				if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
+					Profile = Profile.WithCharacterAppearance(
+                    Profile.Appearance.WithSpeakerColor(newColor));
+					CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
+				}
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithEyeColor(newColor));
                 CMarkings.CurrentEyeColor = Profile.Appearance.EyeColor;
@@ -345,6 +361,27 @@ namespace Content.Client.Preferences.UI
             };
 
             #endregion Eyes
+			
+			#region SpeakerColor
+			
+            _sponsorManager = IoCManager.Resolve<SponsorManager>();
+			
+            _speakerPicker.OnSpeakerColorPicked += newColor =>
+            {
+                if (Profile is null)
+                    return;
+				if (_playerManager.LocalPlayer is null)
+					return;
+				if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
+					newColor = Profile.Appearance.EyeColor;
+				}
+                Profile = Profile.WithCharacterAppearance(
+                    Profile.Appearance.WithSpeakerColor(newColor));
+                CMarkings.CurrentSpeakerColor = Profile.Appearance.SpeakerColor;
+                IsDirty = true;
+            };
+
+            #endregion SpeakerColor
 
             #endregion Appearance
 
@@ -454,8 +491,12 @@ namespace Content.Client.Preferences.UI
             #endregion Markings
 			
 			#region Loadouts
-
-            _loadoutPoints.MaxValue = StartLoadoutPoints;
+			
+			_sponsorManager = IoCManager.Resolve<SponsorManager>();	
+			
+            _loadoutPoints.MaxValue = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
             _tabContainer.SetTabTitle(5, Loc.GetString("humanoid-profile-editor-loadouts-tab"));
             _loadoutPreferences = new List<LoadoutPreferenceSelector>();
             var loadouts = prototypeManager.EnumeratePrototypes<LoadoutPrototype>().OrderBy(l => l.ID).ToList();
@@ -535,6 +576,7 @@ namespace Content.Client.Preferences.UI
                     _loadoutPreferences.Add(selector);
                     selector.PreferenceChanged += preference =>
                     {
+					
                         // Make sure they have enough loadout points
                         if (preference)
                         {
@@ -1016,7 +1058,7 @@ namespace Content.Client.Preferences.UI
             }
 
             CMarkings.SetData(Profile.Appearance.Markings, Profile.Species,
-                Profile.Sex, Profile.Appearance.SkinColor, Profile.Appearance.EyeColor
+                Profile.Sex, Profile.Appearance.SkinColor, Profile.Appearance.EyeColor, Profile.Appearance.SpeakerColor
             );
         }
 
@@ -1150,13 +1192,33 @@ namespace Content.Client.Preferences.UI
 
         private void UpdateEyePickers()
         {
-            if (Profile == null)
-            {
+            if (Profile is null)
                 return;
-            }
+			if (_playerManager.LocalPlayer is null)
+				return;
+			if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
+				CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
+				_speakerPicker.SetData(Profile.Appearance.EyeColor);
+			}
 
             CMarkings.CurrentEyeColor = Profile.Appearance.EyeColor;
             _eyesPicker.SetData(Profile.Appearance.EyeColor);
+        }
+		
+		private void UpdateSpeakerPickers()
+        {
+            if (Profile is null)
+                return;
+			if (_playerManager.LocalPlayer is null)
+				return;
+			if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
+				CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
+				_speakerPicker.SetData(Profile.Appearance.EyeColor);
+				return;
+			}
+
+            CMarkings.CurrentSpeakerColor = Profile.Appearance.SpeakerColor;
+            _speakerPicker.SetData(Profile.Appearance.SpeakerColor);
         }
 
         private void UpdateSaveButton()
@@ -1174,6 +1236,7 @@ namespace Content.Client.Preferences.UI
 
             if (ShowClothes.Pressed)
                 LobbyCharacterPreviewPanel.GiveDummyJobClothes(_previewDummy!.Value, Profile);
+                LobbyCharacterPreviewPanel.GiveDummyLoadoutItems(_previewDummy!.Value, Profile);
 
             _previewSpriteView.OverrideDirection = (Direction) ((int) _previewRotation % 4 * 2);
         }
@@ -1190,6 +1253,7 @@ namespace Content.Client.Preferences.UI
             UpdateBackpackControls();
             UpdateAgeEdit();
             UpdateEyePickers();
+            UpdateSpeakerPickers();
             UpdateSaveButton();
             UpdateJobPriorities();
             UpdateAntagPreferences();
@@ -1389,14 +1453,22 @@ namespace Content.Client.Preferences.UI
         }
 		
 		private void UpdateLoadoutPreferences()
-        {
-            _loadoutPoints.Value = StartLoadoutPoints;
-            _loadoutPoints.MaxValue = StartLoadoutPoints;
+		{
+			_loadoutPoints.Value = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
+			
+            _loadoutPoints.MaxValue = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
 
             if (_loadoutPreferences == null)
                 return;
 
-            var points = StartLoadoutPoints;
+            var points = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
+			
             foreach (var preferenceSelector in _loadoutPreferences)
             {
                 var loadoutId = preferenceSelector.Loadout.ID;

@@ -1,26 +1,3 @@
-- type: job
-  id: Detective
-  name: job-name-detective
-  description: job-description-detective
-  playTimeTracker: JobDetective
-  requirements:
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 28800 #8 hours
-  - !type:RoleTimeRequirement
-    role: JobSecurityOfficer
-    time: 18000 #5 hrs
-  startingGear: DetectiveGear
-  icon: "JobIconDetective"
-  supervisors: job-supervisors-hos
-  canBeAntag: false
-  access:
-  - Security
-  - Brig
-  - Maintenance
-  - Service
-  - Detective
-
 - type: startingGear
   id: DetectiveGear
   equipment:
@@ -36,3 +13,4 @@
   innerclothingskirt: ClothingUniformJumpskirtDetective
   satchel: ClothingBackpackSatchelSecurityFilledDetective
   duffelbag: ClothingBackpackDuffelSecurityFilledDetective
+
