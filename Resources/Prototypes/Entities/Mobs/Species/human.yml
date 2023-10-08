@@ -25,3 +25,13 @@
   parent: BaseSpeciesDummy
   id: MobHumanDummy
   noSpawn: true
+
+- type: entity
+  parent: BaseMobHuman
+  id: BaseMobStukov
+  abstract: false
+  name: Констанций Стуков
+  description: Молодёжного вида высокий мужчина в возрасте. Напускной резкий и беглый тон голоса вкупе с дорогой одеждой выделяют в нём известного эксцентричного ведущего с ярким образом и ещё более яркой ценой за свои услуги.
+  components:
+  - type: Sprite
+    scale: 0.99, 1.05

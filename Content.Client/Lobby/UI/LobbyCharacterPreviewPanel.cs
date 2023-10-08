@@ -181,17 +181,6 @@ namespace Content.Client.Lobby.UI
                 if (!protoMan.TryIndex<LoadoutPrototype>(loadoutId, out var loadout))
                     continue;
 
-                var isWhitelisted = loadout.WhitelistJobs != null &&
-                                    !loadout.WhitelistJobs.Contains(highPriorityJobId ?? "");
-                var isBlacklisted = highPriorityJobId != null &&
-                                    loadout.BlacklistJobs != null &&
-                                    loadout.BlacklistJobs.Contains(highPriorityJobId);
-                var isSpeciesRestricted = loadout.SpeciesRestrictions != null &&
-                                          loadout.SpeciesRestrictions.Contains(profile.Species);
-
-                if (isWhitelisted || isBlacklisted || isSpeciesRestricted)
-                    continue;
-
                 var entity = entMan.SpawnEntity(loadout.Prototype, MapCoordinates.Nullspace);
 
                 // Take in hand if not clothes

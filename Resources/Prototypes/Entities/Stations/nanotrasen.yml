@@ -46,3 +46,15 @@
   noSpawn: true
   components:
     - type: Transform
+
+
+- type: entity
+  id: StandardStationHotel
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationNanotrasen
+  noSpawn: true
+  components:
+    - type: Transform

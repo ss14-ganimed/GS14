@@ -35,35 +35,10 @@ public sealed class LoadoutSystem : EntitySystem
 		
 		foreach (var loadoutId in ev.Profile.LoadoutPreferences)
         {
-			if (!_prototypeManager.TryIndex<LoadoutPrototype>(loadoutId, out var loadout))
-                continue;
-			loadoutTotal += loadout.Cost;
-			if (loadoutMax - loadoutTotal < 0) 
-			{
-				return;
-			}
-		}
-		
-		foreach (var loadoutId in ev.Profile.LoadoutPreferences)
-        {
             if (!_prototypeManager.TryIndex<LoadoutPrototype>(loadoutId, out var loadout))
                 continue;
-            var isWhitelisted = ev.JobId == null ||
-                                loadout.WhitelistJobs != null &&
-                                !loadout.WhitelistJobs.Contains(ev.JobId);
-            var isBlacklisted = ev.JobId != null &&
-                                loadout.BlacklistJobs != null &&
-                                loadout.BlacklistJobs.Contains(ev.JobId);
-			var isSponsor = !(ev.Player is null) && !(ev.Player.ConnectedClient is null) &&
-                                _sponsorManager.IsSponsor(ev.Player.ConnectedClient.UserName);
-			var sponsorRestriction = !isSponsor && loadout.SponsorOnly;
-            var isSpeciesRestricted = loadout.SpeciesRestrictions != null &&
-                                      loadout.SpeciesRestrictions.Contains(ev.Profile.Species);
-
-            if (isWhitelisted || isBlacklisted || isSpeciesRestricted || sponsorRestriction)
-                continue;
-
-            var entity = Spawn(loadout.Prototype, Transform(ev.Mob).Coordinates);
+            
+			var entity = Spawn(loadout.Prototype, Transform(ev.Mob).Coordinates);
 
             // Take in hand if not clothes
             if (!TryComp<ClothingComponent>(entity, out var clothing))

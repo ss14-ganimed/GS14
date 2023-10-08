@@ -363,11 +363,6 @@ namespace Content.Client.Preferences.UI
                 return;
 				if (_playerManager.LocalPlayer is null)
 					return;
-				if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
-					Profile = Profile.WithCharacterAppearance(
-                    Profile.Appearance.WithSpeakerColor(newColor));
-					CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
-				}
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithEyeColor(newColor));
                 CMarkings.CurrentEyeColor = Profile.Appearance.EyeColor;
@@ -386,10 +381,7 @@ namespace Content.Client.Preferences.UI
                     return;
 				if (_playerManager.LocalPlayer is null)
 					return;
-				if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
-					newColor = Profile.Appearance.EyeColor;
-				}
-                Profile = Profile.WithCharacterAppearance(
+				Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithSpeakerColor(newColor));
                 CMarkings.CurrentSpeakerColor = Profile.Appearance.SpeakerColor;
                 IsDirty = true;
@@ -595,16 +587,14 @@ namespace Content.Client.Preferences.UI
                         if (preference)
                         {
                             
-							var remain = _loadoutPoints.Value - loadout.Cost;
+							var remain = _loadoutPoints.Value;
                             if (remain < 0)
                                 preference = false;
-                            else if (loadout.SponsorOnly && !_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName))
-								preference = false;
-							else
+                            else
                                 _loadoutPoints.Value = remain;
                         }
                         else
-                            _loadoutPoints.Value += loadout.Cost;
+                            _loadoutPoints.Value += 0;
                         // Update Preference
                         Profile = Profile?.WithLoadoutPreference(loadout.ID, preference);
                         IsDirty = true;
@@ -1229,10 +1219,6 @@ namespace Content.Client.Preferences.UI
                 return;
 			if (_playerManager.LocalPlayer is null)
 				return;
-			if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
-				CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
-				_speakerPicker.SetData(Profile.Appearance.EyeColor);
-			}
 
             CMarkings.CurrentEyeColor = Profile.Appearance.EyeColor;
             _eyesPicker.SetData(Profile.Appearance.EyeColor);
@@ -1244,11 +1230,6 @@ namespace Content.Client.Preferences.UI
                 return;
 			if (_playerManager.LocalPlayer is null)
 				return;
-			if (!_sponsorManager.IsSponsor(_playerManager.LocalPlayer?.Session.ConnectedClient.UserName)) {
-				CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
-				_speakerPicker.SetData(Profile.Appearance.EyeColor);
-				return;
-			}
 
             CMarkings.CurrentSpeakerColor = Profile.Appearance.SpeakerColor;
             _speakerPicker.SetData(Profile.Appearance.SpeakerColor);
@@ -1512,7 +1493,7 @@ namespace Content.Client.Preferences.UI
 
                 if (preference)
                 {
-                    points -= preferenceSelector.Loadout.Cost;
+                    points -= 0;
                     _loadoutPoints.Value = points;
                 }
             }
@@ -1624,43 +1605,15 @@ namespace Content.Client.Preferences.UI
 
                 _checkBox = new CheckBox
                 {
-                    Text = loadout.SponsorOnly ? $"{loadoutMeta.EntityName} [{loadout.Cost}] ★" : $"{loadoutMeta.EntityName} [{loadout.Cost}]",
+                    Text = $"{loadoutMeta.EntityName}",
                     VerticalAlignment = VAlignment.Center
                 };
                 _checkBox.OnToggled += OnCheckBoxToggled;
 
                 var tooltip = "";
                 tooltip += $"{Loc.GetString(loadoutMeta.EntityDescription)}";
-                if (loadout.WhitelistJobs != null || loadout.BlacklistJobs != null || loadout.SpeciesRestrictions != null || loadout.SponsorOnly)
-                    tooltip += "\n";
-
-                if (loadout.SponsorOnly)
-				{
-					tooltip += Loc.GetString("humanoid-profile-editor-loadouts-sponsor-only");
-					if (loadout.WhitelistJobs != null || loadout.SpeciesRestrictions != null || loadout.BlacklistJobs != null)
-						tooltip += "\n";
-				}
-				
-				if (loadout.WhitelistJobs != null)
-                {
-                    tooltip += Loc.GetString("humanoid-profile-editor-loadouts-selector-whitelist");
-                    if (loadout.WhitelistJobs != null)
-                        foreach (var require in loadout.WhitelistJobs)
-                            tooltip += $"\n - {Loc.GetString($"Job{require}")} ({Loc.GetString("humanoid-profile-editor-loadouts-selector-job")})";
-                }
-
-                if (loadout.SpeciesRestrictions != null || loadout.BlacklistJobs != null)
-                {
-                    tooltip += Loc.GetString("humanoid-profile-editor-loadouts-selector-blacklist");
-                    if (loadout.SpeciesRestrictions != null)
-                        foreach (var require in loadout.SpeciesRestrictions)
-                            tooltip += $"\n - {Loc.GetString($"species-name-{require.ToLower()}")} ({Loc.GetString("humanoid-profile-editor-loadouts-selector-species")})";
-                    if (loadout.BlacklistJobs != null)
-                        foreach (var require in loadout.BlacklistJobs)
-                            tooltip += $"\n - {Loc.GetString($"Job{require}")} ({Loc.GetString("humanoid-profile-editor-loadouts-selector-job")})";
-                }
-
-                if (tooltip != "")
+                
+				if (tooltip != "")
                 {
                     _checkBox.ToolTip = tooltip;
                     _checkBox.TooltipDelay = 0.2f;

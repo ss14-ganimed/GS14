@@ -1,0 +1,14 @@
+- type: gameMap
+  id: Hotel
+  mapName: Hotel
+  mapPath: /Maps/Nonstations/hotel.yml
+  minPlayers: 0
+  stations:
+    Hotel:
+      stationProto: StandardStationHotel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Grey Sun AT-21"
+        - type: StationJobs
+          availableJobs:
+            Passenger: [ 0, -1 ]
