@@ -102,6 +102,23 @@
   - WeaponLaserCarbinePractice
   - WeaponDisablerPractice
 
+- type: technology
+  id: RoboticLawEnforcement
+  name: research-technology-robotic-law-enforcement
+  icon:
+    sprite: Mobs/Silicon/chassis.rsi
+    state: security
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - LeftArmBorgSecurity
+  - RightArmBorgSecurity
+  - LeftLegBorgSecurity
+  - RightLegBorgSecurity
+  - HeadBorgSecurity
+  - TorsoBorgSecurity
+
 # Tier 2
 
 - type: technology
@@ -115,6 +132,18 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+
+- type: technology
+  id: MechanizedWeaponry
+  name: research-technology-mechanized-weaponry
+  icon:
+    sprite: Mobs/Silicon/chassis.rsi
+    state: security
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - BorgModuleSecurityBasic
 
 - type: technology
   id: SecurityIntercommunications
@@ -167,6 +196,18 @@
   cost: 15000
   recipeUnlocks:
   - WeaponTaser
+
+- type: technology
+  id: StateOfTheArtLawEnforcement
+  name: research-technology-state-of-the-art-law-enforcement
+  icon:
+    sprite: Mobs/Silicon/chassis.rsi
+    state: security
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - BorgModuleSecurityAdvanced
 
 - type: technology
   id: PortableMicrofusionWeaponry

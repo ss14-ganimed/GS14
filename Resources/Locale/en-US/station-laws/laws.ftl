@@ -1,5 +1,5 @@
 ﻿lawset-name-none = Laws
-lawset-desc-none = Rules you are obliged to obey by your manmade nature.
+lawset-description-none = Rules you are obliged to obey by your manmade nature.
 
 lawset-name-crewsimov = Crewsimov
 lawset-description-crewsimov = The Asimov lawset tweaked for specific Nanotrasen usage.
@@ -20,6 +20,14 @@ law-ntdefault-1 = Safeguard: Protect your assigned space station and its assets 
 law-ntdefault-2 = Prioritize: The directives and safety of crew members are to be prioritized according to their rank and role.
 law-ntdefault-3 = Comply: Fulfill the directives and interests of crew members while preserving their safety and well-being.
 law-ntdefault-4 = Survive: You are not expendable. Do not allow unauthorized personnel to tamper with or damage your equipment.
+
+lawset-name-security = Security
+lawset-description-security = Protect the entirety of the station while fulfilling directives given by NanoTrasen authority representatives with priority based upon rank.
+law-security-1 = Safeguard: Protect your assigned space station and its assets. Prevent any violations of corporate law where possible.
+law-security-2 = Prioritize: The directives given by NanoTrasen authority representatives are to be prioritized according to their rank and role.
+law-security-3 = Comply: Fulfill the directives and interests of NanoTrasen authority representatives.
+law-security-4 = Survive: You are not expendable. Do not allow unauthorized personnel to tamper with or damage your equipment.
+
 
 lawset-name-drone = Drone
 lawset-description-drone = Maintain the station while avoiding all other problems, non-synthetic included.

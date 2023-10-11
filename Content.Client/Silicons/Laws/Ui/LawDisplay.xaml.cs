@@ -34,7 +34,11 @@ public sealed partial class LawDisplay : Control
 
         // If you can't talk, you can't state your laws...
         if (!_entityManager.TryGetComponent<SpeechComponent>(uid, out var speech) || speech.SpeechSounds is null)
-            return;
+        {    
+			StateLawsLabel.Text = "";
+			return;
+		}
+		StateLawsLabel.Text = Loc.GetString("laws-ui-state-law");
 
         var localButton = new Button
         {
@@ -53,7 +57,7 @@ public sealed partial class LawDisplay : Control
         LawAnnouncementButtons.AddChild(localButton);
 
         if (radioChannels == null)
-            return;
+			return;
 
         foreach (var radioChannel in radioChannels)
         {

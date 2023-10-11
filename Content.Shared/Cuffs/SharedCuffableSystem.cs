@@ -31,6 +31,9 @@ using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Cuffs
@@ -436,12 +439,19 @@ namespace Content.Shared.Cuffs
 
             if (!_interaction.InRangeUnobstructed(handcuff, target))
                 return false;
+			
+			if (_net.IsServer)
+            {
+				if (TryComp<HandcuffComponent>(handcuff, out var handcuffComp) && TryComp<TransformComponent>(handcuff, out var transformComp) && handcuffComp.Lingering && !(handcuffComp.LingeringID is null))
+					handcuff = EntityManager.SpawnEntity(handcuffComp.LingeringID, transformComp.Coordinates);
+				else 
+					_hands.TryDrop(user, handcuff);
 
-            // Success!
-            _hands.TryDrop(user, handcuff);
 
-            component.Container.Insert(handcuff);
-            UpdateHeldItems(target, handcuff, component);
+				// Success!
+				component.Container.Insert(handcuff);
+				UpdateHeldItems(target, handcuff, component);
+			}
             return true;
         }
 

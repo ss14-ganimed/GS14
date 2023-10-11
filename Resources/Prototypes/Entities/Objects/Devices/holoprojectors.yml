@@ -63,6 +63,33 @@
       price: 80
 
 - type: entity
+  parent: BaseItem
+  id: HoloprojectorSecurityRobo
+  name: robo holobarrier projector
+  description: Creates a solid but fragile holographic barrier. Modified for use by cyborgs.
+  components:
+    - type: HolosignProjector
+      signProto: HolosignSecurity
+      chargeUse: 150
+    - type: Sprite
+      sprite: Objects/Devices/Holoprojectors/security.rsi
+      state: icon
+    - type: ItemCooldown
+    - type: UseDelay
+      delay: 1.0
+    - type: PowerCell
+    - type: Battery
+      maxCharge: 600
+      startingCharge: 600
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 10
+    - type: Tag
+      tags:
+        - HolosignProjector
+        - HolofanProjector
+
+- type: entity
   parent: HoloprojectorSecurity
   id: HoloprojectorSecurityEmpty
   suffix: Empty

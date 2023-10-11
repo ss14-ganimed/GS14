@@ -445,7 +445,9 @@
     - ProximitySensor
     - BorgModuleLightReplacer
     - BorgModuleCleaning
-    - BorgModuleTrashCollection
+    - BorgModuleLightReplacer
+    - BorgModuleSecurityBasic
+    - BorgModuleSecurityAdvanced
     - BorgModuleMining
     - BorgModuleGrapplingGun
     - BorgModuleGasAnalyzer
@@ -481,6 +483,12 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+    - LeftArmBorgSecurity
+    - RightArmBorgSecurity
+    - LeftLegBorgSecurity
+    - RightLegBorgSecurity
+    - HeadBorgSecurity
+    - TorsoBorgSecurity
   - type: MaterialStorage
     whitelist:
       tags:

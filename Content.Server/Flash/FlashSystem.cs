@@ -20,6 +20,9 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Content.Server.Power.Components;
+using Content.Server.Power.EntitySystems;
+using Content.Server.Power.Events;
 using InventoryComponent = Content.Shared.Inventory.InventoryComponent;
 
 namespace Content.Server.Flash
@@ -83,6 +86,10 @@ namespace Content.Server.Flash
             TryComp<LimitedChargesComponent>(uid, out var charges);
             if (_charges.IsEmpty(uid, charges))
                 return false;
+			
+			if (comp.chargeUse > 0)
+				if (!TryComp<BatteryComponent>(comp.Owner, out var battery) || !battery.TryUseCharge(comp.chargeUse))
+					return false;
 
             _charges.UseCharge(uid, charges);
             _audio.PlayPvs(comp.Sound, uid);

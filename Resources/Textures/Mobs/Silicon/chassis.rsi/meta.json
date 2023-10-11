@@ -186,6 +186,22 @@
       "directions": 4
     },
     {
+      "name": "security",
+      "directions": 4
+    },
+    {
+      "name": "security_e",
+      "directions": 4
+    },
+    {
+      "name": "security_e_r",
+      "directions": 4
+    },
+    {
+      "name": "security_l",
+      "directions": 4
+    },
+    {
       "name": "service",
       "directions": 4
     },

@@ -306,6 +306,24 @@
       - Security
 
 - type: entity
+  name: robodisabler
+  parent: WeaponDisabler
+  id: WeaponDisablerRobo
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse. Modified for use by cyborgs.
+  components:
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 10
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-0
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+
+- type: entity
   name: practice disabler
   parent: WeaponDisabler
   id: WeaponDisablerPractice

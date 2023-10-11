@@ -79,6 +79,15 @@
     tags:
     - BorgModuleService
 
+- type: entity
+  id: BaseBorgModuleSecurity
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleSecurity
+
 # generic modules
 - type: entity
   id: BorgModuleCable
@@ -353,6 +362,38 @@
     - Beaker
     - BorgDropper
     - BorgHypo
+
+# security modules
+- type: entity
+  id: BorgModuleSecurityBasic
+  parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
+  name: basic security cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: icon-tools
+  - type: ItemBorgModule
+    items:
+    - StunprodRobo
+    - FlashRobo
+    - ZiptiesRobo
+
+- type: entity
+  id: BorgModuleSecurityAdvanced
+  parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
+  name: advanced security cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: icon-grappling-gun
+  - type: ItemBorgModule
+    items:
+    - StunbatonRobo
+    - TruncheonRobo
+    - WeaponDisablerRobo
+    - HoloprojectorSecurityRobo
 
 # science modules
 # todo: if science ever gets their own custom robot, add more "sci" modules.

@@ -206,6 +206,60 @@
     Glass: 150
 
 - type: latheRecipe
+  id: LeftArmBorgSecurity
+  result: LeftArmBorgSecurity
+  completetime: 2
+  materials:
+    Steel: 1000
+    Glass: 150
+    Plasma: 100
+
+- type: latheRecipe
+  id: RightArmBorgSecurity
+  result: RightArmBorgSecurity
+  completetime: 2
+  materials:
+    Steel: 1000
+    Glass: 150
+    Plasma: 100
+
+- type: latheRecipe
+  id: LeftLegBorgSecurity
+  result: LeftLegBorgSecurity
+  completetime: 2
+  materials:
+    Steel: 1000
+    Glass: 150
+    Plasma: 100
+
+- type: latheRecipe
+  id: RightLegBorgSecurity
+  result: RightLegBorgSecurity
+  completetime: 2
+  materials:
+    Steel: 1000
+    Glass: 150
+    Plasma: 100
+
+- type: latheRecipe
+  id: HeadBorgSecurity
+  result: HeadBorgSecurity
+  completetime: 2
+  materials:
+    Steel: 1000
+    Glass: 150
+    Plasma: 100
+
+- type: latheRecipe
+  id: TorsoBorgSecurity
+  result: TorsoBorgSecurity
+  completetime: 2
+  materials:
+    Steel: 1000
+    Glass: 150
+    Plasma: 100
+
+- type: latheRecipe
   id: LeftArmBorgService
   result: LeftArmBorgService
   completetime: 2
@@ -568,3 +622,25 @@
     Glass: 750
     Plastic: 250
     Gold: 50
+
+- type: latheRecipe
+  id: BorgModuleSecurityBasic
+  result: BorgModuleSecurityBasic
+  completetime: 3
+  materials:
+    Steel: 500
+    Glass: 750
+    Plastic: 250
+    Plasma: 100
+    Gold: 50
+
+- type: latheRecipe
+  id: BorgModuleSecurityAdvanced
+  result: BorgModuleSecurityAdvanced
+  completetime: 3
+  materials:
+    Steel: 500
+    Glass: 750
+    Plastic: 250
+    Plasma: 100
+    Gold: 150

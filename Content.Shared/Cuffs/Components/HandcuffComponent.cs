@@ -38,6 +38,15 @@ public sealed partial class HandcuffComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public bool BreakOnRemove;
+	
+	/// <summary>
+    ///     Are the cuffs to remain in hand after cuffing?
+    /// </summary>
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public bool Lingering;
+	
+	[DataField, ViewVariables(VVAccess.ReadWrite)]
+    public string LingeringID = "Zipties";
 
     /// <summary>
     ///     Will the cuffs break when removed?

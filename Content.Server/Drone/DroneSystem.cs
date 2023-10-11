@@ -126,7 +126,10 @@ namespace Content.Server.Drone
 
         private bool NonDronesInRange(EntityUid uid, DroneComponent component)
         {
-            var xform = Comp<TransformComponent>(uid);
+            if (!component.blockInteraction)
+				return false;
+			
+			var xform = Comp<TransformComponent>(uid);
             foreach (var entity in _lookup.GetEntitiesInRange(xform.MapPosition, component.InteractionBlockRange))
             {
                 // Return true if the entity is/was controlled by a player and is not a drone or ghost.

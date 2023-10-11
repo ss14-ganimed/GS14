@@ -24,6 +24,14 @@
     node: cyborg
   - type: Speech
     speechVerb: Robotic
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
 
 - type: entity
   id: BorgChassisMining
@@ -51,6 +59,86 @@
     noMindState: miner_e_r
   - type: Construction
     node: mining
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Supply
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Supply
+
+- type: entity
+  id: BorgChassisSecurity
+  parent: BaseBorgChassisNT
+  name: security cyborg
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: security_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: security_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: FlashImmunity
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 8
+    netsync: false
+  - type: BorgChassis
+    maxModules: 3
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleSecurity
+    hasMindState: security_e
+    noMindState: security_e_r
+  - type: Construction
+    node: security
+  - type: ShowSecurityIcons
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Security
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Security
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound: /Audio/Effects/metalbreak.ogg
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: SiliconLawProvider
+    lawset: Security
 
 - type: entity
   id: BorgChassisEngineer
@@ -78,6 +166,16 @@
     noMindState: engineer_e_r
   - type: Construction
     node: engineer
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Engineering
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Engineering
 
 - type: entity
   id: BorgChassisJanitor
@@ -105,6 +203,16 @@
     noMindState: janitor_e_r
   - type: Construction
     node: janitor
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Service
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Service
 
 - type: entity
   id: BorgChassisMedical
@@ -132,6 +240,16 @@
     noMindState: medical_e_r
   - type: Construction
     node: medical
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Medical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Medical
 
 - type: entity
   id: BorgChassisService
@@ -159,4 +277,14 @@
     noMindState: service_e_r
   - type: Construction
     node: service
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Service
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Service
 

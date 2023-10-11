@@ -1,34 +1,34 @@
 ﻿# Non-fungible apes, anyone?
 - type: nameIdentifierGroup
   id: Monkey
-  prefix: MK
+  prefix: МК
 
 - type: nameIdentifierGroup
   id: Holoparasite
-  prefix: HOLO
+  prefix: ГОЛО
 
 - type: nameIdentifierGroup
   id: Drone
-  prefix: DR
+  prefix: ДО
   fullName: true
   minValue: 10000
   maxValue: 99999
 
 - type: nameIdentifierGroup
   id: MMI
-  prefix: MMI
+  prefix: ИНТ
   minValue: 100
   maxValue: 999
 
 - type: nameIdentifierGroup
   id: PositronicBrain
-  prefix: PB
+  prefix: ПМ
   minValue: 10
   maxValue: 99
 
 - type: nameIdentifierGroup
   id: Silicon
-  prefix: Si
+  prefix: КБ
   minValue: 1000
   maxValue: 9999
 
