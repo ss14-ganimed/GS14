@@ -78,15 +78,12 @@
 - type: entity
   id: BoxSpawnGeneric
   name: tightly-packed box
-  parent: BaseItem
+  parent: BoxSpawnBase
   description: A very tightly-packed box with stuff. It will take an effort to open it.
   suffix: Generic
   components:
   - type: Item
     size: 5
-  - type: Sprite
-    sprite: Objects/Storage/boxicons.rsi
-    state: box
   - type: SpawnItemsOnUse
     items:
       - id: SyringeEphedrine

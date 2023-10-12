@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by .tea_god. and modified by temporaldarkness for Ganimed server private use.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "bluebase"
+        },
+        {
+            "name": "greybase"
+        },
+        {
+            "name": "greyedbase"
+        },
+		{
+            "name": "iso"
+        },
+		{
+            "name": "black"
+        },
+		{
+            "name": "navy"
+        },
+		{
+            "name": "brown"
+        },
+		{
+            "name": "burned"
+        },
+		{
+            "name": "green"
+        },
+		{
+            "name": "grey"
+        },
+		{
+            "name": "purple"
+        },
+		{
+            "name": "red"
+        },
+		{
+            "name": "sand"
+        },
+		{
+            "name": "turquoise"
+        },
+		{
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}

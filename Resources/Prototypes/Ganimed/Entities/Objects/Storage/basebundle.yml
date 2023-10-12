@@ -1,0 +1,190 @@
+- type: entity
+  id: BoxSpawnBase
+  abstract: true
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Storage/bundle.rsi
+    layers:
+    - state: base
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+    - state: iso
+      map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          iso: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          red: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          black: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          brown: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          burned: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          green: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          grey: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          navy: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          purple: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          sand: ""
+      - enum.DamageStateVisualLayers.Base:
+          base: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          turquoise: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          iso: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          red: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          black: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          brown: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          burned: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          green: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          grey: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          navy: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          purple: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          sand: ""
+      - enum.DamageStateVisualLayers.Base:
+          bluebase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          turquoise: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          iso: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          red: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          black: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          brown: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          burned: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          green: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          grey: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          navy: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          purple: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          sand: ""
+      - enum.DamageStateVisualLayers.Base:
+          greybase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          turquoise: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          iso: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          red: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          black: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          brown: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          burned: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          green: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          grey: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          navy: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          purple: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          sand: ""
+      - enum.DamageStateVisualLayers.Base:
+          greyedbase: ""
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          turquoise: ""
