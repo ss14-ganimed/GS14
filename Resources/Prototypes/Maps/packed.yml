@@ -10,9 +10,6 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Пакед {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: 'VG'
         - type: StationJobs
           overflowJobs:
             - Passenger
