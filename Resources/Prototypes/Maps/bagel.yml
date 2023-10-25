@@ -9,10 +9,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} ИСН Багель {1}'
-          nameGenerator:
-            !type:NanotrasenNameGenerator
-            prefixCreator: '14'
+          mapNameTemplate: '{0} Багель {1}'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_lox.yml
         - type: StationJobs
