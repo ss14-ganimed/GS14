@@ -1,0 +1,148 @@
+- type: accessLevel
+  id: ObjectSafe
+  name: id-card-access-level-object-safe
+
+- type: accessLevel
+  id: ObjectEvclid
+  name: id-card-access-level-object-evclid
+
+- type: accessLevel
+  id: ObjectKeter
+  name: id-card-access-level-object-keter
+
+- type: accessLevel
+  id: ArmoryLite
+  name: id-card-access-level-armory-lite
+
+- type: accessLevel
+  id: ArmoryHeavy
+  name: id-card-access-level-armory-medium
+
+- type: accessLevel
+  id: ArmoryHID
+  name: id-card-access-level-armory-high
+
+- type: accessLevel
+  id: CheckPoints
+  name: id-card-access-level-checkpoints
+
+- type: accessLevel
+  id: GateExit
+  name: id-card-access-level-exit
+
+- type: accessLevel
+  id: NukeRoom
+  name: id-card-access-level-nuke
+
+- type: accessLevel
+  id: Intercom
+  name: id-card-access-level-intercom
+
+- type: accessGroup
+  id: JanitorCard
+  tags:
+  - ObjectSafe
+
+- type: accessGroup
+  id: ScientistCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+
+- type: accessGroup
+  id: ResearchSupervisorCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - CheckPoints
+
+- type: accessGroup
+  id: ZoneManagerCard
+  tags:
+  - ObjectSafe
+  - CheckPoints
+
+- type: accessGroup
+  id: ContainmentEngineerCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - ObjectKeter
+  - CheckPoints
+  - Intercom
+
+- type: accessGroup
+  id: GuardCard
+  tags:
+  - ObjectSafe
+  - CheckPoints
+  - ArmoryLite
+
+- type: accessGroup
+  id: PrivateMTFCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - CheckPoints
+  - ArmoryLite
+  - ArmoryHeavy
+
+- type: accessGroup
+  id: SergantMTFCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - CheckPoints
+  - ArmoryLite
+  - ArmoryHeavy
+  - GateExit
+
+- type: accessGroup
+  id: CaptainMTFCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - ObjectKeter
+  - CheckPoints
+  - ArmoryLite
+  - ArmoryHeavy
+  - ArmoryHID
+  - GateExit
+  - Intercom
+
+- type: accessGroup
+  id: FaciltyManagerCard
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - ObjectKeter
+  - CheckPoints
+  - GateExit
+  - Intercom
+  - NukeRoom
+
+- type: accessGroup
+  id: ChaosInsurgencyTool
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - CheckPoints
+  - ArmoryLite
+  - ArmoryHeavy
+  - ArmoryHID
+  - GateExit
+  - Intercom
+
+- type: accessGroup
+  id: o5Card
+  tags:
+  - ObjectSafe
+  - ObjectEvclid
+  - ObjectKeter
+  - CheckPoints
+  - ArmoryLite
+  - ArmoryHeavy
+  - ArmoryHID
+  - GateExit
+  - Intercom
+  - NukeRoom
