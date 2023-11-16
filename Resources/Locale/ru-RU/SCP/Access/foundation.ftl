@@ -1,0 +1,10 @@
+id-card-access-level-object-safe = SCP безопасные
+id-card-access-level-object-evclid = SCP евклид
+id-card-access-level-object-keter = SCP кетер
+id-card-access-level-armory-lite = Арсенал ЛЗС
+id-card-access-level-armory-medium = Арсенал ТЗС
+id-card-access-level-armory-high = Арсенал HID
+id-card-access-level-checkpoints = Пропускные пункты
+id-card-access-level-exit = Выход
+id-card-access-level-nuke = Управление боеголовкой
+id-card-access-level-intercom = Интерком

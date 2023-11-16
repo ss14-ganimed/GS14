@@ -1,0 +1,22 @@
+- type: entity
+  name: SCP 500
+  parent: Pill
+  id: PillSCP500
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 2
+        reagents:
+        - ReagentId: panacea
+          Quantity: 2
+
+- type: entity
+  parent: PillCanister
+  id: PillCanisterSCP500
+  suffix: SCP 500, 3
+  components:
+  - type: StorageFill
+    contents:
+    - id: PillSCP500
+      amount: 3

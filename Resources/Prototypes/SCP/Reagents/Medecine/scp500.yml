@@ -1,0 +1,18 @@
+- type: reagent
+  id: panacea
+  name: reagent-name-panacea
+  group: Medicine
+  desc: reagent-desc-panacea
+  physicalDesc: reagent-physical-desc-soothing
+  flavor: medicine
+  color: "#fcf7f9"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -300
+            Toxin: -300
+            Airloss: -300
+            Brute: -300
