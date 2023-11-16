@@ -1,0 +1,173 @@
+# Airlock suffix guide:
+# LCZ - Light Containment Zone :: HZC - Heavy Containment Zone :: PZ - Personnel Zone (Entrace Zone) :: FO - Facility Outside
+# Object class = access level :: Safe, Euclid, Keter
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: LCZ
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: PZ
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: FO
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: CheckPoint, Locked
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+# LCZ All Airlocks
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: LCZ, SCP-372, Euclid
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: LCZ, SCP-914, Safe
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: LCZ, SCP-012, Euclid
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: LCZ, LiteArmory
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+# HCZ All Airlocks
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, SCP-096, Euclid
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, SCP-106, Keter
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, SCP-079, Keter
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, SCP-049, Keter
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, AlphaWarhead Silo
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, HID
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, LiteArmory
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: HCZ, HID
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: PZ, Intercom
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: PZ, LiteArmory
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: PZ, Gate
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockMaint
+  suffix: FO, AlphaWarhead Terminal
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
