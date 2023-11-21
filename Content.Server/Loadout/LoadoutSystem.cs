@@ -6,6 +6,7 @@ using Content.Shared.Clothing.Components;
 using Content.Shared.Loadout;
 using Content.Shared.Inventory;
 using Robust.Shared.Prototypes;
+using Content.Shared.Roles;
 using Content.Shared.Ganimed.SponsorManager;
 
 namespace Content.Server.Loadout;
@@ -30,8 +31,11 @@ public sealed class LoadoutSystem : EntitySystem
     {
 		int loadoutTotal = 0;
 		int loadoutMax = !(ev.Player is null) && !(ev.Player.ConnectedClient is null) 
-			&& _sponsorManager.IsSponsor(ev.Player.ConnectedClient.UserName)
+			&& _sponsorManager.AllowSponsor(ev.Player)
 				? 20 : 14;
+		
+		if (ev.JobId is null || !_prototypeManager.TryIndex<JobPrototype>(ev.JobId, out var job) || !job.DoLoadout)
+			return;
 		
 		foreach (var loadoutId in ev.Profile.LoadoutPreferences)
         {
@@ -54,10 +58,13 @@ public sealed class LoadoutSystem : EntitySystem
             var isBlacklisted = ev.JobId != null &&
                                 loadout.BlacklistJobs != null &&
                                 loadout.BlacklistJobs.Contains(ev.JobId);
+			var isSponsor = !(ev.Player is null) &&
+                                _sponsorManager.AllowSponsor(ev.Player);
+			var sponsorRestriction = !isSponsor && loadout.SponsorOnly;
             var isSpeciesRestricted = loadout.SpeciesRestrictions != null &&
                                       loadout.SpeciesRestrictions.Contains(ev.Profile.Species);
 
-            if (isWhitelisted || isBlacklisted || isSpeciesRestricted)
+            if (isWhitelisted || isBlacklisted || isSpeciesRestricted || sponsorRestriction)
                 continue;
 
             var entity = Spawn(loadout.Prototype, Transform(ev.Mob).Coordinates);

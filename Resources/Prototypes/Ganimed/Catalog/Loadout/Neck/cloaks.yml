@@ -90,6 +90,7 @@
     - SeniorResearcher
     - Scientist
     - ResearchAssistant
+    - Roboticist
   prototype: ClothingNeckCloakRdOriginal
 
 - type: loadout
@@ -129,3 +130,61 @@
   whitelistJobs:
     - ChiefMedicalOfficer
   prototype: ClothingCloakCmo
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakNanotrasen
+  category: loadout-category-neck
+  cost: 4
+  exclusive: true
+  prototype: ClothingNeckCloakNanotrasen
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakHerald
+  category: loadout-category-neck
+  cost: 4
+  exclusive: true
+  prototype: ClothingNeckCloakHerald
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakGoliathCloak
+  category: loadout-category-neck
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingNeckCloakGoliathCloak
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakPirateCap
+  category: loadout-category-neck
+  cost: 5
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingNeckCloakPirateCap
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakMoth
+  category: loadout-category-neck
+  cost: 4
+  exclusive: true
+  prototype: ClothingNeckCloakMoth
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakMiner
+  category: loadout-category-neck
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - SalvageSpecialist
+    - CargoTechnician
+    - Quartermaster
+  prototype: ClothingNeckCloakMiner
+
+- type: loadout
+  id: LoadoutNeckClothingNeckCloakCapFormal
+  category: loadout-category-neck
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingNeckCloakCapFormal

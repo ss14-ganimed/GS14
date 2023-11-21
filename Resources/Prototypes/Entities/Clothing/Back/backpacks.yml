@@ -8,13 +8,14 @@
     sprite: Clothing/Back/Backpacks/backpack.rsi
     state: icon
   - type: Item
-    size: 9999
+    size: Huge
   - type: Clothing
     quickEquip: false
     slots:
     - back
   - type: Storage
-    capacity: 100
+    maxItemSize: Huge
+    maxTotalWeight: 28
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -196,7 +197,7 @@
   - type: Sprite
     sprite: Clothing/Back/Backpacks/ertleader.rsi
   - type: Storage
-    capacity: 250
+    maxTotalWeight: 44
 
 - type: entity
   parent: ClothingBackpackERTLeader
@@ -259,8 +260,11 @@
       shader: unshaded
   - type: Clothing
     equippedPrefix: holding
+  - type: Item
+    size: Ginormous
   - type: Storage
-    capacity: 9999
+    maxItemSize: Huge
+    maxTotalWeight: 200 #5 duffels worth of gear
 
 - type: entity
   parent: ClothingBackpackClown
@@ -274,3 +278,43 @@
   - type: Unremoveable
     deleteOnDrop: false
 
+- type: entity
+  parent: ClothingBackpackClown
+  id: ClothingBackpackCluwneRemoveable
+  name: jiggles von jonkerton
+  suffix: Removeable
+  description: It's a backpack made by Jonk! Co.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/cluwne.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackChiefEngineer
+  name: chief engineer backpack
+  description: Technicially progressive backpack.
+  components:
+  - type: Sprite
+    sprite: Corvax/Back/Backpacks/ce.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingMilitaryBackpack
+  name: army backpack
+  description: A spacious backpack with lots of pockets, worn by military structures.
+  components:
+  - type: Sprite
+    sprite: Corvax/Back/Backpacks/military.rsi
+  - type: Storage
+    maxTotalWeight: 44
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingDeathSquadronBackpack
+  name: death squadron backpack
+  description: A spacious backpack using bluespace technology.
+  components:
+  - type: Sprite
+    sprite: Corvax/Back/Backpacks/deathsquad-backpack.rsi
+  - type: Storage
+    maxTotalWeight: 84

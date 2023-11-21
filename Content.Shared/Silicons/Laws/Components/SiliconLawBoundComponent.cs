@@ -1,7 +1,7 @@
 using Content.Shared.Actions;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+
 
 namespace Content.Shared.Silicons.Laws.Components;
 
@@ -14,19 +14,19 @@ public sealed partial class SiliconLawBoundComponent : Component
     /// <summary>
     /// The sidebar action that toggles the laws screen.
     /// </summary>
-    [DataField("viewLawsAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ViewLawsAction = "ActionViewLaws";
+    [DataField]
+    public EntProtoId ViewLawsAction = "ActionViewLaws";
 
     /// <summary>
     /// The action for toggling laws. Stored here so we can remove it later.
     /// </summary>
-    [DataField("viewLawsActionEntity")]
+    [DataField]
     public EntityUid? ViewLawsActionEntity;
 
     /// <summary>
     /// The last entity that provided laws to this entity.
     /// </summary>
-    [DataField("lastLawProvider")]
+    [DataField]
     public EntityUid? LastLawProvider;
 }
 
@@ -43,7 +43,11 @@ public record struct GetSiliconLawsEvent(EntityUid Entity)
 {
     public EntityUid Entity = Entity;
 
-    public readonly List<SiliconLaw> Laws = new();
+    public SiliconLawset Laws = new();
+
+    public string Name = "lawset-name-none";
+
+    public string Description = "lawset-desc-none";
 
     public bool Handled = false;
 }
@@ -62,12 +66,16 @@ public enum SiliconLawsUiKey : byte
 [Serializable, NetSerializable]
 public sealed class SiliconLawBuiState : BoundUserInterfaceState
 {
-    public List<SiliconLaw> Laws;
+    public string Name;
+	public string Description;
+	public List<SiliconLaw> Laws;
     public HashSet<string>? RadioChannels;
 
-    public SiliconLawBuiState(List<SiliconLaw> laws, HashSet<string>? radioChannels)
+    public SiliconLawBuiState(string name, string desc, List<SiliconLaw> laws, HashSet<string>? radioChannels)
     {
-        Laws = laws;
+        Name = name;
+		Description = desc;
+		Laws = laws;
         RadioChannels = radioChannels;
     }
 }

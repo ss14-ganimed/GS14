@@ -106,6 +106,12 @@
       "name": "paper_stamp-chaplain"
     },
     {
+      "name": "paper_stamp-legal"
+    },
+    {
+      "name": "paper_stamp-iaa"
+    },
+    {
       "name": "paper_stamp-clown"
     },
     {
@@ -124,6 +130,9 @@
       "name": "paper_stamp-ok"
     },
     {
+      "name": "paper_stamp-approve"
+    },
+    {
       "name": "paper_stamp-mime"
     },
     {
@@ -137,6 +146,9 @@
     },
     {
       "name": "paper_stamp-trader"
+    },
+    {
+      "name": "paper_stamp-void"
     },
     {
       "name": "paper_stamp-warden"
@@ -250,6 +262,15 @@
     },
     {
       "name": "stamp-centcom"
+    },
+    {
+      "name": "stamp-psychologist"
+    },
+    {
+      "name": "stamp-iaa"
+    },
+    {
+      "name": "stamp-legal"
     },
     {
       "name": "stamp-chaplain"

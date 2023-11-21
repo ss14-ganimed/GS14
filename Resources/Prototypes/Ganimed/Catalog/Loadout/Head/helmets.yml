@@ -11,6 +11,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+    - Brigmedic
+    - BlueShield
   prototype: ClothingHeadHelmetRiot
   
 - type: loadout
@@ -29,6 +31,8 @@
     - SalvageSpecialist
     - Chef
     - Bartender
+    - Brigmedic
+    - BlueShield
   prototype: ClothingHeadHelmetBone
   
 - type: loadout
@@ -44,3 +48,74 @@
   cost: 2
   exclusive: true
   prototype: ClothingHeadHelmetTemplarOriginal
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetAtmosFire
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+  prototype: ClothingHeadHelmetAtmosFire
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetAncient
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+  prototype: ClothingHeadHelmetAncient
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetFire
+  category: loadout-category-head
+  cost: 7
+  exclusive: true
+  prototype: ClothingHeadHelmetFire
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetVoidParamed
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Paramedic
+  prototype: ClothingHeadHelmetVoidParamed
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetVoidParamedAlter
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Paramedic
+  prototype: ClothingHeadHelmetVoidParamedAlter
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetBombSuit
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingHeadHelmetBombSuit

@@ -24,6 +24,9 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/jackboots.rsi
   - type: Matchbox
+  - type: FootstepModifier # Corvax-Sounds
+    footstepSoundCollection:
+      collection: FootstepBoots
   - type: Storage
     whitelist:
       tags:
@@ -116,3 +119,13 @@
     sprite: Clothing/Shoes/Boots/winterboots.rsi
   - type: TemperatureProtection
     coefficient: 0.05
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackSec
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Shoes/Boots/jackboots_sec.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Shoes/Boots/jackboots_sec.rsi
+

@@ -2,7 +2,7 @@
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesChef
   name: chef shoes
-  description: Sturdy shoes that minimize injury from falling objects or knives.
+  description: Sturdy shoes that minimize injury from falling objects or knives. No, they are not from a prison.
   components:
   - type: Sprite
     sprite: Clothing/Shoes/Specific/chef.rsi
@@ -69,6 +69,9 @@
   - type: Clothing
     sprite: Clothing/Shoes/Specific/galoshes.rsi
   - type: NoSlip
+  - type: ClothingSpeedModifier # Corvax-MRP
+    walkModifier: 0.8
+    sprintModifier: 0.75 # Try to run fast in big rubber boots, lol
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -192,8 +195,65 @@
       - state: equipped-FEET
         offset: "0, -0.02"
   - type: Item
-    size: 10
+    size: Small
     sprite: Clothing/Shoes/Specific/large_clown.rsi
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.8
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesGreenLizardskin
+  name: green lizardskin shoes
+  description: They may have lost some of their lustre over the years, but these green lizardskin shoes fit you perfectly.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Shoes/Specific/disco.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Shoes/Specific/disco.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesAerostatic
+  name: aerostatic boots
+  description: A crisp, clean set of boots for working long hours on the beat.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Shoes/Specific/kim.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Shoes/Specific/kim.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesCentcomBlack
+  name: special operations officer shoes
+  description: Leather, black, high-quality shoes, you can hardly find similar ones on the black market...
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Shoes/Specific/centcom_officer_black.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Shoes/Specific/centcom_officer_black.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesSkates
+  name: roller skates
+  description: "Get your skates on!"
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Specific/skates.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Specific/skates.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+        offset: "0, -0.04"
+  - type: Item
+    sprite: Clothing/Shoes/Specific/skates.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.2
+    sprintModifier: 1.2
+  - type: Skates
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSkates

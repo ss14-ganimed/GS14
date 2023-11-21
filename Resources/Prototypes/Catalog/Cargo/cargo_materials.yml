@@ -52,7 +52,7 @@
   id: MaterialPlasma
   icon:
     sprite: Objects/Materials/Sheets/other.rsi
-    state: plasma_3
+    state: plasma # Corvax-Resprite
   product: CrateMaterialPlasma
   cost: 2000
   category: Materials
@@ -65,6 +65,16 @@
     state: cardboard_3
   product: CrateMaterialCardboard
   cost: 750
+  category: Materials
+  group: market
+
+- type: cargoProduct
+  id: PaperMaterial
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: paper_3
+  product: CrateMaterialPaper
+  cost: 1000
   category: Materials
   group: market
 

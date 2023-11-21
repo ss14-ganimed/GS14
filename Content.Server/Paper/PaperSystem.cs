@@ -4,15 +4,11 @@ using Content.Server.Popups;
 using Content.Server.UserInterface;
 using Content.Shared.Database;
 using Content.Shared.Examine;
-using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Paper;
 using Content.Shared.Tag;
 using Robust.Server.GameObjects;
-using Robust.Server.Player;
 using Robust.Shared.Player;
-using Robust.Shared.Utility;
-using Robust.Shared.Audio;
 using static Content.Shared.Paper.SharedPaperComponent;
 
 namespace Content.Server.Paper
@@ -98,10 +94,21 @@ namespace Content.Server.Paper
                 );
             }
         }
+		
+		private bool CanWriteStamped(List<StampDisplayInfo> stamps)
+		{
+			foreach (var stamp in stamps)
+			{
+				if (stamp.BlockWriting)
+					return false;
+			}
+			
+			return true;
+		}
 
         private void OnInteractUsing(EntityUid uid, PaperComponent paperComp, InteractUsingEvent args)
         {
-            if (_tagSystem.HasTag(args.Used, "Write") && paperComp.StampedBy.Count == 0)
+            if (_tagSystem.HasTag(args.Used, "Write") && CanWriteStamped(paperComp.StampedBy))
             {
                 var writeEvent = new PaperWriteEvent(uid, args.User);
                 RaiseLocalEvent(args.Used, ref writeEvent);
@@ -111,6 +118,7 @@ namespace Content.Server.Paper
                 paperComp.Mode = PaperAction.Write;
                 _uiSystem.TryOpen(uid, PaperUiKey.Key, actor.PlayerSession);
                 UpdateUserInterface(uid, paperComp, actor.PlayerSession);
+                args.Handled = true;
                 return;
             }
 
@@ -178,7 +186,7 @@ namespace Content.Server.Paper
             if (!paperComp.StampedBy.Contains(stampInfo))
             {
                 paperComp.StampedBy.Add(stampInfo);
-                if (paperComp.StampState == null && TryComp<AppearanceComponent>(uid, out var appearance))
+                if ((paperComp.StampState == null || paperComp.StampState == "paper_stamp-void") && TryComp<AppearanceComponent>(uid, out var appearance))
                 {
                     paperComp.StampState = spriteStampState;
                     // Would be nice to be able to display multiple sprites on the paper
@@ -188,13 +196,29 @@ namespace Content.Server.Paper
             }
             return true;
         }
+		
+		public void UpdateStampState(EntityUid uid, PaperComponent? paperComp = null)
+		{
+			if (!Resolve(uid, ref paperComp))
+                return;
+			
+			if (TryComp<AppearanceComponent>(uid, out var appearance) && (paperComp is not null || TryComp<PaperComponent>(uid, out paperComp)))
+			{
+				var stampState = paperComp.StampState ?? "paper_stamp-void";
+				_appearance.SetData(uid, PaperVisuals.Stamp, stampState, appearance);
+			}
+		}
 
-        public void SetContent(EntityUid uid, string content, PaperComponent? paperComp = null)
+        public void SetContent(EntityUid uid, string content, PaperComponent? paperComp = null, bool? doNewline = true)
         {
             if (!Resolve(uid, ref paperComp))
                 return;
 
-            paperComp.Content = content + '\n';
+            paperComp.Content = content;
+			
+			if (doNewline is not null && doNewline.Value)
+				paperComp.Content += '\n';
+			
             UpdateUserInterface(uid, paperComp);
 
             if (!TryComp<AppearanceComponent>(uid, out var appearance))
@@ -207,7 +231,7 @@ namespace Content.Server.Paper
             _appearance.SetData(uid, PaperVisuals.Status, status, appearance);
         }
 
-        public void UpdateUserInterface(EntityUid uid, PaperComponent? paperComp = null, IPlayerSession? session = null)
+        public void UpdateUserInterface(EntityUid uid, PaperComponent? paperComp = null, ICommonSession? session = null)
         {
             if (!Resolve(uid, ref paperComp))
                 return;

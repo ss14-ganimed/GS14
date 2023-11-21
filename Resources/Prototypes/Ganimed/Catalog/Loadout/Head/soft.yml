@@ -24,7 +24,17 @@
     - Detective
     - HeadOfSecurity
     - SeniorOfficer
+    - Brigmedic
+    - BlueShield
   prototype: ClothingHeadHatSecsoft
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatPurplesoft
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHeadHatPurplesoft
 
 - type: loadout
   id: LoadoutHeadClothingHeadHatCargosoft
@@ -50,6 +60,8 @@
     - MedicalIntern
     - Psychologist
     - SeniorPhysician
+    - Brigmedic
+    - Coroner
   prototype: ClothingHeadHatParamedicsoft
 
 - type: loadout
@@ -113,6 +125,8 @@
     - Detective
     - HeadOfSecurity
     - SeniorOfficer
+    - Brigmedic
+    - BlueShield
   prototype: ClothingHeadHatSecsoftFlipped
 
 - type: loadout
@@ -139,6 +153,8 @@
     - MedicalIntern
     - Psychologist
     - SeniorPhysician
+    - Brigmedic
+    - Coroner
   prototype: ClothingHeadHatParamedicsoftFlipped
 
 - type: loadout
@@ -196,3 +212,17 @@
   cost: 1
   exclusive: true
   prototype: ClothingHeadHatPurplesoftFlipped
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatGreysoft
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatGreysoft
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBluesoft
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatBluesoft

@@ -34,6 +34,17 @@
         - ClothingNeckNonBinaryPin
         - ClothingNeckPansexualPin
         - ClothingNeckTransPin
+        # Corvax-Pins-Start
+        - ClothingNeckUSSPPin
+        - ClothingNeckDonkPin
+        - ClothingNeckEarthPin
+        - ClothingNeckLogistikaPin
+        - ClothingNeckDeForestPin
+        - ClothingNeckNakamuraPin
+        - ClothingNeckNanoTrasenPin
+        - ClothingNeckSyndicakePin
+        - ClothingNeckVitezstviPin
+        # Corvax-Pins-End
         - CluwneHorn
         - ClothingMaskRat
         - MysteryFigureBox
@@ -99,6 +110,9 @@
         - ClothingOuterCoatPirate
         - ClothingOuterHoodieBlack
         - ClothingOuterHoodieGrey
+        - ClothingOuterFlannelRed
+        - ClothingOuterFlannelBlue
+        - ClothingOuterFlannelGreen
         - ClothingOuterVestHazard
         - ClothingShoesBootsJack
         - ClothingShoesBootsLaceup

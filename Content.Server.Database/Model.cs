@@ -18,6 +18,7 @@ namespace Content.Server.Database
 
         public DbSet<Preference> Preference { get; set; } = null!;
         public DbSet<Profile> Profile { get; set; } = null!;
+		public DbSet<BookTerminalEntry> BookTerminalEntry { get; set; } = null!;
         public DbSet<AssignedUserId> AssignedUserId { get; set; } = null!;
         public DbSet<Player> Player { get; set; } = default!;
         public DbSet<Admin> Admin { get; set; } = null!;
@@ -48,6 +49,10 @@ namespace Content.Server.Database
 
             modelBuilder.Entity<Profile>()
                 .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
+                .IsUnique();
+			
+			modelBuilder.Entity<BookTerminalEntry>()
+                .HasIndex(p => p.Id)
                 .IsUnique();
 
             modelBuilder.Entity<Antag>()
@@ -114,6 +119,13 @@ namespace Content.Server.Database
                 .WithMany(player => player.AdminLogs)
                 .HasForeignKey(player => player.PlayerUserId)
                 .HasPrincipalKey(player => player.UserId);
+
+            modelBuilder.Entity<Round>()
+                .HasIndex(round => round.StartDate);
+
+            modelBuilder.Entity<Round>()
+                .Property(round => round.StartDate)
+                .HasDefaultValue(default(DateTime));
 
             modelBuilder.Entity<AdminLogPlayer>()
                 .HasKey(logPlayer => new {logPlayer.PlayerUserId, logPlayer.LogId, logPlayer.RoundId});
@@ -333,8 +345,8 @@ namespace Content.Server.Database
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
     }
-
-    public class Job
+	
+	public class Job
     {
         public int Id { get; set; }
         public Profile Profile { get; set; } = null!;
@@ -483,12 +495,40 @@ namespace Content.Server.Database
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        public DateTime StartDate { get; set; }
+
         public List<Player> Players { get; set; } = default!;
 
         public List<AdminLog> AdminLogs { get; set; } = default!;
 
         [ForeignKey("Server")] public int ServerId { get; set; }
         public Server Server { get; set; } = default!;
+    }
+	
+	public class BookTerminalEntry
+    {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        public string Name { get; set; } = default!;
+
+        public string Description { get; set; } = default!;
+
+        public string Content { get; set; } = default!;
+
+        public List<StampedData> StampedBy { get; set; } = default!;
+
+        public string StampState { get; set; } = "paper_stamp-void";
+    }
+	
+	public class StampedData
+    {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        public string Name { get; set; } = default!;
+
+        public string Color { get; set; } = default!;
     }
 
     public class Server
@@ -522,8 +562,6 @@ namespace Content.Server.Database
         [Required, Column(TypeName = "jsonb")] public JsonDocument Json { get; set; } = default!;
 
         public List<AdminLogPlayer> Players { get; set; } = default!;
-
-        public List<AdminLogEntity> Entities { get; set; } = default!;
     }
 
     public class AdminLogPlayer
@@ -534,12 +572,6 @@ namespace Content.Server.Database
         [Required, Key] public int LogId { get; set; }
         [Required, Key] public int RoundId { get; set; }
         [ForeignKey("LogId,RoundId")] public AdminLog Log { get; set; } = default!;
-    }
-
-    public class AdminLogEntity
-    {
-        [Required, Key] public int Uid { get; set; }
-        public string? Name { get; set; } = default!;
     }
 
     // Used by SS14.Admin

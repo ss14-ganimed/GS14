@@ -40,8 +40,8 @@
     layerMap: "airAlarmBase"
     alarmStates:
       Normal: alarm0
-      Warning: alarm2
-      Danger: alarm1
+      Warning: alarm1  # Corvax-Resprite
+      Danger: alarm2 # Corvax-Resprite
     setOnDepowered:
       airAlarmBase: alarmp
   - type: Tag
@@ -59,8 +59,8 @@
       type: WiresBoundUserInterface
   - type: WiresPanel
   - type: Wires
-    BoardName: wires-board-name-airalarm
-    LayoutId: AirAlarm
+    boardName: wires-board-name-airalarm
+    layoutId: AirAlarm
   - type: AccessReader
     access: [["Atmospherics"]]
   - type: ContainerFill

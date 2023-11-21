@@ -1,0 +1,26 @@
+- type: job
+  id: ResearchAssistant
+  name: job-name-research-assistant
+  description: job-description-research-assistant
+  playTimeTracker: JobResearchAssistant
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 #2 hrs
+  startingGear: ResearchAssistantGear
+  icon: "JobIconResearchAssistant"
+  supervisors: job-supervisors-science
+  access:
+  - Research
+  - Maintenance
+
+- type: startingGear
+  id: ResearchAssistantGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    back: ClothingBackpackScienceFilled
+    shoes: ClothingShoesColorWhite
+    id: ResearchAssistantPDA
+    ears: ClothingHeadsetScience
+  innerClothingSkirt: ClothingUniformJumpskirtColorWhite
+  satchel: ClothingBackpackSatchelScienceFilled
+  duffelbag: ClothingBackpackDuffelScienceFilled

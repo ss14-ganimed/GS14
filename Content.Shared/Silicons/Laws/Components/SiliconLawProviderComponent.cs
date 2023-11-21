@@ -1,4 +1,5 @@
-﻿using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
+﻿using Robust.Shared.Prototypes;
+using Content.Shared.Random;
 
 namespace Content.Shared.Silicons.Laws.Components;
 
@@ -9,8 +10,22 @@ namespace Content.Shared.Silicons.Laws.Components;
 public sealed partial class SiliconLawProviderComponent : Component
 {
     /// <summary>
-    /// The laws that are provided.
+    /// The id of the lawset that is being provided.
     /// </summary>
-    [DataField("laws", required: true, customTypeSerializer: typeof(PrototypeIdListSerializer<SiliconLawPrototype>))]
-    public List<string> Laws = new();
+    [DataField(required: true)]
+    public ProtoId<SiliconLawsetPrototype> Laws = string.Empty;
+	
+	/// <summary>
+    /// Weighted random override for lawset provided.
+    /// </summary>
+    [DataField]
+    public ProtoId<WeightedRandomPrototype> LawsWeighted = string.Empty;
+
+    /// <summary>
+    /// Lawset created from the prototype id.
+    /// Cached when getting laws and only modified during an ion storm event.
+    /// </summary>
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public SiliconLawset? Lawset;
+	
 }

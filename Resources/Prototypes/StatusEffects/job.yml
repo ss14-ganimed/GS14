@@ -2,7 +2,7 @@
   id: JobIcon
   abstract: true
   priority: 1
-  locationPreference: Right
+  locationPreference: Left
 
 - type: statusIcon
   parent: JobIcon
@@ -465,3 +465,24 @@
   icon:
     sprite: Interface/Misc/job_icons.rsi
     state: Butcher
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconCoroner
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Coroner
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconBlueShield
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: BlueShield
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconIAA
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: IAA

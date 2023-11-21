@@ -27,6 +27,8 @@
     - SeniorOfficer
     - Quartermaster
     - SalvageSpecialist
+    - Brigmedic
+    - BlueShield
   prototype: ClothingHandsGlovesMercFingerless
 
 - type: loadout
@@ -37,6 +39,7 @@
   whitelistJobs:
     - HeadOfSecurity
     - Captain
+    - BlueShield
   prototype: ClothingHandsGlovesCombat
 
 - type: loadout
@@ -47,7 +50,20 @@
   whitelistJobs:
     - HeadOfSecurity
     - Captain
+    - BlueShield
   prototype: ClothingHandsMercGlovesCombat
+
+- type: loadout
+  id: LoadoutHandsClothingHandsTacticalMaidGloves
+  category: loadout-category-hands
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Captain
+    - BlueShield
+  sponsorOnly: true
+  prototype: ClothingHandsTacticalMaidGloves
 
 - type: loadout
   id: LoadoutHandsClothingHandsGlovesColorYellowBudget
@@ -62,6 +78,13 @@
   cost: 2
   exclusive: true
   prototype: ClothingHandsGlovesBoxingYellow
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesBoxingBlue
+  category: loadout-category-hands
+  cost: 2
+  exclusive: true
+  prototype: ClothingHandsGlovesBoxingBlue
 
 - type: loadout
   id: LoadoutHandsClothingHandsGlovesBoxingGreen
@@ -100,6 +123,7 @@
   whitelistJobs:
     - Botanist
     - ServiceWorker
+    - IAA
   prototype: ClothingHandsGlovesLeather
 
 - type: loadout
@@ -119,6 +143,7 @@
     - Detective
     - SeniorOfficer
     - Warden
+    - BlueShield
   prototype: ClothingHandsGlovesForensic
 
 - type: loadout
@@ -141,7 +166,24 @@
     - Psychologist
     - MedicalIntern
     - SeniorPhysician
+    - Coroner
   prototype: ClothingHandsGlovesNitrile
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesNitrileAlt
+  category: loadout-category-hands
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Coroner
+  prototype: ClothingHandsGlovesNitrileAlt
 
 - type: loadout
   id: LoadoutHandsClothingHandsGlovesPaws
@@ -149,3 +191,32 @@
   cost: 3
   exclusive: true
   prototype: ClothingHandsGlovesPaws
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesRobohands
+  category: loadout-category-hands
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingHandsGlovesRobohands
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesCluwneRemoveable
+  category: loadout-category-hands
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  sponsorOnly: true
+  prototype: ClothingHandsGlovesCluwneRemoveable
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesPowerglove
+  category: loadout-category-hands
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHandsGlovesPowerglove

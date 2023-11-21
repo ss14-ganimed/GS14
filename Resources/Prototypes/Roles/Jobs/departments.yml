@@ -1,44 +1,111 @@
 - type: department
-  id: Civilian
-  description: department-Civilian-description
-  color: "#acabad"
+  id: Command
+  description: department-Command-description
+  color: "#334E6D"
   roles:
-  - Civilian
-  - Survivor
+  - Captain
+  - CentralCommandOfficial
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - IAA
+  - BlueShield
 
 - type: department
-  id: Foresters
-  description: department-Foresters-description
-  color: "#79a066"
+  id: Cargo
+  description: department-Cargo-description
+  color: "#A46106"
   roles:
-  - Hunter
-  - Ranger
+  - CargoTechnician
+  - Quartermaster
+  - SalvageSpecialist
 
 - type: department
-  id: Facility
-  description: department-Facility-description
-  color: "#8ab5bc"
+  id: Engineering
+  description: department-Engineering-description
+  color: "#EFB341"
   roles:
-  - Technician
-  - Scientist
-  - Engineer
-  - Manager
+  - AtmosphericTechnician
+  - ChiefEngineer
+  - SeniorEngineer
+  - StationEngineer
+  - TechnicalAssistant
+
+- type: department
+  id: Medical
+  description: department-Medical-description
+  color: "#52B4E9"
+  roles:
+  - Chemist
+  - ChiefMedicalOfficer
+  - MedicalDoctor
+  - MedicalIntern
+  - Psychologist
+  - Paramedic
+  - SeniorPhysician
+  - Coroner
 
 - type: department
   id: Security
   description: department-Security-description
-  color: "#d72d1d"
+  color: "#DE3A3A"
   roles:
-  - Chief
-  - Officer
-  - Medic
+  - HeadOfSecurity
+  - SecurityCadet
+  - SecurityOfficer
+  - SeniorOfficer
+  - Brigmedic
+  - Detective
+  - Warden
 
 - type: department
-  id: Special
-  description: department-Special-description
-  color: "#e1ca96"
+  id: Science
+  description: department-Science-description
+  color: "#D381C9"
   roles:
-  - Butcher
-  - Zombie
-  - Monster
-  - Paramedic
+  - ResearchDirector
+  - SeniorResearcher
+  - Roboticist
+  - Scientist
+  - ResearchAssistant
+
+- type: department
+  id: Civilian
+  description: department-Civilian-description
+  color: "#9FED58"
+  roles:
+  - Bartender
+  - Botanist
+  - Boxer
+  - Chaplain
+  - Chef
+  - Clown
+  - HeadOfPersonnel
+  - Janitor
+  - Lawyer
+  - Librarian
+  - Mime
+  - Musician
+  - Passenger
+  - Reporter
+  - Zookeeper
+  - ServiceWorker
+  - Prisoner
+
+- type: department
+  id: Specific
+  description: department-Specific-description
+  color: "#9FED58"
+  roles:
+  - Boxer
+  - Reporter
+  - Zookeeper
+  - Psychologist
+  - Brigmedic
+  - Roboticist
+  - IAA
+  - Prisoner
+  - BlueShield
+  - Coroner

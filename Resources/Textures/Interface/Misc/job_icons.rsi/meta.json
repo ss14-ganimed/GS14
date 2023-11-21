@@ -211,6 +211,18 @@
         },
         {
             "name": "HeadRevolutionary"
+        },
+        {
+            "name": "BlueShield"
+        },
+        {
+            "name": "Coroner"
+        },
+        {
+            "name": "IAA"
+		},
+		{
+            "name": "Syndicate"
         }
     ]
 }

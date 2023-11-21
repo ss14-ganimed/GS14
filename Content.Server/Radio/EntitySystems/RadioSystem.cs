@@ -1,20 +1,19 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
+using Content.Server.Power.Components;
 using Content.Server.Radio.Components;
 using Content.Server.VoiceMask;
-using Content.Server.Popups;
+using Content.Shared.Access.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Radio;
-using Robust.Server.GameObjects;
+using Content.Shared.Radio.Components;
+using Robust.Shared.Map;
 using Robust.Shared.Network;
+using Robust.Shared.Player;
+using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
-using Content.Shared.Popups;
-using Robust.Shared.Map;
-using Content.Shared.Radio.Components;
-using Content.Server.Power.Components;
-using Robust.Shared.Random;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -26,6 +25,7 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly IReplayRecordingManager _replay = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly SharedIdCardSystem _cardSystem = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
 
@@ -70,6 +70,22 @@ public sealed class RadioSystem : EntitySystem
             : MetaData(messageSource).EntityName;
 
         name = FormattedMessage.EscapeText(name);
+		
+		if (_cardSystem.TryFindIdCard(messageSource, out var idCard))
+		{
+			var color = idCard.Comp.JobColor;
+			var job = idCard.Comp.JobTitle;
+			
+			if (job is not null)
+				name = Loc.GetString("chat-radio-format-name-by-title", 
+					("jobTitle", job[0].ToString().ToUpper() + job.Substring(1)), 
+					("name", name));
+			
+			if (color is not null)
+				name = Loc.GetString("chat-radio-format-name-by-color", 
+					("jobColor", color.Value.ToHex()), 
+					("name", name));
+		}
 
         var speech = _chat.GetSpeechVerb(messageSource, message);
 
@@ -87,7 +103,8 @@ public sealed class RadioSystem : EntitySystem
             ChatChannel.Radio,
             message,
             wrappedMessage,
-            NetEntity.Invalid);
+            NetEntity.Invalid,
+            null);
         var chatMsg = new MsgChatMessage { Message = chat };
         var ev = new RadioReceiveEvent(message, messageSource, channel, chatMsg);
 

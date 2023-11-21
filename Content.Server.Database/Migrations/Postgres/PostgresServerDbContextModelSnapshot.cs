@@ -133,36 +133,6 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.ToTable("admin_log", (string)null);
                 });
 
-            modelBuilder.Entity("Content.Server.Database.AdminLogEntity", b =>
-                {
-                    b.Property<int>("Uid")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("uid");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Uid"));
-
-                    b.Property<int?>("AdminLogId")
-                        .HasColumnType("integer")
-                        .HasColumnName("admin_log_id");
-
-                    b.Property<int?>("AdminLogRoundId")
-                        .HasColumnType("integer")
-                        .HasColumnName("admin_log_round_id");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text")
-                        .HasColumnName("name");
-
-                    b.HasKey("Uid")
-                        .HasName("PK_admin_log_entity");
-
-                    b.HasIndex("AdminLogId", "AdminLogRoundId")
-                        .HasDatabaseName("IX_admin_log_entity_admin_log_id_admin_log_round_id");
-
-                    b.ToTable("admin_log_entity", (string)null);
-                });
-
             modelBuilder.Entity("Content.Server.Database.AdminLogPlayer", b =>
                 {
                     b.Property<Guid>("PlayerUserId")
@@ -536,6 +506,44 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.ToTable("assigned_user_id", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.BookTerminalEntry", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("book_terminal_entry_id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("content");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("description");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<string>("StampState")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("stamp_state");
+
+                    b.HasKey("Id")
+                        .HasName("PK_book_terminal_entry");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
+
+                    b.ToTable("book_terminal_entry", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
                 {
                     b.Property<int>("Id")
@@ -888,11 +896,19 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("integer")
                         .HasColumnName("server_id");
 
+                    b.Property<DateTime>("StartDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValue(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified))
+                        .HasColumnName("start_date");
+
                     b.HasKey("Id")
                         .HasName("PK_round");
 
                     b.HasIndex("ServerId")
                         .HasDatabaseName("IX_round_server_id");
+
+                    b.HasIndex("StartDate");
 
                     b.ToTable("round", (string)null);
                 });
@@ -1209,6 +1225,38 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.ToTable("server_unban", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.StampedData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("stamped_data_id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("BookTerminalEntryId")
+                        .HasColumnType("integer")
+                        .HasColumnName("book_terminal_entry_id");
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("color");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.HasKey("Id")
+                        .HasName("PK_stamped_data");
+
+                    b.HasIndex("BookTerminalEntryId")
+                        .HasDatabaseName("IX_stamped_data_book_terminal_entry_id");
+
+                    b.ToTable("stamped_data", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.Trait", b =>
                 {
                     b.Property<int>("Id")
@@ -1334,14 +1382,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasConstraintName("FK_admin_log_round_round_id");
 
                     b.Navigation("Round");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.AdminLogEntity", b =>
-                {
-                    b.HasOne("Content.Server.Database.AdminLog", null)
-                        .WithMany("Entities")
-                        .HasForeignKey("AdminLogId", "AdminLogRoundId")
-                        .HasConstraintName("FK_admin_log_entity_admin_log_admin_log_id_admin_log_round_id");
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminLogPlayer", b =>
@@ -1677,6 +1717,14 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Navigation("Ban");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.StampedData", b =>
+                {
+                    b.HasOne("Content.Server.Database.BookTerminalEntry", null)
+                        .WithMany("StampedBy")
+                        .HasForeignKey("BookTerminalEntryId")
+                        .HasConstraintName("FK_stamped_data_book_terminal_entry_book_terminal_entry_id");
+                });
+
             modelBuilder.Entity("Content.Server.Database.Trait", b =>
                 {
                     b.HasOne("Content.Server.Database.Profile", "Profile")
@@ -1713,8 +1761,6 @@ namespace Content.Server.Database.Migrations.Postgres
 
             modelBuilder.Entity("Content.Server.Database.AdminLog", b =>
                 {
-                    b.Navigation("Entities");
-
                     b.Navigation("Players");
                 });
 
@@ -1723,6 +1769,11 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Navigation("Admins");
 
                     b.Navigation("Flags");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.BookTerminalEntry", b =>
+                {
+                    b.Navigation("StampedBy");
                 });
 
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>

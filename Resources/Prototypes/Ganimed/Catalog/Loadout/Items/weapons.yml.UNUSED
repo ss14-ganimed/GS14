@@ -8,6 +8,7 @@
     - HeadOfSecurity
     - Detective
     - SeniorOfficer
+	- BlueShield
   prototype: WeaponRevolverDeckard
 
 - type: loadout
@@ -20,6 +21,7 @@
     - Scientist
     - ResearchAssistant
     - SeniorResearcher
+	- Roboticist
   prototype: WeaponPistolCHIMP
 
 - type: loadout
@@ -35,6 +37,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+	- BlueShield
+	- Brigmedic
   prototype: WeaponPistolMk58Nonlethal
 
 - type: loadout
@@ -55,6 +59,8 @@
     - Captain
     - Botanist
     - ChiefMedicalOfficer
+	- Brigmedic
+	- BlueShield
   prototype: Chainsaw
 
 - type: loadout
@@ -72,6 +78,8 @@
     - SeniorOfficer
     - SalvageSpecialist
     - Quartermaster
+	- BlueShield
+	- Brigmedic
   prototype: CombatKnife
 
 - type: loadout
@@ -87,6 +95,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+	- BlueShield
+	- Brigmedic
   prototype: Bola
 
 - type: loadout
@@ -113,6 +123,9 @@
     - ChiefMedicalOfficer
     - ChiefEngineer
     - HeadOfPersonnel
+	- BlueShield
+	- Brigmedic
+	- IAA
   prototype: Flash
   
 
@@ -162,6 +175,8 @@
     - Psychologist
     - MedicalIntern
     - SeniorPhysician
+	- Coroner
+	- Brigmedic
   prototype: SawElectric
 
 - type: loadout
@@ -177,6 +192,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+	- BlueShield
+	- Brigmedic
   prototype: Truncheon
 
 - type: loadout
@@ -192,6 +209,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+	- BlueShield
+	- Brigmedic
   prototype: Stunbaton
 
 - type: loadout
@@ -217,13 +236,13 @@
 - type: loadout
   id: LoadoutItemsPickaxe
   category: loadout-category-items
-  cost: 4
+  cost: 7
   exclusive: false
   whitelistJobs:
     - Quartermaster
     - SalvageSpecialist
 	- CargoTechnician
-  prototype: Pickaxe
+  prototype: WeaponProtoKineticAccelerator
 
 - type: loadout
   id: LoadoutItemsKitchenKnife
@@ -270,6 +289,8 @@
     - Captain
     - SeniorOfficer
 	- Captain
+	- BlueShield
+	- Brigmedic
   prototype: Machete
 
 - type: loadout
@@ -288,6 +309,8 @@
     - Captain
     - SeniorOfficer
 	- Captain
+	- BlueShield
+	- Brigmedic
   prototype: SurvivalKnife
 
 - type: loadout
@@ -304,5 +327,86 @@
     - Captain
     - SeniorOfficer
 	- Captain
+	- BlueShield
+	- Brigmedic
   prototype: KukriKnife
+
+- type: loadout
+  id: LoadoutItemsWeaponDisabler
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  whitelistJobs:
+	- SecurityCadet
+	- SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+	- Captain
+	- BlueShield
+	- Brigmedic
+  prototype: WeaponDisabler
+
+- type: loadout
+  id: LoadoutItemsToyHammer
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  whitelistJobs:
+	- Clown
+  prototype: ToyHammer
+
+- type: loadout
+  id: LoadoutItemsRitualDagger
+  category: loadout-category-items
+  cost: 7
+  exclusive: false
+  whitelistJobs:
+	- Chaplain
+  prototype: RitualDagger
+
+- type: loadout
+  id: LoadoutItemsRockGuitarInstrument
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  whitelistJobs:
+	- Musician
+  prototype: RockGuitarInstrument
+
+- type: loadout
+  id: LoadoutItemsWeaponFlareGun
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  prototype: WeaponFlareGun
+
+- type: loadout
+  id: LoadoutItemsRollingPin
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  whitelistJobs:
+	- Chef
+	- ServiceWorker
+  prototype: RollingPin
+
+- type: loadout
+  id: LoadoutItemsScalpel
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - Psychologist
+    - MedicalIntern
+    - MedicalDoctor
+    - SeniorPhysician
+	- Coroner
+	- Brigmedic
+  prototype: Scalpel
   

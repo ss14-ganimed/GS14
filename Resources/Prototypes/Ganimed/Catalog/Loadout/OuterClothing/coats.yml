@@ -28,6 +28,8 @@
     - Psychologist
     - MedicalIntern
     - Paramedic
+    - Coroner
+    - Brigmedic
   prototype: ClothingOuterCoatParamedicWB
 
 - type: loadout
@@ -58,7 +60,32 @@
     - ResearchAssistant
     - Scientist
     - SeniorResearcher
+    - Roboticist
+    - Brigmedic
+    - Coroner
   prototype: ClothingOuterCoatLab
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabOpen
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+    - Brigmedic
+    - Coroner
+  prototype: ClothingOuterCoatLabOpen
 
 - type: loadout
   id: LoadoutOuterClothingClothingOuterCoatLabViro
@@ -73,6 +100,7 @@
     - Psychologist
     - MedicalIntern
     - Paramedic
+    - Coroner
   prototype: ClothingOuterCoatLabViro
 
 - type: loadout
@@ -88,6 +116,8 @@
     - Psychologist
     - MedicalIntern
     - Paramedic
+    - Coroner
+    - Brigmedic
   prototype: ClothingOuterCoatLabGene
 
 - type: loadout
@@ -103,6 +133,8 @@
     - Psychologist
     - MedicalIntern
     - Paramedic
+    - Coroner
+    - Brigmedic
   prototype: ClothingOuterCoatLabChem
 
 - type: loadout
@@ -125,6 +157,28 @@
   prototype: ClothingOuterCoatLabSeniorPhysician
 
 - type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabCoroner
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Coroner
+  prototype: ClothingOuterCoatLabCoroner
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabCoolCoroner
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Coroner
+  prototype: ClothingOuterCoatLabCoolCoroner
+
+- type: loadout
   id: LoadoutOuterClothingClothingOuterCoatRnd
   category: loadout-category-outerClothing
   cost: 2
@@ -134,6 +188,7 @@
     - ResearchAssistant
     - Scientist
     - SeniorResearcher
+    - Roboticist
   prototype: ClothingOuterCoatRnd
 
 - type: loadout
@@ -143,7 +198,7 @@
   exclusive: true
   whitelistJobs:
     - ResearchDirector
-    - ResearchAssistant
+    - Roboticist
     - Scientist
     - SeniorResearcher
   prototype: ClothingOuterCoatRobo
@@ -155,7 +210,7 @@
   exclusive: true
   whitelistJobs:
     - ResearchDirector
-    - ResearchAssistant
+    - Roboticist
     - Scientist
     - SeniorResearcher
   prototype: ClothingOuterCoatRoboOriginal
@@ -173,23 +228,10 @@
 - type: loadout
   id: LoadoutOuterClothingClothingOuterCoatAMG
   category: loadout-category-outerClothing
-  cost: 7
+  cost: 3
   exclusive: true
   whitelistJobs:
-    - ChiefMedicalOfficer
-    - SeniorPhysician
-    - Chemist
-    - MedicalDoctor
-    - Psychologist
-    - MedicalIntern
-    - Paramedic
-    - SecurityCadet
-    - SecurityOfficer
-    - Warden
-    - Detective
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
+    - Brigmedic
   prototype: ClothingOuterCoatAMG
 
 - type: loadout
@@ -205,6 +247,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+    - BlueShield
+    - Brigmedic
   prototype: ClothingOuterCoatDetective
 
 - type: loadout
@@ -220,6 +264,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+    - BlueShield
+    - Brigmedic
   prototype: ClothingOuterCoatDetectiveOriginal
 
 - type: loadout
@@ -256,3 +302,31 @@
   cost: 4
   exclusive: true
   prototype: ClothingOuterCoatRedCoat
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatBlueCoat
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingOuterCoatBlueCoat
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatHoSTrench
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingOuterCoatHoSTrench
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatBlueShield
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - BlueShield
+  prototype: ClothingOuterCoatBlueShield

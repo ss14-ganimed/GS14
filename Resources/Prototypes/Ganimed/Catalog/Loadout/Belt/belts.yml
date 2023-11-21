@@ -11,6 +11,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+    - Brigmedic
+    - BlueShield
   prototype: ClothingBeltMilitaryWebbing
 
 - type: loadout
@@ -23,6 +25,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+    - Brigmedic
+    - BlueShield
   prototype: ClothingBeltMilitaryWebbingMed
 
 - type: loadout
@@ -40,6 +44,8 @@
     - SeniorOfficer
     - Bartender
     - ServiceWorker
+    - Brigmedic
+    - BlueShield
   prototype: ClothingBeltBandolier
 
 - type: loadout
@@ -55,3 +61,121 @@
   cost: 3
   exclusive: true
   prototype: ClothingBeltQuiver
+
+- type: loadout
+  id: LoadoutBeltClothingBeltHolster
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  prototype: ClothingBeltHolster
+
+- type: loadout
+  id: LoadoutBeltClothingBeltSuspenders
+  category: loadout-category-belt
+  cost: 1
+  exclusive: true
+  prototype: ClothingBeltSuspenders
+
+- type: loadout
+  id: LoadoutBeltClothingBeltPlantFilled
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ServiceWorker
+    - Botanist
+    - Chef
+  prototype: ClothingBeltPlantFilled
+
+- type: loadout
+  id: LoadoutBeltClothingBeltUtilityFilled
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - AtmosphericTechnician
+    - StationEngineer
+    - TechnicalAssistant
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - CargoTechnician
+    - Quartermaster
+    - SalvageSpecialist
+    - Roboticist
+  prototype: ClothingBeltUtility
+
+- type: loadout
+  id: LoadoutBeltClothingBeltParamedicFilled
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Brigmedic
+    - Coroner
+  prototype: ClothingBeltParamedicFilled
+
+- type: loadout
+  id: LoadoutBeltClothingBeltSecurityFilled
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingBeltSecurityFilled
+
+- type: loadout
+  id: LoadoutBeltClothingBeltChiefEngineer
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+  prototype: ClothingBeltChiefEngineerFilled
+
+- type: loadout
+  id: LoadoutBeltClothingBeltJanitor
+  category: loadout-category-belt
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Janitor
+    - ServiceWorker
+  prototype: ClothingBeltJanitor
+
+- type: loadout
+  id: LoadoutBeltClothingBeltChampion
+  category: loadout-category-belt
+  cost: 7
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingBeltChampion
+
+- type: loadout
+  id: LoadoutBeltClothingBeltSheath
+  category: loadout-category-belt
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingBeltSheath

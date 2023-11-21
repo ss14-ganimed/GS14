@@ -12,6 +12,7 @@
     - idcard
     sprite: Objects/Misc/id_cards.rsi
   - type: Item
+    size: Small
     heldPrefix: default
   - type: Access
   - type: IdCard
@@ -216,8 +217,10 @@
   components:
     - type: Sprite
       layers:
-        - state: default
+        - state: silver
         - state: idquartermaster
+    - type: Item
+      heldPrefix: silver
     - type: PresetIdCard
       job: Quartermaster
 
@@ -433,6 +436,8 @@
     layers:
     - state: default
     - state: idbrigmedic
+  - type: PresetIdCard
+    job: Brigmedic
 
 - type: entity
   parent: IDCardStandard
@@ -446,14 +451,32 @@
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Central Commander
+    jobTitle: Офицер ЦК
     jobIcon: JobIconCentCom
   - type: Access
     groups:
-    - AllAccess
+    - CentcomAllAccess
 
 - type: entity
   parent: CentcomIDCard
+  id: SpecOpsIDCard
+  name: command officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idcentcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Оперативник ШСО
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - SpecOpsAllAccess
+
+- type: entity
+  parent: SpecOpsIDCard
   id: ERTLeaderIDCard
   name: ERT ID card
   components:
@@ -463,6 +486,9 @@
     - state: ert_commander # we have the sprites but don't need individual ID entities for now.
   - type: Item
     heldPrefix: gold
+  - type: IdCard
+    jobTitle: Офицер СО
+    jobIcon: JobIconNanotrasen
 
 - type: entity
   parent: IDCardStandard
@@ -477,7 +503,7 @@
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Central Commander
+    jobTitle: Офицер ЦК
     jobIcon: JobIconCentCom
   - type: Access
     tags:
@@ -496,18 +522,9 @@
       job: Musician
 
 - type: entity
-  parent: CentcomIDCard
+  parent: SpecOpsIDCard
   id: CentcomIDCardDeathsquad
   name: deathsquad ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: centcom
-  - type: Item
-    heldPrefix: blue
-  - type: IdCard
-    jobTitle: Centcom Agent
-    jobIcon: JobIconCentCom
 
 - type: entity
   name: passenger ID card
@@ -626,6 +643,19 @@
 
 - type: entity
   parent: IDCardStandard
+  id: PirateIDCard
+  name: pirate ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: pirate
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: entity
+  parent: IDCardStandard
   id: PsychologistIDCard
   name: psychologist ID card
   components:
@@ -685,7 +715,7 @@
     job: Detective
 
 - type: entity
-  parent: CentcomIDCard
+  parent: SpecOpsIDCard
   id: CBURNIDcard
   name: CBURN ID card
   components:
@@ -710,6 +740,7 @@
   - type: IdCard
     jobTitle: Cluwne
     jobIcon: JobIconCluwne
+    jobColor: "#AA0000"
   - type: Unremoveable
 
 - type: entity
@@ -879,3 +910,63 @@
     - state: idmedic
   - type: PresetIdCard
     job: Medic
+
+- type: entity
+  parent: PassengerIDCard
+  id: PrisonerIDCard
+  name: prisoner ID card
+  components:
+  - type: PresetIdCard
+    job: Prisoner
+  - type: Sprite
+    layers:
+    - state: orange
+    - state: idprisoner
+
+- type: entity
+  parent: PassengerIDCard
+  id: RoboticistIDCard
+  name: roboticist ID card
+  components:
+  - type: PresetIdCard
+    job: Roboticist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idroboticist
+
+- type: entity
+  parent: PassengerIDCard
+  id: IAAIDCard
+  name: internal affairs agent ID card
+  components:
+  - type: PresetIdCard
+    job: IAA
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idiaa
+
+- type: entity
+  parent: PassengerIDCard
+  id: BlueShieldIDCard
+  name: blue shield officer ID card
+  components:
+  - type: PresetIdCard
+    job: BlueShield
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idblueshield
+
+- type: entity
+  parent: PassengerIDCard
+  id: CoronerIDCard
+  name: coroner ID card
+  components:
+  - type: PresetIdCard
+    job: Coroner
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcoroner

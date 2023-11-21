@@ -5,4 +5,5 @@ role-timer-overall-too-high = Требуется на [color=yellow]{TOSTRING($t
 role-timer-role-insufficient = Требуется ещё [color=yellow]{TOSTRING($time, "0")}[/color] минут игры в качестве [color={$departmentColor}]{$job}[/color] для этой роли.
 role-timer-role-too-high = Требуется на [color=yellow]{TOSTRING($time, "0")}[/color] меньше минут игры в качестве [color={$departmentColor}]{$job}[/color] для этой роли. (Вы пытаетесь играть за роль для новичков?)
 role-timer-locked = Закрыто (наведите курсор для подробностей)
-role-ban = Эта роль для вас заблокирована.
+role-ban = Эта должность для вас заблокирована.
+sponsor-only = Временно недоступно для всех, кроме спонсоров! ★

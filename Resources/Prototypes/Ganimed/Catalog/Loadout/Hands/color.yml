@@ -32,3 +32,33 @@
   cost: 1
   exclusive: true
   prototype: ClothingHandsGlovesColorOrange
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesColorLightBrown
+  category: loadout-category-hands
+  cost: 1
+  exclusive: true
+  prototype: ClothingHandsGlovesColorLightBrown
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesColorGray
+  category: loadout-category-hands
+  cost: 1
+  exclusive: true
+  prototype: ClothingHandsGlovesColorGray
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesColorBlue
+  category: loadout-category-hands
+  cost: 1
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHandsGlovesColorBlue
+
+- type: loadout
+  id: LoadoutHandsClothingHandsGlovesColorPurple
+  category: loadout-category-hands
+  cost: 1
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHandsGlovesColorPurple

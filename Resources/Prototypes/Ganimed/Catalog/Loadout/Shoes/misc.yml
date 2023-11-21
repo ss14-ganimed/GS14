@@ -37,6 +37,8 @@
   category: loadout-category-shoes
   cost: 3
   exclusive: true
+  whitelistJobs:
+    - Chaplain
   prototype: ClothingShoesCult
 
 - type: loadout
@@ -47,8 +49,51 @@
   prototype: ClothingShoesFlippers
 
 - type: loadout
+  id: LoadoutShoesClothingShoeSlippersDuck
+  category: loadout-category-shoes
+  cost: 3
+  sponsorOnly: true
+  exclusive: true
+  prototype: ClothingShoeSlippersDuck
+
+- type: loadout
+  id: LoadoutShoesClothingShoesSlippers
+  category: loadout-category-shoes
+  cost: 2
+  sponsorOnly: true
+  exclusive: true
+  prototype: ClothingShoesSlippers
+
+- type: loadout
   id: LoadoutShoesClothingShoesWizard
   category: loadout-category-shoes
   cost: 3
   exclusive: true
   prototype: ClothingShoesWizard
+
+- type: loadout
+  id: LoadoutShoesClothingShoesChef
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Chef
+    - ServiceWorker
+    - Bartender
+  prototype: ClothingShoesChef
+
+- type: loadout
+  id: LoadoutShoesClothingShoesTourist
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingShoesTourist
+
+- type: loadout
+  id: LoadoutShoesClothingShoesDameDane
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingShoesDameDane

@@ -64,6 +64,20 @@
       - StealCondition
   - type: DieCondition
 
+- type: entity
+  noSpawn: true
+  parent: [BaseTraitorObjective, BaseLivingObjective]
+  id: HijackShuttleObjective
+  name: object-condition-hijack-shuttle-name
+  description: object-condition-hijack-shuttle-description
+  components:
+    - type: Objective
+      difficulty: 5 # insane, default config max difficulty
+      icon:
+        sprite: Objects/Tools/emag.rsi
+        state: icon
+    - type: HijackShuttleCondition
+
 # kill
 
 - type: entity
@@ -195,6 +209,19 @@
   - type: StealCondition
     prototype: ClothingShoesBootsMagAdv
     owner: job-name-ce
+
+## qm
+
+- type: entity
+  noSpawn: true
+  parent: BaseTraitorStealObjective
+  id: ClipboardStealObjective
+  components:
+  - type: NotJobRequirement
+    job: Quartermaster
+  - type: StealCondition
+    prototype: BoxFolderQmClipboard
+    owner: job-name-qm
 
 ## hop
 

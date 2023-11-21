@@ -689,6 +689,7 @@ namespace Content.Server.Database
 
             var round = new Round
             {
+                StartDate = DateTime.UtcNow,
                 Players = players,
                 ServerId = server.Id
             };
@@ -1300,6 +1301,32 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 .Include(note => note.LastEditedBy)
                 .Include(note => note.Player)
                 .ToListAsync();
+        }
+		
+		public async Task<List<BookTerminalEntry>> GetBookTerminalEntries()
+        {
+            await using var db = await GetDb();
+            return await GetBookTerminalEntriesImpl(db);
+        }
+
+        protected async Task<List<BookTerminalEntry>> GetBookTerminalEntriesImpl(DbGuard db)
+        {
+            return await db.DbContext.BookTerminalEntry
+                .Include(entry => entry.StampedBy)
+				.ToListAsync();
+				
+        }
+		
+		public async Task UploadBookTerminalEntry(BookTerminalEntry bookEntry)
+        {
+            await using var db = await GetDb();
+            await UploadBookTerminalEntryImpl(db, bookEntry);
+        }
+
+        protected async Task UploadBookTerminalEntryImpl(DbGuard db, BookTerminalEntry bookEntry)
+        {
+			db.DbContext.BookTerminalEntry.Add(bookEntry);
+			await db.DbContext.SaveChangesAsync();
         }
 
         public async Task MarkMessageAsSeen(int id)

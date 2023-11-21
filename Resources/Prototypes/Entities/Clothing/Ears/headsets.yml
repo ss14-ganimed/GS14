@@ -17,6 +17,8 @@
     keySlots: 4
   - type: Sprite
     state: icon
+  - type: Item
+    size: Small
   - type: Clothing
     slots:
     - ears
@@ -97,7 +99,8 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyStationMaster
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/command.rsi
   - type: Clothing
@@ -224,6 +227,39 @@
 
 - type: entity
   parent: ClothingHeadset
+  id: ClothingHeadsetSecurity
+  name: security headset
+  description: This is used by your elite security force.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetIAA
+  name: iaa headset
+  description: Headset for your lovely local law enforcement officer.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
+
+- type: entity
+  parent: ClothingHeadset
   id: ClothingHeadsetBrigmedic
   name: brigmedic headset
   description: A headset that helps to hear the death cries.
@@ -300,3 +336,17 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/foresters.rsi
 
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetFreelance
+  name: freelancer headset
+  description: This is used by a roaming group of freelancers
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - EncryptionKeyFreelance
+    - type: Sprite
+      sprite: Clothing/Ears/Headsets/freelance.rsi
+    - type: Clothing
+      sprite: Clothing/Ears/Headsets/freelance.rsi

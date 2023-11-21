@@ -12,6 +12,8 @@
     - Captain
     - SeniorOfficer
     - Captain
+    - BlueShield
+    - Brigmedic
   prototype: ClothingShoesBootsCombat
 
 - type: loadout
@@ -36,6 +38,8 @@
     - SeniorOfficer
     - SalvageSpecialist
     - Quartermaster
+    - BlueShield
+    - Brigmedic
   prototype: ClothingShoesBootsMerc
 
 - type: loadout
@@ -51,6 +55,8 @@
     - HeadOfSecurity
     - Captain
     - SeniorOfficer
+    - BlueShield
+    - Brigmedic
   prototype: ClothingShoesSwat
 
 - type: loadout
@@ -87,4 +93,36 @@
     - AtmosphericTechnician
     - ResearchDirector
     - SeniorResearcher
+    - Roboticist
   prototype: ClothingShoesBootsMag
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsJack
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - HeadOfPersonnel
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingShoesBootsJack
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsWork
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - StationEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+  prototype: ClothingShoesBootsWork

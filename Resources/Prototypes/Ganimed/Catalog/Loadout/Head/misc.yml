@@ -13,6 +13,13 @@
   prototype: ClothingHeadHatAnimalCatBrown
 
 - type: loadout
+  id: LoadoutHeadClothingHeadHatAnimalCat
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatAnimalCat
+
+- type: loadout
   id: LoadoutHeadClothingHeadHatFedoraBrown
   category: loadout-category-head
   cost: 2
@@ -53,3 +60,33 @@
   cost: 2
   exclusive: true
   prototype: ClothingHeadHatShrineMaidenWig
+
+- type: loadout
+  id: LoadoutHeadToyRubberDuck
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ToyRubberDuck
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatSquid
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatSquid
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatAnimalHeadslime
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatAnimalHeadslime
+
+- type: loadout
+  id: LoadoutHeadClothingHeadPaperSackSmile
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHeadPaperSackSmile

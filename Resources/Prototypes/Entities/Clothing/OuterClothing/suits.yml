@@ -22,6 +22,8 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.8
 
 - type: entity
   parent: ClothingOuterBaseLarge
@@ -47,6 +49,8 @@
     walkModifier: 0.8
     sprintModifier: 0.7
   - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.85
 
 - type: entity
   parent: ClothingOuterBaseLarge
@@ -72,6 +76,8 @@
     walkModifier: 0.8
     sprintModifier: 0.7
   - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.85
 
 - type: entity
   parent: ClothingOuterBaseLarge
@@ -98,6 +104,8 @@
       walkModifier: 0.8
       sprintModifier: 0.8
     - type: GroupExamine
+    - type: StaminaProtection
+      coefficient: 0.85
 
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing]
@@ -115,6 +123,8 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/rad.rsi
   - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.85
 
 - type: entity
   parent: [ClothingOuterBaseLarge, GeigerCounterClothing]
@@ -132,9 +142,11 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/original_rad.rsi
   - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.85
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: ClothingOuterBaseLarge
   id: ClothingOuterSuitSpaceNinja
   name: space ninja suit
   description: This black technologically advanced, cybernetically-enhanced suit provides many abilities like invisibility or teleportation.
@@ -172,6 +184,8 @@
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSmall
         disableEject: true
+  - type: StaminaProtection
+    coefficient: 0.9
 
 - type: entity
   parent: ClothingOuterBase
@@ -218,7 +232,7 @@
   - type: Sprite
     sprite: Clothing/OuterClothing/Suits/iansuit.rsi
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/iansuit.rsi
   - type: ToggleableClothing
@@ -239,7 +253,7 @@
   - type: Sprite
     sprite: Clothing/OuterClothing/Suits/carpsuit.rsi
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/carpsuit.rsi
   - type: ToggleableClothing
@@ -247,3 +261,25 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterAerostaticBomberJacket
+  name: aerostatic bomber jacket
+  description: A jacket once worn by the revolutionary air brigades during the Antecentennial Revolution. There are quite a few pockets on the inside, mostly for storing notebooks and compasses.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/kim.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/kim.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterDiscoAssBlazer
+  name: disco ass blazer
+  description: Looks like someone skinned this blazer off some long extinct disco-animal. It has an enigmatic white rectangle on the back and the right sleeve.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/disco.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/disco.rsi

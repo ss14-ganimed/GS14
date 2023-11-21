@@ -8,43 +8,32 @@
     - SeniorEngineer
     - ChiefEngineer
     - AtmosphericTechnician
+    - Roboticist
   prototype: ClothingMaskGasAtmos
 
 - type: loadout
   id: LoadoutMasksClothingMaskBreathMedicalSecurity
   category: loadout-category-masks
-  cost: 5
+  cost: 4
   exclusive: true
   whitelistJobs:
-    - SecurityCadet
-    - SecurityOfficer
-    - Warden
-    - Detective
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
+    - Brigmedic
     - ChiefMedicalOfficer
-    - Chemist
     - Paramedic
-    - MedicalDoctor
-    - Psychologist
-    - MedicalIntern
     - SeniorPhysician
   prototype: ClothingMaskBreathMedicalSecurity
-
-
 
 - type: loadout
   id: LoadoutMasksClothingMaskBreathMedical
   category: loadout-category-masks
-  cost: 5
+  cost: 6
   exclusive: true
   prototype: ClothingMaskBreathMedical
 
 - type: loadout
   id: LoadoutMasksClothingMaskBreath
   category: loadout-category-masks
-  cost: 1
+  cost: 2
   exclusive: true
   prototype: ClothingMaskBreath
 
@@ -118,3 +107,90 @@
   cost: 2
   exclusive: true
   prototype: ClothingMaskMuzzle
+
+- type: loadout
+  id: LoadoutMasksClothingMaskGas
+  category: loadout-category-masks
+  cost: 6
+  exclusive: true
+  prototype: ClothingMaskGas
+
+- type: loadout
+  id: LoadoutMasksClothingMaskGasSecurity
+  category: loadout-category-masks
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingMaskGasSecurity
+
+- type: loadout
+  id: LoadoutMasksClothingMaskGasExplorer
+  category: loadout-category-masks
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SalvageSpecialist
+    - Quartermaster
+  prototype: ClothingMaskGasExplorer
+
+- type: loadout
+  id: LoadoutMasksClothingMaskGasMerc
+  category: loadout-category-masks
+  cost: 7
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SalvageSpecialist
+    - Quartermaster
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingMaskGasMerc
+
+- type: loadout
+  id: LoadoutMasksClothingMaskGasCaptain
+  category: loadout-category-masks
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingMaskGasCaptain
+
+- type: loadout
+  id: LoadoutMasksCigarette
+  category: loadout-category-masks
+  cost: 1
+  exclusive: true
+  prototype: Cigarette
+
+- type: loadout
+  id: LoadoutMasksCigar
+  category: loadout-category-masks
+  cost: 1
+  exclusive: true
+  sponsorOnly: true
+  prototype: Cigar
+
+- type: loadout
+  id: LoadoutMasksClothingMaskSterile
+  category: loadout-category-masks
+  cost: 2
+  exclusive: true
+  prototype: ClothingMaskSterile
