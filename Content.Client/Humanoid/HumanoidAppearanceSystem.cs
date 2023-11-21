@@ -110,11 +110,9 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     /// </remarks>
     public override void LoadProfile(EntityUid uid, HumanoidCharacterProfile profile, HumanoidAppearanceComponent? humanoid = null)
     {
-        if (!Resolve(uid, ref humanoid))
-        {
+        if (!TryComp(uid, out humanoid) || profile.Species != humanoid.Species)
             return;
-        }
-
+		
         var customBaseLayers = new Dictionary<HumanoidVisualLayers, CustomBaseLayerInfo>();
 
         var speciesPrototype = _prototypeManager.Index<SpeciesPrototype>(profile.Species);
@@ -321,7 +319,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
     public override void SetSkinColor(EntityUid uid, Color skinColor, bool sync = true, bool verify = true, HumanoidAppearanceComponent? humanoid = null)
     {
-        if (!Resolve(uid, ref humanoid) || humanoid.SkinColor == skinColor)
+        if (!TryComp(uid, out humanoid)  || humanoid.SkinColor == skinColor)
             return;
 
         base.SetSkinColor(uid, skinColor, false, verify, humanoid);

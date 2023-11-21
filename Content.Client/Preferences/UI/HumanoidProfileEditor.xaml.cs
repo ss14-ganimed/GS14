@@ -640,11 +640,21 @@ namespace Content.Client.Preferences.UI
 
             var species = Profile?.Species ?? SharedHumanoidAppearanceSystem.DefaultSpecies;
             var dollProto = _prototypeManager.Index<SpeciesPrototype>(species).DollPrototype;
+			
+			var highPriorityJob = Profile?.JobPriorities.FirstOrDefault(p => p.Value == JobPriority.High).Key;
+
+			var job = _prototypeManager.Index<JobPrototype>(highPriorityJob ?? SharedGameTicker.FallbackOverflowJob);
 
             if (_previewDummy != null)
                 _entMan.DeleteEntity(_previewDummy!.Value);
-
-            _previewDummy = _entMan.SpawnEntity(dollProto, MapCoordinates.Nullspace);
+			
+			if (job.JobEntity is not null)
+			{
+				_previewDummy = _entMan.SpawnEntity(job.JobEntity, MapCoordinates.Nullspace);
+			} else
+			{
+				_previewDummy = _entMan.SpawnEntity(dollProto, MapCoordinates.Nullspace);
+			}
             _previewSpriteView.SetEntity(_previewDummy);
             #endregion Dummy
 
@@ -856,11 +866,22 @@ namespace Content.Client.Preferences.UI
         {
             var species = Profile?.Species ?? SharedHumanoidAppearanceSystem.DefaultSpecies;
             var dollProto = _prototypeManager.Index<SpeciesPrototype>(species).DollPrototype;
+			
+			var highPriorityJob = Profile?.JobPriorities.FirstOrDefault(p => p.Value == JobPriority.High).Key;
+
+			var job = _prototypeManager.Index<JobPrototype>(highPriorityJob ?? SharedGameTicker.FallbackOverflowJob);
 
             if (_previewDummy != null)
                 _entMan.DeleteEntity(_previewDummy!.Value);
-
-            _previewDummy = _entMan.SpawnEntity(dollProto, MapCoordinates.Nullspace);
+			
+			if (job.JobEntity is not null)
+			{
+				_previewDummy = _entMan.SpawnEntity(job.JobEntity, MapCoordinates.Nullspace);
+			} else
+			{
+				_previewDummy = _entMan.SpawnEntity(dollProto, MapCoordinates.Nullspace);
+			}
+			
             _previewSpriteView.SetEntity(_previewDummy);
             _needUpdatePreview = true;
         }
@@ -1233,8 +1254,11 @@ namespace Content.Client.Preferences.UI
         {
             if (Profile is null)
                 return;
-
-            var humanoid = _entMan.System<HumanoidAppearanceSystem>();
+			
+			var humanoid = _entMan.System<HumanoidAppearanceSystem>();
+			
+            RebuildSpriteView();
+			
             humanoid.LoadProfile(_previewDummy!.Value, Profile);
 
             if (ShowClothes.Pressed)

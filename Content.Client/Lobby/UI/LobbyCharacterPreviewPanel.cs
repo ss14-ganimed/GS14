@@ -7,6 +7,7 @@ using Content.Client.Inventory;
 using Content.Client.Preferences;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.GameTicking;
+using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
@@ -115,8 +116,19 @@ namespace Content.Client.Lobby.UI
                 }
                 else
                 {
-                    _previewDummy = _entityManager.SpawnEntity(_prototypeManager.Index<SpeciesPrototype>(selectedCharacter.Species).DollPrototype, MapCoordinates.Nullspace);
-                    _viewBox.DisposeAllChildren();
+                    var highPriorityJob = selectedCharacter.JobPriorities.FirstOrDefault(p => p.Value == JobPriority.High).Key;
+
+					var job = _prototypeManager.Index<JobPrototype>(highPriorityJob ?? SharedGameTicker.FallbackOverflowJob);
+					
+					if (job.JobEntity is not null)
+					{
+						_previewDummy = _entityManager.SpawnEntity(job.JobEntity, MapCoordinates.Nullspace);
+					} else
+					{
+						_previewDummy = _entityManager.SpawnEntity(_prototypeManager.Index<SpeciesPrototype>(selectedCharacter.Species).DollPrototype, MapCoordinates.Nullspace);
+					}
+					
+					_viewBox.DisposeAllChildren();
                     var spriteView = new SpriteView
                     {
                         OverrideDirection = Direction.South,
@@ -127,7 +139,7 @@ namespace Content.Client.Lobby.UI
                     spriteView.SetEntity(_previewDummy.Value);
                     _viewBox.AddChild(spriteView);
                     _summaryLabel.Text = selectedCharacter.Summary;
-                    _entityManager.System<HumanoidAppearanceSystem>().LoadProfile(_previewDummy.Value, selectedCharacter);
+					_entityManager.System<HumanoidAppearanceSystem>().LoadProfile(_previewDummy.Value, selectedCharacter);
                     GiveDummyJobClothes(_previewDummy.Value, selectedCharacter);
                     GiveDummyLoadoutItems(_previewDummy.Value, selectedCharacter);
                 }

@@ -173,14 +173,23 @@ namespace Content.Client.Preferences.UI
                 if (humanoid is not null)
                 {
                     var dummy = prototypeManager.Index<SpeciesPrototype>(humanoid.Species).DollPrototype;
-                    _previewDummy = entityManager.SpawnEntity(dummy, MapCoordinates.Nullspace);
+					
+                    var highPriority = humanoid.JobPriorities.FirstOrDefault(p => p.Value == JobPriority.High).Key;
+					
+					if (highPriority is not null && IoCManager.Resolve<IPrototypeManager>().Index<JobPrototype>(highPriority).JobEntity is not null)
+					{
+						_previewDummy = entityManager.SpawnEntity(IoCManager.Resolve<IPrototypeManager>().Index<JobPrototype>(highPriority).JobEntity, MapCoordinates.Nullspace);
+					} else
+					{
+						_previewDummy = entityManager.SpawnEntity(dummy, MapCoordinates.Nullspace);
+					}
                 }
                 else
                 {
                     _previewDummy = entityManager.SpawnEntity(prototypeManager.Index<SpeciesPrototype>(SharedHumanoidAppearanceSystem.DefaultSpecies).DollPrototype, MapCoordinates.Nullspace);
-                }
-
-                EntitySystem.Get<HumanoidAppearanceSystem>().LoadProfile(_previewDummy, (HumanoidCharacterProfile)profile);
+				}
+				
+				EntitySystem.Get<HumanoidAppearanceSystem>().LoadProfile(_previewDummy, (HumanoidCharacterProfile)profile);
 
                 if (humanoid != null)
                 {
