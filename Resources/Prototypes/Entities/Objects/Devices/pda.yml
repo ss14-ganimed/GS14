@@ -605,27 +605,6 @@
 
 - type: entity
   parent: BasePDA
-  id: EngineerPDA
-  name: engineer PDA
-  description: Rugged and well-worn.
-  components:
-  - type: Pda
-    id: EngineeringIDCard
-    state: pda-engineer
-    penSlot:
-      startingItem: PenEngineering
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-  - type: PdaBorderColor
-    borderColor: "#949137"
-    accentVColor: "#A32D26"
-  - type: Icon
-    state: pda-engineer
-
-- type: entity
-  parent: BasePDA
   id: CMOPDA
   name: chief medical officer PDA
   description: Extraordinarily shiny and sterile. Has a built-in health analyzer.
@@ -681,7 +660,7 @@
 
 - type: entity
   parent: BasePDA
-  id: ParamedicPDA
+  id: ParamedicBasePDA
   name: paramedic PDA
   description: Shiny and sterile. Has a built-in rapid health analyzer.
   components:
@@ -816,7 +795,6 @@
 
 - type: entity
   parent: PassengerPDA
-  parent: BasePDA
   id: BlueShieldPDA
   name: blue shield PDA
   description: For when it is that time of the day to show cartoons to a bored head.

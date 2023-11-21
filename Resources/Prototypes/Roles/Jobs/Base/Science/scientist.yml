@@ -1,21 +1,21 @@
 - type: job
-  id: Scientist
-  name: job-name-scientist
-  description: job-description-scientist
-  playTimeTracker: JobScientist
+  id: ScientistBase
+  name: job-name-scientist-base
+  description: job-description-scientist-base
+  playTimeTracker: JobScientistBase
   requirements:
     - !type:DepartmentTimeRequirement
       department: Science
       time: 18000 #5 hrs
-  startingGear: ScientistGear
-  icon: "JobIconScientist"
+  startingGear: ScientistBaseGear
+  icon: "JobIconScientistBase"
   supervisors: job-supervisors-rd
   access:
   - Research
   - Maintenance
 
 - type: startingGear
-  id: ScientistGear
+  id: ScientistBaseGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitScientist
     back: ClothingBackpackScienceFilled

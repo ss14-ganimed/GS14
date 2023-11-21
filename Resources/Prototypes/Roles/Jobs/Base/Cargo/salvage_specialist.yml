@@ -1,3 +1,21 @@
+- type: job
+  id: SalvageSpecialist
+  name: job-name-salvagespec
+  description: job-description-salvagespec
+  playTimeTracker: JobSalvageSpecialist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 18000 # 5 hrs
+  icon: "JobIconShaftMiner"
+  startingGear: SalvageSpecialistGear
+  supervisors: job-supervisors-qm
+  access:
+  - Cargo
+  - Salvage
+  - Maintenance
+  - External
+
 - type: startingGear
   id: SalvageSpecialistGear
   equipment:

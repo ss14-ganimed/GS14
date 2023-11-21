@@ -1,3 +1,30 @@
+- type: job
+  id: ResearchDirector
+  name: job-name-rd
+  description: job-description-rd
+  color: "#D381C9"
+  playTimeTracker: JobResearchDirector
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSeniorResearcher
+      time: 43200 #12 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 144000 #40 hrs
+  weight: 10
+  startingGear: ResearchDirectorGear
+  icon: "JobIconResearchDirector"
+  requireAdminNotify: true
+  supervisors: job-supervisors-captain
+  access:
+  - Research
+  - Command
+  - Maintenance
+  - ResearchDirector
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
 - type: startingGear
   id: ResearchDirectorGear
   equipment:
@@ -7,6 +34,6 @@
     outerClothing: ClothingOuterCoatRnd
     id: RnDPDA
     ears: ClothingHeadsetRD
-  innerclothingskirt: ClothingUniformJumpskirtResearchDirector
+  innerClothingSkirt: ClothingUniformJumpskirtResearchDirector
   satchel: ClothingBackpackSatchelResearchDirectorFilled
   duffelbag: ClothingBackpackDuffelResearchDirectorFilled

@@ -1,14 +1,14 @@
 - type: job
-  id: Paramedic
-  name: job-name-paramedic
-  description: job-description-paramedic
-  playTimeTracker: JobParamedic
+  id: ParamedicBase
+  name: job-name-paramedic-base
+  description: job-description-paramedic-base
+  playTimeTracker: JobParamedicBase
   requirements:
     - !type:RoleTimeRequirement
       role: JobMedicalDoctor
       time: 18000 #5 hrs
-  startingGear: ParamedicGear
-  icon: "JobIconParamedic"
+  startingGear: ParamedicBaseGear
+  icon: "JobIconParamedicBase"
   supervisors: job-supervisors-cmo
   access:
   - Medical
@@ -18,12 +18,12 @@
   - Chemistry
 
 - type: startingGear
-  id: ParamedicGear
+  id: ParamedicBaseGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitParamedic
     back: ClothingBackpackMedicalFilled
     shoes: ClothingShoesColorWhite
-    id: ParamedicPDA
+    id: ParamedicBasePDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltParamedicFilled
   innerClothingSkirt: ClothingUniformJumpskirtParamedic

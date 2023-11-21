@@ -1,3 +1,19 @@
+- type: job
+  id: TechnicalAssistant
+  name: job-name-technical-assistant
+  description: job-description-technical-assistant
+  playTimeTracker: JobTechnicalAssistant
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 3600 #1 hrs  
+  startingGear: TechnicalAssistantGear
+  icon: "JobIconTechnicalAssistant"
+  supervisors: job-supervisors-engineering
+  access:
+  - Maintenance
+  - Engineering
+  - External
+
 - type: startingGear
   id: TechnicalAssistantGear
   equipment:

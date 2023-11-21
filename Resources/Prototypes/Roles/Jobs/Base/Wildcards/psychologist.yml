@@ -1,3 +1,23 @@
+- type: job
+  id: Psychologist
+  name: job-name-psychologist
+  description: job-description-psychologist
+  playTimeTracker: JobPsychologist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 7200 #2 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 18000 #5 hrs
+  startingGear: PsychologistGear
+  icon: "JobIconPsychologist"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+
 - type: startingGear
   id: PsychologistGear
   equipment:
@@ -6,6 +26,6 @@
     shoes: ClothingShoesLeather
     id: PsychologistPDA
     ears: ClothingHeadsetMedical
-  innerclothingskirt: ClothingUniformJumpsuitPsychologist
+  innerClothingSkirt: ClothingUniformJumpsuitPsychologist
   satchel: ClothingBackpackSatchelMedicalFilled
   duffelbag: ClothingBackpackDuffelMedicalFilled
