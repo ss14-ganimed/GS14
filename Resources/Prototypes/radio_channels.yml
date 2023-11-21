@@ -76,6 +76,7 @@
   name: chat-radio-binary
   keycode: 'б'
   frequency: 1001
+  bypassObfuscation: true
   color: "#2ed2fd"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
@@ -104,8 +105,11 @@
 - type: radioChannel
   id: Monster
   name: chat-radio-monster
+  bypassObfuscation: true
   keycode: 'м'
   frequency: 801
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
   color: "#e1ca96"
 
 - type: radioChannel

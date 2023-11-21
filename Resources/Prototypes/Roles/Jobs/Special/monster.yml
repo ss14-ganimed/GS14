@@ -8,19 +8,177 @@
       time: 36000 # 10 Hours
   weight: 5
   canBeAntag: true
-  startingGear: MonsterGear
+  #startingGear: MonsterGear
   icon: "JobIconMonster"
   supervisors: job-supervisors-hivemind
+  jobEntity: MobMonsterLarva
+  doLoadout: false
 
-- type: startingGear
-  id: MonsterGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitERTLeaderOriginal
-    outerClothing: ClothingOuterArmorChangeling
-    shoes: ClothingShoesGaloshes
-    gloves: ClothingHandsGlovesCombat
-    mask: ClothingMaskGasMerc
-    eyes: ClothingEyesHudSecurity
-    neck: ClothingNeckStethoscope
-    head: ClothingHeadHelmetLing
-  innerclothingskirt: ClothingUniformJumpsuitERTLeaderOriginal
+# - type: startingGear
+#   id: MonsterGear
+#   equipment:
+#     jumpsuit: ClothingUniformJumpsuitERTLeaderOriginal
+#     outerClothing: ClothingOuterArmorChangeling
+#     shoes: ClothingShoesGaloshes
+#     gloves: ClothingHandsGlovesCombat
+#     mask: ClothingMaskGasMerc
+#     eyes: ClothingEyesHudSecurity
+#     neck: ClothingNeckStethoscope
+#     head: ClothingHeadHelmetLing
+#   innerclothingskirt: ClothingUniformJumpsuitERTLeaderOriginal
+
+- type: entity
+  save: false
+  parent: [ BaseSimpleMob, MobCombat ]
+  id: BaseMobMonster
+  description: A dangerous alien found on the wrong side of planets, known for their high levels of intelligence.
+  abstract: true
+  components:
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Monster
+  - type: ActiveRadio
+    channels:
+    - Monster
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+  - type: SolutionContainerManager
+  - type: ReplacementAccent
+    accent: xeno
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 200
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          1
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -1
+  - type: Insulated
+  - type: CombatMode
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 5
+  - type: Body
+    prototype: Animal
+  - type: Flammable
+    fireSpread: true
+    canResistFire: true
+    damage:
+      types:
+        Heat: 3
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Generic_mob_burning
+  - type: Climbing
+  - type: Flashable
+  - type: NameIdentifier
+    group: GenericNumber
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterLarva
+  name: larva
+  description: A pathetic creature, incapable of doing much.
+  components:
+  - type: Sprite
+    layers:
+    - state: slurva
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: slurva
+      Dead:
+        Base: slurva_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 3.5
+    baseWalkSpeed : 3
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterCarapace
+  name: barrier
+  components:
+  - type: Sprite
+    layers:
+    - state: barrier
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: barrier
+      Dead:
+        Base: barrier_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterSpeedster
+  name: skitter
+  description: A devious little alien... Make sure they don't run off with your rations!
+  components:
+  - type: Sprite
+    layers:
+    - state: skitter
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: skitter
+      Dead:
+        Base: skitter_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Dead
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 3
