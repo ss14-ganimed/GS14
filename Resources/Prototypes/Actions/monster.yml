@@ -1,0 +1,20 @@
+- type: entity
+  id: ActionMonsterEvolution
+  name: Evolution
+  description: Opens up the evolution menu.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/shop.png
+    event: !type:MonsterEvolutionActionEvent
+
+- type: entity
+  id: ActionMonsterConsume
+  name: "[color=red]Consume[/color]"
+  description: Attempt to consume a creature for its DNA.
+  noSpawn: true
+  components:
+  - type: EntityTargetAction
+    icon: { sprite : Interface/Actions/devour.rsi, state: icon }
+    iconOn: { sprite : Interface/Actions/devour.rsi, state: icon-on }
+    event: !type:MonsterConsumeActionEvent
