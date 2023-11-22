@@ -28,6 +28,19 @@
 #   innerclothingskirt: ClothingUniformJumpsuitERTLeaderOriginal
 
 - type: entity
+  id: ActionMonsterEvolutionMenu
+  name: action-name-monster-evolution
+  description: action-description-monster-evolution
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: Corvax/Interface/AdminActions/solar.png
+    iconOn: Corvax/Interface/AdminActions/solar.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.MonsterEvolutionMenuKey.Key }
+
+- type: entity
   save: false
   parent: [ BaseSimpleMob, MobCombat ]
   id: BaseMobMonster
@@ -84,6 +97,14 @@
   - type: Flashable
   - type: NameIdentifier
     group: GenericNumber
+  - type: UserInterface
+    interfaces:
+    - key: enum.MonsterEvolutionMenuKey.Key
+      type: MonsterEvolutionBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+    - key: enum.MonsterEvolutionMenuKey.Key
+      toggleAction: ActionMonsterEvolutionMenu
 
 - type: entity
   parent: BaseMobMonster

@@ -10,28 +10,23 @@ namespace Content.Shared.LowDesert.Monster.Components;
 [NetworkedComponent, RegisterComponent, AutoGenerateComponentState]
 public sealed partial class MonsterComponent : Component
 {
-	[DataField("evoPoints"), ViewVariables(VVAccess.ReadWrite)]
+	[DataField("evoPoints"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
 	public float EvoPoints = 10.0f;
 	
-	[DataField("toggleAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string EvolutionAction = "ActionMonsterEvolution";
-	
-	[DataField("consumeAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+	[DataField("consumeAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), AutoNetworkedField]
     public string? ConsumeAction = "ActionMonsterConsume";
 
-    [DataField("consumeActionEntity")]
+    [DataField("consumeActionEntity"), AutoNetworkedField]
     public EntityUid? ConsumeActionEntity;
 	
-	[DataField("consumeTime"), ViewVariables(VVAccess.ReadWrite)]
+	[DataField("consumeTime"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
 	public float ConsumeTime = 10.0f;
 	
-	[DataField("consumeDamageID")]
+	[DataField("consumeDamageID"), AutoNetworkedField]
 	public string ConsumeDamageID = "Cellular";
 	
-	[DataField("consumeDamageValue")]
+	[DataField("consumeDamageValue"), AutoNetworkedField]
 	public float ConsumeDamageValue = 50.0f;
-
-    [DataField, AutoNetworkedField] public EntityUid? EvolutionActionEntity;
 }
 
 public sealed partial class MonsterEvolutionActionEvent : InstantActionEvent

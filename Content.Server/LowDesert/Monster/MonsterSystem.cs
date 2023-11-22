@@ -20,20 +20,7 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	{
 		base.Initialize();
 		
-		SubscribeLocalEvent<MonsterComponent, MapInitEvent>(OnMapInit);
-		SubscribeLocalEvent<MonsterComponent, ComponentShutdown>(OnComponentShutdown);
 		SubscribeLocalEvent<MonsterComponent, ConsumeDoAfterEvent>(OnConsumeDoAfter);
-	}
-	
-	private void OnMapInit(EntityUid uid, MonsterComponent component, MapInitEvent args)
-	{
-		_actions.AddAction(uid, ref component.EvolutionActionEntity, component.EvolutionAction);
-	}
-	
-	private void OnComponentShutdown(EntityUid uid, MonsterComponent component, ComponentShutdown args)
-	{
-		if (component.EvolutionActionEntity != null)
-			_actions.RemoveAction(uid, component.EvolutionActionEntity);
 	}
 	
 	private void OnConsumeDoAfter(EntityUid uid, MonsterComponent component, ConsumeDoAfterEvent args)

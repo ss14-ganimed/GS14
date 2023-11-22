@@ -1,0 +1,12 @@
+﻿<DefaultWindow xmlns="https://spacestation14.io"
+            xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+            Title="{Loc 'monster-evolution-menu-title'}"
+            SetSize="350 200"
+            MinSize="350 500">
+    <BoxContainer Orientation="Vertical">
+        <ScrollContainer HScrollEnabled="False" HorizontalExpand="True" VerticalExpand="True" MinSize="0 250">
+            <BoxContainer Orientation="Vertical" Name="Items" Access="Public">
+            </BoxContainer>
+        </ScrollContainer>
+	</BoxContainer>
+</DefaultWindow>
