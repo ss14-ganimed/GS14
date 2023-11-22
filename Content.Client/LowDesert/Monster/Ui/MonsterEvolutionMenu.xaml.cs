@@ -19,6 +19,7 @@ namespace Content.Client.LowDesert.Monster.Ui;
 public sealed partial class MonsterEvolutionMenu : DefaultWindow
 {
 	public event Action<BaseButton.ButtonEventArgs, MonsterEvolutionItemButton>? OnMonsterEvolutionItemButtonPressed;
+	public event Action<BaseButton.ButtonEventArgs, Button>? OnMonsterEvolutionEvolveButtonPressed;
 	
 	public MonsterEvolutionMenu ()
 	{
@@ -56,7 +57,7 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			costLabel.SetMarkup(Loc.GetString("monster-evolution-cost", ("cost", item.Cost.ToString("f1"))));
 			
 			var button = new MonsterEvolutionItemButton(item);
-			button.Text = Loc.GetString("monster-evolution-evolve");
+			button.Text = Loc.GetString("monster-evolution-mutate");
 			button.Disabled = castState.EvoPoints < item.Cost;
 			button.OnPressed += args => OnMonsterEvolutionItemButtonPressed?.Invoke(args, button);
 			
@@ -162,6 +163,23 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 		var overviewStaminaReplenish = new RichTextLabel();
 		overviewStaminaReplenish.SetMarkup(Loc.GetString("monster-evolution-overview-staminareplenish", ("replenish", castState.Overview.StaminaReplenish.ToString("f1"))));
 		Overview.AddChild(overviewStaminaReplenish);
+		
+		Overview.AddChild(new Control { MinSize = new Vector2(0, 10) });
+		
+		var evolveButton = new Button()
+		{
+			Text = Loc.GetString("monster-evolution-evolve"),
+			ToolTip = Loc.GetString(
+				castState.Overview.EvoPointsSpent >= castState.Overview.EvoPointsRequired ?
+					"monster-evolution-tooltip-valid" 
+					: "monster-evolution-tooltip-invalid"),
+			Disabled = castState.Overview.EvoPointsSpent < castState.Overview.EvoPointsRequired,
+			MinWidth = 300,
+			MinHeight = 75,
+		};
+		
+		evolveButton.OnPressed += args => OnMonsterEvolutionEvolveButtonPressed?.Invoke(args, evolveButton);
+		Overview.AddChild(evolveButton);
 	}
 	
 	public sealed class MonsterEvolutionItemButton : Button 

@@ -76,7 +76,7 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	{
 		var items = new List<MonsterEvolutionItem>();
 		
-		var item = new MonsterEvolutionItem("Эволюция", "Нажми сюда, чтобы эволюционировать", 10.0f);
+		var item = new MonsterEvolutionItem("Мутация", "Нажми сюда, чтобы мутировать", 10.0f);
 		
 		items.Add(item);
 		items.Add(item);
@@ -142,7 +142,9 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 			staminaReplenish,
 			staminaTime,
 			monster.Comp.Species,
-			monster.Comp.Class);
+			monster.Comp.Class,
+			monster.Comp.EvoPointsSpent,
+			monster.Comp.EvoPointsRequired);
 			
 		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview);
 		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);

@@ -29,6 +29,11 @@ public sealed class MonsterEvolutionMessage : BoundUserInterfaceMessage
             Item = item;
         }
 }
+[Serializable, NetSerializable]
+public sealed class MonsterEvolutionEvolveMessage : BoundUserInterfaceMessage
+{
+	
+}
 
 [Serializable, NetSerializable]
 public class MonsterEvolutionItem
@@ -64,8 +69,10 @@ public class MonsterEvolutionOverview
 	public float StaminaTime { get; set; } = default!;
 	public string Species { get; set; } = default!;
 	public string Class { get; set; } = default!;
+	public float EvoPointsSpent { get; set; } = default!;
+	public float EvoPointsRequired { get; set; } = default!;
 	
-	public MonsterEvolutionOverview(string? name, float? health, float? attackSpeed, float? attackDamage, float? attackRange, float? consumeDamage, float? consumeTime, float? evoPoints, float? walkSpeed, float? runSpeed, float? staminaCooldown, float? staminaThreshold, float? staminaReplenish, float? staminaTime, string? monsterSpecies, string? monsterClass)
+	public MonsterEvolutionOverview(string? name, float? health, float? attackSpeed, float? attackDamage, float? attackRange, float? consumeDamage, float? consumeTime, float? evoPoints, float? walkSpeed, float? runSpeed, float? staminaCooldown, float? staminaThreshold, float? staminaReplenish, float? staminaTime, string? monsterSpecies, string? monsterClass, float? evoPointsSpent, float? evoPointsRequired)
 	{
 		Name = name ?? "???";
 		Health = health ?? 0.0f;
@@ -83,6 +90,8 @@ public class MonsterEvolutionOverview
 		StaminaTime = staminaTime ?? 0.0f;
 		Species = monsterSpecies ?? "???";
 		Class = monsterClass ?? "???";
+		EvoPointsSpent = evoPointsSpent ?? 0.0f;
+		EvoPointsRequired = evoPointsRequired ?? 0.0f;
 	}
 }
 

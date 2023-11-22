@@ -1,5 +1,8 @@
 monster-evolution-menu-title = Генетическая рекомбинация
 monster-evolution-cost = Потребуется [color=lightblue]{ $cost }[/color] биоцепей
+monster-evolution-mutate = Мутация!
+monster-evolution-tooltip-invalid = Нужно больше мутаций!
+monster-evolution-tooltip-valid = Потребуется время. Мутации будут сброшены!
 monster-evolution-evolve = Эволюция!
 
 monster-evolution-overview-header = [font size=14][bold][color=lightblue]Показатели[/color][/bold][/font]

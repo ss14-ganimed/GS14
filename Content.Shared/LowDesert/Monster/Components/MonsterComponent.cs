@@ -19,6 +19,12 @@ public sealed partial class MonsterComponent : Component
 	[DataField("evoPoints"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
 	public float EvoPoints = 10.0f;
 	
+	[DataField("evoPointsSpent"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+	public float EvoPointsSpent = 0.0f;
+	
+	[DataField("evoPointsRequired"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+	public float EvoPointsRequired = 50.0f;
+	
 	[DataField("consumeAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), AutoNetworkedField]
     public string? ConsumeAction = "ActionMonsterConsume";
 
