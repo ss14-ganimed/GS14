@@ -133,6 +133,7 @@
   - type: Monster
     species: Ларва
     class: Аргоциты
+    evoPointsRequired: 50.0
 
 - type: entity
   parent: BaseMobMonster
@@ -174,6 +175,7 @@
   - type: Monster
     species: Панцирник
     class: Аргоциты
+    evoPointsRequired: 100.0
 
 - type: entity
   parent: BaseMobMonster
@@ -216,3 +218,4 @@
   - type: Monster
     species: Рассекатель
     class: Аргоциты
+    evoPointsRequired: 100.0
