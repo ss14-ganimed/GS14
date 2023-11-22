@@ -8,3 +8,17 @@
     icon: { sprite : Interface/Actions/devour.rsi, state: icon }
     iconOn: { sprite : Interface/Actions/devour.rsi, state: icon-on }
     event: !type:MonsterConsumeActionEvent
+
+- type: entity
+  id: ActionMonsterEvolutionMenu
+  name: action-name-monster-evolution
+  description: action-description-monster-evolution
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: Corvax/Interface/AdminActions/solar.png
+    iconOn: Corvax/Interface/AdminActions/solar.png
+    keywords: [ "AI", "console", "interface" ]
+    useDelay: 2
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.MonsterEvolutionMenuKey.Key }

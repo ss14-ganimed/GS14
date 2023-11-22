@@ -2,6 +2,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.LowDesert.Monster;
 
+[Serializable, NetSerializable]
 public sealed class MonsterEvolutionBoundUserInterfaceState : BoundUserInterfaceState
 {
 	public readonly List<MonsterEvolutionItem>? Items;
@@ -12,6 +13,7 @@ public sealed class MonsterEvolutionBoundUserInterfaceState : BoundUserInterface
 	}
 }
 
+[Serializable, NetSerializable]
 public sealed class MonsterEvolutionMessage : BoundUserInterfaceMessage
 {
 	public readonly MonsterEvolutionItem Item;

@@ -6,6 +6,7 @@ using Content.Shared.LowDesert.Monster;
 using Content.Shared.LowDesert.Monster.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
+using Robust.Server.GameObjects;
 
 namespace Content.Server.LowDesert.Monster;
 
@@ -15,12 +16,15 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	[Dependency] private readonly SharedActionsSystem _actions = default!;
 	[Dependency] private readonly MobThresholdSystem _thresholds = default!;
 	[Dependency] private readonly DamageableSystem _damage = default!;
+	[Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
 	
 	public override void Initialize()
 	{
 		base.Initialize();
 		
 		SubscribeLocalEvent<MonsterComponent, ConsumeDoAfterEvent>(OnConsumeDoAfter);
+		
+		SubscribeLocalEvent<MonsterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
 	}
 	
 	private void OnConsumeDoAfter(EntityUid uid, MonsterComponent component, ConsumeDoAfterEvent args)
@@ -58,6 +62,23 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 		{
 			component.EvoPoints += consumable.EvoPointsGranted;
 		}
+	}
+	
+	private void SubscribeUpdateUiState<T>(Entity<MonsterComponent> ent, ref T ev)
+    {
+        UpdateUiState(ent);
+    }
+	
+	private void UpdateUiState(Entity<MonsterComponent>	monster)
+	{
+		var items = new List<MonsterEvolutionItem>();
+		
+		var item = new MonsterEvolutionItem("Эволюция", "Нажми сюда, чтобы эволюционировать", 10.0f);
+		
+		items.Add(item);
+		
+		var state = new MonsterEvolutionBoundUserInterfaceState(items);
+		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);
 	}
 	
 }
