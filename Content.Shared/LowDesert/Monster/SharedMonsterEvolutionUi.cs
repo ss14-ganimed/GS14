@@ -5,11 +5,17 @@ namespace Content.Shared.LowDesert.Monster;
 [Serializable, NetSerializable]
 public sealed class MonsterEvolutionBoundUserInterfaceState : BoundUserInterfaceState
 {
-	public readonly List<MonsterEvolutionItem>? Items;
+	public readonly List<MonsterEvolutionItem> Items;
 	
-	public MonsterEvolutionBoundUserInterfaceState(List<MonsterEvolutionItem>? items)
+	public readonly float EvoPoints;
+	
+	public readonly MonsterEvolutionOverview Overview;
+	
+	public MonsterEvolutionBoundUserInterfaceState(List<MonsterEvolutionItem> items, float evoPoints, MonsterEvolutionOverview overview)
 	{
 		Items = items;
+		EvoPoints = evoPoints;
+		Overview = overview;
 	}
 }
 
@@ -36,6 +42,19 @@ public class MonsterEvolutionItem
 		Name = name;
 		Description = description;
 		Cost = cost;
+	}
+}
+
+[Serializable, NetSerializable]
+public class MonsterEvolutionOverview
+{
+	public string Name { get; set; } = default!;
+	public float Health { get; set; } = default!;
+	
+	public MonsterEvolutionOverview(string? name, float? health)
+	{
+		Name = name ?? "???";
+		Health = health ?? 0.0f;
 	}
 }
 

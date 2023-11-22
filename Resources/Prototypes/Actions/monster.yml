@@ -1,7 +1,7 @@
 - type: entity
   id: ActionMonsterConsume
-  name: "[color=red]Consume[/color]"
-  description: Attempt to consume a creature for its DNA.
+  name: action-name-monster-consume
+  description: action-description-monster-consume
   noSpawn: true
   components:
   - type: EntityTargetAction

@@ -76,8 +76,28 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 		var item = new MonsterEvolutionItem("Эволюция", "Нажми сюда, чтобы эволюционировать", 10.0f);
 		
 		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
+		items.Add(item);
 		
-		var state = new MonsterEvolutionBoundUserInterfaceState(items);
+		_thresholds.TryGetThresholdForState(monster, MobState.Dead, out var health);
+		
+		var name = "???";
+		
+		if (EntityManager.TryGetComponent<MetaDataComponent>(monster, out var metaData))
+			name = metaData.EntityName;
+		
+		var overview = new MonsterEvolutionOverview(name, 
+			health is null ? 0.0f : (float) health);
+			
+		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview);
 		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);
 	}
 	
