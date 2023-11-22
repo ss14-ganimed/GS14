@@ -87,15 +87,81 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 		
 		Overview.AddChild(new Control { MinSize = new Vector2(0, 10) });
 		
+		var overviewClass = new RichTextLabel();
+		overviewClass.SetMarkup(Loc.GetString("monster-evolution-overview-class", ("class", castState.Overview.Class)));
+		Overview.AddChild(overviewClass);
+		
+		var overviewSpecies = new RichTextLabel();
+		overviewSpecies.SetMarkup(Loc.GetString("monster-evolution-overview-species", ("species", castState.Overview.Species)));
+		Overview.AddChild(overviewSpecies);
+		
 		var overviewName = new RichTextLabel();
 		overviewName.SetMarkup(Loc.GetString("monster-evolution-overview-name", ("name", castState.Overview.Name)));
 		Overview.AddChild(overviewName);
 		
 		Overview.AddChild(new Control { MinSize = new Vector2(0, 5) });
 		
+		var overviewEvoPoints = new RichTextLabel();
+		overviewEvoPoints.SetMarkup(Loc.GetString("monster-evolution-overview-evopoints", ("points", castState.Overview.EvoPoints.ToString("f1"))));
+		Overview.AddChild(overviewEvoPoints);
+		
+		Overview.AddChild(new Control { MinSize = new Vector2(0, 5) });
+		
 		var overviewHealth = new RichTextLabel();
 		overviewHealth.SetMarkup(Loc.GetString("monster-evolution-overview-health", ("health", castState.Overview.Health.ToString("f1"))));
 		Overview.AddChild(overviewHealth);
+		
+		Overview.AddChild(new Control { MinSize = new Vector2(0, 5) });
+		
+		var overviewAttackDamage = new RichTextLabel();
+		overviewAttackDamage.SetMarkup(Loc.GetString("monster-evolution-overview-attackdamage", ("damage", castState.Overview.AttackDamage.ToString("f1"))));
+		Overview.AddChild(overviewAttackDamage);
+		
+		var overviewAttackSpeed = new RichTextLabel();
+		overviewAttackSpeed.SetMarkup(Loc.GetString("monster-evolution-overview-attackspeed", ("speed", castState.Overview.AttackSpeed.ToString("f1"))));
+		Overview.AddChild(overviewAttackSpeed);
+		
+		var overviewAttackRange = new RichTextLabel();
+		overviewAttackRange.SetMarkup(Loc.GetString("monster-evolution-overview-attackrange", ("range", castState.Overview.AttackRange.ToString("f1"))));
+		Overview.AddChild(overviewAttackRange);
+		
+		Overview.AddChild(new Control { MinSize = new Vector2(0, 5) });
+		
+		var overviewWalkSpeed = new RichTextLabel();
+		overviewWalkSpeed.SetMarkup(Loc.GetString("monster-evolution-overview-walkspeed", ("speed", castState.Overview.WalkSpeed.ToString("f1"))));
+		Overview.AddChild(overviewWalkSpeed);
+		
+		var overviewRunSpeed = new RichTextLabel();
+		overviewRunSpeed.SetMarkup(Loc.GetString("monster-evolution-overview-runspeed", ("speed", castState.Overview.RunSpeed.ToString("f1"))));
+		Overview.AddChild(overviewRunSpeed);
+		
+		Overview.AddChild(new Control { MinSize = new Vector2(0, 5) });
+		
+		var overviewConsumeDamage = new RichTextLabel();
+		overviewConsumeDamage.SetMarkup(Loc.GetString("monster-evolution-overview-consumedamage", ("damage", castState.Overview.ConsumeDamage.ToString("f1"))));
+		Overview.AddChild(overviewConsumeDamage);
+		
+		var overviewConsumeTime = new RichTextLabel();
+		overviewConsumeTime.SetMarkup(Loc.GetString("monster-evolution-overview-consumetime", ("time", castState.Overview.ConsumeTime.ToString("f1"))));
+		Overview.AddChild(overviewConsumeTime);
+		
+		Overview.AddChild(new Control { MinSize = new Vector2(0, 5) });
+		
+		var overviewStaminaThreshold = new RichTextLabel();
+		overviewStaminaThreshold.SetMarkup(Loc.GetString("monster-evolution-overview-staminathreshold", ("threshold", castState.Overview.StaminaThreshold.ToString("f1"))));
+		Overview.AddChild(overviewStaminaThreshold);
+		
+		var overviewStaminaTime = new RichTextLabel();
+		overviewStaminaTime.SetMarkup(Loc.GetString("monster-evolution-overview-staminatime", ("time", castState.Overview.StaminaTime.ToString("f1"))));
+		Overview.AddChild(overviewStaminaTime);
+		
+		var overviewStaminaCooldown = new RichTextLabel();
+		overviewStaminaCooldown.SetMarkup(Loc.GetString("monster-evolution-overview-staminacooldown", ("cooldown", castState.Overview.StaminaCooldown.ToString("f1"))));
+		Overview.AddChild(overviewStaminaCooldown);
+		
+		var overviewStaminaReplenish = new RichTextLabel();
+		overviewStaminaReplenish.SetMarkup(Loc.GetString("monster-evolution-overview-staminareplenish", ("replenish", castState.Overview.StaminaReplenish.ToString("f1"))));
+		Overview.AddChild(overviewStaminaReplenish);
 	}
 	
 	public sealed class MonsterEvolutionItemButton : Button 

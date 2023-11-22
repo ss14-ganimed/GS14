@@ -50,11 +50,39 @@ public class MonsterEvolutionOverview
 {
 	public string Name { get; set; } = default!;
 	public float Health { get; set; } = default!;
+	public float AttackSpeed { get; set; } = default!;
+	public float AttackDamage { get; set; } = default!;
+	public float AttackRange { get; set; } = default!;
+	public float ConsumeDamage { get; set; } = default!;
+	public float ConsumeTime { get; set; } = default!;
+	public float EvoPoints { get; set; } = default!;
+	public float WalkSpeed { get; set; } = default!;
+	public float RunSpeed { get; set; } = default!;
+	public float StaminaCooldown { get; set; } = default!;
+	public float StaminaThreshold { get; set; } = default!;
+	public float StaminaReplenish { get; set; } = default!;
+	public float StaminaTime { get; set; } = default!;
+	public string Species { get; set; } = default!;
+	public string Class { get; set; } = default!;
 	
-	public MonsterEvolutionOverview(string? name, float? health)
+	public MonsterEvolutionOverview(string? name, float? health, float? attackSpeed, float? attackDamage, float? attackRange, float? consumeDamage, float? consumeTime, float? evoPoints, float? walkSpeed, float? runSpeed, float? staminaCooldown, float? staminaThreshold, float? staminaReplenish, float? staminaTime, string? monsterSpecies, string? monsterClass)
 	{
 		Name = name ?? "???";
 		Health = health ?? 0.0f;
+		AttackSpeed = attackSpeed ?? 0.0f;
+		AttackDamage = attackDamage ?? 0.0f;
+		AttackRange = attackRange ?? 0.0f;
+		ConsumeDamage = consumeDamage ?? 0.0f;
+		ConsumeTime = consumeTime ?? 0.0f;
+		EvoPoints = evoPoints ?? 0.0f;
+		WalkSpeed = walkSpeed ?? 0.0f;
+		RunSpeed = runSpeed ?? 0.0f;
+		StaminaCooldown = staminaCooldown ?? 0.0f;
+		StaminaThreshold = staminaThreshold ?? 0.0f;
+		StaminaReplenish = staminaReplenish ?? 0.0f;
+		StaminaTime = staminaTime ?? 0.0f;
+		Species = monsterSpecies ?? "???";
+		Class = monsterClass ?? "???";
 	}
 }
 

@@ -92,6 +92,13 @@
     uis:
     - key: enum.MonsterEvolutionMenuKey.Key
       toggleAction: ActionMonsterEvolutionMenu
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      15: Critical
+      30: Dead
+  - type: Stamina
+    critThreshold: 60
 
 - type: entity
   parent: BaseMobMonster
@@ -112,7 +119,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
+      25: Critical
       30: Dead
+  - type: Stamina
+    critThreshold: 60
   - type: MovementSpeedModifier
     baseSprintSpeed : 3.5
     baseWalkSpeed : 3
@@ -120,6 +130,9 @@
     damage:
       types:
         Blunt: 3
+  - type: Monster
+    species: Ларва
+    class: Аргоциты
 
 - type: entity
   parent: BaseMobMonster
@@ -139,7 +152,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      30: Dead
+      40: Critical
+      50: Dead
+  - type: Stamina
+    critThreshold: 60
   - type: Fixtures
     fixtures:
       fix1:
@@ -155,6 +171,9 @@
     damage:
       types:
         Blunt: 3
+  - type: Monster
+    species: Панцирник
+    class: Аргоциты
 
 - type: entity
   parent: BaseMobMonster
@@ -175,7 +194,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      30: Dead
+      25: Critical
+      35: Dead
+  - type: Stamina
+    critThreshold: 50
   - type: Fixtures
     fixtures:
       fix1:
@@ -191,3 +213,6 @@
     damage:
       types:
         Slash: 3
+  - type: Monster
+    species: Рассекатель
+    class: Аргоциты

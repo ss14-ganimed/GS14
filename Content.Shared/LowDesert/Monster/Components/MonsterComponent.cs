@@ -10,6 +10,12 @@ namespace Content.Shared.LowDesert.Monster.Components;
 [NetworkedComponent, RegisterComponent, AutoGenerateComponentState]
 public sealed partial class MonsterComponent : Component
 {
+	[DataField("species"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+	public string Species = "???";
+	
+	[DataField("class"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+	public string Class = "???";
+	
 	[DataField("evoPoints"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
 	public float EvoPoints = 10.0f;
 	

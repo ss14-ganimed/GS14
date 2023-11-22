@@ -1,11 +1,14 @@
 using Content.Shared.Actions;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.DoAfter;
 using Content.Shared.LowDesert.Monster;
 using Content.Shared.LowDesert.Monster.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Movement.Components;
+using Content.Shared.Weapons.Melee;
 using Robust.Server.GameObjects;
 
 namespace Content.Server.LowDesert.Monster;
@@ -90,12 +93,56 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 		_thresholds.TryGetThresholdForState(monster, MobState.Dead, out var health);
 		
 		var name = "???";
-		
 		if (EntityManager.TryGetComponent<MetaDataComponent>(monster, out var metaData))
 			name = metaData.EntityName;
 		
-		var overview = new MonsterEvolutionOverview(name, 
-			health is null ? 0.0f : (float) health);
+		var attackSpeed = 0.0f;
+		var attackDamage = 0.0f;
+		var attackRange = 0.0f;
+		if (EntityManager.TryGetComponent<MeleeWeaponComponent>(monster, out var meleeWeapon))
+		{
+			attackSpeed = meleeWeapon.AttackRate * 10.0f;
+			attackDamage = (float) meleeWeapon.Damage.GetTotal();
+			attackRange = meleeWeapon.Range * 10.0f;
+		}
+		
+		var walkSpeed = 0.0f;
+		var runSpeed = 0.0f;
+		if (EntityManager.TryGetComponent<MovementSpeedModifierComponent>(monster, out var movement))
+		{
+			walkSpeed = movement.BaseWalkSpeed * 7f;
+			runSpeed = movement.BaseSprintSpeed * 7f;
+		}
+		
+		var staminaCooldown = 0.0f;
+		var staminaThreshold = 0.0f;
+		var staminaReplenish = 0.0f;
+		var staminaTime = 0.0f;
+		if (EntityManager.TryGetComponent<StaminaComponent>(monster, out var stamina))
+		{
+			staminaCooldown = stamina.Cooldown;
+			staminaThreshold = stamina.CritThreshold;
+			staminaReplenish = stamina.Decay;
+			staminaTime = (float) stamina.StunTime.TotalSeconds;
+		}
+		
+		var overview = new MonsterEvolutionOverview(
+			name, 
+			health is null ? 0.0f : (float) health,
+			attackSpeed,
+			attackDamage,
+			attackRange,
+			monster.Comp.ConsumeDamageValue / 10.0f,
+			50.0f / monster.Comp.ConsumeTime,
+			monster.Comp.EvoPoints,
+			walkSpeed,
+			runSpeed,
+			staminaCooldown,
+			staminaThreshold,
+			staminaReplenish,
+			staminaTime,
+			monster.Comp.Species,
+			monster.Comp.Class);
 			
 		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview);
 		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);
