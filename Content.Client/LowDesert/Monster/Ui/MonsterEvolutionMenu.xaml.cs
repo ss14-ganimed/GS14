@@ -185,7 +185,7 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			if (_evolveWindow is null)
 			{
 				_evolveWindow = new MonsterEvolutionScreen();
-				_evolveWindow.OnClose += Close;
+				_evolveWindow.OnClose += _evolveWindow.Close;
 				_evolveWindow.OpenToLeft();
 			}
 			else
