@@ -29,9 +29,8 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 		IoCManager.InjectDependencies(this);
 	}
 	
-	public void UpdateState(BoundUserInterfaceState state)
+	public void UpdateWindowItems(BoundUserInterfaceState state)
 	{
-		
 		var castState = (MonsterEvolutionBoundUserInterfaceState) state;
 		
 		Items.Children.Clear();
@@ -81,6 +80,11 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			Items.AddChild(box);
 			
 		}
+	}
+	
+	public void UpdateWindowOverview(BoundUserInterfaceState state)
+	{
+		var castState = (MonsterEvolutionBoundUserInterfaceState) state;
 		
 		Overview.Children.Clear();
 
@@ -186,7 +190,7 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			{
 				_evolveWindow = new MonsterEvolutionScreen();
 				_evolveWindow.OnClose += _evolveWindow.Close;
-				_evolveWindow.OpenToLeft();
+				_evolveWindow.OpenToRight();
 			}
 			else
 			{
@@ -199,9 +203,28 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 					_evolveWindow.Open();
 				}
 			}
+			
+			UpdateState(state);
 		};
 		
 		Overview.AddChild(evolveButton);
+	}
+	
+	public void UpdateEvolutionScreen(BoundUserInterfaceState state)
+	{
+		var castState = (MonsterEvolutionBoundUserInterfaceState) state;
+		
+		
+	}
+	
+	public void UpdateState(BoundUserInterfaceState state)
+	{
+		
+		UpdateWindowItems(state);
+		UpdateWindowOverview(state);
+		if (_evolveWindow is not null && _evolveWindow.IsOpen)
+			UpdateEvolutionScreen(state);
+		
 	}
 	
 	public sealed class MonsterEvolutionItemButton : Button 

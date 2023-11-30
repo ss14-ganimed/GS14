@@ -32,3 +32,4 @@ action-description-monster-consume = Поглощение генетическо
 
 monster-evolution-name-none = ???
 monster-evolution-description-none = Неизвестный вид. Кто знает, что скрывается за обложкой?
+monster-evolution-screen-title = Эволюция
