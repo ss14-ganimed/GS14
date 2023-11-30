@@ -11,11 +11,14 @@ public sealed class MonsterEvolutionBoundUserInterfaceState : BoundUserInterface
 	
 	public readonly MonsterEvolutionOverview Overview;
 	
-	public MonsterEvolutionBoundUserInterfaceState(List<MonsterEvolutionItem> items, float evoPoints, MonsterEvolutionOverview overview)
+	public readonly List<MonsterEvolutionPrototype> Evolutions;
+	
+	public MonsterEvolutionBoundUserInterfaceState(List<MonsterEvolutionItem> items, float evoPoints, MonsterEvolutionOverview overview, List<MonsterEvolutionPrototype> evolutions)
 	{
 		Items = items;
 		EvoPoints = evoPoints;
 		Overview = overview;
+		Evolutions = evolutions;
 	}
 }
 

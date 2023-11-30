@@ -214,6 +214,58 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 	{
 		var castState = (MonsterEvolutionBoundUserInterfaceState) state;
 		
+		var isFirst = true;
+		
+		foreach (var evolution in castState.Evolutions)
+		{
+			
+			var nameLabel = new RichTextLabel();
+			nameLabel.SetMarkup(Loc.GetString("monster-evolution-screen-name-wrap", ("name", evolution.Name)));
+			
+			var descriptionLabel = new RichTextLabel();
+			descriptionLabel.SetMarkup(Loc.GetString("monster-evolution-screen-description-wrap", ("description", evolution.Description)));
+			
+			var costLabel = new RichTextLabel();
+			costLabel.SetMarkup(Loc.GetString("monster-evolution-screen-cost-wrap", ("cost", evolution.Cost.ToString("f1"))));
+			
+			var button = new Button(){
+				Text = Loc.GetString("monster-evolution-evolve"),
+				ToolTip = Loc.GetString(
+				castState.Overview.EvoPointsSpent < castState.Overview.EvoPointsRequired ?
+					"monster-evolution-tooltip-invalid" :
+					castState.Overview.EvoPoints >= evolution.Cost ?
+						"monster-evolution-tooltip-valid" 
+						: "monster-evolution-tooltip-nomoney"),
+				Disabled = castState.Overview.EvoPoints < evolution.Cost,
+				MinWidth = 100,
+				MinHeight = 50
+			};
+			
+			button.OnPressed += _ => {
+				_evolveWindow?.Close();
+			};
+			
+			var box = new BoxContainer
+			{
+                MinWidth = 250,
+				MinHeight = 100,
+                VerticalExpand = false,
+				HorizontalExpand = true,
+				Orientation = LayoutOrientation.Vertical,
+				Children =
+                {
+					nameLabel,
+					descriptionLabel,
+					costLabel,
+					button
+				}
+            };
+			
+			if (!isFirst)
+				_evolveWindow?.MainContainer.AddChild(new Control { MinSize = new Vector2(0, 15) });
+			
+			_evolveWindow?.MainContainer.AddChild(box);
+		}
 		
 	}
 	

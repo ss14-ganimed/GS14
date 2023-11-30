@@ -3,6 +3,8 @@
             Title="{Loc 'monster-evolution-screen-title'}"
             SetSize="400 300"
             MinSize="400 300">
-    <BoxContainer Orientation="Vertical">
-	</BoxContainer>
+    <ScrollContainer HScrollEnabled="False" VScrollEnabled="True" VerticalExpand="True" HorizontalExpand="True">
+		<BoxContainer Name="MainContainer" Orientation="Vertical" Access="Public" VerticalExpand="True" HorizontalExpand="True">
+		</BoxContainer>
+	</ScrollContainer>
 </DefaultWindow>

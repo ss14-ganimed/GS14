@@ -2,6 +2,7 @@ monster-evolution-menu-title = Генетическая рекомбинация
 monster-evolution-cost = Потребуется [color=lightblue]{ $cost }[/color] биоцепей
 monster-evolution-mutate = Мутация!
 monster-evolution-tooltip-invalid = Нужно больше мутаций!
+monster-evolution-tooltip-nomoney = Недостаточно биоцепей!
 monster-evolution-tooltip-valid = Потребуется время. Мутации будут сброшены!
 monster-evolution-evolve = Эволюция!
 
@@ -33,3 +34,7 @@ action-description-monster-consume = Поглощение генетическо
 monster-evolution-name-none = ???
 monster-evolution-description-none = Неизвестный вид. Кто знает, что скрывается за обложкой?
 monster-evolution-screen-title = Эволюция
+
+monster-evolution-screen-name-wrap = [bold]Кодовое имя: [/bold][color=lightblue]{ $name }[/color]
+monster-evolution-screen-description-wrap = [bold][color=lightblue]{ $description }[/color][/bold]
+monster-evolution-screen-cost-wrap = [bold]Стоимость: [/bold][color=lightblue]{ $cost }[/color]

@@ -1,8 +1,9 @@
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.LowDesert.Monster;
 
-[Prototype("monsterEvolution")]
+[Serializable, NetSerializable, Prototype("monsterEvolution")]
 public sealed partial class MonsterEvolutionPrototype : IPrototype
 {
     [IdDataField, ViewVariables]

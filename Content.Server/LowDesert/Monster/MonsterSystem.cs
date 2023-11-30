@@ -10,6 +10,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Components;
 using Content.Shared.Weapons.Melee;
 using Robust.Server.GameObjects;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.LowDesert.Monster;
 
@@ -20,6 +21,7 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	[Dependency] private readonly MobThresholdSystem _thresholds = default!;
 	[Dependency] private readonly DamageableSystem _damage = default!;
 	[Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
+	[Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 	
 	public override void Initialize()
 	{
@@ -145,8 +147,16 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 			monster.Comp.Class,
 			monster.Comp.EvoPointsSpent,
 			monster.Comp.EvoPointsRequired);
+		
+		var evolutions = new List<MonsterEvolutionPrototype>();
+		
+		foreach (var prototype in monster.Comp.Evolutions)
+		{
+			if (_prototypeManager.TryIndex<MonsterEvolutionPrototype>(prototype, out var evolution))
+				evolutions.Add(evolution);
+		}
 			
-		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview);
+		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview, evolutions);
 		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);
 	}
 	
