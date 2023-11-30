@@ -21,6 +21,8 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 	public event Action<BaseButton.ButtonEventArgs, MonsterEvolutionItemButton>? OnMonsterEvolutionItemButtonPressed;
 	public event Action<BaseButton.ButtonEventArgs, Button>? OnMonsterEvolutionEvolveButtonPressed;
 	
+	private MonsterEvolutionScreen? _evolveWindow;
+	
 	public MonsterEvolutionMenu ()
 	{
 		RobustXamlLoader.Load(this);
@@ -178,7 +180,27 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			MinHeight = 75,
 		};
 		
-		evolveButton.OnPressed += args => OnMonsterEvolutionEvolveButtonPressed?.Invoke(args, evolveButton);
+		evolveButton.OnPressed += _ => {
+			
+			if (_evolveWindow is null)
+			{
+				_evolveWindow = new MonsterEvolutionScreen();
+				_evolveWindow.OnClose += Close;
+				_evolveWindow.OpenToLeft();
+			}
+			else
+			{
+				if (_evolveWindow.IsOpen)
+				{
+					_evolveWindow.Close();
+				}
+				else
+				{
+					_evolveWindow.Open();
+				}
+			}
+		};
+		
 		Overview.AddChild(evolveButton);
 	}
 	
