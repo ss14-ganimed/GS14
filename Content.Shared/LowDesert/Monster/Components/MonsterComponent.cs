@@ -1,6 +1,7 @@
 using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 
@@ -39,6 +40,9 @@ public sealed partial class MonsterComponent : Component
 	
 	[DataField("consumeDamageValue"), AutoNetworkedField]
 	public float ConsumeDamageValue = 50.0f;
+	
+	[DataField("evolutions"), AutoNetworkedField]
+	public List<string> Evolutions = new();
 }
 
 public sealed partial class MonsterEvolutionActionEvent : InstantActionEvent

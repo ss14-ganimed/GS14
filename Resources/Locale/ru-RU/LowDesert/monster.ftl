@@ -29,3 +29,6 @@ action-description-monster-evolution = Трата собранного гене�
 
 action-name-monster-consume = [color=crimson]Поглощение[/color]
 action-description-monster-consume = Поглощение генетического биоматериала материала для задействования собственных способностей.
+
+monster-evolution-name-none = ???
+monster-evolution-description-none = Неизвестный вид. Кто знает, что скрывается за обложкой?
