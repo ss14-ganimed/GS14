@@ -21,7 +21,7 @@ monster-evolution-overview-staminathreshold = [bold]Макс. выносливо
 monster-evolution-overview-staminareplenish = [bold]Скорость восстановления: [/bold][color=lightblue]{ $replenish }[/color]
 monster-evolution-overview-staminacooldown = [bold]Задержка восстановления: [/bold][color=lightblue]{ $cooldown } сек.[/color]
 monster-evolution-overview-staminatime = [bold]Время оглушения: [/bold][color=lightblue]{ $time } сек.[/color]
-monster-evolution-overview-species = [bold]Вид: [/bold][color=lightblue]{ $species }[/color]
+monster-evolution-overview-species = [bold]Кодовое имя: [/bold][color=lightblue]{ $species }[/color]
 monster-evolution-overview-class = [bold]Классификация: [/bold][color=lightblue]{ $class }[/color]
 
 
@@ -31,10 +31,14 @@ action-description-monster-evolution = Трата собранного гене�
 action-name-monster-consume = [color=crimson]Поглощение[/color]
 action-description-monster-consume = Поглощение генетического биоматериала материала для задействования собственных способностей.
 
-monster-evolution-name-none = ???
+monster-evolution-class-none = ???
+monster-evolution-species-none = ???
+monster-evolution-specialization-none = ???
 monster-evolution-description-none = Неизвестный вид. Кто знает, что скрывается за обложкой?
 monster-evolution-screen-title = Эволюция
 
-monster-evolution-screen-name-wrap = [bold]Кодовое имя: [/bold][color=lightblue]{ $name }[/color]
-monster-evolution-screen-description-wrap = [bold][color=lightblue]{ $description }[/color][/bold]
-monster-evolution-screen-cost-wrap = [bold]Стоимость: [/bold][color=lightblue]{ $cost }[/color]
+monster-evolution-screen-species-wrap = [bold]Кодовое имя: [/bold][color=lightblue]{ $species }[/color]
+monster-evolution-screen-class-wrap = [bold]Классификация: [/bold][color=lightblue]{ $class }[/color]
+monster-evolution-screen-specialization-wrap = [bold]Особенность: [/bold][color=lightblue]{ $specialization }[/color]
+monster-evolution-screen-description-wrap = [italic]{ $description }[/italic]
+monster-evolution-screen-cost-wrap = Потребуется [color=lightblue]{ $cost }[/color] биоцепей

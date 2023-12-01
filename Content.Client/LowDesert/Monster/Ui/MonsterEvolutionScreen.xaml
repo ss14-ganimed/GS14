@@ -1,8 +1,8 @@
 ﻿<DefaultWindow xmlns="https://spacestation14.io"
             xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
             Title="{Loc 'monster-evolution-screen-title'}"
-            SetSize="400 300"
-            MinSize="400 300">
+            SetSize="550 500"
+            MinSize="550 5">
     <ScrollContainer HScrollEnabled="False" VScrollEnabled="True" VerticalExpand="True" HorizontalExpand="True">
 		<BoxContainer Name="MainContainer" Orientation="Vertical" Access="Public" VerticalExpand="True" HorizontalExpand="True">
 		</BoxContainer>

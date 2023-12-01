@@ -10,6 +10,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
+using Robust.Client.Utility;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 
 
@@ -214,13 +215,21 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 	{
 		var castState = (MonsterEvolutionBoundUserInterfaceState) state;
 		
+		_evolveWindow?.MainContainer.Children.Clear();
+		
 		var isFirst = true;
 		
 		foreach (var evolution in castState.Evolutions)
 		{
 			
-			var nameLabel = new RichTextLabel();
-			nameLabel.SetMarkup(Loc.GetString("monster-evolution-screen-name-wrap", ("name", evolution.Name)));
+			var classLabel = new RichTextLabel();
+			classLabel.SetMarkup(Loc.GetString("monster-evolution-screen-class-wrap", ("class", evolution.Class)));
+			
+			var speciesLabel = new RichTextLabel();
+			speciesLabel.SetMarkup(Loc.GetString("monster-evolution-screen-species-wrap", ("species", evolution.Species)));
+			
+			var specializationLabel = new RichTextLabel();
+			specializationLabel.SetMarkup(Loc.GetString("monster-evolution-screen-specialization-wrap", ("specialization", evolution.Specialization)));
 			
 			var descriptionLabel = new RichTextLabel();
 			descriptionLabel.SetMarkup(Loc.GetString("monster-evolution-screen-description-wrap", ("description", evolution.Description)));
@@ -245,26 +254,56 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 				_evolveWindow?.Close();
 			};
 			
-			var box = new BoxContainer
+			var overviewBox = new BoxContainer
 			{
                 MinWidth = 250,
 				MinHeight = 100,
                 VerticalExpand = false,
 				HorizontalExpand = true,
+				VerticalAlignment = VAlignment.Center,
 				Orientation = LayoutOrientation.Vertical,
 				Children =
                 {
-					nameLabel,
+					classLabel,
+					speciesLabel,
+					specializationLabel,
 					descriptionLabel,
-					costLabel,
-					button
+					costLabel
+				}
+            };
+			
+			var icon = new TextureRect
+            {
+                TextureScale = new Vector2(5, 5),
+				Stretch = TextureRect.StretchMode.KeepCentered,
+				Texture = evolution.Icon.Frame0()
+			};
+			
+			var box = new BoxContainer
+			{
+                MinWidth = 300,
+				MinHeight = 100,
+                VerticalExpand = false,
+				HorizontalExpand = true,
+				Orientation = LayoutOrientation.Horizontal,
+				Children =
+                {
+					icon,
+					overviewBox
 				}
             };
 			
 			if (!isFirst)
-				_evolveWindow?.MainContainer.AddChild(new Control { MinSize = new Vector2(0, 15) });
+			{
+				_evolveWindow?.MainContainer.AddChild(new Control { MinSize = new Vector2(15, 15) });
+			}
+			else
+			{
+				isFirst = false;
+			}
 			
 			_evolveWindow?.MainContainer.AddChild(box);
+			_evolveWindow?.MainContainer.AddChild(button);
 		}
 		
 	}
