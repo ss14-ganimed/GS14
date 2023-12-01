@@ -35,7 +35,12 @@ public sealed class MonsterEvolutionMessage : BoundUserInterfaceMessage
 [Serializable, NetSerializable]
 public sealed class MonsterEvolutionEvolveMessage : BoundUserInterfaceMessage
 {
+	public readonly MonsterEvolutionPrototype Evolution;
 	
+        public MonsterEvolutionEvolveMessage(MonsterEvolutionPrototype evolution)
+        {
+            Evolution = evolution;
+        }
 }
 
 [Serializable, NetSerializable]

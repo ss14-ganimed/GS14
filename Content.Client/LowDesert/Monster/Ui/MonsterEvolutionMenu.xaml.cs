@@ -19,8 +19,8 @@ namespace Content.Client.LowDesert.Monster.Ui;
 [GenerateTypedNameReferences]
 public sealed partial class MonsterEvolutionMenu : DefaultWindow
 {
-	public event Action<BaseButton.ButtonEventArgs, MonsterEvolutionItemButton>? OnMonsterEvolutionItemButtonPressed;
-	public event Action<BaseButton.ButtonEventArgs, Button>? OnMonsterEvolutionEvolveButtonPressed;
+	public event Action<MonsterEvolutionItem>? OnMonsterEvolutionItemButtonPressed;
+	public event Action<MonsterEvolutionPrototype>? OnMonsterEvolutionEvolveButtonPressed;
 	
 	private MonsterEvolutionScreen? _evolveWindow;
 	
@@ -58,10 +58,11 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			var costLabel = new RichTextLabel();
 			costLabel.SetMarkup(Loc.GetString("monster-evolution-cost", ("cost", item.Cost.ToString("f1"))));
 			
-			var button = new MonsterEvolutionItemButton(item);
-			button.Text = Loc.GetString("monster-evolution-mutate");
-			button.Disabled = castState.EvoPoints < item.Cost;
-			button.OnPressed += args => OnMonsterEvolutionItemButtonPressed?.Invoke(args, button);
+			var button = new Button(){
+				Text = Loc.GetString("monster-evolution-mutate"),
+				Disabled = castState.EvoPoints < item.Cost
+			};
+			button.OnPressed += _ => OnMonsterEvolutionItemButtonPressed?.Invoke(item);
 			
 			var box = new BoxContainer
 			{
@@ -252,6 +253,7 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			
 			button.OnPressed += _ => {
 				_evolveWindow?.Close();
+				OnMonsterEvolutionEvolveButtonPressed?.Invoke(evolution);
 			};
 			
 			var overviewBox = new BoxContainer
@@ -317,15 +319,4 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			UpdateEvolutionScreen(state);
 		
 	}
-	
-	public sealed class MonsterEvolutionItemButton : Button 
-	{
-		
-        public MonsterEvolutionItem Item { get; }
-		
-        public MonsterEvolutionItemButton(MonsterEvolutionItem item)
-        {
-            Item = item;
-        }
-    }
 }

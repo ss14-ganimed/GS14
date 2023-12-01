@@ -20,8 +20,8 @@ public sealed partial class MonsterEvolutionBoundUserInterface : BoundUserInterf
 		_window.OnClose += Close;
 		_window.OpenCentered();
 		
-		_window.OnMonsterEvolutionItemButtonPressed += (args, button) => SendMessage(new MonsterEvolutionMessage(button.Item));
-		_window.OnMonsterEvolutionEvolveButtonPressed += (args, button) => SendMessage(new MonsterEvolutionEvolveMessage());
+		_window.OnMonsterEvolutionItemButtonPressed += (item) => SendMessage(new MonsterEvolutionMessage(item));
+		_window.OnMonsterEvolutionEvolveButtonPressed += (evolution) => SendMessage(new MonsterEvolutionEvolveMessage(evolution));
 	}
 	
 	protected override void UpdateState(BoundUserInterfaceState state)
