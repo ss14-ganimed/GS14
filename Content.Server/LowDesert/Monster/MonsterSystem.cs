@@ -12,6 +12,7 @@ using Content.Shared.Movement.Components;
 using Content.Shared.Weapons.Melee;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Server.LowDesert.Monster;
 
@@ -24,6 +25,7 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	[Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
 	[Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 	[Dependency] private readonly IEntityManager _entityManager = default!;
+	[Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly MindSystem _mindSystem = default!;
 	
 	public override void Initialize()
@@ -177,9 +179,14 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 		if (_mindSystem.TryGetMind(uid, out var mindId, out var mind) && !Deleted(uid))
 		{
 			var eggEntity = _entityManager.SpawnEntity("MobMonsterEgg", Transform(uid).Coordinates);
+			
 			_mindSystem.TransferTo(mindId, eggEntity, mind: mind);
 			_entityManager.DeleteEntity(uid);
 			
+			var evolutionComp = EnsureComp<MonsterEggEvolutionComponent>(eggEntity);
+			evolutionComp.EvolutionTime = _gameTiming.CurTime + TimeSpan.FromSeconds(120f);
+			evolutionComp.Evolution = args.Evolution.Prototype;
+			evolutionComp.StoredPoints = component.EvoPoints;
 		}
 	}
 	

@@ -11,7 +11,7 @@ public sealed partial class MonsterEvolutionPrototype : IPrototype
     public string ID { get; } = default!;
 	
 	[DataField("prototype")]
-    public string Prototype { get; } = default!;
+    public ProtoId<EntityPrototype> Prototype { get; } = default!;
 	
 	[DataField("cost")]
 	public float Cost { get; } = 1;
