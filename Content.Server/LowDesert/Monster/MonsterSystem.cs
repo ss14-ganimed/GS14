@@ -1,3 +1,4 @@
+using Content.Server.Mind;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
@@ -22,6 +23,8 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	[Dependency] private readonly DamageableSystem _damage = default!;
 	[Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
 	[Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+	[Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private readonly MindSystem _mindSystem = default!;
 	
 	public override void Initialize()
 	{
@@ -30,6 +33,10 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 		SubscribeLocalEvent<MonsterComponent, ConsumeDoAfterEvent>(OnConsumeDoAfter);
 		
 		SubscribeLocalEvent<MonsterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
+		
+        SubscribeLocalEvent<MonsterComponent, MonsterEvolutionMessage>(OnMutation);
+		
+        SubscribeLocalEvent<MonsterComponent, MonsterEvolutionEvolveMessage>(OnEvolution);
 	}
 	
 	private void OnConsumeDoAfter(EntityUid uid, MonsterComponent component, ConsumeDoAfterEvent args)
@@ -158,6 +165,22 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 			
 		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview, evolutions);
 		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);
+	}
+	
+	private void OnMutation(EntityUid uid, MonsterComponent component, MonsterEvolutionMessage args)
+	{
+		
+	}
+	
+	private void OnEvolution(EntityUid uid, MonsterComponent component, MonsterEvolutionEvolveMessage args)
+	{
+		if (_mindSystem.TryGetMind(uid, out var mindId, out var mind) && !Deleted(uid))
+		{
+			var eggEntity = _entityManager.SpawnEntity("MobMonsterEgg", Transform(uid).Coordinates);
+			_mindSystem.TransferTo(mindId, eggEntity, mind: mind);
+			_entityManager.DeleteEntity(uid);
+			
+		}
 	}
 	
 }
