@@ -11,6 +11,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Components;
 using Content.Shared.Weapons.Melee;
 using Robust.Server.GameObjects;
+using Content.Shared.Eye.Blinding.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
@@ -31,8 +32,6 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	public override void Initialize()
 	{
 		base.Initialize();
-		
-		SubscribeLocalEvent<MonsterComponent, ConsumeDoAfterEvent>(OnConsumeDoAfter);
 		
 		SubscribeLocalEvent<MonsterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
 		
@@ -176,6 +175,11 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 	
 	private void OnEvolution(EntityUid uid, MonsterComponent component, MonsterEvolutionEvolveMessage args)
 	{
+		if (component.EvoPoints < args.Evolution.Cost)
+			return;
+		
+		component.EvoPoints -= args.Evolution.Cost;
+		
 		if (_mindSystem.TryGetMind(uid, out var mindId, out var mind) && !Deleted(uid))
 		{
 			var eggEntity = _entityManager.SpawnEntity("MobMonsterEgg", Transform(uid).Coordinates);
@@ -184,8 +188,8 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 			_entityManager.DeleteEntity(uid);
 			
 			var evolutionComp = EnsureComp<MonsterEggEvolutionComponent>(eggEntity);
-			evolutionComp.EvolutionTime = _gameTiming.CurTime + TimeSpan.FromSeconds(120f);
-			evolutionComp.Evolution = args.Evolution.Prototype;
+			evolutionComp.EvolutionTime = _gameTiming.CurTime + TimeSpan.FromSeconds(10f);
+			evolutionComp.Prototype = args.Evolution.Prototype;
 			evolutionComp.StoredPoints = component.EvoPoints;
 		}
 	}

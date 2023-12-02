@@ -12,8 +12,8 @@ public sealed partial class MonsterEggEvolutionComponent : Component
 	[DataField("evolutionTime")]
 	public TimeSpan EvolutionTime { get; set; } = default!;
 	
-	[DataField("evolutionPrototype")]
-	public ProtoId<EntityPrototype> Evolution { get; set; } = default!;
+	[DataField("prototype")]
+	public string Prototype { get; set; } = default!;
 	
 	[DataField("storedPoints")]
 	public float StoredPoints { get; set; } = default!;

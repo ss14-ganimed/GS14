@@ -5,7 +5,6 @@ namespace Content.Shared.Eye.Blinding.Components;
 
 [RegisterComponent]
 [NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(BlindableSystem))]
 public sealed partial class BlindableComponent : Component
 {
     /// <summary>
