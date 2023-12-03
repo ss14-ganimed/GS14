@@ -30,4 +30,7 @@ public sealed partial class MonsterEvolutionPrototype : IPrototype
 	
 	[DataField("description")]
 	public string Description { get; } = "monster-evolution-description-none";
+	
+	[DataField("isDevolution")]
+	public bool IsDevolution { get; } = false;
 }
