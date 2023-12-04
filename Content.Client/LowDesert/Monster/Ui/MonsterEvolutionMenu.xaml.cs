@@ -20,7 +20,7 @@ namespace Content.Client.LowDesert.Monster.Ui;
 public sealed partial class MonsterEvolutionMenu : DefaultWindow
 {
 	public event Action<MonsterEvolutionItem>? OnMonsterEvolutionItemButtonPressed;
-	public event Action<MonsterEvolutionPrototype>? OnMonsterEvolutionEvolveButtonPressed;
+	public event Action<MonsterEvolutionData>? OnMonsterEvolutionEvolveButtonPressed;
 	
 	private MonsterEvolutionScreen? _evolveWindow;
 	

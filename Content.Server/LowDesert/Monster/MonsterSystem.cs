@@ -155,16 +155,8 @@ public sealed class MonsterSystem : SharedMonsterConsumeSystem
 			monster.Comp.Class,
 			monster.Comp.EvoPointsSpent,
 			monster.Comp.EvoPointsRequired);
-		
-		var evolutions = new List<MonsterEvolutionPrototype>();
-		
-		foreach (var prototype in monster.Comp.Evolutions)
-		{
-			if (_prototypeManager.TryIndex<MonsterEvolutionPrototype>(prototype, out var evolution))
-				evolutions.Add(evolution);
-		}
 			
-		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview, evolutions);
+		var state = new MonsterEvolutionBoundUserInterfaceState(items, monster.Comp.EvoPoints, overview, monster.Comp.Evolutions);
 		_userInterfaceSystem.TrySetUiState(monster, MonsterEvolutionMenuKey.Key, state);
 	}
 	

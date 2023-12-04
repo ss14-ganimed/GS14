@@ -1,4 +1,5 @@
 using Robust.Shared.Serialization;
+using Content.Shared.LowDesert.Monster.Components;
 
 namespace Content.Shared.LowDesert.Monster;
 
@@ -11,9 +12,9 @@ public sealed class MonsterEvolutionBoundUserInterfaceState : BoundUserInterface
 	
 	public readonly MonsterEvolutionOverview Overview;
 	
-	public readonly List<MonsterEvolutionPrototype> Evolutions;
+	public readonly List<MonsterEvolutionData> Evolutions;
 	
-	public MonsterEvolutionBoundUserInterfaceState(List<MonsterEvolutionItem> items, float evoPoints, MonsterEvolutionOverview overview, List<MonsterEvolutionPrototype> evolutions)
+	public MonsterEvolutionBoundUserInterfaceState(List<MonsterEvolutionItem> items, float evoPoints, MonsterEvolutionOverview overview, List<MonsterEvolutionData> evolutions)
 	{
 		Items = items;
 		EvoPoints = evoPoints;
@@ -35,9 +36,9 @@ public sealed class MonsterEvolutionMessage : BoundUserInterfaceMessage
 [Serializable, NetSerializable]
 public sealed class MonsterEvolutionEvolveMessage : BoundUserInterfaceMessage
 {
-	public readonly MonsterEvolutionPrototype Evolution;
+	public readonly MonsterEvolutionData Evolution;
 	
-        public MonsterEvolutionEvolveMessage(MonsterEvolutionPrototype evolution)
+        public MonsterEvolutionEvolveMessage(MonsterEvolutionData evolution)
         {
             Evolution = evolution;
         }
