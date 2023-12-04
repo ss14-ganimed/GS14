@@ -97,15 +97,15 @@
   - type: NpcFactionMember
   - type: Reflect
     enabled: true
-    reflectProb: .75
-    spread: 75
+    reflectProb: .80
+    spread: 30
     factions:
       - SimpleHostile
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 40
+        damage: 50
       behaviors:
       - !type:PlaySoundBehavior
         sound:
