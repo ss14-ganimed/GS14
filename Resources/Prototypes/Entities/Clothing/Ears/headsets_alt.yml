@@ -162,3 +162,22 @@
       sprite: Clothing/Ears/Headsets/freelance.rsi
     - type: Clothing
       sprite: Clothing/Ears/Headsets/freelance.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltDeathCommando
+  name: death squad's over-ear headset
+  components:
+    - type: Headset
+    - type: EncryptionKeyHolder
+      keySlots: 5
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - EncryptionKeyCentCom
+          - EncryptionKeyStationMaster
+          - EncryptionKeyDeathCommando
+    - type: Sprite
+      sprite: Clothing/Ears/Headsets/death_commando.rsi
+    - type: Clothing
+      sprite: Clothing/Ears/Headsets/death_commando.rsi

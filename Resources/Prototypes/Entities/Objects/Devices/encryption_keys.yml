@@ -245,3 +245,17 @@
         - state: crypt_rusted
         - state: pirate_label
 
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyDeathCommando
+  name: Death Commando encryption key
+  description: An encryption key used by [redacted], a special NanoTrasen squad.
+  components:
+    - type: EncryptionKey
+      channels:
+        - DeathCommando
+      defaultChannel: DeathCommando
+    - type: Sprite
+      layers:
+        - state: crypt_gold
+        - state: pirate_label
