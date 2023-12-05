@@ -255,8 +255,9 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			};
 			
 			button.OnPressed += _ => {
-				_evolveWindow?.Close();
 				OnMonsterEvolutionEvolveButtonPressed?.Invoke(evolution);
+				_evolveWindow?.Close();
+				Close();
 			};
 			
 			var overviewBox = new BoxContainer

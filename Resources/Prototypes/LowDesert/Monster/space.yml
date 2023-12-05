@@ -147,7 +147,7 @@
     class: Млекопитающие
     evoPointsRequired: 300.0
     evolutions:
-    - prototype: MobMonsterSpiderSpace
+    - prototype: MobMonsterSpaceSpider
       cost: 145
       icon:
         sprite: Objects/Devices/health_analyzer.rsi

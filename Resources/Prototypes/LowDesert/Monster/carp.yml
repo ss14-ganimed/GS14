@@ -55,7 +55,7 @@
     class: Карповые
     evoPointsRequired: 250.0
     evolutions:
-    - prototype: MobMonsterSpiderSpace
+    - prototype: MobMonsterSpaceSpider
       cost: 145
       icon:
         sprite: Objects/Devices/health_analyzer.rsi

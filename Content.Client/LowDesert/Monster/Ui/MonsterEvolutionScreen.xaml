@@ -2,7 +2,7 @@
             xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
             Title="{Loc 'monster-evolution-screen-title'}"
             SetSize="550 500"
-            MinSize="550 5">
+            MinSize="550 500">
     <ScrollContainer HScrollEnabled="False" VScrollEnabled="True" VerticalExpand="True" HorizontalExpand="True">
 		<BoxContainer Name="MainContainer" Orientation="Vertical" Access="Public" VerticalExpand="True" HorizontalExpand="True">
 		</BoxContainer>

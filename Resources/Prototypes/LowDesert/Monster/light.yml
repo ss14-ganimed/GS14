@@ -135,7 +135,7 @@
       specialization: Нематериальный сгусток света.
       description: Выраженное на до сих пор не исследованных принципах существо, существующее исключительно в форме лучей света.
       isDevolution: true
-    - prototype: MobMonsterLuminousObject
+    - prototype: MobMonsterLuminousPerson
       cost: 375
       icon:
         sprite: Objects/Devices/health_analyzer.rsi

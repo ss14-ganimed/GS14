@@ -3,7 +3,7 @@
   parent: [ BaseSimpleMob, MobCombat ]
   id: BaseMobMonster
   description: A dangerous alien found on the wrong side of planets, known for their high levels of intelligence.
-  suffix: ""
+  suffix: "Monster"
   abstract: true
   components:
   - type: IntrinsicRadioReceiver

@@ -5,6 +5,7 @@ monster-evolution-tooltip-invalid = Нужно больше мутаций!
 monster-evolution-tooltip-nomoney = Недостаточно биоцепей!
 monster-evolution-tooltip-valid = Потребуется время. Мутации будут сброшены!
 monster-evolution-evolve = Эволюция!
+monster-evolution-devolve = Деградация!
 
 monster-evolution-overview-header = [font size=14][bold][color=lightblue]Показатели[/color][/bold][/font]
 monster-evolution-overview-name = [bold]Личное имя: [/bold][color=lightblue]{ $name }[/color]

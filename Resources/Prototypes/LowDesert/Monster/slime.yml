@@ -39,7 +39,7 @@
     class: Слизневые
     evoPointsRequired: 450.0
     evolutions:
-    - prototype: MobMonsterLuminousObject
+    - prototype: MobMonsterLuminousPerson
       cost: 375
       icon:
         sprite: Objects/Devices/health_analyzer.rsi
@@ -49,7 +49,7 @@
       specialization: Гуманоидная фигура ослепляющего света.
       description: Форма этого существа, отдалённо напоминающая фигуру, наводит на мысль о высоком его интеллекте. Справедливо ли будет считать его полностью новой разумной формой жизни?
       isDevolution: true
-    - prototype: MobMonsterSlime
+    - prototype: MobMonsterSlimeSmile
       cost: 465
       icon:
         sprite: Objects/Devices/health_analyzer.rsi

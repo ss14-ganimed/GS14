@@ -159,7 +159,7 @@
       class: Арахниды
       specialization: Паук с невероятно прочной оболочкой.
       description: Отдельные виды пауков покрывают своё тело прочным панцирем, защищающим мягкие внутренности от механического воздействия. Такие существа могут оставлять серьёзные рваные раны у нападающих.
-    - prototype: MobMonsterSpiderSpace
+    - prototype: MobMonsterSpaceSpider
       cost: 145
       icon:
         sprite: Objects/Devices/health_analyzer.rsi
