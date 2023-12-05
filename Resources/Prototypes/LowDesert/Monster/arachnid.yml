@@ -1,0 +1,425 @@
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterTick
+  name: tick
+  description: Dangerous wildlife insectoid capable of bringing death at sizes so small.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: Mobs/Aliens/Xenos/spacetick.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      15: Critical
+      20: Dead
+  - type: Stamina
+    critThreshold: 20
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4
+    baseWalkSpeed : 3.5
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 2
+        Poison: 3
+  - type: Monster
+    species: Акарид
+    class: Насекомые
+    evoPointsRequired: 50.0
+    evolutions:
+    - prototype: MobMonsterCockroach
+      cost: 30
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Таракан
+      class: Насекомые
+      specialization: Ловкое, но хрупкое ядовитое насекомое.
+      description: Таракан
+    - prototype: MobMonsterLizard
+      cost: 50
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Варан
+      class: Драконоиды
+      specialization: Рептилия с дальним родством к истиным драконам.
+      description: Чешуйчатая ящерица, имеющая генетические отличия от своих ближайших родственников.
+    - prototype: MobMonsterLarva
+      cost: 40
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Ларва
+      class: Аргоциты
+      specialization: Личинка с высоким эволюционным потенциалом.
+      description: Слабое аморфное существо, вынашивающее в себе генетический материал множества более опасных видов.
+      isDevolution: false
+    - prototype: MobMonsterSpider
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Тарантул
+      class: Арахниды
+      specialization: Проворный паук с мягким скелетом.
+      description: Необычный подтип паука с повышенной ядовитостью. Низкая выживаемость компенсируется хорошей скоростью и потенциалом для развития.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 20
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 20
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterSpider
+  name: spider
+  description: A big spider monster. Probably dangerous.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: nurse
+      sprite: Mobs/Animals/spider.rsi
+      scale: 0.8, 0.8
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: nurse
+      Critical:
+        Base: nurse_dead
+      Dead:
+        Base: nurse_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      65: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 3
+    baseWalkSpeed : 2.5
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 5
+        Poison: 3
+  - type: Monster
+    species: Тарантул
+    class: Арахниды
+    evoPointsRequired: 120.0
+    evolutions:
+    - prototype: MobMonsterTick
+      cost: 45
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Акарид
+      class: Насекомые
+      specialization: Высокоядовитое небольшое насекомое.
+      description: Токсинные клещи, по одиночке представляющие низкую опасность, в группах способны убивать крупных противников своим ядом.
+      isDevolution: true
+    - prototype: MobMonsterIronSpider
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Булат
+      class: Арахниды
+      specialization: Паук с невероятно прочной оболочкой.
+      description: Отдельные виды пауков покрывают своё тело прочным панцирем, защищающим мягкие внутренности от механического воздействия. Такие существа могут оставлять серьёзные рваные раны у нападающих.
+    - prototype: MobMonsterSpiderSpace
+      cost: 145
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Тенетник
+      class: Арахниды
+      specialization: Экзотическая форма паука.
+      description: Особая разновидность пауков, сходная с обитателями космоса. Имеет генетический код, универсальный для любой интеркосмической сущности.
+    - prototype: MobMonsterXeno
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Трутень
+      class: Ксеноорганизмы
+      specialization: Разумная единица улья.
+      description: Большая часть существ, идентифицируемых как ксеноорганизмы, состоит в твёрдой иерархической структуре и подчинено общей цели.
+  - type: Bloodstream
+    bloodReagent: CopperBlood
+    bloodMaxVolume: 60
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 120
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterIronSpider
+  name: iron spider
+  description: A big iron spider monster. Probably highly dangerous.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: ironcrab
+      sprite: Mobs/Elemental/orecrab.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: ironcrab
+      Critical:
+        Base: ironcrab
+      Dead:
+        Base: ironcrab
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      120: Dead
+  - type: Stamina
+    critThreshold: 80
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.5
+    baseWalkSpeed : 2.1
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 6
+        Blunt: 5
+        Structural: 5
+  - type: Monster
+    species: Булат
+    class: Арахниды
+    evoPointsRequired: 200.0
+    evolutions:
+    - prototype: MobMonsterSpider
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Тарантул
+      class: Арахниды
+      specialization: Проворный паук с мягким скелетом.
+      description: Необычный подтип паука с повышенной ядовитостью. Низкая выживаемость компенсируется хорошей скоростью и потенциалом для развития.
+      isDevolution: true
+    - prototype: MobMonsterQuartzSpider
+      cost: 250
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Морион
+      class: Арахниды
+      specialization: Паук с облегчённым панцирем.
+      description: Изменение состава оболочки делает существо более проворным при сохранении имеющихся защитных свойств.
+  - type: Bloodstream
+    bloodReagent: CopperBlood
+    bloodMaxVolume: 100
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 120
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterQuartzSpider
+  name: quartz spider
+  description: A big quartz spider monster. Probably hugely dangerous.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: quartzcrab
+      sprite: Mobs/Elemental/orecrab.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: quartzcrab
+      Critical:
+        Base: quartzcrab
+      Dead:
+        Base: quartzcrab
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      150: Dead
+  - type: Stamina
+    critThreshold: 100
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.8
+    baseWalkSpeed : 2.35
+  - type: MeleeWeapon
+    attackRate: 0.8
+    angle: 0
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 8
+        Blunt: 4
+        Structural: 5
+  - type: Monster
+    species: Морион
+    class: Арахниды
+    evoPointsRequired: 300.0
+    evolutions:
+    - prototype: MobMonsterIronSpider
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Булат
+      class: Арахниды
+      specialization: Паук с невероятно прочной оболочкой.
+      description: Отдельные виды пауков покрывают своё тело прочным панцирем, защищающим мягкие внутренности от механического воздействия. Такие существа могут оставлять серьёзные рваные раны у нападающих.
+      isDevolution: true
+    - prototype: MobMonsterUraniumSpider
+      cost: 400
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Актинид
+      class: Арахниды
+      specialization: Невероятно редкий паук с необычными свойствами.
+      description: Эволюция внешней оболочки с использованием радиоактивных веществ сильно влияет на внутреннюю композицию паука, делая его невероятно смертоносным и ограждая от любых угроз.
+  - type: Bloodstream
+    bloodReagent: CopperBlood
+    bloodMaxVolume: 120
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 120
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterUraniumSpider
+  name: uranium spider
+  description: A big uranium spider monster. Probably most dangerous.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: uraniumcrab
+      sprite: Mobs/Elemental/orecrab.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: uraniumcrab
+      Critical:
+        Base: uraniumcrab
+      Dead:
+        Base: uraniumcrab
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      200: Dead
+  - type: Stamina
+    critThreshold: 150
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.7
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    attackRate: 0.85
+    angle: 0
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 5
+        Blunt: 5
+        Radiation: 5
+        Poison: 2
+        Structural: 10
+  - type: Monster
+    species: Актинид
+    class: Арахниды
+    evoPointsRequired: 300.0
+    evolutions:
+    - prototype: MobMonsterQuartzSpider
+      cost: 250
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Морион
+      class: Арахниды
+      specialization: Паук с облегчённым панцирем.
+      description: Изменение состава оболочки делает существо более проворным при сохранении имеющихся защитных свойств.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: CopperBlood
+    bloodMaxVolume: 150
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

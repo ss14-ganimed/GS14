@@ -1,1 +1,784 @@
-- type: entity  parent: BaseMobMonster  id: MobMonsterXeno  name: xeno  description: Medium-sized xenoorganism. Better deal with it while you can.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/burrower.rsi    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      50: Critical      65: Dead  - type: Stamina    critThreshold: 60  - type: MovementSpeedModifier    baseSprintSpeed : 2.5    baseWalkSpeed : 2.25  - type: MeleeWeapon    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 6  - type: Monster    species: Трутень    class: Ксеноорганизм    evoPointsRequired: 200.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 60  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.25        density: 300        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands- type: entity  parent: BaseMobMonster  id: MobMonsterXenoDrone  name: drone  description: Medium-sized sturdy xenoorganism. Better deal with it while you can.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/drone.rsi    offset: 0,0.2    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      90: Critical      100: Dead  - type: Stamina    critThreshold: 60  - type: MovementSpeedModifier    baseSprintSpeed : 2.75    baseWalkSpeed : 2.45  - type: MeleeWeapon    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 6        Brute: 4  - type: Monster    species: Трутень    class: Ксеноорганизм    evoPointsRequired: 300.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 80  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.45        density: 300        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands- type: entity  parent: BaseMobMonster  id: MobMonsterXenoRunner  name: drone  description: Medium-sized light xenoorganism. Better deal with it while you can.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/runner.rsi    offset: 0,0.6    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      50: Critical      65: Dead  - type: Stamina    critThreshold: 60  - type: MovementSpeedModifier    baseSprintSpeed : 4.75    baseWalkSpeed : 3  - type: MeleeWeapon    attackRate: 1.2    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 6  - type: Monster    species: Рейдер    class: Ксеноорганизм    evoPointsRequired: 300.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 80  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.35        density: 235        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands- type: entity  parent: BaseMobMonster  id: MobMonsterXenoSpitter  name: spitter  description: Medium-sized noisy xenoorganism. Better deal with it while you can.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/spitter.rsi    offset: 0,0.3    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      50: Critical      65: Dead  - type: Stamina    critThreshold: 60  - type: MovementSpeedModifier    baseSprintSpeed : 2.7    baseWalkSpeed : 2.3  - type: MeleeWeapon    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 6  - type: Monster    species: Осквернитель    class: Ксеноорганизм    evoPointsRequired: 300.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 80  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.45        density: 235        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands  - type: RechargeBasicEntityAmmo    rechargeCooldown: 0.75  - type: BasicEntityAmmoProvider    proto: BulletAcid    capacity: 1    count: 1  - type: Gun    fireRate: 0.75    useKey: false    selectedMode: FullAuto    availableModes:      - FullAuto    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg- type: entity  parent: BaseMobMonster  id: MobMonsterXenoRavager  name: ravager  description: A threat to deal with. This xeno is said to ravage entire teams hence the name.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/ravager.rsi    offset: 0,0.5    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      120: Critical      150: Dead  - type: Stamina    critThreshold: 100  - type: MovementSpeedModifier    baseSprintSpeed : 3    baseWalkSpeed : 2.5  - type: MeleeWeapon    attackRate: 1.2    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 10  - type: Monster    species: Опустошитель    class: Ксеноорганизм    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 120  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.35        density: 235        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands- type: entity  parent: BaseMobMonster  id: MobMonsterXenoPraetorian  name: praetorian  description: An elite xeno. Usually is in charge of defending a xeno queen or leading groups of its brethren.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/praetorian.rsi    offset: 0,0.4    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      175: Critical      200: Dead  - type: Stamina    critThreshold: 150  - type: MovementSpeedModifier    baseSprintSpeed : 2.75    baseWalkSpeed : 2.3  - type: MeleeWeapon    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 10  - type: Monster    species: Преторианец    class: Ксеноорганизм    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 120  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.35        density: 235        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands- type: entity  parent: BaseMobMonster  id: MobMonsterXenoQueen  name: queen  description: Legendary xeno unit found in charge of entire xeno hives. Expect it to be protected by its subordinates.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/queen.rsi    offset: 0,0.4    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      250: Critical      300: Dead  - type: Stamina    critThreshold: 150  - type: MovementSpeedModifier    baseSprintSpeed : 2.75    baseWalkSpeed : 2.3  - type: MeleeWeapon    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 15  - type: Monster    species: Королева    class: Ксеноорганизм    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 150  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.35        density: 260        mask:        - MobMask        layer:        - MobLayer  - type: Puller  - type: TypingIndicator    proto: alien  - type: Hands- type: entity  parent: BaseMobMonster  id: MobMonsterRaptor  name: raptor  description: Strange dinosaur creature. Looks dangerous enough.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/laser_raptor.rsi    layers:      - map: [ "enum.DamageStateVisualLayers.Base" ]        state: laser_raptor  - type: DamageStateVisuals    rotate: true    states:      Alive:        Base: laser_raptor      Critical:        Base: laser_raptor_dead      Dead:        Base: laser_raptor_dead  - type: MobThresholds    thresholds:      0: Alive      50: Critical      65: Dead  - type: Stamina    critThreshold: 60  - type: MovementSpeedModifier    baseSprintSpeed : 4.5    baseWalkSpeed : 3  - type: MeleeWeapon    altDisarm: false    angle: 0    soundHit:     collection: AlienClaw    animation: WeaponArcBite    damage:      types:        Slash: 6  - type: Monster    species: Раптор    class: Ксеноорганизм    evoPointsRequired: 300.0  - type: Bloodstream    bloodReagent: FluorosulfuricAcid    bloodMaxVolume: 80  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.30        density: 80        mask:          - MobMask        layer:          - MobLayer  - type: TypingIndicator    proto: alien  - type: Tag    tags:      - FootstepSound  - type: HitscanBatteryAmmoProvider    proto: RedLightLaser    fireCost: 50  - type: BatterySelfRecharger    autoRecharge: true    autoRechargeRate: 50  - type: Battery    maxCharge: 1000    startingCharge: 1000  - type: Gun    fireRate: 1    useKey: false    selectedMode: SemiAuto    availableModes:      - SemiAuto    soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXeno
+  name: xeno
+  description: Medium-sized xenoorganism. Better deal with it while you can.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/burrower.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      65: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.5
+    baseWalkSpeed : 2.25
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 6
+  - type: Monster
+    species: Трутень
+    class: Ксеноорганизмы
+    evoPointsRequired: 200.0
+    evolutions:
+    - prototype: MobMonsterXenoDrone
+      cost: 245
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Страж
+      class: Ксеноорганизмы
+      specialization: Особь с высоким классом защиты.
+      description: Единицы улья, избираемые для защиты колонии, обладают высокой силой и хорошим оборонным потенциалом.
+    - prototype: MobMonsterXenoRunner
+      cost: 235
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Рейдер
+      class: Ксеноорганизмы
+      specialization: Особь с высоким разрушительным потенциалом.
+      description: Часть организмов дополнительно приспосабливается для охоты, приобретая высокую скорость и манёвренность. Зачастую, такие существа наиболее агрессивны.
+    - prototype: MobMonsterXenoSpitter
+      cost: 250
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Осквернитель
+      class: Ксеноорганизмы
+      specialization: Особь с высоким уровнем интеллекта.
+      description: Исключительно избираемые ульем единицы становятся ключевым атакующим потенциалом коллектива. Повышенный интеллект позволяет применять самые изощрённые боевые тактики.
+    - prototype: MobMonsterRaptor
+      cost: 275
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Раптор
+      class: Драконоиды
+      specialization: Редкий чешуйчатый налётчик.
+      description: Малый вид ящеров, оснащённый врождённым оружием дальнего боя. Эволюция скрывает в себе множество тайн и загадок.
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 60
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXenoDrone
+  name: drone
+  description: Medium-sized sturdy xenoorganism. Better deal with it while you can.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/drone.rsi
+    offset: 0,0.2
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      90: Critical
+      100: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.75
+    baseWalkSpeed : 2.45
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 6
+        Brute: 4
+  - type: Monster
+    species: Страж
+    class: Ксеноорганизмы
+    evoPointsRequired: 300.0
+    evolutions:
+    - prototype: MobMonsterXeno
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Трутень
+      class: Ксеноорганизмы
+      specialization: Разумная единица улья.
+      description: Большая часть существ, идентифицируемых как ксеноорганизмы, состоит в твёрдой иерархической структуре и подчинено общей цели.
+      isDevolution: true
+    - prototype: MobMonsterXenoRunner
+      cost: 235
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Рейдер
+      class: Ксеноорганизмы
+      specialization: Особь с высоким разрушительным потенциалом.
+      description: Часть организмов дополнительно приспосабливается для охоты, приобретая высокую скорость и манёвренность. Зачастую, такие существа наиболее агрессивны.
+    - prototype: MobMonsterXenoSpitter
+      cost: 250
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Осквернитель
+      class: Ксеноорганизмы
+      specialization: Особь с высоким уровнем интеллекта.
+      description: Исключительно избираемые ульем единицы становятся ключевым атакующим потенциалом коллектива. Повышенный интеллект позволяет применять самые изощрённые боевые тактики.
+    - prototype: MobMonsterXenoPraetorian
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Преторианец
+      class: Ксеноорганизмы
+      specialization: Защитник королевы.
+      description: Один из тысячи лучших стражей всего улья имеет шанс стать личным стражем своей королевы. Такие существа необычайно опасны и способны на отчаянные меры при защите своего дома.
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 80
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXenoRunner
+  name: runner
+  description: Medium-sized light xenoorganism. Better deal with it while you can.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/runner.rsi
+    offset: 0,0.6
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      65: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4.75
+    baseWalkSpeed : 3
+  - type: MeleeWeapon
+    attackRate: 1.2
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 6
+  - type: Monster
+    species: Рейдер
+    class: Ксеноорганизмы
+    evoPointsRequired: 300.0
+    evolutions:
+    - prototype: MobMonsterXeno
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Трутень
+      class: Ксеноорганизмы
+      specialization: Разумная единица улья.
+      description: Большая часть существ, идентифицируемых как ксеноорганизмы, состоит в твёрдой иерархической структуре и подчинено общей цели.
+      isDevolution: true
+    - prototype: MobMonsterXenoDrone
+      cost: 245
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Страж
+      class: Ксеноорганизмы
+      specialization: Особь с высоким классом защиты.
+      description: Единицы улья, избираемые для защиты колонии, обладают высокой силой и хорошим оборонным потенциалом.
+    - prototype: MobMonsterXenoSpitter
+      cost: 250
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Осквернитель
+      class: Ксеноорганизмы
+      specialization: Особь с высоким уровнем интеллекта.
+      description: Исключительно избираемые ульем единицы становятся ключевым атакующим потенциалом коллектива. Повышенный интеллект позволяет применять самые изощрённые боевые тактики.
+    - prototype: MobMonsterXenoRavager
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Разрушитель
+      class: Ксеноорганизмы
+      specialization: Чемпион улья.
+      description: Наиболее агрессивные ксеноорганизмы имеют возможность возглавить экспансию роя. Такие существа могут встречаться на большом отдалении от сердца улья, из-за этого являясь крупнейшей опасностью для всех неподготовленных искателей. 
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 80
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXenoSpitter
+  name: spitter
+  description: Medium-sized noisy xenoorganism. Better deal with it while you can.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/spitter.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      65: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.7
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 6
+  - type: Monster
+    species: Осквернитель
+    class: Ксеноорганизмы
+    evoPointsRequired: 300.0
+    evolutions:
+    - prototype: MobMonsterXeno
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Трутень
+      class: Ксеноорганизмы
+      specialization: Разумная единица улья.
+      description: Большая часть существ, идентифицируемых как ксеноорганизмы, состоит в твёрдой иерархической структуре и подчинено общей цели.
+      isDevolution: true
+    - prototype: MobMonsterXenoDrone
+      cost: 245
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Страж
+      class: Ксеноорганизмы
+      specialization: Особь с высоким классом защиты.
+      description: Единицы улья, избираемые для защиты колонии, обладают высокой силой и хорошим оборонным потенциалом.
+    - prototype: MobMonsterXenoRunner
+      cost: 235
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Рейдер
+      class: Ксеноорганизмы
+      specialization: Особь с высоким разрушительным потенциалом.
+      description: Часть организмов дополнительно приспосабливается для охоты, приобретая высокую скорость и манёвренность. Зачастую, такие существа наиболее агрессивны.
+    - prototype: MobMonsterXenoRavager
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Разрушитель
+      class: Ксеноорганизмы
+      specialization: Чемпион улья.
+      description: Наиболее агрессивные ксеноорганизмы имеют возможность возглавить экспансию роя. Такие существа могут встречаться на большом отдалении от сердца улья, из-за этого являясь крупнейшей опасностью для всех неподготовленных искателей. 
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 80
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcid
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.75
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXenoRavager
+  name: ravager
+  description: A threat to deal with. This xeno is said to ravage entire teams hence the name.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/ravager.rsi
+    offset: 0,0.5
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      150: Dead
+  - type: Stamina
+    critThreshold: 100
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 3
+    baseWalkSpeed : 2.5
+  - type: MeleeWeapon
+    attackRate: 1.2
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 10
+  - type: Monster
+    species: Опустошитель
+    class: Ксеноорганизмы
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterXenoRunner
+      cost: 235
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Рейдер
+      class: Ксеноорганизмы
+      specialization: Особь с высоким разрушительным потенциалом.
+      description: Часть организмов дополнительно приспосабливается для охоты, приобретая высокую скорость и манёвренность. Зачастую, такие существа наиболее агрессивны.
+      isDevolution: true
+    - prototype: MobMonsterXenoSpitter
+      cost: 250
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Осквернитель
+      class: Ксеноорганизмы
+      specialization: Особь с высоким уровнем интеллекта.
+      description: Исключительно избираемые ульем единицы становятся ключевым атакующим потенциалом коллектива. Повышенный интеллект позволяет применять самые изощрённые боевые тактики.
+      isDevolution: true
+    - prototype: MobMonsterXenoPraetorian
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Преторианец
+      class: Ксеноорганизмы
+      specialization: Защитник королевы.
+      description: Один из тысячи лучших стражей всего улья имеет шанс стать личным стражем своей королевы. Такие существа необычайно опасны и способны на отчаянные меры при защите своего дома.
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 120
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXenoPraetorian
+  name: praetorian
+  description: An elite xeno. Usually is in charge of defending a xeno queen or leading groups of its brethren.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/praetorian.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      175: Critical
+      200: Dead
+  - type: Stamina
+    critThreshold: 150
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.75
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 10
+  - type: Monster
+    species: Преторианец
+    class: Ксеноорганизмы
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterXenoDrone
+      cost: 245
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Страж
+      class: Ксеноорганизмы
+      specialization: Особь с высоким классом защиты.
+      description: Единицы улья, избираемые для защиты колонии, обладают высокой силой и хорошим оборонным потенциалом.
+      isDevolution: true
+    - prototype: MobMonsterXenoRavager
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Разрушитель
+      class: Ксеноорганизмы
+      specialization: Чемпион улья.
+      description: Наиболее агрессивные ксеноорганизмы имеют возможность возглавить экспансию роя. Такие существа могут встречаться на большом отдалении от сердца улья, из-за этого являясь крупнейшей опасностью для всех неподготовленных искателей. 
+    - prototype: MobMonsterXenoRavager
+      cost: 515
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Королева
+      class: Ксеноорганизмы
+      specialization: Сердце роя.
+      description: Обитающие в самых глубинах заражённых ксеноорганизмами планет, эти существа ответственны за порождение новых единиц улья. Каждая клетка иерархии находится в подчинении у этого монстра.
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 120
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterXenoQueen
+  name: queen
+  description: Legendary xeno unit found in charge of entire xeno hives. Expect it to be protected by its subordinates.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/queen.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Critical
+      300: Dead
+  - type: Stamina
+    critThreshold: 150
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.75
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 15
+  - type: Monster
+    species: Королева
+    class: Ксеноорганизмы
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterXenoPraetorian
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Преторианец
+      class: Ксеноорганизмы
+      specialization: Защитник королевы.
+      description: Один из тысячи лучших стражей всего улья имеет шанс стать личным стражем своей королевы. Такие существа необычайно опасны и способны на отчаянные меры при защите своего дома.
+      isDevolution: true
+    - prototype: MobMonsterXenoRavager
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Разрушитель
+      class: Ксеноорганизмы
+      specialization: Чемпион улья.
+      description: Наиболее агрессивные ксеноорганизмы имеют возможность возглавить экспансию роя. Такие существа могут встречаться на большом отдалении от сердца улья, из-за этого являясь крупнейшей опасностью для всех неподготовленных искателей. 
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 150
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 260
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Puller
+  - type: TypingIndicator
+    proto: alien
+  - type: Hands
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterRaptor
+  name: raptor
+  description: Strange dinosaur creature. Looks dangerous enough.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/laser_raptor.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: laser_raptor
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: laser_raptor
+      Critical:
+        Base: laser_raptor_dead
+      Dead:
+        Base: laser_raptor_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      65: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4.5
+    baseWalkSpeed : 3
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 6
+  - type: Monster
+    species: Раптор
+    class: Драконоиды
+    evoPointsRequired: 300.0
+    evolutions:
+    - prototype: MobMonsterXeno
+      cost: 175
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Трутень
+      class: Ксеноорганизмы
+      specialization: Разумная единица улья.
+      description: Большая часть существ, идентифицируемых как ксеноорганизмы, состоит в твёрдой иерархической структуре и подчинено общей цели.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+    bloodMaxVolume: 80
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 80
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: TypingIndicator
+    proto: alien
+  - type: Tag
+    tags:
+      - FootstepSound
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLightLaser
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Gun
+    fireRate: 1
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg

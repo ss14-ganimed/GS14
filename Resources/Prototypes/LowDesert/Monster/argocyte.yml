@@ -1,0 +1,861 @@
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterLarva
+  name: larva
+  description: A pathetic alien creature, incapable of doing much.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: slurva
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: slurva
+      Dead:
+        Base: slurva_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      25: Critical
+      30: Dead
+  - type: Stamina
+    critThreshold: 50
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 3.5
+    baseWalkSpeed : 3
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 3
+  - type: Monster
+    species: Ларва
+    class: Аргоциты
+    evoPointsRequired: 50.0
+    evolutions:
+    - prototype: MobMonsterCockroach
+      cost: 30
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Таракан
+      class: Насекомые
+      specialization: Ловкое, но хрупкое ядовитое насекомое.
+      description: Тараканы известны своей живучестью и способностью адаптироваться к любым условиям. Компенсируемая скоростью низкая прочность насекомого в совокупности с высоким интеллектом позволяет преодолевать большинство трудностей.
+      isDevolution: false
+    - prototype: MobMonsterTick
+      cost: 45
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Акарид
+      class: Насекомые
+      specialization: Высокоядовитое небольшое насекомое.
+      description: Токсинные клещи, по одиночке представляющие низкую опасность, в группах способны убивать крупных противников своим ядом.
+      isDevolution: false
+    - prototype: MobMonsterLizard
+      cost: 50
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Варан
+      class: Драконоиды
+      specialization: Рептилия с дальним родством к истиным драконам.
+      description: Чешуйчатая ящерица, имеющая генетические отличия от своих ближайших родственников.
+    - prototype: MobMonsterCarapace
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Панцирник
+      class: Аргоциты
+      specialization: Небольшое существо с твёрдой оболочкой.
+      description: Молодая особь аргоцита с прочными кальцинированными отложениями, формирующими хрупкий, но гибкий каркас.
+    - prototype: MobMonsterThief
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Плут
+      class: Аргоциты
+      specialization: Очень юркое мелкое существо.
+      description: Небольшой аргоцит, способный хорошо адаптироваться к внешней среде. Имеет скромный запас прочности, компенсируемый высокой скоростью.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 60
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterCarapace
+  name: carapace
+  description: A shelled alien beast. Hard on the outside, soft on the inside.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: barrier
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: barrier
+      Dead:
+        Base: barrier_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      50: Dead
+  - type: Stamina
+    critThreshold: 65
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.7
+    baseWalkSpeed : 2.5
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+  - type: Monster
+    species: Панцирник
+    class: Аргоциты
+    evoPointsRequired: 100.0
+    evolutions:
+    - prototype: MobMonsterLarva
+      cost: 40
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Ларва
+      class: Аргоциты
+      specialization: Личинка с высоким эволюционным потенциалом.
+      description: Слабое аморфное существо, вынашивающее в себе генетический материал множества более опасных видов.
+      isDevolution: true
+    - prototype: MobMonsterThief
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Плут
+      class: Аргоциты
+      specialization: Очень юркое мелкое существо.
+      description: Небольшой аргоцит, способный хорошо адаптироваться к внешней среде. Имеет скромный запас прочности, компенсируемый высокой скоростью.
+    - prototype: MobMonsterMolder
+      cost: 150
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Кордон
+      class: Аргоциты
+      specialization: Выносливое существо среднего размера.
+      description: Не излишне проворный аргоцит старшего возраста. Имеет хорошие показатели защищённости и значительный атакующий потенциал.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 60
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterThief
+  name: thief
+  description: Small alien beast. Soft enough to not survive being crushed, fast enough to avoid it, still.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: skitter
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: skitter
+      Dead:
+        Base: skitter_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      35: Dead
+  - type: Stamina
+    critThreshold: 50
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 3.5
+    baseWalkSpeed : 3
+  - type: MeleeWeapon
+    attackRate: 1.15
+    damage:
+      types:
+        Slash: 4.5
+  - type: Monster
+    species: Плут
+    class: Аргоциты
+    evoPointsRequired: 100.0
+    evolutions:
+    - prototype: MobMonsterLarva
+      cost: 40
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Ларва
+      class: Аргоциты
+      specialization: Личинка с высоким эволюционным потенциалом.
+      description: Слабое аморфное существо, вынашивающее в себе генетический материал множества более опасных видов.
+      isDevolution: true
+    - prototype: MobMonsterCarapace
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Панцирник
+      class: Аргоциты
+      specialization: Небольшое существо с твёрдой оболочкой.
+      description: Молодая особь аргоцита с прочными кальцинированными отложениями, формирующими хрупкий, но гибкий каркас.
+    - prototype: MobMonsterGlider
+      cost: 150
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Вьюн
+      class: Аргоциты
+      specialization: Небольшое существо с высокой проворностью.
+      description: Средняя особь аргоцита с сильным хвостом, обеспечивающим высокую скорость при перемещении по открытым местностям.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 60
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterGlider
+  name: glider
+  description: Fast and furious alien beast. Can deal great damages and get away with it.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: glider
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: glider
+      Dead:
+        Base: glider_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      60: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4.5
+    baseWalkSpeed : 3.8
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Slash: 6
+  - type: Monster
+    species: Вьюн
+    class: Аргоциты
+    evoPointsRequired: 150.0
+    evolutions:
+    - prototype: MobMonsterThief
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Плут
+      class: Аргоциты
+      specialization: Очень юркое мелкое существо.
+      description: Небольшой аргоцит, способный хорошо адаптироваться к внешней среде. Имеет скромный запас прочности, компенсируемый высокой скоростью.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 110
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterMolder
+  name: molder
+  description: Sturdy and lightweight alien creature. Looks not too intimidating, but is actually perfect from the evolution standpoint.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: molder
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: molder
+      Dead:
+        Base: molder_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      55: Critical
+      70: Dead
+  - type: Stamina
+    critThreshold: 70
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.7
+    baseWalkSpeed : 2.5
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6.5
+  - type: Monster
+    species: Кордон
+    class: Аргоциты
+    evoPointsRequired: 150.0
+    evolutions:
+    - prototype: MobMonsterCarapace
+      cost: 100
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Панцирник
+      class: Аргоциты
+      specialization: Небольшое существо с твёрдой оболочкой.
+      description: Молодая особь аргоцита с прочными кальцинированными отложениями, формирующими хрупкий, но гибкий каркас.
+    - prototype: MobMonsterPouncer
+      cost: 210
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Рывник
+      class: Аргоциты
+      specialization: Среднее существо с высокой агрессивностью.
+      description: Особь аргоцита со способной подвижной мускулатурой. Силы мышц достаточно, чтобы наносить сильные разящие удары жертвам.
+    - prototype: MobMonsterCrawler
+      cost: 200
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Ползун
+      class: Аргоциты
+      specialization: Проворное существо в твёрдом хитиновом панцире.
+      description: Особь полностью покрыта прочным панцирем, сковывающим движения. Структура конечностей больше напоминает паукообразные и приводится в движение давлением внутренних жидкостей.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 110
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterPouncer
+  name: pouncer
+  description: Fierce alien creature capable of striking hard blows.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: pouncer
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: pouncer
+      Dead:
+        Base: pouncer_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Critical
+      90: Dead
+  - type: Stamina
+    critThreshold: 90
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.55
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8.5
+  - type: Monster
+    species: Рывник
+    class: Аргоциты
+    evoPointsRequired: 250.0
+    evolutions:
+    - prototype: MobMonsterMolder
+      cost: 150
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Кордон
+      class: Аргоциты
+      specialization: Выносливое существо среднего размера.
+      description: Не излишне проворный аргоцит старшего возраста. Имеет хорошие показатели защищённости и значительный атакующий потенциал.
+    - prototype: MobMonsterGlider
+      cost: 150
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Вьюн
+      class: Аргоциты
+      specialization: Небольшое существо с высокой проворностью.
+      description: Средняя особь аргоцита с сильным хвостом, обеспечивающим высокую скорость при перемещении по открытым местностям.
+    - prototype: MobMonsterCrawler
+      cost: 200
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Ползун
+      class: Аргоциты
+      specialization: Проворное существо в твёрдом хитиновом панцире.
+      description: Особь полностью покрыта прочным панцирем, сковывающим движения. Структура конечностей больше напоминает паукообразные и приводится в движение давлением внутренних жидкостей.
+    - prototype: MobMonsterHarvester
+      cost: 300
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Пожинатель
+      class: Аргоциты
+      specialization: Крупное существо с высокоразвитым телом.
+      description: Аргоцит старшего поколения, известный своей живучестью и силой. Способен представлять угрозу даже для подготовленного противника.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 150
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterCrawler
+  name: crawler
+  description: Light armored beast able to meet its opponents with flurries of blows.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: crawler
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: crawler
+      Dead:
+        Base: crawler_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      65: Critical
+      80: Dead
+  - type: Stamina
+    critThreshold: 75
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4.25
+    baseWalkSpeed : 3.5
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Slash: 6.5
+  - type: Monster
+    species: Ползун
+    class: Аргоциты
+    evoPointsRequired: 250.0
+    evolutions:
+    - prototype: MobMonsterMolder
+      cost: 150
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Кордон
+      class: Аргоциты
+      specialization: Выносливое существо среднего размера.
+      description: Не излишне проворный аргоцит старшего возраста. Имеет хорошие показатели защищённости и значительный атакующий потенциал.
+    - prototype: MobMonsterGlider
+      cost: 150
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Вьюн
+      class: Аргоциты
+      specialization: Небольшое существо с высокой проворностью.
+      description: Средняя особь аргоцита с сильным хвостом, обеспечивающим высокую скорость при перемещении по открытым местностям.
+    - prototype: MobMonsterPouncer
+      cost: 210
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Рывник
+      class: Аргоциты
+      specialization: Среднее существо с повышенной агрессией.
+      description: Особь аргоцита со способной подвижной мускулатурой. Силы мышц достаточно, чтобы наносить сильные разящие удары жертвам.
+    - prototype: MobMonsterHarvester
+      cost: 300
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Пожинатель
+      class: Аргоциты
+      specialization: Крупное существо с высокоразвитым телом.
+      description: Аргоцит старшего поколения, известный своей живучестью и силой. Способен представлять угрозу даже для подготовленного противника.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 150
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterHarvester
+  name: harvester
+  description: Elite alien warrior able to withstand strong blows and to retaliate with enough force to crumble buildings.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: harvester
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: harvester
+      Dead:
+        Base: harvester_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      150: Dead
+  - type: Stamina
+    critThreshold: 120
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.6
+    baseWalkSpeed : 2.4
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 5
+        Slash: 5
+        Structural: 5
+  - type: Monster
+    species: Пожинатель
+    class: Аргоциты
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterPouncer
+      cost: 210
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Рывник
+      class: Аргоциты
+      specialization: Среднее существо с высокой агрессивностью.
+      description: Особь аргоцита со способной подвижной мускулатурой. Силы мышц достаточно, чтобы наносить сильные разящие удары жертвам.
+      isDevolution: true
+    - prototype: MobMonsterEnforcer
+      cost: 315
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Блюститель
+      class: Аргоциты
+      specialization: Огромный бронированный зверь.
+      description: Особо опасная особь аргоцитов, обладающая твёрдой не сковывающей движения оболочкой и значительной массой. Не предпочитает вступать в схватки, но способно постоять за себя в большинстве случаев.
+    - prototype: MobMonsterCrawler
+      cost: 200
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Ползун
+      class: Аргоциты
+      specialization: Проворное существо в твёрдом хитиновом панцире.
+      description: Особь полностью покрыта прочным панцирем, сковывающим движения. Структура конечностей больше напоминает паукообразные и приводится в движение давлением внутренних жидкостей.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 150
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterEnforcer
+  name: enforcer
+  description: Sentinel of an alien beast usually quite slower but way harder hitting.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_common.rsi
+    layers:
+    - state: enforcer
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: enforcer
+      Dead:
+        Base: enforcer_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      170: Critical
+      200: Dead
+  - type: Stamina
+    critThreshold: 150
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.5
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      types:
+        Blunt: 15
+        Structural: 10
+  - type: Monster
+    species: Блюститель
+    class: Аргоциты
+    evoPointsRequired: 400.0
+    evolutions:
+    - prototype: MobMonsterHarvester
+      cost: 300
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Пожинатель
+      class: Аргоциты
+      specialization: Крупное существо с высокоразвитым телом.
+      description: Аргоцит старшего поколения, известный своей живучестью и силой. Способен представлять угрозу даже для подготовленного противника.
+      isDevolution: true
+    - prototype: MobMonsterFounder
+      cost: 450
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Прародитель
+      class: Аргоциты
+      specialization: Огромная особь вида.
+      description: Редкий образец аргоцита, способный жить до нескольких сотен лет, значительно вырастая в размерах. Огромные силы перевешиваются отстранённостью от реальности.
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 200
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterFounder
+  name: founder
+  description: Regal alien beast with the strongest of blows. Usually quite slow and naturally armored.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_large.rsi
+    layers:
+    - state: founder
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: founder
+      Dead:
+        Base: founder_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Critical
+      350: Dead
+  - type: Stamina
+    critThreshold: 200
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.3
+    baseWalkSpeed : 2
+  - type: MeleeWeapon
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 30
+        Structural: 25
+  - type: Monster
+    species: Прародитель
+    class: Аргоциты
+    evoPointsRequired: 600.0
+    evolutions:
+    - prototype: MobMonsterEnforcer
+      cost: 315
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Блюститель
+      class: Аргоциты
+      specialization: Огромный бронированный зверь.
+      description: Особо опасная особь аргоцитов, обладающая твёрдой не сковывающей движения оболочкой и значительной массой. Не предпочитает вступать в схватки, но способно постоять за себя в большинстве случаев.
+      isDevolution: true
+    - prototype: MobMonsterLevialord
+      cost: 750
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Левиалорд
+      class: Аргоциты
+      specialization: Легендарная особь вида.
+      description: Огромный левиафан среди рода аргоцитов, обладающий высоким интеллектом, тяжёлобронированной оболочкой и исполинской силой.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 250
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterLevialord
+  name: leviathing
+  description: The strongest of alien beasts. Usually is uninterested in you, but Lord save you if you choose to become its enemy.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Argocyte/argocyte_large.rsi
+    layers:
+    - state: leviathing
+      map: ["enum.DamageStateVisualLayers.Base"]
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: leviathing
+      Dead:
+        Base: leviathing_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      550: Critical
+      600: Dead
+  - type: Stamina
+    critThreshold: 250
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.3
+    baseWalkSpeed : 2
+  - type: MeleeWeapon
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 50
+        Structural: 25
+  - type: Monster
+    species: Левиалорд
+    class: Аргоциты
+    evoPointsRequired: 600.0
+    evolutions:
+    - prototype: MobMonsterFounder
+      cost: 450
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Прародитель
+      class: Аргоциты
+      specialization: Огромная особь вида.
+      description: Редкий образец аргоцита, способный жить до нескольких сотен лет, значительно вырастая в размерах. Огромные силы перевешиваются отстранённостью от реальности.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 300
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 300
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

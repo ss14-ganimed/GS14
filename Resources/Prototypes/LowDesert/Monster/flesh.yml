@@ -1,1 +1,634 @@
-- type: entity  parent: BaseMobMonster  id: MobMonsterCockroach  name: cockroach  description: Strange little insect primed for trouble.  components:  - type: Sprite    sprite: Mobs/Animals/cockroach.rsi    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: cockroach  - type: MobThresholds    thresholds:      0: Alive      15: Critical      20: Dead  - type: Stamina    critThreshold: 30  - type: MovementSpeedModifier    baseSprintSpeed : 4    baseWalkSpeed : 3.75  - type: MeleeWeapon    damage:      types:        Piercing: 1        Poison: 1  - type: Monster    species: Таракан    class: Насекомые    evoPointsRequired: 40.0  - type: Bloodstream    bloodReagent: CopperBlood    bloodMaxVolume: 20  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 100        mask:        - MobMask        layer:        - MobLayer- type: entity  parent: BaseMobMonster  id: MobMonsterClamp  name: clamp  description: Floating mass of red flesh.  components:  - type: Sprite    sprite: Mobs/Aliens/flesh.rsi    layers:    - map: [ "enum.DamageStateVisualLayers.Base" ]      state: clamp  - type: DamageStateVisuals    states:      Alive:        Base: clamp      Critical:        Base: dead      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      30: Critical      35: Dead  - type: Stamina    critThreshold: 50  - type: MovementSpeedModifier    baseSprintSpeed : 2.5    baseWalkSpeed : 2  - type: MeleeWeapon    soundHit:      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg    angle: 0    animation: WeaponArcClaw    damage:      types:        Brute: 4        Poison: 1  - type: Monster    species: Сгусток    class: Плоть    evoPointsRequired: 80.0  - type: Bloodstream    bloodReagent: Blood    bloodMaxVolume: 30  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 100        mask:        - MobMask        layer:        - MobLayer- type: entity  parent: BaseMobMonster  id: MobMonsterLover  name: lover  description: Totally hideous lump of red flesh.  components:  - type: Sprite    sprite: Mobs/Aliens/flesh.rsi    layers:    - map: [ "enum.DamageStateVisualLayers.Base" ]      state: lover  - type: DamageStateVisuals    states:      Alive:        Base: lover      Critical:        Base: dead      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      40: Critical      50: Dead  - type: Stamina    critThreshold: 60  - type: MovementSpeedModifier    baseSprintSpeed : 2.75    baseWalkSpeed : 2.3  - type: MeleeWeapon    soundHit:      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg    angle: 0    animation: WeaponArcClaw    damage:      types:        Brute: 6        Poison: 1  - type: Monster    species: Плоть    class: Плоть    evoPointsRequired: 150.0  - type: Bloodstream    bloodReagent: Blood    bloodMaxVolume: 50  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 100        mask:        - MobMask        layer:        - MobLayer- type: entity  parent: BaseMobMonster  id: MobMonsterGolem  name: golem  description: Human-sized lump of meat animated by unknown forces.  components:  - type: Sprite    sprite: Mobs/Aliens/flesh.rsi    layers:    - map: [ "enum.DamageStateVisualLayers.Base" ]      state: golem  - type: DamageStateVisuals    states:      Alive:        Base: golem      Critical:        Base: dead      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      70: Critical      80: Dead  - type: Stamina    critThreshold: 90  - type: MovementSpeedModifier    baseSprintSpeed : 2.5    baseWalkSpeed : 2  - type: MeleeWeapon    soundHit:      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg    angle: 0    animation: WeaponArcClaw    damage:      types:        Brute: 7        Poison: 2  - type: Monster    species: Плоть    class: Тело    evoPointsRequired: 250.0  - type: Bloodstream    bloodReagent: Blood    bloodMaxVolume: 80  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 100        mask:        - MobMask        layer:        - MobLayer- type: entity  parent: BaseMobMonster  id: MobMonsterUfonaut  name: ufonaut  description: Even bigger human-sized lump of meat animated by unknown forces.  components:  - type: Sprite    sprite: Mobs/Aliens/flesh.rsi    layers:    - map: [ "enum.DamageStateVisualLayers.Base" ]      state: jared  - type: DamageStateVisuals    states:      Alive:        Base: jared      Critical:        Base: dead      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      115: Critical      130: Dead  - type: Stamina    critThreshold: 100  - type: MovementSpeedModifier    baseSprintSpeed : 2.3    baseWalkSpeed : 1.9  - type: MeleeWeapon    soundHit:      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg    angle: 0    animation: WeaponArcClaw    attackRate: 0.9    damage:      types:        Brute: 12        Poison: 2  - type: Monster    species: Плоть    class: Тело    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: Blood    bloodMaxVolume: 120  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 100        mask:        - MobMask        layer:        - MobLayer- type: entity  parent: BaseMobMonster  id: MobMonsterAbomination  name: abomination  description: Was this supposed to look like a human?  components:  - type: Sprite    sprite: Mobs/Demons/abomination.rsi    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: abomination  - type: DamageStateVisuals    states:      Alive:        Base: abomination      Critical:        Base: dead      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      95: Critical      105: Dead  - type: Stamina    critThreshold: 100  - type: MovementSpeedModifier    baseSprintSpeed : 2.6    baseWalkSpeed : 2.1  - type: MeleeWeapon    soundHit:      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg    angle: 0    animation: WeaponArcClaw    damage:      types:        Brute: 8        Poison: 5  - type: Monster    species: Плоть    class: Мерзость    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: Blood    bloodMaxVolume: 120  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 100        mask:        - MobMask        layer:        - MobLayer- type: entity  parent: BaseMobMonster  id: MobMonsterMimic  name: mimic  description: Is it me or is this thing moving?  components:  - type: Sprite    drawdepth: Mobs    sprite: Structures/Machines/VendingMachines/cola.rsi    state: normal  - type: Icon    sprite: Structures/Machines/VendingMachines/cola.rsi    state: normal  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeAabb          bounds: "-0.35,-0.35,0.35,0.35"        density: 1000        mask:        - MobMask        layer:        - MachineLayer  - type: AnimationPlayer  - type: MobThresholds    thresholds:      0: Alive      180: Critical      200: Dead  - type: Stamina    critThreshold: 100  - type: MovementSpeedModifier    baseSprintSpeed : 1.4    baseWalkSpeed : 1  - type: MeleeWeapon    angle: 0    animation: WeaponArcFist    attackRate: 0.8    damage:      types:        Blunt: 20  - type: Monster    species: Плоть    class: Мимик    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: NuclearCola    bloodMaxVolume: 200- type: entity  parent: BaseMobMonster  id: MobMonsterAspid  name: aspid  description: Strange red dragon-esque creature capable of tearing your body apart.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/Xenos/rouny.rsi    offset: 0, 0.6    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: running  - type: DamageStateVisuals    states:      Alive:        Base: running      Critical:        Base: crit      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      150: Critical      200: Dead  - type: Stamina    critThreshold: 150  - type: MovementSpeedModifier    baseSprintSpeed : 4    baseWalkSpeed : 2.5  - type: MeleeWeapon    soundHit:      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg    angle: 0    animation: WeaponArcClaw    attackRate: 1.2    damage:      types:        Slash: 8  - type: Monster    species: Драконоид    class: Аспид    evoPointsRequired: 350.0  - type: Bloodstream    bloodReagent: Blood    bloodMaxVolume: 200  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.35        density: 235        mask:        - MobMask        layer:        - MobLayer
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterCockroach
+  name: cockroach
+  description: Strange little insect primed for trouble.
+  components:
+  - type: Sprite
+    sprite: Mobs/Animals/cockroach.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: cockroach
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      15: Critical
+      20: Dead
+  - type: Stamina
+    critThreshold: 30
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4
+    baseWalkSpeed : 3.75
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 1
+        Poison: 1
+  - type: Monster
+    species: Таракан
+    class: Насекомые
+    evoPointsRequired: 40.0
+    evolutions:
+    - prototype: MobMonsterTick
+      cost: 40
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Акарид
+      class: Насекомые
+      specialization: Высокоядовитое небольшое насекомое.
+      description: Токсинные клещи, по одиночке представляющие низкую опасность, в группах способны убивать крупных противников своим ядом.
+      isDevolution: false
+    - prototype: MobMonsterLarva
+      cost: 40
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Ларва
+      class: Аргоциты
+      specialization: Личинка с высоким эволюционным потенциалом.
+      description: Слабое аморфное существо, вынашивающее в себе генетический материал множества более опасных видов.
+      isDevolution: false
+    - prototype: MobMonsterLizard
+      cost: 50
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Варан
+      class: Драконоиды
+      specialization: Рептилия с дальним родством к истиным драконам.
+      description: Чешуйчатая ящерица, имеющая генетические отличия от своих ближайших родственников.
+    - prototype: MobMonsterClamp
+      cost: 60
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Сгусток
+      class: Плоть
+      specialization: Шар большой массы плоти.
+      description: Результат сомнительных мутационных процессов, живой сгусток плоти не представляет великой опасности, но имеет высокий оборонный потенциал.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: CopperBlood
+    bloodMaxVolume: 20
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterClamp
+  name: clamp
+  description: Floating mass of red flesh.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: clamp
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: clamp
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      35: Dead
+  - type: Stamina
+    critThreshold: 50
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.5
+    baseWalkSpeed : 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Brute: 4
+        Poison: 1
+  - type: Monster
+    species: Сгусток
+    class: Плоть
+    evoPointsRequired: 80.0
+    evolutions:
+    - prototype: MobMonsterCockroach
+      cost: 30
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Таракан
+      class: Насекомые
+      specialization: Ловкое, но хрупкое ядовитое насекомое.
+      description: Тараканы известны своей живучестью и способностью адаптироваться к любым условиям. Компенсируемая скоростью низкая прочность насекомого в совокупности с высоким интеллектом позволяет преодолевать большинство трудностей.
+      isDevolution: true
+    - prototype: MobMonsterLover
+      cost: 120
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Плоть
+      class: Плоть
+      specialization: Более крупный шар плоти.
+      description: Масса значительного размера, явственно имеющая недобрые намерения по отношению к любому существу в его радиусе видимости.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: Blood
+    bloodMaxVolume: 30
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterLover
+  name: lover
+  description: Totally hideous lump of red flesh.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: lover
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: lover
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      50: Dead
+  - type: Stamina
+    critThreshold: 60
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.75
+    baseWalkSpeed : 2.3
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Brute: 6
+        Poison: 1
+  - type: Monster
+    species: Плоть
+    class: Плоть
+    evoPointsRequired: 150.0
+    evolutions:
+    - prototype: MobMonsterClamp
+      cost: 60
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Сгусток
+      class: Плоть
+      specialization: Гуманоидная масса плоти.
+      description: Результат сомнительных мутационных процессов, живой сгусток плоти не представляет великой опасности, но имеет высокий оборонный потенциал.
+      isDevolution: true
+    - prototype: MobMonsterGolem
+      cost: 190
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Тело
+      class: Плоть
+      specialization: Гуманоидная масса плоти.
+      description: Похожая на прямоходящее существо сформированная груда мяса, имеющая зачатки интеллекта достаточные, чтобы превосходить своих собратьев.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: Blood
+    bloodMaxVolume: 50
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterGolem
+  name: golem
+  description: Human-sized lump of meat animated by unknown forces.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: golem
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: golem
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      70: Critical
+      80: Dead
+  - type: Stamina
+    critThreshold: 90
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.5
+    baseWalkSpeed : 2
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Brute: 7
+        Poison: 2
+  - type: Monster
+    species: Плоть
+    class: Тело
+    evoPointsRequired: 250.0
+    evolutions:
+    - prototype: MobMonsterLover
+      cost: 120
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Плоть
+      class: Плоть
+      specialization: Более крупный шар плоти.
+      description: Масса значительного размера, явственно имеющая недобрые намерения по отношению к любому существу в его радиусе видимости.
+      isDevolution: true
+    - prototype: MobMonsterAbomination
+      cost: 240
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Мерзость
+      class: Плоть
+      specialization: Разумный гуманоид, похожий на человека.
+      description: Результат чудовищных мутаций, это существо имеет отдалённую схожесть с разумными видами, обладая значительно превосходящим прародителя разумом.
+      isDevolution: false
+    - prototype: MobMonsterUfonaut
+      cost: 225
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Энлонавт
+      class: Плоть
+      specialization: Крупная груда плоти, отдалённо напоминающая гуманоида.
+      description: Существо класса плоти, на голову превосходящее собратьев по живучести и уровню угрозы.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: Blood
+    bloodMaxVolume: 80
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterUfonaut
+  name: ufonaut
+  description: Even bigger human-sized lump of meat animated by unknown forces.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/flesh.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: jared
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: jared
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      115: Critical
+      130: Dead
+  - type: Stamina
+    critThreshold: 100
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.3
+    baseWalkSpeed : 1.9
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    attackRate: 0.9
+    damage:
+      types:
+        Brute: 12
+        Poison: 2
+  - type: Monster
+    species: Энлонавт
+    class: Плоть
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterGolem
+      cost: 190
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Тело
+      class: Плоть
+      specialization: Гуманоидная масса плоти.
+      description: Похожая на прямоходящее существо сформированная груда мяса, имеющая зачатки интеллекта достаточные, чтобы превосходить своих собратьев.
+      isDevolution: true
+    - prototype: MobMonsterAbomination
+      cost: 240
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Мерзость
+      class: Плоть
+      specialization: Разумный гуманоид, похожий на человека.
+      description: Результат чудовищных мутаций, это существо имеет отдалённую схожесть с разумными видами, обладая значительно превосходящим прародителя разумом.
+      isDevolution: false
+    - prototype: MobMonsterAbomination
+      cost: 450
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Аспид
+      class: Драконоиды
+      specialization: Проворный красный дракон.
+      description: Совершенная форма бесцельных масс плоти. Прочная внешняя оболочка и высокая ловкость в совокупности с физической силой показывают превосходный итоговый результат.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: Blood
+    bloodMaxVolume: 120
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterAbomination
+  name: abomination
+  description: Was this supposed to look like a human?
+  components:
+  - type: Sprite
+    sprite: Mobs/Demons/abomination.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: abomination
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: abomination
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      95: Critical
+      105: Dead
+  - type: Stamina
+    critThreshold: 100
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 2.6
+    baseWalkSpeed : 2.1
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Brute: 8
+        Poison: 5
+  - type: Monster
+    species: Мерзость
+    class: Плоть
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterGolem
+      cost: 190
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: unknown
+      species: Тело
+      class: Плоть
+      specialization: Гуманоидная масса плоти.
+      description: Похожая на прямоходящее существо сформированная груда мяса, имеющая зачатки интеллекта достаточные, чтобы превосходить своих собратьев.
+      isDevolution: true
+    - prototype: MobMonsterUfonaut
+      cost: 225
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Энлонавт
+      class: Плоть
+      specialization: Крупная груда плоти, отдалённо напоминающая гуманоида.
+      description: Существо класса плоти, на голову превосходящее собратьев по живучести и уровню угрозы.
+    - prototype: MobMonsterMimic
+      cost: 350
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Мимик
+      class: Плоть
+      specialization: Масса плоти в металлической оболочке.
+      description: Похожее на автомат с газированными напитками существо, скрывающееся под толстым слоем похожих на металл наслоений. Обладает некоторым интеллектом и высокой летальностью в среде ничего не подозревающих существ.
+  - type: Bloodstream
+    bloodReagent: Blood
+    bloodMaxVolume: 120
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterMimic
+  name: mimic
+  description: Is it me or is this thing moving?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Structures/Machines/VendingMachines/cola.rsi
+    state: normal
+  - type: Icon
+    sprite: Structures/Machines/VendingMachines/cola.rsi
+    state: normal
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.35,0.35,0.35"
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MachineLayer
+  - type: AnimationPlayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      180: Critical
+      200: Dead
+  - type: Stamina
+    critThreshold: 100
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 1.4
+    baseWalkSpeed : 1
+  - type: MeleeWeapon
+    angle: 0
+    animation: WeaponArcFist
+    attackRate: 0.8
+    damage:
+      types:
+        Blunt: 20
+  - type: Monster
+    species: Мимик
+    class: Плоть
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterAbomination
+      cost: 240
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Мерзость
+      class: Плоть
+      specialization: Разумный гуманоид, похожий на человека.
+      description: Результат чудовищных мутаций, это существо имеет отдалённую схожесть с разумными видами, обладая значительно превосходящим прародителя разумом.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: NuclearCola
+    bloodMaxVolume: 200
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterAspid
+  name: aspid
+  description: Strange red dragon-esque creature capable of tearing your body apart.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/rouny.rsi
+    offset: 0, 0.6
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: running
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      200: Dead
+  - type: Stamina
+    critThreshold: 150
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4
+    baseWalkSpeed : 2.5
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    attackRate: 1.2
+    damage:
+      types:
+        Slash: 8
+  - type: Monster
+    species: Аспид
+    class: Драконоиды
+    evoPointsRequired: 350.0
+    evolutions:
+    - prototype: MobMonsterUfonaut
+      cost: 225
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Энлонавт
+      class: Плоть
+      specialization: Крупная груда плоти, отдалённо напоминающая гуманоида.
+      description: Существо класса плоти, на голову превосходящее собратьев по живучести и уровню угрозы.
+      isDevolution: true
+  - type: Bloodstream
+    bloodReagent: Blood
+    bloodMaxVolume: 200
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

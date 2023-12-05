@@ -239,7 +239,10 @@ public sealed partial class MonsterEvolutionMenu : DefaultWindow
 			costLabel.SetMarkup(Loc.GetString("monster-evolution-screen-cost-wrap", ("cost", evolution.Cost.ToString("f1"))));
 			
 			var button = new Button(){
-				Text = Loc.GetString("monster-evolution-evolve"),
+				Text = Loc.GetString(
+				evolution.IsDevolution ?
+				"monster-evolution-devolve" :
+				"monster-evolution-evolve"),
 				ToolTip = Loc.GetString(
 				castState.Overview.EvoPointsSpent < castState.Overview.EvoPointsRequired ?
 					"monster-evolution-tooltip-invalid" :

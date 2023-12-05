@@ -1,1 +1,205 @@
-- type: entity  parent: BaseMobMonster  id: MobMonsterSlime  name: slime  description: Blue opaque slime. Its jelly trembles softly inside.  components:  - type: Sprite    drawdepth: Mobs    sprite: Mobs/Aliens/slimes.rsi    layers:    - map: [ "enum.DamageStateVisualLayers.Base" ]      state: blue_adult_slime  - type: DamageStateVisuals    states:      Alive:        Base: blue_adult_slime      Critical:        Base: blue_adult_slime_dead      Dead:        Base: blue_adult_slime_dead  - type: MobThresholds    thresholds:      0: Alive      180: Critical      200: Dead  - type: MovementSpeedModifier    baseSprintSpeed : 4    baseWalkSpeed : 2  - type: FootstepModifier    footstepSoundCollection:      path: /Audio/Effects/Footsteps/slime1.ogg      params:        volume: 3  - type: Tag    tags:    - FootstepSound  - type: Monster    species: Слизень    class: Слизневые    evoPointsRequired: 450.0  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.30        density: 80        mask:        - MobMask        layer:        - MobLayer  - type: MeleeWeapon    soundHit:        path: /Audio/Weapons/punch3.ogg    angle: 0    animation: WeaponArcPunch    damage:      types:        Blunt: 6        Poison: 4        Structural: 4        Caustic: 8  - type: Bloodstream    bloodReagent: Slime  - type: Reactive    groups:      Flammable: [ Touch ]      Extinguish: [ Touch ]    reactions:    - reagents: [ Water, SpaceCleaner ]      methods: [ Touch ]      effects:      - !type:WashCreamPieReaction    - reagents: [ Water ]      methods: [ Touch ]      effects:      - !type:HealthChange        scaled: true        damage:          types:            Heat: 3      - !type:PopupMessage        type: Local        messages: [ "slime-hurt-by-water-popup" ]        probability: 0.25  - type: InteractionPopup    successChance: 0.5    interactSuccessString: petting-success-slimes    interactFailureString: petting-failure-generic  - type: ReplacementAccent    accent: slimes- type: entity  parent: BaseMobMonster  id: MobMonsterSlimeSmile  name: slime  description: A cute rainbow slime. Is it okay to have it, though?  components:  - type: Sprite    sprite: Mobs/Aliens/slimes.rsi    layers:    - map: [ "enum.DamageStateVisualLayers.Base" ]      state: rainbow_baby_slime    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]      state: aslime-_3      shader: unshaded  - type: DamageStateVisuals    states:      Alive:        Base: rainbow_baby_slime        BaseUnshaded: aslime-_3      Critical:        Base: rainbow_baby_slime_dead        BaseUnshaded: aslime-_3      Dead:        Base: rainbow_baby_slime_dead  - type: MobThresholds    thresholds:      0: Alive      220: Critical      250: Dead  - type: MovementSpeedModifier    baseSprintSpeed : 4    baseWalkSpeed : 2  - type: FootstepModifier    footstepSoundCollection:      path: /Audio/Effects/Footsteps/slime1.ogg      params:        volume: -6  - type: Monster    species: Смайл    class: Слизневые    evoPointsRequired: 450.0  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.30        density: 80        mask:        - MobMask        layer:        - MobLayer  - type: MeleeWeapon    soundHit:        path: /Audio/Weapons/punch3.ogg    angle: 0    animation: WeaponArcPunch    damage:      types:        Blunt: 6        Poison: 4        Structural: 4        Caustic: 8        Cellular: 5  - type: Bloodstream    bloodReagent: Slime  - type: Reactive    groups:      Flammable: [ Touch ]      Extinguish: [ Touch ]    reactions:    - reagents: [ Water, SpaceCleaner ]      methods: [ Touch ]      effects:      - !type:WashCreamPieReaction  - type: InteractionPopup    successChance: 0.5    interactSuccessString: petting-success-slimes    interactFailureString: petting-failure-generic  - type: ReplacementAccent    accent: slimes
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterSlime
+  name: slime
+  description: Blue opaque slime. Its jelly trembles softly inside.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/slimes.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: blue_adult_slime
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: blue_adult_slime
+      Critical:
+        Base: blue_adult_slime_dead
+      Dead:
+        Base: blue_adult_slime_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      180: Critical
+      200: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4
+    baseWalkSpeed : 2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/slime1.ogg
+      params:
+        volume: 3
+  - type: Tag
+    tags:
+    - FootstepSound
+  - type: Monster
+    species: Слизень
+    class: Слизневые
+    evoPointsRequired: 450.0
+    evolutions:
+    - prototype: MobMonsterLuminousObject
+      cost: 375
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Заря
+      class: Лучезарность
+      specialization: Гуманоидная фигура ослепляющего света.
+      description: Форма этого существа, отдалённо напоминающая фигуру, наводит на мысль о высоком его интеллекте. Справедливо ли будет считать его полностью новой разумной формой жизни?
+      isDevolution: true
+    - prototype: MobMonsterSlime
+      cost: 465
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Смайл
+      class: Слизневые
+      specialization: Экстраординарная форма жизни.
+      description: Единичное по своему образу и подобию существо, на голову превосходящее любую существующую форму слизи. Согласно легендам, оно происходит из другого измерения и наделено невероятными способностями.
+      isDevolution: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/punch3.ogg
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 6
+        Poison: 4
+        Structural: 4
+        Caustic: 8
+  - type: Bloodstream
+    bloodReagent: Slime
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaled: true
+        damage:
+          types:
+            Heat: 3
+      - !type:PopupMessage
+        type: Local
+        messages: [ "slime-hurt-by-water-popup" ]
+        probability: 0.25
+  - type: InteractionPopup
+    successChance: 0.5
+    interactSuccessString: petting-success-slimes
+    interactFailureString: petting-failure-generic
+  - type: ReplacementAccent
+    accent: slimes
+
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterSlimeSmile
+  name: slime
+  description: A cute rainbow slime. Is it okay to have it, though?
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/slimes.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: rainbow_baby_slime
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: aslime-_3
+      shader: unshaded
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: rainbow_baby_slime
+        BaseUnshaded: aslime-_3
+      Critical:
+        Base: rainbow_baby_slime_dead
+        BaseUnshaded: aslime-_3
+      Dead:
+        Base: rainbow_baby_slime_dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      220: Critical
+      250: Dead
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 4
+    baseWalkSpeed : 2
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/slime1.ogg
+      params:
+        volume: -6
+  - type: Monster
+    species: Смайл
+    class: Слизневые
+    evoPointsRequired: 450.0
+    evolutions:
+    - prototype: MobMonsterSlime
+      cost: 375
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Слизень
+      class: Слизневые
+      specialization: Желеобразная форма жизни.
+      description: Рематериализовавшаяся заново сущность, выраженная упругим шаром синего геля. Намного выносливее, чем может показаться на первый взгляд.
+      isDevolution: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/punch3.ogg
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 6
+        Poison: 4
+        Structural: 4
+        Caustic: 8
+        Cellular: 5
+  - type: Bloodstream
+    bloodReagent: Slime
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+  - type: InteractionPopup
+    successChance: 0.5
+    interactSuccessString: petting-success-slimes
+    interactFailureString: petting-failure-generic
+  - type: ReplacementAccent
+    accent: slimes

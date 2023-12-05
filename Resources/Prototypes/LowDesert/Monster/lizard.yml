@@ -1,1 +1,91 @@
-- type: entity  parent: BaseMobMonster  id: MobMonsterLizard  name: lizard  description: Little green dragon.  components:  - type: Sprite    drawdepth: Mobs    layers:    - map: ["enum.DamageStateVisualLayers.Base"]      state: lizard      sprite: Mobs/Animals/lizard.rsi  - type: DamageStateVisuals    states:      Alive:        Base: lizard      Critical:        Base: dead      Dead:        Base: dead  - type: MobThresholds    thresholds:      0: Alive      30: Critical      40: Dead  - type: InteractionPopup    successChance: 0.3    interactSuccessString: petting-success-reptile    interactFailureString: petting-failure-generic    interactSuccessSpawn: EffectHearts    interactSuccessSound:      path: /Audio/Animals/lizard_happy.ogg  - type: Stamina    critThreshold: 30  - type: MovementSpeedModifier    baseSprintSpeed : 3    baseWalkSpeed : 2  - type: MeleeWeapon    damage:      types:        Piercing: 3        Poison: 2  - type: Monster    species: Варан    class: Драконоиды    evoPointsRequired: 60.0  - type: Bloodstream    bloodReagent: FerrochromicAcid    bloodMaxVolume: 30  - type: Fixtures    fixtures:      fix1:        shape:          !type:PhysShapeCircle          radius: 0.2        density: 50        mask:        - MobMask        layer:        - MobLayer
+- type: entity
+  parent: BaseMobMonster
+  id: MobMonsterLizard
+  name: lizard
+  description: Little green dragon.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: lizard
+      sprite: Mobs/Animals/lizard.rsi
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: lizard
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      30: Critical
+      40: Dead
+  - type: InteractionPopup
+    successChance: 0.3
+    interactSuccessString: petting-success-reptile
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/lizard_happy.ogg
+  - type: Stamina
+    critThreshold: 30
+  - type: MovementSpeedModifier
+    baseSprintSpeed : 3
+    baseWalkSpeed : 2
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 3
+        Poison: 2
+  - type: Monster
+    species: Варан
+    class: Драконоиды
+    evoPointsRequired: 60.0
+    evolutions:
+    - prototype: MobMonsterCockroach
+      cost: 30
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Таракан
+      class: Насекомые
+      specialization: Ловкое, но хрупкое ядовитое насекомое.
+      description: Тараканы известны своей живучестью и способностью адаптироваться к любым условиям. Компенсируемая скоростью низкая прочность насекомого в совокупности с высоким интеллектом позволяет преодолевать большинство трудностей.
+      isDevolution: false
+    - prototype: MobMonsterTick
+      cost: 45
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: toxin
+      species: Акарид
+      class: Насекомые
+      specialization: Высокоядовитое небольшое насекомое.
+      description: Токсинные клещи, по одиночке представляющие низкую опасность, в группах способны убивать крупных противников своим ядом.
+      isDevolution: false
+    - prototype: MobMonsterLarva
+      cost: 45
+      icon:
+        sprite: Objects/Devices/health_analyzer.rsi
+        state: genetic
+      species: Ларва
+      class: Аргоциты
+      specialization: Личинка с высоким эволюционным потенциалом.
+      description: Слабое аморфное существо, вынашивающее в себе генетический материал множества более опасных видов.
+      isDevolution: false
+  - type: Bloodstream
+    bloodReagent: FerrochromicAcid
+    bloodMaxVolume: 30
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

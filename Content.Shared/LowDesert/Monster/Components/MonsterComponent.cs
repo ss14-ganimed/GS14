@@ -56,17 +56,32 @@ public sealed partial class MonsterConsumeActionEvent : EntityTargetActionEvent
 
 }
 
-[Serializable, NetSerializable]
-public class MonsterEvolutionData
+[DataDefinition, Serializable, NetSerializable]
+public partial struct MonsterEvolutionData
 {
-	public string Prototype { get; } = default!;
-	public float Cost { get; } = 1;
-	public SpriteSpecifier Icon { get; } = new SpriteSpecifier.Texture(new("/Textures/Objects/Devices/health_analyzer.rsi/unknown.png"));
-	public string Species { get; } = "monster-evolution-species-none";
-	public string Class { get; } = "monster-evolution-class-none";
-	public string Specialization { get; } = "monster-evolution-specialization-none";
-	public string Description { get; } = "monster-evolution-description-none";
-	public bool IsDevolution { get; } = false;
+	[DataField("prototype")]
+	public string Prototype { get; set; } = default!;
+	
+	[DataField("cost")]
+	public float Cost { get; set; } = 1;
+	
+	[DataField("icon")]
+	public SpriteSpecifier Icon { get; set; } = new SpriteSpecifier.Texture(new("/Textures/Objects/Devices/health_analyzer.rsi/unknown.png"));
+	
+	[DataField("species")]
+	public string Species { get; set; } = "monster-evolution-species-none";
+	
+	[DataField("class")]
+	public string Class { get; set; } = "monster-evolution-class-none";
+	
+	[DataField("specialization")]
+	public string Specialization { get; set; } = "monster-evolution-specialization-none";
+	
+	[DataField("description")]
+	public string Description { get; set; } = "monster-evolution-description-none";
+	
+	[DataField("isDevolution")]
+	public bool IsDevolution { get; set; } = false;
 	
 	public MonsterEvolutionData(string prototype, float cost, SpriteSpecifier icon, string species, string monsterClass, string specialization, string description, bool isDevolution)
 	{
