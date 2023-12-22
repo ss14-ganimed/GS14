@@ -1,0 +1,16 @@
+- type: gameMap
+  id: Prison
+  mapName: Prison
+  mapPath: /Maps/prison.yml
+  minPlayers: 0
+  stations:
+    Prison:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Объект 27-08 \"Линтон\""
+        - type: StationJobs
+          overflowJobs:
+            - Prisoner
+          availableJobs:
+            Prisoner: [ -1, -1 ]
