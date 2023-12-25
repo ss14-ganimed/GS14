@@ -473,7 +473,10 @@
     fiberColor: fibers-red
   - type: FingerprintMask
   - type: StaticPrice
-  - type: Insulated
     price: 1200
+  - type: Insulated
+  - type: Tag
+    tags:
+    - HighRiskItem
   - type: StaminaDamageOnHit
     damage: 33
