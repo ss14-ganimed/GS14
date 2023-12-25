@@ -226,7 +226,7 @@
 - type: entity
   noSpawn: true
   parent: BaseTraitorStealObjective
-  id: BluprientsStealObjective
+  id: BlueprientsStealObjective
   components:
   - type: NotJobRequirement
     job: ChiefEngineer
