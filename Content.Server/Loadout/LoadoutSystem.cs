@@ -64,7 +64,7 @@ public sealed class LoadoutSystem : EntitySystem
             var isSpeciesRestricted = loadout.SpeciesRestrictions != null &&
                                       loadout.SpeciesRestrictions.Contains(ev.Profile.Species);
 
-            if (isWhitelisted || isBlacklisted || isSpeciesRestricted || sponsorRestriction)
+            if (isWhitelisted || isBlacklisted || isSpeciesRestricted)
                 continue;
 
             var entity = Spawn(loadout.Prototype, Transform(ev.Mob).Coordinates);

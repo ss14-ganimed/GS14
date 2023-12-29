@@ -598,8 +598,6 @@ namespace Content.Client.Preferences.UI
 							var remain = _loadoutPoints.Value - loadout.Cost;
                             if (remain < 0)
                                 preference = false;
-                            else if (loadout.SponsorOnly && !_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session))
-								preference = false;
 							else
                                 _loadoutPoints.Value = remain;
                         }
