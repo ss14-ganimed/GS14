@@ -4,9 +4,9 @@
   description: job-description-scientist
   playTimeTracker: JobScientist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 18000 #5 hrs
+    - !type:RoleTimeRequirement
+      role: JobResearchAssistant
+      time: 10800 #3h
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd

@@ -4,12 +4,9 @@
   description: job-description-senior-researcher
   playTimeTracker: JobSeniorResearcher
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 32400 #9 hrs
     - !type:RoleTimeRequirement
       role: JobScientist
-      time: 18000 #5 hrs
+      time: 28800 #8h
   startingGear: SeniorResearcherGear
   icon: "JobIconSeniorResearcher"
   supervisors: job-supervisors-rd

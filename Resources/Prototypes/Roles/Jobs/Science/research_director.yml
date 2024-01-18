@@ -7,9 +7,10 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobSeniorResearcher
-      time: 43200 #12 hrs
-    - !type:OverallPlaytimeRequirement
-      time: 144000 #40 hrs
+      time: 14400 #4h
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 86400 #24h
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"
