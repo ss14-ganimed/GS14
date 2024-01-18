@@ -5,9 +5,9 @@
   color: "#EFB341"
   playTimeTracker: JobStationEngineer
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 18000 #5 hrs
+    - !type:RoleTimeRequirement
+      role: JobTechnicalAssistant
+      time: 10800 #3h
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce
