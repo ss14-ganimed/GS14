@@ -5,11 +5,8 @@
   playTimeTracker: JobSeniorPhysician
   requirements:
     - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 18000 #5 hrs
-    - !type:RoleTimeRequirement
       role: JobMedicalDoctor
-      time: 25200 #7 hrs
+      time: 28800 #8h
   startingGear: SeniorPhysicianGear
   icon: "JobIconSeniorPhysician"
   supervisors: job-supervisors-cmo

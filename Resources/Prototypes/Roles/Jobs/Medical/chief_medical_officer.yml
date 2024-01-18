@@ -6,13 +6,10 @@
   playTimeTracker: JobChiefMedicalOfficer
   requirements:
     - !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 36000 #10 hrs
-    - !type:RoleTimeRequirement
       role: JobSeniorPhysician
-      time: 28800 #8 hrs
+      time: 14400 #4h
     - !type:OverallPlaytimeRequirement
-      time: 144000 #40 hrs
+      time: 64800 #16h
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
