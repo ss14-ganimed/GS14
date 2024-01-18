@@ -6,13 +6,10 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Command
-    time: 72000
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 #10 hours
+    time: 43200 #12h
   - !type:RoleTimeRequirement
     role: JobLawyer
-    time: 18000 #5 hours
+    time: 28800 #8h
   startingGear: IAAGear
   icon: "JobIconIAA"
   supervisors: job-supervisors-centcom

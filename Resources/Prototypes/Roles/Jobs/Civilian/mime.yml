@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Civilian
-      time: 10800 #3 hrs           
+      time: 18800 #5h           
   startingGear: MimeGear
   icon: "JobIconMime"
   supervisors: job-supervisors-hop

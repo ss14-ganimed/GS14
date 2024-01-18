@@ -6,6 +6,9 @@
   startingGear: BotanistGear
   icon: "JobIconBotanist"
   supervisors: job-supervisors-hop
+  requirements:
+    - !type:OverallPlaytimeRequirement
+    time: 10800 #3h
   access:
   - Service
   - Maintenance

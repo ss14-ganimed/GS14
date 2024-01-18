@@ -6,10 +6,10 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 36000 #10 hrs
+      time: 28800 #8h
     - !type:DepartmentTimeRequirement
-      department: Security
-      time: 54000 # 15 hrs
+      department: Command
+      time: 28800 #8h
   startingGear: BlueShieldGear
   icon: "JobIconBlueShield"
   supervisors: job-supervisors-command

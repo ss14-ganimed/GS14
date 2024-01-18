@@ -6,6 +6,12 @@
   startingGear: ReporterGear
   icon: "JobIconReporter"
   supervisors: job-supervisors-hop
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 7200 #2h  
+    - !type:OverallPlaytimeRequirement
+      time: 14400 #4h
   access:
   - Service
   - Maintenance
