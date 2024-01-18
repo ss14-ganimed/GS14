@@ -7,15 +7,9 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
-      time: 28800 #8 hrs
-    - !type:RoleTimeRequirement
-      role: JobDetective
-      time: 18000 #5 hrs
-    - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
-      time: 18000 #5 hrs
+      time: 28800 #8h
     - !type:OverallPlaytimeRequirement
-      time: 144000 #40 hrs
+      time: 172800 #48h
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
