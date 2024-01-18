@@ -11,8 +11,8 @@
   text: station-goal-solar-panels
 
 - type: stationGoal
-  id: StationGoalSience
-  text: station-goal-sience
+  id: StationGoalScience
+  text: station-goal-science
 
 - type: stationGoal
   id: StationGoalBank
