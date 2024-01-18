@@ -6,16 +6,16 @@
   playTimeTracker: JobCaptain
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 172800 #48 hrs   
+      time: 216000 #60h   
     - !type:RoleTimeRequirement
       role: JobHeadOfPersonnel
-      time: 43200 #12 hours
-    - !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
-      time: 21600 #6 hours
+      time: 14400 #4h
+    - !type:DeparamentTimeRequirement
+      role: Security
+      time: 18000 #5h
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 86400 #24 hours
+      time: 72000 #20h
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

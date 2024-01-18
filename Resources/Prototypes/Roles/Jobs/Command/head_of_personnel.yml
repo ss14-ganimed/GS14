@@ -6,13 +6,10 @@
   playTimeTracker: JobHeadOfPersonnel
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 86400 #24 hrs
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 28800 #8 hrs
+      time: 172800 #48h
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 43200 # 12 hours
+      time: 43200 #12h
   weight: 20
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
