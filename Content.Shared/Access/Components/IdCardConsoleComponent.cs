@@ -73,7 +73,8 @@ public sealed partial class IdCardConsoleComponent : Component
         "Security",
         "Service",
         "Theatre",
-        "Library"
+        "Library",
+        "Maid"
     };
 
     [Serializable, NetSerializable]

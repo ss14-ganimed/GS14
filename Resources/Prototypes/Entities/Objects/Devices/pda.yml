@@ -238,6 +238,27 @@
 
 - type: entity
   parent: BasePDA
+  id: StationMaidPDA
+  name: maid PDA
+  description: A PDA colored like a maid itself! It does well to represent its owner.
+  components:
+  - type: Pda
+    id: StationMaidIDCard
+    state: pda-maid
+    penSlot:
+      startingItem: BlackFountainPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#474c67"
+    accentHColor: "#dddddd"
+  - type: Icon
+    state: pda-maid
+
+- type: entity
+  parent: BasePDA
   id: ChefPDA
   name: chef PDA
   description: Covered in grease and flour.

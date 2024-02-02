@@ -158,6 +158,9 @@
   id: JobStationEngineer
 
 - type: playTimeTracker
+  id: JobStationMaid
+
+- type: playTimeTracker
   id: JobTechnicalAssistant
 
 - type: playTimeTracker

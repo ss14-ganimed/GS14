@@ -101,6 +101,18 @@
 
 - type: entity
   parent: IDCardStandard
+  id: StationMaidIDCard
+  name: maid ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: silver
+        - state: idmaid
+    - type: PresetIdCard
+      job: StationMaid
+
+- type: entity
+  parent: IDCardStandard
   id: CaptainIDCard
   name: captain ID card
   components:

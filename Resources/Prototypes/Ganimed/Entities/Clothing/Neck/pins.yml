@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckMaidPin
+  name: maid pin
+  description: Fine display of your affiliation with station maids. Be proud of your position as you are a treasure to an entire station!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Neck/Pins/maidpin.rsi
+    layers:
+    - state: maid
+  - type: Clothing
+    sprite: Ganimed/Clothing/Neck/Pins/maidpin.rsi
+    clothingVisuals:
+      neck:
+      - state: maid-equipped

@@ -1,0 +1,33 @@
+- type: entity
+  id: LockerMaidFilled
+  parent: LockerMaid
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+        - id: SoapNT
+        - id: ClothingHeadHatCatEars
+        - id: SprayBottleWater
+          prob: 0.6
+          orGroup: Spray
+        - id: SprayBottleSpaceCleaner
+          prob: 0.4
+          orGroup: Spray
+        - id: LightReplacer
+        - id: RagItem
+        - id: Holoprojector
+        - id: ClothingUniformJumpskirtJanimaid
+        - id: ClothingNeckMaidPin
+        - id: ClothingShoesMaid
+        - id: ClothingHeadsetService
+        - id: ClothingHandsGlovesColorWhite
+        - id: ClothingBeltMaidFilled
+        - id: FoodBoxDonutJellySlugcat
+          prob: 0.5
+        - id: FlashlightLantern
+        - id: MopItem
+        - id: BoxLightMixed
+        - id: BoxMousetrap
+          amount: 2
+        - id: TrashBag
+          amount: 2

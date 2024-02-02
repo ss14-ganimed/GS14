@@ -150,6 +150,18 @@
       - state: serviceworker
 
 - type: entity
+  id: SpawnPointStationMaid
+  parent: SpawnPointJobBase
+  name: maid
+  components:
+  - type: SpawnPoint
+    job_id: StationMaid
+  - type: Sprite
+    layers:
+      - state: green
+      - state: maid
+
+- type: entity
   id: SpawnPointBartender
   parent: SpawnPointJobBase
   name: bartender

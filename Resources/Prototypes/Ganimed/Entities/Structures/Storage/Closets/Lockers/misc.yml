@@ -1,0 +1,13 @@
+- type: entity
+  id: LockerMaid
+  parent: LockerBase
+  name: maid's locker
+  components:
+  - type: Appearance
+    visuals:
+    - type: StorageVisualizer
+      state: maid
+      state_open: maid_open
+      state_closed: maid_door
+  - type: AccessReader
+    access: [ [ "Maid" ] ]

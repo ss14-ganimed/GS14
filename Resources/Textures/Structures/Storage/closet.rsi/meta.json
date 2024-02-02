@@ -173,6 +173,15 @@
       "name": "cmo_open"
     },
     {
+      "name": "maid"
+    },
+    {
+      "name": "maid_door"
+    },
+    {
+      "name": "maid_open"
+    },
+    {
       "name": "cursed",
       "delays": [
         [

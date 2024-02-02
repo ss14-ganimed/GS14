@@ -52,6 +52,8 @@ job-name-roboticist = робототехник
 job-name-coroner = патологоанатом
 job-name-prisoner = заключённый
 job-name-blueshield = офицер синий щит
+job-name-stationmaid = горничная
+
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = атмосферный техник
 JobBartender = бармен
@@ -109,3 +111,4 @@ JobWarden = смотритель
 JobBorg = киборг
 JobBoxer = боксёр
 JobZookeeper = зоотехник
+JobStationMaid = горничная

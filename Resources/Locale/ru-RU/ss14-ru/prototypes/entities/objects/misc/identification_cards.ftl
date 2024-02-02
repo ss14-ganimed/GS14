@@ -136,4 +136,6 @@ ent-PirateIDCard = ID карта пирата
     .desc = { ent-IDCardStandard.desc }
 ent-PirateIDCard = ID карта пирата
     .desc = { ent-IDCardStandard.desc }
+ent-StationMaidIDCard = ID карта горничной
+    .desc = { ent-IDCardStandard.desc }
 

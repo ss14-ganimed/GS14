@@ -47,6 +47,14 @@
 
 - type: entity
   parent: Windoor
+  id: WindoorMaidLocked
+  suffix: Maid, Locked
+  components:
+  - type: AccessReader
+    access: [["Maid"]]
+
+- type: entity
+  parent: Windoor
   id: WindoorHydroponicsLocked
   suffix: Hydroponics, Locked
   components:
@@ -118,6 +126,14 @@
   components:
   - type: AccessReader
     access: [["Cargo"]]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureMaidLocked
+  suffix: Maid, Locked
+  components:
+  - type: AccessReader
+    access: [["Maid"]]
 
 - type: entity
   parent: WindoorSecure

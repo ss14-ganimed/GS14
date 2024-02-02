@@ -1,19 +1,4 @@
 - type: department
-  id: Command
-  description: department-Command-description
-  color: "#334E6D"
-  roles:
-  - Captain
-  - CentralCommandOfficial
-  - ChiefEngineer
-  - ChiefMedicalOfficer
-  - HeadOfPersonnel
-  - HeadOfSecurity
-  - ResearchDirector
-  - IAA
-  - BlueShield
-
-- type: department
   id: Cargo
   description: department-Cargo-description
   color: "#A46106"
@@ -72,6 +57,21 @@
   - ResearchAssistant
 
 - type: department
+  id: Command
+  description: department-Command-description
+  color: "#334E6D"
+  roles:
+  - Captain
+  - CentralCommandOfficial
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - IAA
+  - BlueShield
+
+- type: department
   id: Civilian
   description: department-Civilian-description
   color: "#9FED58"
@@ -93,6 +93,7 @@
   - Zookeeper
   - ServiceWorker
   - Prisoner
+  - StationMaid
 
 - type: department
   id: Specific
@@ -109,3 +110,4 @@
   - Prisoner
   - BlueShield
   - Coroner
+  - StationMaid

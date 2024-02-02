@@ -1,0 +1,22 @@
+- type: vendingMachineInventory
+  id: MaidRobeInventory
+  startingInventory:
+    ClothingUniformJumpskirtJanimaid: 2
+    ClothingUniformJumpskirtJanimaidmini: 2
+    ClothingHeadHatCatEars: 2
+    ClothingShoesMaid: 2
+    ClothingHandsGlovesColorWhite: 2
+    ClothingNeckMaidPin: 2
+    ClothingBeltMaid: 2
+    FoodBoxDonutJellySlugcat: 1
+  emaggedInventory:
+    ClothingUniformJumpsuitJanitor: 2
+    ClothingUniformJumpskirtJanitor: 2
+    ClothingHeadHatPurplesoft: 2
+    ClothingShoesColorBlack: 2
+    ClothingShoesGaloshes: 2
+    ClothingOuterWinterJani: 2
+    ClothingBeltJanitor: 2
+    ClothingOuterSuitShrineMaiden: 2
+    ClothingHeadHatShrineMaidenWig: 2
+    KitchenKnife: 2

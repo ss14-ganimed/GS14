@@ -41,6 +41,14 @@
 
 - type: entity
   parent: Airlock
+  id: AirlockMaidLocked
+  suffix: Maid, Locked
+  components:
+  - type: AccessReader
+    access: [["Maid"]]
+
+- type: entity
+  parent: Airlock
   id: AirlockKitchenLocked
   suffix: Kitchen, Locked
   components:
@@ -808,6 +816,14 @@
   components:
   - type: AccessReader
     access: [["Janitor"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintMaidLocked
+  suffix: Maid, Locked
+  components:
+  - type: AccessReader
+    access: [["Maid"]]
 
 - type: entity
   parent: AirlockMaint

@@ -1,0 +1,45 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMaid
+  name: maidbelt
+  description: A belt to hold all your maid belongings.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Belt/maid.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Belt/maid.rsi
+  - type: Storage
+    whitelist:
+      tags:
+        - Wrench
+        - Bottle
+        - Spray
+        - Soap
+        - Flashlight
+        - CigPack
+        - TrashBag
+        - WetFloorSign
+        - HolosignProjector
+        - CatEars
+        - BoxDonut
+        - Donut
+        - Food
+      components:
+        - LightReplacer
+  - type: ItemMapper
+    mapLayers:
+      bottle:
+        whitelist:
+          tags:
+          - Bottle
+      bottle_spray:
+        whitelist:
+          tags:
+          - Spray
+      wrench:
+        whitelist:
+          tags:
+          - Wrench
+    sprite: Clothing/Belt/belt_overlay.rsi
+  - type: Appearance
+

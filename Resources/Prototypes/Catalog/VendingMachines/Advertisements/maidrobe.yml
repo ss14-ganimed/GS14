@@ -1,0 +1,13 @@
+- type: advertisementsPack
+  id: MaidRobeAds
+  advertisements:
+    - advertisement-maidrobe-1
+    - advertisement-maidrobe-2
+    - advertisement-maidrobe-3
+    - advertisement-maidrobe-4
+    - advertisement-maidrobe-5
+    - advertisement-maidrobe-6
+    - advertisement-maidrobe-7
+    - advertisement-maidrobe-8
+    - advertisement-maidrobe-9
+    - advertisement-maidrobe-10

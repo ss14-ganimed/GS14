@@ -69,6 +69,13 @@
 
 - type: statusIcon
   parent: JobIcon
+  id: JobIconStationMaid
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: StationMaid
+
+- type: statusIcon
+  parent: JobIcon
   id: JobIconChemist
   icon:
     sprite: Interface/Misc/job_icons.rsi

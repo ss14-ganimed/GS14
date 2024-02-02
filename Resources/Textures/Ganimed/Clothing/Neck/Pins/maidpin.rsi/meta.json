@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "See repo CLA.",
+  "copyright": "By temporaldarkness for Enterprise server private use.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "maid"
+    },
+    {
+      "name": "maid-equipped",
+      "directions": 4
+    }
+  ]
+}

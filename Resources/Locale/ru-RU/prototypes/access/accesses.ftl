@@ -32,3 +32,4 @@ id-card-access-level-nuclear-operative = Ядерный оперативник
 id-card-access-level-syndicate-agent = Синдикат
 id-card-access-level-central-command = Центральное командование
 id-card-access-level-library = Библиотека
+id-card-access-level-maid = Горничная

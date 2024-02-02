@@ -1,0 +1,10 @@
+advertisement-maidrobe-1 = UwU
+advertisement-maidrobe-2 = OwO
+advertisement-maidrobe-3 = >w<
+advertisement-maidrobe-4 = Nya-!
+advertisement-maidrobe-5 = Kawaii-!
+advertisement-maidrobe-6 = Meow~
+advertisement-maidrobe-7 = A clean floor, a clean customer are a key to success for your work!
+advertisement-maidrobe-8 = White hands, company face.
+advertisement-maidrobe-9 = Omae wa mou...
+advertisement-maidrobe-10 = Washy, washy~!

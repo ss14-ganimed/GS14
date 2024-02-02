@@ -533,6 +533,20 @@
     Cloth: 300
 
 - type: latheRecipe
+  id: ClothingUniformJumpskirtJanimaid
+  result: ClothingUniformJumpskirtJanimaid
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
+  id: ClothingUniformJumpskirtJanimaidmini
+  result: ClothingUniformJumpskirtJanimaidmini
+  completetime: 4
+  materials:
+    Cloth: 300
+
+- type: latheRecipe
   id: ClothingUniformJumpskirtSec
   result: ClothingUniformJumpskirtSec
   completetime: 4

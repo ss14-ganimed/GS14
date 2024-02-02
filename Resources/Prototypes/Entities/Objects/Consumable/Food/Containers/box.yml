@@ -47,6 +47,9 @@
     sprite: Objects/Consumable/Food/Baked/donut.rsi
     size: Small
     heldPrefix: box
+    storedRotation: -90
+    shape:
+    - 0,0,1,2
   - type: StorageFill
     contents:
     - id: FoodDonutPink
@@ -65,6 +68,9 @@
     - box5
     - pink-box6
   - type: Appearance
+  - type: Tag
+    tags:
+    - BoxDonut
 
 # Egg
 

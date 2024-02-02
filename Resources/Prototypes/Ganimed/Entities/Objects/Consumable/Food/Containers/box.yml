@@ -1,0 +1,64 @@
+- type: entity
+  parent: [ BoxCardboard, BaseBagOpenClose ]
+  id: FoodBoxDonutJellySlugcat
+  name: jelly slugcat donut box
+  description: Tasty slugcat donuts for your maids!
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/donut.rsi
+    state: box
+    layers:
+    - state: box
+    - state: box-open
+      map: ["openLayer"]
+      visible: false
+    - state: box1
+      map: ["box1"]
+      visible: false
+    - state: pink-box2
+      map: ["pink-box2"]
+      visible: false
+    - state: box3
+      map: ["box3"]
+      visible: false
+    - state: pink-box4
+      map: ["pink-box4"]
+      visible: false
+    - state: box5
+      map: ["box5"]
+      visible: false
+    - state: pink-box6
+      map: ["pink-box6"]
+      visible: false
+  - type: Storage
+    grid:
+    - 0,0,5,0
+    whitelist:
+      tags:
+      - Donut
+  - type: Item
+    sprite: Objects/Consumable/Food/Baked/donut.rsi
+    size: Small
+    heldPrefix: box
+    storedRotation: -90
+    shape:
+    - 0,0,1,2
+  - type: StorageFill
+    contents:
+    - id: FoodDonutJellySlugcat
+      amount: 6
+  - type: ItemCounter
+    count:
+      tags: [Donut]
+    composite: true
+    layerStates:
+    - box1
+    - pink-box2
+    - box3
+    - pink-box4
+    - box5
+    - pink-box6
+  - type: Appearance
+  - type: Tag
+    tags:
+    - BoxDonut

@@ -197,6 +197,9 @@
   id: Bottle
 
 - type: Tag
+  id: BoxDonut
+
+- type: Tag
   id: BoxHug
 
 - type: Tag
@@ -288,6 +291,9 @@
 
 - type: Tag
   id: CartridgeRocket
+
+- type: Tag
+  id: CatEars
 
 # Allows you to walk over tile entities such as lava without steptrigger
 - type: Tag
@@ -505,6 +511,9 @@
 
 - type: Tag
   id: Folder
+
+- type: Tag
+  id: Food
 
 - type: Tag
   id: FoodSnack

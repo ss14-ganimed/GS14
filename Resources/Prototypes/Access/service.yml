@@ -19,6 +19,10 @@
   name: id-card-access-level-janitor
 
 - type: accessLevel
+  id: Maid
+  name: id-card-access-level-maid
+
+- type: accessLevel
   id: Theatre
   name: id-card-access-level-theatre
 
@@ -47,3 +51,4 @@
   - Chapel
   - Library
   - Lawyer
+  - Maid
