@@ -91,10 +91,18 @@
     - SeniorEngineer
     - StationEngineer
     - AtmosphericTechnician
+  prototype: ClothingShoesBootsMag
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsMagSci
+  category: loadout-category-shoes
+  cost: 5
+  exclusive: true
+  whitelistJobs:
     - ResearchDirector
     - SeniorResearcher
     - Roboticist
-  prototype: ClothingShoesBootsMag
+  prototype: ClothingShoesBootsMagSci
 
 - type: loadout
   id: LoadoutShoesClothingShoesBootsJackSec

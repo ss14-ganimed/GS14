@@ -1,7 +1,7 @@
 - type: loadout
   id: LoadoutBeltClothingBeltMilitaryWebbing
   category: loadout-category-belt
-  cost: 4
+  cost: 3
   exclusive: true
   whitelistJobs:
     - SecurityCadet
@@ -47,10 +47,13 @@
 - type: loadout
   id: LoadoutBeltClothingBeltMilitaryWebbingMed
   category: loadout-category-belt
-  cost: 6
+  cost: 3
   exclusive: true
   whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
     - Warden
+    - Detective
     - HeadOfSecurity
     - Captain
     - SeniorOfficer

@@ -226,8 +226,8 @@
   cost: 1
   exclusive: true
   whitelistJobs:
-    - AtmosphericTechnician
-    - ChiefEngineer
+    - Botanist
+    - ServiceWorker
   prototype: ClothingUniformJumpsuitHydroponics
 
 - type: loadout
