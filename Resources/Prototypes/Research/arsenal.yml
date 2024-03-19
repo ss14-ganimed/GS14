@@ -66,6 +66,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - WeaponEnergyGun
 
 - type: technology
   id: NonlethalAmmunition
@@ -145,6 +146,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
+  - WeaponImmolator
 
 - type: technology
   id: AdvancedRiotControl
@@ -161,6 +163,7 @@
   - TelescopicShield
   - HoloprojectorSecurity
   - WeaponDisablerSMG
+  - WeaponIonRifle
 
 # Tier 3
 
