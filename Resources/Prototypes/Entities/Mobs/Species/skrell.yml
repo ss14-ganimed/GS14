@@ -29,7 +29,7 @@
     requiredLegs: 2
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Skreel
+    damageModifierSet: Skrell
   - type: Temperature
     heatDamageThreshold: 400
     coldDamageThreshold: 285
