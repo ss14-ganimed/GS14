@@ -58,12 +58,10 @@
         damage:
           types:
             Heat: -1
-            Brute: -1
-      - !type:PopupMessage
-        type: Local
-        visualType: Large
-        messages: [ "slime-hurt-by-water-popup" ]
-        probability: 0.25
+            Slash: -1
+            Piersing: -1
+            Blunt: -1
+
 
 - type: entity
   parent: MobHumanDummy
