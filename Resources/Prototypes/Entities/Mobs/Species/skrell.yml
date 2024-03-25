@@ -1,0 +1,72 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  save: false
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobSkrell
+  name: Urist McSkrell
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Skrell
+  - type: Hunger
+    starvationDamage:
+      types:
+        Cold: 1
+        Bloodloss: 1
+  - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.
+    sprite: Mobs/Species/Skrell/parts.rsi
+    state: full
+  - type: Thirst
+  - type: SolutionScanner
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: Body
+    prototype: Skrell
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Skrell
+  - type: Temperature
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold : 1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 1 #per second, scales with temperature & other constants
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaled: true
+        damage:
+          types:
+            Heat: -1
+            Slash: -1
+            Piersing: -1
+            Blunt: -1
+
+
+- type: entity
+  parent: MobHumanDummy
+  id: MobSkrellDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: Skrell

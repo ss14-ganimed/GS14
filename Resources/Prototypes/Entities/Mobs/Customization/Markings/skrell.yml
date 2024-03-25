@@ -1,0 +1,27 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: marking
+  id: SkrellHairShort
+  bodyPart: HeadTop
+  speciesRestriction: [Skrell]
+  markingCategory: HeadTop
+  sprites:
+    - sprite: Mobs/Customization/skrell_hair.rsi
+      state: short
+- type: marking
+  id: SkrellHairLong
+  bodyPart: HeadTop
+  speciesRestriction: [Skrell]
+  markingCategory: HeadTop
+  sprites:
+    - sprite: Mobs/Customization/skrell_hair.rsi
+      state: long
+
+- type: marking
+  id: SkrellHairVeryShort
+  bodyPart: HeadTop
+  speciesRestriction: [Skrell]
+  markingCategory: HeadTop
+  sprites:
+    - sprite: Mobs/Customization/skrell_hair.rsi
+      state: very_short

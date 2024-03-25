@@ -9,4 +9,5 @@ species-name-arachnid = Арахнид
 species-name-moth = Ниан
 species-name-skeleton = Скелет
 species-name-vulpkanin = Вульпканин
+species-name-skrell = Скрелл
 species-name-terminator = Терминатор

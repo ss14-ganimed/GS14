@@ -138,6 +138,13 @@
     Cellular: 0.2
 
 - type: damageModifierSet
+  id: Skrell
+  coefficients:
+    Slash: 1.2
+    Cold: 1.5
+    Poison: 0.75
+
+- type: damageModifierSet
   id: Infernal
   coefficients:
     Blunt: 0.8
