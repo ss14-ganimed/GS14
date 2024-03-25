@@ -176,6 +176,7 @@
       - EncryptionKeyCentCom
       - EncryptionKeyStationMaster
       - EncryptionKeyERT
+      - EncryptionKeySpecOps
   - type: Sprite
     sprite: Clothing/Ears/Headsets/ert.rsi
   - type: Clothing
@@ -192,6 +193,7 @@
       - EncryptionKeyCentCom
       - EncryptionKeyStationMaster
       - EncryptionKeyMTF
+      - EncryptionKeySpecOps
   - type: Sprite
     sprite: Clothing/Ears/Headsets/mtf.rsi
   - type: Clothing
