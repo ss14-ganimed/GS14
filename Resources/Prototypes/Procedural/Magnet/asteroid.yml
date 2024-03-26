@@ -1,13 +1,13 @@
 - type: weightedRandom
   id: AsteroidOre
   weights:
-    OreTin: 1.0
-    OreQuartz: 1.0
-    OreCoal: 1.0
-    OreGold: 0.25
-    OreSilver: 0.25
-    OrePlasma: 0.15
-    OreUranium: 0.15
+    OreTin: 1.5
+    OreQuartz: 1.5
+    OreCoal: 1.5
+    OreGold: 0.5
+    OreSilver: 0.5
+    OrePlasma: 0.5
+    OreUranium: 0.5
 
 # Large asteroids, typically 1
 - type: dungeonConfig
