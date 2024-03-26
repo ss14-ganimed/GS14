@@ -1,0 +1,51 @@
+﻿#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: body
+  id: Skrell
+  name: "skrell"
+  root: torso
+  slots:
+    head:
+      part: HeadSkrell
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoSkrell
+      connections:
+      - right_arm
+      - left_arm
+      - right_leg
+      - left_leg
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganSkrellStomach
+        liver: OrganSkrellLiver
+        kidneys: OrganHumanKidneys
+    right_arm:
+      part: RightArmSkrell
+      connections:
+      - right_hand
+    left_arm:
+      part: LeftArmSkrell
+      connections:
+      - left_hand
+    right_hand:
+      part: RightHandSkrell
+    left_hand:
+      part: LeftHandSkrell
+    right_leg:
+      part: RightLegSkrell
+      connections:
+      - right_foot
+    left_leg:
+      part: LeftLegSkrell
+      connections:
+      - left_foot
+    right_foot:
+      part: RightFootSkrell
+    left_foot:
+      part: LeftFootSkrell
