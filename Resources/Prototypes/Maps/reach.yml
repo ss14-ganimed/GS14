@@ -3,16 +3,16 @@
   mapName: 'Reach'
   mapPath: /Maps/reach.yml
   minPlayers: 0
-  maxPlayers: 7
+  maxPlayers: 5
   stations:
     Reach:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Reach Transport {1}'
+          mapNameTemplate: '{0} Рич {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'SC'
+            prefixCreator: 'ТКН'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency.yml
         - type: StationJobs

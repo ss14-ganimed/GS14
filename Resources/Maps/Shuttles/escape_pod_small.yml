@@ -135,6 +135,11 @@ entities:
     - type: Transform
       pos: -1.5,0.5
       parent: 29
+<<<<<<< HEAD
+=======
+      type: Transform
+
+>>>>>>> popitka_upstream
   - uid: 24
     components:
     - type: Transform
@@ -152,6 +157,11 @@ entities:
     - type: Transform
       pos: -1.5,-0.5
       parent: 29
+<<<<<<< HEAD
+=======
+      type: Transform
+
+>>>>>>> popitka_upstream
   - uid: 17
     components:
     - type: Transform
@@ -162,6 +172,11 @@ entities:
     - type: Transform
       pos: 0.5,-0.5
       parent: 29
+<<<<<<< HEAD
+=======
+      type: Transform
+
+>>>>>>> popitka_upstream
 - proto: CableMV
   entities:
   - uid: 19
@@ -169,6 +184,11 @@ entities:
     - type: Transform
       pos: 0.5,-0.5
       parent: 29
+<<<<<<< HEAD
+=======
+      type: Transform
+
+>>>>>>> popitka_upstream
   - uid: 20
     components:
     - type: Transform
@@ -184,6 +204,11 @@ entities:
     - type: Transform
       pos: -1.5,0.5
       parent: 29
+<<<<<<< HEAD
+=======
+      type: Transform
+
+>>>>>>> popitka_upstream
 - proto: ChairPilotSeat
   entities:
   - uid: 26

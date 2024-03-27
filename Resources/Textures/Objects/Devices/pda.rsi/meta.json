@@ -227,6 +227,21 @@
       "name": "pda-seniorofficer"
     },
     {
+      "name": "pda-iaa"
+    },
+    {
+      "name": "pda-coroner"
+    },
+    {
+      "name": "pda-bridgeofficer"
+    },
+    {
+      "name": "pda-tsf"
+    },
+    {
+      "name": "pda-blueshield"
+	},
+	{
       "name": "equipped-IDCARD",
       "directions": 4
     }

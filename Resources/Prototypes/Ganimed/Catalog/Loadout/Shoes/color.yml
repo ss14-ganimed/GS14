@@ -1,0 +1,56 @@
+- type: loadout
+  id: LoadoutShoesClothingShoesColorYellow
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorYellow
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorGreen
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorGreen
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorBrown
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorBrown
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorRed
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorRed
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorOrange
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorOrange
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorBlue
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorBlue
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorPurple
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesColorPurple
+
+- type: loadout
+  id: LoadoutShoesClothingShoesColorBlack
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingShoesColorBlack

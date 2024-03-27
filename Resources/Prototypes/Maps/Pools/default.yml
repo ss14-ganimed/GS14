@@ -1,17 +1,26 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Atlas
-  - Bagel
-  - Box
-  - Cluster
-  - Core
+  - CorvaxAvrite
+  - CorvaxDelta
+  - CorvaxGate
+  - CorvaxIshimura
+  - SillyGanimed
+  - Europa
   - Fland
+  - Gemini
+  - Atlas
+  - ClusterGanimed
+  - Bagel
+  - Aspid
+  - Barratry
+  - BoxGanimed
+  - Core
   - Marathon
   - Meta
   - Omega
   - Origin
-  - Saltern
+  - SalternGanimed
   - Packed
+  - CorvaxSpectrum
   - Reach
-  #- Train <- return after station anchoring PR is finished and merged

@@ -185,7 +185,7 @@
         - output_mv
       sprite: Structures/Power/Generation/portable_generator.rsi
       state: portgen0
-
+      
 - type: entity
   name: S.U.P.E.R.P.A.C.M.A.N.-type portable generator
   description: |-
@@ -238,7 +238,7 @@
         - output_mv
       sprite: Structures/Power/Generation/portable_generator.rsi
       state: portgen1
-
+      
 - type: entity
   name: J.R.P.A.C.M.A.N.-type portable generator
   description: |-

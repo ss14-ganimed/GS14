@@ -1,0 +1,9 @@
+ent-Lantern = лампа
+    .desc = Святейший свет направляет путь.
+ent-LanternFlash = { ent-Lantern }
+    .suffix = Flash
+    .desc = { ent-Lantern.desc }
+ent-LanternPaper = бумажный фонарик
+    .desc = Мы брошены в этом мире как свеча на ветру.
+ent-LanternPaper2 = бумажный фонарик
+    .desc = Мы брошены в этом мире как свеча на ветру.

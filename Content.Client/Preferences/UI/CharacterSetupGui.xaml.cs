@@ -23,6 +23,7 @@ using Robust.Shared.GameObjects;
 using Robust.Shared.IoC;
 using Robust.Shared.Localization;
 using Robust.Shared.Map;
+using Robust.Client.Player;
 using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
@@ -35,6 +36,7 @@ namespace Content.Client.Preferences.UI
     {
         private readonly IClientPreferencesManager _preferencesManager;
         private readonly IEntityManager _entityManager;
+        private readonly IPlayerManager _playerManager;
         private readonly IPrototypeManager _prototypeManager;
         private readonly IConfigurationManager _configurationManager;
         private readonly Button _createNewCharacterButton;
@@ -42,6 +44,7 @@ namespace Content.Client.Preferences.UI
 
         public CharacterSetupGui(
             IEntityManager entityManager,
+            IPlayerManager playerManager,
             IResourceCache resourceCache,
             IClientPreferencesManager preferencesManager,
             IPrototypeManager prototypeManager,
@@ -49,6 +52,7 @@ namespace Content.Client.Preferences.UI
         {
             RobustXamlLoader.Load(this);
             _entityManager = entityManager;
+            _playerManager = playerManager;
             _prototypeManager = prototypeManager;
             _preferencesManager = preferencesManager;
             _configurationManager = configurationManager;
@@ -74,7 +78,7 @@ namespace Content.Client.Preferences.UI
                 args.Event.Handle();
             };
 
-            _humanoidProfileEditor = new HumanoidProfileEditor(preferencesManager, prototypeManager, entityManager, configurationManager);
+            _humanoidProfileEditor = new HumanoidProfileEditor(preferencesManager, prototypeManager, entityManager, configurationManager, playerManager);
             _humanoidProfileEditor.OnProfileChanged += ProfileChanged;
             CharEditor.AddChild(_humanoidProfileEditor);
 
@@ -181,6 +185,7 @@ namespace Content.Client.Preferences.UI
                 if (humanoid != null)
                 {
                     LobbyCharacterPreviewPanel.GiveDummyJobClothes(_previewDummy, humanoid);
+                    LobbyCharacterPreviewPanel.GiveDummyLoadoutItems(_previewDummy, humanoid);
                 }
 
                 var isSelectedCharacter = profile == preferencesManager.Preferences?.SelectedCharacter;

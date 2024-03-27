@@ -6,8 +6,8 @@ using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Ninja.Components;
 using Content.Shared.Ninja.Systems;
-using Content.Shared.Popups;
 using Content.Shared.PowerCell.Components;
+using Content.Shared.Timing;
 using Robust.Shared.Containers;
 
 namespace Content.Server.Ninja.Systems;

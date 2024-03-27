@@ -101,10 +101,6 @@
     sprite: Clothing/Neck/Cloaks/void.rsi
     state: icon
   content:
-  - InvisibleCrate
   - ClothingNeckCloakVoid
-  - FultonBeacon
-  - Fulton
-  - SmokeGrenade
   - SmokeGrenade
   - SmokeGrenade

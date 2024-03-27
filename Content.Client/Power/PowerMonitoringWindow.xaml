@@ -54,7 +54,6 @@
                     <Label Text="{Loc 'power-monitoring-window-label-apc'}"/>
                 </BoxContainer>
             </BoxContainer>
-
             <!-- Power status -->
             <BoxContainer Orientation="Vertical" VerticalExpand="True" SetWidth="440" Margin="0 0 10 10">
 
@@ -102,7 +101,6 @@
                 </BoxContainer>
             </BoxContainer>
         </BoxContainer>
-
         <!-- Footer -->
         <BoxContainer Orientation="Vertical">
             <PanelContainer StyleClasses="LowDivider" />

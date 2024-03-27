@@ -1,0 +1,8 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  save: false
+  name: Urisst McSkrell
+  parent: BaseMobSkrell
+  id: MobSkrell
+

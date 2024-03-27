@@ -5,15 +5,9 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared.Silicons.Laws;
 
-/// <summary>
-/// Lawset data used internally.
-/// </summary>
 [DataDefinition, Serializable, NetSerializable]
-public sealed partial class SiliconLawset
+public partial class SiliconLawset
 {
-    /// <summary>
-    /// List of laws in this lawset.
-    /// </summary>
     [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
     public List<SiliconLaw> Laws = new();
 
@@ -36,12 +30,8 @@ public sealed partial class SiliconLawset
 
         return string.Join(" / ", laws);
     }
-
-    /// <summary>
-    /// Do a clone of this lawset.
-    /// It will have unique laws but their strings are still shared.
-    /// </summary>
-    public SiliconLawset Clone()
+	
+	public SiliconLawset Clone()
     {
         var laws = new List<SiliconLaw>(Laws.Count);
         foreach (var law in Laws)

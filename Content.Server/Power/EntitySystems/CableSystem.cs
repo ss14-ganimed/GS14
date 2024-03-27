@@ -6,6 +6,7 @@ using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Robust.Shared.Map;
+using System.Xml.Schema;
 using CableCuttingFinishedEvent = Content.Shared.Tools.Systems.CableCuttingFinishedEvent;
 using SharedToolSystem = Content.Shared.Tools.Systems.SharedToolSystem;
 
@@ -18,6 +19,7 @@ public sealed partial class CableSystem : EntitySystem
     [Dependency] private readonly StackSystem _stack = default!;
     [Dependency] private readonly ElectrocutionSystem _electrocutionSystem = default!;
     [Dependency] private readonly IAdminLogManager _adminLogs = default!;
+    [Dependency] private readonly PowerMonitoringConsoleSystem _powerMonitoringSystem = default!;
 
     public override void Initialize()
     {

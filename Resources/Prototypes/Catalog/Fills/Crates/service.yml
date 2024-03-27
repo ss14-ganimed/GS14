@@ -319,6 +319,14 @@
           prob: 0.1
 
 - type: entity
+  id: CrateServicePrinterInkCartridge
+  parent: CratePlastic
+  components:
+  - type: StorageFill
+    contents:
+      - id: BookTerminalInkCartridge
+
+- type: entity
   id: CrateJanitorExplosive
   parent: ClosetJanitorBomb
   name: janitorial bomb suit crate

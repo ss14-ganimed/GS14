@@ -103,10 +103,6 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
     private void OnPuddleSpread(Entity<PuddleComponent> entity, ref SpreadNeighborsEvent args)
     {
         // Overflow is the source of the overflowing liquid. This contains the excess fluid above overflow limit (20u)
-        var overflow = GetOverflowSolution(entity.Owner, entity.Comp);
-
-        if (overflow.Volume == FixedPoint2.Zero)
-        {
             RemCompDeferred<ActiveEdgeSpreaderComponent>(entity);
             return;
         }
@@ -547,9 +543,6 @@ public sealed partial class PuddleSystem : SharedPuddleSystem
         var split = _solutionContainerSystem.SplitSolution(puddle.Solution.Value,
             CurrentVolume(uid, puddle) - remaining);
         return split;
-    }
-
-    #region Spill
 
     /// <summary>
     ///     First splashes reagent on reactive entities near the spilling entity, then spills the rest regularly to a

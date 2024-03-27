@@ -77,6 +77,7 @@ public sealed class IdCardSystem : SharedIdCardSystem
             access.Tags.Add(random.ID);
             Dirty(uid, access);
 
+
             _adminLogger.Add(LogType.Action, LogImpact.Medium,
                     $"{ToPrettyString(args.Microwave)} added {random.ID} access to {ToPrettyString(uid):entity}");
         }
@@ -116,6 +117,28 @@ public sealed class IdCardSystem : SharedIdCardSystem
         {
             _adminLogger.Add(LogType.Identity, LogImpact.Low,
                 $"{ToPrettyString(player.Value):player} has changed the job title of {ToPrettyString(uid):entity} to {jobTitle} ");
+        }
+        return true;
+    }
+	
+	public bool TryChangeColor(EntityUid uid, Color? color, IdCardComponent? id = null, EntityUid? player = null)
+    {
+        if (!Resolve(uid, ref id))
+           return false;
+	   
+		if (color is null)
+			return false;
+
+        if (id.JobColor == color.Value)
+            return true;
+		
+        id.JobColor = color.Value;
+        Dirty(id);
+
+        if (player != null)
+        {
+            _adminLogger.Add(LogType.Identity, LogImpact.Low,
+                $"{ToPrettyString(player.Value):player} has changed the color of {ToPrettyString(uid):entity} to {color} ");
         }
         return true;
     }

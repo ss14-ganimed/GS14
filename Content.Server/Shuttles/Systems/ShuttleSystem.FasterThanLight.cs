@@ -70,6 +70,8 @@ public sealed partial class ShuttleSystem
     private readonly HashSet<EntityUid> _lookupEnts = new();
     private readonly HashSet<EntityUid> _immuneEnts = new();
 
+    private HashSet<EntityUid> _lookupEnts = new();
+
     private EntityQuery<BodyComponent> _bodyQuery;
     private EntityQuery<BuckleComponent> _buckleQuery;
     private EntityQuery<FTLBeaconComponent> _beaconQuery;

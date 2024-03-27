@@ -2872,20 +2872,10 @@ entities:
     - type: Transform
       pos: 17.5,35.5
       parent: 1653
-  - uid: 60
-    components:
-    - type: Transform
-      pos: 16.5,35.5
-      parent: 1653
   - uid: 61
     components:
     - type: Transform
       pos: 15.5,35.5
-      parent: 1653
-  - uid: 62
-    components:
-    - type: Transform
-      pos: 14.5,35.5
       parent: 1653
   - uid: 63
     components:
@@ -3107,16 +3097,6 @@ entities:
     - type: Transform
       pos: 20.5,45.5
       parent: 1653
-  - uid: 107
-    components:
-    - type: Transform
-      pos: 21.5,45.5
-      parent: 1653
-  - uid: 108
-    components:
-    - type: Transform
-      pos: 22.5,45.5
-      parent: 1653
   - uid: 109
     components:
     - type: Transform
@@ -3136,11 +3116,6 @@ entities:
     components:
     - type: Transform
       pos: 19.5,46.5
-      parent: 1653
-  - uid: 113
-    components:
-    - type: Transform
-      pos: 19.5,47.5
       parent: 1653
   - uid: 114
     components:
@@ -4232,11 +4207,6 @@ entities:
     - type: Transform
       pos: 46.5,14.5
       parent: 1653
-  - uid: 336
-    components:
-    - type: Transform
-      pos: 43.5,13.5
-      parent: 1653
   - uid: 337
     components:
     - type: Transform
@@ -4286,11 +4256,6 @@ entities:
     components:
     - type: Transform
       pos: 28.5,8.5
-      parent: 1653
-  - uid: 347
-    components:
-    - type: Transform
-      pos: 27.5,8.5
       parent: 1653
   - uid: 348
     components:
@@ -5201,11 +5166,6 @@ entities:
     - type: Transform
       pos: 10.5,46.5
       parent: 1653
-  - uid: 546
-    components:
-    - type: Transform
-      pos: 9.5,46.5
-      parent: 1653
   - uid: 547
     components:
     - type: Transform
@@ -5281,21 +5241,6 @@ entities:
     - type: Transform
       pos: 25.5,21.5
       parent: 1653
-  - uid: 1017
-    components:
-    - type: Transform
-      pos: 26.5,20.5
-      parent: 1653
-  - uid: 1018
-    components:
-    - type: Transform
-      pos: 27.5,20.5
-      parent: 1653
-  - uid: 1019
-    components:
-    - type: Transform
-      pos: 28.5,20.5
-      parent: 1653
   - uid: 1020
     components:
     - type: Transform
@@ -5330,11 +5275,6 @@ entities:
     components:
     - type: Transform
       pos: 29.5,7.5
-      parent: 1653
-  - uid: 1493
-    components:
-    - type: Transform
-      pos: 30.5,7.5
       parent: 1653
   - uid: 1494
     components:

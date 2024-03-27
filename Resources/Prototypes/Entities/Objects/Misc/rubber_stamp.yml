@@ -51,6 +51,38 @@
     state: stamp-cap
 
 - type: entity
+    sprite: Objects/Misc/stamps.rsi
+    state: stamp-cap
+
+- type: entity
+  name: iaa's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampIAA
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-iaa
+    stampedColor: "#508e6e"
+    stampState: "paper_stamp-iaa"
+  - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
+    state: stamp-iaa
+
+- type: entity
+  name: legal department rubber stamp
+  parent: RubberStampBase
+  id: RubberStampLegal
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-legal
+    stampedColor: "#30b680"
+    stampState: "paper_stamp-legal"
+  - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
+    state: stamp-legal
+
+- type: entity
   name: CentCom rubber stamp
   parent: RubberStampBase
   id: RubberStampCentcom
@@ -61,6 +93,7 @@
     stampedColor: "#006600"
     stampState: "paper_stamp-centcom"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-centcom
 
 - type: entity
@@ -100,6 +133,7 @@
     stampedColor: "#ff33cc"
     stampState: "paper_stamp-clown"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-clown
   - type: Tag
     tags:
@@ -116,6 +150,7 @@
     stampedColor: "#c69b17"
     stampState: "paper_stamp-ce"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-ce
 
 - type: entity
@@ -129,6 +164,7 @@
     stampedColor: "#33ccff"
     stampState: "paper_stamp-cmo"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-cmo
 
 - type: entity
@@ -142,6 +178,7 @@
     stampedColor: "#6ec0ea"
     stampState: "paper_stamp-hop"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-hop
 
 - type: entity
@@ -155,6 +192,7 @@
     stampedColor: "#cc0000"
     stampState: "paper_stamp-hos"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-hos
 
 - type: entity
@@ -182,6 +220,7 @@
     stampedColor: "#a23e3e"
     stampState: "paper_stamp-qm"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-qm
 
 - type: entity
@@ -195,6 +234,7 @@
     stampedColor: "#1f66a0"
     stampState: "paper_stamp-rd"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-rd
 
 - type: entity
@@ -207,6 +247,7 @@
     stampedColor: "#000000"
     stampState: "paper_stamp-trader"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-trader
 
 - type: entity
@@ -220,6 +261,7 @@
     stampedColor: "#850000"
     stampState: "paper_stamp-syndicate"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-syndicate
 
 - type: entity
@@ -233,6 +275,7 @@
     stampedColor: "#5b0000"
     stampState: "paper_stamp-warden"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-warden
 
 - type: entity
@@ -245,6 +288,7 @@
     stampedColor: "#00be00"
     stampState: "paper_stamp-ok"
   - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
     state: stamp-ok
 
 - type: entity
@@ -271,3 +315,29 @@
     stampState: "paper_stamp-detective"
   - type: Sprite
     state: stamp-detective
+    
+- type: entity
+  parent: Paper
+  id: StationGoalPaper
+  name: station goal centcomm message
+  description: 'It looks like you have a lot of work to do.'
+  components:
+    - type: Paper
+      stampState: paper_stamp-centcom
+      stampedBy:
+      - stampedName: stamp-component-stamped-name-centcom
+        stampedColor: "#bb3232"
+
+- type: entity
+  name: psychologist's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampPsychologist
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-psychologist
+    stampedColor: "#0082AE"
+    stampState: "paper_stamp-psychologist"
+  - type: Sprite
+    sprite: Objects/Misc/stamps.rsi
+    state: stamp-psychologist

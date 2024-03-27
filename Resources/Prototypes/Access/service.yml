@@ -23,6 +23,10 @@
   name: id-card-access-level-theatre
 
 - type: accessLevel
+  id: Library
+  name: id-card-access-level-library
+
+- type: accessLevel
   id: Chapel
   name: id-card-access-level-chapel
 
@@ -41,4 +45,5 @@
   - Janitor
   - Theatre
   - Chapel
+  - Library
   - Lawyer

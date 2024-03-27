@@ -1,0 +1,83 @@
+- type: loadout
+  id: LoadoutHeadClothingHeadBandBotany
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadBandBotany
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandSkull
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadBandSkull
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandMerc
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - SalvageSpecialist
+    - Quartermaster
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingHeadBandMerc
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandGreen
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadBandGreen
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandGold
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadBandGold
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandBrown
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadBandBrown
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandRed
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadBandRed
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandGrey
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadBandGrey
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandBlue
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadBandBlue
+
+- type: loadout
+  id: LoadoutHeadClothingHeadBandBlack
+  category: loadout-category-head
+  sponsorOnly: true
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadBandBlack
+  

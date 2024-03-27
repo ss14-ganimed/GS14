@@ -7,6 +7,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Content.Shared.Tag;
+using Content.Shared.Timing;
 using Robust.Shared.GameStates;
 using System.Linq;
 
@@ -22,6 +23,7 @@ public abstract class ClothingSystem : EntitySystem
 
     [ValidatePrototypeId<TagPrototype>]
     private const string HairTag = "HidesHair";
+    private const string TailTag = "HidesTail";
 
     [ValidatePrototypeId<TagPrototype>]
     private const string NoseTag = "HidesNose";
@@ -122,6 +124,53 @@ public abstract class ClothingSystem : EntitySystem
             }
         }
         _humanoidSystem.SetLayerVisibility(equipee, layer, shouldLayerShow);
+    }
+    private void OnUseInHand(Entity<ClothingComponent> ent, ref UseInHandEvent args)
+    {
+        if (args.Handled || !ent.Comp.QuickEquip)
+            return;
+
+        var user = args.User;
+        if (!TryComp(user, out InventoryComponent? inv) ||
+            !TryComp(user, out HandsComponent? hands))
+            return;
+
+        QuickEquip(ent, (user, inv, hands));
+        args.Handled = true;
+        args.ApplyDelay = false;
+    }
+
+    private void QuickEquip(
+        Entity<ClothingComponent> toEquipEnt,
+        Entity<InventoryComponent, HandsComponent> userEnt)
+    {
+        foreach (var slotDef in userEnt.Comp1.Slots)
+        {
+            if (!_invSystem.CanEquip(userEnt, toEquipEnt, slotDef.Name, out _, slotDef, userEnt, toEquipEnt))
+                continue;
+
+            if (_invSystem.TryGetSlotEntity(userEnt, slotDef.Name, out var slotEntity, userEnt))
+            {
+                // Item in slot has to be quick equipable as well
+                if (TryComp(slotEntity, out ClothingComponent? item) && !item.QuickEquip)
+                    continue;
+
+                if (!_invSystem.TryUnequip(userEnt, slotDef.Name, true, inventory: userEnt, clothing: toEquipEnt))
+                    continue;
+
+                if (!_invSystem.TryEquip(userEnt, toEquipEnt, slotDef.Name, true, inventory: userEnt, clothing: toEquipEnt))
+                    continue;
+
+                _handsSystem.PickupOrDrop(userEnt, slotEntity.Value, handsComp: userEnt);
+            }
+            else
+            {
+                if (!_invSystem.TryEquip(userEnt, toEquipEnt, slotDef.Name, true, inventory: userEnt, clothing: toEquipEnt))
+                    continue;
+            }
+
+            break;
+        }
     }
 
     protected virtual void OnGotEquipped(EntityUid uid, ClothingComponent component, GotEquippedEvent args)

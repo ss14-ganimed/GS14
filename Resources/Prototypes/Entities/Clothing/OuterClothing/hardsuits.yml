@@ -27,6 +27,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBasic
+  - type: StaminaProtection
+    coefficient: 0.8
 
 #Atmospherics Hardsuit
 - type: entity
@@ -61,6 +63,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitAtmos
+  - type: StaminaProtection
+    coefficient: 0.8
 
 #Engineering Hardsuit
 - type: entity
@@ -95,6 +99,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineering
+  - type: StaminaProtection
+    coefficient: 0.8
 
 #Spationaut Hardsuit
 - type: entity
@@ -124,6 +130,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSpatio
+  - type: StaminaProtection
+    coefficient: 0.8
 
 #Salvage Hardsuit
 - type: entity
@@ -155,6 +163,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSalvage
+  - type: StaminaProtection
+    coefficient: 0.7
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -216,6 +226,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurity
+  - type: StaminaProtection
+    coefficient: 0.55
 
 #Brigmedic Hardsuit
 - type: entity
@@ -243,6 +255,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
+  - type: StaminaProtection
+    coefficient: 0.75
 
 #Warden's Hardsuit
 - type: entity
@@ -273,6 +287,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitWarden
+  - type: StaminaProtection
+    coefficient: 0.55
 
 #Captain's Hardsuit
 - type: entity
@@ -305,6 +321,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCap
+  - type: StaminaProtection
+    coefficient: 0.7
 
 #Chief Engineer's Hardsuit
 - type: entity
@@ -337,6 +355,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
+  - type: StaminaProtection
+    coefficient: 0.7
 
 #Chief Medical Officer's Hardsuit
 - type: entity
@@ -362,6 +382,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMedical
+  - type: StaminaProtection
+    coefficient: 0.85
 
 #Research Director's Hardsuit
 - type: entity
@@ -402,6 +424,8 @@
     clothingPrototype: ClothingHeadHelmetHardsuitRd
   - type: StaticPrice
     price: 750
+  - type: StaminaProtection
+    coefficient: 0.65
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitRd
 
@@ -435,6 +459,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurityRed
+  - type: StaminaProtection
+    coefficient: 0.5
 
 #Luxury Mining Hardsuit
 - type: entity
@@ -466,6 +492,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLuxury
+  - type: StaminaProtection
+    coefficient: 0.85
 
 #ANTAG HARDSUITS
 #Blood-red Hardsuit
@@ -501,11 +529,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndie
-  - type: Tag
-    tags:
-    - MonkeyWearable
-    - Hardsuit
-    - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.3
 
 # Syndicate Medic Hardsuit
 - type: entity
@@ -560,6 +585,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndieElite
+  - type: StaminaProtection
+    coefficient: 0.3
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -592,6 +619,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndieCommander
+  - type: StaminaProtection
+    coefficient: 0.25
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -624,6 +653,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCybersun
+  - type: StaminaProtection
+    coefficient: 0.15
 
 #Wizard Hardsuit
 - type: entity
@@ -656,6 +687,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitWizard
+  - type: StaminaProtection
+    coefficient: 0.55
 
 #Ling Space Suit
 - type: entity
@@ -686,6 +719,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLing
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Pirate EVA Suit (Deep Space EVA Suit)
 #Despite visually appearing like a softsuit, it functions exactly like a hardsuit would (parents off of base hardsuit, has resistances and toggleable clothing, etc.) so it goes here.
@@ -716,6 +751,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitPirateEVA
+  - type: StaminaProtection
+    coefficient: 0.75
   - type: StaticPrice
     price: 0
 
@@ -749,6 +786,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitPirateCap
+  - type: StaminaProtection
+    coefficient: 0.7
   - type: StaticPrice
     price: 0
 
@@ -860,6 +899,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitDeathsquad
+  - type: StaminaProtection
+    coefficient: 0.15
 
 #CBURN Hardsuit
 - type: entity
@@ -896,6 +937,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetCBURN
+  - type: StaminaProtection
+    coefficient: 0.6
 
 #MISC. HARDSUITS
 #Clown Hardsuit
@@ -930,23 +973,43 @@
     node: clownHardsuit
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitClown
+  - type: StaminaProtection
+    coefficient: 0.9
 
-#Mime Hardsuit
 - type: entity
-  parent: ClothingOuterHardsuitClown
-  id: ClothingOuterHardsuitMime
-  name: mime hardsuit
-  description: A custom-made mime hardsuit.
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitCBURNLeader
+  name: CBURN commander exosuit
+  description: A lightweight yet strong exosuit used for special cleanup operations.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Hardsuits/mime.rsi
+    sprite: Corvax/Clothing/OuterClothing/hardsuits/cburncommander.rsi
   - type: Clothing
-    sprite: Clothing/OuterClothing/Hardsuits/mime.rsi
-  - type: Construction
-    graph: MimeHardsuit
-    node: mimeHardsuit
+    sprite: Corvax/Clothing/OuterClothing/hardsuits/cburncommander.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: TemperatureProtection
+    coefficient: 0.001    
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.6
+        Heat: 0.05
+        Cold: 0.1
+        Shock: 0.1
+        Radiation: 0.1
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMime
+    clothingPrototype: ClothingHeadHelmetCBURNLeader
+  - type: StaminaProtection
+    coefficient: 0.7
 
 #Santa's Hardsuit
 - type: entity

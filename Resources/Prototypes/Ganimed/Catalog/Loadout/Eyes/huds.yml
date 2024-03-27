@@ -1,0 +1,65 @@
+- type: loadout
+  id: LoadoutEyesClothingEyesHudDiagnostic
+  category: loadout-category-eyes
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - Quartermaster
+    - CargoTechnician
+    - SalvageSpecialist
+    - ChiefEngineer
+    - SeniorEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+    - StationEngineer
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingEyesHudDiagnostic
+
+- type: loadout
+  id: LoadoutEyesClothingEyesHudMedical
+  category: loadout-category-eyes
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Brigmedic
+    - Coroner
+  prototype: ClothingEyesHudMedical
+
+- type: loadout
+  id: LoadoutEyesClothingEyesHudSecurity
+  category: loadout-category-eyes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - Brigmedic
+    - BlueShield
+    - BridgeOfficer
+  prototype: ClothingEyesHudSecurity

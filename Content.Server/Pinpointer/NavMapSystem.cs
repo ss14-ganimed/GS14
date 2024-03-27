@@ -70,7 +70,6 @@ public sealed class NavMapSystem : SharedNavMapSystem
 
     private void OnNavMapDoorStartup(Entity<NavMapDoorComponent> ent, ref ComponentStartup args)
     {
-        RefreshNavGrid(ent);
     }
 
     private void OnNavMapDoorAnchor(Entity<NavMapDoorComponent> ent, ref AnchorStateChangedEvent args)
@@ -79,8 +78,6 @@ public sealed class NavMapSystem : SharedNavMapSystem
     }
 
     private void OnConfigureMessage(Entity<ConfigurableNavMapBeaconComponent> ent, ref NavMapBeaconConfigureBuiMessage args)
-    {
-        if (args.Session.AttachedEntity is not { } user)
             return;
 
         if (!TryComp<NavMapBeaconComponent>(ent, out var navMap))

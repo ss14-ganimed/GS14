@@ -1,0 +1,74 @@
+
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitIan
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterSuitIan
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitCarp
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterSuitCarp
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCardborg
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  prototype: ClothingOuterCardborg
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCardborgOriginal
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  prototype: ClothingOuterCardborgOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitMonkey
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterSuitMonkey
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSkub
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterSkub
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitChicken
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterSuitChicken
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitBomb
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterSuitBomb
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterWizardViolet
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterWizardViolet

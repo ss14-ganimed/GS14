@@ -27,8 +27,6 @@ public sealed class Dungeon
         Rooms = rooms;
 
         foreach (var room in Rooms)
-        {
             Entrances.UnionWith(room.Entrances);
         }
     }
-}

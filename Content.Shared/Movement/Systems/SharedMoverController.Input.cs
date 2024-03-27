@@ -83,6 +83,28 @@ namespace Content.Shared.Movement.Systems
             return oldMovement;
         }
 
+        /// <summary>
+        /// Gets the buttons held with opposites cancelled out.
+        /// </summary>
+        public static MoveButtons GetNormalizedMovement(MoveButtons buttons)
+        {
+            var oldMovement = buttons;
+
+            if ((oldMovement & (MoveButtons.Left | MoveButtons.Right)) == (MoveButtons.Left | MoveButtons.Right))
+            {
+                oldMovement &= ~MoveButtons.Left;
+                oldMovement &= ~MoveButtons.Right;
+            }
+
+            if ((oldMovement & (MoveButtons.Up | MoveButtons.Down)) == (MoveButtons.Up | MoveButtons.Down))
+            {
+                oldMovement &= ~MoveButtons.Up;
+                oldMovement &= ~MoveButtons.Down;
+            }
+
+            return oldMovement;
+        }
+
         protected void SetMoveInput(InputMoverComponent component, MoveButtons buttons)
         {
             if (component.HeldMoveButtons == buttons)

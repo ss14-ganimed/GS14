@@ -574,6 +574,15 @@ namespace Content.Server.Atmos.EntitySystems
                     continue;
                 }
 
+                if (!TryComp(owner, out TransformComponent? x)
+                    || x.MapUid == null
+                    || TerminatingOrDeleted(x.MapUid.Value)
+                    || x.MapID == MapId.Nullspace)
+                {
+                    Log.Error($"Attempted to process atmos without a map? Entity: {ToPrettyString(owner)}. Map: {ToPrettyString(x?.MapUid)}. MapId: {x?.MapID}");
+                    continue;
+                }
+
                 if (atmosphere.LifeStage >= ComponentLifeStage.Stopping || Paused(owner) || !atmosphere.Simulated)
                     continue;
 

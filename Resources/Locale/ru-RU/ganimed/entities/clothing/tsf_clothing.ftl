@@ -1,0 +1,16 @@
+ent-ClothingUniformJumpsuitTSF = комбинезон флота
+    .desc = Выглядит технологично.
+ent-ClothingUniformJumpsuitTSFCommander = комбинезон командира флота
+    .desc = Выглядит технологично.
+ent-ClothingShoesBootsMagTSF = боевые магнитные ботинки
+    .desc = Обычные тапочки для военных.
+ent-ClothingHeadsetTSF = гарнитура ТСФ
+    .desc = Гарнитура, используемая ТСФ.
+ent-ClothingHeadHelmetHardsuitTSF = шлем скафандра ТСФ
+    .desc = Бронированный шлем, используемый военными скафандрами ТСФ.
+ent-ClothingOuterHardsuitTSF = легкий скафандр ТСФ
+    .desc = Скафандр, используемый флотом ТСФ.
+ent-ClothingOuterHardsuitTSFHeavy = тяжелый скафандр ТСФ
+    .desc = Скафандр, используемый флотом ТСФ против агрессивной фауны.
+ent-ClothingHeadHelmetHardsuitTSFHeavy = шлем тяжелого скафандра ТСФ
+    .desc = Бронированный шлем, используемый военными скафандрами ТСФ против агрессивных форм жизни.

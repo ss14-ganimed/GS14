@@ -73,6 +73,8 @@
   id: KoboldCubeWrapped
   description: Unwrap this to get a kobold cube.
   components:
+  - type: Item
+    size: Tiny
   - type: SpawnItemsOnUse
     items:
       - id: KoboldCube
@@ -84,6 +86,13 @@
 
 - type: entity
   parent: MonkeyCubeBox
+    state: wrapper
+  - type: Tag
+    tags:
+    - MonkeyCube
+
+- type: entity
+  parent: BoxCardboard
   name: monkey cube box
   suffix: Syndicate
   id: SyndicateSpongeBox

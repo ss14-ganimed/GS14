@@ -1,0 +1,114 @@
+- type: loadout
+  id: LoadoutShoesClothingShoesClownLarge
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingShoesClownLarge
+
+- type: loadout
+  id: LoadoutShoesClothingShoesClown
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingShoesClown
+
+- type: loadout
+  id: LoadoutShoesClothingShoesCluwneRemoveable
+  category: loadout-category-shoes
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingShoesCluwneRemoveable
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsPerformer
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  prototype: ClothingShoesBootsPerformer
+
+- type: loadout
+  id: LoadoutShoesClothingShoesCult
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Chaplain
+  prototype: ClothingShoesCult
+
+- type: loadout
+  id: LoadoutShoesClothingShoesFlippers
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  prototype: ClothingShoesFlippers
+
+- type: loadout
+  id: LoadoutShoesClothingShoeSlippersDuck
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  prototype: ClothingShoeSlippersDuck
+
+- type: loadout
+  id: LoadoutShoesClothingShoesSlippers
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  prototype: ClothingShoesSlippers
+
+- type: loadout
+  id: LoadoutShoesClothingShoesWizard
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  prototype: ClothingShoesWizard
+
+- type: loadout
+  id: LoadoutShoesClothingShoesChef
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Chef
+    - ServiceWorker
+    - Bartender
+  prototype: ClothingShoesChef
+
+- type: loadout
+  id: LoadoutShoesClothingShoesTourist
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingShoesTourist
+
+- type: loadout
+  id: LoadoutShoesClothingShoesDameDane
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  prototype: ClothingShoesDameDane
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsLaceup
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingShoesBootsLaceup
+
+- type: loadout
+  id: LoadoutShoesClothingShoesJester
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingShoesJester

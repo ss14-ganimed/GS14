@@ -1,11 +1,18 @@
 - type: dataset
   id: ShuttleNames
   values:
-  - A Shuttle Will Not Occur
-  - Big Money Shuttle
-  - Engine Change
-  - Ships-the-Cargo
-  - Shootel
-  - Shuttle McShuttleface
-  - ShuttleShuttle
-  - Urist McShuttle
+  - ТКН Прибыль
+  - ТКН КредитныйШаттл
+  - ТКН АБОТЧ
+  - ТКН НеПриближайся
+  - ТКН Каргонец
+  - ТКН МногоДеняг
+  - ТКН Уроборос
+  - ТКН Урист МакШаттл
+  - ТКН Корпоративный
+  - ТКН Кочевник
+  - ТКН Бандоконтрист
+  - ТКН НеЭвакШаттл
+  - ТКН Кредит
+  - ТКН НеШахтёрский
+  - ТКН УжеЛетит

@@ -6,6 +6,7 @@ using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.Projectiles;
 using Robust.Shared.Physics.Events;
+using Content.Shared.Mobs.Components;
 using Robust.Shared.Player;
 
 namespace Content.Server.Projectiles;

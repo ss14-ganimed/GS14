@@ -1,0 +1,23 @@
+- type: stationGoal
+  id: StationGoalShuttle
+  text: station-goal-shuttle
+
+- type: stationGoal
+  id: StationGoalTournament
+  text: station-goal-tournament
+
+- type: stationGoal
+  id: StationGoalSolarPanels
+  text: station-goal-solar-panels
+
+- type: stationGoal
+  id: StationGoalScience
+  text: station-goal-science
+
+- type: stationGoal
+  id: StationGoalBank
+  text: station-goal-bank
+
+- type: stationGoal
+  id: StationGoalZoo
+  text: station-goal-zoo

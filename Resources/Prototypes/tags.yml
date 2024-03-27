@@ -223,6 +223,9 @@
   id: BoxHug
 
 - type: Tag
+  id: Burnt
+
+- type: Tag
   id: BrassInstrument
 
 - type: Tag
@@ -255,6 +258,9 @@
 - type: Tag
   id: BypassInteractionRangeChecks
 
+- type: Tag
+  id: BypassInteractionRangeChecks
+  
 - type: Tag
   id: CableCoil
 
@@ -693,6 +699,9 @@
 
 - type: Tag
   id: HidesNose # for non-standard noses.
+  
+- type: Tag
+  id: HidesTail # for spacesuit.
 
 - type: Tag
   id: HighRiskItem
@@ -930,13 +939,13 @@
   id: Packet
 
 - type: Tag
+  id: Payload # for grenade/bomb crafting
+
+- type: Tag
   id: Paper
 
 - type: Tag
   id: Pancake
-
-- type: Tag
-  id: Payload # for grenade/bomb crafting
 
 - type: Tag
   id: Pen
@@ -1097,6 +1106,9 @@
 
 - type: Tag
   id: ShellShotgun
+
+- type: Tag
+  id: PelletShotgunFlare
 
 - type: Tag
   id: Shiv
@@ -1315,3 +1327,24 @@
 
 - type: Tag
   id: WriteIgnoreStamps
+
+- type: Tag
+  id: RifleStock
+
+- type: Tag
+  id: ModularReceiver
+
+- type: Tag
+  id: MindShield
+
+- type: Tag
+  id: GlassesNearsight
+
+- type: Tag
+  id: GlassesMonochromacy
+
+- type: Tag
+  id: GlassesChromaticAberration
+
+- type: Tag
+  id:  boots

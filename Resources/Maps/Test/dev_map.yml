@@ -780,13 +780,23 @@ entities:
       rot: 3.141592653589793 rad
       pos: -5.5,-14.5
       parent: 179
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: ArrivalsShuttleTimer
   entities:
   - uid: 1191
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: -7.5,5.5
       parent: 179
+=======
+    - pos: -7.5,5.5
+      parent: 179
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: AtmosDeviceFanTiny
   entities:
   - uid: 992
@@ -4944,6 +4954,17 @@ entities:
     - type: Transform
       pos: -1.235331,4.739151
       parent: 179
+<<<<<<< HEAD
+=======
+      type: Transform
+- proto: Screen
+  entities:
+  - uid: 1192
+    components:
+    - pos: 4.5,-14.5
+      parent: 179
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: SeedExtractor
   entities:
   - uid: 65

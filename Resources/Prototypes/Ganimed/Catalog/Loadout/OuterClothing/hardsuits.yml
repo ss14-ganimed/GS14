@@ -1,0 +1,111 @@
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitEmergency
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - StationEngineer
+    - SeniorEngineer
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+  prototype: ClothingOuterSuitEmergency
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitAtmosFire
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+  prototype: ClothingOuterSuitAtmosFire
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitAncientEVA
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+  prototype: ClothingOuterHardsuitAncientEVA
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitFire
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterSuitFire
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitBasic
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterHardsuitBasic
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorHeavyRed
+  category: loadout-category-outerClothing
+  cost: 10
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingOuterArmorHeavyRed
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitSpatio
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - Quartermaster
+    - SalvageSpecialist
+  prototype: ClothingOuterHardsuitSpatio
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitVoidParamed
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - Paramedic
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+  prototype: ClothingOuterHardsuitVoidParamed
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitVoidParamedAlter
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - Paramedic
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+  prototype: ClothingOuterHardsuitVoidParamedAlter
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitVoidParamedOriginal
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - Paramedic
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+  prototype: ClothingOuterHardsuitVoidParamedOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHardsuitLuxury
+  category: loadout-category-outerClothing
+  cost: 12
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Quartermaster
+  prototype: ClothingOuterHardsuitLuxury
+  

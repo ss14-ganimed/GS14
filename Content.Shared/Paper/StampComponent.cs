@@ -22,6 +22,9 @@ public partial struct StampDisplayInfo
 
     [DataField("stampedColor")]
     public Color StampedColor;
+
+    [DataField("blockWriting")]
+    public bool BlockWriting = true;
 };
 
 [RegisterComponent]

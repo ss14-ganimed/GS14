@@ -21,6 +21,12 @@
     speechSounds: Vox
   - type: TypingIndicator
     proto: vox
+  - type: InventorySlots
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatChicken
+      amount: 5
   - type: Vocal
     sounds:
       Male: UnisexVox

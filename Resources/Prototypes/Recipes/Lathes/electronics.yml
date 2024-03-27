@@ -141,6 +141,8 @@
   id: CondenserMachineCircuitBoard
   result: CondenserMachineCircuitBoard
   category: Circuitry
+  id: CondenserMachineCircuitBoard
+  result: CondenserMachineCircuitBoard
   completetime: 4
   materials:
     Steel: 100
@@ -218,6 +220,15 @@
   id: BiofabricatorMachineCircuitboard
   result: BiofabricatorMachineCircuitboard
   category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 900
+     Gold: 100
+
+- type: latheRecipe
+  id: BiofabricatorMachineCircuitboard
+  result: BiofabricatorMachineCircuitboard
   completetime: 4
   materials:
      Steel: 100
@@ -435,6 +446,15 @@
      Gold: 100
 
 - type: latheRecipe
+  id: CriminalRecordsComputerCircuitboard
+  result: CriminalRecordsComputerCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 900
+     Gold: 100
+
+- type: latheRecipe
   id: RadarConsoleCircuitboard
   result: RadarConsoleCircuitboard
   category: Circuitry
@@ -502,6 +522,14 @@
   id: OreProcessorIndustrialMachineCircuitboard
   result: OreProcessorIndustrialMachineCircuitboard
   category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 900
+
+- type: latheRecipe
+  id: OreProcessorIndustrialMachineCircuitboard
+  result: OreProcessorIndustrialMachineCircuitboard
   completetime: 4
   materials:
     Steel: 100

@@ -65,6 +65,10 @@ public sealed class SignalTimerSystem : EntitySystem
     public void Trigger(EntityUid uid, SignalTimerComponent signalTimer)
     {
         RemComp<ActiveSignalTimerComponent>(uid);
+        if (TryComp<AppearanceComponent>(uid, out var appearance))
+        {
+            _appearanceSystem.SetData(uid, TextScreenVisuals.ScreenText, new string?[] { signalTimer.Label }, appearance);
+        }
 
         if (TryComp<AppearanceComponent>(uid, out var appearance))
         {

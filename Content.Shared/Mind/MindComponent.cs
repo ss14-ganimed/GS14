@@ -97,6 +97,9 @@ namespace Content.Shared.Mind
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField("preventSuicide")]
         public bool PreventSuicide { get; set; }
+		
+        [DataField("incognito")]
+        public bool Incognito { get; set; }
 
         /// <summary>
         ///     The session of the player owning this mind.

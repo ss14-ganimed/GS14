@@ -284,6 +284,16 @@
     layoutId: AirlockCommand
 
 - type: entity
+  parent: AirlockCentralCommand
+  id: AirlockCentralCommandLocked
+  suffix: Central Command, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
   parent: AirlockCommand
   id: AirlockCommandLocked
   suffix: Command, Locked
@@ -302,6 +312,38 @@
     access: [["Captain"]]
   - type: Wires
     layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockCentcom
+  id: AirlockCentcomLocked
+  suffix: Centcom, Locked
+  components:
+  - type: AccessReader
+    access: [["Centcom"]]
+
+- type: entity
+  parent: AirlockCentcom
+  id: AirlockSpecOpsLocked
+  suffix: SpecOps, Locked
+  components:
+  - type: AccessReader
+    access: [["SpecOps"]]
+
+- type: entity
+  parent: AirlockExternalCentcom
+  id: AirlockExternalCentcomLocked
+  suffix: External, Centcom, Locked
+  components:
+  - type: AccessReader
+    access: [["Centcom", "External"]]
+
+- type: entity
+  parent: AirlockExternalCentcom
+  id: AirlockExternalSpecOpsLocked
+  suffix: External, SpecOps, Locked
+  components:
+  - type: AccessReader
+    access: [["SpecOps", "External"]]
 
 - type: entity
   parent: AirlockCommand
@@ -354,7 +396,7 @@
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCommand
+  parent: AirlockCargo
   id: AirlockQuartermasterLocked
   suffix: Quartermaster, Locked
   components:
@@ -679,6 +721,16 @@
     layoutId: AirlockCommand
 
 - type: entity
+  parent: AirlockCentralCommandGlass
+  id: AirlockCentralCommandGlassLocked
+  suffix: Central Command, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
   parent: AirlockCommandGlass
   id: AirlockCommandGlassLocked
   suffix: Command, Locked
@@ -749,7 +801,7 @@
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCommandGlass
+  parent: AirlockCargoGlass
   id: AirlockQuartermasterGlassLocked
   suffix: Quartermaster, Locked
   components:

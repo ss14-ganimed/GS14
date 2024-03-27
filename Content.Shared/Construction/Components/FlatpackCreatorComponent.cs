@@ -27,10 +27,6 @@ public sealed partial class FlatpackCreatorComponent : Component
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
     [AutoPausedField]
-    public TimeSpan PackEndTime;
-
-    /// <summary>
-    /// How long packing lasts.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan PackDuration = TimeSpan.FromSeconds(3);

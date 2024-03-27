@@ -47,9 +47,15 @@ entities:
           ind: 1,-1
           tiles: eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
           version: 6
+<<<<<<< HEAD
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
+=======
+      type: MapGrid
+    - type: Broadphase
+    - bodyStatus: InAir
+>>>>>>> popitka_upstream
       angularDamping: 0.05
       linearDamping: 0.05
       fixedRotation: False
@@ -315,6 +321,10 @@ entities:
           decals:
             61: 3,-8
             62: 3,-10
+<<<<<<< HEAD
+=======
+      type: DecalGrid
+>>>>>>> popitka_upstream
     - type: RadiationGridResistance
     - type: GridAtmosphere
       version: 2
@@ -568,10 +578,15 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.5,-3.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: BlastDoorOpen
   entities:
   - uid: 373
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 9.5,1.5
       parent: 2
@@ -658,19 +673,117 @@ entities:
     - type: DeviceLinkSink
       links:
       - 604
+=======
+    - pos: 9.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 374
+    components:
+    - pos: 6.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 379
+    components:
+    - pos: 7.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 380
+    components:
+    - pos: 8.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 429
+    components:
+    - pos: 11.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 436
+    components:
+    - pos: 10.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 437
+    components:
+    - pos: 5.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 565
+    components:
+    - pos: 5.5,0.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 601
+    components:
+    - pos: 12.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 602
+    components:
+    - pos: 13.5,1.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+  - uid: 603
+    components:
+    - pos: 13.5,0.5
+      parent: 2
+      type: Transform
+    - links:
+      - 604
+      type: DeviceLinkSink
+>>>>>>> popitka_upstream
 - proto: BoxBodyBag
   entities:
   - uid: 591
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 8.497858,-3.4616704
       parent: 2
+=======
+    - pos: 8.497858,-3.4616704
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: BoxSyringe
   entities:
   - uid: 370
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 7.4030514,-5.3416786
+=======
+    - pos: 7.4030514,-5.3416786
+>>>>>>> popitka_upstream
       parent: 2
 - proto: BrigTimer
   entities:
@@ -686,6 +799,10 @@ entities:
     - type: Transform
       pos: 11.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 21
     components:
     - type: Transform
@@ -696,6 +813,10 @@ entities:
     - type: Transform
       pos: 8.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 23
     components:
     - type: Transform
@@ -721,6 +842,10 @@ entities:
     - type: Transform
       pos: 8.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 28
     components:
     - type: Transform
@@ -821,10 +946,17 @@ entities:
     - type: Transform
       pos: 9.5,-2.5
       parent: 2
+<<<<<<< HEAD
   - uid: 48
     components:
     - type: Transform
       pos: 11.5,-17.5
+=======
+      type: Transform
+  - uid: 48
+    components:
+    - pos: 11.5,-17.5
+>>>>>>> popitka_upstream
       parent: 2
   - uid: 49
     components:
@@ -841,6 +973,10 @@ entities:
     - type: Transform
       pos: 8.5,-2.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 52
     components:
     - type: Transform
@@ -851,6 +987,10 @@ entities:
     - type: Transform
       pos: 6.5,-2.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 54
     components:
     - type: Transform
@@ -871,16 +1011,28 @@ entities:
     - type: Transform
       pos: 14.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 58
     components:
     - type: Transform
       pos: 15.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 59
     components:
     - type: Transform
       pos: 16.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 60
     components:
     - type: Transform
@@ -891,6 +1043,10 @@ entities:
     - type: Transform
       pos: 16.5,-8.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 62
     components:
     - type: Transform
@@ -901,16 +1057,28 @@ entities:
     - type: Transform
       pos: 16.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 64
     components:
     - type: Transform
       pos: 15.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 65
     components:
     - type: Transform
       pos: 14.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 66
     components:
     - type: Transform
@@ -966,6 +1134,10 @@ entities:
     - type: Transform
       pos: 2.5,-8.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 77
     components:
     - type: Transform
@@ -976,16 +1148,28 @@ entities:
     - type: Transform
       pos: 2.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 79
     components:
     - type: Transform
       pos: 3.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 80
     components:
     - type: Transform
       pos: 4.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 81
     components:
     - type: Transform
@@ -1001,6 +1185,10 @@ entities:
     - type: Transform
       pos: 4.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 84
     components:
     - type: Transform
@@ -1031,11 +1219,19 @@ entities:
     - type: Transform
       pos: 11.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 90
     components:
     - type: Transform
       pos: 12.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 91
     components:
     - type: Transform
@@ -1051,6 +1247,10 @@ entities:
     - type: Transform
       pos: 9.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 94
     components:
     - type: Transform
@@ -1081,11 +1281,19 @@ entities:
     - type: Transform
       pos: 3.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 100
     components:
     - type: Transform
       pos: 2.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 101
     components:
     - type: Transform
@@ -1096,16 +1304,28 @@ entities:
     - type: Transform
       pos: 3.5,-5.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 103
     components:
     - type: Transform
       pos: 3.5,-2.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 104
     components:
     - type: Transform
       pos: 3.5,-3.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 105
     components:
     - type: Transform
@@ -1121,11 +1341,19 @@ entities:
     - type: Transform
       pos: 4.5,1.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 108
     components:
     - type: Transform
       pos: 3.5,0.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 109
     components:
     - type: Transform
@@ -1156,36 +1384,64 @@ entities:
     - type: Transform
       pos: 15.5,0.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 115
     components:
     - type: Transform
       pos: 15.5,-5.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 116
     components:
     - type: Transform
       pos: 15.5,-3.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 117
     components:
     - type: Transform
       pos: 15.5,-2.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 118
     components:
     - type: Transform
       pos: 15.5,-1.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 119
     components:
     - type: Transform
       pos: 14.5,-11.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 120
     components:
     - type: Transform
       pos: 14.5,-15.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 121
     components:
     - type: Transform
@@ -1201,6 +1457,10 @@ entities:
     - type: Transform
       pos: 4.5,-15.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 124
     components:
     - type: Transform
@@ -1231,11 +1491,19 @@ entities:
     - type: Transform
       pos: 3.5,-15.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 130
     components:
     - type: Transform
       pos: 3.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 131
     components:
     - type: Transform
@@ -1256,56 +1524,100 @@ entities:
     - type: Transform
       pos: 7.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 135
     components:
     - type: Transform
       pos: 8.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 136
     components:
     - type: Transform
       pos: 3.5,-11.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 428
     components:
     - type: Transform
       pos: 14.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 471
     components:
     - type: Transform
       pos: 15.5,-15.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 549
     components:
     - type: Transform
       pos: 10.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 550
     components:
     - type: Transform
       pos: 11.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 551
     components:
     - type: Transform
       pos: 12.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 552
     components:
     - type: Transform
       pos: 13.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 553
     components:
     - type: Transform
       pos: 14.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 554
     components:
     - type: Transform
       pos: 14.5,-20.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 555
     components:
     - type: Transform
@@ -1316,6 +1628,10 @@ entities:
     - type: Transform
       pos: 15.5,-21.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 562
     components:
     - type: Transform
@@ -1333,9 +1649,15 @@ entities:
       parent: 2
   - uid: 570
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 10.5,-17.5
       parent: 2
+=======
+    - pos: 10.5,-17.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 571
     components:
     - type: Transform
@@ -1361,6 +1683,15 @@ entities:
     - type: Transform
       pos: 9.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+  - uid: 644
+    components:
+    - pos: 9.5,-17.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: CableHV
   entities:
   - uid: 137
@@ -1390,21 +1721,37 @@ entities:
     - type: Transform
       pos: 8.5,-11.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 141
     components:
     - type: Transform
       pos: 8.5,-12.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 142
     components:
     - type: Transform
       pos: 8.5,-13.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 143
     components:
     - type: Transform
       pos: 8.5,-14.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 144
     components:
     - type: Transform
@@ -1415,6 +1762,10 @@ entities:
     - type: Transform
       pos: 8.5,-15.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 146
     components:
     - type: Transform
@@ -1425,31 +1776,55 @@ entities:
     - type: Transform
       pos: 12.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 148
     components:
     - type: Transform
       pos: 14.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 149
     components:
     - type: Transform
       pos: 13.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 150
     components:
     - type: Transform
       pos: 12.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 151
     components:
     - type: Transform
       pos: 11.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 152
     components:
     - type: Transform
       pos: 10.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 153
     components:
     - type: Transform
@@ -1460,16 +1835,28 @@ entities:
     - type: Transform
       pos: 8.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 155
     components:
     - type: Transform
       pos: 8.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 156
     components:
     - type: Transform
       pos: 11.5,-10.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 157
     components:
     - type: Transform
@@ -1648,14 +2035,179 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 16.5,-9.5
       parent: 2
+<<<<<<< HEAD
 - proto: ChairOfficeLight
   entities:
+=======
+      type: Transform
+- proto: Catwalk
+  entities:
+  - uid: 617
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-11.5
+      parent: 2
+      type: Transform
+  - uid: 618
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-11.5
+      parent: 2
+      type: Transform
+  - uid: 619
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-15.5
+      parent: 2
+      type: Transform
+  - uid: 620
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-15.5
+      parent: 2
+      type: Transform
+  - uid: 621
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 16.5,-15.5
+      parent: 2
+      type: Transform
+  - uid: 622
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,-15.5
+      parent: 2
+      type: Transform
+  - uid: 623
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 16.5,-11.5
+      parent: 2
+      type: Transform
+  - uid: 624
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,-11.5
+      parent: 2
+      type: Transform
+  - uid: 625
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 16.5,-21.5
+      parent: 2
+      type: Transform
+  - uid: 626
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,-21.5
+      parent: 2
+      type: Transform
+  - uid: 627
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-21.5
+      parent: 2
+      type: Transform
+  - uid: 628
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-21.5
+      parent: 2
+      type: Transform
+  - uid: 629
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-5.5
+      parent: 2
+      type: Transform
+  - uid: 630
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,-3.5
+      parent: 2
+      type: Transform
+  - uid: 631
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,-5.5
+      parent: 2
+      type: Transform
+  - uid: 632
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,-3.5
+      parent: 2
+      type: Transform
+  - uid: 633
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,0.5
+      parent: 2
+      type: Transform
+  - uid: 634
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 15.5,1.5
+      parent: 2
+      type: Transform
+  - uid: 635
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 14.5,1.5
+      parent: 2
+      type: Transform
+  - uid: 636
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 4.5,1.5
+      parent: 2
+      type: Transform
+  - uid: 637
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,1.5
+      parent: 2
+      type: Transform
+  - uid: 638
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 3.5,0.5
+      parent: 2
+      type: Transform
+  - uid: 639
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-9.5
+      parent: 2
+      type: Transform
+  - uid: 640
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-7.5
+      parent: 2
+      type: Transform
+  - uid: 641
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 16.5,-7.5
+      parent: 2
+      type: Transform
+  - uid: 642
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 16.5,-9.5
+      parent: 2
+      type: Transform
+- proto: ChairOfficeLight
+  entities:
+>>>>>>> popitka_upstream
   - uid: 162
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,-12.5
       parent: 2
+<<<<<<< HEAD
   - uid: 371
     components:
     - type: Transform
@@ -1666,6 +2218,19 @@ entities:
     - type: Transform
       pos: 8.5,-4.5
       parent: 2
+=======
+      type: Transform
+  - uid: 371
+    components:
+    - pos: 7.5,-4.5
+      parent: 2
+      type: Transform
+  - uid: 372
+    components:
+    - pos: 8.5,-4.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: ChairPilotSeat
   entities:
   - uid: 163
@@ -1903,6 +2468,10 @@ entities:
     - type: Transform
       pos: 10.5,0.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 1
@@ -1921,8 +2490,12 @@ entities:
   entities:
   - uid: 247
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 7.632218,-5.5291786
+=======
+    - pos: 7.632218,-5.5291786
+>>>>>>> popitka_upstream
       parent: 2
 - proto: ExtinguisherCabinetFilled
   entities:
@@ -1949,6 +2522,143 @@ entities:
       rot: 3.141592653589793 rad
       pos: 8.5,-2.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+    - ShutdownSubscribers:
+      - 197
+      - 204
+      - 557
+      - 558
+      - 198
+      - 200
+      - 203
+      type: DeviceNetwork
+    - devices:
+      - 197
+      - 204
+      - 557
+      - 558
+      - 198
+      - 200
+      - 203
+      type: DeviceList
+- proto: FireAxeCabinetFilled
+  entities:
+  - uid: 605
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 8.5,-2.5
+      parent: 2
+      type: Transform
+- proto: Firelock
+  entities:
+  - uid: 197
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 5.5,-6.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+  - uid: 198
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 13.5,-6.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+  - uid: 199
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 8.5,-18.5
+      parent: 2
+      type: Transform
+  - uid: 200
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 10.5,-10.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+  - uid: 201
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 5.5,-2.5
+      parent: 2
+      type: Transform
+  - uid: 202
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 13.5,-2.5
+      parent: 2
+      type: Transform
+  - uid: 203
+    components:
+    - pos: 9.5,-6.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+- proto: FirelockGlass
+  entities:
+  - uid: 204
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 5.5,-10.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+  - uid: 205
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 7.5,-16.5
+      parent: 2
+      type: Transform
+  - uid: 206
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 6.5,-16.5
+      parent: 2
+      type: Transform
+  - uid: 207
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 5.5,-16.5
+      parent: 2
+      type: Transform
+  - uid: 557
+    components:
+    - pos: 6.5,-10.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+  - uid: 558
+    components:
+    - pos: 7.5,-10.5
+      parent: 2
+      type: Transform
+    - ShutdownSubscribers:
+      - 196
+      - 3
+      type: DeviceNetwork
+>>>>>>> popitka_upstream
 - proto: Flash
   entities:
   - uid: 208
@@ -2003,6 +2713,10 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,-19.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 215
     components:
     - type: Transform
@@ -2063,6 +2777,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 575
     components:
     - type: Transform
@@ -2179,6 +2897,10 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,-11.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 243
     components:
     - type: Transform
@@ -2199,6 +2921,10 @@ entities:
     - type: Transform
       pos: 5.5,-6.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 248
     components:
     - type: Transform
@@ -2284,6 +3010,10 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.5,-12.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 263
     components:
     - type: Transform
@@ -2301,8 +3031,12 @@ entities:
       parent: 2
   - uid: 266
     components:
+<<<<<<< HEAD
     - type: Transform
       rot: 1.5707963267948966 rad
+=======
+    - rot: 1.5707963267948966 rad
+>>>>>>> popitka_upstream
       pos: 5.5,-9.5
       parent: 2
   - uid: 267
@@ -2377,18 +3111,32 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,-2.5
       parent: 2
+<<<<<<< HEAD
   - uid: 375
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 6.5,-9.5
       parent: 2
+=======
+      type: Transform
+  - uid: 375
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 6.5,-9.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 599
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 16.5,-16.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: GasPipeTJunction
   entities:
   - uid: 279
@@ -2438,6 +3186,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 12.5,-8.5
       parent: 2
+<<<<<<< HEAD
   - uid: 343
     components:
     - type: Transform
@@ -2450,6 +3199,21 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-7.5
       parent: 2
+=======
+      type: Transform
+  - uid: 343
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 7.5,-9.5
+      parent: 2
+      type: Transform
+  - uid: 344
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 5.5,-7.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: GasPort
   entities:
   - uid: 287
@@ -2467,37 +3231,54 @@ entities:
     - type: Transform
       pos: 6.5,-19.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 289
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 9.5,-11.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 290
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,-1.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 291
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,-19.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 292
     components:
     - type: Transform
       pos: 6.5,-7.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
   - uid: 588
@@ -2508,14 +3289,27 @@ entities:
       parent: 2
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+  - uid: 588
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 4.5,-7.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 598
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 6.5,-1.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: GasVentScrubber
   entities:
   - uid: 294
@@ -2524,36 +3318,53 @@ entities:
       rot: 3.141592653589793 rad
       pos: 7.5,-19.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 295
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 14.5,-1.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 296
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,-18.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 297
     components:
     - type: Transform
       pos: 12.5,-7.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 298
     components:
     - type: Transform
       pos: 13.5,-11.5
       parent: 2
+<<<<<<< HEAD
     - type: AtmosDevice
       joinedGrid: 2
   - uid: 583
@@ -2564,6 +3375,15 @@ entities:
       parent: 2
     - type: AtmosDevice
       joinedGrid: 2
+=======
+      type: Transform
+  - uid: 583
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 4.5,-9.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: GeneratorBasic15kW
   entities:
   - uid: 138
@@ -2801,6 +3621,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,-19.5
       parent: 2
+<<<<<<< HEAD
   - uid: 579
     components:
     - type: Transform
@@ -2825,6 +3646,33 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.5,-15.5
       parent: 2
+=======
+      type: Transform
+  - uid: 579
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 13.5,-13.5
+      parent: 2
+      type: Transform
+  - uid: 580
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 11.5,-13.5
+      parent: 2
+      type: Transform
+  - uid: 581
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 11.5,-14.5
+      parent: 2
+      type: Transform
+  - uid: 582
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 11.5,-15.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: Gyroscope
   entities:
   - uid: 341
@@ -2833,22 +3681,38 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5,-17.5
       parent: 2
+<<<<<<< HEAD
     - type: Thruster
       enabled: False
+=======
+      type: Transform
+    - enabled: False
+      type: Thruster
+>>>>>>> popitka_upstream
 - proto: InflatableDoorStack
   entities:
   - uid: 367
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 11.490703,-17.425648
+=======
+    - pos: 11.490703,-17.425648
+>>>>>>> popitka_upstream
       parent: 2
 - proto: InflatableWallStack
   entities:
   - uid: 348
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 11.178203,-17.415234
       parent: 2
+=======
+    - pos: 11.178203,-17.415234
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: LockerSecurityFilled
   entities:
   - uid: 593
@@ -2872,15 +3736,25 @@ entities:
   entities:
   - uid: 611
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 8.455134,-5.4458456
       parent: 2
+=======
+    - pos: 8.455134,-5.4458456
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: MedkitFilled
   entities:
   - uid: 610
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 8.028051,-5.352095
+=======
+    - pos: 8.028051,-5.352095
+>>>>>>> popitka_upstream
       parent: 2
 - proto: PlasmaReinforcedWindowDirectional
   entities:
@@ -2986,10 +3860,17 @@ entities:
   entities:
   - uid: 218
     components:
+<<<<<<< HEAD
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 12.5,0.5
       parent: 2
+=======
+    - rot: 1.5707963267948966 rad
+      pos: 12.5,0.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 364
     components:
     - type: Transform
@@ -3003,11 +3884,16 @@ entities:
       rot: 3.141592653589793 rad
       pos: 4.5,-19.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 369
     components:
     - type: Transform
       pos: 10.5,-17.5
       parent: 2
+<<<<<<< HEAD
   - uid: 376
     components:
     - type: Transform
@@ -3024,35 +3910,74 @@ entities:
     - type: Transform
       pos: 13.5,-0.5
       parent: 2
+=======
+      type: Transform
+  - uid: 376
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 5.5,-13.5
+      parent: 2
+      type: Transform
+  - uid: 377
+    components:
+    - pos: 5.5,-0.5
+      parent: 2
+      type: Transform
+  - uid: 378
+    components:
+    - pos: 13.5,-0.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 381
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,-3.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 382
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 5.5,-3.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 383
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 3.5,-8.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 384
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 15.5,-8.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 457
     components:
     - type: Transform
       pos: 12.5,-7.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 460
     components:
     - type: Transform
@@ -3076,6 +4001,28 @@ entities:
     - type: Transform
       pos: 8.5,-3.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+  - uid: 578
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 9.5,-14.5
+      parent: 2
+      type: Transform
+  - uid: 600
+    components:
+    - pos: 9.5,-3.5
+      parent: 2
+      type: Transform
+- proto: Rack
+  entities:
+  - uid: 589
+    components:
+    - pos: 8.5,-3.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: RandomVendingDrinks
   entities:
   - uid: 577
@@ -3124,6 +4071,18 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,-14.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+- proto: ShotGunCabinetFilled
+  entities:
+  - uid: 609
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 8.5,-14.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: ShuttleWindow
   entities:
   - uid: 213
@@ -3147,6 +4106,16 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 13.5,-13.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+  - uid: 347
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 13.5,-13.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 385
     components:
     - type: Transform
@@ -3327,6 +4296,10 @@ entities:
     - type: Transform
       pos: 11.5,1.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
   - uid: 566
     components:
     - type: Transform
@@ -3345,6 +4318,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 11.5,-13.5
       parent: 2
+<<<<<<< HEAD
 - proto: SignalButtonDirectional
   entities:
   - uid: 604
@@ -3423,14 +4397,102 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 13.5,-13.5
       parent: 2
+=======
+      type: Transform
+- proto: SignalButtonDirectional
+  entities:
+  - uid: 604
+    components:
+    - rot: 3.141592653589793 rad
+      pos: 9.5,-2.5
+      parent: 2
+      type: Transform
+    - linkedPorts:
+        565:
+        - Pressed: Toggle
+        437:
+        - Pressed: Toggle
+        374:
+        - Pressed: Toggle
+        379:
+        - Pressed: Toggle
+        380:
+        - Pressed: Toggle
+        373:
+        - Pressed: Toggle
+        436:
+        - Pressed: Toggle
+        429:
+        - Pressed: Toggle
+        601:
+        - Pressed: Toggle
+        602:
+        - Pressed: Toggle
+        603:
+        - Pressed: Toggle
+      type: DeviceLinkSource
+- proto: SignAtmos
+  entities:
+  - uid: 342
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 8.5,-20.5
+      parent: 2
+      type: Transform
+- proto: SignDoors
+  entities:
+  - uid: 612
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 16.5,-8.5
+      parent: 2
+      type: Transform
+  - uid: 613
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 2.5,-8.5
+      parent: 2
+      type: Transform
+- proto: SignElectricalMed
+  entities:
+  - uid: 614
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 8.5,-16.5
+      parent: 2
+      type: Transform
+- proto: SignMedical
+  entities:
+  - uid: 615
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 8.5,-6.5
+      parent: 2
+      type: Transform
+- proto: SignPrison
+  entities:
+  - uid: 606
+    components:
+    - rot: 1.5707963267948966 rad
+      pos: 13.5,-13.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: SignSecurity
   entities:
   - uid: 616
     components:
+<<<<<<< HEAD
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 9.5,-10.5
       parent: 2
+=======
+    - rot: 1.5707963267948966 rad
+      pos: 9.5,-10.5
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: StasisBed
   entities:
   - uid: 430
@@ -3471,10 +4533,15 @@ entities:
       rot: 3.141592653589793 rad
       pos: 10.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: TableGlass
   entities:
   - uid: 607
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 7.5,-5.5
       parent: 2
@@ -3482,6 +4549,14 @@ entities:
     components:
     - type: Transform
       pos: 8.5,-5.5
+=======
+    - pos: 7.5,-5.5
+      parent: 2
+      type: Transform
+  - uid: 608
+    components:
+    - pos: 8.5,-5.5
+>>>>>>> popitka_upstream
       parent: 2
 - proto: TableReinforced
   entities:
@@ -4104,11 +5179,21 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5,-17.5
       parent: 2
+<<<<<<< HEAD
+=======
+      type: Transform
+>>>>>>> popitka_upstream
 - proto: Wrench
   entities:
   - uid: 643
     components:
+<<<<<<< HEAD
     - type: Transform
       pos: 12.37612,-20.675648
       parent: 2
+=======
+    - pos: 12.37612,-20.675648
+      parent: 2
+      type: Transform
+>>>>>>> popitka_upstream
 ...

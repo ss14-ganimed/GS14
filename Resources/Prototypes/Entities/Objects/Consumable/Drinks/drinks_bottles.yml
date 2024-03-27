@@ -82,46 +82,7 @@
       Glass: 100
 
 - type: entity
-  id: DrinkBottleVisualsOpenable
-  abstract: true
-  components:
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.OpenableVisuals.Opened:
-        enum.OpenableVisuals.Layer:
-          True: {state: "icon_open"}
-          False: {state: "icon"}
-  - type: Sprite
-    layers:
-      - state: icon
-        map: ["enum.OpenableVisuals.Layer"]
-
-- type: entity
-  id: DrinkBottleVisualsAll
-  abstract: true
-  components:
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.OpenableVisuals.Opened:
-        enum.OpenableVisuals.Layer:
-          True: {state: "icon_open"}
-          False: {state: "icon_empty"}
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/alco-bottle.rsi
-    layers:
-      - state: icon
-        map: ["enum.OpenableVisuals.Layer"]
-      - state: fill-1
-        map: ["enum.SolutionContainerLayers.Fill"]
-        visible: false
-  - type: SolutionContainerVisuals
-    maxFillLevels: 5
-    fillBaseName: fill-
-
-- type: entity
-  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  parent: DrinkBottleGlassBaseFull
   id: DrinkAbsintheBottleFull
   name: Jailbreaker Verte
   description: One sip of this and you just know you're gonna have a good time.
@@ -583,6 +544,8 @@
   name: Magm-Ale Growler
   description: A true dorf's drink of choice. XL growler bottle.
   components:
+  - type: Item
+    size: Small
   - type: SolutionContainerManager
     solutions:
       drink:

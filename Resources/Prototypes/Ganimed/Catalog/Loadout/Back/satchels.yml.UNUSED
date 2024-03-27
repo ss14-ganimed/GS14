@@ -1,0 +1,276 @@
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelLeather
+  category: loadout-category-back
+  cost: 3
+  exclusive: true
+  prototype: ClothingBackpackSatchelLeather
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchel
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  prototype: ClothingBackpackSatchel
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelAtmospherics
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+	- SeniorEngineer
+	- AtmosphericTechnician
+  prototype: ClothingBackpackSatchelAtmospherics
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelHydroponics
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Botanist
+  prototype: ClothingBackpackSatchelHydroponics
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelBrigmedic
+  category: loadout-category-back
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - MedicalIntern
+    - SeniorPhysician
+	- Brigmedic
+	- Coroner
+  prototype: ClothingBackpackSatchelBrigmedic
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelVirology
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+	- Brigmedic
+	- Coroner
+  prototype: ClothingBackpackSatchelVirology
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelGenetics
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+	- Brigmedic
+	- Coroner
+  prototype: ClothingBackpackSatchelGenetics
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelCargo
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - CargoTechnician
+    - SalvageSpecialist
+    - Quartermaster
+  prototype: ClothingBackpackSatchelCargo
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelEngineering
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+	- SeniorEngineer
+	- AtmosphericTechnician
+	- StationEngineer
+	- TechnicalAssistant
+  prototype: ClothingBackpackSatchelEngineering
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelCaptain
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Chaptain
+  prototype: ClothingBackpackSatchelCaptain
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelMedical
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+	- Brigmedic
+	- Coroner
+  prototype: ClothingBackpackSatchelMedical
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelMime
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Mime
+  prototype: ClothingBackpackSatchelMime
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelMerc
+  category: loadout-category-back
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Quartermaster
+    - SalvageSpecialist
+	- Brigmedic
+	- BlueShield
+  prototype: ClothingBackpackSatchelMerc
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelSecurity
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+	- Brigmedic
+	- BlueShield
+  prototype: ClothingBackpackSatchelSecurity
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelSalvage
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Quartermaster
+	- SalvageSpecialist
+	- CargoTechnician
+  prototype: ClothingBackpackSatchelSalvage
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelScience
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Scientist
+	- ResearchAssistant
+	- ResearchDirector
+	- SeniorResearcher
+	- Roboticist
+  prototype: ClothingBackpackSatchelScience
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelClown
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingBackpackSatchelClown
+
+- type: loadout
+  id: LoadoutBackClothingBackpackSatchelChemistry
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+	- Coroner
+	- Brigmedic
+  prototype: ClothingBackpackSatchelChemistry
+
+- type: loadout
+  id: LoadoutBackBooksBag
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Librarian
+	- HeadOfPersonnel
+  prototype: BooksBag
+
+- type: loadout
+  id: LoadoutBackPlantBag
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Botanist
+	- ServiceWorker
+	- HeadOfPersonnel
+  prototype: PlantBag
+
+- type: loadout
+  id: LoadoutBackOreBag
+  category: loadout-category-back
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SalvageSpecialist
+	- CargoTechnician
+	- Quartermaster
+  prototype: OreBag
+
+- type: loadout
+  id: LoadoutBackChemBag
+  category: loadout-category-back
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+	- Coroner
+	- Brigmedic
+  prototype: ChemBag

@@ -28,10 +28,6 @@
     state: buckshot
   - type: Projectile
     deleteOnCollide: false
-    damage:
-      types:
-        Piercing: 45
-  - type: TimedDespawn
     lifetime: 0.25
 
 - type: entity

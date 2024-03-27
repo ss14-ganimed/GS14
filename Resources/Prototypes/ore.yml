@@ -24,6 +24,10 @@
   minOreYield: 1
   maxOreYield: 5
 
+- type: ore
+  id: OreCoal
+  oreEntity: Coal1
+
 # Medium yields
 - type: ore
   id: OreGold
@@ -73,6 +77,10 @@
 - type: ore
   id: OreSilverCrab
   oreEntity: MobSpawnCrabSilver
+
+- type: ore
+  id: OreSilverCrab
+  oreEntity: MobSilverCrab
 
 - type: ore
   id: OreUraniumCrab

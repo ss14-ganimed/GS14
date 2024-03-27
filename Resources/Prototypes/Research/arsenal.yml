@@ -45,6 +45,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - WeaponEnergyGun
 
 - type: technology
   id: NonlethalAmmunition
@@ -133,6 +134,19 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+  - WeaponEnergySniperRifle
+
+- type: technology
+  id: SecurityIntercommunications
+  name: research-technology-security-intercommunications
+  icon:
+    sprite: Structures/Machines/computers.rsi
+    state: computer-security
+  discipline: Arsenal
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - CriminalRecordsComputerCircuitboard
 
 - type: technology
   id: WaveParticleHarnessing
@@ -145,6 +159,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
+  - WeaponImmolator
 
 - type: technology
   id: BasicShuttleArmament
@@ -166,6 +181,12 @@
   - ShuttleGunFriendshipCircuitboard
   technologyPrerequisites:
   - SalvageWeapons
+  - ClothingEyesGlassesSecurity
+  - Truncheon
+  - TelescopicShield
+  - HoloprojectorSecurity
+  - WeaponDisablerSMG
+  - WeaponIonRifleGun
 
 # Tier 3
 

@@ -45,6 +45,17 @@
         - ClothingNeckNonBinaryPin
         - ClothingNeckPansexualPin
         - ClothingNeckTransPin
+        # Corvax-Pins-Start
+        - ClothingNeckUSSPPin
+        - ClothingNeckDonkPin
+        - ClothingNeckEarthPin
+        - ClothingNeckLogistikaPin
+        - ClothingNeckDeForestPin
+        - ClothingNeckNakamuraPin
+        - ClothingNeckNanoTrasenPin
+        - ClothingNeckSyndicakePin
+        - ClothingNeckVitezstviPin
+        # Corvax-Pins-End
         - CluwneHorn
         - ClothingMaskRat
         - MysteryFigureBox
@@ -63,8 +74,11 @@
         - ClothingShoesCult
         - ClothingUniformJumpsuitAncient
         - ClothingUniformJumpsuitPirate
-        - ClothingShoesBootsCowboyFancy
-        - ClothingHeadHatCowboyBountyHunter
+        - Pillow1
+        - Pillow2
+        - Pillow3
+        - Pillow4
+        - Pillow5
       rareChance: 0.01
       prototypes:
         - Lighter

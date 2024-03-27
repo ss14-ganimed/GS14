@@ -40,6 +40,8 @@ public sealed class SubdermalImplantSystem : SharedSubdermalImplantSystem
 
     private EntityQuery<PhysicsComponent> _physicsQuery;
 
+    private EntityQuery<PhysicsComponent> _physicsQuery;
+
     public override void Initialize()
     {
         base.Initialize();
