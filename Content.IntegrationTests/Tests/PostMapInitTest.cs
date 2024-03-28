@@ -76,7 +76,7 @@ namespace Content.IntegrationTests.Tests
             "Gemini",
             "MeteorArena",
             "Atlas",
-            "Reach"    
+            "Reach",   
             "Train"
         };
 
