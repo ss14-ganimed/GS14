@@ -455,20 +455,5 @@ namespace Content.Server.Shuttles.Systems
             return CanDock(new MapCoordinates(worldPosA, xformA.MapID), worldRotA,
                 new MapCoordinates(worldPosB, xformB.MapID), worldRotB);
         }
-
-        private void OnUndock(EntityUid dockUid, EntityUid other)
-        {
-            if (TerminatingOrDeleted(dockUid))
-                return;
-
-            if (TryComp<DoorBoltComponent>(dockUid, out var airlock))
-                _bolts.SetBoltsWithAudio(dockUid, airlock, false);
-
-            if (TryComp(dockUid, out DoorComponent? door) && _doorSystem.TryClose(dockUid, door))
-                door.ChangeAirtight = true;
-
-            var recentlyDocked = EnsureComp<RecentlyDockedComponent>(dockUid);
-            recentlyDocked.LastDocked = other;
-        }
     }
 }

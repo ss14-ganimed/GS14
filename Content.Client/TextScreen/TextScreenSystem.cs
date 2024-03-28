@@ -190,7 +190,7 @@ public sealed class TextScreenSystem : VisualizerSystem<TextScreenVisualsCompone
     /// </summary>
     private void ResetText(EntityUid uid, TextScreenVisualsComponent component, SpriteComponent? sprite = null)
     {
-        if (!TryComp<SpriteComponent>(uid, out var sprite) || !TryComp<TextScreenVisualsComponent>(uid, out var screen))
+        if (!Resolve(uid, ref sprite))
             return;
 
         foreach (var key in component.LayerStatesToDraw.Keys)

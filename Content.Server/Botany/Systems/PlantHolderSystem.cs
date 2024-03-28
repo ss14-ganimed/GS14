@@ -90,6 +90,9 @@ public sealed class PlantHolderSystem : EntitySystem
         var (_, component) = entity;
 
         using (args.PushGroup(nameof(PlantHolderComponent)))
+        {
+            if (component.Seed == null)
+            {
                 args.PushMarkup(Loc.GetString("plant-holder-component-nothing-planted-message"));
             }
             else if (!component.Dead)

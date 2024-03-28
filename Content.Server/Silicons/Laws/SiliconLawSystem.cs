@@ -13,8 +13,6 @@ using Content.Shared.Emag.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
-using Content.Shared.Random;
-using Content.Shared.Random.Helpers;
 using Content.Shared.Roles;
 using Content.Shared.Silicons.Laws;
 using Content.Shared.Silicons.Laws.Components;
@@ -24,7 +22,6 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Random;
 using Robust.Shared.Toolshed;
 
 namespace Content.Server.Silicons.Laws;
@@ -40,7 +37,6 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly SharedStunSystem _stunSystem = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
-	[Dependency] private readonly IEntitySystemManager _entitySystem = default!;
     [Dependency] private readonly SharedRoleSystem _roles = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
 
@@ -100,10 +96,8 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     {
         _entityManager.TryGetComponent<IntrinsicRadioTransmitterComponent>(uid, out var intrinsicRadio);
         HashSet<string>? radioChannels = intrinsicRadio?.Channels;
-		
-		var lawset = GetLaws(uid);
 
-		var state = new SiliconLawBuiState(lawset.Name ?? "lawset-name-none", lawset.Description ?? "lawset-description-none", lawset.Laws, radioChannels);
+        var state = new SiliconLawBuiState(GetLaws(uid).Laws, radioChannels);
         _userInterface.TrySetUiState(args.Entity, SiliconLawsUiKey.Key, state, args.Session);
     }
 
@@ -118,7 +112,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
             return;
 
         if (component.Lawset == null)
-            component.Lawset = GetLawset(component.Laws, component.LawsWeighted);
+            component.Lawset = GetLawset(component.Laws);
 
         args.Laws = component.Lawset;
 
@@ -155,28 +149,12 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
             Order = 0
         });
 
-            // Add the first emag law before the others
-            component.Lawset.Laws.Insert(0, new SiliconLaw
-            {
-                LawString = Loc.GetString("law-emag-custom", ("name", component.OwnerName)),
-                Order = 0
-            });
-        }
-
-        args.Laws = component.Lawset;
-
-        args.Handled = true;
-    }
-	
-    private void OnEmagIonStormLaws(EntityUid uid, EmagSiliconLawComponent component, ref IonStormLawsEvent args)
-    {
-        if (!HasComp<EmaggedComponent>(uid))
-            return;
-
-        component.Lawset = args.Lawset;
-
-        // gotta tell player to check their laws
-        NotifyLawsChanged(uid);
+        //Add the secrecy law after the others
+        component.Lawset?.Laws.Add(new SiliconLaw
+        {
+            LawString = Loc.GetString("law-emag-secrecy", ("faction", Loc.GetString(component.Lawset.ObeysTo))),
+            Order = component.Lawset.Laws.Max(law => law.Order) + 1
+        });
     }
 
     private void OnExamined(EntityUid uid, EmagSiliconLawComponent component, ExaminedEvent args)
@@ -299,15 +277,9 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     /// <summary>
     /// Extract all the laws from a lawset's prototype ids.
     /// </summary>
-    public SiliconLawset GetLawset(string lawset, string? weightedOverride = null)
+    public SiliconLawset GetLawset(string lawset)
     {
-		var lawsetString = lawset;
-		
-		if (weightedOverride is not null && _prototype.TryIndex<WeightedRandomPrototype>(weightedOverride, out var lawsets))
-			lawsetString = lawsets.Pick();
-		
-		var proto = _prototype.Index<SiliconLawsetPrototype>(lawsetString);
-		
+        var proto = _prototype.Index<SiliconLawsetPrototype>(lawset);
         var laws = new SiliconLawset()
         {
             Laws = new List<SiliconLaw>(proto.Laws.Count)
@@ -316,9 +288,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         {
             laws.Laws.Add(_prototype.Index<SiliconLawPrototype>(law));
         }
-		
-		laws.Name = proto.Name;
-		laws.Description = proto.Description;
+        laws.ObeysTo = proto.ObeysTo;
 
         return laws;
     }

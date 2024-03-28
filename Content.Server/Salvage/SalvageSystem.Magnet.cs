@@ -157,9 +157,12 @@ public sealed partial class SalvageSystem
             foreach (var entity in _detachEnts)
             {
                 _transform.SetCoordinates(entity.Entity.Owner, new EntityCoordinates(entity.MapUid, entity.LocalPosition));
+            }
 
             data.Comp.ActiveEntities = null;
         }
+
+        data.Comp.EndTime = null;
         UpdateMagnetUIs(data);
     }
 

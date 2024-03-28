@@ -8,13 +8,11 @@ using Content.Server.DeviceNetwork;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.GameTicking;
-using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.Database;
-using Content.Shared.DeviceNetwork;
 using Content.Shared.GameTicking;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
@@ -114,9 +112,13 @@ namespace Content.Server.RoundEnd
         /// </summary>
         public EntityUid? GetCentcomm()
         {
-            AllEntityQuery<StationCentcommComponent>().MoveNext(out var centcomm);
+            if (AllEntityQuery<StationCentcommComponent, TransformComponent>()
+                .MoveNext(out var centcomm, out var xform))
+            {
+                return xform.MapUid;
+            }
 
-            return centcomm == null ? null : centcomm.MapEntity;
+            return null;
         }
 
         public bool CanCallOrRecall()
@@ -241,7 +243,7 @@ namespace Content.Server.RoundEnd
             ActivateCooldown();
             RaiseLocalEvent(RoundEndSystemChangedEvent.Default);
 
-            // remove active clientside evac shuttle timers by zeroing the target time
+            // remove all active shuttle timers
             var zero = TimeSpan.Zero;
             var shuttle = _shuttle.GetShuttle();
             if (shuttle != null && TryComp<DeviceNetworkComponent>(shuttle, out var net))
@@ -254,6 +256,7 @@ namespace Content.Server.RoundEnd
                     [ShuttleTimerMasks.ShuttleTime] = zero,
                     [ShuttleTimerMasks.SourceTime] = zero,
                     [ShuttleTimerMasks.DestTime] = zero,
+                    [ShuttleTimerMasks.Text] = new string?[] { string.Empty, string.Empty }
                 };
                 _deviceNetworkSystem.QueuePacket(shuttle.Value, null, payload, net.TransmitFrequency);
             }
