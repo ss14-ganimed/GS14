@@ -178,11 +178,13 @@ public sealed partial class EmergencyShuttleSystem
             }
 
             var podQuery = AllEntityQuery<EscapePodComponent>();
+            var podLaunchOffset = 0.5f;
 
             // Stagger launches coz funny
             while (podQuery.MoveNext(out _, out var pod))
             {
-                pod.LaunchTime = _timing.CurTime + TimeSpan.FromSeconds(_random.NextFloat(0.05f, 0.75f));
+                pod.LaunchTime = _timing.CurTime + TimeSpan.FromSeconds(podLaunchOffset);
+                podLaunchOffset += _random.NextFloat(0.5f, 2.5f);
             }
         }
 
@@ -193,9 +195,7 @@ public sealed partial class EmergencyShuttleSystem
             var stationUid = _station.GetOwningStation(uid);
 
             if (!TryComp<StationCentcommComponent>(stationUid, out var centcomm) ||
-                Deleted(centcomm.Entity) ||
-                pod.LaunchTime == null ||
-                pod.LaunchTime > _timing.CurTime)
+                Deleted(centcomm.Entity) || pod.LaunchTime == null || pod.LaunchTime < _timing.CurTime)
             {
                 continue;
             }
@@ -308,9 +308,8 @@ public sealed partial class EmergencyShuttleSystem
 
     private void CleanupEmergencyConsole()
     {
-        // Realistically most of this shit needs moving to a station component so each station has their own emergency shuttle
-        // and timer and all that jazz so I don't really care about debugging if it works on cleanup vs start.
         _announced = false;
+        _roundEndCancelToken = null;
         ShuttlesLeft = false;
         _launchedShuttles = false;
         _consoleAccumulator = float.MinValue;
