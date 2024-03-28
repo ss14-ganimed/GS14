@@ -35,8 +35,8 @@ public sealed partial class EmagSiliconLawComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<AntagPrototype>? AntagonistRole = "SubvertedSilicon";
-	
-	/// <summary>
+
+    /// <summary>
     /// The sound that plays for the borg player
     /// to let them know they've been emagged
     /// </summary>

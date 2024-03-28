@@ -14,7 +14,7 @@ public sealed partial class IonStormTargetComponent : Component
     /// <see cref="WeightedRandomPrototype"/> for a random lawset to possibly replace the old one with.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public ProtoId<WeightedRandomPrototype> RandomLawsets = "RandomLawset";
+    public ProtoId<WeightedRandomPrototype> RandomLawsets = "IonStormLawsets";
 
     /// <summary>
     /// Chance for this borg to be affected at all.

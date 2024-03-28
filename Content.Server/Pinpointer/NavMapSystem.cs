@@ -404,4 +404,101 @@ public sealed class NavMapSystem : SharedNavMapSystem
 
         SetBeaconEnabled(uid, !comp.Enabled, comp);
     }
+
+    /// <summary>
+    /// For a given position, tries to find the nearest configurable beacon that is marked as visible.
+    /// This is used for things like announcements where you want to find the closest "landmark" to something.
+    /// </summary>
+    [PublicAPI]
+    public bool TryGetNearestBeacon(Entity<TransformComponent?> ent,
+        [NotNullWhen(true)] out Entity<NavMapBeaconComponent>? beacon,
+        [NotNullWhen(true)] out MapCoordinates? beaconCoords)
+    {
+        beacon = null;
+        beaconCoords = null;
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
+        return TryGetNearestBeacon(_transform.GetMapCoordinates(ent, ent.Comp), out beacon, out beaconCoords);
+    }
+
+    /// <summary>
+    /// For a given position, tries to find the nearest configurable beacon that is marked as visible.
+    /// This is used for things like announcements where you want to find the closest "landmark" to something.
+    /// </summary>
+    public bool TryGetNearestBeacon(MapCoordinates coordinates,
+        [NotNullWhen(true)] out Entity<NavMapBeaconComponent>? beacon,
+        [NotNullWhen(true)] out MapCoordinates? beaconCoords)
+    {
+        beacon = null;
+        beaconCoords = null;
+        var minDistance = float.PositiveInfinity;
+
+        var query = EntityQueryEnumerator<ConfigurableNavMapBeaconComponent, NavMapBeaconComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out _, out var navBeacon, out var xform))
+        {
+            if (!navBeacon.Enabled)
+                continue;
+
+            if (navBeacon.Text == null)
+                continue;
+
+            if (coordinates.MapId != xform.MapID)
+                continue;
+
+            var coords = _transform.GetWorldPosition(xform);
+            var distanceSquared = (coordinates.Position - coords).LengthSquared();
+            if (!float.IsInfinity(minDistance) && distanceSquared >= minDistance)
+                continue;
+
+            minDistance = distanceSquared;
+            beacon = (uid, navBeacon);
+            beaconCoords = new MapCoordinates(coords, xform.MapID);
+        }
+
+        return beacon != null;
+    }
+
+    [PublicAPI]
+    public string GetNearestBeaconString(Entity<TransformComponent?> ent)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return Loc.GetString("nav-beacon-pos-no-beacons");
+
+        return GetNearestBeaconString(_transform.GetMapCoordinates(ent, ent.Comp));
+    }
+
+    public string GetNearestBeaconString(MapCoordinates coordinates)
+    {
+        if (!TryGetNearestBeacon(coordinates, out var beacon, out var pos))
+            return Loc.GetString("nav-beacon-pos-no-beacons");
+
+        var gridOffset = Angle.Zero;
+        if (_mapManager.TryFindGridAt(pos.Value, out var grid, out _))
+            gridOffset = Transform(grid).LocalRotation;
+
+        // get the angle between the two positions, adjusted for the grid rotation so that
+        // we properly preserve north in relation to the grid.
+        var dir = (pos.Value.Position - coordinates.Position).ToWorldAngle();
+        var adjustedDir = (dir - gridOffset).GetDir();
+
+        var length = (pos.Value.Position - coordinates.Position).Length();
+        if (length < CloseDistance)
+        {
+            return Loc.GetString("nav-beacon-pos-format",
+                ("color", beacon.Value.Comp.Color),
+                ("marker", beacon.Value.Comp.Text!));
+        }
+
+        var modifier = length > FarDistance
+            ? Loc.GetString("nav-beacon-pos-format-direction-mod-far")
+            : string.Empty;
+
+        // we can null suppress the text being null because TRyGetNearestVisibleStationBeacon always gives us a beacon with not-null text.
+        return Loc.GetString("nav-beacon-pos-format-direction",
+            ("modifier", modifier),
+            ("direction", ContentLocalizationManager.FormatDirection(adjustedDir).ToLowerInvariant()),
+            ("color", beacon.Value.Comp.Color),
+            ("marker", beacon.Value.Comp.Text!));
+    }
 }

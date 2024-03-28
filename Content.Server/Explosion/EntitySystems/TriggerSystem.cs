@@ -3,7 +3,6 @@ using Content.Server.Body.Systems;
 using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Explosion.Components;
 using Content.Server.Flash;
-using Content.Server.Pinpointer;
 using Content.Shared.Flash.Components;
 using Content.Server.Radio.EntitySystems;
 using Content.Shared.Chemistry.Components;
@@ -32,7 +31,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Player;
 using Content.Shared.Coordinates;
-using Robust.Shared.Utility;
 
 namespace Content.Server.Explosion.EntitySystems
 {
@@ -69,7 +67,6 @@ namespace Content.Server.Explosion.EntitySystems
         [Dependency] private readonly BodySystem _body = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-        [Dependency] private readonly NavMapSystem _navMap = default!;
         [Dependency] private readonly RadioSystem _radioSystem = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -188,7 +185,12 @@ namespace Content.Server.Explosion.EntitySystems
                 return;
 
             // Gets location of the implant
-            var posText = FormattedMessage.RemoveMarkup(_navMap.GetNearestBeaconString(uid));
+            var ownerXform = Transform(uid);
+            var pos = ownerXform.MapPosition;
+            var x = (int) pos.X;
+            var y = (int) pos.Y;
+            var posText = $"({x}, {y})";
+
             var critMessage = Loc.GetString(component.CritMessage, ("user", implanted.ImplantedEntity.Value), ("position", posText));
             var deathMessage = Loc.GetString(component.DeathMessage, ("user", implanted.ImplantedEntity.Value), ("position", posText));
 
