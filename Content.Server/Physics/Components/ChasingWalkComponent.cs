@@ -16,6 +16,10 @@ public sealed partial class ChasingWalkComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     [AutoPausedField]
+    public TimeSpan NextImpulseTime;
+
+    /// <summary>
+    /// Push-to-target frequency.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float ImpulseInterval = 2f;

@@ -271,7 +271,7 @@ namespace Content.Server.Kitchen.EntitySystems
 
         private void OnContentUpdate(EntityUid uid, MicrowaveComponent component, ContainerModifiedMessage args) // For some reason ContainerModifiedMessage just can't be used at all with Entity<T>. TODO: replace with Entity<T> syntax once that's possible
         {
-            UpdateUserInterfaceState(ent, ent.Comp);
+            UpdateUserInterfaceState(uid, component);
         }
 
         private void OnInteractUsing(Entity<MicrowaveComponent> ent, ref InteractUsingEvent args)
@@ -332,7 +332,11 @@ namespace Content.Server.Kitchen.EntitySystems
             {
                 SetAppearance(ent, MicrowaveVisualState.Idle, ent.Comp);
                 StopCooking(ent);
+            }
             UpdateUserInterfaceState(ent, ent.Comp);
+        }
+
+        private void OnAnchorChanged(EntityUid uid, MicrowaveComponent component, ref AnchorStateChangedEvent args)
         {
             if (!args.Anchored)
                 _container.EmptyContainer(component.Storage);

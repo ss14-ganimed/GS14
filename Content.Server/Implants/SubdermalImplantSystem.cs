@@ -1,4 +1,4 @@
-﻿using Content.Server.Cuffs;
+﻿﻿using Content.Server.Cuffs;
 using Content.Server.Forensics;
 using Content.Server.Humanoid;
 using Content.Server.Implants.Components;
@@ -37,8 +37,6 @@ public sealed class SubdermalImplantSystem : SharedSubdermalImplantSystem
     [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly ForensicsSystem _forensicsSystem = default!;
     [Dependency] private readonly PullingSystem _pullingSystem = default!;
-
-    private EntityQuery<PhysicsComponent> _physicsQuery;
 
     private EntityQuery<PhysicsComponent> _physicsQuery;
 

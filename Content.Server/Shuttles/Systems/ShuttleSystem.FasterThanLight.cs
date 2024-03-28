@@ -70,8 +70,6 @@ public sealed partial class ShuttleSystem
     private readonly HashSet<EntityUid> _lookupEnts = new();
     private readonly HashSet<EntityUid> _immuneEnts = new();
 
-    private HashSet<EntityUid> _lookupEnts = new();
-
     private EntityQuery<BodyComponent> _bodyQuery;
     private EntityQuery<BuckleComponent> _buckleQuery;
     private EntityQuery<FTLBeaconComponent> _beaconQuery;
@@ -373,8 +371,8 @@ public sealed partial class ShuttleSystem
         Enable(uid, component: body);
         _physics.SetLinearVelocity(uid, new Vector2(0f, 20f), body: body);
         _physics.SetAngularVelocity(uid, 0f, body: body);
-        _physics.SetLinearDamping(uid, body, 0f);
-        _physics.SetAngularDamping(uid, body, 0f);
+        _physics.SetLinearDamping(body, 0f);
+        _physics.SetAngularDamping(body, 0f);
 
         _dockSystem.SetDockBolts(uid, true);
         _console.RefreshShuttleConsoles(uid);
@@ -428,8 +426,8 @@ public sealed partial class ShuttleSystem
 
         _physics.SetLinearVelocity(uid, Vector2.Zero, body: body);
         _physics.SetAngularVelocity(uid, 0f, body: body);
-        _physics.SetLinearDamping(uid, body, entity.Comp2.LinearDamping);
-        _physics.SetAngularDamping(uid, body, entity.Comp2.AngularDamping);
+        _physics.SetLinearDamping(body, entity.Comp2.LinearDamping);
+        _physics.SetAngularDamping(body, entity.Comp2.AngularDamping);
 
         var target = entity.Comp1.TargetCoordinates;
 
@@ -561,7 +559,7 @@ public sealed partial class ShuttleSystem
 
     private float GetSoundRange(EntityUid uid)
     {
-        if (!TryComp<MapGridComponent>(uid, out var grid))
+        if (!_mapManager.TryGetGrid(uid, out var grid))
             return 4f;
 
         return MathF.Max(grid.LocalAABB.Width, grid.LocalAABB.Height) + 12.5f;
