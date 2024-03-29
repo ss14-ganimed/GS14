@@ -31,7 +31,7 @@
       shader: unshaded
       visible: false
       map: ["enum.EmitterVisualLayers.Lights"]
-    - state: locked
+    - state: lock
       shader: unshaded
       visible: false
       map: ["enum.LockVisualLayers.Lock"]
@@ -85,11 +85,6 @@
   - type: Pullable
   - type: Rotatable
   - type: Appearance
-  - type: Lock
-    locked: false
-  - type: LockVisuals
-  - type: AccessReader
-    access: [[ "Engineering" ]]
   - type: Machine
     board: EmitterCircuitboard
   - type: GuideHelp
