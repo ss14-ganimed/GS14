@@ -231,18 +231,6 @@
       Manipulator: 2
 
 - type: entity
-  id: BookTerminalMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: book terminal machine board
-  components:
-  - type: MachineBoard
-    prototype: BookTerminal
-    requirements:
-      Capacitor: 2
-      Manipulator: 2
-      MatterBin: 2
-
-- type: entity
   id: VaccinatorMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: vaccinator machine board

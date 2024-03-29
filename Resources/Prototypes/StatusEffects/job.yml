@@ -388,6 +388,9 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Visitor
+
+- type: statusIcon
+  parent: JobIcon
   id: JobIconCoroner
   icon:
     sprite: Interface/Misc/job_icons.rsi

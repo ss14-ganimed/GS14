@@ -51,10 +51,6 @@
     state: stamp-cap
 
 - type: entity
-    sprite: Objects/Misc/stamps.rsi
-    state: stamp-cap
-
-- type: entity
   name: iaa's rubber stamp
   parent: RubberStampBase
   id: RubberStampIAA

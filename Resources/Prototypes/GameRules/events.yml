@@ -203,13 +203,6 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
-    startDelay: 10
-    earliestStart: 30
-    minimumPlayers: 35
-    weight: 5
-    duration: 50
-    startAudio:
       path: /Audio/Announcements/infestation.ogg
       params:
         volume: -4
@@ -232,11 +225,6 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
-    startDelay: 10
-    weight: 5
-    duration: 50
     startAudio:
       path: /Audio/Announcements/infestation.ogg
       params:
