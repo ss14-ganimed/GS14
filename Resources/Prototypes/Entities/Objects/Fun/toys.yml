@@ -1451,27 +1451,14 @@
           True: { state: icon }
           False: { state: icon-off }
   - type: ItemToggle
-  - type: UseDelay
-    delay: 1
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Items/newton_cradle.ogg
       params:
-        volume: -9
-        maxDistance: 3
-    state: plushie_moth
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
+        volume: -7
+        range: 5
+        sound:
+          path: /Audio/Items/newton_cradle.ogg
 
 - type: entity
   parent: BasePlushie

@@ -38,8 +38,6 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
-  - type: Inventory
-    speciesId: reptilian
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw
