@@ -83,8 +83,6 @@
   - HoloprojectorSecurity
   - WeaponDisablerSMG
 
-# Tier 2
-
 - type: technology
   id: ExplosiveTechnology
   name: research-technology-explosive-technology
@@ -92,7 +90,7 @@
     sprite: Objects/Devices/payload.rsi
     state: payload-explosive-armed
   discipline: Arsenal
-  tier: 2
+  tier: 1
   cost: 10000
   recipeUnlocks:
   - SignallerAdvanced
@@ -102,6 +100,8 @@
   - FlashPayload
   - ExplosivePayload
   - ChemicalPayload
+
+# Tier 2
 
 - type: technology
   id: ConcentratedLaserWeaponry
@@ -115,18 +115,6 @@
   recipeUnlocks:
   - WeaponLaserCannon
   - WeaponEnergySniperRifle
-
-- type: technology
-  id: SecurityIntercommunications
-  name: research-technology-security-intercommunications
-  icon:
-    sprite: Structures/Machines/computers.rsi
-    state: computer-security
-  discipline: Arsenal
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - CriminalRecordsComputerCircuitboard
 
 - type: technology
   id: WaveParticleHarnessing

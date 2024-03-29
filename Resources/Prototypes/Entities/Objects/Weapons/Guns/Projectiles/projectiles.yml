@@ -987,8 +987,6 @@
   - type: Tag
     tags:
       - HideContextMenu
-      path: "/Audio/Weapons/tap.ogg"
-    soundForce: true
 
 - type: entity
   name: ShutDownOrb

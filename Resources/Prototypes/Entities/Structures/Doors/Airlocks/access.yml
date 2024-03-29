@@ -284,16 +284,6 @@
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCentralCommand
-  id: AirlockCentralCommandLocked
-  suffix: Central Command, Locked
-  components:
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
   parent: AirlockCommand
   id: AirlockCommandLocked
   suffix: Command, Locked
@@ -709,16 +699,6 @@
     access: [["Research"], ["Medical"]]
   - type: Wires
     layoutId: AirlockScience
-
-- type: entity
-  parent: AirlockCentralCommandGlass
-  id: AirlockCentralCommandGlassLocked
-  suffix: Central Command, Locked
-  components:
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: Wires
-    layoutId: AirlockCommand
 
 - type: entity
   parent: AirlockCentralCommandGlass

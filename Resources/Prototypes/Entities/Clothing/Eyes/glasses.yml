@@ -169,16 +169,6 @@
     coverage: EYES
 
 - type: entity
-  parent: ClothingEyesGlassesCheapSunglasses
-  id: ClothingEyesGlassesSunglasses
-  name: sun glasses
-  description: A pair of black sunglasses.
-  components:
-  - type: FlashImmunity
-  - type: EyeProtection
-    protectionTime: 5
-
-- type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesSecurity
   name: security glasses

@@ -690,14 +690,6 @@
     Durathread: 300
 
 - type: latheRecipe
-  id: ClothingOuterWinterCentcom
-  result: ClothingOuterWinterCentcom
-  completetime: 3.2
-  materials:
-    Cloth: 300
-    Durathread: 300
-
-- type: latheRecipe
   id: ClothingOuterWinterCMO
   result: ClothingOuterWinterCMO
   completetime: 3.2

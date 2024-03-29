@@ -85,13 +85,6 @@
     state: wrapper_kobold
 
 - type: entity
-  parent: MonkeyCubeBox
-    state: wrapper
-  - type: Tag
-    tags:
-    - MonkeyCube
-
-- type: entity
   parent: BoxCardboard
   name: monkey cube box
   suffix: Syndicate

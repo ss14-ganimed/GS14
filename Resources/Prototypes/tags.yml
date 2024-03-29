@@ -223,9 +223,6 @@
   id: BoxHug
 
 - type: Tag
-  id: Burnt
-
-- type: Tag
   id: BrassInstrument
 
 - type: Tag
@@ -254,9 +251,6 @@
 
 - type: Tag
   id: BypassDropChecks
-
-- type: Tag
-  id: BypassInteractionRangeChecks
 
 - type: Tag
   id: BypassInteractionRangeChecks
@@ -1327,15 +1321,6 @@
 
 - type: Tag
   id: WriteIgnoreStamps
-
-- type: Tag
-  id: RifleStock
-
-- type: Tag
-  id: ModularReceiver
-
-- type: Tag
-  id: MindShield
 
 - type: Tag
   id: GlassesNearsight

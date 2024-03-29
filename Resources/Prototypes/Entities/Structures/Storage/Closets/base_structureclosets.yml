@@ -91,16 +91,6 @@
   - type: StaticPrice
     price: 50
 
-# steel closet base (that can be constructed/deconstructed)
-- type: entity
-  id: ClosetSteelBase
-  parent: ClosetBase
-  components:
-  - type: Construction
-    graph: ClosetSteel
-    node: done
-    containers:
-    - entity_storage
 
 # steel closet base (that can be constructed/deconstructed)
 - type: entity

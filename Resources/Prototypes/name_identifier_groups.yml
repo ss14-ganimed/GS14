@@ -12,10 +12,6 @@
   prefix: HOLO
 
 - type: nameIdentifierGroup
-  id: Holoparasite
-  prefix: HOLO
-
-- type: nameIdentifierGroup
   id: MMI
   prefix: MMI
   minValue: 100

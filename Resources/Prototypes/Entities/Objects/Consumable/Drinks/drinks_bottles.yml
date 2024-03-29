@@ -10,9 +10,6 @@
   - type: Openable
     sound:
       collection: bottleOpenSounds
-    closeable: true
-    closeSound:
-      collection: bottleCloseSounds
   - type: SolutionContainerManager
     solutions:
       drink:
@@ -82,7 +79,46 @@
       Glass: 100
 
 - type: entity
-  parent: DrinkBottleGlassBaseFull
+  id: DrinkBottleVisualsOpenable
+  abstract: true
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon"}
+  - type: Sprite
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+
+- type: entity
+  id: DrinkBottleVisualsAll
+  abstract: true
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon_empty"}
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alco-bottle.rsi
+    layers:
+      - state: icon
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: fill-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fill-
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
   id: DrinkAbsintheBottleFull
   name: Jailbreaker Verte
   description: One sip of this and you just know you're gonna have a good time.
@@ -95,7 +131,6 @@
           Quantity: 100
   - type: Sprite
     sprite: Objects/Consumable/Drinks/absinthebottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -135,7 +170,6 @@
           Quantity: 100
   - type: Sprite
     sprite: Objects/Consumable/Drinks/bottleofnothing.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
@@ -151,8 +185,6 @@
           Quantity: 100
   - type: Sprite
     sprite: Objects/Consumable/Drinks/champagnebottle.rsi
-  - type: Openable
-    closeable: false # Champagne corks are fat. Not worth the effort.
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -170,7 +202,6 @@
     currentLabel: cognac
   - type: Sprite
     sprite: Objects/Consumable/Drinks/cognacbottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -188,7 +219,6 @@
     currentLabel: cola
   - type: Sprite
     sprite: Objects/Consumable/Drinks/colabottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -226,7 +256,6 @@
     currentLabel: gin
   - type: Sprite
     sprite: Objects/Consumable/Drinks/ginbottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -242,7 +271,6 @@
           Quantity: 100
   - type: Sprite
     sprite: Objects/Consumable/Drinks/gildlagerbottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
@@ -260,7 +288,6 @@
     currentLabel: coffee liqueur
   - type: Sprite
     sprite: Objects/Consumable/Drinks/coffeeliqueurbottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -315,10 +342,6 @@
           Quantity: 100
   - type: Sprite
     sprite: Objects/Consumable/Drinks/pwinebottle.rsi
-  - type: Sealable
-  - type: Tag
-    tags:
-    - Wine
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -336,7 +359,6 @@
     currentLabel: rum
   - type: Sprite
     sprite: Objects/Consumable/Drinks/rumbottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -355,7 +377,6 @@
     currentLabel: space mountain wind
   - type: Sprite
     sprite: Objects/Consumable/Drinks/space_mountain_wind_bottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -374,7 +395,6 @@
     currentLabel: space-up
   - type: Sprite
     sprite: Objects/Consumable/Drinks/space-up_bottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -392,7 +412,6 @@
     currentLabel: tequila
   - type: Sprite
     sprite: Objects/Consumable/Drinks/tequillabottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -410,7 +429,6 @@
     currentLabel: vermouth
   - type: Sprite
     sprite: Objects/Consumable/Drinks/vermouthbottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -428,7 +446,6 @@
     currentLabel: vodka
   - type: Sprite
     sprite: Objects/Consumable/Drinks/vodkabottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -446,7 +463,6 @@
     currentLabel: whiskey
   - type: Sprite
     sprite: Objects/Consumable/Drinks/whiskeybottle.rsi
-  - type: Sealable
 
 - type: entity
   parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
@@ -464,10 +480,6 @@
     currentLabel: wine
   - type: Sprite
     sprite: Objects/Consumable/Drinks/winebottle.rsi
-  - type: Sealable
-  - type: Tag
-    tags:
-    - Wine
 
 # Small Bottles
 
@@ -488,11 +500,6 @@
           Quantity: 50
   - type: Sprite
     sprite: Objects/Consumable/Drinks/beer.rsi
-  - type: Openable
-    closeable: false
-  - type: Tag
-    tags:
-    - Beer
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
@@ -511,11 +518,6 @@
     currentLabel: beer
   - type: Sprite
     sprite: Objects/Consumable/Drinks/beer.rsi
-  - type: Openable
-    closeable: false
-  - type: Tag
-    tags:
-    - Beer
 
 
 - type: entity
@@ -533,10 +535,9 @@
         reagents:
         - ReagentId: Ale
           Quantity: 50
+
   - type: Sprite
     sprite: Objects/Consumable/Drinks/alebottle.rsi
-  - type: Openable
-    closeable: false
 
 - type: entity
   parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
@@ -544,8 +545,6 @@
   name: Magm-Ale Growler
   description: A true dorf's drink of choice. XL growler bottle.
   components:
-  - type: Item
-    size: Small
   - type: SolutionContainerManager
     solutions:
       drink:
@@ -557,8 +556,6 @@
     currentLabel: ale
   - type: Sprite
     sprite: Objects/Consumable/Drinks/alebottle.rsi
-  - type: Openable
-    closeable: false
 
 - type: entity
   parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
@@ -590,7 +587,6 @@
     fillBaseName: icon-
     inHandsMaxFillLevels: 2
     inHandsFillBaseName: -fill-
-  - type: Sealable
 
 - type: entity
   parent: DrinkWaterBottleFull
@@ -688,7 +684,7 @@
 - type: entity
   parent: DrinkBottlePlasticBaseFull
   id: DrinkSugarJug
-  name: sugar jug
+  name: sugar
   suffix: for drinks
   description: some people put this in their coffee...
   components:
@@ -704,7 +700,7 @@
 - type: entity
   parent: DrinkBottlePlasticBaseFull
   id: DrinkLemonLimeJug
-  name: lemon lime jug
+  name: lemon lime
   description: a dual citrus sensation.
   components:
   - type: SolutionContainerManager
