@@ -7,3 +7,5 @@ ent-BriefcaseSyndieBase = { ent-BriefcaseBase }
     .suffix = Синдикат, Пустой
 ent-BriefcaseSyndie = коричневый чемодан
     .desc = Удобный чемоданчик.
+ent-BriefcaseBrownFilled = коричневый чемодан
+    .desc = Удобный чемоданчик.
