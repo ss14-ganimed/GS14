@@ -5,4 +5,4 @@ player-tab-antagonist = Антагонист
 player-tab-playtime = Игровое время
 player-tab-show-disconnected = Показать отключившихся
 player-tab-overlay = Оверлей
-player-tab-entry-tooltip = Игровое время отображается в формате дни:часы:минуты.
+player-tab-entry-tooltip = Игровое время отображается как дни:часы:минуты.

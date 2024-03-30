@@ -76,6 +76,7 @@
   id: Civilian
   description: department-Civilian-description
   color: "#9FED58"
+  weight: -10
   roles:
   - Bartender
   - Botanist
@@ -91,6 +92,7 @@
   - Musician
   - Passenger
   - Reporter
+  - Visitor
   - Zookeeper
   - ServiceWorker
   - Prisoner
@@ -99,6 +101,7 @@
   id: Specific
   description: department-Specific-description
   color: "#9FED58"
+  weight: 10
   roles:
   - Boxer
   - Reporter
@@ -111,3 +114,4 @@
   - BlueShield
   - Coroner
   - BridgeOfficer
+  primary: false

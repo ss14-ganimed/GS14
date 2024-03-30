@@ -1,3 +1,3 @@
-ent-DebugItemShapeWeird = предмет странной формы
-    .suffix = Дебаг
-    .desc = Это ещё что такое..?
+ent-DebugItemShapeWeird = weirdly shaped item
+    .desc = What is it...?
+    .suffix = DEBUG

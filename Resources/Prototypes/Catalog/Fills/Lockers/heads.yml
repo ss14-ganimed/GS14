@@ -45,14 +45,10 @@
       - id: WeaponAntiqueLaser
       - id: JetpackCaptainFilled
       - id: MedalCase
-      - id: ClothingHeadHatCapcap
-        orGroup: CapHats
-      - id: ClothingHeadCaptainHat
-        orGroup: CapHats
 
 - type: entity
   id: LockerCaptainFilled
-  suffix: Filled
+  suffix: Filled, AntiqueLaser
   parent: LockerCaptain
   components:
   - type: StorageFill
@@ -75,10 +71,31 @@
       - id: WeaponAntiqueLaser
       - id: JetpackCaptainFilled
       - id: MedalCase
-      - id: ClothingHeadHatCapcap
-        orGroup: CapHats
-      - id: ClothingHeadCaptainHat
-        orGroup: CapHats
+
+- type: entity
+  id: LockerCaptainFilledNoLaser
+  suffix: Filled
+  parent: LockerCaptain
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterArmorCaptainCarapace
+      - id: NukeDisk
+      - id: PinpointerNuclear
+      - id: CaptainIDCard
+      - id: WeaponDisabler
+      - id: CommsComputerCircuitboard
+      - id: ClothingHeadsetAltCommand
+      - id: SpaceCash1000
+      - id: PlushieNuke
+        prob: 0.1
+      - id: CigarGoldCase
+        prob: 0.25
+      - id: ClothingBeltSheathFilled
+      - id: DoorRemoteCommand
+      - id: RubberStampCaptain
+      - id: JetpackCaptainFilled
+      - id: MedalCase
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -115,8 +132,6 @@
     contents:
       - id: ClothingOuterHardsuitEngineeringWhite
       - id: ClothingMaskBreath
-      - id: OxygenTankFilled
-      - id: NitrogenTankFilled
       - id: ClothingEyesGlassesMeson
       - id: ClothingBeltChiefEngineerFilled
       - id: ClothingShoesBootsMagAdv
@@ -163,11 +178,10 @@
     contents:
       - id: MedkitFilled
       - id: ClothingHandsGlovesNitrile
-      - name: ClothingEyesHudMedical
+      - id: ClothingEyesHudMedical
       - id: ClothingHeadsetAltMedical
       - id: ClothingCloakCmo
       - id: ClothingBackpackDuffelSurgeryFilled
-      - id: ClothingOuterCoatLabCmo
       - id: ClothingMaskSterile
       - id: ClothingHeadHatBeretCmo
       - id: ClothingOuterHardsuitMedical
@@ -187,7 +201,7 @@
     contents:
       - id: MedkitFilled
       - id: ClothingHandsGlovesNitrile
-      - name: ClothingEyesHudMedical
+      - id: ClothingEyesHudMedical
       - id: ClothingHeadsetAltMedical
       - id: ClothingBackpackDuffelSurgeryFilled
       - id: ClothingMaskSterile
@@ -215,6 +229,8 @@
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
       - id: BoxEncryptionKeyScience
+      - id: ClothingHeadsetAltScience
+      - id: EncryptionKeyBinary
 
 - type: entity
   id: LockerResearchDirectorFilled
@@ -232,6 +248,8 @@
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
       - id: BoxEncryptionKeyScience
+      - id: ClothingHeadsetAltScience
+      - id: EncryptionKeyBinary
 
 - type: entity
   id: LockerHeadOfSecurityFilledHardsuit
@@ -260,8 +278,8 @@
         prob: 0.8
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingEyesGlassesSecurity
-      - id: ClothingShoesBootsJackSecFilled
+      - id: ClothingEyesGlassesSunglasses
+      - id: ClothingShoesBootsJack
       - id: CigarGoldCase
         prob: 0.50
       - id: DoorRemoteSecurity

@@ -201,10 +201,31 @@
       "name": "scrap_bloodied"
     },
     {
+      "name": "paper_stamp-cap"
+    },
+    {
+      "name": "paper_stamp-ce"
+    },
+    {
+      "name": "paper_stamp-centcom"
+    },
+    {
+      "name": "paper_stamp-chaplain"
+    },
+    {
+      "name": "paper_stamp-lawyer"
+    },
+    {
       "name": "paper_stamp-clown"
     },
     {
       "name": "paper_stamp-cmo"
+    },
+    {
+      "name": "paper_stamp-deny"
+    },
+    {
+      "name": "paper_stamp-detective"
     },
     {
       "name": "paper_stamp-hop"
@@ -214,6 +235,12 @@
     },
     {
       "name": "paper_stamp-ok"
+    },
+    {
+      "name": "paper_stamp-mime"
+    },
+    {
+      "name": "paper_stamp-qm"
     },
     {
       "name": "paper_stamp-rd"
@@ -229,39 +256,6 @@
     },
     {
       "name": "paper_stamp-generic"
-    },
-    {
-      "name": "paper_stamp-cap"
-    },
-    {
-      "name": "paper_stamp-ce"
-    },
-    {
-      "name": "paper_stamp-centcom"
-    },
-    {
-      "name": "paper_stamp-chaplain"
-    },
-    {
-      "name": "paper_stamp-legal"
-    },
-    {
-      "name": "paper_stamp-iaa"
-    },
-    {
-      "name": "paper_stamp-deny"
-    },
-    {
-      "name": "paper_stamp-approve"
-    },
-    {
-      "name": "paper_stamp-mime"
-    },
-    {
-      "name": "paper_stamp-qm"
-    },
-    {
-      "name": "paper_stamp-void"
     }
   ]
 }

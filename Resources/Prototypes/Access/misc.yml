@@ -9,6 +9,7 @@
   - HeadOfSecurity
   - ResearchDirector
   - Command
+  - Cryogenics
   - Security
   - Detective
   - Armory
@@ -25,7 +26,6 @@
   - External
   - Janitor
   - Theatre
-  - Library
   - Bar
   - Chemistry
   - Kitchen
@@ -60,7 +60,6 @@
   - External
   - Janitor
   - Theatre
-  - Library
   - Bar
   - Chemistry
   - Kitchen
@@ -96,7 +95,6 @@
   - External
   - Janitor
   - Theatre
-  - Library
   - Bar
   - Chemistry
   - Kitchen

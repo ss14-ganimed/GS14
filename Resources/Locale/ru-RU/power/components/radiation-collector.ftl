@@ -1,2 +1,2 @@
-power-radiation-collector-gas-tank-missing = [color=darkred]Внешний контейнер плазмы отсутствует.[/color]
-power-radiation-collector-gas-tank-present = Внешний контейнер плазмы [color=darkgreen]подключен[/color].
+power-radiation-collector-gas-tank-missing = [color=red]Газовый баллон не подключен.[/color]
+power-radiation-collector-gas-tank-present = Газовый баллон [color=darkgreen]подключен[/color].

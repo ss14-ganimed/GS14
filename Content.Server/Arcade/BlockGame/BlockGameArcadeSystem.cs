@@ -1,5 +1,8 @@
 using Content.Server.Power.Components;
-using Content.Server.UserInterface;
+using Content.Shared.UserInterface;
+using Content.Server.Advertise;
+using Content.Server.Advertise.Components;
+using Content.Server.Advertise.EntitySystems;
 using Content.Shared.Arcade;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
@@ -9,6 +12,7 @@ namespace Content.Server.Arcade.BlockGame;
 public sealed class BlockGameArcadeSystem : EntitySystem
 {
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly AdvertiseSystem _advertise = default!;
 
     public override void Initialize()
     {
@@ -16,9 +20,13 @@ public sealed class BlockGameArcadeSystem : EntitySystem
 
         SubscribeLocalEvent<BlockGameArcadeComponent, ComponentInit>(OnComponentInit);
         SubscribeLocalEvent<BlockGameArcadeComponent, AfterActivatableUIOpenEvent>(OnAfterUIOpen);
-        SubscribeLocalEvent<BlockGameArcadeComponent, BoundUIClosedEvent>(OnAfterUiClose);
         SubscribeLocalEvent<BlockGameArcadeComponent, PowerChangedEvent>(OnBlockPowerChanged);
-        SubscribeLocalEvent<BlockGameArcadeComponent, BlockGameMessages.BlockGamePlayerActionMessage>(OnPlayerAction);
+
+        Subs.BuiEvents<BlockGameArcadeComponent>(BlockGameUiKey.Key, subs =>
+        {
+            subs.Event<BoundUIClosedEvent>(OnAfterUiClose);
+            subs.Event<BlockGameMessages.BlockGamePlayerActionMessage>(OnPlayerAction);
+        });
     }
 
     public override void Update(float frameTime)
@@ -85,7 +93,15 @@ public sealed class BlockGameArcadeSystem : EntitySystem
             UpdatePlayerStatus(uid, component.Player, blockGame: component);
         }
         else
+        {
+            // Everybody's gone
             component.Player = null;
+            if (component.ShouldSayThankYou && TryComp<AdvertiseComponent>(uid, out var advertise))
+            {
+                _advertise.SayAdvertisement(uid, advertise);
+                component.ShouldSayThankYou = false;
+            }
+        }
 
         UpdatePlayerStatus(uid, temp, blockGame: component);
     }
@@ -99,6 +115,7 @@ public sealed class BlockGameArcadeSystem : EntitySystem
             _uiSystem.CloseAll(bui);
         component.Player = null;
         component.Spectators.Clear();
+        component.ShouldSayThankYou = false;
     }
 
     private void OnPlayerAction(EntityUid uid, BlockGameArcadeComponent component, BlockGameMessages.BlockGamePlayerActionMessage msg)
@@ -117,6 +134,8 @@ public sealed class BlockGameArcadeSystem : EntitySystem
             component.Game.StartGame();
             return;
         }
+
+        component.ShouldSayThankYou = true;
 
         component.Game.ProcessInput(msg.PlayerAction);
     }

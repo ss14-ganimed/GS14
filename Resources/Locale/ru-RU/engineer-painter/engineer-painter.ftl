@@ -1,4 +1,4 @@
-spray-painter-window-title = Покрасчик-распылитель
+spray-painter-window-title = Краскопульт
 spray-painter-style-not-available = Невозможно применить выбранный стиль к данному типу шлюза
 spray-painter-selected-style = Выбранный стиль:
 spray-painter-selected-color = Выбранный цвет:

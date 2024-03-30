@@ -1,7 +1,7 @@
 using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Popups;
-using Content.Server.UserInterface;
+using Content.Shared.UserInterface;
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -79,20 +79,24 @@ namespace Content.Server.Paper
             if (!args.IsInDetailsRange)
                 return;
 
-            if (paperComp.Content != "")
-                args.PushMarkup(
-                    Loc.GetString(
-                        "paper-component-examine-detail-has-words", ("paper", uid)
-                    )
-                );
-
-            if (paperComp.StampedBy.Count > 0)
+            using (args.PushGroup(nameof(PaperComponent)))
             {
-                var commaSeparated = string.Join(", ", paperComp.StampedBy.Select(s => Loc.GetString(s.StampedName)));
-                args.PushMarkup(
-                    Loc.GetString(
-                        "paper-component-examine-detail-stamped-by", ("paper", uid), ("stamps", commaSeparated))
-                );
+                if (paperComp.Content != "")
+                    args.PushMarkup(
+                        Loc.GetString(
+                            "paper-component-examine-detail-has-words", ("paper", uid)
+                        )
+                    );
+
+                if (paperComp.StampedBy.Count > 0)
+                {
+                    var commaSeparated =
+                        string.Join(", ", paperComp.StampedBy.Select(s => Loc.GetString(s.StampedName)));
+                    args.PushMarkup(
+                        Loc.GetString(
+                            "paper-component-examine-detail-stamped-by", ("paper", uid), ("stamps", commaSeparated))
+                    );
+                }
             }
         }
 		
@@ -109,10 +113,9 @@ namespace Content.Server.Paper
 
         private void OnInteractUsing(EntityUid uid, PaperComponent paperComp, InteractUsingEvent args)
         {
-            // only allow editing if the stamps allow it or when using a cyberpen
-			var editable = CanWriteStamped(paperComp.StampedBy) || _tagSystem.HasTag(args.Used, "WriteIgnoreStamps");
-			
-			if (_tagSystem.HasTag(args.Used, "Write") && editable)
+            // only allow editing if there are no stamps or when using a cyberpen
+            var editable = paperComp.StampedBy.Count == 0 || _tagSystem.HasTag(args.Used, "WriteIgnoreStamps");
+            if (_tagSystem.HasTag(args.Used, "Write") && editable)
             {
                 var writeEvent = new PaperWriteEvent(uid, args.User);
                 RaiseLocalEvent(args.Used, ref writeEvent);
@@ -168,6 +171,8 @@ namespace Content.Server.Paper
                 if (args.Session.AttachedEntity != null)
                     _adminLogger.Add(LogType.Chat, LogImpact.Low,
                         $"{ToPrettyString(args.Session.AttachedEntity.Value):player} has written on {ToPrettyString(uid):entity} the following text: {args.Text}");
+
+                _audio.PlayPvs(paperComp.Sound, uid);
             }
 
             paperComp.Mode = PaperAction.Read;

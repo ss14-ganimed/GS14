@@ -1,3 +1,5 @@
+ent-BaseSuicideAction = { "" }
+    .desc = { "" }
 ent-ActionScream = Крикнуть
     .desc = ААААААААААААААААААААААААА
 ent-ActionTurnUndead = Обратиться в зомби
@@ -48,5 +50,5 @@ ent-ActionFireStarter = Поджечь
     .desc = Поджигает противников в радиусе вокруг вас.
 ent-ActionToggleEyes = Открыть/закрыть глаза
     .desc = Закройте глаза, чтобы защитить их, или откройте, чтобы насладиться яркими цветами.
-ent-ActionToggleWagging = Переключить виляние
-    .desc = Переключает виляние хвостом.
+ent-ActionToggleWagging = action-name-toggle-wagging
+    .desc = action-description-toggle-wagging

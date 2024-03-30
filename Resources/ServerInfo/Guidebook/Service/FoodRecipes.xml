@@ -26,12 +26,15 @@
 <GuideEntityEmbed Entity="FoodDoughPie"/>
 <GuideEntityEmbed Entity="FoodCakeBatter"/>
 <GuideEntityEmbed Entity="FoodDoughFlat"/>
+<GuideEntityEmbed Entity="FoodDoughTortilla"/>
 </Box>
 
 <Box>
 <GuideEntityEmbed Entity="FoodButter"/>
 <GuideEntityEmbed Entity="FoodMeatMeatball"/>
 <GuideEntityEmbed Entity="FoodCheese"/>
+<GuideEntityEmbed Entity="FoodChevre"/>
+<GuideEntityEmbed Entity="FoodSnackChocolateBar"/>
 </Box>
 
 ## Второстепенные продукты
@@ -62,6 +65,13 @@
 <GuideEntityEmbed Entity="FoodPizzaMargherita"/>
 <GuideEntityEmbed Entity="FoodCakePlain"/>
 <GuideEntityEmbed Entity="FoodPieApple"/>
+<GuideEntityEmbed Entity="FoodTacoBeef"/>
+</Box>
+<Box>
+<GuideEntityEmbed Entity="FoodMealCubancarp"/>
+<GuideEntityEmbed Entity="FoodPieBananaCream"/>
+<GuideEntityEmbed Entity="FoodMealFriesCarrot"/>
+<GuideEntityEmbed Entity="FoodBakedPancake"/>
 </Box>
 
 </Document>

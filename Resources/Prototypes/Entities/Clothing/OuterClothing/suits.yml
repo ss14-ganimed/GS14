@@ -143,10 +143,17 @@
     modifiers:
       coefficients:
         Heat: 0.90
-        Radiation: 0.05
+        Radiation: 0.001
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/rad.rsi
   - type: GroupExamine
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodRad
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      
   - type: StaminaProtection
     coefficient: 0.85
 

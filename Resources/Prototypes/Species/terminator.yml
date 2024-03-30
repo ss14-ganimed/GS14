@@ -1,6 +1,6 @@
 - type: species
   id: Terminator
-  name: species-name-terminator
+  name: Terminator
   roundStart: false
   prototype: MobTerminatorEndoskeleton
   sprites: MobTerminatorSprites

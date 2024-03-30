@@ -78,13 +78,6 @@
   prototype: ClothingEyesGlassesMercenary
 
 - type: loadout
-  id: LoadoutEyesClothingEyesGlassesCosmeticSunglasses
-  category: loadout-category-eyes
-  cost: 2
-  exclusive: true
-  prototype: ClothingEyesGlassesCosmeticSunglasses
-
-- type: loadout
   id: LoadoutEyesClothingEyesGlassesOutlawGlasses
   category: loadout-category-eyes
   cost: 2

@@ -87,11 +87,11 @@ public sealed class ChemistryGuideDataSystem : SharedChemistryGuideDataSystem
             _reagentSources[gas.Reagent].Add(data);
         }
 
-        // store the entities used so we don't get repeats in the guide.
-        var usedEnts = new List<EntityPrototype>();
+        // store the names of the entities used so we don't get repeats in the guide.
+        var usedNames = new List<string>();
         foreach (var entProto in PrototypeManager.EnumeratePrototypes<EntityPrototype>())
         {
-            if (entProto.Abstract || usedEnts.Contains(entProto))
+            if (entProto.Abstract || usedNames.Contains(entProto.Name))
                 continue;
 
             if (!entProto.TryGetComponent<ExtractableComponent>(out var extractableComponent))
@@ -116,7 +116,7 @@ public sealed class ChemistryGuideDataSystem : SharedChemistryGuideDataSystem
                     _reagentSources[id.Prototype].Add(data);
                 }
 
-                usedEnts.Add(entProto);
+                usedNames.Add(entProto.Name);
             }
 
 
@@ -132,7 +132,7 @@ public sealed class ChemistryGuideDataSystem : SharedChemistryGuideDataSystem
                 {
                     _reagentSources[id.Prototype].Add(data);
                 }
-                usedEnts.Add(entProto);
+                usedNames.Add(entProto.Name);
             }
         }
     }

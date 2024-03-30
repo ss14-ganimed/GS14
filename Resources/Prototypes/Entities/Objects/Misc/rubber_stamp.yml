@@ -1,6 +1,3 @@
-
-
-# Stamps
 - type: entity
   name: generic rubber stamp
   parent: BaseItem
@@ -51,7 +48,6 @@
     stampedColor: "#3681bb"
     stampState: "paper_stamp-cap"
   - type: Sprite
-    sprite: Objects/Misc/stamps.rsi
     state: stamp-cap
 
 - type: entity
@@ -107,8 +103,20 @@
     stampedColor: "#d70601"
     stampState: "paper_stamp-chaplain"
   - type: Sprite
-    sprite: Objects/Misc/stamps.rsi
     state: stamp-chaplain
+
+- type: entity
+  name: lawyer's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampLawyer
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-lawyer
+    stampedColor: "#233D57"
+    stampState: "paper_stamp-lawyer"
+  - type: Sprite
+    state: stamp-lawyer
 
 - type: entity
   name: clown's rubber stamp
@@ -193,9 +201,8 @@
     stampedName: stamp-component-stamped-name-mime
     stampedColor: "#777777"
     stampState: "paper_stamp-mime"
-    # TODO remove sound from mime's rubber stamp
+    sound: null
   - type: Sprite
-    sprite: Objects/Misc/stamps.rsi
     state: stamp-mime
 
 - type: entity
@@ -290,9 +297,21 @@
     stampedColor: "#a23e3e"
     stampState: "paper_stamp-deny"
   - type: Sprite
-    sprite: Objects/Misc/stamps.rsi
     state: stamp-deny
 
+- type: entity
+  name: detective's rubber stamp
+  parent: RubberStampBase
+  id: RubberStampDetective
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-detective
+    stampedColor: "#754d36"
+    stampState: "paper_stamp-detective"
+  - type: Sprite
+    state: stamp-detective
+    
 - type: entity
   parent: Paper
   id: StationGoalPaper

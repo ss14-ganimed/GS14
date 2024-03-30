@@ -1,4 +1,4 @@
-﻿using Content.Shared.FixedPoint;
+﻿﻿using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
@@ -63,6 +63,4 @@ public sealed class SiliconLawPrototype : SiliconLaw, IPrototype
     /// <inheritdoc/>
     [IdDataField]
     public string ID { get; private set; } = default!;
-
-
 }

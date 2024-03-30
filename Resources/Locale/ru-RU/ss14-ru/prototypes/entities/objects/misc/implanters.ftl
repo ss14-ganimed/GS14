@@ -34,6 +34,9 @@ ent-UplinkImplanter = { ent-Implanter }
 ent-EmpImplanter = { ent-Implanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
     .suffix = ЭМИ
+ent-ScramImplanter = { ent-Implanter }
+    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
+    .suffix = Побег
 ent-DnaScramblerImplanter = { ent-Implanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
     .suffix = Миксер ДНК
@@ -43,18 +46,15 @@ ent-MicroBombImplanter = { ent-Implanter }
 ent-MacroBombImplanter = { ent-Implanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
     .suffix = Макробомба
-ent-ScramImplanter = { ent-Implanter }
-    .desc = { ent-BaseImplantOnlyImplanter.desc }
-    .suffix = Побег
 ent-DeathRattleImplanter = { ent-Implanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
     .suffix = Предсмертный хрип
+ent-DeathAcidifierImplanter = { ent-Implanter }
+    .desc = { ent-BaseImplantOnlyImplanter.desc }
+    .suffix = Посмертный растворитель
 ent-MindShieldImplanter = { ent-Implanter }
     .desc = { ent-BaseImplantOnlyImplanter.desc }
     .suffix = Щит разума
-ent-DeathAcidifierImplanter = { ent-Implanter }
-    .desc = { ent-BaseImplantOnlyImplanter.desc }
-    .suffix = Разжижение
 
 # Corvax anti-meta localization end
 

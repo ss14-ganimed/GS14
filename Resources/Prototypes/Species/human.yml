@@ -20,6 +20,7 @@
     Head: MobHumanHead
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
     Chest: MobHumanTorso
     HeadTop: MobHumanoidAnyMarking
     Tail: MobHumanoidAnyMarking
@@ -42,7 +43,7 @@
     FacialHair:
       points: 1
       required: false
-    Tail:
+    Snout:
       points: 1
       required: false
     HeadTop:

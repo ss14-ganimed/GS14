@@ -226,6 +226,16 @@
       - id: BoxSurvival
       - id: Bible
       - id: RubberStampChaplain
+  
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelLawyerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: RubberStampLawyer
 
 - type: entity
   noSpawn: true
@@ -247,7 +257,6 @@
       contents:
         - id: BoxSurvival
         - id: BookRandom
-        - id: BookTerminalMachineCircuitboard # Плата принтера книг, у нас нет возможности её печатать.
 
 - type: entity
   noSpawn: true
@@ -282,15 +291,6 @@
 
 - type: entity
   noSpawn: true
-  parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelDrone
-  components:
-  - type: Tag
-    tags:
-    - InnateDontDelete
-
-- type: entity
-  noSpawn: true
   parent: ClothingBackpackSatchelMime
   id: ClothingBackpackSatchelMimeFilled
   components:
@@ -298,3 +298,14 @@
     contents:
       - id: BoxSurvival
       - id: RubberStampMime
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackSatchelHolding
+  id: ClothingBackpackSatchelHoldingAdmin
+  components:
+  - type: StorageFill
+    contents:
+    - id: GasAnalyzer
+    - id: trayScanner
+  - type: Unremoveable
