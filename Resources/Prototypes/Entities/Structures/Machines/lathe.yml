@@ -139,7 +139,6 @@
       - TrashBag
       - PowerCellSmall
       - PowerCellMedium
-      - VehicleWheelchairFolded
       - RollerBedSpawnFolded
       - CheapRollerBedSpawnFolded
       - EmergencyRollerBedSpawnFolded
@@ -179,7 +178,6 @@
        - GrenadeBlast
     emagDynamicRecipes:
       - ShellShotgunBeanbag
-      - ShellShotgunIncendiary
       - CartridgePistolIncendiary
       - CartridgeMagnumIncendiary
       - CartridgeLightRifleIncendiary
@@ -714,7 +712,6 @@
       - MagazineGrenadeEmpty
       - GrenadeEMP
       - GrenadeFlash
-      - ShellShotgunIncendiary
       - ShellShotgunUranium
       - Signaller
       - SignalTrigger

@@ -360,14 +360,6 @@
     Steel: 200
 
 - type: latheRecipe
-  id: ShellShotgunIncendiary
-  result: ShellShotgunIncendiary
-  category: Ammo
-  completetime: 2
-  materials:
-    Plastic: 20
-
-- type: latheRecipe
   id: CartridgePistolIncendiary
   result: CartridgePistolIncendiary
   category: Ammo

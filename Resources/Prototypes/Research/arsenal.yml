@@ -24,7 +24,6 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - ShellShotgunIncendiary
   - CartridgePistolIncendiary
   - CartridgeMagnumIncendiary
   - CartridgeLightRifleIncendiary
@@ -147,14 +146,6 @@
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
-  technologyPrerequisites:
-  - SalvageWeapons
-  - ClothingEyesGlassesSecurity
-  - Truncheon
-  - TelescopicShield
-  - HoloprojectorSecurity
-  - WeaponDisablerSMG
-  - WeaponIonRifleGun
 
 # Tier 3
 
@@ -169,6 +160,7 @@
   cost: 15000
   recipeUnlocks:
   - WeaponAdvancedLaser
+  - WeaponIonRifleGun
 
 - type: technology
   id: ExperimentalBatteryAmmo

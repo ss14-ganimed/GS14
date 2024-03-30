@@ -40,6 +40,13 @@ latejoin-arrival-announcement =
        *[neuter] прибыл
     } на станцию!
 latejoin-arrival-sender = Станции
+latejoin-arrival-announcement-captain =
+    Все на борт! { $job } { $character } { $gender ->
+        [male] прибыл
+        [female] прибыла
+        [epicene] прибыли
+       *[neuter] прибыл
+    } на станцию!
 latejoin-arrivals-direction = Вскоре прибудет шаттл, который доставит вас на станцию.
 latejoin-arrivals-direction-time = Шаттл, который доставит вас на станцию, прибудет через { $time }.
 preset-not-enough-ready-players = Не удалось запустить пресет { $presetName }. Требуется { $minimumPlayers } игроков, но готовы только { $readyPlayersCount }.
