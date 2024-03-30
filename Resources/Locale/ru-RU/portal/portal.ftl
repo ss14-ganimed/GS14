@@ -1,8 +1,6 @@
-﻿### Portal verb text
+### Portal verb text
 
-portal-component-ghost-traverse = Пересечь
-
-portal-component-no-linked-entities = Нельзя призрачно пересечь портал, который не имеет одного конкретного пункта назначения
+portal-component-ghost-traverse = Переместиться
+portal-component-no-linked-entities = Невозможно переместиться призраком через портал, не имеющий ровно одного связанного портала.
 portal-component-can-ghost-traverse = Телепортироваться к связанному порталу
-
-portal-component-invalid-configuration-fizzle = Портал растворяется!
+portal-component-invalid-configuration-fizzle = Портал исчезает!

@@ -1,7 +1,9 @@
 ent-BaseMaterialDoor = дверь
     .desc = Дверь, куда она ведет?
-ent-MetalDoor = металлическая дверь
+ent-BaseMaterialDoorNavMap = { ent-BaseMaterialDoor }
     .desc = { ent-BaseMaterialDoor.desc }
+ent-MetalDoor = металлическая дверь
+    .desc = { ent-BaseMaterialDoorNavMap.desc }
 ent-WoodDoor = деревянная дверь
     .desc = Дверь, куда она ведет?
 ent-PaperDoor = бумажная дверь
@@ -15,4 +17,4 @@ ent-SilverDoor = серебряная дверь
 ent-BananiumDoor = бананиумовая дверь
     .desc = Дверь, куда она ведет?
 ent-WebDoor = паутинная дверь
-    .desc = Дверь, ведущая в земли пауков... или в просторную комнату.
+    .desc = Дверь, ведущая в земли пауков... или просторную комнату.

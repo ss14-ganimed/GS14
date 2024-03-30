@@ -1,16 +1,20 @@
-war-declarator-not-nukeops = Устройство издает писк, но ничего не происходит...
-war-declarator-ui-header = Объявление Войны
+war-declarator-not-working = Устройство пищит, но ничего не происходит...
+war-declarator-ui-header = Объявление войны
+war-declarator-ui-try-war-button = Попробовать объявить войну
 war-declarator-ui-war-button = ОБЪЯВИТЬ ВОЙНУ!
-war-declarator-conditions-small-crew = Меньше, чем { $min } оперативников
-war-declarator-conditions-left-outpost = Шаттл покинул форпост Синдиката
+war-declarator-conditions-small-crew = Недостаточно ядерных оперативников, чтобы объявить войну!
+war-declarator-conditions-left-outpost = Шаттл покинул аванпост Синдиката
 war-declarator-conditions-time-out = Время на объявление войны прошло
-war-declarator-conditions-delay = Отправление шаттла временно заблокировано
-war-declarator-conditions-ready = Шаттл готов покидать форпост!
+war-declarator-conditions-ready = Шаттл может покинуть аванпост!
 war-declarator-conditions-unknown = Неизвестно
-war-declarator-boost-possible = Объявление возможно
-war-declarator-boost-impossible = Объявление невозможно
-war-declarator-boost-declared = Объявление успешно объявлено!
-war-declarator-boost-declared-delay = Война объявлена! Отправление шаттла временно заблокировано
-war-declarator-boost-timer = Оставшееся время: {$minutes} минут и {$seconds} секунд
-war-declarator-default-message = Периферийная оперативная группа Синдиката объявила о своих намерениях полностью уничтожить станцию с использованием тактического ядерного оружия и бросает вызов всему экипажу, который вмешается.
-war-declarator-message-placeholder = Укажите собственный текст объявления войны здесь...
+war-declarator-boost-possible = Возможно объявить войну
+war-declarator-boost-impossible = Невозможно объявить войну
+war-declarator-boost-declared = Война объявлена! Шаттл может быть отключен на...
+war-declarator-boost-timer =
+    Оставшееся время: { $time } { $time ->
+        [one] минута
+        [few] минуты
+       *[other] минут
+    }.
+war-declarator-default-message = Пограничный отряд Синдиката объявляет о своем намерении уничтожить станцию при помощи ядерного устройства и призывает экипаж предпринять ничтожную попытку остановить их.
+war-declarator-message-placeholder = Введите текст объявления...

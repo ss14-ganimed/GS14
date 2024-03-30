@@ -1,16 +1,15 @@
-ent-BaseFenceMetal = забор из сетки
-    .desc = Металлический забор, вероятно, охраняющий что-то важное.
-ent-FenceMetalBroken = сломанный забор из сетки
-    .desc = Кто-то вынес свою злобу на предмет окружения.
-
+ent-BaseFenceMetal = сетка-рабица
+    .desc = Металлическое ограждение, отгораживающее что-то, вероятно, очень важное.
+ent-FenceMetalBroken = сломанная сетка-рабица
+    .desc = Кто-то очень разозлился на неодушевленный предмет.
 ent-FenceMetalStraight = { ent-BaseFenceMetal }
-    .desc = { ent-BaseFenceMetal.desc }
     .suffix = Прямой
+    .desc = { ent-BaseFenceMetal.desc }
 ent-FenceMetalCorner = { ent-BaseFenceMetal }
-    .desc = { ent-BaseFenceMetal.desc }
     .suffix = Угол
-ent-FenceMetalEnd = { ent-BaseFenceMetal }
     .desc = { ent-BaseFenceMetal.desc }
+ent-FenceMetalEnd = { ent-BaseFenceMetal }
     .suffix = Конец
-ent-FenceMetalGate = ворота забора из сетки
-    .desc = Можно воспользоваться проемом, чтобы не пришлось перелезать. Но такое только для трусов.
+    .desc = { ent-BaseFenceMetal.desc }
+ent-FenceMetalGate = ворота сетки-рабицы
+    .desc = Вы можете использовать дверь вместо того, чтобы перелезать через неё - если вы ТРУС.

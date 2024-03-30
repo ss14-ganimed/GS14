@@ -1,6 +1,5 @@
-ninja-katana-recalled = Ваш мономолекулярный клинок появляется в руке!
+ninja-katana-recalled = Ваша энергокатана телепортируется вам в руку!
 ninja-hands-full = Ваши руки заняты!
-
-dash-ability-not-held = Вы не держите клинок!
-dash-ability-no-charges = Заряд клинка исчерпан.
-dash-ability-cant-see = Вы не можете переместиться сюда.
+dash-ability-not-held = Вы не держите свою катану!
+dash-ability-no-charges = Зарядов не осталось!
+dash-ability-cant-see = Вы не видите это место!
