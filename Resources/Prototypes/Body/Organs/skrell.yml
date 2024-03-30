@@ -12,6 +12,7 @@
       - Pill
       - Crayon
       - FoodSnack
+      - Flower
   - type: SolutionContainerManager
     solutions:
       stomach:
