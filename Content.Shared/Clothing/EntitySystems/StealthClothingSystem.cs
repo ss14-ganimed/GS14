@@ -119,7 +119,7 @@ public sealed class StealthClothingSystem : EntitySystem
 /// <summary>
 /// Raised on the stealth clothing when attempting to add an action.
 /// </summary>
-public class AddStealthActionEvent : CancellableEntityEventArgs
+public sealed class AddStealthActionEvent : CancellableEntityEventArgs
 {
     /// <summary>
     /// User that equipped the stealth clothing.
@@ -135,7 +135,7 @@ public class AddStealthActionEvent : CancellableEntityEventArgs
 /// <summary>
 /// Raised on the stealth clothing when the user is attemping to enable it.
 /// </summary>
-public class AttemptStealthEvent : CancellableEntityEventArgs
+public sealed class AttemptStealthEvent : CancellableEntityEventArgs
 {
     /// <summary>
     /// User that is attempting to enable the stealth clothing.

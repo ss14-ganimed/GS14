@@ -1,5 +1,4 @@
-﻿using Robust.Shared.Prototypes;
-using Content.Shared.Random;
+﻿﻿using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Silicons.Laws.Components;
 
@@ -14,18 +13,11 @@ public sealed partial class SiliconLawProviderComponent : Component
     /// </summary>
     [DataField(required: true)]
     public ProtoId<SiliconLawsetPrototype> Laws = string.Empty;
-	
-	/// <summary>
-    /// Weighted random override for lawset provided.
-    /// </summary>
-    [DataField]
-    public ProtoId<WeightedRandomPrototype> LawsWeighted = string.Empty;
 
     /// <summary>
     /// Lawset created from the prototype id.
-    /// Cached when getting laws and only modified during an ion storm event.
+    /// Cached when getting laws and modified during an ion storm event and when emagged.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
     public SiliconLawset? Lawset;
-	
 }

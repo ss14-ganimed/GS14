@@ -1,23 +1,32 @@
-﻿using Content.Shared.FixedPoint;
+﻿﻿using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
 
 namespace Content.Shared.Silicons.Laws;
 
+/// <summary>
+/// Lawset data used internally.
+/// </summary>
 [DataDefinition, Serializable, NetSerializable]
-public partial class SiliconLawset
+public sealed partial class SiliconLawset
 {
+    /// <summary>
+    /// List of laws in this lawset.
+    /// </summary>
     [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
     public List<SiliconLaw> Laws = new();
-	
-	[DataField]
-    public string? Name;
-	
-	[DataField]
-    public string? Description;
-	
-	public string LoggingString()
+
+    /// <summary>
+    /// What entity the lawset considers as a figure of authority.
+    /// </summary>
+    [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
+    public string ObeysTo = string.Empty;
+
+    /// <summary>
+    /// A single line used in logging laws.
+    /// </summary>
+    public string LoggingString()
     {
         var laws = new List<string>(Laws.Count);
         foreach (var law in Laws)
@@ -27,8 +36,12 @@ public partial class SiliconLawset
 
         return string.Join(" / ", laws);
     }
-	
-	public SiliconLawset Clone()
+
+    /// <summary>
+    /// Do a clone of this lawset.
+    /// It will have unique laws but their strings are still shared.
+    /// </summary>
+    public SiliconLawset Clone()
     {
         var laws = new List<SiliconLaw>(Laws.Count);
         foreach (var law in Laws)
@@ -39,9 +52,7 @@ public partial class SiliconLawset
         return new SiliconLawset()
         {
             Laws = laws,
-			Name = Name,
-			Description = Description
-			
+            ObeysTo = ObeysTo
         };
     }
 }
@@ -62,12 +73,10 @@ public sealed partial class SiliconLawsetPrototype : IPrototype
     /// </summary>
     [DataField(required: true, customTypeSerializer: typeof(PrototypeIdListSerializer<SiliconLawPrototype>))]
     public List<string> Laws = new();
-	
-	[DataField("name")]
-    public string? Name;
-	
-	[DataField("description")]
-    public string? Description;
 
-
+    /// <summary>
+    /// What entity the lawset considers as a figure of authority.
+    /// </summary>
+    [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
+    public string ObeysTo = string.Empty;
 }

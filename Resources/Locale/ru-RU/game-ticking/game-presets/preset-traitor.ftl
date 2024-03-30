@@ -24,7 +24,7 @@ traitor-role-greeting =
     Вы - агент Синдиката.
     Ваши цели и кодовые слова перечислены в меню персонажа.
     Воспользуйтесь аплинком, встроенным в ваш КПК, чтобы приобрести всё необходимое для выполнения работы.
-    Смерть НаноТразен!
+    Смерть Nanotrasen!
 traitor-role-codewords =
     Кодовые слова следующие:
     { $codewords }
@@ -37,4 +37,4 @@ traitor-role-uplink-code =
 traitor-role-codewords-short =
     Кодовые слова:
     { $codewords }.
-traitor-role-uplink-code-short = Ваш код аплинка: { $code }.
+traitor-role-uplink-code-short = Ваш код аплинка: { $code }. Установите его в качестве рингтона КПК для доступа к аплинку.

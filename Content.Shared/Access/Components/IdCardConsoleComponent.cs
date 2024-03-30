@@ -56,6 +56,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "ChiefEngineer",
         "ChiefMedicalOfficer",
         "Command",
+        "Cryogenics",
         "Engineering",
         "External",
         "HeadOfPersonnel",
@@ -72,8 +73,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Salvage",
         "Security",
         "Service",
-        "Theatre",
-        "Library"
+        "Theatre"
     };
 
     [Serializable, NetSerializable]

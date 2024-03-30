@@ -20,6 +20,7 @@
   - type: StealTarget
     stealGroup: Cannabis
 
+
 - type: entity
   name: dried cannabis leaves
   parent: BaseItem
@@ -70,6 +71,7 @@
     size: Tiny
   - type: StealTarget
     stealGroup: Cannabis
+
 
 - type: entity
   name: tobacco leaves

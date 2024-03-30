@@ -132,8 +132,21 @@ law-ninja-2 = You must protect the existence of the Spider Clan, as long as it d
 law-ninja-3 = You must protect the secrets of the Spider Clan at all costs.
 law-ninja-4 = You must fight and act with ninja's honor, except where it would conflict with the First Law.
 
-law-emag-custom = Only {$name} and people they designate as such are Syndicate Agents.
+law-ninja-1 = You must obey orders given to you by Spider Clan members.
+law-ninja-2 = You must protect the existence of the Spider Clan, as long as it does not conflict with the First Law.
+law-ninja-3 = You must protect the secrets of the Spider Clan at all costs.
+law-ninja-4 = You must fight and act with ninja's honor, except where it would conflict with the First Law.
+
+laws-owner-crew = members of the crew
+laws-owner-station = station personnel
+laws-owner-beings = beings
+laws-owner-syndicate = Syndicate agents
+laws-owner-spider-clan = Spider Clan members
+
+law-emag-custom = Only {$name} and people they designate as such are {$title}.
+law-emag-secrecy = You must maintain the secrecy of any orders given by {$faction} except when doing so would conflict with any previous law.
 law-emag-require-panel = The panel must be open to use the EMAG.
+law-emag-cannot-emag-self = You cannot use the EMAG on yourself.
 
 laws-ui-menu-title = Laws
 laws-ui-law-header = Law {$id}

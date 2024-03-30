@@ -49,12 +49,6 @@ public sealed partial class StampComponent : Component
     public Color StampedColor = Color.FromHex("#BB3232"); // StyleNano.DangerousRedFore
 
     /// <summary>
-    /// Whether to block writing after the paper being stamped
-    /// </summary>
-    [DataField("blockWriting")]
-    public bool BlockWriting = true;
-
-    /// <summary>
     /// The sound when stamp stamped
     /// </summary>
     [DataField("sound")]

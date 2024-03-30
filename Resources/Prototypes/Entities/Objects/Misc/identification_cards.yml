@@ -461,7 +461,7 @@
     jobIcon: JobIconCentCom
   - type: Access
     groups:
-    - CentcomAllAccess
+    - AllAccess
     tags:
     - CentralCommand
 
@@ -501,7 +501,7 @@
 - type: entity
   parent: SpecOpsIDCard
   id: ERTChaplainIDCard
-  name: ERT Chaplain ID card
+  name: ERT chaplain ID card
   components:
   - type: Sprite
     layers:
@@ -516,7 +516,7 @@
 - type: entity
   parent: SpecOpsIDCard
   id: ERTEngineerIDCard
-  name: ERT Engineer ID card
+  name: ERT engineer ID card
   components:
   - type: Sprite
     layers:
@@ -529,7 +529,7 @@
 - type: entity
   parent: SpecOpsIDCard
   id: ERTJanitorIDCard
-  name: ERT Janitor ID card
+  name: ERT janitor ID card
   components:
   - type: Sprite
     layers:
@@ -542,7 +542,7 @@
 - type: entity
   parent: SpecOpsIDCard
   id: ERTMedicIDCard
-  name: ERT Medic ID card
+  name: ERT medic ID card
   components:
   - type: Sprite
     layers:
@@ -555,7 +555,7 @@
 - type: entity
   parent: SpecOpsIDCard
   id: ERTSecurityIDCard
-  name: ERT Security ID card
+  name: ERT security ID card
   components:
   - type: Sprite
     layers:
@@ -637,8 +637,8 @@
   id: AgentIDCard
   suffix: Agent
   components:
-  - type: IdCard
-    jobTitle: Passenger
+  - type: PresetIdCard
+    job: Passenger
   - type: Access
     tags:
     - Maintenance
@@ -695,6 +695,7 @@
     - JobIconServiceWorker
     - JobIconSecurityCadet
     - JobIconZookeeper
+    - JobIconVisitor
     - JobIconSeniorPhysician
     - JobIconSeniorOfficer
     - JobIconSeniorEngineer

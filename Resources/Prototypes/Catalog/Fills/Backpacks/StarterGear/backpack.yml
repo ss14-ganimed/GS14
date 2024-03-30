@@ -223,6 +223,16 @@
       - id: BoxSurvival
       - id: Bible
       - id: RubberStampChaplain
+  
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpack
+  id: ClothingBackpackLawyerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: RubberStampLawyer
 
 - type: entity
   noSpawn: true
@@ -244,7 +254,6 @@
       contents:
         - id: BoxSurvival
         - id: BookRandom
-        - id: BookTerminalMachineCircuitboard # Плата принтера книг, у нас нет возможности её печатать.
 
 - type: entity
   noSpawn: true
@@ -274,7 +283,7 @@
         - id: RegenerativeMesh
         - id: BoxZiptie
         - id: CrowbarRed
-        - id: MagazinePistol
+        - id: MagazineMagnum
 
 - type: entity
   noSpawn: true

@@ -25,6 +25,7 @@
   - Chemistry
   - ChiefMedicalOfficer
   - Brig
+  - Cryogenics
   special:
   - !type:AddComponentSpecial
     components:

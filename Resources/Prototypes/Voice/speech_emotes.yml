@@ -225,6 +225,18 @@
    - запищал!
    - запищала!
 
+- type: emote
+  id: Click
+  category: Vocal
+  chatMessages: [click.]
+  chatTriggers:
+   - click
+   - click.
+   - click!
+   - clicks
+   - clicks.
+   - clicks!
+
 # hand emotes
 - type: emote
   id: Clap
@@ -325,3 +337,44 @@
   chatMessages: ["emote-deathgasp"]
   chatTriggers:
   - deathgasp
+
+- type: emote
+  id: Buzz
+  category: Vocal
+  chatMessages: [buzz!]
+  chatTriggers:
+    - buzzing
+    - buzzing!
+    - buzzing.
+    - buzz
+    - buzz.
+    - buzz!
+    - buzzed
+    - buzzed.
+    - buzzed!
+    - buzzes
+    - buzzes.
+    - buzzes!
+
+- type: emote
+  id: Weh
+  category: Vocal
+  chatMessages: [Wehs!]
+
+- type: emote
+  id: Chirp
+  category: Vocal
+  chatMessages: [chirps!]
+  chatTriggers:
+    - chirp
+    - chirp!
+    - chirp.
+    - chirps
+    - churps.
+    - chirps!
+    - chirped
+    - chirped.
+    - chirped!
+    - chirping
+    - chirping.
+    - chirping!

@@ -12,6 +12,7 @@
   - type: Tag
     tags:
     - SuitEVA
+    - MonkeyWearable
     - WhitelistChameleon
   - type: StaminaProtection
     coefficient: 0.95
@@ -30,6 +31,7 @@
   - type: Tag
     tags:
     - SuitEVA
+    - MonkeyWearable
     - WhitelistChameleon
   - type: StaminaProtection
     coefficient: 0.95
@@ -74,6 +76,7 @@
   - type: Tag
     tags:
     - SuitEVA
+    - MonkeyWearable
     - WhitelistChameleon
   - type: StaminaProtection
     coefficient: 0.95
@@ -97,12 +100,12 @@
   - type: HeldSpeedModifier
 
 #Paramedic Voidsuit
-#Despite having resistances and looking like one, this is two-piece and parents off the EVA suit so it goes here.
+#Despite having resistances and looking like a hardsuit, this parents off the EVA suit so it goes here.
 - type: entity
   parent: ClothingOuterEVASuitBase
   id: ClothingOuterHardsuitVoidParamed
-  name: Reinforced Paramedic Space Suit
-  description: A reinforced void suit made for paramedics.
+  name: paramedic void suit
+  description: A void suit made for paramedics.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
@@ -120,7 +123,6 @@
   - type: Armor
     modifiers:
       coefficients:
-        Slash: 0.95
         Heat: 0.90
         Radiation: 0.75
         Caustic: 0.5

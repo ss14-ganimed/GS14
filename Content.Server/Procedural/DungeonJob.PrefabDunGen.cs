@@ -21,7 +21,6 @@ public sealed partial class DungeonJob
         var dungeonRotation = _dungeon.GetDungeonRotation(seed);
         var dungeonTransform = Matrix3.CreateTransform(_position, dungeonRotation);
         var roomPackProtos = new Dictionary<Vector2i, List<DungeonRoomPackPrototype>>();
-        var fallbackTile = new Tile(_tileDefManager[prefab.Tile].TileId);
 
         foreach (var pack in _prototype.EnumeratePrototypes<DungeonRoomPackPrototype>())
         {
@@ -159,7 +158,6 @@ public sealed partial class DungeonJob
         {
             var pack = chosenPacks[i]!;
             var packTransform = packTransforms[i];
-            var packRotation = packRotations[i];
 
             // Actual spawn cud here.
             // Pickout the room pack template to get the room dimensions we need.
@@ -199,14 +197,25 @@ public sealed partial class DungeonJob
                     _sawmill.Debug($"Using rotated variant for room");
                 }
 
+                var room = roomProto[random.Next(roomProto.Count)];
+
+                if (roomDimensions.X == roomDimensions.Y)
+                {
+                    // Give it a random rotation
+                    roomRotation = random.Next(4) * Math.PI / 2;
+                }
+                else if (random.Next(2) == 1)
+                {
+                    roomRotation += Math.PI;
+                }
+
                 var roomTransform = Matrix3.CreateTransform(roomSize.Center - packCenter, roomRotation);
 
                 Matrix3.Multiply(roomTransform, packTransform, out matty);
                 Matrix3.Multiply(matty, dungeonTransform, out var dungeonMatty);
 
                 // The expensive bit yippy.
-                var room = roomProto[random.Next(roomProto.Count)];
-                _dungeon.SpawnRoom(gridUid, grid, matty, room, random, rotation: true);
+                _dungeon.SpawnRoom(gridUid, grid, dungeonMatty, room);
 
                 var roomCenter = (room.Offset + room.Size / 2f) * grid.TileSize;
                 var roomTiles = new HashSet<Vector2i>(room.Size.X * room.Size.Y);
@@ -230,9 +239,18 @@ public sealed partial class DungeonJob
 
                 var center = Vector2.Zero;
 
-                foreach (var tile in roomTiles)
+                for (var x = 0; x < room.Size.X; x++)
                 {
-                    center += tile + grid.TileSizeHalfVector;
+                    for (var y = 0; y < room.Size.Y; y++)
+                    {
+                        var roomTile = new Vector2i(x + room.Offset.X, y + room.Offset.Y);
+                        var tilePos = dungeonMatty.Transform(roomTile + tileOffset);
+                        var tileIndex = tilePos.Floored();
+                        roomTiles.Add(tileIndex);
+
+                        mapBounds = mapBounds?.Union(tileIndex) ?? new Box2i(tileIndex, tileIndex);
+                        center += tilePos + grid.TileSizeHalfVector;
+                    }
                 }
 
                 center /= roomTiles.Count;
@@ -306,6 +324,7 @@ public sealed partial class DungeonJob
                 }
 
                 room.Entrances.Add(entrancePos);
+                dungeon.Entrances.Add(entrancePos);
                 break;
             }
         }

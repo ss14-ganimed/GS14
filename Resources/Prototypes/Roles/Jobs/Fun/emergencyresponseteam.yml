@@ -10,7 +10,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - SpecOpsAllAccess
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTLeaderGear
@@ -25,7 +27,7 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltERT
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
+    pocket1: WeaponPistolN1984Nonlethal
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -42,7 +44,7 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltERT
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58Nonlethal
+    pocket1: WeaponPistolN1984Nonlethal
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -76,7 +78,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - SpecOpsAllAccess
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTEngineerGear
@@ -123,7 +127,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - SpecOpsAllAccess
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTSecurityGear
@@ -189,7 +195,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - SpecOpsAllAccess
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTMedicalGear
@@ -204,8 +212,7 @@
     id: ERTMedicPDA
     ears: ClothingHeadsetERT
     belt: ClothingBeltMedicalFilled
-    pocket1: HandheldHealthAnalyzer
-    pocket2: Flare
+    pocket1: Flare
 
 - type: startingGear
   id: ERTMedicalGearEVA
@@ -221,8 +228,7 @@
     id: ERTMedicPDA
     ears: ClothingHeadsetERT
     belt: ClothingBeltMedicalFilled
-    pocket1: HandheldHealthAnalyzer
-    pocket2: Flare
+    pocket1: Flare
 
 # Janitor
 - type: job
@@ -236,7 +242,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - SpecOpsAllAccess
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTJanitorGear

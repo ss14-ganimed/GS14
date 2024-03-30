@@ -142,23 +142,6 @@
   prototype: ClothingBeltUtility
 
 - type: loadout
-  id: LoadoutBeltClothingBeltParamedicFilled
-  category: loadout-category-belt
-  cost: 3
-  exclusive: true
-  whitelistJobs:
-    - ChiefMedicalOfficer
-    - Chemist
-    - Paramedic
-    - MedicalDoctor
-    - Psychologist
-    - MedicalIntern
-    - SeniorPhysician
-    - Brigmedic
-    - Coroner
-  prototype: ClothingBeltParamedicFilled
-
-- type: loadout
   id: LoadoutBeltClothingBeltSecurityFilled
   category: loadout-category-belt
   cost: 2

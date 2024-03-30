@@ -1,26 +1,15 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - CorvaxAvrite
-  - CorvaxDelta
-  - CorvaxGate
-  - CorvaxIshimura
-  - SillyGanimed
-  - Europa
-  - Fland
   - Gemini
   - Atlas
-  - ClusterGanimed
   - Bagel
   - Aspid
-  - Barratry
-  - BoxGanimed
   - Core
   - Marathon
   - Meta
   - Omega
   - Origin
-  - SalternGanimed
   - Packed
-  - CorvaxSpectrum
-  - Reach
+  - Cluster
+  - Saltern

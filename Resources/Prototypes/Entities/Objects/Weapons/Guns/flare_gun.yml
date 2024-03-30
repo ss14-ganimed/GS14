@@ -41,3 +41,4 @@
     quickEquip: false
     slots:
     - Belt
+    - suitStorage

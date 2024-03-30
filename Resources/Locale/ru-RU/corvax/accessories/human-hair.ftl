@@ -5,7 +5,6 @@ marking-HumanHairAfropuffright = Афро-пуф, Правый
 marking-HumanHairAmazon = Амазонка
 marking-HumanHairAstolfo = Астольфо
 marking-HumanHairBaum = Баум
-marking-HumanHairBaum2 = Баум (Альт.)
 marking-HumanHairBeachwave = Бич-вейв
 marking-HumanHairBluntbangs = Прямая челка
 marking-HumanHairBluntbangsAlt = Прямая челка (Альт.)

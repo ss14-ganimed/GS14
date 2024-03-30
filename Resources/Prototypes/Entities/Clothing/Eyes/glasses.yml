@@ -153,9 +153,9 @@
 
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesGlassesCosmeticSunglasses
-  name: sun glasses
-  description: A pair of black sunglasses.
+  id: ClothingEyesGlassesCheapSunglasses
+  name: cheap sunglasses
+  description: A pair of black sunglasses. Doesn't block light well, more of an accessory than something useful.
   components:
   - type: Sprite
     sprite: Clothing/Eyes/Glasses/sunglasses.rsi
@@ -165,6 +165,8 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+  - type: IdentityBlocker
+    coverage: EYES
 
 - type: entity
   parent: ClothingEyesBase
@@ -187,6 +189,8 @@
     guides:
     - Security
   - type: ShowSecurityIcons
+  - type: IdentityBlocker
+    coverage: EYES
 
 - type: entity
   parent: ClothingEyesBase
