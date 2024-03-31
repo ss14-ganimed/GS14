@@ -12,7 +12,7 @@
   femaleFirstNames: DionaFirst
   maleLastNames: DionaLast
   femaleLastNames: DionaLast
-  naming: TheFirstofLast
+  naming: FirstDashFirst
 
 - type: speciesBaseSprites
   id: MobDionaSprites

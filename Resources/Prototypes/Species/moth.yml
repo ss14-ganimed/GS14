@@ -12,6 +12,7 @@
   femaleFirstNames: names_moth_first_female
   maleLastNames: names_moth_last
   femaleLastNames: names_moth_last
+  naming: FirstDashFirst
 
 - type: speciesBaseSprites
   id: MobMothSprites

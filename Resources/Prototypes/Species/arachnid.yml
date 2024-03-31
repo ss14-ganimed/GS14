@@ -12,6 +12,7 @@
   femaleFirstNames: names_arachnid_first
   maleLastNames: names_arachnid_last
   femaleLastNames: names_arachnid_last
+  naming: FirstDashFirst
   sexes:
   - Unsexed
 
