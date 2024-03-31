@@ -12,6 +12,7 @@
   femaleFirstNames: vulpkanin_first_female
   maleLastNames: vulpkanin_last
   femaleLastNames: vulpkanin_last
+  naming: FirstDashFirst
 
 - type: speciesBaseSprites
   id: MobVulpkaninSprites
