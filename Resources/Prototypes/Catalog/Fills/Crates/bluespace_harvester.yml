@@ -244,7 +244,7 @@
   - type: BluespaceHarvesterBundle
     contents:
     - id: SpawnMobBehonker
-      amount: 6
+      amount: 2
 
 - type: entity
   id: CrateHarvesterWeaponElite

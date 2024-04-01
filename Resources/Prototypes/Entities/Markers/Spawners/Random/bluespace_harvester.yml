@@ -547,14 +547,11 @@
         state: icon
   - type: RandomSpawner
     prototypes:
-      - WeaponLaserCarbine
-      - WeaponLaserCannon
       - WeaponEnergyGun
       - WeaponImmolator
       - WeaponLaserGun
       - WeaponXrayCannon
       - WeaponEnergySniperRifle
-      - 
     chance: 1.0
     offset: 0.0
     rarePrototypes:
