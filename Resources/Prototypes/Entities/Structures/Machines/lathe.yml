@@ -466,6 +466,7 @@
       - TelecomServerCircuitboard
       - MassMediaCircuitboard
       - CriminalRecordsComputerCircuitboard
+      - MachineBluespaceHarvesterCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
