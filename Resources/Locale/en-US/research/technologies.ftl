@@ -35,6 +35,7 @@ research-technology-handheld-electrical-propulsion = Handheld Electrical Propuls
 research-technology-security-intercommunications = Security Intercommunications
 research-technology-portable-microfusion-weaponry = Portable Microfusion Weaponry
 research-technology-experimental-battery-ammo = Experimental Battery Ammo
+research-technology-energy_barriers = Energy Barriers
 research-technology-basic-shuttle-armament = Shuttle basic armament
 research-technology-advanced-shuttle-weapon = Advanced shuttle weapons
 
