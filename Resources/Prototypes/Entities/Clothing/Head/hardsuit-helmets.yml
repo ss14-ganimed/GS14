@@ -387,7 +387,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndiemedic.rsi
   - type: PointLight
-    color: green
+    color: white
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -414,7 +414,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndieelite.rsi
   - type: PointLight
-    color: red
+    color: white
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
