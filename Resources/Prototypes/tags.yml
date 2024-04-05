@@ -1333,3 +1333,9 @@
 
 - type: Tag
   id:  boots
+
+- type: Tag
+  id: HidesHeadTop
+
+- type: Tag
+  id: HidesTail
