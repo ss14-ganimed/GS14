@@ -78,3 +78,5 @@ ent-ClothingMaskItalianMoustache = итальянские усы
     .desc = Изготовлены из волосков настоящих итальянских усов. Придает владельцу непреодолимое желание бурно жестикулировать.
 ent-ClothingMaskNinja = маска ниндзя
     .desc = Плотно прилегающая маска с наноусилением, которая служит одновременно воздушным фильтром и воплощением постмодернистской моды.
+ent-ClothingMaskCluwneRemoveable = { ent-ClothingMaskClownBase }
+    .desc = { ent-ClothingMaskClownBase.desc }
