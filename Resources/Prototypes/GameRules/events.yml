@@ -48,7 +48,7 @@
   - type: StationEvent
     weight: 10
     duration: 1
-    minimumPlayers: 15
+    minimumPlayers: 10
   - type: BreakerFlipRule
 
 - type: entity
@@ -83,7 +83,7 @@
   - type: StationEvent
     weight: 10
     duration: 1
-    minimumPlayers: 10
+    minimumPlayers: 15
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
 
@@ -111,7 +111,7 @@
     duration: 1
     earliestStart: 30
     reoccurrenceDelay: 60
-    minimumPlayers: 40
+    minimumPlayers: 20
   - type: NinjaSpawnRule
 
 - type: entity
@@ -123,7 +123,7 @@
     weight: 7.5
     duration: 1
     earliestStart: 45
-    minimumPlayers: 20
+    minimumPlayers: 15
   - type: RandomSpawnRule
     prototype: MobRevenant
 
@@ -206,6 +206,7 @@
       path: /Audio/Announcements/infestation.ogg
       params:
         volume: -4
+    minimumPlayers: 15
   - type: VentCrittersRule
     entries:
     - id: MobMouse
@@ -308,7 +309,7 @@
     weight: 8
     duration: 1
     earliestStart: 30
-    minimumPlayers: 20
+    minimumPlayers: 10
   - type: RandomSpawnRule
     prototype: SpawnPointGhostTerminator
 
@@ -324,7 +325,7 @@
       params:
         volume: -4
     earliestStart: 15
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     startDelay: 50
     duration: 60
@@ -364,7 +365,7 @@
       path: /Audio/Announcements/attention.ogg
     startDelay: 10
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -387,7 +388,7 @@
       path: /Audio/Announcements/attention.ogg
     startDelay: 10
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -439,7 +440,7 @@
   - type: StationEvent
     earliestStart: 45
     weight: 5
-    minimumPlayers: 20
+    minimumPlayers: 15
     reoccurrenceDelay: 30
     duration: 1
   - type: LoneOpsSpawnRule
@@ -472,7 +473,7 @@
     weight: 5
     duration: 1
     earliestStart: 45
-    minimumPlayers: 20
+    minimumPlayers: 15
   - type: ImmovableRodRule
     rodPrototypes:
     - id: ImmovableRodKeepTilesStill

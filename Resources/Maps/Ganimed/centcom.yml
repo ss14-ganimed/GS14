@@ -39601,23 +39601,6 @@ entities:
     - pos: 8.659935,16.59512
       parent: 2
       type: Transform
-- proto: NewsReadCartridge
-  entities:
-  - uid: 2216
-    components:
-    - pos: 8.569998,16.430286
-      parent: 2
-      type: Transform
-  - uid: 2217
-    components:
-    - pos: 8.465074,16.520195
-      parent: 2
-      type: Transform
-  - uid: 2218
-    components:
-    - pos: 8.719892,16.62509
-      parent: 2
-      type: Transform
 - proto: NitrogenCanister
   entities:
   - uid: 2075

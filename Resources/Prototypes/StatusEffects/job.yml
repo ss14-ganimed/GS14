@@ -393,89 +393,89 @@
   parent: JobIcon
   id: JobIconCoroner
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Coroner
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBlueShield
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: BlueShield
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconBridgeOfficer
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: BridgeOfficer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconIAA
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: IAA
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconERTLeader
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ERTLeader
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconERTEngineer
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ERTEngineer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconERTMedical
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ERTMedical
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconERTOfficer
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ERTOfficer
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconERTJanitor
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ERTJanitor
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconERTChaplain
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: ERTChaplain
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconSRT
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: SRT
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconTSF
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: TSF
 
 - type: statusIcon
   parent: JobIcon
   id: JobIconDeathSquad
   icon:
-    sprite: Interface/Misc/job_icons.rsi
+    sprite: /Textures/Interface/Misc/job_icons.rsi
     state: DeathSquad
