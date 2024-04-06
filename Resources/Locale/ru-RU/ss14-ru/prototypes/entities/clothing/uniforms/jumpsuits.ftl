@@ -275,3 +275,7 @@ ent-ClothingUniformJumpsuitAtmosCasual = повседневный комбине
     .desc = С такой простой работой, как у вас, можно и расслабиться.
 ent-ClothingUniformJumpsuitAtmosCasualOriginal = повседневный комбинезон атмосферного техника
     .desc = С такой простой работой, как у вас, можно и расслабиться.
+ent-ClothingUniformJumpsuitCargoTurtleneck = водолазка снабжения
+    .desc = Водолазка, разработанная специально для работы в тяжелых условиях отдела снабжения.
+ent-ClothingUniformJumpsuitCluwneRemoveable = { ent-ClothingUniformJumpsuitCluwne }
+    .desc = { ent-ClothingUniformJumpsuitCluwne.desc }
