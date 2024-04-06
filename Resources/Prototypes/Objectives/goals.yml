@@ -41,3 +41,7 @@
 - type: stationGoal
   id: StationGoalContainment
   text: station-goal-containment
+
+- type: stationGoal
+  id: StationGoalMeteorBarrier
+  text: station-goal-meteor-barrier
