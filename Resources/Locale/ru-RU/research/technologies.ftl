@@ -15,6 +15,7 @@ research-technology-shuttlecraft = Шаттлостроение
 research-technology-ripley-aplu = Рипли АВП
 research-technology-advanced-atmospherics = Продвинутые атмос-технологии
 research-technology-advanced-tools = Продвинутые инструменты
+research-technology-advanced-huds = Продвинутое покрытие от сварки
 research-technology-super-powercells = Супербатареи
 research-technology-bluespace-storage = Блюспейс-хранилище
 research-technology-portable-fission = Портативный распад
