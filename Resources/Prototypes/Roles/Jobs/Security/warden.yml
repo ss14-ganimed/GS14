@@ -39,7 +39,7 @@
     jumpsuit: ClothingUniformJumpsuitWarden
     back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsJackSecFilled
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses
     outerClothing: ClothingOuterCoatWarden
     id: WardenPDA
     ears: ClothingHeadsetSecurity

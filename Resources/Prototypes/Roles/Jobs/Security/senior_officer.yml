@@ -33,7 +33,7 @@
     jumpsuit: ClothingUniformJumpsuitSeniorOfficer
     back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsJackSecFilled
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesSunglasses
     head: ClothingHeadHatBeretSecurity
     outerClothing: ClothingOuterArmorBasic
     id: SeniorOfficerPDA

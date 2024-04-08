@@ -163,7 +163,7 @@
   - HolofanProjector
 
 - type: technology
-  id: AdvancedToolsTechnology
+  id: AdvancedHudsTechnology
   name: research-technology-advanced-tools
   icon:
     sprite: Objects/Tools/welder_experimental.rsi
@@ -177,6 +177,20 @@
     - JawsOfLife
     - BorgModuleAdvancedTool
     - BorgModuleRCD
+
+- type: technology
+  id: AdvancedToolsTechnology
+  name: research-technology-advanced-huds
+  icon:
+    sprite: Ganimed/Clothing/Eyes/supermeson.rsi
+    state: icon
+  discipline: Industrial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+    - ClothingEyesGlassesTray
+    - ClothingEyesGlassesScienceMeson
+    - ClothingEyesGlassesMesonDiagnostic
 
 # Tier 3
 

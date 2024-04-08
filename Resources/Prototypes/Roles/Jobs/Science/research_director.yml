@@ -36,6 +36,7 @@
     outerClothing: ClothingOuterCoatRD
     id: RnDPDA
     ears: ClothingHeadsetRD
+    eyes: ClothingEyesHUDGlassesScience
   innerClothingSkirt: ClothingUniformJumpskirtResearchDirector
   satchel: ClothingBackpackSatchelResearchDirectorFilled
   duffelbag: ClothingBackpackDuffelResearchDirectorFilled

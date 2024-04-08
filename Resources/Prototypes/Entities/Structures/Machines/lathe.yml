@@ -323,6 +323,9 @@
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
       - EnergyDomeDirectionalTurtle
+      - ClothingEyesGlassesMesonDiagnostic
+      - ClothingEyesGlassesScienceMeson
+      - ClothingEyesGlassesTray
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload

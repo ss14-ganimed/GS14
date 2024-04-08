@@ -77,7 +77,7 @@
       - WeaponCrusher
       - WeaponCrusherDagger
       - WeaponCrusherGlaive
-      - MiningDrill
+      - ClothingEyesGlassesMedicineMeson
       offset: 0.0
 
 - type: entity
