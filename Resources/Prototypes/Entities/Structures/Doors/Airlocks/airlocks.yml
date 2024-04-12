@@ -163,31 +163,6 @@
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/hatch_maint.rsi
 
-# Glass
-
-- type: entity
-  parent: Airlock
-  id: AirlockHatch
-  name: airtight hatch
-  components:
-  - type: MeleeSound
-    soundGroups:
-      Brute:
-        collection: GlassSmack
-  - type: Door
-    occludes: false
-  - type: Occluder
-    enabled: false
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/hatch.rsi
-
-- type: entity
-  parent: Airlock
-  id: AirlockHatchMaintenance
-  name: maintenance hatch
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/hatch_maint.rsi
 
 # Glass
 - type: entity

@@ -696,9 +696,6 @@
 
 - type: Tag
   id: HidesNose # for non-standard noses.
-  
-- type: Tag
-  id: HidesTail # for spacesuit.
 
 - type: Tag
   id: HighRiskItem
@@ -1189,9 +1186,6 @@
   
 - type: Tag
   id: Sunglasses
-
-- type: Tag
-  id: SurgeryTool
 
 - type: Tag
   id: SurgeryTool

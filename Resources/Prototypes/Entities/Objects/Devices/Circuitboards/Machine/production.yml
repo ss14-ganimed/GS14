@@ -81,39 +81,6 @@
         Glass: 1
 
 - type: entity
-  parent: BaseMachineCircuitboard
-  id: ProtolatheHyperConvectionMachineCircuitboard
-  name: hyper convection protolathe machine board
-  description: A machine printed circuit board for a hyper convection protolathe.
-  components:
-  - type: MachineBoard
-    prototype: ProtolatheHyperConvection
-    requirements:
-      MatterBin: 2
-    tagRequirements:
-      GlassBeaker:
-        Amount: 2
-        DefaultPrototype: Beaker
-        ExamineName: Glass Beaker
-      Igniter:
-        Amount: 1
-        DefaultPrototype: Igniter
-        ExamineName: Igniter
-
-- type: entity
-  id: BiofabricatorMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: biofabricator machine board
-  description: A machine printed circuit board for a biofabricator.
-  components:
-    - type: MachineBoard
-      prototype: Biofabricator
-      requirements:
-        MatterBin: 4
-      materialRequirements:
-        Glass: 1
-
-- type: entity
   id: SecurityTechFabCircuitboard
   parent: BaseMachineCircuitboard
   name: security techfab machine board

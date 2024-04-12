@@ -342,16 +342,6 @@
   suffix: Central Command, Locked
   components:
   - type: AccessReader
-    access: [["Research"], ["Medical"]]
-  - type: Wires
-    layoutId: AirlockScience
-
-- type: entity
-  parent: AirlockCentralCommand
-  id: AirlockCentralCommandLocked
-  suffix: Central Command, Locked
-  components:
-  - type: AccessReader
     access: [["CentralCommand"]]
   - type: Wires
     layoutId: AirlockCommand
@@ -693,16 +683,6 @@
   suffix: Janitor, Locked
   components:
   - type: AccessReader
-    access: [["Kitchen"]]
-  - type: Wires
-    layoutId: AirlockService
-
-- type: entity
-  parent: AirlockGlass
-  id: AirlockJanitorGlassLocked
-  suffix: Janitor, Locked
-  components:
-  - type: AccessReader
     access: [["Janitor"]]
   - type: Wires
     layoutId: AirlockService
@@ -852,16 +832,6 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsScience ]
-
-- type: entity
-  parent: AirlockCentralCommandGlass
-  id: AirlockCentralCommandGlassLocked
-  suffix: Central Command, Locked
-  components:
-  - type: AccessReader
-    access: [["Research"], ["Medical"]]
-  - type: Wires
-    layoutId: AirlockScience
 
 - type: entity
   parent: AirlockCentralCommandGlass

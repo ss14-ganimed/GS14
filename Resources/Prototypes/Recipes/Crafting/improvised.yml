@@ -105,19 +105,6 @@
   startNode: start
   targetNode: flowerwreath
   category: construction-category-clothing
-  description: A wreath of colourful flowers. Can be worn both on head and neck.
-  icon:
-    sprite: Clothing/Head/Misc/flower-wreath.rsi
-    state: icon
-  objectType: Item
-
-- type: construction
-  name: flower wreath
-  id: flowerwreath
-  graph: flowerwreath
-  startNode: start
-  targetNode: flowerwreath
-  category: construction-category-clothing
   description: "A wreath of colourful flowers."
   icon:
     sprite: Clothing/Neck/Misc/flower-wreath.rsi

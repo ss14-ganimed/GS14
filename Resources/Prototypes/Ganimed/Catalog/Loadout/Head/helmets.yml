@@ -154,14 +154,6 @@
   prototype: ClothingHeadHelmetCosmonaut
   
 - type: loadout
-  id: LoadoutHeadClothingHeadHelmetScaf
-  category: loadout-category-head
-  cost: 4
-  exclusive: true
-  sponsorOnly: true
-  prototype: ClothingHeadHelmetScaf
-  
-- type: loadout
   id: LoadoutHeadClothingHeadHelmetSwat
   category: loadout-category-head
   cost: 4

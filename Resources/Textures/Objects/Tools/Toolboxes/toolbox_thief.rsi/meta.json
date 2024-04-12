@@ -1,24 +1,13 @@
 {
   "version": 1,
-<<<<<<<< HEAD:Resources/Textures/Objects/Tools/Toolboxes/toolbox_thief.rsi/meta.json
   "license": "CC0-1.0",
   "copyright": "Created by TheShuEd(github) for ss14",
-========
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Drawn by Saveliy360",
->>>>>>>> upstreams:Resources/Textures/Objects/Misc/Handy_Flags/USSP_handy_flag.rsi/meta.json
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-<<<<<<<< HEAD:Resources/Textures/Objects/Tools/Toolboxes/toolbox_thief.rsi/meta.json
-========
-      "name": "icon"
-    },
-    {
->>>>>>>> upstreams:Resources/Textures/Objects/Misc/Handy_Flags/USSP_handy_flag.rsi/meta.json
       "name": "inhand-left",
       "directions": 4
     },

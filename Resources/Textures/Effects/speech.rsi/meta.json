@@ -245,23 +245,6 @@
             "name": "lizard2"
         },
         {
-            "name": "lizard0",
-            "delays": [
-                [
-                    0.3,
-                    0.3,
-                    0.3,
-                    0.4
-                ]
-            ]
-        },
-        {
-            "name": "lizard1"
-        },
-        {
-            "name": "lizard2"
-        },
-        {
             "name": "moth0",
             "delays": [
                 [
@@ -681,14 +664,14 @@
         {
             "name": "spider2"
         },
-                {
-            "name": "vox0",
+        {
+            "name": "spider3",
             "delays": [
                 [
-                    0.3,
-                    0.3,
-                    0.3,
-                    0.4
+                    0.2,
+                    0.2,
+                    0.2,
+                    0.2
                 ]
             ]
         }

@@ -1,30 +1,14 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-<<<<<<<< HEAD:Resources/Textures/Structures/Machines/biofabricator.rsi/meta.json
   "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/338c826d1c3172eecd86d8430608669543dce0cc",
-========
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/856e0a784abd19d20618aa36b26b73d471adf613",
->>>>>>>> upstreams:Resources/Textures/Objects/Magic/spellbooks.rsi/meta.json
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-<<<<<<<< HEAD:Resources/Textures/Structures/Machines/biofabricator.rsi/meta.json
       "name": "icon"
-========
-      "name": "bookfireball",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2,
-          0.2
-        ]
-      ]
->>>>>>>> upstreams:Resources/Textures/Objects/Magic/spellbooks.rsi/meta.json
     },
     {
       "name": "panel"
@@ -33,7 +17,6 @@
       "name": "unlit",
       "delays": [
         [
-<<<<<<<< HEAD:Resources/Textures/Structures/Machines/biofabricator.rsi/meta.json
           0.1,
           0.1,
           0.1,
@@ -41,21 +24,6 @@
           0.1,
           0.1,
           0.1
-========
-          0.4,
-          0.2,
-          0.6
-        ]
-      ]
-    },
-    {
-      "name": "bookknock",
-      "delays": [
-        [
-          0.4,
-          0.2,
-          0.4
->>>>>>>> upstreams:Resources/Textures/Objects/Magic/spellbooks.rsi/meta.json
         ]
       ]
     },

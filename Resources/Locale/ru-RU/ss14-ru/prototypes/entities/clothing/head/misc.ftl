@@ -32,3 +32,5 @@ ent-ClothingHeadHatSquid = сквидди
     .desc = Напугайте своих друзей этой маской древнего ужаса.
 ent-ClothingHeadHatRedRacoon = шапка рыжего енота
     .desc = Пушистая шапка рыжего енота!
+ent-ClothingHeadHatFlowerWreath = цветочный венок
+    .desc = Корона из свежих и душистых цветов.

@@ -478,17 +478,6 @@
     Telecrystal: 6
   categories:
   - UplinkChemicals
-  
-- type: listing
-  id: UplinkHypoDart
-  name: uplink-hypodart-name
-  description: uplink-hypodart-desc
-  icon: { sprite: /Textures/Objects/Fun/Darts/dart_red.rsi, state: icon }
-  productEntity: HypoDartBox
-  cost:
-    Telecrystal: 2
-  categories:
-  - UplinkChemicals
 
 - type: listing
   id: UplinkChemistryKitBundle
@@ -989,14 +978,6 @@
         tags:
           - NukeOpsUplink
 
-  categories:
-    - UplinkAllies
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - NukeOpsUplink
-
 - type: listing
   id: UplinkSyndicatePersonalAI
   name: uplink-syndicate-pai-name
@@ -1010,6 +991,17 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+
+- type: listing
+  id: UplinkHypoDart
+  name: uplink-hypodart-name
+  description: uplink-hypodart-desc
+  icon: { sprite: /Textures/Objects/Fun/Darts/dart_red.rsi, state: icon }
+  productEntity: HypoDartBox
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkUtility
 
 # Implants
 

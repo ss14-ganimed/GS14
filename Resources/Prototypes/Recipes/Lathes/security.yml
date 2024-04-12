@@ -610,3 +610,12 @@
     Plastic: 500
     Gold: 250
     Uranium: 50
+
+- type: latheRecipe
+  id: ClothingEyesGlassesSecurity
+  result: ClothingEyesGlassesSecurity
+  completetime: 3
+  materials:
+    Steel: 100
+    Plastic: 150
+    Glass: 300
