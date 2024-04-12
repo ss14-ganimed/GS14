@@ -1,0 +1,42 @@
+﻿#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  id: OrganSkrellStomach
+  parent: OrganAnimalStomach
+  noSpawn: true
+  components:
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - Fruit
+      - Pill
+      - Crayon
+      - FoodSnack
+      - Flower
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity
+  id: OrganSkrellLiver
+  parent: OrganHumanLiver
+  name: skrell liver
+  components:
+  - type: Metabolizer
+    maxReagents: 3
+    metabolizerTypes: [ Skrell ]
+    removeEmpty: true
+    groups:
+      - id: Food
+      - id: Drink
+      - id: Medicine
+      - id: Poison
+      - id: Narcotic
+      - id: Alcohol
+        rateModifier: 0.1

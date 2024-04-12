@@ -1,0 +1,198 @@
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHospitalGown
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  prototype: ClothingOuterHospitalGown
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterPlagueSuit
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterPlagueSuit
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterWizardRed
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  prototype: ClothingOuterWizardRed
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterWizard
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  prototype: ClothingOuterWizard
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterNunRobe
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterNunRobe
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitShrineMaiden
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterSuitShrineMaiden
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHoodieChaplain
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Chaplain
+  prototype: ClothingOuterHoodieChaplain
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterPonchoClassic
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  prototype: ClothingOuterPonchoClassic
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterPoncho
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  prototype: ClothingOuterPoncho
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterGhostSheet
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  prototype: ClothingOuterGhostSheet
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterClownPriest
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingOuterClownPriest
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterRobesCult
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - Chaplain
+  prototype: ClothingOuterRobesCult
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestHazard
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterVestHazard
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHoodieGrey
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  prototype: ClothingOuterHoodieGrey
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterHoodieBlack
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  prototype: ClothingOuterHoodieBlack
+  sponsorOnly: true
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterFlannelBlue
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  prototype: ClothingOuterFlannelBlue
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterStraightjacket
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  prototype: ClothingOuterStraightjacket
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterRobesJudge
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - Lawyer
+    - Captain
+    - HeadOfPersonnel
+    - HeadOfSecurity
+    - Warden
+    - SeniorOfficer
+    - Detective
+    - IAA
+    - BlueShield
+  prototype: ClothingOuterRobesJudge
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterApronBar
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Bartender
+    - ServiceWorker
+    - Chef
+  prototype: ClothingOuterApronBar
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterApronChef
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Bartender
+    - ServiceWorker
+    - Chef
+  prototype: ClothingOuterApronChef
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterApron
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterApron
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterApronBotanist
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Botanist
+  prototype: ClothingOuterApronBotanist
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestSecurityMedic
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestSecurityMedic

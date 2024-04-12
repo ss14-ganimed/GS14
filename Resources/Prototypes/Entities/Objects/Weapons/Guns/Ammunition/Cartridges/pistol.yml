@@ -80,7 +80,7 @@
     proto: BulletPistolUranium
   - type: Sprite
     layers:
-      - state: base
+      - state: tip
         map: [ "enum.AmmoVisualLayers.Base" ]
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]

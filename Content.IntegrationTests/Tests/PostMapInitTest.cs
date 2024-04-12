@@ -30,6 +30,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
+			"CentcomGanimed",
             "Dart",
             "NukieOutpost"
         };
@@ -37,6 +38,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] Grids =
         {
             "/Maps/centcomm.yml",
+			"/Maps/Ganimed/centcom.yml",
             "/Maps/Shuttles/cargo.yml",
             "/Maps/Shuttles/emergency.yml",
             "/Maps/Shuttles/infiltrator.yml",
@@ -55,14 +57,26 @@ namespace Content.IntegrationTests.Tests
             "Origin",
             "CentComm",
             "NukieOutpost",
+			"CentcomGanimed",
+			"SillyGanimed",
+			"BoxGanimed",
+			"ClusterGanimed",
+			"SalternGanimed",
             "Box",
             "Europa",
             "Saltern",
             "Core",
             "Marathon",
             "MeteorArena",
+			"CorvaxIshimura",
+			"CorvaxSpectrum",
+			"CorvaxSilly",
+			"CorvaxGate",
+			"CorvaxAvrite",
+            "Gemini",
+            "MeteorArena",
             "Atlas",
-            "Reach",
+            "Reach",   
             "Train"
         };
 

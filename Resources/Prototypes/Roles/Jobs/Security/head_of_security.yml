@@ -2,17 +2,18 @@
   id: HeadOfSecurity
   name: job-name-hos
   description: job-description-hos
+  color: "#DE3A3A"
   playTimeTracker: JobHeadOfSecurity
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
-      time: 10800 #3 hrs
+      time: 28800 #8 hrs
     - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 36000 #10 hrs
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 108000 # 30 hrs
+      role: JobDetective
+      time: 18000 #5 hrs
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 18000 #5 hrs
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs
   weight: 10
@@ -44,9 +45,9 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoS
     back: ClothingBackpackHOSFilled
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsJackSecFilled
     outerClothing: ClothingOuterCoatHoSTrench
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesHUDGlassesSecurity
     head: ClothingHeadHatBeretHoS
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat

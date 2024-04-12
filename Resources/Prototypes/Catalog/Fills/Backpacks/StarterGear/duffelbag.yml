@@ -31,6 +31,17 @@
 - type: entity
   noSpawn: true
   parent: ClothingBackpackDuffelSecurity
+  id: ClothingBackpackDuffelSecurityBlueShieldFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvivalSecurity
+      - id: Flash
+      - id: SpeedLoaderMagnum
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelSecurity
   id: ClothingBackpackDuffelSecurityFilledDetective
   components:
   - type: StorageFill
@@ -47,6 +58,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: BoxSurvivalBrigmedic
       - id: Flash
 
 - type: entity
@@ -81,7 +93,7 @@
       #- name: TelescopicBaton
 - type: entity
   noSpawn: true
-  parent: ClothingBackpackDuffelEngineering
+  parent: ClothingBackpackDuffelChiefEngineer
   id: ClothingBackpackDuffelChiefEngineerFilled
   components:
   - type: StorageFill

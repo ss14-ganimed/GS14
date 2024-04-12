@@ -38,6 +38,10 @@
   name: dwarf
 
 - type: metabolizerType
+  id: Skrell
+  name: skrell
+
+- type: metabolizerType
   id: Moth
   name: moth
 

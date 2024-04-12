@@ -42,6 +42,22 @@
   id: AirlockArmory
 
 - type: wireLayout
+  parent: Airlock
+  id: AirlockCentcom
+  wires:
+  - !type:PowerWireAction
+    pulseTimeout: 10
+  - !type:PowerWireAction
+    pulseTimeout: 10
+  - !type:PowerWireAction
+    pulseTimeout: 10
+  - !type:DoorBoltWireAction
+  - !type:DoorBoltLightWireAction
+  - !type:DoorTimingWireAction
+  - !type:DoorSafetyWireAction
+  dummyWires: 3
+
+- type: wireLayout
   id: HighSec
   wires:
   - !type:PowerWireAction

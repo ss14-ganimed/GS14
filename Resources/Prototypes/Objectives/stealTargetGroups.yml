@@ -113,7 +113,6 @@
   sprite:
     sprite: Objects/Misc/stamps.rsi
     state: stamp-cap
-
 - type: stealTargetGroup
   id: DoorRemote
   name: door remotes (any)
@@ -127,7 +126,7 @@
   sprite:
     sprite: Objects/Devices/encryption_keys.rsi
     state: crypt_gray
-
+    
 - type: stealTargetGroup
   id: TechnologyDisk
   name: technology disks
@@ -141,7 +140,6 @@
   sprite:
     sprite: Objects/Misc/id_cards.rsi
     state: default
-
 
 
 - type: stealTargetGroup
@@ -166,14 +164,14 @@
   sprite:
     sprite: Objects/Tools/lighters.rsi
     state: zippo_engraved_icon_base
-
+    
 - type: stealTargetGroup
   id: AmmoTechFabCircuitboard
   name: ammo techfab circuit board
   sprite:
     sprite: Objects/Misc/module.rsi
     state: security
-
+    
 - type: stealTargetGroup
   id: ClothingHeadHatWarden
   name: warden's cap
@@ -194,21 +192,21 @@
   sprite:
     sprite: Objects/Misc/module.rsi
     state: medical
-
+    
 - type: stealTargetGroup
   id: ClothingHeadsetAltMedical
   name: chief medical officer's over-ear headset
   sprite:
     sprite: Clothing/Ears/Headsets/medical.rsi
     state: icon_alt
-
+    
 - type: stealTargetGroup
   id: ResearchAndDevelopmentServerMachineCircuitboard
   name: R&D server machine board
   sprite:
     sprite: Objects/Misc/module.rsi
     state: science
-
+    
 - type: stealTargetGroup
   id: FireAxe
   name: fireaxe
@@ -229,42 +227,42 @@
   sprite:
     sprite: Objects/Misc/module.rsi
     state: cpu_supply
-
+    
 - type: stealTargetGroup
   id: CargoShuttleConsoleCircuitboard
   name: cargo shuttle console board
   sprite:
     sprite: Objects/Misc/module.rsi
     state: cpuboard
-
+    
 - type: stealTargetGroup
   id: SalvageShuttleConsoleCircuitboard
   name: salvage shuttle console board
   sprite:
     sprite: Objects/Misc/module.rsi
     state: cpuboard
-
+    
 - type: stealTargetGroup
   id: ClothingEyesHudBeer
   name: beer goggles
   sprite:
     sprite: Clothing/Eyes/Hud/beergoggles.rsi
     state: icon
-
+    
 - type: stealTargetGroup
   id: Bible
   name: bible
   sprite:
     sprite: Objects/Specific/Chapel/bible.rsi
     state: icon
-
+    
 - type: stealTargetGroup
   id: ClothingNeckGoldmedal
   name: gold medal of crewmanship
   sprite:
     sprite: Clothing/Neck/Medals/gold.rsi
     state: icon
-
+    
 - type: stealTargetGroup
   id: ClothingNeckClownmedal
   name: clown medal
@@ -345,35 +343,35 @@
   sprite:
     sprite: Mobs/Pets/corgi.rsi
     state: ian
-
+    
 - type: stealTargetGroup
   id: AnimalBingus
   name: Bingus
   sprite:
     sprite: Mobs/Pets/bingus.rsi
     state: bingus
-
+    
 - type: stealTargetGroup
   id: AnimalMcGriff
   name: McGriff
   sprite:
     sprite: Mobs/Pets/mcgriff.rsi
     state: mcgriff
-
+    
 - type: stealTargetGroup
   id: AnimalWalter
   name: Walter
   sprite:
     sprite: Mobs/Pets/walter.rsi
     state: walter
-
+    
 - type: stealTargetGroup
   id: AnimalMorty
   name: Morty
   sprite:
     sprite: Mobs/Animals/possum.rsi
     state: possum
-
+    
 - type: stealTargetGroup
   id: AnimalRenault
   name: Renault

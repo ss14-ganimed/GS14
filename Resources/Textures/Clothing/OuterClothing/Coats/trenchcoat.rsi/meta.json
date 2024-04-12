@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
+<<<<<<<< HEAD:Resources/Textures/Clothing/OuterClothing/Coats/trenchcoat.rsi/meta.json
   "copyright": "Taken from paradise at commit https://github.com/ParadiseSS13/Paradise/pull/19491/commits/e9a900022ca1cf0fed0e320c7a0cce500287ab99",
+========
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e, equipped and icon remade by 𝚆𝚊𝚛𝚝𝚊𝚐𝚕𝚎𝚡#0912, digi made by murouxlul(705433554602950793)",
+>>>>>>>> upstreams:Resources/Textures/Clothing/OuterClothing/Coats/rndcoat.rsi/meta.json
   "size": {
     "x": 32,
     "y": 32
@@ -19,6 +23,14 @@
     },
     {
       "name": "open-equipped-OUTERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-digi",
+      "directions": 4
+    },
+    {
+      "name": "open-equipped-OUTERCLOTHING-digi",
       "directions": 4
     },
     {

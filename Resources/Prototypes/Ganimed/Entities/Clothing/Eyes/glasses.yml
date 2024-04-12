@@ -1,0 +1,40 @@
+#license: CLA
+#copiryght: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesBlueShield
+  name: blue shield sunglasses
+  description: Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flashes. Special modifications may prove useful for blue shield officers.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/blueshieldglasses.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/blueshieldglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: GuideHelp
+    guides:
+    - Security
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHUDGlassesSecurity
+  name: security HUD sunglasses
+  description: Improved shielding blocks many flashes. Holographic symbols are visible on the glass. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/secglasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/secglasses.rsi
+  - type: ShowSecurityIcons
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Tag
+    tags:
+    - HamsterWearable

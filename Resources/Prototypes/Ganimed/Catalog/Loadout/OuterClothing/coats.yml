@@ -1,0 +1,382 @@
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatGentle
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  prototype: ClothingOuterCoatGentle
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatWarden
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Warden
+  prototype: ClothingOuterCoatWarden
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatParamedicWB
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - Coroner
+    - Brigmedic
+  prototype: ClothingOuterCoatParamedicWB
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterJacketChef
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Chef
+    - Bartender
+    - ServiceWorker
+  prototype: ClothingOuterJacketChef
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLab
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+    - Brigmedic
+    - Coroner
+  prototype: ClothingOuterCoatLab
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabOpen
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+    - Brigmedic
+    - Coroner
+  prototype: ClothingOuterCoatLabOpen
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabViro
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - Coroner
+  prototype: ClothingOuterCoatLabViro
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabGene
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - Coroner
+    - Brigmedic
+  prototype: ClothingOuterCoatLabGene
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabChem
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - Coroner
+    - Brigmedic
+  prototype: ClothingOuterCoatLabChem
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabCmo
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingOuterCoatLabCmo
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabSeniorPhysician
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+  prototype: ClothingOuterCoatLabSeniorPhysician
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabCoroner
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Coroner
+  prototype: ClothingOuterCoatLabCoroner
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabCoolCoroner
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Coroner
+  prototype: ClothingOuterCoatLabCoolCoroner
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatRnd
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingOuterCoatRnd
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatRobo
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - Roboticist
+    - Scientist
+    - SeniorResearcher
+  prototype: ClothingOuterCoatRobo
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatRoboOriginal
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - Roboticist
+    - Scientist
+    - SeniorResearcher
+  prototype: ClothingOuterCoatRoboOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabSeniorResearcher
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - SeniorResearcher
+  prototype: ClothingOuterCoatLabSeniorResearcher
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatAMG
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Brigmedic
+  prototype: ClothingOuterCoatAMG
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatLabSecurityMedic
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Brigmedic
+  prototype: ClothingOuterCoatLabSecurityMedic
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatDetective
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterCoatDetective
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatSecurityOvercoat
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterCoatSecurityOvercoat
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatDetectiveOriginal
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterCoatDetectiveOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatPirate
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  prototype: ClothingOuterCoatPirate
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatJensen
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterCoatJensen
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatInspector
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  prototype: ClothingOuterCoatInspector
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterDameDane
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  prototype: ClothingOuterDameDane
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatRedCoat
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  prototype: ClothingOuterCoatRedCoat
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatBlueCoat
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingOuterCoatBlueCoat
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatHoSTrench
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingOuterCoatHoSTrench
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterCoatBlueShield
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - BlueShield
+  prototype: ClothingOuterCoatBlueShield
+
+- type: loadout
+  id: LoadoutOuterClothingOuterAtmosianBomberJacket
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+  prototype: ClothingOuterAtmosianBomberJacket
+
+- type: loadout
+  id: LoadoutOuterClothingOuterCoatHoSOvercoat
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingOuterCoatHoSOvercoat

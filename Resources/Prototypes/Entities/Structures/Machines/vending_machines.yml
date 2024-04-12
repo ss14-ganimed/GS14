@@ -101,6 +101,11 @@
     price: 100
   - type: Appearance
   - type: WiresVisuals
+  - type: ContainerContainer
+    containers:
+      VendingMachine: !type:Container
+        showEnts: False
+        occludes: True
 
 - type: entity
   parent: VendingMachine
@@ -1391,6 +1396,9 @@
     snap:
     - Wallmount
   components:
+  - type: Physics
+    canCollide: false
+  - type: Fixtures
   - type: Sprite
     drawdepth: WallMountedItems
     snapCardinals: false

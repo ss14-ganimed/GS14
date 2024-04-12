@@ -21,6 +21,13 @@ public sealed class FrontalLispSystem : EntitySystem
         // handles ex(c), x
         message = Regex.Replace(message, @"[E]+[Xx]+[Cc]*|[X]+", "EKTH");
         message = Regex.Replace(message, @"[e]+[x]+[c]*|[x]+", "ekth");
+		
+		// В -> Ф
+		// Ш -> Ф
+		message = Regex.Replace(message, "ш", "ф");
+		message = Regex.Replace(message, "Ш", "Ф");
+		message = Regex.Replace(message, "в", "ф");
+		message = Regex.Replace(message, "В", "Ф");
 
         args.Message = message;
     }

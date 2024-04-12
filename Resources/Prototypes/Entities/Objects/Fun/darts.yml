@@ -57,6 +57,7 @@
     transferAmount: 2
     solution: melee
     blockSlots: OUTERCLOTHING
+    fixtureId: "throw-fixture"
   - type: SolutionTransfer
     maxTransferAmount: 2
   - type: Damageable

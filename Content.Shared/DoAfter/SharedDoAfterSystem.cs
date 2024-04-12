@@ -346,6 +346,15 @@ public abstract partial class SharedDoAfterSystem : EntitySystem
         InternalCancel(doAfter, comp);
         Dirty(entity, comp);
     }
+	
+	public void CancelAll(DoAfterComponent component)
+	{
+		foreach (var doAfter in component.DoAfters.Values)
+        {
+            InternalCancel(doAfter, component);
+        }
+        Dirty(component);
+	}
 
     private void InternalCancel(DoAfter doAfter, DoAfterComponent component)
     {

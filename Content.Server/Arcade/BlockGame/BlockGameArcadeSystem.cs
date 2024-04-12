@@ -104,6 +104,7 @@ public sealed class BlockGameArcadeSystem : EntitySystem
             _uiSystem.CloseAll(bui);
         component.Player = null;
         component.Spectators.Clear();
+        component.ShouldSayThankYou = false;
     }
 
     private void OnPlayerAction(EntityUid uid, BlockGameArcadeComponent component, BlockGameMessages.BlockGamePlayerActionMessage msg)

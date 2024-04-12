@@ -6,6 +6,13 @@
     - type: PirateAccent
 
 - type: trait
+  id: FelinidAccent
+  name: trait-owo-accent-name
+  description: trait-owo-accent-desc
+  components:
+    - type: OwOAccent
+
+- type: trait
   id: Accentless
   name: trait-accentless-name
   description: trait-accentless-desc
@@ -23,3 +30,10 @@
   description: trait-southern-desc
   components:
     - type: SouthernAccent
+    
+- type: trait
+  id: FelinidAncestry
+  name: trait-felinid-name
+  description: trait-felinid-desc
+  components:
+    - type: Felinid

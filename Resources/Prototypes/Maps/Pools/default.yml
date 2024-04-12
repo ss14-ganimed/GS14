@@ -1,17 +1,15 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
+  - Gemini
   - Atlas
   - Bagel
-  - Box
-  - Cluster
+  - Aspid
   - Core
-  - Fland
   - Marathon
   - Meta
   - Omega
   - Origin
-  - Saltern
   - Packed
-  - Reach
-  #- Train <- return after station anchoring PR is finished and merged
+  - Cluster
+  - Saltern

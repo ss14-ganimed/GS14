@@ -119,6 +119,28 @@ public sealed class IdCardSystem : SharedIdCardSystem
         }
         return true;
     }
+	
+	public bool TryChangeColor(EntityUid uid, Color? color, IdCardComponent? id = null, EntityUid? player = null)
+    {
+        if (!Resolve(uid, ref id))
+           return false;
+	   
+		if (color is null)
+			return false;
+
+        if (id.JobColor == color.Value)
+            return true;
+		
+        id.JobColor = color.Value;
+        Dirty(id);
+
+        if (player != null)
+        {
+            _adminLogger.Add(LogType.Identity, LogImpact.Low,
+                $"{ToPrettyString(player.Value):player} has changed the color of {ToPrettyString(uid):entity} to {color} ");
+        }
+        return true;
+    }
 
     public bool TryChangeJobIcon(EntityUid uid, StatusIconPrototype jobIcon, IdCardComponent? id = null, EntityUid? player = null)
     {

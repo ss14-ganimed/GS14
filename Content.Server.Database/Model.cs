@@ -19,6 +19,7 @@ namespace Content.Server.Database
 
         public DbSet<Preference> Preference { get; set; } = null!;
         public DbSet<Profile> Profile { get; set; } = null!;
+		public DbSet<BookTerminalEntry> BookTerminalEntry { get; set; } = null!;
         public DbSet<AssignedUserId> AssignedUserId { get; set; } = null!;
         public DbSet<Player> Player { get; set; } = default!;
         public DbSet<Admin> Admin { get; set; } = null!;
@@ -50,6 +51,10 @@ namespace Content.Server.Database
             modelBuilder.Entity<Profile>()
                 .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
                 .IsUnique();
+			
+			modelBuilder.Entity<BookTerminalEntry>()
+                .HasIndex(p => p.Id)
+                .IsUnique();
 
             modelBuilder.Entity<Antag>()
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
@@ -58,8 +63,12 @@ namespace Content.Server.Database
             modelBuilder.Entity<Trait>()
                         .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
                         .IsUnique();
-
-            modelBuilder.Entity<Job>()
+			
+			modelBuilder.Entity<Loadout>()
+                        .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.LoadoutName})
+                        .IsUnique();
+            
+			modelBuilder.Entity<Job>()
                 .HasIndex(j => j.ProfileId);
 
             modelBuilder.Entity<Job>()
@@ -340,6 +349,7 @@ namespace Content.Server.Database
         public string FacialHairName { get; set; } = null!;
         public string FacialHairColor { get; set; } = null!;
         public string EyeColor { get; set; } = null!;
+        public string SpeakerColor { get; set; } = null!;
         public string SkinColor { get; set; } = null!;
         public string Clothing { get; set; } = null!;
         public string Backpack { get; set; } = null!;
@@ -347,14 +357,15 @@ namespace Content.Server.Database
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();
         public List<Trait> Traits { get; } = new();
+        public List<Loadout> Loadouts { get; } = new();
 
         [Column("pref_unavailable")] public DbPreferenceUnavailableMode PreferenceUnavailable { get; set; }
 
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
     }
-
-    public class Job
+	
+	public class Job
     {
         public int Id { get; set; }
         public Profile Profile { get; set; } = null!;
@@ -389,6 +400,15 @@ namespace Content.Server.Database
         public int ProfileId { get; set; }
 
         public string TraitName { get; set; } = null!;
+    }
+	
+	public class Loadout
+    {
+        public int Id { get; set; }
+        public Profile Profile { get; set; } = null!;
+        public int ProfileId { get; set; }
+
+        public string LoadoutName { get; set; } = null!;
     }
 
     public enum DbPreferenceUnavailableMode
@@ -502,6 +522,32 @@ namespace Content.Server.Database
 
         [ForeignKey("Server")] public int ServerId { get; set; }
         public Server Server { get; set; } = default!;
+    }
+	
+	public class BookTerminalEntry
+    {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        public string Name { get; set; } = default!;
+
+        public string Description { get; set; } = default!;
+
+        public string Content { get; set; } = default!;
+
+        public List<StampedData> StampedBy { get; set; } = default!;
+
+        public string StampState { get; set; } = "paper_stamp-void";
+    }
+	
+	public class StampedData
+    {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        public string Name { get; set; } = default!;
+
+        public string Color { get; set; } = default!;
     }
 
     public class Server

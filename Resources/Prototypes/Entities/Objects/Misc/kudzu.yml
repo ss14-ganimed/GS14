@@ -235,6 +235,7 @@
       damage:
        types:
          Heat: 3
+    - type: GrowingKudzu
       growthTickChance: 0.3
     - type: AtmosExposed
     - type: SpeedModifierContacts

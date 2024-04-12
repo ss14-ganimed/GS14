@@ -572,6 +572,7 @@
         reagents:
         - ReagentId: Ale
           Quantity: 50
+
   - type: Sprite
     sprite: Objects/Consumable/Drinks/alebottle.rsi
   - type: Openable

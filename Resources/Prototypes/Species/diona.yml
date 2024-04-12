@@ -10,8 +10,9 @@
   skinColoration: Hues
   maleFirstNames: DionaFirst
   femaleFirstNames: DionaFirst
-  lastNames: DionaLast
-  naming: TheFirstofLast
+  maleLastNames: DionaLast
+  femaleLastNames: DionaLast
+  naming: FirstDashFirst
 
 - type: speciesBaseSprites
   id: MobDionaSprites

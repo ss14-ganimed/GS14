@@ -45,7 +45,40 @@
         GlassBeaker:
           Amount: 2
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: ProtolatheHyperConvectionMachineCircuitboard
+  name: hyper convection protolathe machine board
+  description: A machine printed circuit board for a hyper convection protolathe.
+  components:
+  - type: MachineBoard
+    prototype: ProtolatheHyperConvection
+    requirements:
+      MatterBin: 2
+    tagRequirements:
+      GlassBeaker:
+        Amount: 2
+        DefaultPrototype: Beaker
+        ExamineName: Glass Beaker
+      Igniter:
+        Amount: 1
+        DefaultPrototype: Igniter
+        ExamineName: Igniter
+
+- type: entity
+  id: BiofabricatorMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: biofabricator machine board
+  description: A machine printed circuit board for a biofabricator.
+  components:
+    - type: MachineBoard
+      prototype: Biofabricator
+      requirements:
+        MatterBin: 4
+      materialRequirements:
+        Glass: 1
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -97,7 +130,7 @@
         GlassBeaker:
           Amount: 2
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
 
 - type: entity
   id: AmmoTechFabCircuitboard
@@ -112,6 +145,8 @@
       requirements:
         MatterBin: 1
         Manipulator: 1
+    - type: StealTarget
+      stealGroup: AmmoTechFabCircuitboard
 
 - type: entity
   id: MedicalTechFabCircuitboard
@@ -130,7 +165,7 @@
         GlassBeaker:
           Amount: 2
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
     - type: StealTarget
       stealGroup: MedicalTechFabCircuitboard
 
@@ -150,7 +185,7 @@
       GlassBeaker:
         Amount: 2
         DefaultPrototype: Beaker
-        ExamineName: Glass Beaker
+        ExamineName: Мензурка
 
 - type: entity
   id: ExosuitFabricatorMachineCircuitboard
@@ -213,7 +248,7 @@
         GlassBeaker:
           Amount: 1
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
 
 - type: entity
   id: DiagnoserMachineCircuitboard
@@ -230,7 +265,7 @@
       GlassBeaker:
         Amount: 1
         DefaultPrototype: Beaker
-        ExamineName: Glass Beaker
+        ExamineName: Мензурка
     componentRequirements:
       DiseaseSwab:
         Amount: 1
@@ -558,7 +593,7 @@
         GlassBeaker:
           Amount: 2
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
 
 - type: entity
   id: ChemDispenserMachineCircuitboard
@@ -579,7 +614,7 @@
         GlassBeaker:
           Amount: 2
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
 
 - type: entity
   id: BiomassReclaimerMachineCircuitboard
@@ -618,7 +653,7 @@
         GlassBeaker:
           Amount: 2
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
 
 - type: entity
   id: SeedExtractorMachineCircuitboard
@@ -922,7 +957,7 @@
         GlassBeaker:
           Amount: 1
           DefaultPrototype: Beaker
-          ExamineName: Glass Beaker
+          ExamineName: Мензурка
 
 - type: entity
   id: HotplateMachineCircuitboard
@@ -1194,7 +1229,7 @@
           GlassBeaker:
             Amount: 1
             DefaultPrototype: Beaker
-            ExamineName: Glass Beaker
+            ExamineName: Мензурка
 
 - type: entity
   id: CargoTelepadMachineCircuitboard
@@ -1227,7 +1262,7 @@
           GlassBeaker:
             Amount: 1
             DefaultPrototype: Beaker
-            ExamineName: Glass Beaker
+            ExamineName: Мензурка
 
 - type: entity
   id: TelecomServerCircuitboard

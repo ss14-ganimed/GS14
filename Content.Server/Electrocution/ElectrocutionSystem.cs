@@ -201,6 +201,16 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         TryDoElectrifiedAct(uid, args.User, siemens, electrified);
     }
 
+    private float CalculateElectrifiedDamageScale(float power)
+    {
+        // A logarithm allows a curve of damage that grows quickly, but slows down dramatically past a value. This keeps the damage to a reasonable range.
+        const float DamageShift = 1.67f; // Shifts the curve for an overall higher or lower damage baseline
+        const float CeilingCoefficent = 1.35f; // Adjusts the approach to maximum damage, higher = Higher top damage
+        const float LogGrowth = 0.00001f; // Adjusts the growth speed of the curve
+
+        return DamageShift + MathF.Log(power * LogGrowth) * CeilingCoefficent;
+    }
+
     public bool TryDoElectrifiedAct(EntityUid uid, EntityUid targetUid,
         float siemens = 1,
         ElectrifiedComponent? electrified = null,

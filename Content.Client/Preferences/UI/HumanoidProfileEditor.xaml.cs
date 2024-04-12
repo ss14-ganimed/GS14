@@ -9,6 +9,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
+using Content.Shared.Loadout;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
@@ -33,6 +34,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Ganimed.SponsorManager;
+using Robust.Client.Player;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 using Direction = Robust.Shared.Maths.Direction;
 
@@ -58,9 +61,11 @@ namespace Content.Client.Preferences.UI
     {
         private readonly IClientPreferencesManager _preferencesManager;
         private readonly IEntityManager _entMan;
+		private readonly IPlayerManager _playerManager;
         private readonly IConfigurationManager _configurationManager;
         private readonly MarkingManager _markingManager;
         private readonly JobRequirementsManager _requirements;
+		private readonly SponsorManager _sponsorManager;
 
         private LineEdit _ageEdit => CAgeEdit;
         private LineEdit _nameEdit => CNameEdit;
@@ -78,11 +83,17 @@ namespace Content.Client.Preferences.UI
         private SingleMarkingPicker _hairPicker => CHairStylePicker;
         private SingleMarkingPicker _facialHairPicker => CFacialHairPicker;
         private EyeColorPicker _eyesPicker => CEyeColorPicker;
+        private SpeakerColorPicker _speakerPicker => CSpeakerColorPicker;
 
         private TabContainer _tabContainer => CTabContainer;
         private BoxContainer _jobList => CJobList;
         private BoxContainer _antagList => CAntagList;
         private BoxContainer _traitsList => CTraitsList;
+		private ProgressBar _loadoutPoints => LoadoutPoints;
+        private BoxContainer _loadoutsTab => CLoadoutsTab;
+        private TabContainer _loadoutsTabs => CLoadoutsTabs;
+        private int BaseStartLoadoutPoints = 14;
+		private int SponsorStartLoadoutPoints = 20;
         private readonly List<JobPrioritySelector> _jobPriorities;
         private OptionButton _preferenceUnavailableButton => CPreferenceUnavailableButton;
         private readonly Dictionary<string, BoxContainer> _jobCategories;
@@ -90,6 +101,7 @@ namespace Content.Client.Preferences.UI
         private readonly List<SpeciesPrototype> _speciesList;
         private readonly List<AntagPreferenceSelector> _antagPreferences;
         private readonly List<TraitPreferenceSelector> _traitPreferences;
+        private readonly List<LoadoutPreferenceSelector>? _loadoutPreferences;
 
         private SpriteView _previewSpriteView => CSpriteView;
         private Button _previewRotateLeftButton => CSpriteRotateLeft;
@@ -109,11 +121,12 @@ namespace Content.Client.Preferences.UI
         public event Action<HumanoidCharacterProfile, int>? OnProfileChanged;
 
         public HumanoidProfileEditor(IClientPreferencesManager preferencesManager, IPrototypeManager prototypeManager,
-            IEntityManager entityManager, IConfigurationManager configurationManager)
+            IEntityManager entityManager, IConfigurationManager configurationManager, IPlayerManager playerManager)
         {
             RobustXamlLoader.Load(this);
             _prototypeManager = prototypeManager;
             _entMan = entityManager;
+            _playerManager = playerManager;
             _preferencesManager = preferencesManager;
             _configurationManager = configurationManager;
             _markingManager = IoCManager.Resolve<MarkingManager>();
@@ -140,6 +153,7 @@ namespace Content.Client.Preferences.UI
             _tabContainer.SetTabTitle(0, Loc.GetString("humanoid-profile-editor-appearance-tab"));
 
             ShowClothes.OnPressed += ToggleClothes;
+			ShowLoadout.OnPressed += ToggleLoadout;
 
             #region Sex
 
@@ -345,6 +359,7 @@ namespace Content.Client.Preferences.UI
 
             #endregion Backpack
 
+
             #region SpawnPriority
 
             foreach (var value in Enum.GetValues<SpawnPriorityPreference>())
@@ -362,10 +377,19 @@ namespace Content.Client.Preferences.UI
 
             #region Eyes
 
-            _eyesPicker.OnEyeColorPicked += newColor =>
+            _sponsorManager = IoCManager.Resolve<SponsorManager>();
+			
+			_eyesPicker.OnEyeColorPicked += newColor =>
             {
                 if (Profile is null)
-                    return;
+                return;
+				if (_playerManager.LocalPlayer is null)
+					return;
+				if (!_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)) {
+					Profile = Profile.WithCharacterAppearance(
+                    Profile.Appearance.WithSpeakerColor(newColor));
+					CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
+				}
                 Profile = Profile.WithCharacterAppearance(
                     Profile.Appearance.WithEyeColor(newColor));
                 CMarkings.CurrentEyeColor = Profile.Appearance.EyeColor;
@@ -373,6 +397,27 @@ namespace Content.Client.Preferences.UI
             };
 
             #endregion Eyes
+			
+			#region SpeakerColor
+			
+            _sponsorManager = IoCManager.Resolve<SponsorManager>();
+			
+            _speakerPicker.OnSpeakerColorPicked += newColor =>
+            {
+                if (Profile is null)
+                    return;
+				if (_playerManager.LocalPlayer is null)
+					return;
+				if (!_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)) {
+					newColor = Profile.Appearance.EyeColor;
+				}
+                Profile = Profile.WithCharacterAppearance(
+                    Profile.Appearance.WithSpeakerColor(newColor));
+                CMarkings.CurrentSpeakerColor = Profile.Appearance.SpeakerColor;
+                IsDirty = true;
+            };
+
+            #endregion SpeakerColor
 
             #endregion Appearance
 
@@ -480,6 +525,127 @@ namespace Content.Client.Preferences.UI
             CMarkings.OnMarkingRankChange += OnMarkingChange;
 
             #endregion Markings
+			
+			#region Loadouts
+			
+			_sponsorManager = IoCManager.Resolve<SponsorManager>();	
+			
+            _loadoutPoints.MaxValue = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
+            _tabContainer.SetTabTitle(5, Loc.GetString("humanoid-profile-editor-loadouts-tab"));
+            _loadoutPreferences = new List<LoadoutPreferenceSelector>();
+            var loadouts = prototypeManager.EnumeratePrototypes<LoadoutPrototype>().OrderBy(l => l.ID).ToList();
+
+            if (loadouts.Count >= 0)
+            {
+                // Make Uncategorized category
+                var bocks = new BoxContainer()
+                {
+                    Orientation = LayoutOrientation.Vertical,
+                    VerticalExpand = true,
+                    Name = "Uncategorized_0"
+                };
+
+                _loadoutsTabs.AddChild(bocks);
+                _loadoutsTabs.SetTabTitle(0, "loadout-category-uncategorized");
+
+                // Make categories
+                int currentCategory = 1;
+                foreach (var loadout in loadouts)
+                {
+                    // Check for an existing category
+                    BoxContainer? match = null;
+                    foreach (var child in _loadoutsTabs.Children)
+                    {
+                        if (match != null || child.Name == null) continue;
+                        if (child.Name.Split("_")[0] == loadout.Category)
+                            match = (BoxContainer) child;
+                    }
+
+                    // If there is a category do nothing
+                    if (match != null)
+                        continue;
+                    // If not, make it
+                    var box = new BoxContainer()
+                    {
+                        Orientation = LayoutOrientation.Vertical,
+                        VerticalExpand = true,
+                        Name = $"{loadout.Category}_{currentCategory}"
+                    };
+
+                    _loadoutsTabs.AddChild(box);
+                    _loadoutsTabs.SetTabTitle(currentCategory, Loc.GetString(loadout.Category));
+                    currentCategory++;
+                }
+
+                _loadoutsTabs.CurrentTab = 1;
+
+                // Fill categories
+                var _entman = IoCManager.Resolve<IEntityManager>();
+                foreach (var loadout in loadouts.OrderBy(l => (
+				Loc.GetString(_entman.GetComponent<MetaDataComponent>(_entman.SpawnEntity(l.Prototype, MapCoordinates.Nullspace)).EntityName)
+				)))
+                {
+                    var selector = new LoadoutPreferenceSelector(loadout);
+
+                    // Look for an existing loadout category
+                    BoxContainer? match = null;
+                    foreach (var child in _loadoutsTabs.Children)
+                    {
+                        if (match != null || child.Name == null)
+                            continue;
+                        if (child.Name.Split("_")[0] == loadout.Category)
+                            match = (BoxContainer) child;
+                    }
+                    if (match?.Name == null)
+                    {
+                        _loadoutsTabs.SetTabTitle(0, "loadout-category-uncategorized");
+                        bocks.AddChild(selector);
+                    }
+                    else
+                    {
+                        _loadoutsTabs.SetTabTitle(int.Parse(match.Name.Split("_")[1]), Loc.GetString(loadout.Category));
+                        match.AddChild(selector);
+                    }
+
+                    _loadoutPreferences.Add(selector);
+                    selector.PreferenceChanged += preference =>
+                    {
+					
+                        // Make sure they have enough loadout points
+                        if (preference)
+                        {
+                            
+							var remain = _loadoutPoints.Value - loadout.Cost;
+                            if (remain < 0)
+                                preference = false;
+                            else if (loadout.SponsorOnly && !_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session))
+								preference = false;
+							else
+                                _loadoutPoints.Value = remain;
+                        }
+                        else
+                            _loadoutPoints.Value += loadout.Cost;
+                        // Update Preference
+                        Profile = Profile?.WithLoadoutPreference(loadout.ID, preference);
+                        IsDirty = true;
+                        UpdateLoadoutPreferences();
+                        RebuildSpriteView();
+                    };
+                }
+
+                if (!bocks.Children.Any())
+                {
+                    _loadoutsTabs.SetTabVisible(0, false);
+                }
+            }
+            else
+            {
+                _loadoutsTab.AddChild(new Label { Text="No loadouts found" });
+            }
+
+            #endregion
 
             #region FlavorText
 
@@ -551,7 +717,13 @@ namespace Content.Client.Preferences.UI
             }
         }
 
+
         private void ToggleClothes(BaseButton.ButtonEventArgs obj)
+        {
+            RebuildSpriteView();
+        }
+
+        private void ToggleLoadout(BaseButton.ButtonEventArgs obj)
         {
             RebuildSpriteView();
         }
@@ -563,10 +735,7 @@ namespace Content.Client.Preferences.UI
             _jobCategories.Clear();
             var firstCategory = true;
 
-            var departments = _prototypeManager.EnumeratePrototypes<DepartmentPrototype>().ToArray();
-            Array.Sort(departments, DepartmentUIComparer.Instance);
-
-            foreach (var department in departments)
+            foreach (var department in _prototypeManager.EnumeratePrototypes<DepartmentPrototype>())
             {
                 var departmentName = Loc.GetString($"department-{department.ID}");
 
@@ -610,10 +779,8 @@ namespace Content.Client.Preferences.UI
                     _jobList.AddChild(category);
                 }
 
-                var jobs = department.Roles.Select(jobId => _prototypeManager.Index<JobPrototype>(jobId))
-                    .Where(job => job.SetPreference)
-                    .ToArray();
-                Array.Sort(jobs, JobUIComparer.Instance);
+                var jobs = department.Roles.Select(o => _prototypeManager.Index<JobPrototype>(o)).Where(o => o.SetPreference).ToList();
+                jobs.Sort((x, y) => -string.Compare(x.LocalizedName, y.LocalizedName, StringComparison.CurrentCultureIgnoreCase));
 
                 foreach (var job in jobs)
                 {
@@ -649,11 +816,6 @@ namespace Content.Client.Preferences.UI
                     };
 
                 }
-            }
-
-            if (Profile is not null)
-            {
-                UpdateJobPriorities();
             }
         }
 
@@ -985,6 +1147,8 @@ namespace Content.Client.Preferences.UI
             SpeciesInfoButton.StyleClasses.Add(style);
         }
 
+
+
         private void UpdateMarkings()
         {
             if (Profile == null)
@@ -993,7 +1157,7 @@ namespace Content.Client.Preferences.UI
             }
 
             CMarkings.SetData(Profile.Appearance.Markings, Profile.Species,
-                Profile.Sex, Profile.Appearance.SkinColor, Profile.Appearance.EyeColor
+                Profile.Sex, Profile.Appearance.SkinColor, Profile.Appearance.EyeColor, Profile.Appearance.SpeakerColor
             );
         }
 
@@ -1046,6 +1210,7 @@ namespace Content.Client.Preferences.UI
 
             _spawnPriorityButton.SelectId((int) Profile.SpawnPriority);
         }
+
 
         private void UpdateHairPickers()
         {
@@ -1147,13 +1312,33 @@ namespace Content.Client.Preferences.UI
 
         private void UpdateEyePickers()
         {
-            if (Profile == null)
-            {
+            if (Profile is null)
                 return;
-            }
+			if (_playerManager.LocalPlayer is null)
+				return;
+			if (!_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)) {
+				CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
+				_speakerPicker.SetData(Profile.Appearance.EyeColor);
+			}
 
             CMarkings.CurrentEyeColor = Profile.Appearance.EyeColor;
             _eyesPicker.SetData(Profile.Appearance.EyeColor);
+        }
+		
+		private void UpdateSpeakerPickers()
+        {
+            if (Profile is null)
+                return;
+			if (_playerManager.LocalPlayer is null)
+				return;
+			if (!_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)) {
+				CMarkings.CurrentSpeakerColor = Profile.Appearance.EyeColor;
+				_speakerPicker.SetData(Profile.Appearance.EyeColor);
+				return;
+			}
+
+            CMarkings.CurrentSpeakerColor = Profile.Appearance.SpeakerColor;
+            _speakerPicker.SetData(Profile.Appearance.SpeakerColor);
         }
 
         private void UpdateSaveButton()
@@ -1170,7 +1355,10 @@ namespace Content.Client.Preferences.UI
             humanoid.LoadProfile(_previewDummy!.Value, Profile);
 
             if (ShowClothes.Pressed)
-                LobbyCharacterPreviewPanel.GiveDummyJobClothes(_previewDummy!.Value, Profile);
+				LobbyCharacterPreviewPanel.GiveDummyJobClothes(_previewDummy!.Value, Profile);
+				
+			if (ShowLoadout.Pressed)
+				LobbyCharacterPreviewPanel.GiveDummyLoadoutItems(_previewDummy!.Value, Profile);
 
             _previewSpriteView.OverrideDirection = (Direction) ((int) _previewRotation % 4 * 2);
         }
@@ -1189,10 +1377,12 @@ namespace Content.Client.Preferences.UI
             UpdateSpawnPriorityControls();
             UpdateAgeEdit();
             UpdateEyePickers();
+            UpdateSpeakerPickers();
             UpdateSaveButton();
             UpdateJobPriorities();
             UpdateAntagPreferences();
             UpdateTraitPreferences();
+            UpdateLoadoutPreferences();
             UpdateMarkings();
             RebuildSpriteView();
             UpdateHairPickers();
@@ -1356,12 +1546,14 @@ namespace Content.Client.Preferences.UI
                 var icon = new TextureRect
                 {
                     TextureScale = new Vector2(2, 2),
-                    VerticalAlignment = VAlignment.Center
+                    Stretch = TextureRect.StretchMode.KeepCentered
                 };
                 var jobIcon = protoMan.Index<StatusIconPrototype>(proto.Icon);
                 icon.Texture = jobIcon.Icon.Frame0();
+				
+				var jobName = proto.SponsorOnly ? proto.LocalizedName + " ★" : proto.LocalizedName;
 
-                Setup(items, proto.LocalizedName, 200, proto.LocalizedDescription, icon);
+                Setup(items, jobName, 200, proto.LocalizedDescription, icon);
             }
         }
 
@@ -1383,6 +1575,38 @@ namespace Content.Client.Preferences.UI
                 var preference = Profile?.TraitPreferences.Contains(traitId) ?? false;
 
                 preferenceSelector.Preference = preference;
+            }
+        }
+		
+		private void UpdateLoadoutPreferences()
+		{
+			_loadoutPoints.Value = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
+			
+            _loadoutPoints.MaxValue = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
+
+            if (_loadoutPreferences == null)
+                return;
+
+            var points = !(Profile is null) && !(_playerManager.LocalPlayer is null) &&
+				_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session)
+				? SponsorStartLoadoutPoints : BaseStartLoadoutPoints;
+			
+            foreach (var preferenceSelector in _loadoutPreferences)
+            {
+                var loadoutId = preferenceSelector.Loadout.ID;
+                var preference = Profile?.LoadoutPreferences.Contains(loadoutId) ?? false;
+
+                preferenceSelector.Preference = preference;
+
+                if (preference)
+                {
+                    points -= preferenceSelector.Loadout.Cost;
+                    _loadoutPoints.Value = points;
+                }
             }
         }
 
@@ -1450,6 +1674,94 @@ namespace Content.Client.Preferences.UI
                 {
                     Orientation = LayoutOrientation.Horizontal,
                     Children = { _checkBox },
+                });
+            }
+
+            private void OnCheckBoxToggled(BaseButton.ButtonToggledEventArgs args)
+            {
+                PreferenceChanged?.Invoke(Preference);
+            }
+        }
+		
+		private sealed class LoadoutPreferenceSelector : Control
+        {
+            public LoadoutPrototype Loadout { get; }
+            private readonly CheckBox _checkBox;
+
+            public bool Preference
+            {
+                get => _checkBox.Pressed;
+                set => _checkBox.Pressed = value;
+            }
+
+            public event Action<bool>? PreferenceChanged;
+
+            public LoadoutPreferenceSelector(LoadoutPrototype loadout)
+            {
+                Loadout = loadout;
+
+                var entman = IoCManager.Resolve<IEntityManager>();
+                var dummyLoadout = entman.SpawnEntity(loadout.Prototype, MapCoordinates.Nullspace);
+                var loadoutMeta = entman.GetComponent<MetaDataComponent>(dummyLoadout);
+                var sprite = entman.GetComponent<SpriteComponent>(dummyLoadout);
+
+                var previewLoadout = new SpriteView
+                {
+                    Scale = new Vector2(1, 1),
+                    OverrideDirection = Direction.South,
+                    VerticalAlignment = VAlignment.Center,
+                    SizeFlagsStretchRatio = 1
+                };
+				previewLoadout.SetEntity(dummyLoadout);
+
+                _checkBox = new CheckBox
+                {
+                    Text = loadout.SponsorOnly ? $"{loadoutMeta.EntityName} [{loadout.Cost}] ★" : $"{loadoutMeta.EntityName} [{loadout.Cost}]",
+                    VerticalAlignment = VAlignment.Center
+                };
+                _checkBox.OnToggled += OnCheckBoxToggled;
+
+                var tooltip = "";
+                tooltip += $"{Loc.GetString(loadoutMeta.EntityDescription)}";
+                if (loadout.WhitelistJobs != null || loadout.BlacklistJobs != null || loadout.SpeciesRestrictions != null || loadout.SponsorOnly)
+                    tooltip += "\n";
+
+                if (loadout.SponsorOnly)
+				{
+					tooltip += Loc.GetString("humanoid-profile-editor-loadouts-sponsor-only");
+					if (loadout.WhitelistJobs != null || loadout.SpeciesRestrictions != null || loadout.BlacklistJobs != null)
+						tooltip += "\n";
+				}
+				
+				if (loadout.WhitelistJobs != null)
+                {
+                    tooltip += Loc.GetString("humanoid-profile-editor-loadouts-selector-whitelist");
+                    if (loadout.WhitelistJobs != null)
+                        foreach (var require in loadout.WhitelistJobs)
+                            tooltip += $"\n - {Loc.GetString($"Job{require}")} ({Loc.GetString("humanoid-profile-editor-loadouts-selector-job")})";
+                }
+
+                if (loadout.SpeciesRestrictions != null || loadout.BlacklistJobs != null)
+                {
+                    tooltip += Loc.GetString("humanoid-profile-editor-loadouts-selector-blacklist");
+                    if (loadout.SpeciesRestrictions != null)
+                        foreach (var require in loadout.SpeciesRestrictions)
+                            tooltip += $"\n - {Loc.GetString($"species-name-{require.ToLower()}")} ({Loc.GetString("humanoid-profile-editor-loadouts-selector-species")})";
+                    if (loadout.BlacklistJobs != null)
+                        foreach (var require in loadout.BlacklistJobs)
+                            tooltip += $"\n - {Loc.GetString($"Job{require}")} ({Loc.GetString("humanoid-profile-editor-loadouts-selector-job")})";
+                }
+
+                if (tooltip != "")
+                {
+                    _checkBox.ToolTip = tooltip;
+                    _checkBox.TooltipDelay = 0.2f;
+                }
+
+                AddChild(new BoxContainer
+                {
+                    Orientation = LayoutOrientation.Horizontal,
+                    Children = { previewLoadout, _checkBox },
                 });
             }
 

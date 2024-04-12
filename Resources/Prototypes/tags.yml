@@ -254,7 +254,7 @@
 
 - type: Tag
   id: BypassInteractionRangeChecks
-
+  
 - type: Tag
   id: CableCoil
 
@@ -696,6 +696,9 @@
 
 - type: Tag
   id: HidesNose # for non-standard noses.
+  
+- type: Tag
+  id: HidesTail # for spacesuit.
 
 - type: Tag
   id: HighRiskItem
@@ -915,6 +918,9 @@
   id: NoBlockAnchoring
 
 - type: Tag
+  id: NoPaint
+
+- type: Tag
   id: NozzleBackTank
 
 - type: Tag
@@ -1096,6 +1102,9 @@
   id: ShellShotgun
 
 - type: Tag
+  id: PelletShotgunFlare
+
+- type: Tag
   id: Shiv
 
 - type: Tag
@@ -1180,6 +1189,9 @@
   
 - type: Tag
   id: Sunglasses
+
+- type: Tag
+  id: SurgeryTool
 
 - type: Tag
   id: SurgeryTool
@@ -1315,3 +1327,21 @@
 
 - type: Tag
   id: WriteIgnoreStamps
+
+- type: Tag
+  id: GlassesNearsight
+
+- type: Tag
+  id: GlassesMonochromacy
+
+- type: Tag
+  id: GlassesChromaticAberration
+
+- type: Tag
+  id:  boots
+
+- type: Tag
+  id: HidesHeadTop
+
+- type: Tag
+  id: HidesTail

@@ -156,6 +156,7 @@
   - type: Tag
     tags:
     - Write
+    - NoPaint
   - type: DisarmMalus
     malus: 0
 

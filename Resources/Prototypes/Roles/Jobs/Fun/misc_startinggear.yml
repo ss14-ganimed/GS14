@@ -47,7 +47,7 @@
     back: ClothingBackpackDeathSquadFilled
     mask: ClothingMaskGasDeathSquad
     eyes: ClothingEyesHudSecurity
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetDeathSquad
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitDeathsquad
     suitstorage: AirTankFilled
@@ -235,7 +235,7 @@
     back: ClothingBackpackDuffelCBURNFilled
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesSecurity
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetERT
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitCBURN
     shoes: ClothingShoesBootsCombatFilled
@@ -286,7 +286,7 @@
 #Brigmedic
 
 - type: startingGear
-  id: BrigmedicGear
+  id: BrigmedicGeara
   equipment:
     jumpsuit: ClothingUniformJumpsuitBrigmedic
     outerClothing: ClothingOuterCoatAMG

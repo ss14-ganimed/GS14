@@ -24,7 +24,6 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - ShellShotgunIncendiary
   - CartridgePistolIncendiary
   - CartridgeMagnumIncendiary
   - CartridgeLightRifleIncendiary
@@ -45,6 +44,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - WeaponEnergyGun
 
 - type: technology
   id: UraniumMunitions
@@ -76,10 +76,29 @@
   tier: 1
   cost: 8000
   recipeUnlocks:
+  - ClothingEyesGlassesSecurity
   - Truncheon
   - TelescopicShield
   - HoloprojectorSecurity
   - WeaponDisablerSMG
+
+- type: technology
+  id: ExplosiveTechnology
+  name: research-technology-explosive-technology
+  icon:
+    sprite: Objects/Devices/payload.rsi
+    state: payload-explosive-armed
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - SignallerAdvanced
+  - SignalTrigger
+  - VoiceTrigger
+  - TimerTrigger
+  - FlashPayload
+  - ExplosivePayload
+  - ChemicalPayload
 
 # Tier 2
 
@@ -112,6 +131,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+  - WeaponEnergySniperRifle
 
 - type: technology
   id: WaveParticleHarnessing
@@ -124,6 +144,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
+  - WeaponImmolator
 
 - type: technology
   id: BasicShuttleArmament
@@ -159,6 +180,7 @@
   cost: 15000
   recipeUnlocks:
   - WeaponAdvancedLaser
+  - WeaponIonRifleGun
 
 - type: technology
   id: ExperimentalBatteryAmmo
@@ -187,3 +209,15 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+
+- type: technology
+  id: EnergyBarriers
+  name: research-technology-energy_barriers
+  icon: 
+    sprite: Objects/Tools/EnergyDome/reinhardt.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - EnergyDomeDirectionalTurtle
