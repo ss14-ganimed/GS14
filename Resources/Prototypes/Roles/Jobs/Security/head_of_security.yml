@@ -47,7 +47,7 @@
     back: ClothingBackpackHOSFilled
     shoes: ClothingShoesBootsJackSecFilled
     outerClothing: ClothingOuterCoatHoSTrench
-    eyes: ClothingEyesHUDGlassesSecurity
+    eyes: ClothingEyesGlassesSecurity
     head: ClothingHeadHatBeretHoS
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
