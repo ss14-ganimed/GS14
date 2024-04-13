@@ -74,6 +74,8 @@
         - ClothingShoesCult
         - ClothingUniformJumpsuitAncient
         - ClothingUniformJumpsuitPirate
+        - ClothingShoesBootsCowboyFancy
+        - ClothingHeadHatCowboyBountyHunter
         - Pillow1
         - Pillow2
         - Pillow3
@@ -91,7 +93,7 @@
         - ClothingHeadHatCone
         - ClothingNeckBling
         - ClothingHeadHelmetCosmonaut
-        - ClothingHeadHelmetScaf
+        - ClothingHeadHelmetBasic
         - ClothingShoeSlippersDuck
         - ClothingUnderSocksBee
         - ClothingUnderSocksCoder

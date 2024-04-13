@@ -69,7 +69,6 @@
         map: [ "light" ]
   - type: Item
     sprite: Objects/Misc/Lights/lamp.rsi
-  - type: Rotatable
   - type: HolidayVisuals
     holidays:
       festive:
@@ -114,7 +113,6 @@
         map: [ "light" ]
   - type: Item
     sprite: Objects/Misc/Lights/lampgreen.rsi
-  - type: Rotatable
   - type: HolidayVisuals
     holidays:
       festive:

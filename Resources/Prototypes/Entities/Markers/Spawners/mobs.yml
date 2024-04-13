@@ -791,6 +791,10 @@
       sprite: Mobs/Elemental/orecrab.rsi
   - type: RandomSpawner
     prototypes:
+      - MobSpawnCrabUranium
+      - MobSpawnCrabIron
+      - MobSpawnCrabQuartz
+      - MobSpawnCrabSilver
       - MobUraniumCrab
       - MobIronCrab
       - MobQuartzCrab

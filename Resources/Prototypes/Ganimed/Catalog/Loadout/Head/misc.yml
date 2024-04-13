@@ -152,14 +152,6 @@
     - Brigmedic
 
 - type: loadout
-  id: LoadoutHeadClothingHeadHatFlowerCrown
-  category: loadout-category-head
-  cost: 2
-  exclusive: true
-  sponsorOnly: true
-  prototype: ClothingHeadHatFlowerCrown
-
-- type: loadout
   id: LoadoutHeadClothingHeadHatTophat
   category: loadout-category-head
   cost: 2

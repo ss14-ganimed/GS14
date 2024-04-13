@@ -47,8 +47,6 @@
     layers:
     - state: icon
       map: ["base"]
-  - type: Item
-    size: Small
   - type: OnUseTimerTrigger
     delay: 10
     delayOptions: [10, 30, 60, 120, 300]

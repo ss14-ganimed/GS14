@@ -140,6 +140,7 @@
 - type: latheRecipe
   id: CondenserMachineCircuitBoard
   result: CondenserMachineCircuitBoard
+  category: Circuitry
   completetime: 4
   materials:
     Steel: 100
@@ -955,6 +956,15 @@
      Glass: 900
      Gold: 100
 
+- type: latheRecipe
+  id: ReagentGrinderIndustrialMachineCircuitboard
+  result: ReagentGrinderIndustrialMachineCircuitboard
+  completetime: 5
+  materials:
+     Steel: 100
+     Glass: 900
+     Gold: 100
+     
 - type: latheRecipe
   id: MachineBluespaceHarvesterCircuitboard
   result: MachineBluespaceHarvesterCircuitboard

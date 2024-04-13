@@ -627,6 +627,10 @@ namespace Content.Shared.Cuffs
 
             cuff.Removing = true;
             cuff.Used = false;
+            _audio.PlayPredicted(cuff.EndUncuffSound, target, user);
+
+            _container.Remove(cuffsToRemove, cuffable.Container);
+
             if (_net.IsServer)
             {
                 // Handles spawning broken cuffs on server to avoid client misprediction

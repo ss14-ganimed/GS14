@@ -6,6 +6,14 @@
   prototype: ClothingNeckTieDet
 
 - type: loadout
+  id: LoadoutHeadClothingHeadHatFlowerWreath
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHeadHatFlowerWreath
+
+- type: loadout
   id: LoadoutNeckClothingNeckTieSci
   category: loadout-category-neck
   cost: 1

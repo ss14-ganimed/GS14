@@ -158,6 +158,14 @@
         Radiation: 0.75
         Caustic: 0.5
   - type: GroupExamine
+  - type: StealTarget
+    stealGroup: ClothingOuterHardsuitVoidParamed
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetVoidParamed
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
   - type: StaminaProtection
     coefficient: 0.9
 

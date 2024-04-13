@@ -46,6 +46,9 @@
     Snout:
       points: 1
       required: false
+    Tail: # the cat tail joke
+      points: 0
+      required: false
     HeadTop:
       points: 1
       required: false

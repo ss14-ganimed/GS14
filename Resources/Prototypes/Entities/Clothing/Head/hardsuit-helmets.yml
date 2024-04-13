@@ -17,6 +17,9 @@
     sprite: Clothing/Head/Hardsuits/basic.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/basic.rsi
+  - type: Tag
+    tags:
+    - HidesNose
   - type: StaminaProtection
     coefficient: 0.95
 
@@ -584,6 +587,21 @@
   - type: StaminaProtection
     coefficient: 0.9
 
+#ERT Chaplain Hardsuit
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndie
+  id: ClothingHeadHelmetHardsuitERTChaplain
+  name: ERT chaplain hardsuit helmet
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Clothing/Head/Hardsuits/ERThelmets/ertchaplain.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hardsuits/ERThelmets/ertchaplain.rsi
+  - type: PointLight
+    color: "#ffffff"
+
 #ERT Engineer Hardsuit
 - type: entity
   parent: ClothingHeadHelmetHardsuitSyndie
@@ -750,6 +768,19 @@
     equipSound: /Audio/Mecha/mechmove03.ogg
     unequipSound: /Audio/Effects/Emotes/parp1.ogg
 
+#Mime Hardsuit
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSecurity
+  id: ClothingHeadHelmetHardsuitMime
+  name: mime hardsuit helmet
+  description: A mime hardsuit helmet.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Clothing/Head/Hardsuits/mime.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hardsuits/mime.rsi
+    
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetCBURNLeader

@@ -31,6 +31,7 @@ public sealed partial class ItemToggleSizeComponent : Component
     public ProtoId<ItemSizePrototype>? DeactivatedSize = null;
 
     /// <summary>
+    ///     Item's shape when deactivated. If none is mentioned, it uses the item's default shape instead.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public List<Box2i>? DeactivatedShape = null;

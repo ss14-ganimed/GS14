@@ -6,7 +6,7 @@
 - type: entity
   abstract: true
   id: PortableGeneratorBase
-  parent: [ BaseMachine, ConstructibleMachine ]
+  parent: [ BaseMachine, ConstructibleMachine, StructureWheeled]
   components:
     # Basic properties
     - type: Transform
@@ -27,8 +27,8 @@
           shape:
             !type:PhysShapeAabb
             bounds: "-0.40,-0.40,0.40,0.40"
-          # It has wheels
-          density: 45
+          # Despite the heavy weight, it has wheels, so it's still fairly portable.
+          density: 155
           mask:
             - MachineMask
           layer:
@@ -42,9 +42,6 @@
 
     # Construction, interaction
     - type: WiresPanel
-    - type: Wires
-      boardName: wires-board-name-generator
-      layoutId: Generator
     - type: UserInterface
       interfaces:
         - key: enum.GeneratorComponentUiKey.Key
@@ -185,7 +182,6 @@
         - output_mv
       sprite: Structures/Power/Generation/portable_generator.rsi
       state: portgen0
-      
 - type: entity
   name: S.U.P.E.R.P.A.C.M.A.N.-type portable generator
   description: |-
@@ -238,7 +234,6 @@
         - output_mv
       sprite: Structures/Power/Generation/portable_generator.rsi
       state: portgen1
-      
 - type: entity
   name: J.R.P.A.C.M.A.N.-type portable generator
   description: |-
@@ -259,8 +254,7 @@
           shape:
             !type:PhysShapeAabb
             bounds: "-0.30,-0.30,0.30,0.30"
-          # It has wheels
-          density: 30
+          density: 80
           mask:
             - MachineMask
           layer:

@@ -285,13 +285,6 @@ namespace Content.Server.Database
         Task MarkMessageAsSeen(int id, bool dismissedToo);
 
         #endregion
-
-        #region BookTerminal
-
-        Task<List<BookTerminalEntry>> GetBookTerminalEntriesAsync();
-		Task UploadBookTerminalEntryAsync(BookTerminalEntry bookEntry);
-
-        #endregion
     }
 
     public sealed class ServerDbManager : IServerDbManager
@@ -867,19 +860,7 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.MarkMessageAsSeen(id, dismissedToo));
         }
-		
-		public Task<List<BookTerminalEntry>> GetBookTerminalEntriesAsync()
-		{
-			DbReadOpsMetric.Inc();
-            return RunDbCommand(() => _db.GetBookTerminalEntries());
-		}
-		
-		public Task UploadBookTerminalEntryAsync(BookTerminalEntry bookEntry)
-		{
-			DbReadOpsMetric.Inc();
-            return RunDbCommand(() => _db.UploadBookTerminalEntry(bookEntry));
-		}
-		
+
         // Wrapper functions to run DB commands from the thread pool.
         // This will avoid SynchronizationContext capturing and avoid running CPU work on the main thread.
         // For SQLite, this will also enable read parallelization (within limits).
