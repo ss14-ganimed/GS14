@@ -77,7 +77,6 @@ public sealed class IdCardSystem : SharedIdCardSystem
             access.Tags.Add(random.ID);
             Dirty(uid, access);
 
-
             _adminLogger.Add(LogType.Action, LogImpact.Medium,
                     $"{ToPrettyString(args.Microwave)} added {random.ID} access to {ToPrettyString(uid):entity}");
         }

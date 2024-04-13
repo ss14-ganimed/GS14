@@ -709,6 +709,14 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+- type: entity
+  parent: BasePlushie
+  id: PlushiePenguin
+  name: penguin plushie
+  description: I use arch btw!
+  components:
+  - type: Sprite
+    state: plushie_penguin
 
 - type: entity
   parent: BasePlushie
@@ -1113,6 +1121,7 @@
       params:
         variation: 0.65
         volume: -10
+        
 - type: entity
   parent: BaseItem
   id: PonderingOrb
@@ -1451,23 +1460,14 @@
           True: { state: icon }
           False: { state: icon-off }
   - type: ItemToggle
+  - type: UseDelay
+    delay: 1
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Items/newton_cradle.ogg
       params:
-        volume: -7
-        range: 5
-        sound:
-          path: /Audio/Items/newton_cradle.ogg
-
-- type: entity
-  parent: BasePlushie
-  id: PlushiePenguin
-  name: penguin plushie
-  description: I use arch btw!
-  components:
-  - type: Sprite
-    state: plushie_penguin
+        volume: -9
+        maxDistance: 3
 
 - type: entity
   parent: BasePlushie

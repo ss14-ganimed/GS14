@@ -52,6 +52,7 @@
   id: Security
   description: department-Security-description
   color: "#DE3A3A"
+  weight: 20
   roles:
   - HeadOfSecurity
   - SecurityCadet

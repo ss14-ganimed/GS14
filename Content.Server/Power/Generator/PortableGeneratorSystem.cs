@@ -28,7 +28,6 @@ public sealed class PortableGeneratorSystem : SharedPortableGeneratorSystem
     [Dependency] private readonly GeneratorSystem _generator = default!;
     [Dependency] private readonly PowerSwitchableSystem _switchable = default!;
     [Dependency] private readonly ActiveGeneratorRevvingSystem _revving = default!;
-    [Dependency] private readonly PowerNetSystem _powerNet = default!;
 
     public override void Initialize()
     {

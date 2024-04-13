@@ -129,14 +129,6 @@
     Plastic: 100
 
 - type: latheRecipe
-  id: ClothingEyesGlassesSecurity
-  result: ClothingEyesGlassesSecurity
-  completetime: 2
-  materials:
-    Steel: 300
-    Glass: 200
-
-- type: latheRecipe
   id: ClothingEyesHudSecurity
   result: ClothingEyesHudSecurity
   completetime: 2
@@ -618,3 +610,12 @@
     Plastic: 500
     Gold: 250
     Uranium: 50
+
+- type: latheRecipe
+  id: ClothingEyesGlassesSecurity
+  result: ClothingEyesGlassesSecurity
+  completetime: 3
+  materials:
+    Steel: 100
+    Plastic: 150
+    Glass: 300

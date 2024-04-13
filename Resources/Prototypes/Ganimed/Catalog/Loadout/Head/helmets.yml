@@ -83,7 +83,6 @@
   category: loadout-category-head
   cost: 5
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - ChiefMedicalOfficer
     - SeniorPhysician
@@ -95,7 +94,6 @@
   category: loadout-category-head
   cost: 5
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - ChiefMedicalOfficer
     - SeniorPhysician
@@ -152,14 +150,6 @@
   exclusive: true
   sponsorOnly: true
   prototype: ClothingHeadHelmetCosmonaut
-  
-- type: loadout
-  id: LoadoutHeadClothingHeadHelmetScaf
-  category: loadout-category-head
-  cost: 4
-  exclusive: true
-  sponsorOnly: true
-  prototype: ClothingHeadHelmetScaf
   
 - type: loadout
   id: LoadoutHeadClothingHeadHelmetSwat

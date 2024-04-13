@@ -123,8 +123,6 @@
   parent: UnanchoredChairBase
   description: Apply butt.
   components:
-  - type: Anchorable
-  - type: Rotatable
   - type: Sprite
     state: stool
   - type: Construction
@@ -158,9 +156,6 @@
   id: ChairOfficeLight
   parent: OfficeChairBase
   components:
-  - type: Anchorable
-  - type: Rotatable
-    rotateWhileAnchored: true
   - type: Sprite
     state: office-white
   - type: Construction
@@ -254,7 +249,6 @@
   name: meat chair
   description: Uncomfortably sweaty.
   components:
-  - type: Rotatable
   - type: Sprite
     state: meat
   - type: Construction
@@ -297,11 +291,6 @@
   description: For true web developers.
   parent: UnanchoredChairBase
   components:
-  - type: Transform
-    anchored: true
-  - type: Physics
-    bodyType: Static
-  - type: Rotatable
   - type: Sprite
     sprite: Structures/Web/chair.rsi
     state: icon

@@ -29,7 +29,6 @@
       - id: DoorRemoteArmory
       - id: ClothingOuterHardsuitWarden
       - id: HoloprojectorSecurity
-      - id: ClothingEyesHudSecurity
 
 - type: entity
   id: LockerWardenFilled
@@ -61,7 +60,6 @@
       - id: RubberStampWarden
       - id: DoorRemoteArmory
       - id: HoloprojectorSecurity
-      - id: ClothingEyesHudSecurity
 
 - type: entity
   id: LockerSecurityFilled
@@ -97,7 +95,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingEyesHudSecurity
+      - id: ClothingEyesGlassesSecurity
       - id: WeaponDisabler
       - id: TrackingImplanter
         amount: 2

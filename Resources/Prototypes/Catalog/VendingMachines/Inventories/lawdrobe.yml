@@ -14,15 +14,8 @@
     ClothingShoesBootsLaceup: 2
     ClothingHeadsetIAA: 2 # Corvax-IAA
     ClothingNeckLawyerbadge: 2
+    BriefcaseBrown: 2
     LuxuryPen: 2
-    ClothingHandsGlovesColorWhite: 1
-    ClothingHandsGlovesColorGray: 1
-    ClothingHandsGlovesColorBlack: 1
-    ClothingHandsGlovesColorRed: 1
-    ClothingHandsGlovesColorBlue: 1
-    ClothingHeadHatBowlerHat: 1
-    ClothingHeadHatOutlawHat: 1
-    ClothingHeadHatTophat: 1
   contrabandInventory:
     ClothingOuterRobesJudge: 1
     ClothingHeadHatPwig: 1

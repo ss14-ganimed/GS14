@@ -380,11 +380,6 @@
       reagents:
       - ReagentId: SpaceCleaner
         Quantity: 30
-    sound: /Audio/Effects/smoke.ogg
-  - type: DeleteOnTrigger
-  - type: TimerTriggerVisuals
-    primingSound:
-      path: /Audio/Effects/Smoke-grenade.ogg
 
 - type: entity
   parent: SmokeGrenade

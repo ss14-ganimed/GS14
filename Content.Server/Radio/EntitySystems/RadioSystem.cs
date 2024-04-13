@@ -81,7 +81,7 @@ public sealed class RadioSystem : EntitySystem
             : MetaData(messageSource).EntityName;
 
         name = FormattedMessage.EscapeText(name);
-		
+
 		if (_cardSystem.TryFindIdCard(messageSource, out var idCard))
 		{
 			var color = idCard.Comp.JobColor;
@@ -96,7 +96,7 @@ public sealed class RadioSystem : EntitySystem
 				("jobColor", color.ToHex()), 
 				("name", name));
 		}
-
+        
         SpeechVerbPrototype speech;
         if (mask != null
             && mask.Enabled

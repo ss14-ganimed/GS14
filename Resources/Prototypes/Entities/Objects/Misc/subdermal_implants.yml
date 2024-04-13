@@ -177,7 +177,7 @@
       range: 1.75
       energyConsumption: 50000
       disableDuration: 10
-      
+
 - type: entity
   parent: BaseSubdermalImplant
   id: ScramImplant

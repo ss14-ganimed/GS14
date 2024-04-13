@@ -6,6 +6,28 @@
   prototype: ClothingHeadHatWatermelon
 
 - type: loadout
+  id: LoadoutHeadFoodAmbrosiaVulgaris
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: FoodAmbrosiaVulgaris
+
+- type: loadout
+  id: LoadoutHeadFoodPoppy
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: FoodPoppy
+
+- type: loadout
+  id: LoadoutHeadFoodLily
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: FoodLily
+
+- type: loadout
   id: LoadoutHeadClothingHeadHatBeaverHat
   category: loadout-category-head
   cost: 1
@@ -166,13 +188,6 @@
   cost: 8
   exclusive: true
   prototype: ClothingHeadHatFancyCrown
-
-- type: loadout
-  id: LoadoutHeadClothingHeadHatHairflower
-  category: loadout-category-head
-  cost: 2
-  exclusive: true
-  prototype: ClothingHeadHatHairflower
 
 - type: loadout
   id: LoadoutHeadClothingHeadHatXmasCrown

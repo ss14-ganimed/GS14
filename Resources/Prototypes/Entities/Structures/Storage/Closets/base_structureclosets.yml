@@ -91,7 +91,6 @@
   - type: StaticPrice
     price: 50
 
-
 # steel closet base (that can be constructed/deconstructed)
 - type: entity
   id: ClosetSteelBase

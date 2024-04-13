@@ -358,9 +358,8 @@
 
 - type: entity
   name: oat milk carton
-  parent: DrinkCartonBaseEmpty
+  parent: DrinkCartonBaseLargeEmpty
   id: DrinkCartonOatMilk
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/oatmilk.rsi
-
