@@ -20,10 +20,11 @@
       "name": "seed"
     },
     {
-      "name": "stage-1"
+      "name": "stage-2"
     },
     {
-      "name": "stage-2"
+      "name": "equipped-HELMET",
+      "directions": 4
     },
     {
       "name": "stage-3"

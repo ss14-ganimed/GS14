@@ -83,7 +83,6 @@
   category: loadout-category-head
   cost: 5
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - ChiefMedicalOfficer
     - SeniorPhysician
@@ -95,7 +94,6 @@
   category: loadout-category-head
   cost: 5
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - ChiefMedicalOfficer
     - SeniorPhysician
