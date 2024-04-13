@@ -3,7 +3,7 @@ meta:
   postmapinit: false
 tilemap:
   0: Space
-  2: FloorArcadeBlue2
+  2: FloorArcadeBlue
   7: FloorAsteroidSand
   12: FloorBar
   15: FloorBlueCircuit
@@ -4766,7 +4766,7 @@ entities:
       pos: 20.5,19.5
       parent: 2
       type: Transform
-- proto: AirlockExternalSpecOpsEasyPryLocked
+- proto: AirlockSpecOpsLocked
   entities:
   - uid: 1295
     components:
@@ -17986,11 +17986,6 @@ entities:
     - pos: -49.5,55.5
       parent: 2
       type: Transform
-  - uid: 11142
-    components:
-    - pos: -49.5,56.5
-      parent: 2
-      type: Transform
   - uid: 11143
     components:
     - pos: -50.5,56.5
@@ -28875,17 +28870,6 @@ entities:
     - pos: -1.493576,7.5380745
       parent: 2
       type: Transform
-- proto: ClothingEyesHUDGlassesSecurity
-  entities:
-  - uid: 1142
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1141
-      type: Transform
-    - canCollide: False
-      type: Physics
-    - type: InsideEntityStorage
   - uid: 1158
     components:
     - flags: InContainer

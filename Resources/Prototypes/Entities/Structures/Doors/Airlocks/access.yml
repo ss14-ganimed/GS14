@@ -362,6 +362,9 @@
   id: AirlockCaptainLocked
   suffix: Captain, Locked
   components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCaptain ]
   - type: AccessReader
     access: [["Captain"]]
   - type: Wires
@@ -372,6 +375,9 @@
   id: AirlockCentcomLocked
   suffix: Centcom, Locked
   components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
   - type: AccessReader
     access: [["Centcom"]]
 
