@@ -342,3 +342,33 @@
     sprite: Ganimed/Objects/pens.rsi
     state: fountain_black
     size: Tiny
+    
+- type: entity
+  name: medical fountain pen
+  parent: Pen
+  id: PenMedica1CMO
+  description: The fountain pen of a chief medical officer, elegance and cleanliness. It was created to make it even easier for you to encrypt your medical records in unreadable handwriting.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/pens.rsi
+    state: medical4
+    
+- type: entity
+  name: engineer fountain pen
+  parent: Pen
+  id: PenEngineeringCE
+  description: The fountain pen of a chief engineer looks like an electrician's nightmare. A pleasant yellow color and winding in the style of ancient microcircuits, warms the soul of those who like to sit in the office, instead of fulfilling a goal.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/pens.rsi
+    state: engineering2
+    
+- type: entity
+  name: cargo fountain pen
+  parent: Pen
+  id: PenCargo1QM
+  description: The quartermaster's fountain pen, it seems to be gilded. Your employees shouldn't know where you got it from.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/pens.rsi
+    state: cargo2

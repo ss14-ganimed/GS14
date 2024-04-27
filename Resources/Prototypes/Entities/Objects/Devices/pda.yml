@@ -324,6 +324,12 @@
   components:
   - type: Pda
     id: MimeIDCard
+    penSlot:
+      startingItem: PenMime
+      priority: -1
+      whitelist:
+        tags:
+        - Write
     state: pda-mime
     idSlot: #  rewrite without sound because mime
       name: ID Card
@@ -366,7 +372,7 @@
     id: QuartermasterIDCard
     state: pda-qm
     penSlot:
-      startingItem: PenCargo
+      startingItem: PenCargo1QM
       priority: -1
       whitelist:
         tags:
@@ -596,7 +602,7 @@
     id: CEIDCard
     state: pda-ce
     penSlot:
-      startingItem: PenEngineering
+      startingItem: PenEngineeringCE
       priority: -1
       whitelist:
         tags:
@@ -638,7 +644,7 @@
     id: CMOIDCard
     state: pda-cmo
     penSlot:
-      startingItem: PenMedical1
+      startingItem: PenMedica1CMO
       priority: -1
       whitelist:
         tags:
