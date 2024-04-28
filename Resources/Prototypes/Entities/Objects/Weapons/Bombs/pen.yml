@@ -20,6 +20,22 @@
   - type: DeviceLinkSink
     ports:
       - Trigger
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-PenExploding-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-PenExploding-research
+      jobRequired:
+        - SeniorResearcher
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
 
 - type: entity
   parent: BaseItem
