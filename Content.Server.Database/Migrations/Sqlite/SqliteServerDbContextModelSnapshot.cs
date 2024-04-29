@@ -483,6 +483,42 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("assigned_user_id", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.BookTerminalEntry", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("book_terminal_entry_id");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("content");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("name");
+
+                    b.Property<string>("StampState")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("stamp_state");
+
+                    b.HasKey("Id")
+                        .HasName("PK_book_terminal_entry");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
+
+                    b.ToTable("book_terminal_entry", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
                 {
                     b.Property<int>("Id")
@@ -566,6 +602,31 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasFilter("priority = 3");
 
                     b.ToTable("job", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.Loadout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("loadout_id");
+
+                    b.Property<string>("LoadoutName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("loadout_name");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_loadout");
+
+                    b.HasIndex("ProfileId", "LoadoutName")
+                        .IsUnique();
+
+                    b.ToTable("loadout", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.PlayTime", b =>
@@ -1169,6 +1230,36 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("server_unban", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.StampedData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("stamped_data_id");
+
+                    b.Property<int?>("BookTerminalEntryId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("book_terminal_entry_id");
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("color");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("name");
+
+                    b.HasKey("Id")
+                        .HasName("PK_stamped_data");
+
+                    b.HasIndex("BookTerminalEntryId")
+                        .HasDatabaseName("IX_stamped_data_book_terminal_entry_id");
+
+                    b.ToTable("stamped_data", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.Trait", b =>
                 {
                     b.Property<int>("Id")
@@ -1500,6 +1591,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Profile");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.Loadout", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithMany("Loadouts")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_loadout_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("Content.Server.Database.Profile", b =>
                 {
                     b.HasOne("Content.Server.Database.Preference", "Preference")
@@ -1661,6 +1764,14 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Ban");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.StampedData", b =>
+                {
+                    b.HasOne("Content.Server.Database.BookTerminalEntry", null)
+                        .WithMany("StampedBy")
+                        .HasForeignKey("BookTerminalEntryId")
+                        .HasConstraintName("FK_stamped_data_book_terminal_entry_book_terminal_entry_id");
+                });
+
             modelBuilder.Entity("Content.Server.Database.Trait", b =>
                 {
                     b.HasOne("Content.Server.Database.Profile", "Profile")
@@ -1705,6 +1816,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Admins");
 
                     b.Navigation("Flags");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.BookTerminalEntry", b =>
+                {
+                    b.Navigation("StampedBy");
                 });
 
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>

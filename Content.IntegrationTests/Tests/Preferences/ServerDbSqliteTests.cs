@@ -53,6 +53,7 @@ namespace Content.IntegrationTests.Tests.Preferences
                     Color.Aquamarine,
                     Color.Azure,
                     Color.Beige,
+                    Color.Beige,
                     new ()
                 ),
                 SpawnPriorityPreference.None,
@@ -63,7 +64,7 @@ namespace Content.IntegrationTests.Tests.Preferences
                 PreferenceUnavailableMode.StayInLobby,
                 new List<string> (),
                 new List<string>(),
-                new Dictionary<string, RoleLoadout>()
+                new List<string>()
             );
         }
 

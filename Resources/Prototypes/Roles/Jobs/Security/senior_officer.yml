@@ -1,0 +1,45 @@
+- type: job
+  id: SeniorOfficer
+  name: job-name-senior-officer
+  description: job-description-senior-officer
+  playTimeTracker: JobSeniorOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 7200 #2 hrs
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10 hrs
+  startingGear: SeniorOfficerGear
+  icon: "JobIconSeniorOfficer"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SeniorOfficerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorOfficer
+    back: ClothingBackpackSecurityFilled
+    shoes: ClothingShoesBootsJackSecFilled
+    eyes: ClothingEyesGlassesSunglasses
+    head: ClothingHeadHatBeretSecurity
+    outerClothing: ClothingOuterArmorBasic
+    id: SeniorOfficerPDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    pocket1: WeaponPistolMk58Nonlethal
+  innerClothingSkirt: ClothingUniformJumpskirtSeniorOfficer
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled

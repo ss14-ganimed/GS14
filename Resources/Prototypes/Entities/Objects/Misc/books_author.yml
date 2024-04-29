@@ -654,6 +654,7 @@
     - state: detail_bookmark
       color: "#61363d"
     - state: overlay_dirt
+    - state: book0 
   - type: Paper
     content: book-text-janitor
 

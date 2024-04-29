@@ -72,7 +72,7 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_auto.ogg # Corvax-Guns
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: ItemSlots
@@ -146,6 +146,9 @@
     sprite: Objects/Weapons/Guns/Shotguns/inhands_64x.rsi
     heldPrefix: enforcer
   - type: BallisticAmmoProvider
+  - type: Gun # Corvax-Guns
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_metal.ogg
 
 - type: entity
   parent: WeaponShotgunEnforcer
@@ -154,6 +157,9 @@
   components:
   - type: BallisticAmmoProvider
     proto: ShellShotgunBeanbag
+  - type: Gun # Corvax-Guns
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_metal.ogg
 
 - type: entity
   name: Kammerer
@@ -172,7 +178,9 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: BallisticAmmoProvider
-    capacity: 4
+  - type: Gun # Corvax-Guns
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_alt.ogg
   - type: Tag
     tags:
     - WeaponShotgunKammerer
@@ -193,6 +201,8 @@
     heldPrefix: sawn
   - type: Gun
     fireRate: 4
+    soundGunshot: # Corvax-Guns
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_sawed.ogg
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -229,6 +239,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
   - type: Gun
     fireRate: 4
+    soundGunshot: # Corvax-Guns
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_pipe.ogg
   - type: BallisticAmmoProvider
     capacity: 1
   - type: Construction

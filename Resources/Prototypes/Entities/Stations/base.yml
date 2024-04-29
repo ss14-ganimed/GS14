@@ -123,6 +123,14 @@
     - type: StationNews
 
 - type: entity
+  id: BaseStationSiliconLawRandomised
+  abstract: true
+  components:
+  - type: SiliconLawProvider
+    laws: Crewsimov
+    lawsWeighted: RandomLawset
+
+- type: entity
   id: BaseStationAllEventsEligible
   abstract: true
   components:

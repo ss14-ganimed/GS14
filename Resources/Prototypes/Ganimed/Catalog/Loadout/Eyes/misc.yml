@@ -1,0 +1,13 @@
+- type: loadout
+  id: LoadoutEyesClothingEyesEyepatch
+  category: loadout-category-eyes
+  cost: 1
+  exclusive: true
+  prototype: ClothingEyesEyepatch
+
+- type: loadout
+  id: LoadoutEyesClothingEyesBlindfold
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  prototype: ClothingEyesBlindfold

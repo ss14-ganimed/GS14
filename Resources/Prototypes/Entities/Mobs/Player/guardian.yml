@@ -106,6 +106,7 @@
     - type: Tag
       tags:
         - CannotSuicide
+        - NoPaint
 
 # From the uplink injector
 - type: entity
@@ -214,6 +215,7 @@
       tags:
         - CannotSuicide
         - FootstepSound
+        - NoPaint
     - type: Inventory
       templateId: holoclown
     - type: Hands

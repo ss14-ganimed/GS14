@@ -97,6 +97,7 @@
       - id: DoorRemoteFirefight
       - id: RCD
       - id: RCDAmmo
+      - id: ClothingEyesGlassesTray
 
 - type: entity
   id: LockerAtmosphericsFilled
@@ -114,6 +115,7 @@
       - id: DoorRemoteFirefight
       - id: RCD
       - id: RCDAmmo
+      - id: ClothingEyesGlassesTray
 
 - type: entity
   id: LockerEngineerFilledHardsuit

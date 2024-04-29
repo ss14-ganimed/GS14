@@ -47,9 +47,51 @@
     
 - type: entity
   parent: BaseFlag
+  id: TransFlag
+  name: Trans flag
+  description: "Be trans do crime flag"
+  components:
+  - type: Sprite
+    state: trans_flag
+    
+- type: entity
+  parent: BaseFlag
   id: PirateFlag
   name: pirate flag
   description: "Raise the jolly roger, scallywags!"
   components:
   - type: Sprite
     state: pirate_flag
+
+- type: entity
+  parent: BaseFlag
+  id: FlagElizium
+  name: Elizium flag
+  description: "Go to kill xenos!"
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Ganimed/Structures/Wallmounts/flags.rsi
+    state: elz
+
+- type: entity
+  parent: BaseFlag
+  id: FlagTSF
+  name: TSF flag
+  description: "It doesn't look technologically advanced."
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Ganimed/Structures/Wallmounts/flags.rsi
+    state: tsf
+
+- type: entity
+  parent: BaseFlag
+  id: FlagUSSP
+  name: USSP flag
+  description: "Сranberry."
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Ganimed/Structures/Wallmounts/flags.rsi
+    state: ussp

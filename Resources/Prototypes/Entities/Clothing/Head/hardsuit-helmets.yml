@@ -20,6 +20,11 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  - type: Tag
+    tags:
+    - HidesNose
+  - type: StaminaProtection
+    coefficient: 0.95
 
 #Atmospherics Hardsuit
 - type: entity
@@ -372,6 +377,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Blood-red Medic Hardsuit
 - type: entity
@@ -386,7 +393,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndiemedic.rsi
   - type: PointLight
-    color: green
+    color: white
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -397,6 +404,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Syndicate Elite Hardsuit
 - type: entity
@@ -411,7 +420,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndieelite.rsi
   - type: PointLight
-    color: red
+    color: white
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -424,6 +433,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -449,6 +460,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -472,6 +485,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Wizard Hardsuit
 - type: entity
@@ -497,6 +512,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Organic Space Suit
 - type: entity
@@ -570,6 +587,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #ERT Chaplain Hardsuit
 - type: entity
@@ -607,6 +626,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #ERT Medical Hardsuit
 - type: entity
@@ -622,6 +643,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
   - type: PointLight
     color: "#adffec"
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #ERT Security Hardsuit
 - type: entity
@@ -644,6 +667,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #ERT Janitor Hardsuit
 - type: entity
@@ -659,6 +684,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertjanitor.rsi
   - type: PointLight
     color: "#cbadff"
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #CBURN Hardsuit
 - type: entity
@@ -698,6 +725,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.9
 
 #Deathsquad Hardsuit
 - type: entity
@@ -723,6 +752,8 @@
         Heat: 0.80
         Radiation: 0.80
         Caustic: 0.95
+  - type: StaminaProtection
+    coefficient: 0.85
 
 #MISC. HARDSUITS
 #Clown Hardsuit
@@ -752,6 +783,49 @@
     sprite: Clothing/Head/Hardsuits/mime.rsi
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/mime.rsi
+    
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetCBURNLeader
+  noSpawn: true
+  name: cburn commander helmet
+  description: A pressure resistant and fireproof hood worn by special cleanup units.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Corvax/Clothing/Head/hardsuits/cburncommander.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+    - state: light-overlay
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-head
+      - state: equipped-head-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: orange
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.005
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.1
+        Shock: 0.1
+        Cold: 0.2
+        Radiation: 0.2
+
 
 #Santas Hardsuit
 - type: entity

@@ -183,3 +183,12 @@
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
     soundEmpty:
       path: /Audio/Items/Lighters/lighter_off.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

@@ -13,6 +13,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
+using Content.Shared.Humanoid;
 using Content.Shared.Ghost;
 using Content.Shared.Humanoid;
 using Content.Shared.IdentityManagement;
@@ -308,7 +309,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     /// <param name="colorOverride">Optional color for the announcement message</param>
     public void DispatchGlobalAnnouncement(
         string message,
-        string sender = "Central Command",
+        string sender = "Системы Оповещений",
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
         Color? colorOverride = null
@@ -334,12 +335,18 @@ public sealed partial class ChatSystem : SharedChatSystem
     public void DispatchStationAnnouncement(
         EntityUid source,
         string message,
-        string sender = "Central Command",
+        string sender = "Системы Оповещений",
         bool playDefaultSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null)
+        Color? colorOverride = null,
+		bool? highlight = false,
+		bool? doEscapeText = true)
     {
-        var wrappedMessage = Loc.GetString("chat-manager-sender-announcement-wrap-message", ("sender", sender), ("message", FormattedMessage.EscapeText(message)));
+		var wrapString = (highlight is not null && highlight.Value) ? "chat-manager-sender-announcement-highlight-wrap-message" : "chat-manager-sender-announcement-wrap-message";
+		var wrapMessage = (doEscapeText is not null && doEscapeText.Value) ? FormattedMessage.EscapeText(message) : message;
+		
+		
+        var wrappedMessage = Loc.GetString(wrapString, ("sender", sender), ("message", wrapMessage));
         var station = _stationSystem.GetOwningStation(source);
 
         if (station == null)
@@ -402,7 +409,6 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
 
         name = FormattedMessage.EscapeText(name);
-
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
             ("entityName", name),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),

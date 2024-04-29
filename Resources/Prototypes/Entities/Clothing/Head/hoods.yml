@@ -18,6 +18,8 @@
     slots:
     - Hair
     - Snout
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -31,6 +33,8 @@
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -44,6 +48,8 @@
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -57,6 +63,8 @@
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -70,6 +78,8 @@
     sprite: Clothing/Head/Hoods/Bio/security.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/security.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -83,6 +93,8 @@
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadBase
@@ -158,6 +170,24 @@
     slots:
     - Hair
     - Snout
+  - type: StaminaProtection
+    coefficient: 0.95
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodRadOriginal
+  name: old-fashioned radiation hood
+  description: A hood of the old hazmat suit, designed for protection from high radioactivity.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hoods/original_rad.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hoods/original_rad.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Radiation: 0.65
+        Heat: 0.95
 
 - type: entity
   parent: ClothingHeadBase

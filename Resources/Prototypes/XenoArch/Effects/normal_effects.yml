@@ -276,7 +276,7 @@
     maxRange: 3
     baseRadialAcceleration: 1
     baseTangentialAcceleration: 3
-
+  
 - type: artifactEffect
   id: EffectAntiMagnet
   targetDepth: 1

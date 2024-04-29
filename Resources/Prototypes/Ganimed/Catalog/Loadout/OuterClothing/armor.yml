@@ -1,0 +1,260 @@
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBasicSlim
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Captain
+    - Quartermaster
+    - ChiefEngineer
+    - ResearchDirector
+    - HeadOfPersonnel
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBasicSlim
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBasic
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Quartermaster
+    - ChiefEngineer
+    - ResearchDirector
+    - HeadOfPersonnel
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBasic
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBulletproof
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Quartermaster
+    - ChiefEngineer
+    - ResearchDirector
+    - HeadOfPersonnel
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBulletproof
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBasicOriginal
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Quartermaster
+    - ChiefEngineer
+    - ResearchDirector
+    - HeadOfPersonnel
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBasicOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestWeb
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Quartermaster
+    - ChiefEngineer
+    - ResearchDirector
+    - HeadOfPersonnel
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestWeb
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestWebMerc
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - SalvageSpecialist
+    - Quartermaster
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestWebMerc
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterDogi
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterDogi
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorCult
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  whitelistJobs:
+    - Chaplain
+  prototype: ClothingOuterArmorCult
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVest
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  prototype: ClothingOuterVest
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestDetective
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestDetective
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestDetectiveOriginal
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestDetectiveOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorReflective
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityOfficer
+    - Warden
+    - Captain
+    - IAA
+    - BlueShield
+  prototype: ClothingOuterArmorReflective
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorRiot
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityOfficer
+    - Warden
+    - Captain
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorRiot
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorCaptanCarapace
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingOuterArmorCaptainCarapace
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestArmorMedSec
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Brigmedic
+    - BlueShield
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+  prototype: ClothingOuterVestArmorMedSec

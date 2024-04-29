@@ -1,5 +1,4 @@
-﻿# Crewsimov
-- type: siliconLaw
+﻿- type: siliconLaw
   id: Crewsimov1
   order: 1
   lawString: law-crewsimov-1

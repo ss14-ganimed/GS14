@@ -46,6 +46,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - WeaponEnergyGun
 
 - type: technology
   id: NonlethalAmmunition
@@ -92,6 +93,7 @@
   tier: 1
   cost: 8000
   recipeUnlocks:
+  - ClothingEyesGlassesSecurity
   - Truncheon
   - TelescopicShield
   - HoloprojectorSecurity
@@ -128,6 +130,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+  - WeaponEnergySniperRifle
 
 - type: technology
   id: WaveParticleHarnessing
@@ -140,6 +143,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
+  - WeaponImmolator
 
 - type: technology
   id: BasicShuttleArmament
@@ -176,6 +180,7 @@
   recipeUnlocks:
   - WeaponAdvancedLaser
   - PortableRecharger
+  - WeaponIonRifleGun
 
 - type: technology
   id: ExperimentalBatteryAmmo
@@ -204,3 +209,15 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+
+- type: technology
+  id: EnergyBarriers
+  name: research-technology-energy_barriers
+  icon: 
+    sprite: Objects/Tools/EnergyDome/reinhardt.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - EnergyDomeDirectionalTurtle

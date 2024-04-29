@@ -1,4 +1,4 @@
-namespace Content.Server.StationEvents.Components;
+﻿namespace Content.Server.StationEvents.Components;
 
 /// <summary>
 /// Gamerule component to mess up ai/borg laws when started.

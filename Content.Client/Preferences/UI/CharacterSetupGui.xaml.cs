@@ -20,6 +20,8 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
+using Robust.Client.Player;
+using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 using Direction = Robust.Shared.Maths.Direction;
@@ -31,12 +33,14 @@ namespace Content.Client.Preferences.UI
     {
         private readonly IClientPreferencesManager _preferencesManager;
         private readonly IEntityManager _entityManager;
+        private readonly IPlayerManager _playerManager;
         private readonly IPrototypeManager _prototypeManager;
         private readonly Button _createNewCharacterButton;
         private readonly HumanoidProfileEditor _humanoidProfileEditor;
 
         public CharacterSetupGui(
             IEntityManager entityManager,
+            IPlayerManager playerManager,
             IResourceCache resourceCache,
             IClientPreferencesManager preferencesManager,
             IPrototypeManager prototypeManager,
@@ -44,6 +48,7 @@ namespace Content.Client.Preferences.UI
         {
             RobustXamlLoader.Load(this);
             _entityManager = entityManager;
+            _playerManager = playerManager;
             _prototypeManager = prototypeManager;
             _preferencesManager = preferencesManager;
 
@@ -68,7 +73,7 @@ namespace Content.Client.Preferences.UI
                 args.Event.Handle();
             };
 
-            _humanoidProfileEditor = new HumanoidProfileEditor(preferencesManager, prototypeManager, configurationManager);
+            _humanoidProfileEditor = new HumanoidProfileEditor(preferencesManager, prototypeManager, entityManager, configurationManager, playerManager);
             _humanoidProfileEditor.OnProfileChanged += ProfileChanged;
             CharEditor.AddChild(_humanoidProfileEditor);
 
@@ -182,15 +187,8 @@ namespace Content.Client.Preferences.UI
 
                 if (humanoid != null)
                 {
-                    var controller = UserInterfaceManager.GetUIController<LobbyUIController>();
-                    var job = controller.GetPreferredJob(humanoid);
-                    controller.GiveDummyJobClothes(_previewDummy, humanoid, job);
-
-                    if (prototypeManager.HasIndex<RoleLoadoutPrototype>(LoadoutSystem.GetJobPrototype(job.ID)))
-                    {
-                        var loadout = humanoid.GetLoadoutOrDefault(LoadoutSystem.GetJobPrototype(job.ID), entityManager, prototypeManager);
-                        controller.GiveDummyLoadout(_previewDummy, loadout);
-                    }
+                    LobbyCharacterPreviewPanel.GiveDummyJobClothes(_previewDummy, humanoid);
+                    LobbyCharacterPreviewPanel.GiveDummyLoadoutItems(_previewDummy, humanoid);
                 }
 
                 var isSelectedCharacter = profile == preferencesManager.Preferences?.SelectedCharacter;

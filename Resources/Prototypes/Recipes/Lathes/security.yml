@@ -50,6 +50,16 @@
     Plastic: 500
 
 - type: latheRecipe
+  id: WeaponEnergyGun
+  result: WeaponEnergyGun
+  completetime: 10
+  materials:
+    Steel: 2000
+    Glass: 800
+    Plastic: 500
+    Gold: 100
+
+- type: latheRecipe
   id: WeaponAdvancedLaser
   result: WeaponAdvancedLaser
   category: Weapons
@@ -88,6 +98,37 @@
     Glass: 500
     Plastic: 250
     Gold: 100
+
+- type: latheRecipe
+  id: WeaponImmolator
+  result: WeaponImmolator
+  completetime: 5
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 350
+    Gold: 200
+
+- type: latheRecipe
+  id: WeaponEnergySniperRifle
+  result: WeaponEnergySniperRifle
+  completetime: 10
+  materials:
+    Steel: 2000
+    Glass: 750
+    Plastic: 300
+    Gold: 300
+
+- type: latheRecipe
+  id: WeaponIonRifleGun
+  result: WeaponIonRifleGun
+  completetime: 25
+  materials:
+    Steel: 3000
+    Glass: 1000
+    Plastic: 450
+    Gold: 500
+    Uranium: 250
 
 - type: latheRecipe
   id: ForensicPad
@@ -701,3 +742,22 @@
      Plastic: 1000
      Plasma: 500
      Glass: 500
+     
+- type: latheRecipe
+  id: EnergyDomeDirectionalTurtle
+  result: EnergyDomeDirectionalTurtle
+  completetime: 12
+  materials:
+    Steel: 1000
+    Plastic: 500
+    Gold: 250
+    Uranium: 50
+
+- type: latheRecipe
+  id: ClothingEyesGlassesSecurity
+  result: ClothingEyesGlassesSecurity
+  completetime: 3
+  materials:
+    Steel: 100
+    Plastic: 150
+    Glass: 300

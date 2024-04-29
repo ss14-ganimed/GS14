@@ -324,6 +324,10 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - EnergyDomeDirectionalTurtle
+      - ClothingEyesGlassesMesonDiagnostic
+      - ClothingEyesGlassesScienceMeson
+      - ClothingEyesGlassesTray
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload
@@ -331,6 +335,10 @@
       - WeaponAdvancedLaser
       - WeaponLaserCannon
       - WeaponXrayCannon
+      - WeaponEnergySniperRifle
+      - WeaponImmolator
+      - WeaponIonRifleGun
+      - WeaponEnergyGun
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -461,6 +469,8 @@
       - MassMediaCircuitboard
       - ReagentGrinderIndustrialMachineCircuitboard
       - JukeboxCircuitBoard
+      - CriminalRecordsComputerCircuitboard
+      - MachineBluespaceHarvesterCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -709,6 +719,7 @@
       - BoxBeanbag
       - BoxShotgunIncendiary
       - BoxShotgunUranium
+      - ClothingEyesGlassesSecurity
       - ExplosivePayload
       - FlashPayload
       - GrenadeEMP
@@ -761,6 +772,10 @@
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunDusterCircuitboard
       - PortableRecharger
+      - WeaponEnergySniperRifle
+      - WeaponImmolator
+      - WeaponIonRifleGun
+      - WeaponEnergyGun
   - type: MaterialStorage
     whitelist:
       tags:
@@ -1020,6 +1035,7 @@
       - ClothingNeckMantleCMO
       - ClothingNeckMantleHOP
       - ClothingNeckMantleHOS
+      - ClothingNeckMantleHOSShoulder # Corvax-Resprite: Old mantle
       - ClothingNeckMantleRD
       - ClothingNeckMantleQM
       - ClothingOuterWinterMusician
@@ -1118,6 +1134,7 @@
       board: OreProcessorMachineCircuitboard
     - type: MaterialStorage
       ignoreColor: true
+      canEjectStoredMaterials: false
       whitelist:
         tags:
           - Ore

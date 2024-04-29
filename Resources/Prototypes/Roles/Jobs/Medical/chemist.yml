@@ -4,9 +4,9 @@
   description: job-description-chemist
   playTimeTracker: JobChemist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 14400 #4 hrs
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 18000 #5 hrs
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo
@@ -18,8 +18,15 @@
 - type: startingGear
   id: ChemistGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitChemistry
+    back: ClothingBackpackChemistryFilled
+    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatLabChem
     id: ChemistryPDA
     ears: ClothingHeadsetMedical
     belt: ChemBag
     pocket1: HandLabeler
-    eyes: ClothingEyesGlassesChemical
+    # the purple glasses?
+  innerClothingSkirt: ClothingUniformJumpskirtChemistry
+  satchel: ClothingBackpackSatchelChemistryFilled
+  duffelbag: ClothingBackpackDuffelChemistryFilled

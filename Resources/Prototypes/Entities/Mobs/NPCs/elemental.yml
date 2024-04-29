@@ -98,6 +98,10 @@
     baseWalkSpeed : 2
     baseSprintSpeed : 2.5
   - type: NpcFactionMember
+  - type: Reflect
+    enabled: true
+    reflectProb: .80
+    spread: 30
     factions:
       - SimpleHostile
   - type: Damageable
@@ -114,7 +118,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 40
+        damage: 50
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -145,7 +149,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 80
+        damage: 140
       behaviors:
       - !type:PlaySoundBehavior
         sound:

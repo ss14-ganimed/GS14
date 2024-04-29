@@ -85,7 +85,12 @@
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-clothing'}" />
                                     <Control HorizontalExpand="True"/>
-                                    <Button Name="ShowClothes" Pressed="True" ToggleMode="True" Text="{Loc 'humanoid-profile-editor-clothing-show'}" HorizontalAlignment="Right" />
+                                    <Button Name="ShowClothes" Pressed="True" ToggleMode="True" Text="{Loc 'Показать'}" HorizontalAlignment="Right" />
+                                </BoxContainer>
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-loadout'}" />
+                                    <Control HorizontalExpand="True"/>
+                                    <Button Name="ShowLoadout" Pressed="True" ToggleMode="True" Text="{Loc 'Показать'}" HorizontalAlignment="Right" />
                                 </BoxContainer>
                                 <!-- Spawn Priority -->
                                 <BoxContainer HorizontalExpand="True">
@@ -109,6 +114,11 @@
                             <BoxContainer Margin="10" Orientation="Vertical">
                                 <Label Text="{Loc 'humanoid-profile-editor-eyes-label'}" />
                                 <humanoid:EyeColorPicker Name="CEyeColorPicker" />
+                            </BoxContainer>
+                            <!-- Speaker -->
+                            <BoxContainer Margin="10" Orientation="Vertical">
+                                <Label Text="{Loc 'humanoid-profile-editor-speaker-label'}" />
+                                <humanoid:SpeakerColorPicker Name="CSpeakerColorPicker" />
                             </BoxContainer>
                         </BoxContainer>
                     </ScrollContainer>
@@ -138,6 +148,12 @@
                         <humanoid:MarkingPicker Name="CMarkings" IgnoreCategories="Hair,FacialHair" />
                     </ScrollContainer>
                 </BoxContainer>
+				<BoxContainer Orientation="Vertical" Margin="10" Name="CLoadoutsTab">
+                    <ProgressBar Name="LoadoutPoints" MaxValue="0" Value="0" />
+                    <ScrollContainer VerticalExpand="True">
+                        <TabContainer Name="CLoadoutsTabs" VerticalExpand="True" />
+                    </ScrollContainer>
+                </BoxContainer>
             </TabContainer>
         </BoxContainer>
         <!-- Right side -->
@@ -149,4 +165,5 @@
                 <Button Name="CSpriteRotateRight" Text="▶" StyleClasses="OpenLeft" />
             </BoxContainer>
         </BoxContainer>
-</BoxContainer>
+    </BoxContainer>
+</Control>

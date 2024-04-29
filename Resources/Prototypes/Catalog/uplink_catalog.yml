@@ -1019,6 +1019,17 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: UplinkHypoDart
+  name: uplink-hypodart-name
+  description: uplink-hypodart-desc
+  icon: { sprite: /Textures/Objects/Fun/Darts/dart_red.rsi, state: icon }
+  productEntity: HypoDartBox
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkUtility
+
 # Implants
 
 - type: listing
@@ -1716,3 +1727,18 @@
     blacklist:
       components:
       - SurplusBundle
+      
+- type: listing
+  id: UplinkEnergyDomeSyndie
+  name: uplink-energy-dome-name
+  description: uplink-energy-dome-desc
+  productEntity: EnergyDomeGeneratorPersonalSyndie
+  cost: 
+    Telecrystal: 10
+  categories:
+  - UplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink

@@ -7,13 +7,23 @@
     contents:
       - id: FlashlightSeclite
       - id: WeaponDisabler
+        prob: 0.3
+      - id: ClothingHeadHatWarden
+        orGroup: WardenHat
+      - id: ClothingHeadHatBeretWarden
+        orGroup: WardenHat
+      - id: ClothingHeadHatCapWardenAlt
+        orGroup: WardenHat
       - id: ClothingBeltSecurityFilled
       - id: Flash
-      - id: ClothingEyesGlassesSecurity
+      - id: ClothingEyesGlassesSunglasses
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingHandsGlovesCombat
-      - id: ClothingShoesBootsJack
+      - id: ClothingHandsGlovesKravMaga
+      - id: ClothingShoesBootsJackSec
       - id: ClothingOuterCoatWarden
+        orGroup: WardenCoat
+      - id: ClothingOuterCoatWardenAlt
+        orGroup: WardenCoat
       - id: ClothingOuterWinterWarden
       - id: RubberStampWarden
       - id: DoorRemoteArmory
@@ -29,13 +39,23 @@
     contents:
       - id: FlashlightSeclite
       - id: WeaponDisabler
+        prob: 0.3
+      - id: ClothingHeadHatWarden
+        orGroup: WardenHat
+      - id: ClothingHeadHatBeretWarden
+        orGroup: WardenHat
+      - id: ClothingHeadHatCapWardenAlt
+        orGroup: WardenHat
       - id: ClothingBeltSecurityFilled
       - id: Flash
-      - id: ClothingEyesGlassesSecurity
+      - id: ClothingEyesGlassesSunglasses
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingHandsGlovesCombat
-      - id: ClothingShoesBootsJack
+      - id: ClothingHandsGlovesKravMaga
+      - id: ClothingShoesBootsJackSec
       - id: ClothingOuterCoatWarden
+        orGroup: WardenCoat
+      - id: ClothingOuterCoatWardenAlt
+        orGroup: WardenCoat
       - id: ClothingOuterWinterWarden
       - id: RubberStampWarden
       - id: DoorRemoteArmory
@@ -58,12 +78,13 @@
       - id: ClothingBeltSecurityFilled
       - id: Flash
         prob: 0.5
-      - id: ClothingEyesGlassesSecurity
+      - id: ClothingEyesGlassesSunglasses
       - id: ClothingHeadsetSecurity
       - id: ClothingHandsGlovesColorBlack
-      - id: ClothingShoesBootsJack
+      - id: ClothingShoesBootsJackSec
       - id: WeaponMeleeNeedle
-        prob: 0.1
+      - id: ClothingOuterCoatSecurityOvercoat
+      - id: ClothingEyesHudSecurity
       - id: HoloprojectorSecurity
         prob: 0.6
 
@@ -81,11 +102,21 @@
       - id: ClothingOuterHardsuitBrigmedic
       - id: BoxSterileMask
       - id: ClothingHeadHatBeretBrigmedic
+        orGroup: BrigmedicHelmet
+      - id: ClothingHeadHelmetSecurityMedic
+        orGroup: BrigmedicHelmet
       - id: ClothingOuterCoatAMG
+        orGroup: BrigmedicCoat
+      - id: ClothingOuterCoatLabSecurityMedic
+        orGroup: BrigmedicCoat
+      - id: ClothingOuterVestSecurityMedic
+        orGroup: BrigmedicCoat
       - id: ClothingUniformJumpsuitBrigmedic
+        orGroup: BrigmedicClothing
       - id: ClothingUniformJumpskirtBrigmedic
+        orGroup: BrigmedicClothing
       - id: ClothingUniformJumpskirtOfLife
-        prob: 0.1
+        orGroup: BrigmedicClothing
       - id: MedkitFilled
       - id: MedkitCombatFilled
         prob: 0.6
@@ -99,8 +130,6 @@
         prob: 0.3
       - id: MedkitBurnFilled
         prob: 0.7
-      - id: ClothingNeckCloakMoth #bzzz Moth-pocalypse
-        prob: 0.15
 
 - type: entity
   id: LockerDetectiveFilled
@@ -109,12 +138,13 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingEyesGlassesSecurity
-        prob: 0.3
+      - id: ClothingEyesHudSecurity
       - id: ClothingHeadHatFedoraBrown
       - id: ClothingNeckTieDet
       - id: ClothingOuterVestDetective
+        orGroup: DetectiveCoat
       - id: ClothingOuterCoatDetective
+        orGroup: DetectiveCoat
       - id: FlashlightSeclite
       - id: ForensicScanner
       - id: LogProbeCartridge
@@ -134,7 +164,6 @@
     contents:
       - id: ClothingHeadHelmetBombSuit
       - id: ClothingOuterSuitBomb
-      # NT is cheap, what can you do...
       - id: Wirecutter
         prob: 0.9
       - id: Screwdriver

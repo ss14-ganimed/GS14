@@ -1,0 +1,137 @@
+#license: CLA
+#copiryght: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHUDGlassesScience
+  name: science HUD sunglasses
+  description: Improved shielding blocks many flashes. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/scisunglasses.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/scisunglasses.rsi
+  - type: FlashImmunity
+  - type: SolutionScanner
+  - type: Tag
+    tags:
+    - HamsterWearable
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHUDGlassesMedical
+  name: medical HUD sunglasses
+  description: Improved shielding blocks many flashes. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/medsunglasses.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/medsunglasses.rsi
+  - type: FlashImmunity
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: Tag
+    tags:
+    - HamsterWearable
+
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesEnginering
+  name: enginering sunglasses
+  description: Improved shielding blocks many flashes. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/mesonsunglasses.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/mesonsunglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Tag
+    tags:
+    - HamsterWearable
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesTray
+  name: T-ray glasses
+  description: Improved shielding blocks many flashes. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/traymeson.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/traymeson.rsi
+  - type: EyeProtection
+  - type: TrayScanner
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesMedicineMeson
+  name: medicine enginering glasses
+  description: Improved shielding blocks many flashes. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/medmeson.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/medmeson.rsi
+  - type: EyeProtection
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesScienceMeson
+  name: science-enginering glasses
+  description: Improved shielding blocks many flashes. Improved ancient technology?
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/scimeson.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/scimeson.rsi
+  - type: EyeProtection
+  - type: SolutionScanner
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesMesonDiagnostic
+  name: diagnostic-enginering glasses
+  description: A heads-up display capable of analyzing the integrity and status of robotics and exosuits. Made out of see-borg-ium.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/supermeson.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/supermeson.rsi
+  - type: EyeProtection
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesBlueShield
+  name: blue shield sunglasses
+  description: Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flashes. Special modifications may prove useful for blue shield officers.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/blueshieldglasses.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/blueshieldglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+  - type: GuideHelp
+    guides:
+    - Security

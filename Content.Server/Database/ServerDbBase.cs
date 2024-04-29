@@ -42,10 +42,7 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
                 .Include(p => p.Profiles).ThenInclude(h => h.Antags)
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
-                .Include(p => p.Profiles)
-                    .ThenInclude(h => h.Loadouts)
-                    .ThenInclude(l => l.Groups)
-                    .ThenInclude(group => group.Loadouts)
+                .Include(p => p.Profiles).ThenInclude(h => h.Loadouts)
                 .AsSingleQuery()
                 .SingleOrDefaultAsync(p => p.UserId == userId.UserId);
 
@@ -95,8 +92,6 @@ namespace Content.Server.Database
                 .Include(p => p.Antags)
                 .Include(p => p.Traits)
                 .Include(p => p.Loadouts)
-                    .ThenInclude(l => l.Groups)
-                    .ThenInclude(group => group.Loadouts)
                 .AsSplitQuery()
                 .SingleOrDefault(h => h.Slot == slot);
 
@@ -183,6 +178,7 @@ namespace Content.Server.Database
             var jobs = profile.Jobs.ToDictionary(j => j.JobName, j => (JobPriority) j.Priority);
             var antags = profile.Antags.Select(a => a.AntagName);
             var traits = profile.Traits.Select(t => t.TraitName);
+            var loadouts = profile.Loadouts.Select(l => l.LoadoutName);
 
             var sex = Sex.Male;
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
@@ -245,6 +241,7 @@ namespace Content.Server.Database
                     profile.FacialHairName,
                     Color.FromHex(profile.FacialHairColor),
                     Color.FromHex(profile.EyeColor),
+                    Color.FromHex(profile.SpeakerColor),
                     Color.FromHex(profile.SkinColor),
                     markings
                 ),
@@ -253,7 +250,7 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToList(),
                 traits.ToList(),
-                loadouts
+                loadouts.ToList()
             );
         }
 
@@ -279,6 +276,7 @@ namespace Content.Server.Database
             profile.FacialHairName = appearance.FacialHairStyleId;
             profile.FacialHairColor = appearance.FacialHairColor.ToHex();
             profile.EyeColor = appearance.EyeColor.ToHex();
+            profile.SpeakerColor = appearance.SpeakerColor.ToHex();
             profile.SkinColor = appearance.SkinColor.ToHex();
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.Markings = markings;
@@ -302,6 +300,12 @@ namespace Content.Server.Database
             profile.Traits.AddRange(
                 humanoid.TraitPreferences
                         .Select(t => new Trait {TraitName = t})
+            );
+			
+			profile.Loadouts.Clear();
+            profile.Loadouts.AddRange(
+                humanoid.LoadoutPreferences
+                        .Select(l => new Loadout {LoadoutName = l})
             );
 
             profile.Loadouts.Clear();

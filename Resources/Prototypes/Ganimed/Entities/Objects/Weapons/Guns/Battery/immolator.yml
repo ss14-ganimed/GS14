@@ -1,0 +1,34 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  name: Immolator
+  parent: BaseWeaponBattery
+  id: WeaponImmolator
+  description: A modified laser cannon that fires highly concentrated beams with higher intensity that ignite the target, at the expense of losing most of the power per shot.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Guns/Battery/immolator.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Ganimed/Objects/Guns/Battery/immolator.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: LaserImmolator
+    fireCost: 100
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: StaticPrice
+    price: 750

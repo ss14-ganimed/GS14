@@ -1,0 +1,167 @@
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesGarGiga
+  category: loadout-category-eyes
+  cost: 1
+  exclusive: true
+  prototype: ClothingEyesGlassesGarGiga
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesGar
+  category: loadout-category-eyes
+  cost: 1
+  exclusive: true
+  prototype: ClothingEyesGlassesGar
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesGarOrange
+  category: loadout-category-eyes
+  cost: 1
+  exclusive: true
+  prototype: ClothingEyesGlassesGarOrange
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesMeson
+  category: loadout-category-eyes
+  cost: 4
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+    - Quartermaster
+    - SalvageSpecialist
+  exclusive: true
+  prototype: ClothingEyesGlassesMeson
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesThermal
+  category: loadout-category-eyes
+  cost: 3
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+    - Quartermaster
+    - SalvageSpecialist
+  exclusive: true
+  prototype: ClothingEyesGlassesThermal
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlasses
+  category: loadout-category-eyes
+  cost: 1
+  exclusive: true
+  prototype: ClothingEyesGlasses
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesMercenary
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Captain
+    - Quartermaster
+    - SalvageSpecialist
+    - Brigmedic
+    - BlueShield
+    - BridgeOfficer
+  prototype: ClothingEyesGlassesMercenary
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesOutlawGlasses
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  prototype: ClothingEyesGlassesOutlawGlasses
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesChemical
+  category: loadout-category-eyes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Detective
+    - Captain
+    - HeadOfSecurity
+    - SeniorOfficer
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Bartender
+    - ServiceWorker
+    - Brigmedic
+    - Coroner
+  prototype: ClothingEyesGlassesChemical
+
+- type: loadout
+  id: LoadoutEyesClothingEyesEyesHudBeer
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Bartender
+    - ServiceWorker
+    - Chef
+  prototype: ClothingEyesHudBeer
+
+- type: loadout
+  id: LoadoutEyesClothingEyesEyesHudFriedOnion
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Bartender
+    - ServiceWorker
+    - Chef
+  prototype: ClothingEyesHudFriedOnion
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesJamjar
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  prototype: ClothingEyesGlassesJamjar
+
+- type: loadout
+  id: LoadoutEyesClothingEyesSalesman
+  category: loadout-category-eyes
+  cost: 2
+  exclusive: true
+  prototype: ClothingEyesSalesman
+
+- type: loadout
+  id: LoadoutEyesClothingEyesGlassesSunglasses
+  category: loadout-category-eyes
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Captain
+    - Brigmedic
+    - BlueShield
+    - BridgeOfficer
+  prototype: ClothingEyesGlassesSunglasses
