@@ -353,7 +353,6 @@ namespace Content.Server.Database
         public List<Trait> Traits { get; } = new();
         public List<Loadout> Loadouts { get; } = new();
 
-        public List<ProfileRoleLoadout> Loadouts { get; } = new();
 
         [Column("pref_unavailable")] public DbPreferenceUnavailableMode PreferenceUnavailable { get; set; }
 
