@@ -13,8 +13,6 @@ using Content.Shared.Database;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Preferences;
-using Content.Shared.Preferences.Loadouts;
-using Content.Shared.Preferences.Loadouts.Effects;
 using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
@@ -184,6 +182,14 @@ namespace Content.Server.Database
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
                 sex = sexVal;
 
+            var clothing = ClothingPreference.Jumpsuit;
+            if (Enum.TryParse<ClothingPreference>(profile.Clothing, true, out var clothingVal))
+                clothing = clothingVal;
+
+            var backpack = BackpackPreference.Backpack;
+            if (Enum.TryParse<BackpackPreference>(profile.Backpack, true, out var backpackVal))
+                backpack = backpackVal;
+
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
@@ -206,27 +212,6 @@ namespace Content.Server.Database
                 }
             }
 
-            var loadouts = new Dictionary<string, RoleLoadout>();
-
-            foreach (var role in profile.Loadouts)
-            {
-                var loadout = new RoleLoadout(role.RoleName);
-
-                foreach (var group in role.Groups)
-                {
-                    var groupLoadouts = loadout.SelectedLoadouts.GetOrNew(group.GroupName);
-                    foreach (var profLoadout in group.Loadouts)
-                    {
-                        groupLoadouts.Add(new Loadout()
-                        {
-                            Prototype = profLoadout.LoadoutName,
-                        });
-                    }
-                }
-
-                loadouts[role.RoleName] = loadout;
-            }
-
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
@@ -245,6 +230,8 @@ namespace Content.Server.Database
                     Color.FromHex(profile.SkinColor),
                     markings
                 ),
+                clothing,
+                backpack,
                 spawnPriority,
                 jobs,
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
@@ -278,6 +265,8 @@ namespace Content.Server.Database
             profile.EyeColor = appearance.EyeColor.ToHex();
             profile.SpeakerColor = appearance.SpeakerColor.ToHex();
             profile.SkinColor = appearance.SkinColor.ToHex();
+            profile.Clothing = humanoid.Clothing.ToString();
+            profile.Backpack = humanoid.Backpack.ToString();
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.Markings = markings;
             profile.Slot = slot;
@@ -307,36 +296,6 @@ namespace Content.Server.Database
                 humanoid.LoadoutPreferences
                         .Select(l => new Loadout {LoadoutName = l})
             );
-
-            profile.Loadouts.Clear();
-
-            foreach (var (role, loadouts) in humanoid.Loadouts)
-            {
-                var dz = new ProfileRoleLoadout()
-                {
-                    RoleName = role,
-                };
-
-                foreach (var (group, groupLoadouts) in loadouts.SelectedLoadouts)
-                {
-                    var profileGroup = new ProfileLoadoutGroup()
-                    {
-                        GroupName = group,
-                    };
-
-                    foreach (var loadout in groupLoadouts)
-                    {
-                        profileGroup.Loadouts.Add(new ProfileLoadout()
-                        {
-                            LoadoutName = loadout.Prototype,
-                        });
-                    }
-
-                    dz.Groups.Add(profileGroup);
-                }
-
-                profile.Loadouts.Add(dz);
-            }
 
             return profile;
         }
@@ -749,7 +708,7 @@ namespace Content.Server.Database
             await db.DbContext.SaveChangesAsync(cancel);
         }
 
-        public async Task<int> AddNewRound(Server server, params Guid[] playerIds)
+        public virtual async Task<int> AddNewRound(Server server, params Guid[] playerIds)
         {
             await using var db = await GetDb();
 

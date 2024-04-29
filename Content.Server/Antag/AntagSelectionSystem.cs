@@ -293,8 +293,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             return;
         }
 
-        EntityManager.AddComponents(player, def.Components);
-        _stationSpawning.EquipStartingGear(player, def.StartingGear);
+
 
         if (session != null)
         {
