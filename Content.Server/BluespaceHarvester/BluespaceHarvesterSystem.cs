@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared.UserInterface;
 using Content.Server.NodeContainer;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.Nodes;
@@ -14,6 +15,9 @@ using Content.Shared.Emag.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
+using Content.Server.Advertise;
+using Content.Server.Advertise.Components;
+using Robust.Shared.Player;
 
 namespace Content.Server.BluespaceHarvester;
 
@@ -27,8 +31,8 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
-
+    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    
     // TODO: Move to component.
     private readonly List<BluespaceHarvesterTap> _taps = new()
     {
@@ -133,7 +137,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
 
     private void OnTargetLevel(Entity<BluespaceHarvesterComponent> ent, ref BluespaceHarvesterTargetLevelMessage args)
     {
-        var user = args.Session.AttachedEntity;
+        var user = args.Actor;
         if (!Exists(user))
             return;
 
@@ -144,24 +148,11 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         ent.Comp.TargetLevel = args.TargetLevel;
         UpdateUI(ent);
 
-        if (args.TargetLevel < ent.Comp.StableLevel)
-        {
-            _adminLogger.Add(LogType.Action, LogImpact.Low, $"{ToPrettyString(user.Value):player} set the level less than stable in {ToPrettyString(ent)} to {args.TargetLevel}");
-            return;
-        }
-
-        if (args.TargetLevel == ent.Comp.StableLevel)
-        {
-            _adminLogger.Add(LogType.Action, LogImpact.Medium, $"{ToPrettyString(user.Value):player} set the level equal to the stable in {ToPrettyString(ent)} to {args.TargetLevel}");
-            return;
-        }
-
-        _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(user.Value):player} set the level MORE stable in {ToPrettyString(ent)} to {args.TargetLevel}");
     }
 
     private void OnBuy(Entity<BluespaceHarvesterComponent> ent, ref BluespaceHarvesterBuyMessage args)
     {
-        var user = args.Session.AttachedEntity;
+        var user = args.Actor;
         if (!Exists(user))
             return;
 
@@ -179,7 +170,6 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
         ent.Comp.Points -= category.Cost; // Damn capitalism.
         SpawnLoot(ent, category.PrototypeId);
 
-        _adminLogger.Add(LogType.Action, LogImpact.Medium, $"{ToPrettyString(user.Value):player} buys in a {ToPrettyString(ent)}, {Enum.GetName(typeof(BluespaceHarvesterCategory), category.Type)} category");
     }
 
     private void UpdateAppearance(Entity<BluespaceHarvesterComponent> ent)
@@ -206,7 +196,7 @@ public sealed class BluespaceHarvesterSystem : EntitySystem
 
     private void UpdateUI(Entity<BluespaceHarvesterComponent> ent)
     {
-        _ui.TrySetUiState(ent, BluespaceHarvesterUiKey.Key, new BluespaceHarvesterBoundUserInterfaceState(
+        _uiSystem.SetUiState(ent, BluespaceHarvesterUiKey.Key, new BluespaceHarvesterBoundUserInterfaceState(
             ent.Comp.TargetLevel,
             ent.Comp.CurrentLevel,
             ent.Comp.MaxLevel,
