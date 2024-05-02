@@ -198,7 +198,7 @@
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsFreezer ]
+      board: [ DoorElectronicsKitchenHydroponics ]
   - type: AccessReader
     access: [["Kitchen"], ["Hydroponics"]]
   - type: Wires
@@ -1282,7 +1282,7 @@
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsRnDMed ]
+      board: [ DoorElectronicsMedicalResearch ]
   - type: AccessReader
     access: [["Research"], ["Medical"]]
   - type: Wires
