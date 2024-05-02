@@ -13,16 +13,6 @@
     layoutId: AirlockService
 
 - type: entity
-  parent: Airlock
-  id: AirlockLawyerLocked
-  suffix: Lawyer, Locked
-  components:
-  - type: AccessReader
-    access: [["Lawyer"]]
-  - type: Wires
-    layoutId: AirlockService
-
-- type: entity
   parent: AirlockServiceLocked
   id: AirlockLawyerLocked
   suffix: Lawyer, Locked

@@ -271,7 +271,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     {
         if (profile == null)
             return;
-
+            
         if (!Resolve(uid, ref humanoid))
         {
             return;
