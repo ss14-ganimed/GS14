@@ -76,7 +76,7 @@
     Steel: 100
     Plastic: 200
     Glass: 100
-    
+
 - type: latheRecipe
   id: SignallerAdvanced
   result: RemoteSignallerAdvanced
@@ -176,23 +176,12 @@
     Uranium: 150
 
 - type: latheRecipe
-  id: WeaponCrusher
-  result: WeaponCrusher
-  completetime: 5
+  id: ClothingMaskWeldingGas
+  result: ClothingMaskWeldingGas
+  completetime: 3
   materials:
-    Steel: 2000
-    Silver: 750
-    Plasma: 1500
-    Uranium: 150
-
-- type: latheRecipe
-  id: WeaponCrusherGlaive
-  result: WeaponCrusherGlaive
-  completetime: 5
-  materials:
-    Steel: 1500
-    Glass: 250
-    Silver: 250
+    Steel: 600
+    Glass: 200
 
 - type: latheRecipe
   id: WeaponForceGun

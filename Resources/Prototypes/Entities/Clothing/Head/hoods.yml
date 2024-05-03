@@ -13,8 +13,11 @@
   - type: IngestionBlocker
   - type: Tag
     tags:
-    - HidesHair
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
   - type: StaminaProtection
     coefficient: 0.95
 
@@ -106,9 +109,11 @@
     sprite: Clothing/Head/Hoods/chaplain.rsi
   - type: Tag
     tags:
-    - HidesHair
     - HamsterWearable
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
 
 - type: entity
   parent: ClothingHeadBase
@@ -122,8 +127,10 @@
     sprite: Clothing/Head/Hoods/cult.rsi
   - type: Tag
     tags:
-    - HidesHair
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
 
 - type: entity
   parent: ClothingHeadBase
@@ -137,9 +144,11 @@
     sprite: Clothing/Head/Hoods/nun.rsi
   - type: Tag
     tags:
-    - HidesHair
     - HamsterWearable
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
 
 - type: entity
   parent: ClothingHeadBase
@@ -156,6 +165,11 @@
       coefficients:
         Heat: 0.95
         Radiation: 0.65
+  - type: BreathMask
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
   - type: StaminaProtection
     coefficient: 0.95
 
@@ -187,8 +201,10 @@
     sprite: Clothing/Head/Hoods/goliathcloak.rsi
   - type: Tag
     tags:
-    - HidesHair
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
 
 - type: entity
   parent: ClothingHeadBase
@@ -201,9 +217,9 @@
     sprite: Clothing/Head/Hoods/iansuit.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/iansuit.rsi
-  - type: Tag
-    tags:
-    - HidesHair
+  - type: HideLayerClothing
+    slots:
+    - Hair
 
 - type: entity
   parent: ClothingHeadBase
@@ -216,9 +232,9 @@
     sprite: Clothing/Head/Hoods/carpsuit.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/carpsuit.rsi
-  - type: Tag
-    tags:
-    - HidesHair
+  - type: HideLayerClothing
+    slots:
+    - Hair
 
 - type: entity
   parent: ClothingHeadBase
@@ -233,8 +249,11 @@
   - type: IdentityBlocker
   - type: Tag
     tags:
-    - HidesHair
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
 
 #Winter Coat Hoods
 - type: entity

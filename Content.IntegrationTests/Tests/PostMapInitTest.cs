@@ -76,8 +76,9 @@ namespace Content.IntegrationTests.Tests
             "Gemini",
             "MeteorArena",
             "Atlas",
-            "Reach",   
-            "Train"
+            "Reach",
+            "Train",
+            "Oasis"
         };
 
         /// <summary>
@@ -169,7 +170,10 @@ namespace Content.IntegrationTests.Tests
         [Test, TestCaseSource(nameof(GameMaps))]
         public async Task GameMapsLoadableTest(string mapProto)
         {
-            await using var pair = await PoolManager.GetServerClient();
+            await using var pair = await PoolManager.GetServerClient(new PoolSettings
+            {
+                Dirty = true // Stations spawn a bunch of nullspace entities and maps like centcomm.
+            });
             var server = pair.Server;
 
             var mapManager = server.ResolveDependency<IMapManager>();
