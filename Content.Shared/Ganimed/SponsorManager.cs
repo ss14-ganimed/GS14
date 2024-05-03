@@ -9,11 +9,11 @@ public sealed class SponsorManager
 {
     private Dictionary<string, DateTime> sponsors =
 		new Dictionary<string, DateTime>(){
-			{"JustHuman", new DateTime(2024, 04, 09)},
-			{"Safno_S", new DateTime(2024, 04, 01)},
+			{"JustHuman", new DateTime(2024, 05, 02)},
+			{"Safno_S", new DateTime(2024, 05, 02)},
 			{"Inkvizitor", new DateTime(2024, 02, 24)},
 			{"Hyper_B", new DateTime(2024, 02,26)},
-			{"Gorox", new DateTime(2024, 04, 02)},
+			{"Gorox", new DateTime(2024, 05, 02)},
 			{"ToFFik", new DateTime(2024, 03, 09)},
 			{"watrushechnik", new DateTime(2024, 03, 10)},
 		};
