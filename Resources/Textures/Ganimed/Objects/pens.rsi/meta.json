@@ -25,6 +25,9 @@
       "name": "cargo"
     },
     {
+      "name": "cargo2"	  
+    },
+    {
       "name": "chemistry"
     },
     {
@@ -32,6 +35,9 @@
     },
     {
       "name": "engineering"
+    },
+    {
+      "name": "engineering2"	  
     },
     {
       "name": "fountain_black"
@@ -56,6 +62,9 @@
     },
     {
       "name": "medical3"
+    },
+    {
+      "name": "medical4"	  
     },
     {
       "name": "military"
