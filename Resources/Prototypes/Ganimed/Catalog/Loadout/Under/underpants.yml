@@ -226,7 +226,7 @@
 - type: loadout
   id: LoadoutClothingCatFemaleUnderPants
   category: loadout-category-under
-  cost: 0
+  cost: 1
   exclusive: true
   sponsorOnly: true
   prototype: ClothingCatFemaleUnderPants
