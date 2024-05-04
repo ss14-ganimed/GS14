@@ -1,0 +1,260 @@
+- type: loadout
+  id: LoadoutClothingUnderPantsWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsWhite
+
+- type: loadout
+  id: LoadoutClothingUnderPantsBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsBlack
+
+- type: loadout
+  id: LoadoutClothingUnderPantsBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsBrown
+
+- type: loadout
+  id: LoadoutClothingUnderPantsGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsGreen
+
+- type: loadout
+  id: LoadoutClothingUnderPantsRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsRed
+
+- type: loadout
+  id: LoadoutClothingUnderPantsBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsBlue
+
+- type: loadout
+  id: LoadoutClothingUnderPantsYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsYellow
+
+- type: loadout
+  id: LoadoutClothingUnderPantsNT
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsNT
+
+- type: loadout
+  id: LoadoutClothingUnderPantsMilitary
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderPantsMilitary
+
+
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsWhite
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsBlack
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsBrown
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsGreen
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsRed
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsBlue
+
+- type: loadout
+  id: LoadoutClothingFemaleUnderPantsYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsYellow
+
+
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleAlterUnderPantsWhite
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleAlterUnderPantsBlack
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleAlterUnderPantsBrown
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleAlterUnderPantsGreen
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleAlterUnderPantsRed
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleUnderPantsBlue
+
+- type: loadout
+  id: LoadoutClothingFemaleAlterUnderPantsYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleAlterUnderPantsYellow
+
+
+
+- type: loadout
+  id: LoadoutClothingFemaleStringWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringWhite
+
+- type: loadout
+  id: LoadoutClothingFemaleStringBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringBlack
+
+- type: loadout
+  id: LoadoutClothingFemaleStringBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringBrown
+
+- type: loadout
+  id: LoadoutClothingFemaleStringGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringGreen
+
+- type: loadout
+  id: LoadoutClothingFemaleStringRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringRed
+
+- type: loadout
+  id: LoadoutClothingFemaleStringBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringBlue
+
+- type: loadout
+  id: LoadoutClothingFemaleStringYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFemaleStringYellow
+
+
+
+- type: loadout
+  id: ClothingAnimeFemaleUnderPants
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAnimeFemaleUnderPants
+
+- type: loadout
+  id: LoadoutClothingCatFemaleUnderPants
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingCatFemaleUnderPants
+
+- type: loadout
+  id: LoadoutClothingClothFemaleUnderPants
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingClothFemaleUnderPants
+
+- type: loadout
+  id: LoadoutClothingFlowerFemaleUnderPants
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFlowerFemaleUnderPants
+
+- type: loadout
+  id: LoadoutClothingHeartFemaleUnderPants
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingHeartFemaleUnderPants
+
+- type: loadout
+  id: LoadoutClothingMiraFemaleUnderPants
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingMiraFemaleUnderPants

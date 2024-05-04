@@ -223,9 +223,9 @@
   components:
   - type: Sprite
     sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#EBE216"
   - type: Clothing
     sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
-    color: "#EBE216"
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -401,7 +401,7 @@
 
 - type: entity
   parent: ClothingUnderShirtBase
-  id: ClothingHeatBrassiere
+  id: ClothingHeartBrassiere
   name: brassiere
   description: Make them loins buzz!
   components:

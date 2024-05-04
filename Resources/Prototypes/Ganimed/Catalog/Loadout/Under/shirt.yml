@@ -1,0 +1,246 @@
+- type: loadout
+  id: LoadoutClothingUnderShirtWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtWhite
+
+- type: loadout
+  id: LoadoutClothingUnderShirtBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtBlack
+
+- type: loadout
+  id: LoadoutClothingUnderShirtBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtBrown
+
+- type: loadout
+  id: LoadoutClothingUnderShirtGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtGreen
+
+- type: loadout
+  id: LoadoutClothingUnderShirtBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtBlue
+
+- type: loadout
+  id: LoadoutClothingUnderShirtRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtRed
+
+- type: loadout
+  id: LoadoutClothingUnderShirtYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderShirtYellow
+
+
+
+- type: loadout
+  id: LoadoutClothingBrassiereWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereWhite
+
+- type: loadout
+  id: LoadoutClothingBrassiereBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereBlack
+
+- type: loadout
+  id: LoadoutClothingBrassiereBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereBrown
+
+- type: loadout
+  id: LoadoutClothingBrassiereGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereGreen
+
+- type: loadout
+  id: LoadoutClothingBrassiereBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereBlue
+
+- type: loadout
+  id: LoadoutClothingBrassiereRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereRed
+
+- type: loadout
+  id: LoadoutClothingBrassiereYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereYellow
+
+
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBigBrassiereWhite
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBrassiereBlack
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBigBrassiereBrown
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBigBrassiereGreen
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBigBrassiereBlue
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBigBrassiereRed
+
+- type: loadout
+  id: LoadoutClothingBigBrassiereYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingBigBrassiereYellow
+
+
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereWhite
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereBlack
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereBrown
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereGreen
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereBlue
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereRed
+
+- type: loadout
+  id: LoadoutClothingAlterBrassiereYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAlterBrassiereYellow
+
+
+
+- type: loadout
+  id: LoadoutClothingAnimeBrassiere
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingAnimeBrassiere
+
+- type: loadout
+  id: LoadoutClothingCatBrassiere
+  category: loadout-category-under
+  cost: 1
+  sponsorOnly: true
+  exclusive: true
+  prototype: ClothingCatBrassiere
+
+- type: loadout
+  id: LoadoutClothingClothBrassiere
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingClothBrassiere
+
+- type: loadout
+  id: LoadoutClothingFlowerBrassiere
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingFlowerBrassiere
+
+- type: loadout
+  id: LoadoutClothingHeartBrassiere
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingHeartBrassiere
+
+- type: loadout
+  id: LoadoutClothingMiraBrassiere
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingMiraBrassiere

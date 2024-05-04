@@ -10,3 +10,4 @@ loadout-category-neck = Шея
 loadout-category-uniform = Униформа
 loadout-category-head = Голова
 loadout-category-back = Спина
+loadout-category-under = Бельё
