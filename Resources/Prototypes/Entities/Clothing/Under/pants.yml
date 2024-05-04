@@ -1,0 +1,570 @@
+# Male
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingUnderPantsBase
+  components:
+    - type: Clothing
+      slots:
+        - UNDERPANTS
+    - type: Sprite
+      state: icon
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsNT
+  name: NT underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\ntpants.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\ntpants.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsMilitary
+  name: Military underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\military.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\military.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+#color
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsWhite
+  name: white underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsBlack
+  name: black underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsBlue
+  name: blue underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsBrown
+  name: brown underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsGreen
+  name: greem underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsRed
+  name: red underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingUnderPantsYellow
+  name: yellow underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#Female
+
+#base
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsWhite
+  name: female white underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsBlack
+  name: black underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsBlue
+  name: blue underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsBrown
+  name: brown underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsGreen
+  name: greem underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsRed
+  name: red underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleUnderPantsYellow
+  name: yellow underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#strings
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringWhite
+  name: female white underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringBlack
+  name: black underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringBlue
+  name: blue underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringBrown
+  name: brown underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringGreen
+  name: greem underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringRed
+  name: red underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleStringYellow
+  name: yellow underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#Alter
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsWhite
+  name: female white underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsBlack
+  name: black underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsBlue
+  name: blue underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsBrown
+  name: brown underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsGreen
+  name: greem underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsRed
+  name: red underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFemaleAlterUnderPantsYellow
+  name: yellow underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#Misc
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingAnimeFemaleUnderPants
+  name: female underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\anime.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\anime.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingCatFemaleUnderPants
+  name: female underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\cat.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\cat.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingClothFemaleUnderPants
+  name: female underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\cloth.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\cloth.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingFlowerFemaleUnderPants
+  name: female underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\flower.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\flower.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingHeartFemaleUnderPants
+  name: female underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\heart.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\heart.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderPantsBase
+  id: ClothingMiraFemaleUnderPants
+  name: female underpants
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Underpants\Female\mirapants.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Underpants\Female\mirapants.rsi
+    clothingVisuals:
+      underpants:
+        - state: equipped-INNERCLOTHING

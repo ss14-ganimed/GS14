@@ -1,14 +1,14 @@
 - type: loadout
   id: LoadoutShoesClothingUnderSocksCoder
-  category: loadout-category-shoes
-  cost: 2
+  category: loadout-category-under
+  cost: 0
   exclusive: true
   prototype: ClothingUnderSocksCoder
 
 - type: loadout
   id: LoadoutShoesClothingUnderSocksBee
-  category: loadout-category-shoes
-  cost: 1
+  category: loadout-category-under
+  cost: 0
   exclusive: true
   prototype: ClothingUnderSocksBee
 
