@@ -3,6 +3,8 @@
   parent: Clothing
   id: ClothingUnderShirtBase
   components:
+    - type: Item
+      size: Small
     - type: Clothing
       slots:
         - UNDERSHIRT

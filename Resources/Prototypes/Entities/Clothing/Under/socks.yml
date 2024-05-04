@@ -5,6 +5,8 @@
   parent: Clothing
   id: ClothingUnderSocksBase
   components:
+    - type: Item
+      size: Small
     - type: Sprite
       state: icon
     - type: Clothing
