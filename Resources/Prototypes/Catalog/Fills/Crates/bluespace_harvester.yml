@@ -10,15 +10,19 @@
     - id: WeaponTeslaGun
 
 - type: entity
-  id: CrateHarvesterSingularityFake
+  id: CrateHarvesterHuds
   parent: CrateLimitedSecure
   description: You've got a bad feeling about this.
-  suffix: Bluespace Harvester, Singularity Fake
+  suffix: Bluespace Harvester, Huds
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: SingularityToy
+    - id: ClothingEyesHudMultiversal
       amount: 1
+    - id: ClothingEyesGlassesMedicineMeson
+      amount: 3
+    - id: ClothingEyesGlassesTray
+      amount: 3
 
 - type: entity
   id: CrateHarvesterMaterials
@@ -162,14 +166,14 @@
       amount: 2
 
 - type: entity
-  id: CrateHarvesterReagentSlime
+  id: CrateHarvesterTeleporter
   parent: CrateLimitedSecure
-  suffix: Bluespace Harvester, ReagentSlime
+  suffix: Bluespace Harvester, Teleporter
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: ReagentSlimeSpawner
-      amount: 16
+    - id: RandomHarvesterTeleporter
+      amount: 12
 
 # Biological Loot
 - type: entity
@@ -203,26 +207,26 @@
       amount: 10
 
 - type: entity
-  id: CrateHarvesterRomerol
+  id: CrateHarvesterAmbuzol
   parent: CrateLimitedSecure
-  suffix: Bluespace Harvester, Romerol
+  suffix: Bluespace Harvester, Ambuzol
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: SyringeRomerol
+    - id: Stimpack
       amount: 3
-    - id: PillRomerol
+    - id: PillAmbuzolPlus
       amount: 10
 
 - type: entity
-  id: CrateHarvesterDoctorsDelight
+  id: CrateHarvesterOmnizine
   parent: CrateLimitedSecure
-  suffix: Bluespace Harvester, DoctorsDelight
+  suffix: Bluespace Harvester, Omnizine
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: RandomHarvesterDoctorsDelight
-      amount: 30
+    - id: RandomHarvesterOmnizine
+      amount: 20
 
 
 - type: entity
@@ -237,14 +241,14 @@
 
 # Destructionl Loot
 - type: entity
-  id: CrateHarvesterTurretSyndicate
+  id: CrateHarvesterDesword
   parent: CrateLimitedSecure
-  suffix: Bluespace Harvester, Behonker
+  suffix: Bluespace Harvester, Desword
   components:
   - type: BluespaceHarvesterBundle
     contents:
-    - id: SpawnMobBehonker
-      amount: 2
+    - id: EnergySwordDouble
+      amount: 1
 
 - type: entity
   id: CrateHarvesterWeaponElite

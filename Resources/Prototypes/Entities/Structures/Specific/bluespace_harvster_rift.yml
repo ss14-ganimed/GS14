@@ -11,51 +11,50 @@
     - MobFleshGolem
     - MobFleshClamp
     - MobFleshLover
-    - FleshBlocker
     spawn:
       # Flesh
       - id: MobFleshJared
-        cost: 30
+        cost: 70
       - id: MobFleshGolem
-        cost: 30
+        cost: 70
       - id: MobFleshClamp
-        cost: 30
+        cost: 70
       - id: MobFleshLover
-        cost: 30
+        cost: 70
       - id: FleshBlocker
-        cost: 30
+        cost: 70
       # Slimes
       - id: MobAdultSlimesBlueAngry
-        cost: 40
+        cost: 100
       - id: MobAdultSlimesYellowAngry
-        cost: 40
+        cost: 100
       - id: MobAdultSlimesGreenAngry
-        cost: 40
+        cost: 100
       - id: ReagentSlimeSpawner
-        cost: 60
+        cost: 120
       # Carps
       - id: MobCarp
-        cost: 70
+        cost: 160
       - id: MobCarpMagic
-        cost: 90
+        cost: 180
       # Space
       - id: MobKangarooSpace
-        cost: 35
+        cost: 90
       - id: MobBearSpace
-        cost: 35
+        cost: 90
       - id: MobPurpleSnake
-        cost: 35
+        cost: 90
       - id: MobTick
-        cost: 35
+        cost: 90
       - id: MobWatcherLavaland
-        cost: 100
+        cost: 200
       # Spiders
       - id: MobSpiderSpace
-        cost: 50
+        cost: 110
       - id: MobGiantSpiderAngry
-        cost: 55
+        cost: 110
       - id: MobClownSpider
-        cost: 55
+        cost: 110
       # DEATH
       - id: FleshKudzu
         cost: 300

@@ -22,7 +22,7 @@
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-      - CrateHarvesterTurretSyndicate # Death
+      - CrateHarvesterDesword
       - CrateHarvesterWeaponElite
     rareChance: 0.1
 
@@ -42,7 +42,6 @@
     prototypes:
       - CrateHarvesterMaterials
       - CrateHarvesterPowerCell
-      - CrateHarvesterBeer
       - CrateHarvesterTools
       - RandomHarvesterBackpackHolding
       - CrateHarvesterAmeJar
@@ -51,7 +50,7 @@
     offset: 0.0
     rarePrototypes:
       - CrateHarvesterSingularity # Death
-      - CrateHarvesterSingularityFake
+      - CrateHarvesterHuds
     rareChance: 0.1
 
 - type: entity
@@ -79,7 +78,7 @@
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-      - CrateHarvesterReagentSlime # Death
+      - CrateHarvesterTeleporter
       - BaseResearchAndDevelopmentPointSource
     rareChance: 0.1
 
@@ -102,8 +101,8 @@
       - CrateHarvesterMedkit
       - CrateHarvesterSeeds
     rarePrototypes:
-      - CrateHarvesterRomerol # Death
-      - CrateHarvesterDoctorsDelight
+      - CrateHarvesterAmbuzol
+      - CrateHarvesterOmnizine
     chance: 1.0
     offset: 0.0
     rareChance: 0.1
@@ -130,15 +129,14 @@
       - SheetRGlass
       - SheetPGlass
       - SheetRPGlass
+      - IngotSilver
+      - IngotGold
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-      - IngotSilver
-      - IngotGold
       - SheetUranium
       - SheetUGlass
       - SheetRUGlass
-      - MaterialSheetMeat
     rareChance: 0.4
 
 - type: entity
@@ -249,10 +247,6 @@
     prototypes:
       - SecurityTechFabCircuitboard
       - MedicalTechFabCircuitboard
-      - TelecomServerCircuitboard
-      - AmmoTechFabCircuitboard
-      - CargoBountyComputerCircuitboard
-      - CargoRequestComputerCircuitboard
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -263,7 +257,7 @@
       - CloningConsoleComputerCircuitboard
       - CloningPodMachineCircuitboard
       - CargoShuttleComputerCircuitboard
-    rareChance: 0.2
+    rareChance: 0.5
 
 # Technological
 - type: entity
@@ -285,7 +279,28 @@
     offset: 0.0
     rarePrototypes:
       - TechnologyDiskRare
-    rareChance: 0.3
+    rareChance: 0.5
+
+- type: entity
+  id: RandomHarvesterTeleporter
+  name: random harvester teleporter spawner
+  suffix: Bluespace Harvester, DO NOT MAP
+  parent: MarkerBase
+  noSpawn: true
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Objects/Misc/module.rsi
+        state: datadisk5
+  - type: RandomSpawner
+    prototypes:
+      - DeviceQuantumSpinInverter
+    chance: 1.0
+    offset: 0.0
+    rarePrototypes:
+      - HandTeleporter
+    rareChance: 0.005
 
 - type: entity
   id: RandomHarvesterResearchDisk
@@ -306,7 +321,7 @@
     offset: 0.0
     rarePrototypes:
       - ResearchDisk10000
-    rareChance: 0.3
+    rareChance: 0.5
 
 - type: entity
   id: RandomHarvesterAnomalyKit
@@ -428,7 +443,7 @@
     rarePrototypes:
       - Hypospray
       - HypopenBox
-    rareChance: 0.02
+    rareChance: 0.05
 
 - type: entity
   id: RandomHarvesterImplanter
@@ -503,16 +518,18 @@
         state: seed
   - type: RandomSpawner
     prototypes:
-      - CrateHydroponicsSeeds
+      - RainbowCannabisSeeds
+      - AmbrosiaDeusSeeds
+      - SpacemansTrumpetSeeds
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-      - CrateHydroponicsSeedsExotic
-      - CrateHydroponicsSeedsMedicinal
+      - KillerTomatoSeeds
+      - PyrottonSeeds
     rareChance: 0.5
 
 - type: entity
-  id: RandomHarvesterDoctorsDelight
+  id: RandomHarvesterOmnizine
   name: random harvester doctors delight spawner
   suffix: Bluespace Harvester, DO NOT MAP
   parent: MarkerBase
@@ -525,11 +542,11 @@
         state: icon
   - type: RandomSpawner
     prototypes:
-      - DrinkDoctorsDelightGlass
+      - OmnizineChemistryBottle
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-      - OmnizineChemistryBottle
+      - CognizineChemistryBottle
     rareChance: 0.2
 
 # Destruction Loot
@@ -653,7 +670,7 @@
     offset: 0.0
     rarePrototypes:
       - WeaponTaser
-    rareChance: 0.2
+    rareChance: 0.02
 
 - type: entity
   id: RandomHarvesterWeaponElite
@@ -676,7 +693,8 @@
     chance: 1.0
     offset: 0.0
     rarePrototypes:
-      - WeaponPulseCarbine
+      - WeaponAntiqueLaser
+      - WeaponMultiphaseEnergyPistol
       - WeaponMinigun
       - WeaponLauncherMultipleRocket
     rareChance: 0.2
@@ -697,7 +715,6 @@
     prototypes:
       - ExGrenade
       - GrenadeFlashBang
-      - TrainingBomb
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -706,4 +723,4 @@
       - HolyHandGrenade
       - C4
       - EmpGrenade
-    rareChance: 0.05
+    rareChance: 0.1
