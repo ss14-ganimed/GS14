@@ -1,0 +1,14 @@
+ent-ClothingSocksWhite = белые носки
+    .desc = Куда пропал ещё один?
+ent-ClothingSocksBlack = чёрные носки
+    .desc = Куда пропал ещё один?
+ent-ClothingSocksBlue = синие носки
+    .desc = Куда пропал ещё один?
+ent-ClothingSocksBrown = коричневые носки
+    .desc = Куда пропал ещё один?
+ent-ClothingSocksGreen = зелёные носки
+    .desc = Куда пропал ещё один?
+ent-ClothingSocksRed = красные носки
+    .desc = Куда пропал ещё один?
+ent-ClothingSocksYellow = жёлтые носки
+    .desc = Куда пропал ещё один?

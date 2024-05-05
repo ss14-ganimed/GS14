@@ -1,0 +1,541 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingUnderShirtBase
+  components:
+    - type: Item
+      size: Small
+    - type: Clothing
+      slots:
+        - UNDERSHIRT
+    - type: Sprite
+      state: icon
+
+#base
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereWhite
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereBlack
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereBlue
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereGreen
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereBrown
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereRed
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBrassiereYellow
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#Big
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereWhite
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereBlack
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereBlue
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereGreen
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereBrown
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereRed
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingBigBrassiereYellow
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#alter
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereWhite
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereBlack
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereBlue
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereGreen
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereBrown
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereRed
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAlterBrassiereYellow
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
+
+#misc
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingAnimeBrassiere
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\anime.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\anime.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingCatBrassiere
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cat.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cat.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingClothBrassiere
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cloth.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cloth.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingFlowerBrassiere
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\flower.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\flower.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingHeartBrassiere
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\heart.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\heart.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingMiraBrassiere
+  name: brassiere
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\mirabrassiere.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\mirabrassiere.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+#Tshirt
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtWhite
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtBlack
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtBlue
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtGreen
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtBrown
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtRed
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderShirtBase
+  id: ClothingUnderShirtYellow
+  name: T-shirt
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    clothingVisuals:
+      undershirt:
+        - state: equipped-INNERCLOTHING
+          color: "#EBE216"
