@@ -165,7 +165,7 @@
   - HolofanProjector
 
 - type: technology
-  id: AdvancedHudsTechnology
+  id: AdvancedToolsTechnology
   name: research-technology-advanced-tools
   icon:
     sprite: Objects/Tools/welder_experimental.rsi
@@ -181,7 +181,7 @@
     - BorgModuleRCD
 
 - type: technology
-  id: AdvancedToolsTechnology
+  id: AdvancedHudsTechnology
   name: research-technology-advanced-huds
   icon:
     sprite: Ganimed/Clothing/Eyes/supermeson.rsi
@@ -193,6 +193,7 @@
     - ClothingEyesGlassesTray
     - ClothingEyesGlassesScienceMeson
     - ClothingEyesGlassesMesonDiagnostic
+    - ClothingEyesNightVision
 
 # Tier 3
 
@@ -223,3 +224,20 @@
   - PowerCellMicroreactor
   technologyPrerequisites:
   - AdvancedPowercells
+
+- type: technology
+  id: AdvancedNVDTechnology
+  name: research-technology-advanced-night
+  icon:
+    sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
+    state: icon
+  discipline: Industrial
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+    - ClothingEyesNightVisionScience
+    - ClothingEyesNightVisionSecurity
+    - ClothingEyesNightVisionMeson
+    - ClothingEyesNightVisionMedicine
+  technologyPrerequisites:
+    - AdvancedHudsTechnology

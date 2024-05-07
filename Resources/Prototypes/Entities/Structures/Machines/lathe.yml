@@ -263,6 +263,9 @@
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
+      - ClothingEyesNightVision
+      - ClothingEyesNightVisionMeson
+      - ClothingEyesNightVisionScience
       - PowerDrill
       - MiningDrill
       - AnomalyScanner
@@ -771,6 +774,7 @@
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunDusterCircuitboard
       - PortableRecharger
+      - ClothingEyesNightVisionSecurity
       - WeaponEnergySniperRifle
       - WeaponImmolator
       - WeaponIonRifleGun
@@ -894,6 +898,7 @@
       - Hemostat
       - ClothingEyesGlassesChemical
     dynamicRecipes:
+      - ClothingEyesNightVisionMedicine
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker

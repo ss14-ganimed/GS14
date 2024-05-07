@@ -135,3 +135,79 @@
   - type: GuideHelp
     guides:
     - Security
+
+#NightVision
+
+- type: entity
+  name: NVD
+  id: ClothingEyesNightVision
+  description: Night vision device. Provides an image of the terrain in low-light conditions.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+    state: icon
+  - type: Clickable
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+    quickEquip: true
+    slots: [ Eyes ]
+  - type: GroupExamine
+  - type: UseDelay
+    delay: 4
+  - type: PNV
+  - type: ClothingGrant
+    component:
+    - type: NightVision
+
+- type: entity
+  parent: ClothingEyesNightVision
+  id: ClothingEyesNightVisionScience
+  name: science NVD
+  description: Night vision device. Provides an image of the terrain in low-light conditions.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/NVD/scinvd.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/NVD/scinvd.rsi
+  - type: SolutionScanner
+
+- type: entity
+  parent: [ClothingEyesNightVision, ShowSecurityIcons]
+  id: ClothingEyesNightVisionSecurity
+  name: security NVD
+  description: Night vision device. Provides an image of the terrain in low-light conditions.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/NVD/secnvd.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/NVD/secnvd.rsi
+
+- type: entity
+  parent: ClothingEyesNightVision
+  id: ClothingEyesNightVisionMeson
+  name: meson NVD
+  description: Night vision device. Provides an image of the terrain in low-light conditions.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
+  - type: EyeProtection
+
+- type: entity
+  parent: ClothingEyesNightVision
+  id: ClothingEyesNightVisionMedicine
+  name: medicine NVD
+  description: Night vision device. Provides an image of the terrain in low-light conditions.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/NVD/medicinenvd.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/NVD/medicinenvd.rsi
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological

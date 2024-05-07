@@ -68,3 +68,4 @@ research-technology-advanced-spray = Продвинутые спреи
 research-technology-quantum-fiber-weaving = Плетение квантового волокна
 research-technology-bluespace-cargo-transport = Блюспейс-транспортировка грузов
 research-technology-energy_barriers = Энергетические барьеры
+research-technology-advanced-night = Продвинутые приборы ночного видения
