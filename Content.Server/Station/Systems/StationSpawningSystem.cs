@@ -45,6 +45,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly SharedAccessSystem _accessSystem = default!;
     [Dependency] private readonly IdentitySystem _identity = default!;
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
+    [Dependency] private readonly SharedJobSystem _jobSystem = default!;
 
     [Dependency] private readonly ArrivalsSystem _arrivalsSystem = default!;
     [Dependency] private readonly ContainerSpawnPointSystem _containerSpawnPointSystem = default!;
@@ -228,6 +229,13 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         _cardSystem.TryChangeFullName(cardId, characterName, card);
         _cardSystem.TryChangeJobTitle(cardId, jobPrototype.LocalizedName, card);
+
+		var color = jobPrototype.Color is not null ? jobPrototype.Color
+					: _jobSystem.TryGetDepartment(jobPrototype.ID, out var department) ? department.Color 
+					: null;
+
+		if (color is not null)
+			_cardSystem.TryChangeColor(cardId, color);
 
         if (_prototypeManager.TryIndex<StatusIconPrototype>(jobPrototype.Icon, out var jobIcon))
         {
