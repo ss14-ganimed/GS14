@@ -19,9 +19,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\ntpants.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/ntpants.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\ntpants.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/ntpants.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -33,9 +33,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\military.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/military.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\military.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/military.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -48,9 +48,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -62,10 +62,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -78,10 +78,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -94,10 +94,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -110,10 +110,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -126,10 +126,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -142,10 +142,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Male\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Male/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -161,9 +161,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -175,10 +175,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -191,10 +191,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -207,10 +207,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -223,10 +223,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -239,10 +239,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -255,10 +255,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\white.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/white.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -272,9 +272,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -286,10 +286,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -302,10 +302,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -318,10 +318,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -334,10 +334,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -350,10 +350,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -366,10 +366,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\whitestring.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/whitestring.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -383,9 +383,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -397,10 +397,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -413,10 +413,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -429,10 +429,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -445,10 +445,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -461,10 +461,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -477,10 +477,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/alterwhite.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -494,9 +494,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\anime.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/anime.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\anime.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/anime.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -508,9 +508,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\cat.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/cat.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\cat.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/cat.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -522,9 +522,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\cloth.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/cloth.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\cloth.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/cloth.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -536,9 +536,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\flower.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/flower.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\flower.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/flower.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -550,9 +550,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\heart.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/heart.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\heart.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/heart.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING
@@ -564,9 +564,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Underpants\Female\mirapants.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/mirapants.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Underpants\Female\mirapants.rsi
+    sprite: Ganimed/Clothing/Under/Underpants/Female/mirapants.rsi
     clothingVisuals:
       underpants:
         - state: equipped-INNERCLOTHING

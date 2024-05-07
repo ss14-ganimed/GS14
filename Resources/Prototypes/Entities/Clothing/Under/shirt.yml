@@ -19,9 +19,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -33,10 +33,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -49,10 +49,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -65,10 +65,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -81,10 +81,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -97,10 +97,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -113,10 +113,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\white.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/white.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -130,9 +130,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -144,10 +144,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -160,10 +160,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -176,10 +176,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -192,10 +192,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -208,10 +208,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -224,10 +224,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\bigwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/bigwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -241,9 +241,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -255,10 +255,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -271,10 +271,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -287,10 +287,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -303,10 +303,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -319,10 +319,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -335,10 +335,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\alterwhite.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/alterwhite.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -352,9 +352,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\anime.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/anime.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\anime.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/anime.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -366,9 +366,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cat.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/cat.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cat.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/cat.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -380,9 +380,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cloth.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/cloth.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\cloth.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/cloth.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -394,9 +394,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\flower.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/flower.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\flower.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/flower.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -408,9 +408,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\heart.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/heart.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\heart.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/heart.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -422,9 +422,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\mirabrassiere.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/mirabrassiere.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Brassiere\mirabrassiere.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Brassiere/mirabrassiere.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -437,9 +437,9 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -451,10 +451,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     color: "#3f3f3f"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -467,10 +467,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     color: "#0089EF"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -483,10 +483,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     color: "#5ABF2F"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -499,10 +499,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     color: "#723A02"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -515,10 +515,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     color: "#940000"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
@@ -531,10 +531,10 @@
   description: Make them loins buzz!
   components:
   - type: Sprite
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     color: "#EBE216"
   - type: Clothing
-    sprite: Ganimed\Clothing\Under\Shirt\Tshirt\shirt.rsi
+    sprite: Ganimed/Clothing/Under/Shirt/Tshirt/shirt.rsi
     clothingVisuals:
       undershirt:
         - state: equipped-INNERCLOTHING
