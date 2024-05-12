@@ -214,6 +214,13 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/synd.rsi
   - type: ShowSyndicateIcons
+  - type: GroupExamine
+  - type: UseDelay
+    delay: 4
+  - type: PNV
+  - type: ClothingGrant
+    component:
+    - type: NightVision
 
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons]
@@ -229,6 +236,13 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+  - type: GroupExamine
+  - type: UseDelay
+    delay: 4
+  - type: PNV
+  - type: ClothingGrant
+    component:
+    - type: NightVision
 
 - type: entity
   parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons]

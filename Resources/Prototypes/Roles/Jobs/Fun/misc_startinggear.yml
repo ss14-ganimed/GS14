@@ -26,7 +26,7 @@
     back: ClothingBackpackSatchelTools
     mask: ClothingMaskNinja
     head: ClothingHeadHelmetSpaceNinja
-    eyes: ClothingEyesVisorNinja
+    eyes: ClothingEyesNightVision
     gloves: ClothingHandsGlovesSpaceNinja
     outerClothing: ClothingOuterSuitSpaceNinja
     shoes: ClothingShoesSpaceNinja
@@ -46,7 +46,7 @@
     jumpsuit: ClothingUniformJumpsuitDeathSquad
     back: ClothingBackpackDeathSquadFilled
     mask: ClothingMaskGasDeathSquad
-    eyes: ClothingEyesHudSecurity
+    eyes: ClothingEyesNightVisionSecurity
     ears: ClothingHeadsetDeathSquad
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitDeathsquad
