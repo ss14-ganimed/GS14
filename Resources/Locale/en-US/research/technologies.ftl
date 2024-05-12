@@ -53,6 +53,7 @@ research-technology-quantum-leaping = Quantum Leaping
 research-technology-advanced-anomaly-research = Advanced Anomaly Research
 research-technology-rped = Rapid Part Exchange
 research-technology-super-parts = Super Parts
+research-technology-bluespace-mining = Bluespace Mining
 research-technology-deterrence = Deterrence Technologies
 
 research-technology-janitorial-equipment = Janitorial Equipment
@@ -73,3 +74,4 @@ research-technology-advanced-spray = Advanced Spray
 research-technology-bluespace-cargo-transport = Bluespace Cargo Transport
 research-technology-quantum-fiber-weaving = Quantum Fiber Weaving
 research-technology-bluespace-chemistry = Bluespace Chemistry
+research-technology-advanced-night = Advanced NVD

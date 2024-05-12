@@ -40,17 +40,17 @@ ent-CrateLimitedSecure = Редкий блюспейс ящик
 
 ent-CrateHarvesterSingularity = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
-ent-CrateHarvesterSingularityFake = { ent-CrateLimitedSecure }
+ent-CrateHarvesterHuds = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
-ent-CrateHarvesterReagentSlime = { ent-CrateLimitedSecure }
+ent-CrateHarvesterTeleporter = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
-ent-CrateHarvesterRomerol = { ent-CrateLimitedSecure }
+ent-CrateHarvesterAmbuzol = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
-ent-CrateHarvesterDoctorsDelight = { ent-CrateLimitedSecure }
+ent-CrateHarvesterOmnizine = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
 ent-CrateHarvesterWeaponElite = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
-ent-CrateHarvesterTurretSyndicate = { ent-CrateLimitedSecure }
+ent-CrateHarvesterDesword = { ent-CrateLimitedSecure }
     .desc = { ent-CrateLimitedSecure.desc }
 
 ent-CrateHarvesterMaterials = { ent-CrateIndustrialSecure }

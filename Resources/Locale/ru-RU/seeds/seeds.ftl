@@ -110,3 +110,7 @@ seeds-pumpkin-name = тыква
 seeds-pumpkin-display-name = тыква
 seeds-cotton-name = хлопок
 seeds-cotton-display-name = куст хлопка
+seeds-rainbow-cannabis-name = радужная конопля
+seeds-rainbow-cannabis-display-name = радужная конопля
+seeds-pyrotton-name = пирохлопок
+seeds-pyrotton-display-name = куст пирохлопка

@@ -110,3 +110,7 @@ ent-PumpkinSeeds = пакет семян (тыква)
     .desc = { ent-SeedBase.desc }
 ent-CottonSeeds = пакет семян (хлопок)
     .desc = { ent-SeedBase.desc }
+ent-RainbowCannabisSeeds = пакет семян (радужная конопля)
+    .desc = Из этих семян вырастет радужная травка. Круто... и вызывает сильное привыкание.
+ent-PyrottonSeeds = пакет семян (пирохлопок)
+    .desc = { ent-SeedBase.desc }

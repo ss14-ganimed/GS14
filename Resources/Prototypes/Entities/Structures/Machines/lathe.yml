@@ -263,6 +263,9 @@
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
+      - ClothingEyesNightVision
+      - ClothingEyesNightVisionMeson
+      - ClothingEyesNightVisionScience
       - PowerDrill
       - MiningDrill
       - AnomalyScanner
@@ -470,6 +473,7 @@
       - ReagentGrinderIndustrialMachineCircuitboard
       - JukeboxCircuitBoard
       - CriminalRecordsComputerCircuitboard
+      - MachineBluespaceHarvesterCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -771,6 +775,7 @@
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunDusterCircuitboard
       - PortableRecharger
+      - ClothingEyesNightVisionSecurity
       - WeaponEnergySniperRifle
       - WeaponImmolator
       - WeaponIonRifleGun
@@ -894,6 +899,7 @@
       - Hemostat
       - ClothingEyesGlassesChemical
     dynamicRecipes:
+      - ClothingEyesNightVisionMedicine
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
