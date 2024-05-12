@@ -313,18 +313,16 @@
   - type: Tag
     tags:
     - Write
-    - Pickaxe
 
 - type: entity
   name: black fountain pen
-  parent: BaseItem
+  parent: Pen
   id: BlackFountainPen
   description: A stylish black fountain pen for signing off orders most devilish.
   components:
   - type: Tag
     tags:
     - Write
-    - Pickaxe
   - type: Sprite
     sprite: Ganimed/Objects/pens.rsi
     state: fountain_black

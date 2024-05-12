@@ -31,6 +31,7 @@ cargo-console-insufficient-funds = Недостаточно средств (тр
 cargo-console-unfulfilled = Нет места для выполнения заказа
 cargo-console-trade-station = Отправить на { $destination }
 cargo-console-paper-print-name = Заказ #{ $orderNumber }
+cargo-console-unlock-approved-order-broadcast = [bold]{$productName} x{$orderAmount}[/bold], стоимость которого [bold]{$cost}[/bold], был одобрен [bold]{$approverName}, {$approverJob}[/bold]
 cargo-console-paper-print-text =
     Заказ #{ $orderNumber }
     Товар: { $itemName }
