@@ -226,7 +226,7 @@
   prototype: ClothingCloakMed
 
 - type: loadout
-  id: LoadoutClothingCloaksed
+  id: LoadoutClothingCloakSec
   category: loadout-category-neck
   cost: 2
   exclusive: true
@@ -239,8 +239,7 @@
     - HeadOfSecurity
     - SeniorOfficer
     - Brigmedic
-    - BridgeOfficer
-  prototype: ClothingCloaksed
+  prototype: ClothingCloakSec
 #Long
 - type: loadout
   id: LoadoutClothingLongCloakRD
