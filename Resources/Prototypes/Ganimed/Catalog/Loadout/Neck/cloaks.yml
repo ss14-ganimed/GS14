@@ -207,3 +207,74 @@
   exclusive: true
   sponsorOnly: true
   prototype: ClothingCloakGamer
+
+#Long
+- type: loadout
+  id: LoadoutClothingLongCloakRD
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ResearchDirector
+  prototype: ClothingLongCloakRD
+
+- type: loadout
+  id: LoadoutClothingLongCloakCE
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefEngineer
+  prototype: ClothingLongCloakCE
+
+- type: loadout
+  id: LoadoutClothingLongCloakCMO
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingLongCloakCMO
+
+- type: loadout
+  id: LoadoutClothingLongCloakCap
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingLongCloakCap
+
+- type: loadout
+  id: LoadoutClothingLongCloakQM
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Quartermaster
+  prototype: ClothingLongCloakQM
+
+- type: loadout
+  id: LoadoutClothingLongCloakHOP
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfPersonnel
+  prototype: ClothingLongCloakHOP
+
+- type: loadout
+  id: LoadoutClothingLongCloakHOS
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingLongCloakHOS
