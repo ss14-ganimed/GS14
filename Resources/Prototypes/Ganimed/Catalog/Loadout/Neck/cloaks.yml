@@ -208,6 +208,39 @@
   sponsorOnly: true
   prototype: ClothingCloakGamer
 
+- type: loadout
+  id: LoadoutClothingCloakMed
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Coroner
+    - Brigmedic
+  prototype: ClothingCloakMed
+
+- type: loadout
+  id: LoadoutClothingCloaksed
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - BlueShield
+    - HeadOfSecurity
+    - SeniorOfficer
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingCloaksed
 #Long
 - type: loadout
   id: LoadoutClothingLongCloakRD

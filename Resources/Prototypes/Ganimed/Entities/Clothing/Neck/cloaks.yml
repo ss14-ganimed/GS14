@@ -38,6 +38,23 @@
     - type: Sprite
       sprite: Corvax/Clothing/Neck/Cloaks/gamer.rsi
 
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakSec
+  name: security cloak
+  description: Worn by the most skilled professional security.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/sec.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakMed
+  name: medical cloak
+  description: Worn by the most skilled professional surgery.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/med.rsi
 #long
 - type: entity
   parent: ClothingNeckBase
