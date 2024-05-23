@@ -11,6 +11,7 @@ namespace Content.Server.Geras;
 public sealed class GerasSystem : SharedGerasSystem
 {
     [Dependency] private readonly PolymorphSystem _polymorphSystem = default!;
+    [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
     [Dependency] private readonly ActionsSystem _actionsSystem = default!;
     [Dependency] private readonly PopupSystem _popupSystem = default!;
 

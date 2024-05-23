@@ -348,7 +348,7 @@ public sealed class WiresSystem : SharedWiresSystem
         }
     }
 
-    private sealed class ActiveWireAction
+    private class ActiveWireAction
     {
         /// <summary>
         ///     The wire action's ID. This is so that once the action is finished,
