@@ -37,3 +37,84 @@
   components:
     - type: Sprite
       sprite: Corvax/Clothing/Neck/Cloaks/gamer.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakSec
+  name: security cloak
+  description: Worn by the most skilled professional security.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/sec.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakMed
+  name: medical cloak
+  description: Worn by the most skilled professional surgery.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/med.rsi
+#long
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakRD
+  name: long research director cloak
+  description: RD cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/rd.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakCE
+  name: long chief engineer cloak
+  description: CE cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/ce.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakCap
+  name: long cap cloak
+  description: Cap cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/cap.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakCMO
+  name: long chief medical officer cloak
+  description: CMO cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/cmo.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakQM
+  name: long request officer cloak
+  description: QM cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/qm.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakHOP
+  name: long head of personal cloak
+  description: HOP cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/hop.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakHOS
+  name: long head of security cloak
+  description: HOS cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/hos.rsi

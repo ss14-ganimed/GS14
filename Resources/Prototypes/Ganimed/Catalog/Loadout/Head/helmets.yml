@@ -151,14 +151,3 @@
   sponsorOnly: true
   prototype: ClothingHeadHelmetCosmonaut
   
-- type: loadout
-  id: LoadoutHeadClothingHeadHelmetSwat
-  category: loadout-category-head
-  cost: 4
-  exclusive: true
-  sponsorOnly: true
-  whitelistJobs:
-    - BlueShield
-    - HeadOfSecurity
-    - Captain
-  prototype: ClothingHeadHelmetSwat
