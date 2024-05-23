@@ -27,7 +27,6 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltERT
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolN1984Nonlethal
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -44,7 +43,6 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltERT
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolN1984Nonlethal
     pocket2: FlashlightSeclite
 
 - type: startingGear
