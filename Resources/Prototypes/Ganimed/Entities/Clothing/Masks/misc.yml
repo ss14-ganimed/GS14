@@ -27,3 +27,26 @@
       sprite: Corvax/Clothing/Mask/death.rsi
     - type: BreathMask
 
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskFoxNinja
+  name: fox mask
+  description: Spooky fox mask.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Mask/mask.rsi
+    - type: Clothing
+      sprite: Ganimed/Clothing/Mask/mask.rsi
+    - type: BreathMask
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskFoxNinjaAlter
+  name: fox mask
+  description: Spooky fox mask.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Mask/maskalter.rsi
+    - type: Clothing
+      sprite: Ganimed/Clothing/Mask/maskalter.rsi
+    - type: BreathMask

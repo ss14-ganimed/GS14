@@ -41,22 +41,6 @@
   prototype: ClothingOuterSuitFire
 
 - type: loadout
-  id: LoadoutOuterClothingClothingOuterHardsuitBasic
-  category: loadout-category-outerClothing
-  cost: 7
-  exclusive: true
-  prototype: ClothingOuterHardsuitBasic
-
-- type: loadout
-  id: LoadoutOuterClothingClothingOuterArmorHeavyRed
-  category: loadout-category-outerClothing
-  cost: 10
-  exclusive: true
-  whitelistJobs:
-    - HeadOfSecurity
-  prototype: ClothingOuterArmorHeavyRed
-
-- type: loadout
   id: LoadoutOuterClothingClothingOuterHardsuitSpatio
   category: loadout-category-outerClothing
   cost: 5
@@ -99,13 +83,4 @@
     - SeniorPhysician
   prototype: ClothingOuterHardsuitVoidParamedOriginal
 
-- type: loadout
-  id: LoadoutOuterClothingClothingOuterHardsuitLuxury
-  category: loadout-category-outerClothing
-  cost: 12
-  exclusive: true
-  sponsorOnly: true
-  whitelistJobs:
-    - Quartermaster
-  prototype: ClothingOuterHardsuitLuxury
   
