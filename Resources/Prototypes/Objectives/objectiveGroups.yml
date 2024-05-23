@@ -18,10 +18,16 @@
     MagbootsStealObjective: 1
     CorgiMeatStealObjective: 1
     ClipboardStealObjective: 1
+    BlueprintsStealObjective: 1
     CaptainGunStealObjective: 0.5
     CaptainJetpackStealObjective: 0.5
     HandTeleporterStealObjective: 0.5
     SecretDocumentsStealObjective: 0.5
+    X01StealObjective: 0.5
+    KravMagaStealObjective: 0.5
+    ReflectiveCoatStealObjective: 0.5
+    CriminalGloves: 0.5
+    CaptainSabreObjective: 0.5
 
 - type: weightedRandom
   id: TraitorObjectiveGroupKill
@@ -34,7 +40,7 @@
   weights:
     EscapeShuttleObjective: 1
     DieObjective: 0.05
-    #HijackShuttleObjective: 0.02
+    HijackShuttleObjective: 0.02
 
 - type: weightedRandom
   id: TraitorObjectiveGroupSocial

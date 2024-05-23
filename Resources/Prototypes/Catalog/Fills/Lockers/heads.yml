@@ -263,6 +263,7 @@
   - type: StorageFill
     contents:
       - id: WeaponDisabler
+      - id: ClothingOuterCoatHoSReflective
       - id: ClothingUniformJumpskirtHoSAlt
         orGroup: HosClothing
       - id: ClothingUniformJumpsuitHoSAlt
@@ -315,6 +316,7 @@
   - type: StorageFill
     contents:
       - id: WeaponDisabler
+      - id: ClothingOuterCoatHoSReflective
       - id: ClothingNeckCloakHos
       - id: ClothingUniformJumpskirtHoSAlt
         orGroup: HosClothing
