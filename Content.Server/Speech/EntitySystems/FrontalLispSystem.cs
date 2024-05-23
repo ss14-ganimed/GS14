@@ -26,8 +26,15 @@ public sealed class FrontalLispSystem : EntitySystem
         message = RegexUpperTh.Replace(message, "TH");
         message = RegexLowerTh.Replace(message, "th");
         // handles ex(c), x
-        message = RegexUpperEcks.Replace(message, "EKTH");
-        message = RegexLowerEcks.Replace(message, "ekth");
+        message = Regex.Replace(message, @"[E]+[Xx]+[Cc]*|[X]+", "EKTH");
+        message = Regex.Replace(message, @"[e]+[x]+[c]*|[x]+", "ekth");
+		
+		// В -> Ф
+		// Ш -> Ф
+		message = Regex.Replace(message, "ш", "ф");
+		message = Regex.Replace(message, "Ш", "Ф");
+		message = Regex.Replace(message, "в", "ф");
+		message = Regex.Replace(message, "В", "Ф");
 
         args.Message = message;
     }

@@ -17,8 +17,21 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/cap.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCapOriginal
+  name: old-fashioned captain's cloak
+  description: An outdated relic of the past, a cloak of dark colors and bleak gold. Not as good at showing off, still a treasured memory.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/original_cap.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -28,19 +41,45 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/hos.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
 
 - type: entity
   parent: ClothingNeckBase
+  id: ClothingNeckCloakHosOriginal
+  name: bleak head of security's cloak
+  description: An exquisite dark and red cloak washed-out with time. Should've learned how to use the washing machine!
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/original_hos.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
+
+- type: entity
+  parent: ClothingNeckBase
   id: ClothingNeckCloakCe
   name: chief engineer's cloak
-  description: A dark green cloak with light blue ornaments, given to those who proved themselves to master the precise art of engineering.
+  description: An all-white cloak with orange ornaments, given to those who proved themselves to master the precise art of engineering.
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/ce.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCeOriginal
+  name: cybercloak
+  description: A dark green cloak with light blue ornaments for the most exqusite cyberpunks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/original_ce.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -50,6 +89,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/cmo.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
 
@@ -57,12 +98,25 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakRd
   name: research director's cloak
-  description: A white cloak with violet stripes, showing your status as the arbiter of cutting-edge technology.
+  description: An all-violet cloak, showing your status as the science royalty of cutting-edge technology.
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/rd.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRdOriginal
+  name: white science cloak
+  description: A white cloak with violet stripes, showing your status as the harbringer of cutting-edge technology.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/original_rd.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -72,6 +126,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/qm.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
 
@@ -83,8 +139,21 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/hop.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakHopOriginal
+  name: head of personnel's cloak
+  description: A blue cloak with red shoulders and gold buttons, proving you are the gatekeeper to any airlock on the station.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/original_hop.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -94,6 +163,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/herald.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -103,6 +174,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/nanotrasen.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -112,6 +185,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/capcloakformal.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
 
@@ -123,6 +198,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/admin.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
   - type: StealTarget
     stealGroup: HeadCloak
 
@@ -134,6 +211,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/miner.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -143,6 +222,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/trans.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -160,6 +241,8 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -169,6 +252,8 @@
   components:
   - type: Sprite
     sprite: Clothing/Neck/Cloaks/piratecap.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase
@@ -188,6 +273,30 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: TypingIndicatorClothing
     proto: moth
+  - type: StaminaProtection
+    coefficient: 0.95
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCentcomBlack
+  name: special operations officer cloak
+  description: The NanoTrasen logo embroidered in gold speaks for itself.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Neck/Cloaks/centcom_officer_black.rsi
+    - type: StaminaProtection
+      coefficient: 0.9
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakCentcomAdmiral
+  name: admiral's cape
+  description: A vibrant green cape with gold stitching, worn by Nanotrasen Navy Admirals.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Neck/Cloaks/admiral.rsi
+    - type: StaminaProtection
+      coefficient: 0.9
 
 - type: entity
   parent: ClothingNeckBase
@@ -199,6 +308,8 @@
     sprite: Clothing/Neck/Cloaks/void.rsi
   - type: TypingIndicatorClothing
     proto: alien
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingNeckBase

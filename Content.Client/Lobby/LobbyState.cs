@@ -7,6 +7,7 @@ using Content.Client.UserInterface.Systems.Chat;
 using Content.Client.Voting;
 using Robust.Client;
 using Robust.Client.Console;
+using Robust.Client.Player;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
@@ -20,6 +21,7 @@ namespace Content.Client.Lobby
         [Dependency] private readonly IBaseClient _baseClient = default!;
         [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
+        [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IResourceCache _resourceCache = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -44,12 +46,36 @@ namespace Content.Client.Lobby
             _gameTicker = _entityManager.System<ClientGameTicker>();
             _contentAudioSystem = _entityManager.System<ContentAudioSystem>();
             _contentAudioSystem.LobbySoundtrackChanged += UpdateLobbySoundtrackInfo;
+<<<<<<< HEAD
+=======
+            _characterSetup = new CharacterSetupGui(_entityManager, _playerManager, _resourceCache, _preferencesManager,
+                _prototypeManager, _configurationManager);
+            LayoutContainer.SetAnchorPreset(_characterSetup, LayoutContainer.LayoutPreset.Wide);
+>>>>>>> master
 
             chatController.SetMainChat(true);
 
+<<<<<<< HEAD
             _voteManager.SetPopupContainer(Lobby.VoteContainer);
             LayoutContainer.SetAnchorPreset(Lobby, LayoutContainer.LayoutPreset.Wide);
             Lobby.ServerName.Text = _baseClient.GameInfo?.ServerName; //The eye of refactor gazes upon you...
+=======
+            _voteManager.SetPopupContainer(_lobby.VoteContainer);
+
+            _characterSetup.CloseButton.OnPressed += _ =>
+            {
+                _lobby.SwitchState(LobbyGui.LobbyGuiState.Default);
+            };
+
+            _characterSetup.SaveButton.OnPressed += _ =>
+            {
+                _characterSetup.Save();
+                _lobby.CharacterPreview.UpdateUI();
+            };
+
+            LayoutContainer.SetAnchorPreset(_lobby, LayoutContainer.LayoutPreset.Wide);
+            _lobby.ServerName.Text = _baseClient.GameInfo?.ServerName; //The eye of refactor gazes upon you...
+>>>>>>> master
             UpdateLobbyUi();
 
             Lobby.CharacterPreview.CharacterSetupButton.OnPressed += OnSetupPressed;
@@ -59,6 +85,10 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
+
+            _preferencesManager.OnServerDataLoaded += PreferencesDataLoaded;
+
+            _lobby.CharacterPreview.UpdateUI();
         }
 
         protected override void Shutdown()
@@ -79,10 +109,22 @@ namespace Content.Client.Lobby
             Lobby = null;
         }
 
+<<<<<<< HEAD
         public void SwitchState(LobbyGui.LobbyGuiState state)
         {
             // Yeah I hate this but LobbyState contains all the badness for now.
             Lobby?.SwitchState(state);
+=======
+            _characterSetup?.Dispose();
+            _characterSetup = null;
+
+            _preferencesManager.OnServerDataLoaded -= PreferencesDataLoaded;
+        }
+
+        private void PreferencesDataLoaded()
+        {
+            _lobby?.CharacterPreview.UpdateUI();
+>>>>>>> master
         }
 
         private void OnSetupPressed(BaseButton.ButtonEventArgs args)

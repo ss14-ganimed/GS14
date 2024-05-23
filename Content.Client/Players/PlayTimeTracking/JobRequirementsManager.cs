@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿﻿using System.Diagnostics.CodeAnalysis;
 using Content.Shared.CCVar;
 using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
@@ -7,13 +7,13 @@ using Robust.Client;
 using Robust.Client.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared.Ganimed.SponsorManager;
 
 namespace Content.Client.Players.PlayTimeTracking;
 
-public sealed class JobRequirementsManager : ISharedPlaytimeManager
+public sealed class JobRequirementsManager
 {
     [Dependency] private readonly IBaseClient _client = default!;
     [Dependency] private readonly IClientNetManager _net = default!;
@@ -21,6 +21,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
+	[Dependency] private readonly SponsorManager _sponsorManager = default!;
 
     private readonly Dictionary<string, TimeSpan> _roles = new();
     private readonly List<string> _roleBans = new();
@@ -82,8 +83,17 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
     public bool IsAllowed(JobPrototype job, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
+		
+		if (_sponsorManager.IsHost(_playerManager.LocalPlayer?.Session))
+			return true;
 
-        if (_roleBans.Contains($"Job:{job.ID}"))
+        if (job.SponsorOnly && !_sponsorManager.AllowSponsor(_playerManager.LocalPlayer?.Session))
+		{
+			reason = FormattedMessage.FromUnformatted(Loc.GetString("sponsor-only"));
+			return false;
+		}
+		
+		if (_roleBans.Contains($"Job:{job.ID}"))
         {
             reason = FormattedMessage.FromUnformatted(Loc.GetString("role-ban"));
             return false;
@@ -134,13 +144,5 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         }
     }
 
-    public IReadOnlyDictionary<string, TimeSpan> GetPlayTimes(ICommonSession session)
-    {
-        if (session != _playerManager.LocalSession)
-        {
-            return new Dictionary<string, TimeSpan>();
-        }
 
-        return _roles;
-    }
 }

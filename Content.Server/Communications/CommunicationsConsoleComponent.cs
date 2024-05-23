@@ -26,7 +26,7 @@ namespace Content.Server.Communications
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField(required: true)]
-        public LocId Title = "comms-console-announcement-title-station";
+        public string Title = "comms-console-announcement-title-station";
 
         /// <summary>
         /// Announcement color
@@ -59,7 +59,8 @@ namespace Content.Server.Communications
         /// <summary>
         /// Announce on all grids (for nukies)
         /// </summary>
-        [DataField]
+        [ViewVariables(VVAccess.ReadWrite)]
+		[DataField]
         public bool Global = false;
 
         /// <summary>

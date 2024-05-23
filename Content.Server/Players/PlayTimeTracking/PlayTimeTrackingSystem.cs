@@ -7,6 +7,7 @@ using Content.Server.GameTicking;
 using Content.Server.Mind;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
+using Content.Shared.Ganimed.SponsorManager;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Players;
@@ -33,7 +34,11 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly MindSystem _minds = default!;
     [Dependency] private readonly PlayTimeTrackingManager _tracking = default!;
+<<<<<<< HEAD
     [Dependency] private readonly IAdminManager _adminManager = default!;
+=======
+    [Dependency] private readonly SponsorManager _sponsorManager = default!;
+>>>>>>> master
 
     public override void Initialize()
     {
@@ -176,8 +181,16 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
     public bool IsAllowed(ICommonSession player, string role)
     {
-        if (!_prototypes.TryIndex<JobPrototype>(role, out var job) ||
-            job.Requirements == null ||
+        if (_sponsorManager.IsHost(player))
+			return true;
+		
+		if (!_prototypes.TryIndex<JobPrototype>(role, out var job))
+			return true;
+		
+		if (job.SponsorOnly && !_sponsorManager.IsSponsor(player))
+			return false;
+			
+		if (job.Requirements == null ||
             !_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;
 
@@ -193,7 +206,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     public HashSet<string> GetDisallowedJobs(ICommonSession player)
     {
         var roles = new HashSet<string>();
-        if (!_cfg.GetCVar(CCVars.GameRoleTimers))
+		if (_sponsorManager.IsHost(player))
             return roles;
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))
@@ -204,7 +217,10 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
         foreach (var job in _prototypes.EnumeratePrototypes<JobPrototype>())
         {
-            if (job.Requirements != null)
+            if (job.SponsorOnly && !_sponsorManager.IsSponsor(player))
+				goto NoRole;
+			
+			if (_cfg.GetCVar(CCVars.GameRoleTimers) && job.Requirements != null)
             {
                 foreach (var requirement in job.Requirements)
                 {
@@ -243,6 +259,16 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
                 jobber.Requirements == null ||
                 jobber.Requirements.Count == 0)
                 continue;
+			
+			if (jobber.SponsorOnly && !_sponsorManager.IsSponsor(player))
+			{
+				jobs.RemoveSwap(i);
+				i--;
+				continue;
+			}
+			
+			if (!_cfg.GetCVar(CCVars.GameRoleTimers))
+				continue;
 
             foreach (var requirement in jobber.Requirements)
             {

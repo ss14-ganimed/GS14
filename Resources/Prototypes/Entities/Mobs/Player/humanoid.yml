@@ -893,3 +893,60 @@
       nameSegments:
       - names_first
       - names_last
+- type: entity
+  id: RandomHumanoidSpawnerTSFNavy
+  name: TSF recruit
+  suffix: TSF, EVA
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/OuterClothing/Hardsuits/tsf.rsi
+      state: icon
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstMilitary
+        - NamesLastMilitary
+    - type: RandomHumanoidSpawner
+      settings: TSFNavy
+
+- type: randomHumanoidSettings
+  id: TSFNavy
+  randomizeName: false
+  components:
+    - type: Loadout
+      prototypes: [ TSFHardsuitGear ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - NamesLastMilitary
+
+- type: entity
+  id: RandomHumanoidSpawnerSRT
+  parent: RandomHumanoidSpawnerERTLeader
+  name: SRT Officer
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: ertsecurity
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - NamesLastMilitary
+    - type: RandomHumanoidSpawner
+      settings: SRT
+
+- type: randomHumanoidSettings
+  id: SRT
+  parent: ERTLeader
+  suffix: SRT
+  components:
+    - type: MindShield
+    - type: GhostRole
+      name: ghost-role-information-srt-name
+      description: ghost-role-information-srt-description
+    - type: GhostTakeoverAvailable
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - NamesLastMilitary
+    - type: Loadout
+      prototypes: [ SRTGear ]

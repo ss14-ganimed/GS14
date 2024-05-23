@@ -2,22 +2,19 @@ using System.Linq;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
+<<<<<<< HEAD
 using Content.Shared.Preferences.Loadouts;
+=======
+using Content.Shared.Preferences;
+>>>>>>> master
 using Content.Shared.Roles;
-using Content.Shared.Storage;
-using Content.Shared.Storage.EntitySystems;
-using Robust.Shared.Collections;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Station;
 
 public abstract class SharedStationSpawningSystem : EntitySystem
 {
-    [Dependency] protected readonly IPrototypeManager PrototypeManager = default!;
     [Dependency] protected readonly InventorySystem InventorySystem = default!;
     [Dependency] private   readonly SharedHandsSystem _handsSystem = default!;
-    [Dependency] private   readonly SharedStorageSystem _storage = default!;
-    [Dependency] private   readonly SharedTransformSystem _xformSystem = default!;
 
     private EntityQuery<HandsComponent> _handsQuery;
     private EntityQuery<InventoryComponent> _inventoryQuery;
@@ -36,6 +33,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     /// <summary>
     ///     Equips the given starting gears from a `RoleLoadout` onto an entity.
     /// </summary>
+<<<<<<< HEAD
     public void EquipRoleLoadout(EntityUid entity, RoleLoadout loadout, RoleLoadoutPrototype roleProto)
     {
         // Order loadout selections by the order they appear on the prototype.
@@ -83,19 +81,32 @@ public abstract class SharedStationSpawningSystem : EntitySystem
 
         var xform = _xformQuery.GetComponent(entity);
 
+=======
+    /// <param name="entity">Entity to load out.</param>
+    /// <param name="startingGear">Starting gear to use.</param>
+    /// <param name="profile">Character profile to use, if any.</param>
+    public void EquipStartingGear(EntityUid entity, StartingGearPrototype startingGear, HumanoidCharacterProfile? profile)
+    {
+>>>>>>> master
         if (InventorySystem.TryGetSlots(entity, out var slotDefinitions))
         {
             foreach (var slot in slotDefinitions)
             {
-                var equipmentStr = startingGear.GetGear(slot.Name);
+                var equipmentStr = startingGear.GetGear(slot.Name, profile);
                 if (!string.IsNullOrEmpty(equipmentStr))
                 {
+<<<<<<< HEAD
                     var equipmentEntity = EntityManager.SpawnEntity(equipmentStr, xform.Coordinates);
                     InventorySystem.TryEquip(entity, equipmentEntity, slot.Name, silent: true, force:true);
+=======
+                    var equipmentEntity = EntityManager.SpawnEntity(equipmentStr, EntityManager.GetComponent<TransformComponent>(entity).Coordinates);
+                    InventorySystem.TryEquip(entity, equipmentEntity, slot.Name, true, force:true);
+>>>>>>> master
                 }
             }
         }
 
+<<<<<<< HEAD
         if (_handsQuery.TryComp(entity, out var handsComponent))
         {
             var inhand = startingGear.Inhand;
@@ -136,6 +147,20 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                         _storage.Insert(slotEnt.Value, ent, out _, storageComp: storage, playSound: false);
                     }
                 }
+=======
+        if (!TryComp(entity, out HandsComponent? handsComponent))
+            return;
+
+        var inhand = startingGear.Inhand;
+        var coords = EntityManager.GetComponent<TransformComponent>(entity).Coordinates;
+        foreach (var prototype in inhand)
+        {
+            var inhandEntity = EntityManager.SpawnEntity(prototype, coords);
+
+            if (_handsSystem.TryGetEmptyHand(entity, out var emptyHand, handsComponent))
+            {
+                _handsSystem.TryPickup(entity, inhandEntity, emptyHand, checkActionBlocker: false, handsComp: handsComponent);
+>>>>>>> master
             }
         }
 

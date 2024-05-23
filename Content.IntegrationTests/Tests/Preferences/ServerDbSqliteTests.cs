@@ -4,8 +4,6 @@ using Content.Server.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Preferences;
-using Content.Shared.Preferences.Loadouts;
-using Content.Shared.Preferences.Loadouts.Effects;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Configuration;
@@ -52,8 +50,26 @@ namespace Content.IntegrationTests.Tests.Preferences
                     Color.Aquamarine,
                     Color.Azure,
                     Color.Beige,
+<<<<<<< HEAD
                     new ())
             };
+=======
+                    Color.Beige,
+                    new ()
+                ),
+                ClothingPreference.Jumpskirt,
+                BackpackPreference.Backpack,
+                SpawnPriorityPreference.None,
+                new Dictionary<string, JobPriority>
+                {
+                    {SharedGameTicker.FallbackOverflowJob, JobPriority.High}
+                },
+                PreferenceUnavailableMode.StayInLobby,
+                new List<string> (),
+                new List<string>(),
+                new List<string>()
+            );
+>>>>>>> master
         }
 
         private static ServerDbSqlite GetDb(RobustIntegrationTest.ServerIntegrationInstance server)

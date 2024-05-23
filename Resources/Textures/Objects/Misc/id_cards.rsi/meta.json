@@ -80,6 +80,9 @@
       "name": "idcook"
     },
     {
+      "name": "idbridgeofficer"
+    },
+    {
       "name": "idcurator"
     },
     {
@@ -222,6 +225,18 @@
     },
     {
       "name": "idseniorofficer"
+    },
+    {
+      "name": "idiaa"
+    },
+    {
+      "name": "idcoroner"
+    },
+    {
+      "name": "idtsf"
+    },
+    {
+      "name": "idblueshield"
     },
     {
       "name": "gold-inhand-left",

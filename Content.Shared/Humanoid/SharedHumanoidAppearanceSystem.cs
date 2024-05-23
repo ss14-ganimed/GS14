@@ -313,7 +313,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     {
         if (profile == null)
             return;
-
+            
         if (!Resolve(uid, ref humanoid))
         {
             return;
@@ -322,6 +322,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SetSpecies(uid, profile.Species, false, humanoid);
         SetSex(uid, profile.Sex, false, humanoid);
         humanoid.EyeColor = profile.Appearance.EyeColor;
+        humanoid.SpeakerColor = profile.Appearance.SpeakerColor;
 
         SetSkinColor(uid, profile.Appearance.SkinColor, false);
 
@@ -372,6 +373,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
                 prototype,
                 profile.Appearance.SkinColor,
                 profile.Appearance.EyeColor,
+                profile.Appearance.SpeakerColor,
                 humanoid.MarkingSet
             );
             AddMarking(uid, marking.MarkingId, markingColors, false);
@@ -386,6 +388,11 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.Age = profile.Age;
+		
+        // const string paletteId = "Material";
+        // var colors = _prototypeManager.Index<ColorPalettePrototype>(paletteId).Colors.Values.ToArray();
+        // var colorIdx = Math.Abs(profile.Name.GetHashCode() % colors.Length);
+        // humanoid.SpeakerColor = colors[colorIdx];
 
         Dirty(uid, humanoid);
     }
@@ -429,7 +436,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         {
             return;
         }
-        humanoid.MarkingSet.EnsureDefault(humanoid.SkinColor, humanoid.EyeColor, _markingManager);
+        humanoid.MarkingSet.EnsureDefault(humanoid.SkinColor, humanoid.EyeColor, humanoid.SpeakerColor, _markingManager);
     }
 
     /// <summary>

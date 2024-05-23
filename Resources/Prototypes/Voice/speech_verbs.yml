@@ -164,3 +164,12 @@
   - chat-speech-verb-electricity-1
   - chat-speech-verb-electricity-2
   - chat-speech-verb-electricity-3
+
+- type: speechVerb
+  id: Vulpkanin
+  name: chat-speech-verb-name-vulpkanin
+  speechVerbStrings:
+  - chat-speech-verb-vulpkanine-1
+  - chat-speech-verb-vulpkanine-2
+  - chat-speech-verb-vulpkanine-3
+  - chat-speech-verb-vulpkanine-4

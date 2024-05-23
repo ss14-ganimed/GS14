@@ -230,7 +230,8 @@ namespace Content.Server.GameTicking
 
             _mind.TransferTo(newMind, mob);
 
-            if (lateJoin && !silent)
+            
+			if (lateJoin && !silent)
             {
                 _chatSystem.DispatchStationAnnouncement(station,
                     Loc.GetString("latejoin-arrival-announcement",

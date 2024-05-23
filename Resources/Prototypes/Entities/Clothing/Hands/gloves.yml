@@ -110,6 +110,8 @@
     fiberMaterial: fibers-durathread
     fiberColor: fibers-regal-blue
   - type: FingerprintMask
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHandsBase
@@ -146,7 +148,21 @@
   - type: FingerprintMask
 
 - type: entity
-  parent: ClothingHandsButcherable
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesNitrileAlt
+  name: old-fashioned nitrile gloves
+  description: Old version of the famous nitrile gloves. Still gets its use.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/alter_nitrile.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/alter_nitrile.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
   id: ClothingHandsGlovesNitrile
   name: nitrile gloves
   description: High-quality nitrile gloves. Expensive medical PPE.
@@ -235,6 +251,8 @@
     stripTimeReduction: 1
     stealthy: true
   - type: NinjaGloves
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHandsGlovesColorBlack
@@ -251,6 +269,8 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
+  - type: StaminaProtection
+    coefficient: 0.95
 
 # can't parent combat gloves since they are butcherable
 - type: entity
@@ -268,6 +288,8 @@
   - type: Insulated
   - type: Fiber
     fiberColor: fibers-black
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHandsGlovesCombat
@@ -286,6 +308,8 @@
   - type: Fiber
     fiberMaterial: fibers-insulative
     fiberColor: fibers-olive
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHandsButcherable
@@ -352,7 +376,13 @@
   - type: Unremoveable
 
 - type: entity
-  parent: ClothingHandsButcherable
+  parent: ClothingHandsGlovesColorWhite
+  id: ClothingHandsGlovesCluwneRemoveable
+  name: cluwne hands
+  description:  A cursed pair of cluwne hands.
+
+- type: entity
+  parent: ClothingHandsBase
   id: ClothingHandsGlovesNorthStar
   name: gloves of the north star
   description: These gloves allow you to punch incredibly fast.
@@ -401,6 +431,67 @@
   - type: GuideHelp
     guides:
     - Forensics
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesAerostatic
+  name: aerostatic gloves
+  description: Breathable red gloves for expert handling of a pen and notebook.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Hands/Gloves/kim.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Hands/Gloves/kim.rsi
+    - type: GloveHeatResistance
+      heatResistance: 1400
+    - type: Insulated
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCentcomNaval
+  name: nanotrasen naval gloves
+  description: A high quality pair of thick gloves covered in gold stitching, given to Nanotrasen's Naval Commanders.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Hands/Gloves/centcom_naval.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Hands/Gloves/centcom_naval.rsi
+    - type: GloveHeatResistance
+      heatResistance: 1400
+    - type: Insulated
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesKravMaga
+  name: krav-maga gloves
+  description: These gloves allow their wearers to hit the solar plexus, lung and throat with professional dignity.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Hands/Gloves/krav.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Hands/Gloves/krav.rsi
+  - type: MeleeWeapon
+    attackRate: 2
+    damage:
+      types:
+       Blunt: 6
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-red
+  - type: FingerprintMask
+  - type: StaticPrice
+    price: 1200
+  - type: Insulated
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StaminaDamageOnHit
+    damage: 33
+  - type: StealTarget
+    stealGroup: KravMaga
 
 # TODO Make lubed items not slip in hands
 - type: entity

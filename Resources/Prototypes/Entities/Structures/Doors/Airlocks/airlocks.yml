@@ -93,6 +93,32 @@
 
 - type: entity
   parent: Airlock
+  id: AirlockCentcom
+  suffix: Centcom
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/highsec/centcom.rsi
+  - type: WiresPanelSecurity
+    securityLevel: maxSecurity
+  - type: Door
+    crushDamage:
+      types:
+        Blunt: 35
+  - type: Weldable
+    time: 7
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Wires
+    layoutId: AirlockCentcom
+
+- type: entity
+  parent: Airlock
   id: AirlockSecurity
   suffix: Security
   components:
@@ -152,6 +178,7 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/hatch_maint.rsi
+
 
 # Glass
 - type: entity
@@ -280,3 +307,5 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/centcomm.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity

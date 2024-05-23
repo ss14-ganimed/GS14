@@ -82,7 +82,26 @@
     minReflectProb: 0.25
   - type: IgnitionSource
     temperature: 700
-
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-EnergySword-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-EnergySword-security
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+    - label: corvax-hidden-desc-EnergySword-cargo
+      jobRequired:
+        - SalvageSpecialist
+# Corvax-HiddenDesc-End
+        
 - type: entity
   name: pen
   parent: EnergySword
@@ -160,7 +179,23 @@
     - Write
   - type: DisarmMalus
     malus: 0
-
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-EnergyDagger-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-EnergyDagger-research
+      jobRequired:
+        - SeniorResearcher
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
+          
 - type: entity
   parent: BaseItem
   id: EnergyDaggerBox
@@ -215,7 +250,22 @@
       right:
       - state: inhand-right-blade
         shader: unshaded
-
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    #- label: corvax-hidden-desc-EnergyCutlass-pirate #У нас нету в игре PirateRole, грусть
+    - label: corvax-hidden-desc-EnergyCutlass-security
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+    - label: corvax-hidden-desc-EnergyCutlass-cargo
+      jobRequired:
+        - SalvageSpecialist
+# Corvax-HiddenDesc-End
+        
 - type: entity
   name: double-bladed energy sword
   parent: EnergySword
@@ -285,3 +335,22 @@
       right:
       - state: inhand-right-blade
         shader: unshaded
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-EnergySword-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-EnergySword-security
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+    - label: corvax-hidden-desc-EnergySword-cargo
+      jobRequired:
+        - SalvageSpecialist
+# Corvax-HiddenDesc-End

@@ -35,6 +35,9 @@
             "name": "stamp-detective"
         },
         {
+            "name": "stamp-psychologist"
+        },
+        {
             "name": "stamp-hop"
         },
         {
@@ -57,6 +60,12 @@
         },
         {
             "name": "stamp-trader"
+        },
+        {
+            "name": "stamp-iaa"
+        },
+        {
+            "name": "stamp-legal"
         },
         {
             "name": "stamp-warden"

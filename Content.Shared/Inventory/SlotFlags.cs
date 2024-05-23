@@ -25,7 +25,10 @@ public enum SlotFlags
     POCKET = 1 << 12,
     LEGS = 1 << 13,
     FEET = 1 << 14,
+    SOCKS = 1 << 16,
     SUITSTORAGE = 1 << 15,
+    UNDERPANTS = 1 << 17,
+    UNDERSHIRT = 1 << 18,
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

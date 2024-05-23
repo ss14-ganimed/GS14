@@ -1,0 +1,15 @@
+- type: startingGear
+  id: TSFHardsuitGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitTSF
+    back: ClothingMilitaryBackpack
+    shoes: ClothingShoesBootsMagTSF
+    eyes: ClothingEyesNightVisionSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitTSF
+    id: TSFPDA
+    ears: ClothingHeadsetTSF
+    belt: ClothingBeltMilitaryWebbing
+    pocket2: FlashlightSeclite
+
+

@@ -1,0 +1,115 @@
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeret
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatBeret
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretCmo
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingHeadHatBeretCmo
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretHoS
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingHeadHatBeretHoS
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretEngineering
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+  prototype: ClothingHeadHatBeretEngineering
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretBrigmedic
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Coroner
+    - Brigmedic
+  prototype: ClothingHeadHatBeretBrigmedic
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretMerc
+  category: loadout-category-head
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - SalvageSpecialist
+    - Quartermaster
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingHeadHatBeretMerc
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretSecurity
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingHeadHatBeretSecurity
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretWarden
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - Warden
+    - HeadOfSecurity
+  prototype: ClothingHeadHatBeretWarden
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeretRND
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingHeadHatBeretRND
+  

@@ -10,11 +10,20 @@
 - type: playTimeTracker
   id: JobBartender
 
+- type: playTimeTracker
+  id: JobBlueShield
+
+- type: playTimeTracker
+  id: JobBridgeOfficer
+
 - type: playTimeTracker # Used as a tracker for all borgs and midround borging.
   id: JobBorg
 
 - type: playTimeTracker
   id: JobBotanist
+
+- type: playTimeTracker
+  id: JobBrigmedic
 
 - type: playTimeTracker
   id: JobCaptain
@@ -44,6 +53,9 @@
   id: JobClown
 
 - type: playTimeTracker
+  id: JobCoroner
+
+- type: playTimeTracker
   id: JobDetective
 
 - type: playTimeTracker
@@ -69,6 +81,9 @@
 
 - type: playTimeTracker
   id: JobHeadOfSecurity
+
+- type: playTimeTracker
+  id: JobIAA
 
 - type: playTimeTracker
   id: JobJanitor
@@ -98,6 +113,9 @@
   id: JobParamedic
 
 - type: playTimeTracker
+  id: JobPrisoner
+
+- type: playTimeTracker
   id: JobPsychologist
 
 - type: playTimeTracker
@@ -113,6 +131,9 @@
   id: JobResearchDirector
 
 - type: playTimeTracker
+  id: JobRoboticist
+
+- type: playTimeTracker
   id: JobSalvageSpecialist
 
 - type: playTimeTracker
@@ -123,6 +144,18 @@
 
 - type: playTimeTracker
   id: JobSecurityOfficer
+
+- type: playTimeTracker
+  id: JobSeniorEngineer
+
+- type: playTimeTracker
+  id: JobSeniorOfficer
+
+- type: playTimeTracker
+  id: JobSeniorPhysician
+
+- type: playTimeTracker
+  id: JobSeniorResearcher
 
 - type: playTimeTracker
   id: JobServiceWorker
