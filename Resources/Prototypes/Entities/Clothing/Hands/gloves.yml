@@ -425,6 +425,11 @@
   - type: GuideHelp
     guides:
     - Forensics
+  - type: Tag
+    tags:
+      - HighRiskItem
+  - type: StealTarget
+    stealGroup: GlovesForensic
 
 - type: entity
   parent: ClothingHandsBase

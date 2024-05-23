@@ -606,9 +606,15 @@
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
-    proto: RedMediumLaser
+  - type: ProjectileBatteryAmmoProvider
+    proto: LaserHeat
     fireCost: 100
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: LaserHeat
+      fireCost: 100
+    - proto: BulletDisabler
+      fireCost: 100
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 30

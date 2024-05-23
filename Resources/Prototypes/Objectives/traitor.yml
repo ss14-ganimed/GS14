@@ -179,6 +179,8 @@
   parent: BaseTraitorStealObjective
   id: BaseRDStealObjective
   components:
+  - type: NotJobRequirement
+    job: ResearchDirector
   - type: StealCondition
     stealGroup: ClothingOuterHardsuitRd
     owner: job-name-rd
@@ -229,6 +231,19 @@
     job: HeadOfSecurity
   - type: StealCondition
     stealGroup: MultiphaseEnergyPistol
+    owner: job-name-hos
+
+- type: entity
+  noSpawn: true
+  parent: BaseTraitorStealObjective
+  id: ReflectiveCoatStealObjective
+  components:
+  - type: Objective
+    difficulty: 3
+  - type: NotJobRequirement
+    job: HeadOfSecurity
+  - type: StealCondition
+    stealGroup: ReflectiveCoat
     owner: job-name-hos
 
 ## ce
@@ -290,6 +305,7 @@
   parent: BaseTraitorStealObjective
   id: BaseCaptainObjective
   components:
+  - type: NotCommandRequirement
   - type: Objective
     # sorry ce but your jordans are not as high security as the caps gear
     difficulty: 3.5
@@ -324,6 +340,15 @@
 - type: entity
   noSpawn: true
   parent: BaseCaptainObjective
+  id: CaptainSabreObjective
+  components:
+  - type: StealCondition
+    stealGroup: CaptainSabre
+    owner: job-name-captain
+
+- type: entity
+  noSpawn: true
+  parent: BaseCaptainObjective
   id: NukeDiskStealObjective
   components:
   - type: Objective
@@ -350,3 +375,18 @@
   - type: StealCondition
     stealGroup: KravMaga
     owner: job-name-warden
+
+## detective
+
+- type: entity
+  noSpawn: true
+  parent: BaseTraitorStealObjective
+  id: CriminalGloves
+  components:
+  - type: Objective
+    difficulty: 3
+  - type: NotJobRequirement
+    job: Detective
+  - type: StealCondition
+    stealGroup: GlovesForensic
+    owner: job-name-detective

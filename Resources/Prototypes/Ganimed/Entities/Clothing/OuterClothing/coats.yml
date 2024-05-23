@@ -165,3 +165,23 @@
       sprite: Corvax/Clothing/OuterClothing/Coats/ussp.rsi
     - type: Clothing
       sprite: Corvax/Clothing/OuterClothing/Coats/ussp.rsi
+
+- type: entity
+  parent: ClothingOuterCoatHoSTrench
+  id: ClothingOuterCoatHoSReflective
+  name: reflective coat
+  description: Pretty old stuff for these times, bringing back old memories...
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/OuterClothing/coat_reflec.rsi
+    - type: Clothing
+      sprite: Ganimed/Clothing/OuterClothing/coat_reflec.rsi
+    - type: Reflect
+      reflectProb: 1
+      reflects:
+        - Energy
+    - type: Tag
+      tags:
+        - HighRiskItem
+    - type: StealTarget
+      stealGroup: ReflectiveCoat
