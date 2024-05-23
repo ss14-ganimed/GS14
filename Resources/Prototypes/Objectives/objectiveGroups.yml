@@ -26,7 +26,8 @@
     X01StealObjective: 0.5
     KravMagaStealObjective: 0.5
     ReflectiveCoatStealObjective: 0.5
-
+    CriminalGloves: 0.5
+    CaptainSabreObjective: 0.5
 
 - type: weightedRandom
   id: TraitorObjectiveGroupKill
