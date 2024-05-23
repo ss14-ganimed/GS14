@@ -8,7 +8,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Client.Lobby.UI.Loadouts;
+namespace Content.Client.Preferences.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class LoadoutContainer : BoxContainer
@@ -45,7 +45,7 @@ public sealed partial class LoadoutContainer : BoxContainer
 
                 var spriteTooltip = new Tooltip();
                 spriteTooltip.SetMessage(FormattedMessage.FromUnformatted(_entManager.GetComponent<MetaDataComponent>(_entity.Value).EntityDescription));
-                TooltipSupplier = _ => spriteTooltip;
+                Sprite.TooltipSupplier = _ => spriteTooltip;
             }
         }
     }
