@@ -12,7 +12,6 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Utility;
 
 
 namespace Content.Server.Preferences.Managers
@@ -26,12 +25,7 @@ namespace Content.Server.Preferences.Managers
         [Dependency] private readonly IServerNetManager _netManager = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
-<<<<<<< HEAD
-        [Dependency] private readonly IPlayerManager _playerManager = default!;
-        [Dependency] private readonly IDependencyCollection _dependencies = default!;
-=======
         [Dependency] private readonly IPrototypeManager _protos = default!;
->>>>>>> master
 
         // Cache player prefs on the server so we don't need as much async hell related to them.
         private readonly Dictionary<NetUserId, PlayerPrefData> _cachedPlayerPrefs =
@@ -104,14 +98,8 @@ namespace Content.Server.Preferences.Managers
             }
 
             var curPrefs = prefsData.Prefs!;
-<<<<<<< HEAD
-            var session = _playerManager.GetSessionById(userId);
-
-            profile.EnsureValid(session, _dependencies);
-=======
 
             profile.EnsureValid(_cfg, _protos);
->>>>>>> master
 
             var profiles = new Dictionary<int, ICharacterProfile>(curPrefs.Characters)
             {
@@ -204,30 +192,19 @@ namespace Content.Server.Preferences.Managers
 
                 async Task LoadPrefs()
                 {
-                    var prefs = await GetOrCreatePreferencesAsync(session.UserId, cancel);
+                    var prefs = await GetOrCreatePreferencesAsync(session.UserId);
                     prefsData.Prefs = prefs;
+                    prefsData.PrefsLoaded = true;
+
+                    var msg = new MsgPreferencesAndSettings();
+                    msg.Preferences = prefs;
+                    msg.Settings = new GameSettings
+                    {
+                        MaxCharacterSlots = MaxCharacterSlots
+                    };
+                    _netManager.ServerSendMessage(msg, session.Channel);
                 }
             }
-        }
-
-        public void FinishLoad(ICommonSession session)
-        {
-            // This is a separate step from the actual database load.
-            // Sanitizing preferences requires play time info due to loadouts.
-            // And play time info is loaded concurrently from the DB with preferences.
-            var prefsData = _cachedPlayerPrefs[session.UserId];
-            DebugTools.Assert(prefsData.Prefs != null);
-            prefsData.Prefs = SanitizePreferences(session, prefsData.Prefs, _dependencies);
-
-            prefsData.PrefsLoaded = true;
-
-            var msg = new MsgPreferencesAndSettings();
-            msg.Preferences = prefsData.Prefs;
-            msg.Settings = new GameSettings
-            {
-                MaxCharacterSlots = MaxCharacterSlots
-            };
-            _netManager.ServerSendMessage(msg, session.Channel);
         }
 
         public void OnClientDisconnected(ICommonSession session)
@@ -289,19 +266,15 @@ namespace Content.Server.Preferences.Managers
             return null;
         }
 
-        private async Task<PlayerPreferences> GetOrCreatePreferencesAsync(NetUserId userId, CancellationToken cancel)
+        private async Task<PlayerPreferences> GetOrCreatePreferencesAsync(NetUserId userId)
         {
-            var prefs = await _db.GetPlayerPreferencesAsync(userId, cancel);
+            var prefs = await _db.GetPlayerPreferencesAsync(userId);
             if (prefs is null)
             {
-                return await _db.InitPrefsAsync(userId, HumanoidCharacterProfile.Random(), cancel);
+                return await _db.InitPrefsAsync(userId, HumanoidCharacterProfile.Random());
             }
 
-<<<<<<< HEAD
-            return prefs;
-=======
             return SanitizePreferences(prefs);
->>>>>>> master
         }
 
         private PlayerPreferences SanitizePreferences(PlayerPreferences prefs)

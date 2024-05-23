@@ -7,7 +7,7 @@ using Robust.Shared.Random;
 namespace Content.Shared.Clothing;
 
 /// <summary>
-/// Assigns a loadout to an entity based on the RoleLoadout prototype
+/// Assigns a loadout to an entity based on the startingGear prototype
 /// </summary>
 public sealed class LoadoutSystem : EntitySystem
 {
@@ -26,15 +26,7 @@ public sealed class LoadoutSystem : EntitySystem
 
     private void OnMapInit(EntityUid uid, LoadoutComponent component, MapInitEvent args)
     {
-        // Use starting gear if specified
-        if (component.StartingGear != null)
-        {
-            var gear = _protoMan.Index(_random.Pick(component.StartingGear));
-            _station.EquipStartingGear(uid, gear);
-            return;
-        }
-
-        if (component.RoleLoadout == null)
+        if (component.Prototypes == null)
             return;
 
         var proto = _protoMan.Index<StartingGearPrototype>(_random.Pick(component.Prototypes));
