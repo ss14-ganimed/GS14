@@ -28,3 +28,5 @@ guidebook-reagent-recipes-mix-info =
             }
     }
 guidebook-reagent-physical-description = [italic]На вид вещество { $description }.[/italic].
+guidebook-reagent-plant-metabolisms-header = Метаболизм растений
+guidebook-reagent-plant-metabolisms-rate = [bold]Метаболизм растений[/bold] [color=gray](1 единица каждые 3 секунды базово)[/color]
