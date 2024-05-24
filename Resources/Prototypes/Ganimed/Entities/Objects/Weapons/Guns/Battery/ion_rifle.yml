@@ -2,7 +2,7 @@
 #copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
 - type: entity
   name: Ion rifle
-  parent: BaseWeaponBattery
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponIonRifleGun
   description: A specialized rifle that fires ion charges capable of disrupting and interfering with electronic devices. The damage extends to all parts/components. It's huge, but it can be hung on your back and has a sniper scope.
   components:

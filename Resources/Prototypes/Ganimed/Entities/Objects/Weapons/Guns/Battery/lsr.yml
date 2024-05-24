@@ -2,7 +2,7 @@
 #copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
 - type: entity
   name: LSR Queen Blade
-  parent: BaseWeaponBattery
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponEnergySniperRifle
   description: A high-tech sniper rifle used by ship pilots and assassins.
   components:
