@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: EngiVendInventory
   startingInventory:
+    ClothingEyesGlassesMeson: 4
     ClothingHeadHatWelding: 6
     Multitool: 4
     NetworkConfigurator: 5

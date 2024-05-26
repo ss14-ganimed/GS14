@@ -336,7 +336,7 @@
       - ClothingEyesGlassesMesonDiagnostic
       - ClothingEyesGlassesScienceMeson
       - ClothingEyesGlassesTray
-      - ClothingEyesGlassesMeson
+      - ClothingEyesGlassesMesonScanner
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - BoxBeanbag

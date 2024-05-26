@@ -1,6 +1,6 @@
 - type: latheRecipe
-  id: ClothingEyesGlassesMeson
-  result: ClothingEyesGlassesMeson
+  id: ClothingEyesGlassesMesonScanner
+  result: ClothingEyesGlassesMesonScanner
   completetime: 4
   materials:
     Steel: 250
