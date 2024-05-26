@@ -194,8 +194,6 @@
   - type: Clothing
     sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
   - type: EyeProtection
-  - type: Mesons
-    mesonType: Walls
     
 - type: entity
   parent: ClothingEyesNightVision
