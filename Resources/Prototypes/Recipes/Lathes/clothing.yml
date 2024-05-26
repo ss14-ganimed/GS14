@@ -3,7 +3,7 @@
   result: ClothingEyesNightVision
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 300
     Gold: 100
     Silver: 50
@@ -13,44 +13,40 @@
   result: ClothingEyesNightVisionScience
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionMeson
   result: ClothingEyesNightVisionMeson
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionMedicine
   result: ClothingEyesNightVisionMedicine
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionSecurity
   result: ClothingEyesNightVisionSecurity
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 # Jumpsuits/skirts
 - type: latheRecipe
   id: ClothingUniformJumpsuitColorGrey # Tide
