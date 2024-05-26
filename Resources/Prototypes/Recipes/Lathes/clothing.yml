@@ -1,4 +1,14 @@
 - type: latheRecipe
+  id: ClothingEyesGlassesMeson
+  result: ClothingEyesGlassesMeson
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 400
+    Gold: 100
+    Silver: 70
+
+- type: latheRecipe
   id: ClothingEyesNightVision
   result: ClothingEyesNightVision
   completetime: 4
@@ -27,6 +37,7 @@
     Glass: 350
     Gold: 150
     Silver: 100
+    Uranium: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionMedicine
