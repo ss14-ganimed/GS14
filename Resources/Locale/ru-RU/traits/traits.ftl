@@ -44,3 +44,7 @@ trait-frontal-lisp-name = Шепелявость
 trait-frontal-lisp-desc = Вы фепеляфите.
 trait-socialanxiety-name = Социальная неловкость
 trait-socialanxiety-desc = Вы очень стеснительны и часто запинаетесь.
+trait-liar-name = Патологический лжец
+trait-liar-desc = Вы с трудом заставляете себя говорить правду. Иногда вы всё равно лжёте.
+trait-snoring-name = Храп
+trait-snoring-desc = Вы храпите во время сна.

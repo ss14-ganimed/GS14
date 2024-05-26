@@ -391,6 +391,13 @@
 
 - type: statusIcon
   parent: JobIcon
+  id: JobIconAdmin
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Admin
+    
+- type: statusIcon
+  parent: JobIcon
   id: JobIconCoroner
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi

@@ -47,6 +47,7 @@
       state: powersink
     - type: WarpPoint
       location: powersink
+    - type: MesonsNonviewable
 # Corvax-HiddenDesc-Start
     - type: HiddenDescription
       entries:

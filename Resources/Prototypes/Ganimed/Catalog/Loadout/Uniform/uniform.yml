@@ -534,6 +534,24 @@
   prototype: ClothingUniformJumpskirtCMO
 
 - type: loadout
+  id: LoadoutClothingUniformJumpsuitCMOTurtle
+  category: loadout-category-uniform
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingUniformJumpsuitCMOTurtle
+
+- type: loadout
+  id: LoadoutClothingUniformJumpskirtCMOTurtle
+  category: loadout-category-uniform
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingUniformJumpskirtCMOTurtle
+
+- type: loadout
   id: LoadoutUniformClothingUniformJumpsuitHoP
   category: loadout-category-uniform
   cost: 1

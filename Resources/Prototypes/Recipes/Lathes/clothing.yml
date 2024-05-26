@@ -1,9 +1,19 @@
 - type: latheRecipe
+  id: ClothingEyesGlassesMesonScanner
+  result: ClothingEyesGlassesMesonScanner
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 400
+    Gold: 100
+    Silver: 70
+
+- type: latheRecipe
   id: ClothingEyesNightVision
   result: ClothingEyesNightVision
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 300
     Gold: 100
     Silver: 50
@@ -13,44 +23,40 @@
   result: ClothingEyesNightVisionScience
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionMeson
   result: ClothingEyesNightVisionMeson
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionMedicine
   result: ClothingEyesNightVisionMedicine
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionSecurity
   result: ClothingEyesNightVisionSecurity
   completetime: 4
   materials:
-    Steel: 200
+    Steel: 250
     Glass: 350
     Gold: 150
-    Silver: 10
-    Uranium: 100
+    Silver: 100
 # Jumpsuits/skirts
 - type: latheRecipe
   id: ClothingUniformJumpsuitColorGrey # Tide
@@ -264,6 +270,22 @@
 - type: latheRecipe
   id: ClothingUniformJumpskirtCMO
   result: ClothingUniformJumpskirtCMO
+  completetime: 4
+  materials:
+    Cloth: 300
+    Durathread: 100
+
+- type: latheRecipe
+  id: ClothingUniformJumpsuitCMOTurtle
+  result: ClothingUniformJumpsuitCMOTurtle
+  completetime: 4
+  materials:
+    Cloth: 300
+    Durathread: 100
+
+- type: latheRecipe
+  id: ClothingUniformJumpskirtCMOTurtle
+  result: ClothingUniformJumpskirtCMOTurtle
   completetime: 4
   materials:
     Cloth: 300

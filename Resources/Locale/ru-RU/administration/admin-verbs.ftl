@@ -14,3 +14,4 @@ admin-verbs-erase-description =
     Игроки увидят всплывающее окно, указывающее им играть как будто исчезнувшего никогда не существовало.
 toolshed-verb-mark = Отметить
 toolshed-verb-mark-description = Помещает данную сущность в переменную $marked, заменяя ее предыдущее значение.
+admin-verbs-freeze-and-mute = Заморозить и заглушить

@@ -42,7 +42,8 @@
     noRot: false
   - type: Pullable
   - type: DamageExaminable
-
+  - type: MesonsNonviewable
+  
 - type: entity
   name: "storage item"
   id: BaseStorageItem

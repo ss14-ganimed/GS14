@@ -239,7 +239,12 @@ flavor-complex-screwdriver = как крепкий апельсиновый со
 flavor-complex-cogchamp = как латунь
 flavor-complex-themartinez = как фиалки и лимонная водка
 flavor-complex-irish-car-bomb = как шипучая пенка колы
-
+flavor-complex-vodka-red-bool = как инфаркт
+flavor-complex-irish-bool = как кофеин и Ирландия
+flavor-complex-xeno-basher = как уничтожение жуков
+flavor-complex-budget-insuls-drink = как взлом шлюза
+flavor-complex-watermelon-wakeup = как сладкое пробуждение
+flavor-complex-rubberneck = как синтетика
 ### This is exactly what pilk tastes like. I'm not even joking. I might've been a little drunk though
 
 flavor-complex-white-gilgamesh = как слегка газированные сливки

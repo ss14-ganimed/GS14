@@ -2,7 +2,7 @@
 #copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
 - type: entity
   name: Immolator
-  parent: BaseWeaponBattery
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponImmolator
   description: A modified laser cannon that fires highly concentrated beams with higher intensity that ignite the target, at the expense of losing most of the power per shot.
   components:

@@ -195,7 +195,7 @@
   - type: Clothing
     sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
   - type: EyeProtection
-
+    
 - type: entity
   parent: ClothingEyesNightVision
   id: ClothingEyesNightVisionMedicine
