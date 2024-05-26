@@ -37,7 +37,6 @@
     Glass: 350
     Gold: 150
     Silver: 100
-    Uranium: 100
 
 - type: latheRecipe
   id: ClothingEyesNightVisionMedicine
