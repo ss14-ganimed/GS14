@@ -2,20 +2,13 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using Content.Shared.Alert;
-using Content.Shared.Audio;
 using Content.Shared.Gravity;
-using Content.Shared.Inventory;
-using Content.Shared.Inventory.Events;
-using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Standing;
-using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Player;
 using Content.Shared.Mobs.Components;
-using Content.Shared.Teleportation.Components;
-using Content.Shared.Teleportation.Systems;
 using Content.Shared.Damage;
 using Content.Shared.DamageTeleport.Components;
 using Robust.Shared.Physics.Dynamics;
@@ -34,9 +27,7 @@ public sealed class DamageTeleportSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
 

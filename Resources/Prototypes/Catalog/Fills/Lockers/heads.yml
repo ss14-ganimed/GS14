@@ -223,6 +223,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingOuterReactiveArmor
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
@@ -243,6 +244,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingOuterReactiveArmor
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
       - id: CircuitImprinterMachineCircuitboard
