@@ -17,14 +17,18 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Content.Shared.Damage;
-using Content.Shared.ReactiveArmor.Components;
+using Content.Shared.DamageTeleport.Components;
 using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Physics.Events;
+using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Projectiles;
+using Content.Shared.Weapons.Ranged.Components;
+using Content.Shared.Weapons.Ranged.Events;
+using Content.Shared.Weapons.Reflect;
 
+namespace Content.Shared.DamageTeleport.Systems;
 
-namespace Content.Shared.ReactiveArmor.Systems;
-
-public sealed class ReactiveArmorSystem : EntitySystem
+public sealed class DamageTeleportSystem : EntitySystem
 {
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -40,29 +44,26 @@ public sealed class ReactiveArmorSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ReactiveArmorComponent, DamageChangedEvent>(OnReactiveDamaged);
+        SubscribeLocalEvent<DamageTeleportComponent, AttackedEvent>(OnReactiveDamaged);
+        SubscribeLocalEvent<DamageTeleportComponent, ProjectileReflectAttemptEvent>(OnReactiveDamagedProjectile);
+        SubscribeLocalEvent<DamageTeleportComponent, HitScanReflectAttemptEvent>(OnReactiveDamagedHitscan);
     }
 
-    private void OnReactiveDamaged(EntityUid uid, ReactiveArmorComponent component, ref DamageChangedEvent args)
+    private void OnReactiveDamaged(EntityUid uid, DamageTeleportComponent component, ref AttackedEvent args)
     {
-        if (!args.DamageIncreased)
-            return;
-
-        if (args.DamageDelta == null)
-            return;
-
-        foreach (var (type, amount) in args.DamageDelta.DamageDict)
-        {
-            if (component.DamageTypes != null && !component.DamageTypes.Contains(type))
-                continue;
-
-            component.AccumulatedDamage += (float) amount;
-        }
-        if (component.AccumulatedDamage <= component.DamageThreshold)
-            return;
-
          var xform = Transform(uid);
          _xform.SetCoordinates(uid, xform, xform.Coordinates.Offset(_random.NextVector2(component.MinRange, component.MaxRange)));
-         float AccumulatedDamage = 0;
+    }
+
+    private void OnReactiveDamagedProjectile(EntityUid uid, DamageTeleportComponent component, ref ProjectileReflectAttemptEvent args)
+    {
+         var xform = Transform(uid);
+         _xform.SetCoordinates(uid, xform, xform.Coordinates.Offset(_random.NextVector2(component.MinRange, component.MaxRange)));
+    }
+
+    private void OnReactiveDamagedHitscan(EntityUid uid, DamageTeleportComponent component, ref HitScanReflectAttemptEvent args)
+    {
+         var xform = Transform(uid);
+         _xform.SetCoordinates(uid, xform, xform.Coordinates.Offset(_random.NextVector2(component.MinRange, component.MaxRange)));
     }
 }
