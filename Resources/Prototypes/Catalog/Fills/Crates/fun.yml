@@ -28,6 +28,9 @@
       - id: PlushieMoth
       - id: PlushieArachind
       - id: PlushiePenguin
+      - id: PlushieLizardHart
+      - id: PlushieLizardMetaku
+      - id: PlushieLizardReesa
 
 - type: entity
   id: CrateFunLizardPlushieBulk
@@ -41,7 +44,10 @@
         amount: 3
       - id: PlushieSpaceLizard
         amount: 2
-
+      - id: PlushieLizardHart
+      - id: PlushieLizardMetaku
+      - id: PlushieLizardReesa
+      
 - type: entity
   id: CrateFunInstrumentsVariety
   parent: CrateGenericSteel
