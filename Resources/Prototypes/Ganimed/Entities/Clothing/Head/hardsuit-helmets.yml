@@ -700,3 +700,31 @@
         Heat: 0.9
   - type: StaminaProtection
     coefficient: 0.95
+    
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitUSSP
+  noSpawn: true
+  name: USSP hardsuit helmet
+  description: ...We need 5 billions...
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: Ganimed/Clothing/Head/Hardsuits/ussp.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Head/Hardsuits/ussp.rsi
+  - type: PointLight
+    color: "#FFFFCC"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.9
+  - type: StaminaProtection
+    coefficient: 0.95
+  - type: ShowJobIcons  
