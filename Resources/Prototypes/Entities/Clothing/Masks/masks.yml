@@ -133,6 +133,8 @@
     sprite: Clothing/Mask/medical.rsi
   - type: BreathMask
   - type: IngestionBlocker
+  - type: DiseaseProtection
+    protection: 0.10
   - type: Tag
     tags:
     - PetWearable
@@ -277,6 +279,8 @@
   - type: Clothing
     sprite: Clothing/Mask/sterile.rsi
   - type: IngestionBlocker
+  - type: DiseaseProtection
+    protection: 0.1
   - type: Item
     size: Tiny
   - type: IdentityBlocker

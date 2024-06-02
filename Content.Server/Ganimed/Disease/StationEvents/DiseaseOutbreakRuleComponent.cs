@@ -17,11 +17,12 @@ public sealed partial class DiseaseOutbreakRuleComponent : Component
     {
         "SpaceCold",
         "VanAusdallsRobovirus",
-        "VentCough",
+        "Plague",
         "AMIV",
-        "SpaceFlu",
-        "BirdFlew",
         "TongueTwister",
-        "OwOnavirus"
+        "OwOnavirus",
+        "DwarfPunch",
+        "UraniumPlague",
+        "SlimeVirus"
     };
 }

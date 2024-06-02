@@ -9,6 +9,8 @@
     sprite: Clothing/Head/Hoods/Bio/general.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/general.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: BreathMask
   - type: IngestionBlocker
   - type: Tag
@@ -31,6 +33,8 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
   - type: StaminaProtection
@@ -46,6 +50,8 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
   - type: StaminaProtection
@@ -61,6 +67,8 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
   - type: StaminaProtection
@@ -76,6 +84,8 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/security.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/security.rsi
   - type: StaminaProtection
@@ -91,6 +101,8 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
   - type: StaminaProtection
