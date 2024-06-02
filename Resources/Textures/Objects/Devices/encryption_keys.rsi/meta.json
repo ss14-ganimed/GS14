@@ -15,6 +15,7 @@
     {"name": "crypt_silver"},
     {"name": "crypt_red"},
     {"name": "crypt_blue"},
+	{"name": "crypt_red_ussp"},
     {"name": "common_label"},
     {"name": "cap_label"},
     {"name": "cargo_label"},
@@ -41,6 +42,7 @@
     {"name": "srt_label"},
     {"name": "mtf_label"},
     {"name": "tsf_label"},
-    {"name": "synd_label"}
+    {"name": "synd_label"},
+    {"name": "ussp_label"}
   ]
 }

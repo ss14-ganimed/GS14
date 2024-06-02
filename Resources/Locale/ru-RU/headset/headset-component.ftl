@@ -23,3 +23,4 @@ chat-radio-ert = ОБР
 chat-radio-srt = ГСН
 chat-radio-mtf = МОГ
 chat-radio-tsf = ТСФ
+chat-radio-ussp = СССП
