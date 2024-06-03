@@ -106,6 +106,16 @@
     revertOnDeath: false
 
 - type: polymorph
+  id: SlimeVirusMorph
+  configuration:
+    entity: MobAdultSlimesBlue
+    forced: true
+    inventory: Transfer
+    transferName: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
   id: BreadMorph
   configuration:
     entity: FoodBreadPlain

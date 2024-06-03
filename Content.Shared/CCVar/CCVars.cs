@@ -2056,5 +2056,8 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> DebugOptionVisualizerTest =
             CVarDef.Create("debug.option_visualizer_test", false, CVar.CLIENTONLY);
+
+        public static readonly CVarDef<bool>
+            GameDiseaseEnabled = CVarDef.Create("game.disease", true, CVar.SERVERONLY);
     }
 }
