@@ -1,0 +1,29 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  name: ABZL
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponZamitisLazer
+  description: The innovative USSP laser rifle.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Guns/Battery/abzs.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Ganimed/Objects/Guns/Battery/abzs.rsi
+  - type: StaticPrice
+    price: 600
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 4
+    availableModes:
+      - SemiAuto
+      - FullAuto
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 40

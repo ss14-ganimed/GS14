@@ -340,3 +340,18 @@
     layers:
     - state: crypt_blue
     - state: tsf_label
+    
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyUSSP
+  name: USSP encryption key
+  description: An encryption key used by USSP.
+  components:
+  - type: EncryptionKey
+    channels:
+    - USSP
+    defaultChannel: USSP
+  - type: Sprite
+    layers:
+    - state: crypt_red_ussp
+    - state: ussp_label    

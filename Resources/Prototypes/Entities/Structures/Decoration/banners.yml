@@ -147,4 +147,13 @@
     sprite: Structures/Decoration/banner.rsi
     state: banner-green
 
+- type: entity
+  id: BannerUSSP
+  parent: BannerBase
+  name: USSP banner
+  description: A banner displaying colors of communism. Proletarians of all countries, unite!
+  components:
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner-ussp
 
