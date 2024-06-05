@@ -43,6 +43,19 @@
 	{
       "name": "yellow_adult_slime_dead"
     },
+
+    {
+      "name": "grey_adult_slime",
+      "delays": [
+        [
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "grey_adult_slime_dead"
+    },
 	{
       "name": "aslime-_3",
       "directions": 4

@@ -188,6 +188,15 @@
         Base: blue_adult_slime
       Dead:
         Base: blue_adult_slime_dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 1
+    - id: BlueSlimeExtract
+      amount: 1
+  - type: XenoBiology
+    mutagen: MobAdultSlimesBlueAngry
+    antimutagen: MobAdultSlimesBlueAngry
 
 - type: entity
   name: blue slime
@@ -225,6 +234,15 @@
           Structural: 4
           Caustic: 1
           Poison: 4
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: GreenSlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: MobAdultSlimesGreenAngry
+      antimutagen: MobAdultSlimesGreenAngry
 
 - type: entity
   name: green slime
@@ -255,6 +273,15 @@
           Base: yellow_adult_slime
         Dead:
           Base: yellow_adult_slime_dead
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: YellowSlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: MobAdultSlimesYellowAngry
+      antimutagen: MobAdultSlimesYellowAngry
     - type: MeleeWeapon
       damage:
         types:
@@ -276,3 +303,60 @@
       description: ghost-role-information-angry-slimes-description
       raffle:
         settings: short
+
+#Enterprise Slimes start
+
+- type: entity
+  id: RandomGreySlimeMutation
+  name: random grey slime mutatuion
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Aliens/slimes.rsi
+        state: grey_adult_slime
+  - type: RandomSpawner
+    prototypes:
+      - MobAdultSlimesGreenAngry
+      - MobAdultSlimesYellowAngry
+      - MobAdultSlimesBlueAngry
+    chance: 1
+
+- type: entity
+  name: grey slime
+  parent: MobAdultSlimes
+  id: MobAdultSlimesGrey
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: grey_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: grey_adult_slime
+        Dead:
+          Base: grey_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+    - type: NpcFactionMember
+      factions:
+        - SimpleHostile
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: GreySlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: RandomGreySlimeMutation
+      antimutagen: MobAdultSlimesGrey

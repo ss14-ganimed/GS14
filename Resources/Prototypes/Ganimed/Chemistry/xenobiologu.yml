@@ -1,0 +1,189 @@
+#Grey
+
+- type: reagent
+  id: GreyExtract
+  name: reagent-name-slime-grey
+  desc: reagent-desc-slime-grey
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#808080"
+
+- type: reaction
+  id: GreyExtractPlasma
+  impact: Low
+  quantized: true
+  reactants:
+    GreyExtract:
+      amount: 5
+    Plasma:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: MobAdultSlimesGrey
+
+- type: reaction
+  id: GreyExtractBlood
+  impact: Low
+  quantized: true
+  reactants:
+    GreyExtract:
+      amount: 5
+    Blood:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: MonkeyCube
+    - !type:CreateEntityReactionEffect
+      entity: MonkeyCube
+    - !type:CreateEntityReactionEffect
+      entity: MonkeyCube
+
+- type: reaction
+  id: GreyExtractWater
+  reactants:
+    GreyExtract:
+      amount: 5
+    Water:
+      amount: 5
+  products:
+    Epinephrine: 10
+
+#Green
+
+- type: reagent
+  id: GreenExtract
+  name: reagent-name-slime-green
+  desc: reagent-desc-slime-green
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#00FF00"
+
+- type: reaction
+  id: GreenExtractPlasma
+  impact: Low
+  quantized: true
+  reactants:
+    GreenExtract:
+      amount: 5
+    Plasma:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: SheetUranium1
+
+- type: reaction
+  id: GreenExtractBlood
+  impact: Low
+  quantized: true
+  reactants:
+    GreenExtract:
+      amount: 5
+    Blood:
+      amount: 5
+  products:
+    Tritium: 10
+
+- type: reaction
+  id: GreenExtractWater
+  reactants:
+    GreenExtract:
+      amount: 5
+    Water:
+      amount: 5
+  products:
+    UnstableMutagen: 10
+
+#Blue
+
+- type: reagent
+  id: BlueExtract
+  name: reagent-name-slime-blue
+  desc: reagent-desc-slime-blue
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#00FFFF"
+
+- type: reaction
+  id: BlueExtractPlasma
+  impact: Low
+  quantized: true
+  reactants:
+    BlueExtract:
+      amount: 5
+    Plasma:
+      amount: 5
+  effects:
+  - !type:CreateGas
+    gas: NitrousOxide
+
+- type: reaction
+  id: BlueExtractBlood
+  impact: Low
+  quantized: true
+  reactants:
+    BlueExtract:
+      amount: 5
+    Blood:
+      amount: 5
+  products:
+    Frezon: 10
+
+- type: reaction
+  id: BlueExtractWater
+  reactants:
+    BlueExtract:
+      amount: 5
+    Water:
+      amount: 5
+  products:
+    Cryoxadone: 25
+
+#Yellow
+
+- type: reagent
+  id: YellowExtract
+  name: reagent-name-slime-yellow
+  desc: reagent-desc-slime-yellow
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#00FFFF"
+
+- type: reaction
+  id: YellowExtractPlasma
+  impact: Low
+  quantized: true
+  reactants:
+    YellowExtract:
+      amount: 5
+    Plasma:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: PowerCellSlime
+
+- type: reaction
+  id: YellowExtractBlood
+  impact: Low
+  quantized: true
+  reactants:
+    YellowExtract:
+      amount: 5
+    Blood:
+      amount: 5
+  effects:
+    - !type:EmpReactionEffect
+      rangePerUnit: 0.2
+      maxRange: 3
+      energyConsumption: 6500
+      duration: 7
+
+- type: reaction
+  id: YellowExtractWater
+  reactants:
+    YellowExtract:
+      amount: 5
+    Water:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: SlimeLight
