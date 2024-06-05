@@ -293,7 +293,7 @@
 - type: entity
   name: yellow slime
   parent: MobAdultSlimesYellow
-  id: MobAdultSlimesYellow
+  id: MobAdultSlimesYellowAngry
   suffix: Angry
   components:
     - type: NpcFactionMember
@@ -436,3 +436,14 @@
     - type: XenoBiology
       mutagen: MobAdultSlimesYellow
       antimutagen: MobAdultSlimesOrange
+
+#SlimePeopleEvolt
+
+- type: entity
+  noSpawn: true
+  id: RandomSlimePerson
+  parent: MobSlimePerson
+  name: SRT Officer
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: true

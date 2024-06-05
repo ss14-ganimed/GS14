@@ -5,7 +5,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Dictionary;
 
-namespace Content.Shared.XenoBiology.Components;
+namespace Content.Server.XenoBiology.Components;
 
 [RegisterComponent, Access(typeof(XenoBiologySystem))]
 public sealed partial class XenoBiologyComponent : Component
