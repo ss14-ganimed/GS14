@@ -1,6 +1,7 @@
 /// Maded by Gorox for Enterprise. See CLA
 using System.Numerics;
 using Content.Shared.XenoBiology.Components;
+using Content.Shared.XenoFood.Components;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -32,8 +33,7 @@ public sealed class XenoBiologySystem : EntitySystem
     {
         foreach (var hitEntity in args.HitEntities)
         {
-            if (EntityManager.TryGetComponent<MetaDataComponent>(hitEntity, out var metaData) &&
-                metaData.EntityPrototype?.ID == MobMonkeyId)
+            if (EntityManager.HasComponent<XenoFoodComponent>(hitEntity))
             {
                 // Атакующий получает очки
                 component.Points += PointsPerAttack;
