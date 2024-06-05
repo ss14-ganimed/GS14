@@ -1033,3 +1033,37 @@
     - CentralCommand
     - NuclearOperative
     - SyndicateAgent
+
+- type: entity
+  parent: IDCardStandard
+  id: USSPIDCard1
+  name: USSP soldier representative ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: idusspsoldier
+  - type: IdCard
+    jobTitle: Солдат НРА СССП
+    jobIcon: JobIconUSSPSoldier
+    jobColor: "#f80000"
+  - type: Access
+    access:
+     - Maintenance
+
+- type: entity
+  parent: IDCardStandard
+  id: USSPIDCard2
+  name: USSP officer representative ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: idusspofficer
+  - type: IdCard
+    jobTitle: Офицер НРА СССП
+    jobIcon: JobIconUSSPOfficer
+    jobColor: "#840000"
+  - type: Access
+    access:
+     - Maintenance      

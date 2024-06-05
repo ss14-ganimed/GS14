@@ -220,6 +220,12 @@
             "name": "TSF"
         },
         {
+            "name": "USSPOfficer"
+        },	
+        {
+            "name": "USSPSoldier"
+        },		
+        {
             "name": "IAA"
 	},
 

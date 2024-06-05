@@ -239,6 +239,17 @@
       "name": "pda-tsf"
     },
     {
+      "name": "pda-ussp",
+      "delays": [
+        [
+          1.2,
+          1.2,
+          1.2,
+          1.2
+        ]
+      ]
+    },	
+    {
       "name": "pda-blueshield"
 	},
 	{

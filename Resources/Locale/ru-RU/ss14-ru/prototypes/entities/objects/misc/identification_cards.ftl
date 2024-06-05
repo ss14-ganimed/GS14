@@ -145,3 +145,7 @@ ent-PirateIDCard = ID карта пирата
 ent-UniversalIDCard = универсальная ID карта
     .desc = ID карта, которая позволит вам осуществить свои самые сокровенные желания.
     .suffix = Админ
+ent-USSPIDCard1 = ID карта солдата СССП
+    .desc = { ent-IDCardStandard.desc } Кажется, это один из примеров советского реверс-инжиниринга.
+ent-USSPIDCard2 = ID карта офицера СССП
+    .desc = { ent-IDCardStandard.desc } Кажется, это один из примеров советского реверс-инжиниринга.	
