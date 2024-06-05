@@ -223,6 +223,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: GreySlimeExtract
       - id: ClothingOuterReactiveArmor
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
@@ -244,6 +245,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: GreySlimeExtract
       - id: ClothingOuterReactiveArmor
       - id: ResearchComputerCircuitboard
       - id: ProtolatheMachineCircuitboard
