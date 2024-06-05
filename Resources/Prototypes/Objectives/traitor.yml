@@ -199,6 +199,16 @@
 - type: entity
   noSpawn: true
   parent: BaseRDStealObjective
+  id: ReactiveArmorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: ReactiveArmor
+  - type: Objective
+    difficulty: 3
+
+- type: entity
+  noSpawn: true
+  parent: BaseRDStealObjective
   id: HandTeleporterStealObjective
   components:
   - type: StealCondition

@@ -125,6 +125,13 @@
   sprite:
     sprite: Ganimed/Clothing/OuterClothing/coat_reflec.rsi
     state: icon
+
+- type: stealTargetGroup
+  id: ReactiveArmor
+  name: reactive armor
+  sprite:
+    sprite: Ganimed/Clothing/OuterClothing/reactive.rsi
+    state: icon
 # Thief Collection
 
 - type: stealTargetGroup
@@ -310,6 +317,7 @@
   sprite:
     sprite: Clothing/Neck/Medals/clownmedal.rsi
     state: icon
+
 
 #Thief structures
 
