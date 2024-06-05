@@ -126,3 +126,37 @@
     radius: 5
     energy: 2.5
     color: "#FFFF00"
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: PurpleSlimeExtract
+  name: purple slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FF00FF"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: PurpleExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: OrangeSlimeExtract
+  name: orange slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FFA500"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: OrangeExtract
+          Quantity: 5

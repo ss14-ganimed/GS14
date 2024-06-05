@@ -137,7 +137,7 @@
     proto: slime
   - type: NpcFactionMember
     factions:
-    - SimpleNeutral
+    - XenoSlime
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
@@ -195,8 +195,8 @@
     - id: BlueSlimeExtract
       amount: 1
   - type: XenoBiology
-    mutagen: MobAdultSlimesBlueAngry
-    antimutagen: MobAdultSlimesBlueAngry
+    mutagen: MobAdultSlimesBlue
+    antimutagen: MobAdultSlimesBlue
 
 - type: entity
   name: blue slime
@@ -241,8 +241,8 @@
       - id: GreenSlimeExtract
         amount: 1
     - type: XenoBiology
-      mutagen: MobAdultSlimesGreenAngry
-      antimutagen: MobAdultSlimesGreenAngry
+      mutagen: MobAdultSlimesGreen
+      antimutagen: MobAdultSlimesGreen
 
 - type: entity
   name: green slime
@@ -280,8 +280,8 @@
       - id: YellowSlimeExtract
         amount: 1
     - type: XenoBiology
-      mutagen: MobAdultSlimesYellowAngry
-      antimutagen: MobAdultSlimesYellowAngry
+      mutagen: MobAdultSlimesGreen
+      antimutagen: MobAdultSlimesYellow
     - type: MeleeWeapon
       damage:
         types:
@@ -293,7 +293,7 @@
 - type: entity
   name: yellow slime
   parent: MobAdultSlimesYellow
-  id: MobAdultSlimesYellowAngry
+  id: MobAdultSlimesYellow
   suffix: Angry
   components:
     - type: NpcFactionMember
@@ -318,9 +318,9 @@
         state: grey_adult_slime
   - type: RandomSpawner
     prototypes:
-      - MobAdultSlimesGreenAngry
-      - MobAdultSlimesYellowAngry
-      - MobAdultSlimesBlueAngry
+      - MobAdultSlimesPurple
+      - MobAdultSlimesOrange
+      - MobAdultSlimesBlue
     chance: 1
 
 - type: entity
@@ -347,7 +347,7 @@
           Poison: 4
     - type: NpcFactionMember
       factions:
-        - SimpleHostile
+        - XenoSlime
     - type: HTN
       rootTask:
         task: SimpleHostileCompound
@@ -360,3 +360,79 @@
     - type: XenoBiology
       mutagen: RandomGreySlimeMutation
       antimutagen: MobAdultSlimesGrey
+
+- type: entity
+  name: purple slime
+  parent: MobAdultSlimes
+  id: MobAdultSlimesPurple
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: purple_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: purple_adult_slime
+        Dead:
+          Base: purple_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+    - type: NpcFactionMember
+      factions:
+        - XenoSlime
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: PurpleSlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: MobAdultSlimesPurple
+      antimutagen: MobAdultSlimesPurple
+
+- type: entity
+  name: orange slime
+  parent: MobAdultSlimes
+  id: MobAdultSlimesOrange
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: orange_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: orange_adult_slime
+        Dead:
+          Base: orange_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+    - type: NpcFactionMember
+      factions:
+        - XenoSlime
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: OrangeSlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: MobAdultSlimesYellow
+      antimutagen: MobAdultSlimesOrange
