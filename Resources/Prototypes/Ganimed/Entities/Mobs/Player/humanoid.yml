@@ -1,0 +1,51 @@
+- type: entity
+  id: RandomHumanoidSpawnerUSSPArmy
+  name: USSP soldier
+  suffix: USSP, soldier
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Uniforms/ussp/ussp_form.rsi
+      state: icon
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstUSSPMilitary
+        - NamesLastUSSPMilitary
+    - type: RandomHumanoidSpawner
+      settings: USSP1
+
+- type: randomHumanoidSettings
+  id: USSP1
+  randomizeName: false
+  components:
+    - type: Loadout
+      prototypes: [ USSPGearSoldier ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstUSSPMilitary
+      - NamesLastUSSPMilitary   
+
+- type: entity
+  id: RandomHumanoidSpawnerUSSPofficer
+  name: USSP soldier
+  suffix: USSP, officer
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Uniforms/ussp/ussp_form_commander.rsi
+      state: icon
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstMilitaryUSSPLeader
+        - NamesLastUSSPMilitary
+    - type: RandomHumanoidSpawner
+      settings: USSP2
+
+- type: randomHumanoidSettings
+  id: USSP2
+  randomizeName: false
+  components:
+    - type: Loadout
+      prototypes: [ USSPGearOfficer ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryUSSPLeader
+      - NamesLastUSSPMilitary
