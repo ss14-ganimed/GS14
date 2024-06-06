@@ -1,7 +1,7 @@
 /// Maded by Gorox for Enterprise. See CLA
 using System.Numerics;
-using Content.Server.XenoBiology.Components;
-using Content.Server.XenoFood.Components;
+using Content.Server.Ganimed.XenoBiology.Components;
+using Content.Server.Ganimed.XenoFood.Components;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Robust.Shared.GameObjects;
@@ -15,7 +15,7 @@ using Content.Server.Polymorph.Systems;
 using Content.Server.Polymorph.Components;
 using Robust.Server.GameObjects;
 
-namespace Content.Server.XenoBiology.Systems;
+namespace Content.Server.Ganimed.XenoBiology.Systems;
 
 public sealed class XenoBiologySystem : EntitySystem
 {
@@ -28,8 +28,6 @@ public sealed class XenoBiologySystem : EntitySystem
     private const string PolymorphId = "RandomSlimePerson"; // Прототип полиморфа
     private const int PointsPerAttack = 10; // Очки за атаку
     private const int PointsThreshold = 200; // Сколько необходимо для деления
-
-    private int _tickCounter = 0;
 
     public override void Initialize()
     {
@@ -57,7 +55,7 @@ public sealed class XenoBiologySystem : EntitySystem
                     else
 
                     // С шансом 30% мутирует при делении
-                    if (_robustRandom.Prob(0.3f))
+                    if (_robustRandom.Prob(component.Mutationchance))
                     {
                         Spawn(component.Mutagen, Transform(uid).Coordinates);
                     }
@@ -67,7 +65,7 @@ public sealed class XenoBiologySystem : EntitySystem
                         Spawn(component.Antimutagen, Transform(uid).Coordinates);
                     }
 
-                    if (_robustRandom.Prob(0.3f))
+                    if (_robustRandom.Prob(component.Mutationchance))
                     {
                         Spawn(component.Mutagen, Transform(uid).Coordinates);
                     }
@@ -76,7 +74,7 @@ public sealed class XenoBiologySystem : EntitySystem
                         Spawn(component.Antimutagen, Transform(uid).Coordinates);
                     }
 
-                    if (_robustRandom.Prob(0.3f))
+                    if (_robustRandom.Prob(component.Mutationchance))
                     {
                         Spawn(component.Mutagen, Transform(uid).Coordinates);
                     }
@@ -92,10 +90,5 @@ public sealed class XenoBiologySystem : EntitySystem
                 break;
             }
         }
-    }
-
-    private void Spawn(string prototypeId)
-    {
-        var entity = EntityManager.Spawn(prototypeId);
     }
 }
