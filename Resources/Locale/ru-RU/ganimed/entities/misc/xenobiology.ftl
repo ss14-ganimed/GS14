@@ -22,10 +22,10 @@ reagent-desc-slime-grey = Вещество, полученное из экстр
 reagent-name-slime-green = зелёный экстракт
 reagent-desc-slime-green = Вещество, полученное из экстракта слайма.
 
-reagent-name-slime-blue = зелёный экстракт
+reagent-name-slime-blue = голубой экстракт
 reagent-desc-slime-blue = Вещество, полученное из экстракта слайма.
 
-reagent-name-slime-yellow = зелёный экстракт
+reagent-name-slime-yellow = жёлтый экстракт
 reagent-desc-slime-yellow = Вещество, полученное из экстракта слайма.
 
 reagent-name-slime-purple = фиолетовый экстракт
