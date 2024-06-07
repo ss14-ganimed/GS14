@@ -195,7 +195,7 @@
     - id: BlueSlimeExtract
       amount: 1
   - type: XenoBiology
-    mutagen: MobAdultSlimesBlue
+    mutagen: MobAdultSlimesDarkBlue
     antimutagen: MobAdultSlimesBlue
 
 - type: entity
@@ -437,13 +437,51 @@
       mutagen: MobAdultSlimesYellow
       antimutagen: MobAdultSlimesOrange
 
+- type: entity
+  name: dark blue slime
+  parent: MobAdultSlimes
+  id: MobAdultSlimesDarkBlue
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: dark_blue_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: dark_blue_adult_slime
+        Dead:
+          Base: dark_blue_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+    - type: NpcFactionMember
+      factions:
+        - XenoSlime
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: DarkBlueSlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: MobAdultSlimesDarkBlue
+      antimutagen: MobAdultSlimesDarkBlue
+
 #SlimePeopleEvolt
 
 - type: entity
   noSpawn: true
   id: RandomSlimePerson
   parent: MobSlimePerson
-  name: SRT Officer
+  name: Random slime person
   components:
     - type: RandomHumanoidAppearance
       randomizeName: true

@@ -7,13 +7,13 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Server.Ganimed.XenoBiology.Components;
 
-[RegisterComponent, Access(typeof(XenoBiologySystem))]
+[RegisterComponent]
 public sealed partial class XenoBiologyComponent : Component
 {
     [DataField("points"), ViewVariables(VVAccess.ReadWrite)]
     public int Points = 0;
 
-    [DataField("mutationchance"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
     public float Mutationchance = 0.3f;
 
     [DataField("mutagen", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
