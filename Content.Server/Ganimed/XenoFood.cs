@@ -3,7 +3,7 @@ using Content.Server.Ganimed.XenoBiology.Systems;
 
 namespace Content.Server.Ganimed.XenoFood.Components;
 
-[RegisterComponent, Access(typeof(XenoBiologySystem))]
+[RegisterComponent]
 public sealed partial class XenoFoodComponent : Component
 {
 }

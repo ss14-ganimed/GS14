@@ -33,3 +33,5 @@ reagent-desc-slime-purple = Вещество, полученное из экст
 
 reagent-name-slime-orange = оранжевый экстракт
 reagent-desc-slime-orange = Вещество, полученное из экстракта слайма.
+
+potion-speed-name-prefix = скоростной {$target}
