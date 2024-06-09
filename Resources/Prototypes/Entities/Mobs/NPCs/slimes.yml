@@ -303,7 +303,6 @@
   id: GreySlimeSpawn
   name: slime spawn
   parent: MarkerBase
-  noSpawn: true
   components:
   - type: Sprite
     layers:
