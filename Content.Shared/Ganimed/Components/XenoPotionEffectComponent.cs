@@ -4,25 +4,23 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.Ganimed.XenoPotionEffected.Components;
 
-[RegisterComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
+[RegisterComponent, NetworkedComponent]
+[AutoGenerateComponentState(raiseAfterAutoHandleState: true)]
 public sealed partial class XenoPotionEffectedComponent : Component
 {
 
-    [DataField, AutoNetworkedField]
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public Color Color = Color.FromHex("#c62121");
 
-    [DataField, AutoNetworkedField]
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public Color BeforeColor = Color.FromHex("#c62121");
 
-    [DataField, AutoNetworkedField]
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
     public bool Enabled;
     
-    [DataField, AutoNetworkedField]
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
     public string ShaderName = "Greyscale";
-}
-
-[Serializable, NetSerializable]
-public enum XenoPotionEffectedVisualizer : byte
-{
-    Effected,
 }

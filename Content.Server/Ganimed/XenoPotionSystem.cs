@@ -1,3 +1,4 @@
+/// Maded by Gorox for Enterprise. See CLA
 using System.Linq;
 using Content.Shared.Ganimed.XenoPotion.Components;
 using Content.Server.Ganimed.XenoFood.Components;

@@ -1,119 +1,42 @@
-using System.Linq;
-using Robust.Client.GameObjects;
-using static Robust.Client.GameObjects.SpriteComponent;
+/// https://github.com/space-wizards/space-station-14/pull/20443
+using Content.Client.Items.Systems;
 using Content.Shared.Clothing;
-using Content.Shared.Hands;
 using Content.Shared.Ganimed.XenoPotionEffected.Components;
-using Robust.Client.Graphics;
-using Robust.Shared.Prototypes;
+using Robust.Client.GameObjects;
 
-namespace Content.Client.Ganimed.XenoPotionEffected
+namespace Content.Client.Ganimed.XenoPotionEffected;
+
+public sealed class XenoPotionEffectedSystem : VisualizerSystem<XenoPotionEffectedComponent>
 {
-    public sealed class XenoPotionEffectedVisualizerSystem : VisualizerSystem<XenoPotionEffectedComponent>
+    [Dependency] private readonly ItemSystem _item = default!;
+
+    public override void Initialize()
     {
-        /// <summary>
-        /// Visualizer for Paint which applies a shader and colors the entity.
-        /// </summary>
+        base.Initialize();
 
-        [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-        [Dependency] private readonly IPrototypeManager _protoMan = default!;
+        SubscribeLocalEvent<XenoPotionEffectedComponent, AfterAutoHandleStateEvent>(OnAfterState);
+        SubscribeLocalEvent<XenoPotionEffectedComponent, EquipmentVisualsUpdatedEvent>(OnVisualsUpdated);
+    }
 
-        public ShaderInstance? Shader;
-
-        public override void Initialize()
+    private void OnAfterState(EntityUid uid, XenoPotionEffectedComponent component, ref AfterAutoHandleStateEvent @event)
+    {
+        if (!TryComp<SpriteComponent>(uid, out var sprite))
         {
-            base.Initialize();
-
-            SubscribeLocalEvent<XenoPotionEffectedComponent, HeldVisualsUpdatedEvent>(OnHeldVisualsUpdated);
-            SubscribeLocalEvent<XenoPotionEffectedComponent, ComponentShutdown>(OnShutdown);
-            SubscribeLocalEvent<XenoPotionEffectedComponent, EquipmentVisualsUpdatedEvent>(OnEquipmentVisualsUpdated);
+            return;
         }
+        sprite.Color = component.Color;
+        _item.VisualsChanged(uid);
+    }
 
-        protected override void OnAppearanceChange(EntityUid uid, XenoPotionEffectedComponent component, ref AppearanceChangeEvent args)
+    private void OnVisualsUpdated(EntityUid uid, XenoPotionEffectedComponent component, EquipmentVisualsUpdatedEvent @event)
+    {
+        if (!TryComp<SpriteComponent>(@event.Equipee, out var sprite))
         {
-            Shader = _protoMan.Index<ShaderPrototype>(component.ShaderName).Instance();
-
-            if (args.Sprite == null)
-                return;
-
-            if (!_appearance.TryGetData<bool>(uid, XenoPotionEffectedVisualizer.Effected, out bool isPainted))
-                return;
-
-            var sprite = args.Sprite;
-
-
-            foreach (var spriteLayer in sprite.AllLayers)
-            {
-                if (spriteLayer is not Layer layer)
-                    continue;
-
-                if (layer.Shader == null) // If shader isn't null we dont want to replace the original shader.
-                {
-                    layer.Shader = Shader;
-                    layer.Color = component.Color;
-                }
-            }
+            return;
         }
-
-        private void OnHeldVisualsUpdated(EntityUid uid, XenoPotionEffectedComponent component, HeldVisualsUpdatedEvent args)
+        foreach (var layer in @event.RevealedLayers)
         {
-            if (args.RevealedLayers.Count == 0)
-                return;
-
-            if (!TryComp(args.User, out SpriteComponent? sprite))
-                return;
-
-            foreach (var revealed in args.RevealedLayers)
-            {
-                if (!sprite.LayerMapTryGet(revealed, out var layer) || sprite[layer] is not Layer notlayer)
-                    continue;
-
-                sprite.LayerSetShader(layer, component.ShaderName);
-                sprite.LayerSetColor(layer, component.Color);
-            }
-        }
-
-        private void OnEquipmentVisualsUpdated(EntityUid uid, XenoPotionEffectedComponent component, EquipmentVisualsUpdatedEvent args)
-        {
-            if (args.RevealedLayers.Count == 0)
-                return;
-
-            if (!TryComp(args.Equipee, out SpriteComponent? sprite))
-                return;
-
-            foreach (var revealed in args.RevealedLayers)
-            {
-                if (!sprite.LayerMapTryGet(revealed, out var layer) || sprite[layer] is not Layer notlayer)
-                    continue;
-
-                sprite.LayerSetShader(layer, component.ShaderName);
-                sprite.LayerSetColor(layer, component.Color);
-            }
-        }
-
-        private void OnShutdown(EntityUid uid, XenoPotionEffectedComponent component, ref ComponentShutdown args)
-        {
-            if (!TryComp(uid, out SpriteComponent? sprite))
-                return;
-
-            component.BeforeColor = sprite.Color;
-            Shader = _protoMan.Index<ShaderPrototype>(component.ShaderName).Instance();
-
-            if (!Terminating(uid))
-            {
-                foreach (var spriteLayer in sprite.AllLayers)
-                {
-                    if (spriteLayer is not Layer layer)
-                        continue;
-
-                    if (layer.Shader == Shader) // If shader isn't same as one in component we need to ignore it.
-                    {
-                        layer.Shader = null;
-                        if (layer.Color == component.Color) // If color isn't the same as one in component we don't want to change it.
-                            layer.Color = component.BeforeColor;
-                    }
-                }
-            }
+            sprite.LayerSetColor(layer, component.Color);
         }
     }
 }
