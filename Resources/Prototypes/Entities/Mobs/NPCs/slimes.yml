@@ -300,6 +300,22 @@
 #Enterprise Slimes start
 
 - type: entity
+  id: GreySlimeSpawn
+  name: slime spawn
+  parent: MarkerBase
+  noSpawn: true
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Aliens/slimes.rsi
+        state: grey_adult_slime
+  - type: RandomSpawner
+    prototypes:
+      - MobAdultSlimesGrey
+    chance: 1
+
+- type: entity
   id: RandomGreySlimeMutation
   name: random grey slime mutatuion
   parent: MarkerBase
