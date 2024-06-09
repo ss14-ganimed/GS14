@@ -4,6 +4,7 @@ using Content.Shared.Ganimed.XenoPotion.Components;
 using Content.Server.Ganimed.XenoFood.Components;
 using Content.Shared.Ganimed.XenoPotionEffected.Components;
 using Content.Server.Atmos.Components;
+using Content.Shared.Clothing.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
@@ -59,7 +60,7 @@ public sealed class XenoPotionSystem : EntitySystem
 
       else if (args.Target != null && component.Effect == "Pressure" && !EntityManager.HasComponent<XenoPotionEffectedComponent>(args.Target.Value))
       {
-        if (args.Target != null && !EntityManager.HasComponent<PressureProtectionComponent>(args.Target.Value))
+        if (args.Target != null && !EntityManager.HasComponent<PressureProtectionComponent>(args.Target.Value) && EntityManager.HasComponent<ClothingComponent>(args.Target.Value))
         {
           var meta = MetaData(args.Target.Value);
           var name = meta.EntityName;

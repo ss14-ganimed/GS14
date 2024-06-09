@@ -54,4 +54,7 @@ reagent-name-slime-dark-blue = тёмно-синий экстракт
 reagent-desc-slime-dark-blue = Вещество, полученное из экстракта слайма.
 
 reagent-name-slime-stabilazer = слаймовый стабилизатор
-reagent-desc-slime-stabilazer = Вещество, которое не даёт возможности слаймам мутировать.
+reagent-desc-slime-stabilazer = Вещество, которое не даёт возможность слаймам мутировать.
+
+potion-speed-name-prefix = скоростной {$target}
+potion-pressure-name-prefix = герметичный {$target}
