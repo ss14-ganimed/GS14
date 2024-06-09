@@ -122,13 +122,6 @@
   components:
   - type: ReplacementAccent
     accent: slimes
-  - type: GhostTakeoverAvailable
-  - type: GhostRole
-    makeSentient: true
-    name: ghost-role-information-slimes-name
-    description: ghost-role-information-slimes-description
-    raffle:
-      settings: short
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
@@ -310,6 +303,7 @@
   id: RandomGreySlimeMutation
   name: random grey slime mutatuion
   parent: MarkerBase
+  noSpawn: true
   components:
   - type: Sprite
     layers:
@@ -321,6 +315,23 @@
       - MobAdultSlimesPurple
       - MobAdultSlimesOrange
       - MobAdultSlimesBlue
+    chance: 1
+
+- type: entity
+  id: RandomOrangeSlimeMutation
+  name: random orange slime mutatuion
+  parent: MarkerBase
+  noSpawn: true
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Aliens/slimes.rsi
+        state: grey_adult_slime
+  - type: RandomSpawner
+    prototypes:
+      - MobAdultSlimesYellow
+      - MobAdultSlimesRed
     chance: 1
 
 - type: entity
@@ -434,7 +445,7 @@
       - id: OrangeSlimeExtract
         amount: 1
     - type: XenoBiology
-      mutagen: MobAdultSlimesYellow
+      mutagen: RandomOrangeSlimeMutation
       antimutagen: MobAdultSlimesOrange
 
 - type: entity
@@ -475,6 +486,43 @@
       mutagen: MobAdultSlimesDarkBlue
       antimutagen: MobAdultSlimesDarkBlue
 
+- type: entity
+  name: dark blue slime
+  parent: MobAdultSlimes
+  id: MobAdultSlimesRed
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: red_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: red_adult_slime
+        Dead:
+          Base: red_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+    - type: NpcFactionMember
+      factions:
+        - XenoSlime
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+    - type: Butcherable
+      spawned:
+      - id: FoodMeatSlime
+        amount: 1
+      - id: RedSlimeExtract
+        amount: 1
+    - type: XenoBiology
+      mutagen: MobAdultSlimesRed
+      antimutagen: MobAdultSlimesRed
 #SlimePeopleEvolt
 
 - type: entity

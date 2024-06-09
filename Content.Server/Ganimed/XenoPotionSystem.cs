@@ -9,10 +9,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Clothing;
 using Content.Shared.IdentityManagement;
-using Content.Shared.Popups;
 using Robust.Server.GameObjects;
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.Timing;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Ganimed.XenoPotion;
@@ -20,10 +17,8 @@ namespace Content.Server.Ganimed.XenoPotion;
 public sealed class XenoPotionSystem : EntitySystem
 {
     [Dependency] private readonly MetaDataSystem _metaData = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly TransformSystem _transformSystem = default!;
 
