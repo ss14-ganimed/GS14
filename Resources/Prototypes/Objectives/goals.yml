@@ -45,3 +45,15 @@
 - type: stationGoal
   id: StationGoalMeteorBarrier
   text: station-goal-meteor-barrier
+
+- type: stationGoal
+  id: StationGoalXenoBiology
+  text: station-goal-xeno
+
+- type: stationGoal
+  id: StationGoalMuseum
+  text: station-goal-museum
+
+- type: stationGoal
+  id: StationGoalAnomaly
+  text: station-goal-anomaly

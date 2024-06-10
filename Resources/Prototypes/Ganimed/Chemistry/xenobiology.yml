@@ -1,3 +1,31 @@
+- type: reagent
+  id: RegenerateJelly
+  name: reagent-name-slime-regenerate-jelly
+  group: Medicine
+  desc: reagent-desc-slime-regenerate-jelly
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: medicine
+  color: "#6A5ACD"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -2
+            Brute: -2
+
+- type: reagent
+  id: SlimeStabilizer
+  name: reagent-name-slime-stabilazer
+  desc: reagent-desc-slime-stabilazer
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#4682B4"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:SlimeStabilize
 #Grey
 
 - type: reagent
@@ -7,6 +35,7 @@
   physicalDesc: reagent-physical-desc-acidic
   flavor: bitter
   color: "#808080"
+
 
 - type: reaction
   id: GreyExtractPlasma
@@ -70,6 +99,10 @@
   effects:
     - !type:CreateEntityReactionEffect
       entity: SheetUranium1
+    - !type:CreateEntityReactionEffect
+      entity: SheetUranium1
+    - !type:CreateEntityReactionEffect
+      entity: SheetUranium1
 
 - type: reaction
   id: GreenExtractBlood
@@ -109,12 +142,11 @@
   quantized: true
   reactants:
     BlueExtract:
-      amount: 1
+      amount: 5
     Plasma:
-      amount: 1
-  effects:
-  - !type:CreateGas
-    gas: NitrousOxide
+      amount: 5
+  products:
+    Cryoxadone: 25
 
 - type: reaction
   id: BlueExtractBlood
@@ -126,17 +158,22 @@
     Blood:
       amount: 5
   products:
-    Frezon: 10
+    SlimeStabilizer: 1
 
 - type: reaction
   id: BlueExtractWater
   reactants:
     BlueExtract:
-      amount: 5
+      amount: 1
     Water:
-      amount: 5
-  products:
-    Cryoxadone: 25
+      amount: 1
+  effects:
+    - !type:AreaReactionEffect
+      duration: 30
+      prototypeId: Foam
+      sound:
+        path: /Audio/Effects/extinguish.ogg
+
 
 #Yellow
 
@@ -212,6 +249,8 @@
       entity: SheetPlasma1
     - !type:CreateEntityReactionEffect
       entity: SheetPlasma1
+    - !type:CreateEntityReactionEffect
+      entity: SheetPlasma1
 
 - type: reaction
   id: PurpleExtractBlood
@@ -222,9 +261,8 @@
       amount: 1
     Blood:
       amount: 1
-  effects:
-  - !type:CreateGas
-    gas: Plasma
+  products:
+    RegenerateJelly: 10
 
 - type: reaction
   id: PurpleExtractWater
@@ -236,7 +274,7 @@
   products:
     Cognizine: 10
 
-#orange
+#Orange
 
 - type: reagent
   id: OrangeExtract
@@ -274,12 +312,103 @@
   id: OrangeExtractWater
   reactants:
     OrangeExtract:
-      amount: 5
+      amount: 1
     Water:
-      amount: 5
+      amount: 1
   effects:
     - !type:AreaReactionEffect
       duration: 30
       prototypeId: Smoke
       sound:
         path: /Audio/Effects/smoke.ogg
+
+#DarkBlue
+
+- type: reagent
+  id: DarkBlueExtract
+  name: reagent-name-slime-dark-blue
+  desc: reagent-desc-slime-dark-blue
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#0000FF"
+
+- type: reaction
+  id: DarkBlueExtractPlasma
+  impact: Low
+  quantized: true
+  reactants:
+    DarkBlueExtract:
+      amount: 5
+    Plasma:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: ColdRegenerateSlime
+
+- type: reaction
+  id: DarkBlueExtractBlood
+  impact: Low
+  quantized: true
+  reactants:
+    DarkBlueExtract:
+      amount: 5
+    Blood:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: PressureSlimePotion
+
+- type: reaction
+  id: DarkBlueExtractWater
+  reactants:
+    DarkBlueExtract:
+      amount: 5
+    Water:
+      amount: 5
+  products:
+    Frezon: 25
+
+#Red
+
+- type: reagent
+  id: RedExtract
+  name: reagent-name-slime-red
+  desc: reagent-desc-slime-red
+  physicalDesc: reagent-physical-desc-acidic
+  flavor: bitter
+  color: "#FF0000"
+
+- type: reaction
+  id: RedExtractPlasma
+  impact: Low
+  quantized: true
+  reactants:
+    RedExtract:
+      amount: 5
+    Plasma:
+      amount: 5
+  products:
+    Stimulants: 3
+
+- type: reaction
+  id: RedExtractBlood
+  impact: Low
+  quantized: true
+  reactants:
+    RedExtract:
+      amount: 5
+    Blood:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: SpeedSlimePotion
+
+- type: reaction
+  id: RedExtractWater
+  reactants:
+    RedExtract:
+      amount: 5
+    Water:
+      amount: 5
+  products:
+    Barozine: 5
