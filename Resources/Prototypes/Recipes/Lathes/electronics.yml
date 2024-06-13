@@ -530,6 +530,26 @@
     Gold: 100
 
 - type: latheRecipe
+  id: GygaxCentralElectronics
+  result: GygaxCentralElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 200
+
+- type: latheRecipe
+  id: GygaxPeripheralsElectronics
+  result: GygaxPeripheralsElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 200
+
+- type: latheRecipe
   id: HonkerCentralElectronics
   result: HonkerCentralElectronics
   category: Circuitry

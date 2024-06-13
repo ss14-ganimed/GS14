@@ -516,7 +516,7 @@
       gygax_l_arm+o:
         whitelist:
           tags:
-          - gygaxLArm
+          - GygaxLArm
       gygax_r_arm+o:
         whitelist:
           tags:

@@ -167,6 +167,26 @@
   technologyPrerequisites:
   - SalvageWeapons
 
+- type: technology
+  id: MilitaryMachinery
+  name: research-technology-military_machinery
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: gygax
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - GygaxHarness
+  - GygaxLArm
+  - GygaxRArm
+  - GygaxLLeg
+  - GygaxRLeg
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - MechLaserWeapon
+  - MechScattershotWeapon
+
 # Tier 3
 
 - type: technology

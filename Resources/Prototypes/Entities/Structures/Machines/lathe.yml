@@ -477,6 +477,8 @@
       - CargoTelepadMachineCircuitboard
       - RipleyCentralElectronics
       - RipleyPeripheralsElectronics
+      - GygaxCentralElectronics
+      - GygaxPeripheralsElectronics
       - HonkerCentralElectronics
       - HonkerPeripheralsElectronics
       - HonkerTargetingElectronics
@@ -639,6 +641,13 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+    - GygaxHarness
+    - GygaxLArm
+    - GygaxRArm
+    - GygaxLLeg
+    - GygaxRLeg
+    - MechLaserWeapon
+    - MechScattershotWeapon
   - type: MaterialStorage
     whitelist:
       tags:
