@@ -1351,3 +1351,27 @@
 
 - type: Tag
   id: HidesTail
+
+- type: Tag
+  id: CombatMech
+
+- type: Tag
+  id: ExoMech
+
+- type: Tag
+  id: GygaxPeripheralsControlModule
+
+- type: Tag
+  id: GygaxCentralControlModule
+
+- type: Tag
+  id: GygaxLArm
+
+- type: Tag
+  id: GygaxLLeg
+
+- type: Tag
+  id: GygaxRLeg
+
+- type: Tag
+  id: GygaxRArm
