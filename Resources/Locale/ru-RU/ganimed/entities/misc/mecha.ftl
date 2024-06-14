@@ -75,5 +75,11 @@ ent-DurandRArm = правая рука дюранда
 ent-DurandChassis = шасси дюранда
     .desc = Незавершённое шасси меха дюранда.
 
+ent-CrateMaulerBundle = набор маулера
+    .desc = Ящик с набором для военных преступлений.
+
 research-technology-military-machinery = Боевая машинерия
 research-technology-modern-combat-mechs = Модернизированные боевые мехи
+
+uplink-mauler-name = Боевой мех маулер
+uplink-mauler-desc = Украденный и перекрашенный Синдикатом Мародёр.
