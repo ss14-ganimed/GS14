@@ -104,6 +104,7 @@
     - Chemist
     - Psychologist
     - MedicalDoctor
+    - Virologist
     - MedicalIntern
     - Paramedic
     - Brigmedic
@@ -180,6 +181,7 @@
     - Chemist
     - Psychologist
     - MedicalDoctor
+    - Virologist
     - MedicalIntern
     - Paramedic
     - Brigmedic

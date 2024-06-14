@@ -1459,3 +1459,27 @@
     accentHColor: "#FFD800"
   - type: Icon
     state: pda-ussp    
+
+- type: entity
+  parent: BaseMedicalPDA
+  id: VirologistPDA
+  name: virologist PDA
+  description: Shiny and sterile. Has a built-in health analyzer.
+  components:
+  - type: Pda
+    id: VirologistIDCard
+    state: pda-medical
+    penSlot:
+      startingItem: PenMedical1
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#447987"
+  - type: Icon
+    state: pda-medical
+  - type: GuideHelp
+    guides:
+    - Medical Doctor

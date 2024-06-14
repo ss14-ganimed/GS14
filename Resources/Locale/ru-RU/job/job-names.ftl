@@ -53,6 +53,7 @@ job-name-coroner = патологоанатом
 job-name-prisoner = заключённый
 job-name-blueshield = офицер синий щит
 job-name-bridgeofficer = офицер мостика
+job-name-virologist = вирусолог
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = атмосферный техник
 JobBartender = бармен
@@ -111,3 +112,4 @@ JobBorg = киборг
 JobBoxer = боксёр
 JobZookeeper = зоотехник
 JobBridgeOfficer = офицер мостика
+JobVirologist = вирусолог

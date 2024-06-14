@@ -148,4 +148,6 @@ ent-UniversalIDCard = универсальная ID карта
 ent-USSPIDCard1 = ID карта солдата СССП
     .desc = { ent-IDCardStandard.desc } Кажется, это один из примеров советского реверс-инжиниринга.
 ent-USSPIDCard2 = ID карта офицера СССП
-    .desc = { ent-IDCardStandard.desc } Кажется, это один из примеров советского реверс-инжиниринга.	
+    .desc = { ent-IDCardStandard.desc } Кажется, это один из примеров советского реверс-инжиниринга.
+ent-VirologistIDCard = ID карта вирусолога
+    .desc = { ent-IDCardStandard.desc }
