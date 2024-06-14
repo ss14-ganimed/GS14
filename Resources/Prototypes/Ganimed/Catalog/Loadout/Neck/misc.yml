@@ -10,7 +10,6 @@
   category: loadout-category-neck
   cost: 2
   exclusive: true
-  sponsorOnly: true
   prototype: ClothingHeadHatFlowerWreath
 
 - type: loadout
@@ -105,6 +104,7 @@
     - Chemist
     - Psychologist
     - MedicalDoctor
+    - Virologist
     - MedicalIntern
     - Paramedic
     - Brigmedic
@@ -181,6 +181,7 @@
     - Chemist
     - Psychologist
     - MedicalDoctor
+    - Virologist
     - MedicalIntern
     - Paramedic
     - Brigmedic

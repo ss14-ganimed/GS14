@@ -25,3 +25,23 @@
   license: "CC-BY-SA-3.0"
   copyright: "Sunset by PigeonBeans. Exported in Mono OGG."
   source: "https://soundcloud.com/pigeonbeans/sunset"
+
+- files: ["kitty.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "After Dark"
+  source: "https://www.youtube.com/watch?v=sVx1mJDeUjY"
+
+- files: ["countdown.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Tarkov OST"
+  source: "https://www.youtube.com/watch?v=eHz1D74XBVs"
+
+- files: ["emptybox.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Morphine"
+  source: "https://www.youtube.com/watch?v=3bq764CgkF8"
+
+- files: ["epicscore.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Daniel James"
+  source: "https://www.youtube.com/watch?v=FckLRow8kCs"

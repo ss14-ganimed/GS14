@@ -729,3 +729,15 @@
     layers:
       - state: green
       - state: seniorofficer
+
+- type: entity
+  id: SpawnPointVirologistDoctor
+  parent: SpawnPointJobBase
+  name: virologistdoctor
+  components:
+  - type: SpawnPoint
+    job_id: Virologist
+  - type: Sprite
+    layers:
+      - state: green
+      - state: doctor

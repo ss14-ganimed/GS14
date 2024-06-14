@@ -158,7 +158,6 @@
   category: loadout-category-neck
   cost: 5
   exclusive: true
-  sponsorOnly: true
   prototype: ClothingNeckCloakPirateCap
 
 - type: loadout
@@ -193,7 +192,6 @@
   category: loadout-category-neck
   cost: 3
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - ChiefEngineer
     - SeniorEngineer
@@ -205,7 +203,6 @@
   category: loadout-category-neck
   cost: 8
   exclusive: true
-  sponsorOnly: true
   prototype: ClothingCloakGamer
 
 - type: loadout
@@ -218,6 +215,7 @@
     - Chemist
     - Paramedic
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - SeniorPhysician
