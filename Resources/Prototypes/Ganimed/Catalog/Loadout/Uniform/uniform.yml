@@ -46,7 +46,6 @@
   category: loadout-category-uniform
   cost: 3
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - Quartermaster
     - SalvageSpecialist
@@ -1527,17 +1526,6 @@
   category: loadout-category-uniform
   cost: 4
   exclusive: true
-  sponsorOnly: true
-  whitelistJobs:
-    - SecurityCadet
-    - SecurityOfficer
-    - Warden
-    - Detective
-    - HeadOfSecurity
-    - SeniorOfficer
-    - BlueShield
-    - Brigmedic
-    - BridgeOfficer
   prototype: ClothingUniformJumpskirtTacticalMaid
 
 - type: loadout
@@ -1677,10 +1665,6 @@
   category: loadout-category-uniform
   cost: 6
   exclusive: true
-  sponsorOnly: true
-  whitelistJobs:
-    - Janitor
-    - ServiceWorker
   prototype: ClothingUniformJumpskirtJanimaid
 
 - type: loadout
@@ -1689,9 +1673,6 @@
   cost: 6
   exclusive: true
   sponsorOnly: true
-  whitelistJobs:
-    - Janitor
-    - ServiceWorker
   prototype: ClothingUniformJumpskirtJanimaidmini
 
 - type: loadout

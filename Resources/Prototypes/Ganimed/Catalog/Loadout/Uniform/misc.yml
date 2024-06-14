@@ -12,7 +12,6 @@
   exclusive: true
   prototype: ClothingUniformJumpskirtWhiteTurtleneck
 
-
 - type: loadout
   id: LoadoutUniformUniformShortsRed
   category: loadout-category-uniform
@@ -166,7 +165,6 @@
   category: loadout-category-uniform
   cost: 2
   exclusive: false
-  sponsorOnly: true
   whitelistJobs:
     - HeadOfSecurity
   prototype: ClothingUniformJumpsuitHoSOld

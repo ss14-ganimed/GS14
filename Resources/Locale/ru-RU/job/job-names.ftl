@@ -110,3 +110,4 @@ JobWarden = смотритель
 JobBorg = киборг
 JobBoxer = боксёр
 JobZookeeper = зоотехник
+JobBridgeOfficer = офицер мостика
