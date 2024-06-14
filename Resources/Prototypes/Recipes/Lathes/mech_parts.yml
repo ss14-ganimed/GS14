@@ -253,3 +253,103 @@
     Steel: 1000
     Plastic: 750
     Gold: 150
+
+# Durand
+- type: latheRecipe
+  id: DurandHarness
+  result: DurandHarness
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 200
+    Glass: 1200
+    Uranium: 600
+    Silver: 150
+
+- type: latheRecipe
+  id: DurandLArm
+  result: DurandLArm
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 750
+    Uranium: 600
+    Silver: 150
+
+- type: latheRecipe
+  id: DurandLLeg
+  result: DurandLLeg
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 750
+    Uranium: 600
+    Silver: 150
+
+- type: latheRecipe
+  id: DurandRLeg
+  result: DurandRLeg
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 750
+    Uranium: 600
+    Silver: 150
+
+- type: latheRecipe
+  id: DurandRArm
+  result: DurandRArm
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 750
+    Uranium: 600
+    Silver: 150
+
+- type: latheRecipe
+  id: MechTeslaWeapon
+  result: MechTeslaWeapon
+  category: Mech
+  completetime: 20
+  materials:
+    Steel: 750
+    Plastic: 500
+    Gold: 150
+    Uranium: 100
+
+- type: latheRecipe
+  id: MechMssileWeapon
+  result: MechMssileWeapon
+  category: Mech
+  completetime: 20
+  materials:
+    Steel: 1000
+    Plastic: 750
+    Gold: 350
+    Plasma: 550
+
+- type: latheRecipe
+  id: MechHadesWeapon
+  result: MechHadesWeapon
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 750
+    Gold: 150
+    Plasma: 150
+
+- type: latheRecipe
+  id: MechSolarisLaserWeapon
+  result: MechSolarisLaserWeapon
+  category: Mech
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 750
+    Gold: 250
+    Plasma: 250

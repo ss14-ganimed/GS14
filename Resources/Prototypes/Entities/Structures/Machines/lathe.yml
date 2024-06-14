@@ -479,6 +479,8 @@
       - RipleyPeripheralsElectronics
       - GygaxCentralElectronics
       - GygaxPeripheralsElectronics
+      - DurandCentralElectronics
+      - DurandPeripheralsElectronics
       - HonkerCentralElectronics
       - HonkerPeripheralsElectronics
       - HonkerTargetingElectronics
@@ -646,8 +648,17 @@
     - GygaxRArm
     - GygaxLLeg
     - GygaxRLeg
+    - DurandHarness
+    - DurandLArm
+    - DurandRArm
+    - DurandLLeg
+    - DurandRLeg
     - MechLaserWeapon
     - MechScattershotWeapon
+    - MechSolarisLaserWeapon
+    - MechHadesWeapon
+    - MechMssileWeapon
+    - MechTeslaWeapon
   - type: MaterialStorage
     whitelist:
       tags:

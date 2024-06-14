@@ -484,7 +484,7 @@
     node: start
     defaultTarget: vim
 
-# Gygax APLU
+# Gygax
 
 - type: entity
   id: BaseGygaxPart
@@ -611,3 +611,131 @@
     graph: Gygax
     node: start
     defaultTarget: gygax
+
+# Durand
+
+- type: entity
+  id: BaseDurandPart
+  parent: BaseMechPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Objects/Specific/Mech/durand_construction.rsi
+
+- type: entity
+  id: BaseDurandPartItem
+  parent: BaseDurandPart
+  abstract: true
+  components:
+  - type: Item
+    size: Ginormous
+
+- type: entity
+  parent: BaseDurandPart
+  id: DurandHarness
+  name: durand harness
+  description: The core of the Durand.
+  components:
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      durand_l_arm+o:
+        whitelist:
+          tags:
+          - DurandLArm
+      durand_r_arm+o:
+        whitelist:
+          tags:
+          - DurandRArm
+      durand_l_leg+o:
+        whitelist:
+          tags:
+          - DurandLLeg
+      durand_r_leg+o:
+        whitelist:
+          tags:
+          - DurandRLeg
+    sprite: Objects/Specific/Mech/durand_construction.rsi
+  - type: ContainerContainer
+    containers:
+      mech-assembly-container: !type:Container
+  - type: MechAssembly
+    finishedPrototype: DurandChassis
+    requiredParts:
+      DurandLArm: false
+      DurandRArm: false
+      DurandLLeg: false
+      DurandRLeg: false
+  - type: Sprite
+    state: durand_harness+o
+    noRot: true
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandLArm
+  name: durand left arm
+  description: The left arm of the Durand. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_l_arm
+  - type: Tag
+    tags:
+    - DurandLArm
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandLLeg
+  name: durand left leg
+  description: The left leg of the Durand. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_l_leg
+  - type: Tag
+    tags:
+    - DurandLLeg
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandRLeg
+  name: durand right leg
+  description: The right leg of the Durand. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_r_leg
+  - type: Tag
+    tags:
+    - DurandRLeg
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandRArm
+  name: durand right arm
+  description: The right arm of the Durand. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_r_arm
+  - type: Tag
+    tags:
+    - DurandRArm
+
+- type: entity
+  id: DurandChassis
+  parent: BaseDurandPart
+  name: durand chassis
+  description: An in-progress construction of the Durand mech.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: durand
+  - type: Sprite
+    noRot: true
+    state: durand0
+  - type: Construction
+    graph: Durand
+    node: start
+    defaultTarget: durand
