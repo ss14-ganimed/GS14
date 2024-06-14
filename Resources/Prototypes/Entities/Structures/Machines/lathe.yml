@@ -477,6 +477,10 @@
       - CargoTelepadMachineCircuitboard
       - RipleyCentralElectronics
       - RipleyPeripheralsElectronics
+      - GygaxCentralElectronics
+      - GygaxPeripheralsElectronics
+      - DurandCentralElectronics
+      - DurandPeripheralsElectronics
       - HonkerCentralElectronics
       - HonkerPeripheralsElectronics
       - HonkerTargetingElectronics
@@ -639,6 +643,22 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+    - GygaxHarness
+    - GygaxLArm
+    - GygaxRArm
+    - GygaxLLeg
+    - GygaxRLeg
+    - DurandHarness
+    - DurandLArm
+    - DurandRArm
+    - DurandLLeg
+    - DurandRLeg
+    - MechLaserWeapon
+    - MechScattershotWeapon
+    - MechSolarisLaserWeapon
+    - MechHadesWeapon
+    - MechMssileWeapon
+    - MechTeslaWeapon
   - type: MaterialStorage
     whitelist:
       tags:
