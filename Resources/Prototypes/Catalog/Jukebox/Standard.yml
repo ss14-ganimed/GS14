@@ -39,3 +39,27 @@
   name: PigeonBeans - Sunset
   path:
     path: /Audio/Jukebox/sunset.ogg
+
+- type: jukebox
+  id: kitty
+  name: AfterDark - Mr. Kitty
+  path:
+    path: /Audio/Jukebox/kitty.ogg
+
+- type: jukebox
+  id: countdown
+  name: Countdown
+  path:
+    path: /Audio/Jukebox/countdown.ogg
+
+- type: jukebox
+  id: epicscore
+  name: Epic Score
+  path:
+    path: /Audio/Jukebox/epicscore.ogg
+    
+- type: jukebox
+  id: emptybox
+  name: Empty Box
+  path:
+    path: /Audio/Jukebox/emptybox.ogg
