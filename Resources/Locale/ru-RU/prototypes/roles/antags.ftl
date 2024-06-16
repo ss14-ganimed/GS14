@@ -22,3 +22,5 @@ roles-antag-thief-name = Вор
 roles-antag-thief-objective = Пополните свою личную коллекцию имуществом Nanotrasen, не прибегая к насилию.
 roles-antag-terminator-name = Экстерминатор
 roles-antag-terminator-objective = Убейте цель любой ценой, от этого зависит будущее.
+roles-antag-dragon-name = Космический дракон
+roles-antag-dragon-objective = Создайте армию карпов для захвата квадранта.
