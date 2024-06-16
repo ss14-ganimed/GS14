@@ -167,6 +167,26 @@
   technologyPrerequisites:
   - SalvageWeapons
 
+- type: technology
+  id: MilitaryMachinery
+  name: research-technology-military-machinery
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: gygax
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - GygaxHarness
+  - GygaxLArm
+  - GygaxRArm
+  - GygaxLLeg
+  - GygaxRLeg
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - MechLaserWeapon
+  - MechScattershotWeapon
+
 # Tier 3
 
 - type: technology
@@ -210,6 +230,30 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+
+- type: technology
+  id: ModernCombatMechs
+  name: research-technology-modern-combat-mechs
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: durand
+  discipline: Arsenal
+  tier: 3
+  cost: 18000
+  recipeUnlocks:
+  - DurandHarness
+  - DurandLArm
+  - DurandRArm
+  - DurandLLeg
+  - DurandRLeg
+  - DurandCentralElectronics
+  - DurandPeripheralsElectronics
+  - MechSolarisLaserWeapon
+  - MechHadesWeapon
+  - MechMssileWeapon
+  - MechTeslaWeapon
+  technologyPrerequisites:
+  - MilitaryMachinery
 
 - type: technology
   id: EnergyBarriers

@@ -17,7 +17,7 @@ public sealed partial class LoadMapRuleComponent : Component
     /// A <see cref="GameMapPrototype"/> to load on a new map.
     /// </summary>
     [DataField]
-    public ProtoId<GameMapPrototype>? GameMap;
+    public ProtoId<GameMapPrototype>? GameMap ;
 
     /// <summary>
     /// A map path to load on a new map.

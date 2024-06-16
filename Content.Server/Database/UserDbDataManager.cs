@@ -15,7 +15,7 @@ namespace Content.Server.Database;
 /// Actual loading code is handled by separate managers such as <see cref="IServerPreferencesManager"/>.
 /// This manager is simply a centralized "is loading done" controller for other code to rely on.
 /// </remarks>
-public sealed class UserDbDataManager : IPostInjectInit
+public sealed class UserDbDataManager
 {
     [Dependency] private readonly ILogManager _logManager = default!;
 
@@ -24,14 +24,10 @@ public sealed class UserDbDataManager : IPostInjectInit
     private readonly List<OnFinishLoad> _onFinishLoad = [];
     private readonly List<OnPlayerDisconnect> _onPlayerDisconnect = [];
 
-    private ISawmill _sawmill = default!;
-
     // TODO: Ideally connected/disconnected would be subscribed to IPlayerManager directly,
     // but this runs into ordering issues with game ticker.
     public void ClientConnected(ICommonSession session)
     {
-        _sawmill.Verbose($"Initiating load for user {session}");
-
         DebugTools.Assert(!_users.ContainsKey(session.UserId), "We should not have any cached data on client connect.");
 
         var cts = new CancellationTokenSource();
@@ -101,17 +97,6 @@ public sealed class UserDbDataManager : IPostInjectInit
         }
     }
 
-    /// <summary>
-    /// Wait for all on-database data for a user to be loaded.
-    /// </summary>
-    /// <remarks>
-    /// The task returned by this function may end up in a cancelled state
-    /// (throwing <see cref="OperationCanceledException"/>) if the user disconnects while loading or an error occurs.
-    /// </remarks>
-    /// <param name="session"></param>
-    /// <returns>
-    /// A task that completes when all on-database data for a user has finished loading.
-    /// </returns>
     public Task WaitLoadComplete(ICommonSession session)
     {
         return _users[session.UserId].Task;
@@ -119,7 +104,7 @@ public sealed class UserDbDataManager : IPostInjectInit
 
     public bool IsLoadComplete(ICommonSession session)
     {
-        return GetLoadTask(session).IsCompletedSuccessfully;
+        return GetLoadTask(session).IsCompleted;
     }
 
     public Task GetLoadTask(ICommonSession session)

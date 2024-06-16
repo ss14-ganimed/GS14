@@ -170,6 +170,18 @@
 
 - type: entity
   parent: IDCardStandard
+  id: VirologistIDCard
+  name: virologist ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idvirologist
+  - type: PresetIdCard
+    job: Virologist
+
+- type: entity
+  parent: IDCardStandard
   id: ParamedicIDCard
   name: paramedic ID card
   components:
@@ -1034,3 +1046,64 @@
   - type: Access
     access:
      - Maintenance
+
+- type: entity
+  parent: IDCardStandard
+  id: UniversalIDCard
+  name: universal ID card
+  suffix: Admin
+  description: An ID card that gives you access beyond your wildest dreams.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: admin
+    - state: idadmin
+  - type: Clothing
+    sprite: Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: green
+  - type: IdCard
+    jobTitle: Universal
+    jobIcon: JobIconAdmin
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - CentralCommand
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: entity
+  parent: IDCardStandard
+  id: USSPIDCard1
+  name: USSP soldier representative ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: idusspsoldier
+  - type: IdCard
+    jobTitle: Солдат НРА СССП
+    jobIcon: JobIconUSSPSoldier
+    jobColor: "#f80000"
+  - type: Access
+    access:
+     - Maintenance
+
+- type: entity
+  parent: IDCardStandard
+  id: USSPIDCard2
+  name: USSP officer representative ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: idusspofficer
+  - type: IdCard
+    jobTitle: Офицер НРА СССП
+    jobIcon: JobIconUSSPOfficer
+    jobColor: "#840000"
+  - type: Access
+    access:
+     - Maintenance      

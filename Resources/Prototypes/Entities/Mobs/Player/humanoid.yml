@@ -560,7 +560,7 @@
       raffle:
         settings: default
     - type: Cluwne
-
+    
 - type: entity
   id: RandomHumanoidSpawnerTSFNavy
   name: TSF recruit

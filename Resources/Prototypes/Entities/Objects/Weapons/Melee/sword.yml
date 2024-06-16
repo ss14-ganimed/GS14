@@ -31,7 +31,10 @@
   - type: Tag
     tags:
     - CaptainSabre
+    - HighRiskItem
   - type: DisarmMalus
+  - type: StealTarget
+    stealGroup: CaptainSabre
 
 - type: entity
   name: katana

@@ -20,21 +20,6 @@
   prototype: ClothingEyesGlassesGarOrange
 
 - type: loadout
-  id: LoadoutEyesClothingEyesGlassesMeson
-  category: loadout-category-eyes
-  cost: 4
-  whitelistJobs:
-    - TechnicalAssistant
-    - StationEngineer
-    - AtmosphericTechnician
-    - SeniorEngineer
-    - ChiefEngineer
-    - Quartermaster
-    - SalvageSpecialist
-  exclusive: true
-  prototype: ClothingEyesGlassesMeson
-
-- type: loadout
   id: LoadoutEyesClothingEyesGlassesThermal
   category: loadout-category-eyes
   cost: 3

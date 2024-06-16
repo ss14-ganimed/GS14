@@ -47,6 +47,7 @@
   - Paramedic
   - SeniorPhysician
   - Coroner
+  - Virologist
 
 - type: department
   id: Security
@@ -115,4 +116,5 @@
   - BlueShield
   - Coroner
   - BridgeOfficer
+  - Virologist
   primary: false

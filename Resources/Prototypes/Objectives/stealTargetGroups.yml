@@ -84,6 +84,54 @@
     sprite: Objects/Misc/nukedisk.rsi
     state: icon
 
+- type: stealTargetGroup
+  id: CaptainSabre
+  name: captain sabre
+  sprite:
+    sprite: Objects/Weapons/Melee/captain_sabre.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: MultiphaseEnergyPistol
+  name: multiphase energy pistol
+  sprite:
+    sprite: Ganimed/Objects/Guns/Battery/multiphase.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: StationBlueprints
+  name: station blueprints
+  sprite:
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: blueprints
+
+- type: stealTargetGroup
+  id: KravMaga
+  name: krav maga
+  sprite:
+    sprite: Ganimed/Clothing/Hands/Gloves/krav.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: GlovesForensic
+  name: gloves forensic
+  sprite:
+    sprite: Clothing/Hands/Gloves/forensic.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: ReflectiveCoat
+  name: reflective coat
+  sprite:
+    sprite: Ganimed/Clothing/OuterClothing/coat_reflec.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: ReactiveArmor
+  name: reactive armor
+  sprite:
+    sprite: Ganimed/Clothing/OuterClothing/reactive.rsi
+    state: icon
 # Thief Collection
 
 - type: stealTargetGroup
@@ -269,6 +317,7 @@
   sprite:
     sprite: Clothing/Neck/Medals/clownmedal.rsi
     state: icon
+
 
 #Thief structures
 

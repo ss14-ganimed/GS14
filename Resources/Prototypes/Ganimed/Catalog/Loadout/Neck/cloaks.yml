@@ -158,7 +158,6 @@
   category: loadout-category-neck
   cost: 5
   exclusive: true
-  sponsorOnly: true
   prototype: ClothingNeckCloakPirateCap
 
 - type: loadout
@@ -193,7 +192,6 @@
   category: loadout-category-neck
   cost: 3
   exclusive: true
-  sponsorOnly: true
   whitelistJobs:
     - ChiefEngineer
     - SeniorEngineer
@@ -205,5 +203,108 @@
   category: loadout-category-neck
   cost: 8
   exclusive: true
-  sponsorOnly: true
   prototype: ClothingCloakGamer
+
+- type: loadout
+  id: LoadoutClothingCloakMed
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Virologist
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Coroner
+    - Brigmedic
+  prototype: ClothingCloakMed
+
+- type: loadout
+  id: LoadoutClothingCloakSec
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - BlueShield
+    - HeadOfSecurity
+    - SeniorOfficer
+    - Brigmedic
+  prototype: ClothingCloakSec
+#Long
+- type: loadout
+  id: LoadoutClothingLongCloakRD
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ResearchDirector
+  prototype: ClothingLongCloakRD
+
+- type: loadout
+  id: LoadoutClothingLongCloakCE
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefEngineer
+  prototype: ClothingLongCloakCE
+
+- type: loadout
+  id: LoadoutClothingLongCloakCMO
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingLongCloakCMO
+
+- type: loadout
+  id: LoadoutClothingLongCloakCap
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingLongCloakCap
+
+- type: loadout
+  id: LoadoutClothingLongCloakQM
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Quartermaster
+  prototype: ClothingLongCloakQM
+
+- type: loadout
+  id: LoadoutClothingLongCloakHOP
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfPersonnel
+  prototype: ClothingLongCloakHOP
+
+- type: loadout
+  id: LoadoutClothingLongCloakHOS
+  category: loadout-category-neck
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingLongCloakHOS

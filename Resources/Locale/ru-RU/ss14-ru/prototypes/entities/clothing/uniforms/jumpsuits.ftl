@@ -247,3 +247,5 @@ ent-ClothingUniformJumpsuitCargoTurtleneck = водолазка снабжени
     .desc = Водолазка, разработанная специально для работы в тяжелых условиях отдела снабжения.
 ent-ClothingUniformJumpsuitCluwneRemoveable = { ent-ClothingUniformJumpsuitCluwne }
     .desc = { ent-ClothingUniformJumpsuitCluwne.desc }
+ent-ClothingUniformJumpsuitCMOTurtle = водолазка главного врача
+    .desc = Это комбинезон, носимый теми, у кого есть опыт работы на должности главного врача. Он обеспечивает слабую биологическую защиту.

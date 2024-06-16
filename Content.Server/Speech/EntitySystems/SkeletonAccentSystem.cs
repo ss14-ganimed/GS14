@@ -4,12 +4,9 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Speech.EntitySystems;
 
-public sealed partial class SkeletonAccentSystem : EntitySystem
+public sealed class SkeletonAccentSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
-
-    [GeneratedRegex(@"(?<!\w)[^aeiou]one", RegexOptions.IgnoreCase, "en-US")]
-    private static partial Regex BoneRegex();
 
     private static readonly Dictionary<string, string> DirectReplacements = new()
     {

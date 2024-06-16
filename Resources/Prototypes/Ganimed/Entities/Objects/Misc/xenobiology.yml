@@ -1,0 +1,261 @@
+﻿- type: entity
+  parent: BaseItem
+  id: BaseSlimeExtract
+  abstract: true
+  name: extract smile
+  description: Slime extract.
+  components:
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 5
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: GreySlimeExtract
+  name: grey slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GreyExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: GreenSlimeExtract
+  name: green slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#00FF00"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: GreenExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: BlueSlimeExtract
+  name: blue slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#00FFFF"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: BlueExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: YellowSlimeExtract
+  name: yellow slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FFFF00"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: YellowExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: PurpleSlimeExtract
+  name: purple slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FF00FF"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: PurpleExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: OrangeSlimeExtract
+  name: orange slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FFA500"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: OrangeExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: DarkBlueSlimeExtract
+  name: dark blue slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#0000FF"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: DarkBlueExtract
+          Quantity: 5
+
+- type: entity
+  parent: BaseSlimeExtract
+  id: RedSlimeExtract
+  name: red slime extract
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FF0000"
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: RedExtract
+          Quantity: 5
+#Products
+
+- type: entity
+  parent: BasePowerCell
+  id: PowerCellSlime
+  name: slime power cell
+  description: A rechargeable slime cell.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FFFF00"
+  - type: Battery
+    maxCharge: 1100
+    startingCharge: 1100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 6
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: BaseItem
+  id: SlimeLight
+  name: slime flash
+  description: Slime extract.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenobiology.rsi
+    state: extract
+    color: "#FFFF00"
+  - type: Item
+    size: Small
+  - type: StaticPrice
+    price: 500
+  - type: PointLight
+    radius: 5
+    energy: 2.5
+    color: "#FFFF00"
+
+- type: entity
+  name: cold regenerate slime
+  parent: BaseItem
+  id: ColdRegenerateSlime
+  description: A rapid dose of cryoxadone
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/xenoinjector.rsi
+    state: extract
+    color: "#0000FF"
+  - type: Item
+    size: Small
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 50
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 50
+        reagents:
+        - ReagentId: Cryoxadone
+          Quantity: 25
+        - ReagentId: Insuzine
+          Quantity: 25
+  - type: Tag
+    tags: []
+
+- type: entity
+  parent: BaseItem
+  id: BaseSlimePotion
+  abstract: true
+  name: slime potion
+  description: Slime potion.
+  components:
+  - type: Item
+    size: Small
+  - type: XenoPotion
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseItem
+  id: SpeedSlimePotion
+  name: speed slime potion
+  description: Slime potion.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/potion.rsi
+    state: red
+  - type: XenoPotion
+    color: "#8B0000"
+    effect: "Speed"
+
+- type: entity
+  parent: BaseItem
+  id: PressureSlimePotion
+  name: pressure slime potion
+  description: Slime potion.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/potion.rsi
+    state: blue
+  - type: XenoPotion
+    color: "#0000FF"
+    effect: "Pressure"

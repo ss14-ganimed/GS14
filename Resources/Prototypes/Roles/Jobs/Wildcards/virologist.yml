@@ -1,0 +1,29 @@
+- type: job
+  id: Virologist
+  name: job-name-virologist
+  description: job-description-virologist
+  playTimeTracker: JobVirologist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000 #5 hrs
+  startingGear: VirologistGear
+  icon: "JobIconVirologist"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+
+- type: startingGear
+  id: VirologistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitVirology
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesColorWhite
+    gloves: ClothingHandsGlovesLatex
+    outerClothing: ClothingOuterCoatLabViro
+    id: VirologistPDA
+    ears: ClothingHeadsetMedical
+  innerClothingskirt: ClothingUniformJumpskirtVirology
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled

@@ -25,6 +25,7 @@
     - SeniorPhysician
     - Chemist
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - Paramedic
@@ -53,6 +54,7 @@
     - SeniorPhysician
     - Chemist
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - Paramedic
@@ -75,6 +77,7 @@
     - SeniorPhysician
     - Chemist
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - Paramedic
@@ -97,6 +100,7 @@
     - SeniorPhysician
     - Chemist
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - Paramedic
@@ -113,6 +117,7 @@
     - SeniorPhysician
     - Chemist
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - Paramedic
@@ -130,6 +135,7 @@
     - SeniorPhysician
     - Chemist
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - Paramedic

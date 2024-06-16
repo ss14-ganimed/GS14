@@ -54,6 +54,31 @@
 
 - type: entity
   parent: ClothingEyesBase
+  id: ClothingEyesGlassesMesonScanner
+  name: engineering goggles #less confusion
+  description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Eyes/mesonscanner.rsi
+    layers:
+    - state: icon
+    - state: icon_enabled
+      map: [ "enum.ToggleVisuals.Layer" ]
+      visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
+  - type: Clothing
+    sprite: Ganimed/Clothing/Eyes/mesonscanner.rsi
+  - type: EyeProtection
+  - type: Mesons
+    mesonType: Walls
+
+- type: entity
+  parent: ClothingEyesBase
   id: ClothingEyesGlassesMeson
   name: engineering goggles #less confusion
   description: Green-tinted goggles using a proprietary polymer that provides protection from eye damage of all types.

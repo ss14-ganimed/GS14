@@ -305,8 +305,6 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             _transform.SetMapCoordinates((player, playerXform), pos);
         }
 
-        // If we want to just do a ghost role spawner, set up data here and then return early.
-        // This could probably be an event in the future if we want to be more refined about it.
         if (isSpawner)
         {
             if (!TryComp<GhostRoleAntagSpawnerComponent>(player, out var spawnerComp))
@@ -334,7 +332,11 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             _mind.TransferTo(curMind.Value, antagEnt, ghostCheckOverride: true);
             _role.MindAddRoles(curMind.Value, def.MindComponents);
             ent.Comp.SelectedMinds.Add((curMind.Value, Name(player)));
-            SendBriefing(session, def.Briefing);
+        }
+
+        if (def.Briefing is { } briefing)
+        {
+            SendBriefing(session, briefing);
         }
 
         var afterEv = new AfterAntagEntitySelectedEvent(session, player, ent, def);
@@ -359,7 +361,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             }
             else if (HasFallbackAntagPreference(session, def))
             {
-                fallbackList.Add(session);
+                secondBestList.Add(session);
             }
         }
 

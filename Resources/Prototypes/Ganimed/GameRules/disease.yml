@@ -1,0 +1,11 @@
+﻿- type: entity
+  id: DiseaseOutbreak
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    minimumPlayers: 5
+    weight: 8
+    startDelay: 30
+    duration: 35
+  - type: DiseaseOutbreakRule

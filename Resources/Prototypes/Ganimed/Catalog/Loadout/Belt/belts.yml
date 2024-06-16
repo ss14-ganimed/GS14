@@ -1,20 +1,3 @@
-- type: loadout
-  id: LoadoutBeltClothingBeltMilitaryWebbing
-  category: loadout-category-belt
-  cost: 4
-  exclusive: true
-  whitelistJobs:
-    - SecurityCadet
-    - SecurityOfficer
-    - Warden
-    - Detective
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
-    - Brigmedic
-    - BlueShield
-    - BridgeOfficer
-  prototype: ClothingBeltMilitaryWebbing
 
 - type: loadout
   id: LoadoutBeltClothingBeltSecurityWebbing
@@ -37,7 +20,7 @@
 - type: loadout
   id: LoadoutBeltClothingBeltSalvageWebbing
   category: loadout-category-belt
-  cost: 3
+  cost: 6
   exclusive: true
   sponsorOnly: true
   whitelistJobs:
@@ -45,21 +28,6 @@
     - SalvageSpecialist
     - Quartermaster
   prototype: ClothingBeltSalvageWebbing
-
-- type: loadout
-  id: LoadoutBeltClothingBeltMilitaryWebbingMed
-  category: loadout-category-belt
-  cost: 6
-  exclusive: true
-  whitelistJobs:
-    - Warden
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
-    - Brigmedic
-    - BlueShield
-    - BridgeOfficer
-  prototype: ClothingBeltMilitaryWebbingMed
 
 - type: loadout
   id: LoadoutBeltClothingBeltBandolier
@@ -140,24 +108,6 @@
     - SalvageSpecialist
     - Roboticist
   prototype: ClothingBeltUtility
-
-- type: loadout
-  id: LoadoutBeltClothingBeltSecurityFilled
-  category: loadout-category-belt
-  cost: 2
-  exclusive: true
-  whitelistJobs:
-    - SecurityCadet
-    - SecurityOfficer
-    - Warden
-    - Detective
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
-    - Brigmedic
-    - BlueShield
-    - BridgeOfficer
-  prototype: ClothingBeltSecurityFilled
 
 - type: loadout
   id: LoadoutBeltClothingBeltChiefEngineer

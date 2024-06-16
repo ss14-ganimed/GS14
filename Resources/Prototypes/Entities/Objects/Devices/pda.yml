@@ -1419,3 +1419,67 @@
     accentVColor: "#38507D"
   - type: Icon
     state: pda-tsf
+
+- type: entity
+  parent: BasePDA
+  id: USSPPDA1
+  name: USSP PDA
+  description: The same red as the banner of the Revolution.
+  components:
+  - type: Pda
+    id: USSPIDCard1
+    state: pda-ussp
+    penSlot:
+      startingItem: PenHearts
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#AD2424"
+    accentHColor: "#FFD800"
+  - type: Icon
+    state: pda-ussp
+    
+- type: entity
+  parent: BasePDA
+  id: USSPPDA2
+  name: USSP PDA
+  description: The same red as the banner of the Revolution.
+  components:
+  - type: Pda
+    id: USSPIDCard2
+    state: pda-ussp
+    penSlot:
+      startingItem: PenHearts
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#AD2424"
+    accentHColor: "#FFD800"
+  - type: Icon
+    state: pda-ussp    
+
+- type: entity
+  parent: BaseMedicalPDA
+  id: VirologistPDA
+  name: virologist PDA
+  description: Shiny and sterile. Has a built-in health analyzer.
+  components:
+  - type: Pda
+    id: VirologistIDCard
+    state: pda-medical
+    penSlot:
+      startingItem: PenMedical1
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#447987"
+  - type: Icon
+    state: pda-medical
+  - type: GuideHelp
+    guides:
+    - Medical Doctor

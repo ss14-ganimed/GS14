@@ -194,7 +194,7 @@
     - ClothingEyesGlassesScienceMeson
     - ClothingEyesGlassesMesonDiagnostic
     - ClothingEyesNightVision
-
+    - ClothingEyesGlassesMesonScanner
 # Tier 3
 
 - type: technology

@@ -140,6 +140,7 @@
 
 - type: entity
   name: NVD
+  parent: ClothingEyesBase
   id: ClothingEyesNightVision
   description: Night vision device. Provides an image of the terrain in low-light conditions.
   components:
@@ -194,7 +195,7 @@
   - type: Clothing
     sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
   - type: EyeProtection
-
+    
 - type: entity
   parent: ClothingEyesNightVision
   id: ClothingEyesNightVisionMedicine
@@ -211,3 +212,29 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+
+- type: entity
+  id: NVToggleAction
+  name: Switch NVD
+  description: Switches your NVD
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 2.5
+    icon:
+      sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+      state: icon
+    event: !type:NVInstantActionEvent
+
+- type: entity
+  id: SwitchNightVision
+  name: Switch night vision
+  description: Switches your night vision
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 2.5
+    icon:
+      sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
+      state: icon
+    event: !type:NVInstantActionEvent

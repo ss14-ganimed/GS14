@@ -7,3 +7,13 @@
   cost: 2000
   category: cargoproduct-category-name-circuitboards
   group: market
+
+- type: cargoProduct
+  id: HarvesterBoards
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: bluespace
+  product: MachineBluespaceHarvesterCircuitboard
+  cost: 50000
+  category: cargoproduct-category-name-circuitboards
+  group: market

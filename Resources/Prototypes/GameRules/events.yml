@@ -445,13 +445,14 @@
   id: LoneOpsSpawn
   components:
   - type: StationEvent
-    earliestStart: 35
-    weight: 5.5
-    minimumPlayers: 20
+    earliestStart: 45
+    weight: 5
+    minimumPlayers: 15
+    reoccurrenceDelay: 30
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
-    preloadedGrid: ShuttleStriker
+    mapPath: /Maps/Shuttles/striker.yml
   - type: NukeopsRule
     roundEndBehavior: Nothing
   - type: AntagSelection
@@ -481,7 +482,7 @@
   - type: StationEvent
     earliestStart: 30
     weight: 8
-    minimumPlayers: 15
+    minimumPlayers: 10
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
@@ -523,8 +524,8 @@
       path: /Audio/Announcements/attention.ogg
     weight: 3.5
     duration: 1
-    earliestStart: 30
-    minimumPlayers: 20
+    earliestStart: 45
+    minimumPlayers: 15
   - type: ImmovableRodRule
     rodPrototypes:
     - id: ImmovableRodKeepTilesStill

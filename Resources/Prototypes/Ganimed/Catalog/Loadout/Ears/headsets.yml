@@ -78,6 +78,7 @@
     - Chemist
     - Paramedic
     - MedicalDoctor
+    - Virologist
     - Psychologist
     - MedicalIntern
     - SeniorPhysician
@@ -174,17 +175,9 @@
   exclusive: true
   whitelistJobs:
     - ChiefMedicalOfficer
-    - Chemist
-    - Paramedic
-    - MedicalDoctor
-    - Psychologist
-    - MedicalIntern
     - SeniorPhysician
     - ResearchDirector
-    - ResearchAssistant
-    - Scientist
     - SeniorResearcher
-    - Coroner
   prototype: ClothingHeadsetMedicalScience
 
 - type: loadout

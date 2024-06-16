@@ -109,3 +109,8 @@
   id: Cataracts
   kind: source
   path: "/Textures/Shaders/cataracts.swsl"
+
+- type: shader
+  id: Scanline
+  kind: source
+  path: "/Textures/Shaders/scanline.swsl"

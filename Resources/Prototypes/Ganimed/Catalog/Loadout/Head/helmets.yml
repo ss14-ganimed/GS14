@@ -1,21 +1,4 @@
 - type: loadout
-  id: LoadoutHeadClothingHeadHelmetRiot
-  category: loadout-category-head
-  cost: 4
-  exclusive: true
-  whitelistJobs:
-    - SecurityOfficer
-    - SecurityCadet
-    - Detective
-    - Warden
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
-    - Brigmedic
-    - BlueShield
-  prototype: ClothingHeadHelmetRiot
-  
-- type: loadout
   id: LoadoutHeadClothingHeadHelmetBone
   category: loadout-category-head
   cost: 6
@@ -118,24 +101,6 @@
   prototype: ClothingHeadHelmetBombSuit
   
 - type: loadout
-  id: LoadoutHeadClothingHeadHelmetBasic
-  category: loadout-category-head
-  cost: 2
-  exclusive: true
-  sponsorOnly: true
-  whitelistJobs:
-    - SecurityCadet
-    - SecurityOfficer
-    - Warden
-    - Detective
-    - HeadOfSecurity
-    - Captain
-    - SeniorOfficer
-    - Brigmedic
-    - BlueShield
-  prototype: ClothingHeadHelmetBasic
-  
-- type: loadout
   id: LoadoutHeadClothingHeadHelmetThunderdome
   category: loadout-category-head
   cost: 4
@@ -143,22 +108,3 @@
   sponsorOnly: true
   prototype: ClothingHeadHelmetThunderdome
   
-- type: loadout
-  id: LoadoutHeadClothingHeadHelmetCosmonaut
-  category: loadout-category-head
-  cost: 4
-  exclusive: true
-  sponsorOnly: true
-  prototype: ClothingHeadHelmetCosmonaut
-  
-- type: loadout
-  id: LoadoutHeadClothingHeadHelmetSwat
-  category: loadout-category-head
-  cost: 4
-  exclusive: true
-  sponsorOnly: true
-  whitelistJobs:
-    - BlueShield
-    - HeadOfSecurity
-    - Captain
-  prototype: ClothingHeadHelmetSwat

@@ -993,3 +993,69 @@
   - type: StaminaProtection
     coefficient: 0.4
   - type: HeldSpeedModifier
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitUSSP
+  name: USSP hardsuit
+  description: Hello, Yuoko, it's AltMapper...
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Hardsuits/ussp.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Hardsuits/ussp.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.55
+        Piercing: 0.6
+        Caustic: 0.4
+        Heat: 0.75
+        Radiation: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitUSSP
+  - type: StaminaProtection
+    coefficient: 0.4
+  - type: HeldSpeedModifier
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitUSSPCommander
+  name: USSP commander hardsuit
+  description: Hello, Yuoko, it's AltMapper...
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Hardsuits/usspCommander.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Hardsuits/usspCommander.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.4
+        Caustic: 0.3
+        Heat: 0.6
+        Radiation: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.60
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitUSSP
+  - type: StaminaProtection
+    coefficient: 0.3
+  - type: HeldSpeedModifier
