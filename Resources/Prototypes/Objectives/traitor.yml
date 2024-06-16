@@ -66,18 +66,19 @@
       - StealCondition
   - type: DieCondition
 
-#- type: entity
-#  parent: [BaseTraitorObjective, BaseLivingObjective]
-#  id: HijackShuttleObjective
-#  name: Hijack emergency shuttle
-#  description: Leave on the shuttle free and clear of the loyal Nanotrasen crew on board. Use ANY methods available to you. Syndicate agents, Nanotrasen enemies, and handcuffed hostages may remain alive on the shuttle. Ignore assistance from anyone other than a support agent.
-#  components:
-#    - type: Objective
-#      difficulty: 5 # insane, default config max difficulty
-#      icon:
-#        sprite: Objects/Tools/emag.rsi
-#        state: icon
-#    - type: HijackShuttleCondition
+- type: entity
+  noSpawn: true
+  parent: [BaseTraitorObjective, BaseLivingObjective]
+  id: HijackShuttleObjective
+  name: object-condition-hijack-shuttle-name
+  description: object-condition-hijack-shuttle-description
+  components:
+    - type: Objective
+      difficulty: 5 # insane, default config max difficulty
+      icon:
+        sprite: Objects/Tools/emag.rsi
+        state: icon
+    - type: HijackShuttleCondition
 
 # kill
 
@@ -166,13 +167,12 @@
 ## rd
 
 - type: entity
-  abstract: true
+  noSpawn: true
   parent: BaseTraitorStealObjective
   id: BaseRDStealObjective
   components:
-  - type: NotJobRequirement
-    job: ResearchDirector
   - type: StealCondition
+    stealGroup: ClothingOuterHardsuitRd
     owner: job-name-rd
 
 - type: entity
@@ -207,6 +207,19 @@
     stealGroup: BookSecretDocuments
     owner: job-name-hos
 
+- type: entity
+  noSpawn: true
+  parent: BaseTraitorStealObjective
+  id: X01StealObjective
+  components:
+  - type: Objective
+    difficulty: 3
+  - type: NotJobRequirement
+    job: HeadOfSecurity
+  - type: StealCondition
+    stealGroup: MultiphaseEnergyPistol
+    owner: job-name-hos
+
 ## ce
 
 - type: entity
@@ -217,6 +230,17 @@
     job: ChiefEngineer
   - type: StealCondition
     stealGroup: ClothingShoesBootsMagAdv
+    owner: job-name-ce
+
+- type: entity
+  noSpawn: true
+  parent: BaseTraitorStealObjective
+  id: BlueprintsStealObjective
+  components:
+  - type: NotJobRequirement
+    job: ChiefEngineer
+  - type: StealCondition
+    stealGroup: StationBlueprints
     owner: job-name-ce
 
 ## qm
@@ -293,3 +317,18 @@
   - type: StealCondition
     stealGroup: NukeDisk
     owner: objective-condition-steal-station
+
+## warden
+
+- type: entity
+  noSpawn: true
+  parent: BaseTraitorStealObjective
+  id: KravMagaStealObjective
+  components:
+  - type: Objective
+    difficulty: 3
+  - type: NotJobRequirement
+    job: Warden
+  - type: StealCondition
+    stealGroup: KravMaga
+    owner: job-name-warden

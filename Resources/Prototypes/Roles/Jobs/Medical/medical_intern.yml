@@ -4,14 +4,11 @@
   description: job-description-intern
   playTimeTracker: JobMedicalIntern
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 54000 # 15 hrs
-      inverted: true # stop playing intern if you're good at med!
+    - !type:OverallPlaytimeRequirement
+      time: 7200 #2 hrs
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine
-  canBeAntag: false
   access:
   - Medical
   - Maintenance
@@ -19,11 +16,13 @@
 - type: startingGear
   id: MedicalInternGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    back: ClothingBackpackMedicalFilled
     shoes: ClothingShoesColorWhite
     id: MedicalInternPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
-  storage:
-    back:
-    - BoxSurvivalMedical
+  innerClothingSkirt: ClothingUniformJumpskirtColorWhite
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled

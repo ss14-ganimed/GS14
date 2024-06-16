@@ -4,8 +4,6 @@ using Content.Server.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Preferences;
-using Content.Shared.Preferences.Loadouts;
-using Content.Shared.Preferences.Loadouts.Effects;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Configuration;
@@ -39,21 +37,35 @@ namespace Content.IntegrationTests.Tests.Preferences
 
         private static HumanoidCharacterProfile CharlieCharlieson()
         {
-            return new()
-            {
-                Name = "Charlie Charlieson",
-                FlavorText = "The biggest boy around.",
-                Species = "Human",
-                Age = 21,
-                Appearance = new(
+            return new(
+                "Charlie Charlieson",
+                "The biggest boy around.",
+                "Human",
+                21,
+                Sex.Male,
+                Gender.Epicene,
+                new HumanoidCharacterAppearance(
                     "Afro",
                     Color.Aqua,
                     "Shaved",
                     Color.Aquamarine,
                     Color.Azure,
                     Color.Beige,
-                    new ())
-            };
+                    Color.Beige,
+                    new ()
+                ),
+                ClothingPreference.Jumpskirt,
+                BackpackPreference.Backpack,
+                SpawnPriorityPreference.None,
+                new Dictionary<string, JobPriority>
+                {
+                    {SharedGameTicker.FallbackOverflowJob, JobPriority.High}
+                },
+                PreferenceUnavailableMode.StayInLobby,
+                new List<string> (),
+                new List<string>(),
+                new List<string>()
+            );
         }
 
         private static ServerDbSqlite GetDb(RobustIntegrationTest.ServerIntegrationInstance server)

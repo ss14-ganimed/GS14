@@ -10,7 +10,9 @@
   skinColoration: Hues
   maleFirstNames: names_arachnid_first
   femaleFirstNames: names_arachnid_first
-  lastNames: names_arachnid_last
+  maleLastNames: names_arachnid_last
+  femaleLastNames: names_arachnid_last
+  naming: FirstDashFirst
   sexes:
   - Unsexed
 

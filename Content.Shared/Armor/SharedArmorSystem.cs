@@ -1,4 +1,5 @@
 ﻿using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Examine;
 using Content.Shared.Inventory;
 using Content.Shared.Silicons.Borgs;
@@ -41,6 +42,16 @@ public abstract class SharedArmorSystem : EntitySystem
             return;
 
         var examineMarkup = GetArmorExamine(component.Modifiers);
+		
+		if (TryComp<StaminaProtectionComponent>(uid, out var stamProt))
+		{
+			examineMarkup.PushNewline();
+			examineMarkup.AddMarkup(
+				Loc.GetString("staminaprotection-coefficient", (
+					"coefficient", 
+					MathF.Round((1f - stamProt.Coefficient) * 100,1))
+					));
+		}
 
         var ev = new ArmorExamineEvent(examineMarkup);
         RaiseLocalEvent(uid, ref ev);
@@ -48,6 +59,7 @@ public abstract class SharedArmorSystem : EntitySystem
         _examine.AddDetailedExamineVerb(args, component, examineMarkup,
             Loc.GetString("armor-examinable-verb-text"), "/Textures/Interface/VerbIcons/dot.svg.192dpi.png",
             Loc.GetString("armor-examinable-verb-message"));
+		
     }
 
     private FormattedMessage GetArmorExamine(DamageModifierSet armorModifiers)
@@ -55,7 +67,7 @@ public abstract class SharedArmorSystem : EntitySystem
         var msg = new FormattedMessage();
 
         msg.AddMarkup(Loc.GetString("armor-examine"));
-
+		
         foreach (var coefficientArmor in armorModifiers.Coefficients)
         {
             msg.PushNewline();

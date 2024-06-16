@@ -27,6 +27,8 @@
     - WhitelistChameleon
   - type: ClothingRequiredStepTriggerImmune
     slots: WITHOUT_POCKET
+  - type: StaminaProtection
+    coefficient: 0.8
 
 - type: entity
   parent: ClothingOuterSuitBomb
@@ -69,6 +71,35 @@
   - type: GroupExamine
   - type: ClothingRequiredStepTriggerImmune
     slots: WITHOUT_POCKET
+  - type: StaminaProtection
+    coefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBaseLarge
+  id: ClothingOuterSuitFireOriginal
+  name: old fire suit
+  description: An older version of a suit that helps protect against hazardous temperatures.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/original_fire.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/original_fire.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.04
+  - type: TemperatureProtection
+    coefficient: 0.005
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.9
+        Heat: 0.3
+        Cold: 0.2
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.7
+  - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.85
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -125,6 +156,27 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ClothingRequiredStepTriggerImmune
     slots: WITHOUT_POCKET
+  - type: StaminaProtection
+    coefficient: 0.85
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, GeigerCounterClothing]
+  id: ClothingOuterSuitRadOriginal
+  name: old-fashioned radiation suit
+  description: "An older version of a suit that protects against radiation. From the times when NT cared about colors. Still contains lead though."
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/rad.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.90
+        Radiation: 0.05
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/original_rad.rsi
+  - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.85
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
@@ -165,6 +217,8 @@
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSmall
         disableEject: true
+  - type: StaminaProtection
+    coefficient: 0.9
 
 - type: entity
   parent: ClothingOuterBase
@@ -257,3 +311,25 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterAerostaticBomberJacket
+  name: aerostatic bomber jacket
+  description: A jacket once worn by the revolutionary air brigades during the Antecentennial Revolution. There are quite a few pockets on the inside, mostly for storing notebooks and compasses.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/kim.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/kim.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterDiscoAssBlazer
+  name: disco ass blazer
+  description: Looks like someone skinned this blazer off some long extinct disco-animal. It has an enigmatic white rectangle on the back and the right sleeve.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/disco.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/disco.rsi

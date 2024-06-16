@@ -94,6 +94,7 @@
         shader: unshaded
         visible: false
         map: [ "light" ]
+  - type: Rotatable
 
 - type: entity
   name: desk lamp

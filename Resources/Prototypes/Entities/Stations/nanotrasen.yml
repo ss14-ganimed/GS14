@@ -22,7 +22,7 @@
     - BaseStationAlertLevels
     - BaseStationMagnet
     - BaseStationExpeditions
-    - BaseStationSiliconLawCrewsimov
+    - BaseStationSiliconLawRandomised
     - BaseStationAllEventsEligible
     - BaseStationNanotrasen
     - BaseRandomStation

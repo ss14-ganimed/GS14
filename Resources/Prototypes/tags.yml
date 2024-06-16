@@ -251,7 +251,7 @@
 
 - type: Tag
   id: BypassInteractionRangeChecks
-
+  
 - type: Tag
   id: CableCoil
   
@@ -927,6 +927,9 @@
   id: NoBlockAnchoring
 
 - type: Tag
+  id: NoPaint
+
+- type: Tag
   id: NozzleBackTank
 
 - type: Tag
@@ -1109,6 +1112,9 @@
 
 - type: Tag
   id: ShellShotgun
+
+- type: Tag
+  id: PelletShotgunFlare
 
 - type: Tag
   id: Shiv
@@ -1337,4 +1343,20 @@
 - type: Tag
   id: WriteIgnoreStamps
 
-# ALPHABETICAL
+- type: Tag
+  id: GlassesNearsight
+
+- type: Tag
+  id: GlassesMonochromacy
+
+- type: Tag
+  id: GlassesChromaticAberration
+
+- type: Tag
+  id:  boots
+
+- type: Tag
+  id: HidesHeadTop
+
+- type: Tag
+  id: HidesTail

@@ -6,7 +6,7 @@
   startingGear: ServiceWorkerGear
   icon: "JobIconServiceWorker"
   supervisors: job-supervisors-service
-  canBeAntag: false
+  canBeAntag: true
   access:
   - Service
   - Maintenance
@@ -18,9 +18,11 @@
 - type: startingGear
   id: ServiceWorkerGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitBartender
+    back: ClothingBackpackFilled
     shoes: ClothingShoesColorBlack
     id: ServiceWorkerPDA
     ears: ClothingHeadsetService
-  storage:
-    back:
-    - BoxSurvival
+  innerClothingSkirt: ClothingUniformJumpskirtBartender
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

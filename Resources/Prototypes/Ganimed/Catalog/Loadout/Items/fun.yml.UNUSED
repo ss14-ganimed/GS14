@@ -1,0 +1,193 @@
+- type: loadout
+  id: LoadoutItemsRGBStaff
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  prototype: RGBStaff
+  
+- type: loadout
+  id: LoadoutItemsBasketball
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: Basketball
+  
+- type: loadout
+  id: LoadoutItemsPlunger
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: Plunger
+  
+- type: loadout
+  id: LoadoutItemsBucket
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: Bucket
+  
+- type: loadout
+  id: LoadoutItemsVape
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: Vape
+  
+- type: loadout
+  id: LoadoutItemsBikeHorn
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  prototype: BikeHorn
+  
+- type: loadout
+  id: LoadoutItemsViolaInstrument
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  prototype: ViolaInstrument
+  
+- type: loadout
+  id: LoadoutItemsBalloonCorgi
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: BalloonCorgi
+  
+- type: loadout
+  id: LoadoutItemsHarmonicaInstrument
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: HarmonicaInstrument
+  
+- type: loadout
+  id: LoadoutItemsGlowstickYellow
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: GlowstickYellow
+  
+- type: loadout
+  id: LoadoutItemsGlowstickGreen
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: GlowstickGreen
+  
+- type: loadout
+  id: LoadoutItemsGlowstickRed
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: GlowstickRed
+  
+- type: loadout
+  id: LoadoutItemsToyNuke
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: ToyNuke
+
+- type: loadout
+  id: LoadoutItemsCrayonBox
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: CrayonBox
+  
+- type: loadout
+  id: LoadoutItemsBackgammonBoard
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: BackgammonBoard
+  
+- type: loadout
+  id: LoadoutItemsSoapNT
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: SoapNT
+  
+- type: loadout
+  id: LoadoutItemsSingularityToy
+  category: loadout-category-items
+  cost: 8
+  exclusive: false
+  prototype: SingularityToy
+  
+- type: loadout
+  id: LoadoutItemsPersonalAI
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: PersonalAI
+  
+- type: loadout
+  id: LoadoutItemsGunpetInstrument
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: GunpetInstrument
+  
+- type: loadout
+  id: LoadoutItemsLauncherCreamPie
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - Clown
+  prototype: LauncherCreamPie
+  
+- type: loadout
+  id: LoadoutItemsCigPackMixed
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: CigPackMixed
+  
+- type: loadout
+  id: LoadoutItemsWhoopieCushion
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: WhoopieCushion
+  
+  
+- type: loadout
+  id: LoadoutItemsPlushieSharkGrey
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: PlushieSharkGrey
+  
+  
+- type: loadout
+  id: LoadoutItemsPlushieSharkBlue
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: PlushieSharkBlue
+  
+- type: loadout
+  id: LoadoutItemsPlushieSharkPink
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: PlushieSharkPink
+  
+- type: loadout
+  id: LoadoutItemsSkub
+  category: loadout-category-items
+  cost: 5
+  exclusive: false
+  prototype: Skub
+  
+- type: loadout
+  id: LoadoutItemsStrangePill
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  prototype: StrangePill
+  

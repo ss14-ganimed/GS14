@@ -1,0 +1,164 @@
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetRiot
+  category: loadout-category-head
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - SecurityOfficer
+    - SecurityCadet
+    - Detective
+    - Warden
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingHeadHelmetRiot
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetBone
+  category: loadout-category-head
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - SecurityOfficer
+    - Detective
+    - Warden
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Quartermaster
+    - SalvageSpecialist
+    - Chef
+    - Bartender
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingHeadHelmetBone
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetTemplar
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHelmetTemplar
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetTemplarOriginal
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHelmetTemplarOriginal
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetAtmosFire
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+  prototype: ClothingHeadHelmetAtmosFire
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetAncient
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+  prototype: ClothingHeadHelmetAncient
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetFire
+  category: loadout-category-head
+  cost: 7
+  exclusive: true
+  prototype: ClothingHeadHelmetFire
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetVoidParamed
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Paramedic
+  prototype: ClothingHeadHelmetVoidParamed
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetVoidParamedAlter
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Paramedic
+  prototype: ClothingHeadHelmetVoidParamedAlter
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetBombSuit
+  category: loadout-category-head
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingHeadHelmetBombSuit
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetBasic
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingHeadHelmetBasic
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetThunderdome
+  category: loadout-category-head
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHeadHelmetThunderdome
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetCosmonaut
+  category: loadout-category-head
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  prototype: ClothingHeadHelmetCosmonaut
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHelmetSwat
+  category: loadout-category-head
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - BlueShield
+    - HeadOfSecurity
+    - Captain
+  prototype: ClothingHeadHelmetSwat

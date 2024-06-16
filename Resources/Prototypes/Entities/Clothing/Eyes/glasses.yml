@@ -77,6 +77,9 @@
   - type: VisionCorrection
   - type: Tag
     tags:
+    - GlassesNearsight
+    - GlassesMonochromacy
+    - GlassesChromaticAberration
     - HamsterWearable
     - WhitelistChameleon
 
@@ -107,6 +110,9 @@
   - type: VisionCorrection
   - type: Tag
     tags:
+    - GlassesNearsight
+    - GlassesChromaticAberration
+    - GlassesMonochromacy
     - HamsterWearable
     - WhitelistChameleon
 
@@ -122,6 +128,11 @@
     sprite: Clothing/Eyes/Glasses/outlawglasses.rsi
   - type: VisionCorrection
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - GlassesNearsight
+    - GlassesMonochromacy
+    - GlassesChromaticAberration
 
 - type: entity
   parent: ClothingEyesBase
@@ -226,12 +237,22 @@
 
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesVisorNinja
-  name: ninja visor
-  description: An advanced visor protecting a ninja's eyes from flashing lights.
+  id: ClothingEyesSalesman
+  name: colored glasses
+  description: A pair of glasses with uniquely colored lenses. The frame is inscribed with 'Best Salesman 1997'.
   components:
-  - type: Sprite
-    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
-  - type: Clothing
-    sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
-  - type: FlashImmunity
+    - type: Sprite
+      sprite: Corvax/Clothing/Eyes/Glasses/salesman.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Eyes/Glasses/salesman.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesBinoclardLenses
+  name: binoclard lenses
+  description: Shows you know how to sew a lapel and center a back vent.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Eyes/Glasses/kim.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Eyes/Glasses/kim.rsi

@@ -14,6 +14,8 @@
     - SuitEVA
     - MonkeyWearable
     - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.95
 
 #Syndicate EVA
 - type: entity
@@ -31,6 +33,8 @@
     - SuitEVA
     - MonkeyWearable
     - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.95
 
 #Emergency EVA
 - type: entity
@@ -55,6 +59,8 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: StaminaProtection
+    coefficient: 0.95
 
 #Prisoner EVA
 - type: entity
@@ -72,6 +78,8 @@
     - SuitEVA
     - MonkeyWearable
     - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.95
 
 #NTSRA Voidsuit / Ancient Voidsuit
 - type: entity
@@ -87,6 +95,8 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
+  - type: StaminaProtection
+    coefficient: 0.9
   - type: HeldSpeedModifier
 
 #Paramedic Voidsuit
@@ -117,6 +127,37 @@
         Radiation: 0.75
         Caustic: 0.5
   - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.9
+  - type: StealTarget
+    stealGroup: ClothingOuterHardsuitVoidParamed
+
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitVoidParamedOriginal
+  name: Paramedic Void Suit
+  description: An outdated blue design of a void suit made for paramedics.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/original_paramed.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/original_paramed.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: TemperatureProtection
+    coefficient: 0.1
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+        Heat: 0.90
+        Radiation: 0.75
+        Caustic: 0.5
+  - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed
   - type: ToggleableClothing
@@ -125,3 +166,34 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: StaminaProtection
+    coefficient: 0.9
+
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitVoidParamedAlter
+  name: Light Paramedic Void Suit
+  description: Experimental version of a paramedic suit. Differs a lot from its parent and finds its use.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/alter_paramed.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/alter_paramed.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: TemperatureProtection
+    coefficient: 0.1
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+        Heat: 0.90
+        Radiation: 0.75
+        Caustic: 0.5
+  - type: GroupExamine
+  - type: StaminaProtection
+    coefficient: 0.9

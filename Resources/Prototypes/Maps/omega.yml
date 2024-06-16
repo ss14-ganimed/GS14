@@ -9,10 +9,10 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Omega Station {1}'
+          mapNameTemplate: '{0} Омега {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'TG'
+            prefixCreator: 'ИСН'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_omega.yml
         - type: StationJobs
@@ -58,3 +58,14 @@
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             Borg: [ 2, 2 ]
+            #ent
+            SeniorPhysician: [ 0, 1 ]
+            SeniorEngineer: [ 0, 1 ]
+            SeniorResearcher: [ 0, 1 ]
+            SeniorOfficer: [ 0, 1 ]
+            BlueShield: [ 0, 1 ]
+            Roboticist: [ 0, 1 ]
+            Brigmedic: [ 0, 1 ]
+            IAA: [ 0, 1 ]
+            Coroner: [ 0, 1 ]
+            BridgeOfficer: [ 0, 1 ]

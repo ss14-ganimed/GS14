@@ -3,17 +3,16 @@
   mapName: 'Saltern'
   mapPath: /Maps/saltern.yml
   minPlayers: 0
-  maxPlayers: 35
-  fallback: true
+  maxPlayers: 30
   stations:
     Saltern:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Saltern {1}'
+          mapNameTemplate: '{0} Салтерн {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: '14'
+            prefixCreator: 'ИСН'
         - type: StationJobs
           availableJobs:
             #service
@@ -57,4 +56,14 @@
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
-
+            #ent
+            SeniorPhysician: [ 0, 1 ]
+            SeniorEngineer: [ 0, 1 ]
+            SeniorResearcher: [ 0, 1 ]
+            SeniorOfficer: [ 0, 1 ]
+            BlueShield: [ 0, 1 ]
+            Roboticist: [ 0, 1 ]
+            Brigmedic: [ 0, 1 ]
+            IAA: [ 0, 1 ]
+            Coroner: [ 0, 1 ]
+            BridgeOfficer: [ 0, 1 ]

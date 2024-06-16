@@ -1,33 +1,33 @@
 <Document>
-  # Slime People
-
+  # Слаймолюды
+  
   <Box>
     <GuideEntityEmbed Entity="MobSlimePerson" Caption=""/>
   </Box>
 
-  They breathe nitrogen instead of oxygen, which is abundant in the station air, but harder to find compressed into gas tanks. They take significant damage if they are sprayed or splashed with water, but can
-  (and like other species, need to) drink it safely to stay hydrated.
-  They exhale nitrous oxide and are unaffected by it.
-  Their body can process 6 reagents at the same time instead of just 2.
+  Они дышат азотом вместо кислорода, который в изобилии содержится в воздухе станции, но его труднее найти в сжатом виде в газовых баллонах. Они получают значительный урон, если на них распыляют воду, но могут
+  (и, как и другие виды, должны) пить ее, чтобы избежать обезвоживания.
+  Они выдыхают закись азота, и она на них не действует.
+  Их организм может перерабатывать 6 реагентов одновременно, а не только 2.
 
-  Slimepeople can morph into a [bold]"geras"[/bold] (an archaic slimefolk term), which is a smaller slime form that can [bold]pass through grilles[/bold],
-  but forces them to drop their inventory and held items. It's handy for a quick getaway. A geras is small enough to pick up (with two hands)
-  and fits in a duffelbag.
+  Слаймы могут трансформироваться в [bold] "гераса" [/bold] (архаичный термин народа слизняков), которая представляет собой меньшую и стройную форму, способную [bold] сквозь решетки [/bold].,
+  но это вынуждает их бросать свой инвентарь и другие предметы, которые они хранят. Это удобно для быстрого бегства. Герас достаточно мал, чтобы ее можно было поднять (двумя руками)
+  и помещается в спортивную сумку.
 
   <Box>
-    <GuideEntityEmbed Entity="MobSlimesGeras" Caption="A typical geras."/>
+    <GuideEntityEmbed Entity="MobSlimesGeras" Caption="Герас."/>
   </Box>
 
-  Slimepeople have an [bold]internal 2x2 storage inventory[/bold] inside of their slime membrane. Anyone can see what's inside and take it out of you without asking,
-  so be careful. They [bold]don't drop their internal storage when they morph into a geras, however![/bold]
+  У слаймов есть [bold] внутреннее хранилище размером 2х2 [/bold] внутри их слизевой оболочки. Любой может увидеть, что находится внутри, и вытащить это из вас, не спрашивая,
+  так что будьте осторожны. Однако они [bold] не теряют свой внутренний запас, когда превращаются в герасов![/bold]
 
-  Slimepeople have slight accelerated regeneration compared to other humanoids. They're also capable of hardening their fists, and as such have stronger punches,
-  although they punch a little slower.
+  У слизняков несколько ускоренная регенерация по сравнению с другими гуманоидами. Они также способны закалять свои кулаки и, как следствие, наносить более сильные удары,
+  хотя и немного медленнее.
 
-  Their slime "blood" can not be regenerated from Iron. Slime Blood is technically a source of
-  moderately filling food for other species, although drinking the blood of your coworkers is usually frowned upon.
-  They suffocate 80% slower, but take pressure damage 9% faster. This makes them by far the species most capable to survive in hard vacuum. For a while.
+  Их слизистая "кровь" не может быть восстановлена из железа. Технически, слизистая кровь является источником
+  в меру сытная пища для других видов, хотя к употреблению крови ваших коллег обычно относятся неодобрительно.
+  Они задыхаются на 80% медленнее, но на 9% быстрее получают урон от давления. Это делает их, безусловно, наиболее приспособленными к выживанию в условиях жесткого вакуума. На время.
 
-  They take [color=#1e90ff]80% less Cellular damage, 40% less Blunt damage and 20% less Poison damage[/color], but [color=#ffa500]50% more Cold damage, 20% more Slash damage and 20% more Piercing damage[/color].
+  Они получают [color=#1e90ff] на 80% меньше генетического урона, на 40% меньше урона тупыми предметами и на 20% меньше урона ядом[/color], но [color=#ffa500] на 50% больше урона холодом, на 20% больше урона режущими ударами и на 20% больше урона колющими[/color].
 
 </Document>

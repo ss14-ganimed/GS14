@@ -8,9 +8,9 @@
     shoes: ClothingShoesWizard
     id: PassengerPDA
     ears: ClothingHeadsetService
-  storage:
-    back:
-    - BoxSurvival
+  innerClothingSkirt: ClothingUniformJumpskirtColorDarkBlue
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: WizardRedGear
@@ -19,6 +19,12 @@
     jumpsuit: ClothingUniformJumpsuitColorRed
     head: ClothingHeadHatRedwizard
     outerClothing: ClothingOuterWizardRed
+    shoes: ClothingShoesWizard
+    id: PassengerPDA
+    ears: ClothingHeadsetService
+  innerClothingSkirt: ClothingUniformJumpskirtColorRed
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: WizardVioletGear
@@ -27,9 +33,23 @@
     jumpsuit: ClothingUniformJumpsuitColorPurple
     head: ClothingHeadHatVioletwizard
     outerClothing: ClothingOuterWizardViolet
+    shoes: ClothingShoesWizard
+    id: PassengerPDA
+    ears: ClothingHeadsetService
+  innerClothingSkirt: ClothingUniformJumpskirtColorPurple
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
 
 - type: startingGear
   id: WizardHardsuitGear
   parent: WizardVioletGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitColorPurple
+    back: ClothingBackpackFilled
     outerClothing: ClothingOuterHardsuitWizard
+    shoes: ClothingShoesWizard
+    id: PassengerPDA
+    ears: ClothingHeadsetService
+  innerClothingSkirt: ClothingUniformJumpskirtColorPurple
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

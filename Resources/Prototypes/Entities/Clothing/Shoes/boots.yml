@@ -20,9 +20,18 @@
     sprite: Clothing/Shoes/Boots/jackboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/jackboots.rsi
+  - type: Matchbox
+  - type: FootstepModifier # Corvax-Sounds
+    footstepSoundCollection:
+      collection: FootstepBoots
+  - type: Storage
+    whitelist:
+      tags:
+        - Knife
+        - Sidearm
 
 - type: entity
-  parent: ClothingShoesBaseButcherable
+  parent: ClothingShoesMilitaryBase
   id: ClothingShoesBootsSalvage
   name: salvage boots
   description: Steel-toed salvage boots for salvaging in hazardous environments.
@@ -32,6 +41,10 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/explorer.rsi
   - type: Matchbox
+  - type: Storage
+    whitelist:
+      tags:
+        - Knife
 
 - type: entity
   parent: ClothingShoesBaseButcherable
@@ -101,6 +114,17 @@
     sprite: Clothing/Shoes/Boots/winterboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/winterboots.rsi
+  - type: TemperatureProtection
+    coefficient: 0.2
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackSec
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Shoes/Boots/jackboots_sec.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Shoes/Boots/jackboots_sec.rsi
 
 - type: entity
   parent: ClothingShoesBaseWinterBoots

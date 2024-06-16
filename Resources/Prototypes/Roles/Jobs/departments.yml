@@ -1,4 +1,20 @@
 - type: department
+  id: Command
+  description: department-Command-description
+  color: "#334E6D"
+  roles:
+  - Captain
+  - CentralCommandOfficial
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - IAA
+  - BlueShield
+  - BridgeOfficer
+
+- type: department
   id: Cargo
   description: department-Cargo-description
   color: "#A46106"
@@ -8,13 +24,62 @@
   - SalvageSpecialist
 
 - type: department
+  id: Engineering
+  description: department-Engineering-description
+  color: "#EFB341"
+  roles:
+  - AtmosphericTechnician
+  - ChiefEngineer
+  - SeniorEngineer
+  - StationEngineer
+  - TechnicalAssistant
+
+- type: department
+  id: Medical
+  description: department-Medical-description
+  color: "#52B4E9"
+  roles:
+  - Chemist
+  - ChiefMedicalOfficer
+  - MedicalDoctor
+  - MedicalIntern
+  - Psychologist
+  - Paramedic
+  - SeniorPhysician
+  - Coroner
+
+- type: department
+  id: Security
+  description: department-Security-description
+  color: "#DE3A3A"
+  weight: 20
+  roles:
+  - HeadOfSecurity
+  - SecurityCadet
+  - SecurityOfficer
+  - SeniorOfficer
+  - Brigmedic
+  - Detective
+  - Warden
+
+- type: department
+  id: Science
+  description: department-Science-description
+  color: "#D381C9"
+  roles:
+  - ResearchDirector
+  - SeniorResearcher
+  - Roboticist
+  - Scientist
+  - ResearchAssistant
+
+- type: department
   id: Civilian
   description: department-Civilian-description
   color: "#9FED58"
   weight: -10
   roles:
   - Bartender
-  - Borg
   - Botanist
   - Boxer
   - Chaplain
@@ -31,65 +96,7 @@
   - Visitor
   - Zookeeper
   - ServiceWorker
-
-- type: department
-  id: Command
-  description: department-Command-description
-  color: "#334E6D"
-  roles:
-  - Captain
-  - CentralCommandOfficial
-  - ChiefEngineer
-  - ChiefMedicalOfficer
-  - HeadOfPersonnel
-  - HeadOfSecurity
-  - ResearchDirector
-  - Quartermaster
-  primary: false
-  weight: 100
-
-- type: department
-  id: Engineering
-  description: department-Engineering-description
-  color: "#EFB341"
-  roles:
-  - AtmosphericTechnician
-  - ChiefEngineer
-  - StationEngineer
-  - TechnicalAssistant
-
-- type: department
-  id: Medical
-  description: department-Medical-description
-  color: "#52B4E9"
-  roles:
-  - Chemist
-  - ChiefMedicalOfficer
-  - MedicalDoctor
-  - MedicalIntern
-  - Psychologist
-  - Paramedic
-
-- type: department
-  id: Security
-  description: department-Security-description
-  color: "#DE3A3A"
-  weight: 20
-  roles:
-  - HeadOfSecurity
-  - SecurityCadet
-  - SecurityOfficer
-  - Detective
-  - Warden
-
-- type: department
-  id: Science
-  description: department-Science-description
-  color: "#D381C9"
-  roles:
-  - ResearchDirector
-  - Scientist
-  - ResearchAssistant
+  - Prisoner
 
 - type: department
   id: Specific
@@ -101,4 +108,11 @@
   - Reporter
   - Zookeeper
   - Psychologist
+  - Brigmedic
+  - Roboticist
+  - IAA
+  - Prisoner
+  - BlueShield
+  - Coroner
+  - BridgeOfficer
   primary: false

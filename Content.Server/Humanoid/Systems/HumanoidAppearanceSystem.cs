@@ -1,3 +1,4 @@
+using Content.Shared.Decals;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -14,10 +15,10 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
     public override void Initialize()
     {
         base.Initialize();
-
         SubscribeLocalEvent<HumanoidAppearanceComponent, HumanoidMarkingModifierMarkingSetMessage>(OnMarkingsSet);
         SubscribeLocalEvent<HumanoidAppearanceComponent, HumanoidMarkingModifierBaseLayersSetMessage>(OnBaseLayersSet);
         SubscribeLocalEvent<HumanoidAppearanceComponent, GetVerbsEvent<Verb>>(OnVerbsRequest);
+
     }
 
     // this was done enough times that it only made sense to do it here
@@ -40,6 +41,7 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
         targetHumanoid.Species = sourceHumanoid.Species;
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
+        targetHumanoid.SpeakerColor = sourceHumanoid.SpeakerColor;
         targetHumanoid.Age = sourceHumanoid.Age;
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
         targetHumanoid.CustomBaseLayers = new(sourceHumanoid.CustomBaseLayers);
@@ -151,4 +153,5 @@ public sealed partial class HumanoidAppearanceSystem : SharedHumanoidAppearanceS
 
         Dirty(uid, humanoid);
     }
+
 }

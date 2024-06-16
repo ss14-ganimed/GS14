@@ -1,0 +1,199 @@
+- type: loadout
+  id: LoadoutEarsClothingHeadsetCMO
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingHeadsetCMO
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetQM
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - Quartermaster
+  prototype: ClothingHeadsetQM
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetIAA
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - IAA
+  prototype: ClothingHeadsetIAA
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetCE
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+  prototype: ClothingHeadsetCE
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetBrigmedic
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - Brigmedic
+  prototype: ClothingHeadsetBrigmedic
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetEngineering
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+  prototype: ClothingHeadsetEngineering
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetCommand
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - Captain
+    - HeadOfPersonnel
+    - IAA
+    - BlueShield
+  prototype: ClothingHeadsetCommand
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetMedical
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Coroner
+    - Brigmedic
+  prototype: ClothingHeadsetMedical
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetScience
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingHeadsetScience
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetCargo
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - Quartermaster
+    - SalvageSpecialist
+    - CargoTechnician
+  prototype: ClothingHeadsetCargo
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetMining
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Quartermaster
+    - SalvageSpecialist
+    - CargoTechnician
+  prototype: ClothingHeadsetMining
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetGrey
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  prototype: ClothingHeadsetGrey
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetService
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - HeadOfPersonnel
+    - Bartender
+    - Chef
+    - Janitor
+    - Botanist
+    - ServiceWorker
+    - Boxer
+    - Chaplain
+    - Clown
+    - Mime
+    - Lawyer
+    - Librarian
+    - Musician
+    - Zookeeper
+    - Reporter
+  prototype: ClothingHeadsetService
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetSecurity
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingHeadsetSecurity
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetMedicalScience
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Coroner
+  prototype: ClothingHeadsetMedicalScience
+
+- type: loadout
+  id: LoadoutEarsClothingHeadsetRobotics
+  category: loadout-category-ears
+  cost: 0
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - Roboticist
+    - SeniorResearcher
+  prototype: ClothingHeadsetRobotics

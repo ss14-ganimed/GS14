@@ -2,11 +2,12 @@
   id: ResearchDirector
   name: job-name-rd
   description: job-description-rd
+  color: "#D381C9"
   playTimeTracker: JobResearchDirector
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 36000 #10 hrs
+    - !type:RoleTimeRequirement
+      role: JobSeniorResearcher
+      time: 43200 #12 hrs
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs
   weight: 10
@@ -14,7 +15,6 @@
   icon: "JobIconResearchDirector"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
-  canBeAntag: false
   access:
   - Research
   - Command
@@ -23,8 +23,6 @@
   - Brig
   - Cryogenics
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
@@ -32,9 +30,13 @@
 - type: startingGear
   id: ResearchDirectorGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitResearchDirector
+    back: ClothingBackpackResearchDirectorFilled
+    shoes: ClothingShoesColorBrown
+    outerClothing: ClothingOuterCoatRD
     id: RnDPDA
     ears: ClothingHeadsetRD
-  storage:
-    back:
-    - BoxSurvival
-    - Flash
+    eyes: ClothingEyesHUDGlassesScience
+  innerClothingSkirt: ClothingUniformJumpskirtResearchDirector
+  satchel: ClothingBackpackSatchelResearchDirectorFilled
+  duffelbag: ClothingBackpackDuffelResearchDirectorFilled

@@ -1,0 +1,101 @@
+- type: entity
+  id: BluespaceHarvesterRift
+  name: redspace rift
+  description: Run! Run while you can! Just run!
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: BluespaceHarvesterRift
+    passiveSpawn:
+    - MobFleshJared
+    - MobFleshGolem
+    - MobFleshClamp
+    - MobFleshLover
+    spawn:
+      # Flesh
+      - id: MobFleshJared
+        cost: 70
+      - id: MobFleshGolem
+        cost: 70
+      - id: MobFleshClamp
+        cost: 70
+      - id: MobFleshLover
+        cost: 70
+      - id: FleshBlocker
+        cost: 70
+      # Slimes
+      - id: MobAdultSlimesBlueAngry
+        cost: 100
+      - id: MobAdultSlimesYellowAngry
+        cost: 100
+      - id: MobAdultSlimesGreenAngry
+        cost: 100
+      - id: ReagentSlimeSpawner
+        cost: 120
+      # Carps
+      - id: MobCarp
+        cost: 160
+      - id: MobCarpMagic
+        cost: 180
+      # Space
+      - id: MobKangarooSpace
+        cost: 90
+      - id: MobBearSpace
+        cost: 90
+      - id: MobPurpleSnake
+        cost: 90
+      - id: MobTick
+        cost: 90
+      - id: MobWatcherLavaland
+        cost: 200
+      # Spiders
+      - id: MobSpiderSpace
+        cost: 110
+      - id: MobGiantSpiderAngry
+        cost: 110
+      - id: MobClownSpider
+        cost: 110
+      # DEATH
+      - id: FleshKudzu
+        cost: 300
+      - id: SpawnMobBehonker
+        cost: 600
+      - id: MobDragon
+        cost: 700
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Fixtures
+  - type: Sprite
+    layers:
+    - sprite: Structures/Specific/carp_rift.rsi
+      state: icon
+      color: "#ff0000"
+      shader: unshaded
+  - type: InteractionOutline
+  - type: Clickable
+  - type: PointLight
+    enabled: true
+    color: "#ff0000"
+    radius: 12.0
+    energy: 5.0
+    netsync: false
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: redspace rift
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg

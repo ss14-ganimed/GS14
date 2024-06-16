@@ -2,7 +2,7 @@
 
 on:
   push:
-    branches: [ master, staging, trying ]
+    branches: [ master, staging, trying, upstream-sync ]
     paths:
       - '**.cs'
       - '**.csproj'

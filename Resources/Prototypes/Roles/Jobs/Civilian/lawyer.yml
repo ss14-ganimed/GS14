@@ -6,25 +6,32 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 36000 # 10 hrs
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 14400 #4 hours
   startingGear: LawyerGear
   icon: "JobIconLawyer"
-  supervisors: job-supervisors-hop
+  supervisors: job-supervisors-iaa
   access:
   - Service
   - Lawyer
   - Brig
   - Maintenance
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
 
 - type: startingGear
   id: LawyerGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants # ignoring this since loadouts are gonna be out soon
+    back: ClothingBackpackLawyerFilled 
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
     ears: ClothingHeadsetSecurity
     # TODO add copy of space law
   inhand:
     - BriefcaseBrownFilled
-  storage:
-    back:
-    - BoxSurvival
-    - RubberStampLawyer
+  innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
+  satchel: ClothingBackpackSatchelLawyerFilled
+  duffelbag: ClothingBackpackDuffelLawyerFilled

@@ -269,6 +269,9 @@
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
+      - ClothingEyesNightVision
+      - ClothingEyesNightVisionMeson
+      - ClothingEyesNightVisionScience
       - PowerDrill
       - MiningDrill
       - AnomalyScanner
@@ -331,6 +334,10 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - EnergyDomeDirectionalTurtle
+      - ClothingEyesGlassesMesonDiagnostic
+      - ClothingEyesGlassesScienceMeson
+      - ClothingEyesGlassesTray
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - BoxBeanbag
@@ -372,6 +379,10 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - WeaponEnergySniperRifle
+      - WeaponImmolator
+      - WeaponIonRifleGun
+      - WeaponEnergyGun
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -504,6 +515,8 @@
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunPerforatorCircuitboard
       - ShuttleGunSvalinnMachineGunCircuitboard
+      - CriminalRecordsComputerCircuitboard
+      - MachineBluespaceHarvesterCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -751,6 +764,7 @@
       - BoxShotgunIncendiary
       - BoxShotgunUranium
       - BoxShellTranquilizer
+      - ClothingEyesGlassesSecurity
       - ExplosivePayload
       - FlashPayload
       - GrenadeBlast
@@ -796,6 +810,11 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - ClothingEyesNightVisionSecurity
+      - WeaponEnergySniperRifle
+      - WeaponImmolator
+      - WeaponIonRifleGun
+      - WeaponEnergyGun
   - type: MaterialStorage
     whitelist:
       tags:
@@ -916,6 +935,7 @@
       - ClothingEyesGlassesChemical
       - WhiteCane
     dynamicRecipes:
+      - ClothingEyesNightVisionMedicine
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
@@ -1058,6 +1078,7 @@
       - ClothingNeckMantleCMO
       - ClothingNeckMantleHOP
       - ClothingNeckMantleHOS
+      - ClothingNeckMantleHOSShoulder # Corvax-Resprite: Old mantle
       - ClothingNeckMantleRD
       - ClothingNeckMantleQM
       - ClothingOuterWinterMusician
@@ -1156,6 +1177,7 @@
       board: OreProcessorMachineCircuitboard
     - type: MaterialStorage
       ignoreColor: true
+      canEjectStoredMaterials: false
       whitelist:
         tags:
           - Ore

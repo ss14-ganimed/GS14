@@ -2,8 +2,8 @@
   id: Europa
   mapName: 'Europa'
   mapPath: /Maps/europa.yml
-  minPlayers: 0
-  maxPlayers: 40
+  minPlayers: 5
+  maxPlayers: 25
   stations:
     Europa:
       stationProto: StandardNanotrasenStation
@@ -14,10 +14,10 @@
           enableStationRotation: false
           maxStationOffset: null
         - type: StationNameSetup
-          mapNameTemplate: '{0} Europa {1}'
+          mapNameTemplate: '{0} Европа {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: '14'
+            prefixCreator: 'ИОН'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_transit.yml
         - type: StationJobs
@@ -64,3 +64,14 @@
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             Reporter: [ 1, 1 ]
+            #ent
+            SeniorPhysician: [ 0, 1 ]
+            SeniorEngineer: [ 0, 1 ]
+            SeniorResearcher: [ 0, 1 ]
+            SeniorOfficer: [ 0, 1 ]
+            BlueShield: [ 0, 1 ]
+            Roboticist: [ 0, 1 ]
+            Brigmedic: [ 0, 1 ]
+            IAA: [ 0, 1 ]
+            Coroner: [ 0, 1 ]
+            BridgeOfficer: [ 0, 1 ]

@@ -3,6 +3,9 @@
   id: HungerIcon
   abstract: true
   priority: 5
+  icon:
+    sprite: /Textures/Interface/Misc/food_icons.rsi
+    state: overfed
   locationPreference: Right
   isShaded: true
 
@@ -32,6 +35,9 @@
   id: ThirstIcon
   abstract: true
   priority: 5
+  icon:
+    sprite: /Textures/Interface/Misc/food_icons.rsi
+    state: overhydrated
   locationPreference: Left
   isShaded: true
 

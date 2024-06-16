@@ -2,16 +2,17 @@
   id: Fland
   mapName: 'Fland Installation'
   mapPath: /Maps/fland.yml
-  minPlayers: 70
+  minPlayers: 45
+  maxPlayers: 80
   stations:
     Fland:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Fland Installation {1}'
+          mapNameTemplate: '{0} Фланд {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'B'
+            prefixCreator: 'ЭПН ОМ'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_delta.yml
         - type: StationCargoShuttle
@@ -60,3 +61,14 @@
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
+            #ent
+            SeniorPhysician: [ 0, 1 ]
+            SeniorEngineer: [ 0, 1 ]
+            SeniorResearcher: [ 0, 1 ]
+            SeniorOfficer: [ 0, 1 ]
+            BlueShield: [ 0, 1 ]
+            Roboticist: [ 0, 1 ]
+            Brigmedic: [ 0, 1 ]
+            IAA: [ 0, 1 ]
+            Coroner: [ 0, 1 ]
+            BridgeOfficer: [ 0, 1 ]

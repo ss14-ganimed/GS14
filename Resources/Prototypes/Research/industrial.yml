@@ -180,6 +180,21 @@
     - BorgModuleAdvancedTool
     - BorgModuleRCD
 
+- type: technology
+  id: AdvancedHudsTechnology
+  name: research-technology-advanced-huds
+  icon:
+    sprite: Ganimed/Clothing/Eyes/supermeson.rsi
+    state: icon
+  discipline: Industrial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+    - ClothingEyesGlassesTray
+    - ClothingEyesGlassesScienceMeson
+    - ClothingEyesGlassesMesonDiagnostic
+    - ClothingEyesNightVision
+
 # Tier 3
 
 - type: technology
@@ -209,3 +224,20 @@
   - PowerCellMicroreactor
   technologyPrerequisites:
   - AdvancedPowercells
+
+- type: technology
+  id: AdvancedNVDTechnology
+  name: research-technology-advanced-night
+  icon:
+    sprite: Ganimed/Clothing/Eyes/NVD/mesonnvd.rsi
+    state: icon
+  discipline: Industrial
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+    - ClothingEyesNightVisionScience
+    - ClothingEyesNightVisionSecurity
+    - ClothingEyesNightVisionMeson
+    - ClothingEyesNightVisionMedicine
+  technologyPrerequisites:
+    - AdvancedHudsTechnology

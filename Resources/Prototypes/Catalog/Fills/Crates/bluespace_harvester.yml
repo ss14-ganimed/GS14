@@ -1,0 +1,321 @@
+# Industrial Loot
+- type: entity
+  id: CrateHarvesterSingularity
+  parent: CrateLimitedSecure
+  description: You've got a bad feeling about this.
+  suffix: Bluespace Harvester, Singularity, DO NOT MAP
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: WeaponTeslaGun
+
+- type: entity
+  id: CrateHarvesterHuds
+  parent: CrateLimitedSecure
+  description: You've got a bad feeling about this.
+  suffix: Bluespace Harvester, Huds
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: ClothingEyesHudMultiversal
+      amount: 1
+    - id: ClothingEyesGlassesMedicineMeson
+      amount: 3
+    - id: ClothingEyesGlassesTray
+      amount: 3
+
+- type: entity
+  id: CrateHarvesterMaterials
+  parent: CrateIndustrialSecure
+  suffix: Bluespace Harvester, Materials
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterMaterials
+      amount: 5
+
+- type: entity
+  id: CrateHarvesterPowerCell
+  parent: CrateIndustrialSecure
+  suffix: Bluespace Harvester, Power Cell
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterPowerCell
+      amount: 3
+
+- type: entity
+  id: CrateHarvesterTools
+  parent: CrateIndustrialSecure
+  suffix: Bluespace Harvester, Tools
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterTools
+      amount: 3
+
+- type: entity
+  id: CrateHarvesterBackpackHolding
+  parent: CrateIndustrialSecure
+  suffix: Bluespace Harvester, Backpack Holding
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterBackpackHolding
+      amount: 2
+
+- type: entity
+  id: CrateHarvesterAmeJar
+  parent: CrateIndustrialSecure
+  suffix: Bluespace Harvester, AmeJar
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: AmeJar
+      amount: 10
+
+- type: entity
+  id: CrateHarvesterCircuitboard
+  parent: CrateIndustrialSecure
+  suffix: Bluespace Harvester, Circuitboard
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterCircuitboard
+      amount: 3
+
+# Technological Loot
+- type: entity
+  id: CrateHarvesterResearchDisk
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, ResearchDisk
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterResearchDisk
+      amount: 4
+
+- type: entity
+  id: CrateHarvesterTechnologyDisk
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, TechnologyDisk
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterTechnologyDisk
+      amount: 7
+
+- type: entity
+  id: CrateHarvesterAnomaly
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, Anomaly
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomAnomalySpawner
+      amount: 1
+
+- type: entity
+  id: CrateHarvesterArtifact
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, Artifact
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomArtifactSpawner
+      amount: 1
+    
+- type: entity
+  id: CrateHarvesterAnomalyKit
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, AnomalyKit
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterAnomalyKit
+      amount: 4
+
+- type: entity
+  id: CrateHarvesterEncryptionKey
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, EncryptionKey
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterEncryptionKey
+      amount: 5
+
+- type: entity
+  id: CrateHarvesterBorg
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, Borg
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterBorg
+      amount: 3
+
+- type: entity
+  id: CrateHarvesterMech
+  parent: CrateTechnologicalSecure
+  suffix: Bluespace Harvester, Mech
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterMech
+      amount: 2
+
+- type: entity
+  id: CrateHarvesterTeleporter
+  parent: CrateLimitedSecure
+  suffix: Bluespace Harvester, Teleporter
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterTeleporter
+      amount: 12
+
+# Biological Loot
+- type: entity
+  id: CrateHarvesterInjection
+  parent: CrateBiologicalSecure
+  suffix: Bluespace Harvester, Injection
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterInjection
+      amount: 4
+
+- type: entity
+  id: CrateHarvesterImplanter
+  parent: CrateBiologicalSecure
+  suffix: Bluespace Harvester, Implanter
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterImplanter
+      amount: 7
+
+- type: entity
+  id: CrateHarvesterMedkit
+  parent: CrateBiologicalSecure
+  suffix: Bluespace Harvester, Medkit
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterMedkit
+      amount: 10
+
+- type: entity
+  id: CrateHarvesterAmbuzol
+  parent: CrateLimitedSecure
+  suffix: Bluespace Harvester, Ambuzol
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: Stimpack
+      amount: 3
+    - id: PillAmbuzolPlus
+      amount: 10
+
+- type: entity
+  id: CrateHarvesterOmnizine
+  parent: CrateLimitedSecure
+  suffix: Bluespace Harvester, Omnizine
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterOmnizine
+      amount: 20
+
+
+- type: entity
+  id: CrateHarvesterSeeds
+  parent: CrateBiologicalSecure
+  suffix: Bluespace Harvester, Seeds
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterSeeds
+      amount: 4
+
+# Destructionl Loot
+- type: entity
+  id: CrateHarvesterDesword
+  parent: CrateLimitedSecure
+  suffix: Bluespace Harvester, Desword
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: EnergySwordDouble
+      amount: 1
+
+- type: entity
+  id: CrateHarvesterWeaponElite
+  parent: CrateLimitedSecure
+  suffix: Bluespace Harvester, WeaponElite
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterWeaponElite
+      amount: 3
+
+- type: entity
+  id: CrateHarvesterWeaponLaser
+  parent: CrateDestructionSecure
+  suffix: Bluespace Harvester, WeaponLaser
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterWeaponLaser
+      amount: 6
+
+- type: entity
+  id: CrateHarvesterWeaponShotgun
+  parent: CrateDestructionSecure
+  suffix: Bluespace Harvester, WeaponShotgun
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterWeaponShotgun
+      amount: 4
+
+- type: entity
+  id: CrateHarvesterWeaponRifle
+  parent: CrateDestructionSecure
+  suffix: Bluespace Harvester, WeaponRifle
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterWeaponRifle
+      amount: 3
+
+- type: entity
+  id: CrateHarvesterWeaponLight
+  parent: CrateDestructionSecure
+  suffix: Bluespace Harvester, WeaponLight
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterWeaponLight
+      amount: 5
+
+- type: entity
+  id: CrateHarvesterWeaponDisabler
+  parent: CrateDestructionSecure
+  suffix: Bluespace Harvester, WeaponDisabler
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterWeaponDisabler
+      amount: 8
+
+- type: entity
+  id: CrateHarvesterBomb
+  parent: CrateDestructionSecure
+  suffix: Bluespace Harvester, Bomb
+  components:
+  - type: BluespaceHarvesterBundle
+    contents:
+    - id: RandomHarvesterBomb
+      amount: 8

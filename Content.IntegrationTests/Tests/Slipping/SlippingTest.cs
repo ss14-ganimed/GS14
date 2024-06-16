@@ -44,16 +44,16 @@ public sealed class SlippingTest : MovementTest
         // Walking over the banana slowly does not trigger a slip.
         await SetKey(EngineKeyFunctions.Walk, BoundKeyState.Down);
         await Move(DirectionFlag.East, 1f);
-#pragma warning disable NUnit2045
         Assert.That(Delta(), Is.LessThan(0.5f));
-        Assert.That(sys.Slipped, Does.Not.Contain(SEntMan.GetEntity(Player)));
-#pragma warning restore NUnit2045
-        AssertComp<KnockedDownComponent>(false, Player);
+        Assert.That(sys.Slipped, Does.Contain(SEntMan.GetEntity(Player)));
+        AssertComp<KnockedDownComponent>(true, Player);
 
         // Moving at normal speeds does trigger a slip.
         await SetKey(EngineKeyFunctions.Walk, BoundKeyState.Up);
         await Move(DirectionFlag.West, 1f);
+#pragma warning disable NUnit2045
         Assert.That(sys.Slipped, Does.Contain(SEntMan.GetEntity(Player)));
+#pragma warning restore NUnit2045
         AssertComp<KnockedDownComponent>(true, Player);
     }
 }
