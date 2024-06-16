@@ -29,9 +29,9 @@ public sealed class LizardAccentSystem : EntitySystem
         // hiSSS
         message = RegexUpperS.Replace(message, "SSS");
         // ekssit
-        message = Regex.Replace(message, @"(\w)x", "$1kss");
+        message = RegexInternalX.Replace(message, "$1kss");
         // ecks
-        message = Regex.Replace(message, @"\bx([\-|r|R]|\b)", "ecks$1");
+        message = RegexLowerEndX.Replace(message, "ecks$1");
         // eckS
         message = RegexUpperEndX.Replace(message, "ECKS$1");
 

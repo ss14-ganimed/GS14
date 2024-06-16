@@ -240,7 +240,6 @@
   abstract: true
   components:
   - type: DiseaseCarrier
-  - type: Flashable
   - type: Barotrauma
     damage:
       types:
