@@ -3,7 +3,7 @@
   id: CultLeaderGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     head: ClothingHeadHelmetCult
     neck: BedsheetCult
     outerClothing: ClothingOuterArmorCult
@@ -18,7 +18,7 @@
   id: CultistGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     head: ClothingHeadHatHoodCulthood
     outerClothing: ClothingOuterRobesCult
     shoes: ClothingShoesColorRed

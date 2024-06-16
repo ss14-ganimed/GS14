@@ -3,6 +3,7 @@
   id: WizardBlueGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorDarkBlue
+    back: ClothingBackpackFilled
     head: ClothingHeadHatWizard
     outerClothing: ClothingOuterWizard
     shoes: ClothingShoesWizard
@@ -14,9 +15,9 @@
 
 - type: startingGear
   id: WizardRedGear
-  parent: WizardBlueGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorRed
+    back: ClothingBackpackFilled
     head: ClothingHeadHatRedwizard
     outerClothing: ClothingOuterWizardRed
     shoes: ClothingShoesWizard
@@ -28,9 +29,9 @@
 
 - type: startingGear
   id: WizardVioletGear
-  parent: WizardBlueGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPurple
+    back: ClothingBackpackFilled
     head: ClothingHeadHatVioletwizard
     outerClothing: ClothingOuterWizardViolet
     shoes: ClothingShoesWizard
@@ -42,7 +43,6 @@
 
 - type: startingGear
   id: WizardHardsuitGear
-  parent: WizardVioletGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPurple
     back: ClothingBackpackFilled

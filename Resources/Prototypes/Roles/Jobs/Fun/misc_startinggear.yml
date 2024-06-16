@@ -5,7 +5,7 @@
   id: SkeletonBiker
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     head: ClothingHeadBandSkull
     eyes: ClothingEyesGlassesSunglasses
     outerClothing: ClothingOuterCoatGentle
@@ -44,7 +44,7 @@
   id: DeathSquadGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitDeathSquad
-    back: ClothingBackpackDeathSquad
+    back: ClothingBackpackDeathSquadFilled
     mask: ClothingMaskGasDeathSquad
     eyes: ClothingEyesNightVisionSecurity
     ears: ClothingHeadsetDeathSquad
@@ -58,9 +58,9 @@
     belt: ClothingBeltMilitaryWebbingMedFilled
   innerClothingSkirt: ClothingUniformJumpskirtColorBlack
 
-# Syndicate Operative Outfit - Civilian
+# Syndicate Operative Outfit - Monkey
 - type: startingGear
-  id: SyndicateOperativeGearCivilian
+  id: SyndicateOperativeGearMonkey
   equipment:
     head: ClothingHeadHatOutlawHat
     jumpsuit: ClothingUniformJumpsuitOperative
@@ -189,7 +189,6 @@
     gloves: ClothingHandsGlovesCombat
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsCombat
-    gloves: ClothingHandsGlovesColorBlack
     id: SyndiPDA
   innerClothingSkirt: ClothingUniformJumpsuitOperative
   satchel: ClothingBackpackSatchelFilled
@@ -204,7 +203,7 @@
     mask: ClothingMaskGas
     outerClothing: ClothingOuterArmorBasic
     gloves: ClothingHandsGlovesCombat
-    back: ClothingBackpack
+    back: ClothingBackpackFilled
     shoes: ClothingShoesBootsCombat
     id: SyndiPDA
   innerClothingSkirt: ClothingUniformJumpsuitOperative
@@ -216,7 +215,7 @@
   id: NanotrasenParamilitaryGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitSec
-    back: ClothingBackpackSecurity
+    back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsCombatFilled
     eyes: ClothingEyesGlassesSecurity
     head: ClothingHeadHelmetSwat
@@ -233,7 +232,7 @@
   id: CBURNGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBrown
-    back: ClothingBackpackDuffelCBURN
+    back: ClothingBackpackDuffelCBURNFilled
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetERT
@@ -308,7 +307,7 @@
 - type: startingGear
   id: MobAghostGear
   equipment:
-    back: ClothingBackpackSatchelHolding
+    back: ClothingBackpackSatchelHoldingAdmin
     id: AdminPDA
 
 #Head Rev Gear
@@ -345,15 +344,9 @@
     shoes: ClothingShoesClownBanana
     jumpsuit: ClothingUniformJumpsuitClownBanana
     mask: ClothingMaskClownBanana
+    ears: ClothingHeadsetService
     pocket1: BikeHorn
     pocket2: ClownRecorder
-
-# Passenger but without the ID, bag, or headset
-- type: startingGear
-  id: LimitedPassengerGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitColorGrey
-    shoes: ClothingShoesColorBlack
 
 #Clown Troupe
 - type: startingGear

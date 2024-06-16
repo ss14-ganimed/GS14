@@ -40,9 +40,9 @@
         Manipulator: 2
       tagRequirements:
         GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 2
+          defaultPrototype: Beaker
+           
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -89,9 +89,9 @@
         Manipulator: 2
       tagRequirements:
         GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 2
+          defaultPrototype: Beaker
+           
 
 - type: entity
   id: AmmoTechFabCircuitboard
@@ -124,9 +124,9 @@
         Manipulator: 2
       tagRequirements:
         GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 2
+          defaultPrototype: Beaker
+           
     - type: StealTarget
       stealGroup: MedicalTechFabCircuitboard
 
@@ -144,9 +144,9 @@
       Manipulator: 1
     tagRequirements:
       GlassBeaker:
-        Amount: 2
-        DefaultPrototype: Beaker
-        ExamineName: Мензурка
+        amount: 2
+        defaultPrototype: Beaker
+         
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -225,9 +225,9 @@
       Cable: 5
     tagRequirements:
         GlassBeaker:
-          Amount: 1
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 1
+          defaultPrototype: Beaker
+           
 
 - type: entity
   id: DiagnoserMachineCircuitboard
@@ -242,9 +242,9 @@
       Cable: 5
     tagRequirements:
       GlassBeaker:
-        Amount: 1
-        DefaultPrototype: Beaker
-        ExamineName: Мензурка
+        amount: 1
+        defaultPrototype: Beaker
+         
     componentRequirements:
       BotanySwab:
         amount: 1
@@ -536,9 +536,9 @@
         Cable: 1
       tagRequirements:
         GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 2
+          defaultPrototype: Beaker
+           
 
 - type: entity
   id: ChemDispenserMachineCircuitboard
@@ -556,9 +556,9 @@
         Steel: 3
       tagRequirements:
         GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 2
+          defaultPrototype: Beaker
+           
 
 - type: entity
   id: BiomassReclaimerMachineCircuitboard
@@ -594,9 +594,9 @@
         Cable: 2
       tagRequirements:
         GlassBeaker:
-          Amount: 2
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 2
+          defaultPrototype: Beaker
+           
 
 - type: entity
   id: SeedExtractorMachineCircuitboard
@@ -891,9 +891,9 @@
         Manipulator: 2
       tagRequirements:
         GlassBeaker:
-          Amount: 1
-          DefaultPrototype: Beaker
-          ExamineName: Мензурка
+          amount: 1
+          defaultPrototype: Beaker
+           
 
 - type: entity
   id: HotplateMachineCircuitboard
@@ -1151,9 +1151,9 @@
         Steel: 5
       tagRequirements:
           GlassBeaker:
-            Amount: 1
-            DefaultPrototype: Beaker
-            ExamineName: Мензурка
+            amount: 1
+            defaultPrototype: Beaker
+             
 
 - type: entity
   id: CargoTelepadMachineCircuitboard
@@ -1183,9 +1183,9 @@
         Steel: 5
       tagRequirements:
           GlassBeaker:
-            Amount: 1
-            DefaultPrototype: Beaker
-            ExamineName: Мензурка
+            amount: 1
+            defaultPrototype: Beaker
+             
 
 - type: entity
   id: TelecomServerCircuitboard
