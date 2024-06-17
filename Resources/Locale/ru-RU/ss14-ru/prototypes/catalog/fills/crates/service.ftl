@@ -31,3 +31,5 @@ ent-CrateTrashCartFilled = { ent-CrateTrashCart }
     .desc = { ent-CrateTrashCart.desc }
 ent-CrateJanitorExplosive = { ent-ClosetJanitorBomb }
     .desc = { ent-ClosetJanitorBomb.desc }
+ent-CrateServiceFaxMachine = ящик с факсом
+    .desc = Факсовый аппарат и отвёртка для настройки его имени.

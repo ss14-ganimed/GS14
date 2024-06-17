@@ -9,3 +9,4 @@ admin-menu-server-tab = Сервер
 admin-menu-panic-bunker-tab = Режим "Бункер"
 admin-menu-players-tab = Игроки
 admin-menu-objects-tab = Объекты
+admin-menu-baby-jail-tab = Режим "Детсад"
