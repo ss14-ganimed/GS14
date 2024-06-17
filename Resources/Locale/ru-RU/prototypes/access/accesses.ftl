@@ -12,6 +12,7 @@ id-card-access-level-engineering = Инженерный
 id-card-access-level-atmospherics = Атмосферный
 id-card-access-level-research-director = Научный руководитель
 id-card-access-level-research = Научный
+id-card-access-level-robotics = Робототехника
 id-card-access-level-chief-medical-officer = Главный врач
 id-card-access-level-medical = Медотсек
 id-card-access-level-chemistry = Химия
