@@ -20,12 +20,13 @@ namespace Content.Server.Preferences.Managers
     /// Sends <see cref="MsgPreferencesAndSettings"/> before the client joins the lobby.
     /// Receives <see cref="MsgSelectCharacter"/> and <see cref="MsgUpdateCharacter"/> at any time.
     /// </summary>
-    public sealed class ServerPreferencesManager : IServerPreferencesManager
+    public sealed class ServerPreferencesManager : IServerPreferencesManager, IPostInjectInit
     {
         [Dependency] private readonly IServerNetManager _netManager = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
         [Dependency] private readonly IPrototypeManager _protos = default!;
+        [Dependency] private readonly UserDbDataManager _userDb = default!;
 
         // Cache player prefs on the server so we don't need as much async hell related to them.
         private readonly Dictionary<NetUserId, PlayerPrefData> _cachedPlayerPrefs =
@@ -107,6 +108,7 @@ namespace Content.Server.Preferences.Managers
             };
 
             prefsData.Prefs = new PlayerPreferences(profiles, slot, curPrefs.AdminOOCColor);
+
 
             if (ShouldStorePrefs(message.MsgChannel.AuthType))
             {
@@ -192,7 +194,7 @@ namespace Content.Server.Preferences.Managers
 
                 async Task LoadPrefs()
                 {
-                    var prefs = await GetOrCreatePreferencesAsync(session.UserId);
+                    var prefs = await GetOrCreatePreferencesAsync(session.UserId, cancel);
                     prefsData.Prefs = prefs;
                     prefsData.PrefsLoaded = true;
 
@@ -266,15 +268,16 @@ namespace Content.Server.Preferences.Managers
             return null;
         }
 
-        private async Task<PlayerPreferences> GetOrCreatePreferencesAsync(NetUserId userId)
+        private async Task<PlayerPreferences> GetOrCreatePreferencesAsync(NetUserId userId, CancellationToken cancel)
         {
-            var prefs = await _db.GetPlayerPreferencesAsync(userId);
+            var prefs = await _db.GetPlayerPreferencesAsync(userId, cancel);
             if (prefs is null)
             {
-                return await _db.InitPrefsAsync(userId, HumanoidCharacterProfile.Random());
+                return await _db.InitPrefsAsync(userId, HumanoidCharacterProfile.Random(), cancel);
             }
 
-            return SanitizePreferences(prefs);
+            return prefs;
+
         }
 
         private PlayerPreferences SanitizePreferences(PlayerPreferences prefs)
@@ -310,6 +313,12 @@ namespace Content.Server.Preferences.Managers
         {
             public bool PrefsLoaded;
             public PlayerPreferences? Prefs;
+        }
+
+        void IPostInjectInit.PostInject()
+        {
+            _userDb.AddOnLoadPlayer(LoadData);
+            _userDb.AddOnPlayerDisconnect(OnClientDisconnected);
         }
     }
 }

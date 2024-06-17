@@ -34,11 +34,15 @@ public sealed partial class TestPair : IAsyncDisposable
 
     private async Task OnCleanDispose()
     {
+        await Server.RemoveAllDummySessions();
+
         if (TestMap != null)
         {
             await Server.WaitPost(() => Server.EntMan.DeleteEntity(TestMap.MapUid));
             TestMap = null;
         }
+
+        await RevertModifiedCvars();
 
         var usageTime = Watch.Elapsed;
         Watch.Restart();
@@ -132,6 +136,7 @@ public sealed partial class TestPair : IAsyncDisposable
         if (gameTicker.RunLevel != GameRunLevel.PreRoundLobby)
         {
             await testOut.WriteLineAsync($"Recycling: {Watch.Elapsed.TotalMilliseconds} ms: Restarting round.");
+            Server.CfgMan.SetCVar(CCVars.GameDummyTicker, false);
             Assert.That(gameTicker.DummyTicker, Is.False);
             Server.CfgMan.SetCVar(CCVars.GameLobbyEnabled, true);
             await Server.WaitPost(() => gameTicker.RestartRound());

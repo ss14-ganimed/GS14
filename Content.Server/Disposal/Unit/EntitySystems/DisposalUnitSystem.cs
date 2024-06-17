@@ -42,7 +42,6 @@ namespace Content.Server.Disposal.Unit.EntitySystems;
 public sealed class DisposalUnitSystem : SharedDisposalUnitSystem
 {
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
     [Dependency] private readonly ActionBlockerSystem _actionBlockerSystem = default!;
     [Dependency] private readonly AppearanceSystem _appearance = default!;
     [Dependency] private readonly AtmosphereSystem _atmosSystem = default!;
@@ -264,6 +263,9 @@ public sealed class DisposalUnitSystem : SharedDisposalUnitSystem
 
     private void OnActivate(EntityUid uid, SharedDisposalUnitComponent component, ActivateInWorldEvent args)
     {
+        if (args.Handled || !args.Complex)
+            return;
+
         if (!TryComp(args.User, out ActorComponent? actor))
         {
             return;

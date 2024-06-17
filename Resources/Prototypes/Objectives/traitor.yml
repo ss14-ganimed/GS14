@@ -36,7 +36,6 @@
 # state
 
 - type: entity
-  noSpawn: true
   parent: [BaseTraitorObjective, BaseLivingObjective]
   id: EscapeShuttleObjective
   name: Escape to centcom alive and unrestrained.
@@ -50,7 +49,6 @@
   - type: EscapeShuttleCondition
 
 - type: entity
-  noSpawn: true
   parent: BaseTraitorObjective
   id: DieObjective
   name: Die a glorious death
@@ -85,7 +83,6 @@
 # kill
 
 - type: entity
-  noSpawn: true
   parent: [BaseTraitorObjective, BaseKillObjective]
   id: KillRandomPersonObjective
   description: Do it however you like, just make sure they don't make it to centcom.
@@ -98,7 +95,6 @@
   - type: PickRandomPerson
 
 - type: entity
-  noSpawn: true
   parent: [BaseTraitorObjective, BaseKillObjective]
   id: KillRandomHeadObjective
   description: We need this head gone and you probably know why. Good luck, agent.
@@ -119,7 +115,6 @@
 # social
 
 - type: entity
-  noSpawn: true
   parent: [BaseTraitorSocialObjective, BaseKeepAliveObjective]
   id: RandomTraitorAliveObjective
   description: Identify yourself at your own risk. We just need them alive.
@@ -131,7 +126,6 @@
   - type: RandomTraitorAlive
 
 - type: entity
-  noSpawn: true
   parent: [BaseTraitorSocialObjective, BaseHelpProgressObjective]
   id: RandomTraitorProgressObjective
   description: Identify yourself at your own risk. We just need them to succeed.
@@ -157,7 +151,6 @@
     owner: job-name-cmo
 
 - type: entity
-  noSpawn: true
   parent: BaseCMOStealObjective
   id: CMOHyposprayStealObjective
   components:
@@ -165,7 +158,6 @@
     stealGroup: Hypospray
 
 - type: entity
-  noSpawn: true
   parent: BaseCMOStealObjective
   id: CMOCrewMonitorStealObjective
   components:
@@ -186,7 +178,6 @@
     owner: job-name-rd
 
 - type: entity
-  noSpawn: true
   parent: BaseRDStealObjective
   id: RDHardsuitStealObjective
   components:
@@ -197,7 +188,6 @@
     difficulty: 3
 
 - type: entity
-  noSpawn: true
   parent: BaseRDStealObjective
   id: ReactiveArmorStealObjective
   components:
@@ -217,7 +207,6 @@
 ## hos
 
 - type: entity
-  noSpawn: true
   parent: BaseTraitorStealObjective
   id: SecretDocumentsStealObjective
   components:
@@ -259,7 +248,6 @@
 ## ce
 
 - type: entity
-  noSpawn: true
   parent: BaseTraitorStealObjective
   id: MagbootsStealObjective
   components:
@@ -283,7 +271,6 @@
 ## qm
 
 - type: entity
-  noSpawn: true
   parent: BaseTraitorStealObjective
   id: ClipboardStealObjective
   components:
@@ -296,7 +283,6 @@
 ## hop
 
 - type: entity
-  noSpawn: true
   parent: BaseTraitorStealObjective
   id: CorgiMeatStealObjective
   components:
@@ -323,7 +309,6 @@
     job: Captain
 
 - type: entity
-  noSpawn: true
   parent: BaseCaptainObjective
   id: CaptainIDStealObjective
   components:
@@ -331,7 +316,6 @@
     stealGroup: CaptainIDCard
 
 - type: entity
-  noSpawn: true
   parent: BaseCaptainObjective
   id: CaptainJetpackStealObjective
   components:
@@ -339,7 +323,6 @@
     stealGroup: JetpackCaptainFilled
 
 - type: entity
-  noSpawn: true
   parent: BaseCaptainObjective
   id: CaptainGunStealObjective
   components:
@@ -348,7 +331,6 @@
     owner: job-name-captain
 
 - type: entity
-  noSpawn: true
   parent: BaseCaptainObjective
   id: CaptainSabreObjective
   components:

@@ -99,16 +99,6 @@
   group: market
 
 - type: cargoProduct
-  id: EngineeringSpaceHeater
-  icon:
-    sprite: Structures/Piping/Atmospherics/Portable/portable_sheater.rsi
-    state: sheaterOff
-  product: SpaceHeaterAnchored
-  cost: 300
-  category: cargoproduct-category-name-engineering
-  group: market
-
-- type: cargoProduct
   id: EngineeringRCDAmmo
   icon:
     sprite: Objects/Tools/rcd.rsi
@@ -135,6 +125,16 @@
     state: base
   product: CrateParticleDecelerators
   cost: 15000
-  category: Engineering
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: EngineeringSpaceHeater
+  icon:
+    sprite: Structures/Piping/Atmospherics/Portable/portable_sheater.rsi
+    state: sheaterOff
+  product: CrateEngineeringSpaceHeater
+  cost: 300
+  category: cargoproduct-category-name-engineering
   group: market
   

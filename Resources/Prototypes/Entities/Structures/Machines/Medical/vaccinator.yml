@@ -26,6 +26,7 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
+  - type: RequireProjectileTarget
   - type: ResearchClient
   - type: DiseaseVaccineCreator
   - type: ActivatableUI

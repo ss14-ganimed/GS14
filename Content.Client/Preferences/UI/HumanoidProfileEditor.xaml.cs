@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Numerics;
-using Content.Client.Guidebook;
+using Content.Shared.Guidebook;
 using Content.Client.Humanoid;
 using Content.Client.Lobby.UI;
 using Content.Client.Message;
@@ -710,10 +710,10 @@ namespace Content.Client.Preferences.UI
 
             if (_prototypeManager.TryIndex<GuideEntryPrototype>("Species", out var guideRoot))
             {
-                var dict = new Dictionary<string, GuideEntry>();
+                var dict = new Dictionary<ProtoId<GuideEntryPrototype>, GuideEntry>();
                 dict.Add("Species", guideRoot);
                 //TODO: Don't close the guidebook if its already open, just go to the correct page
-                guidebookController.ToggleGuidebook(dict, includeChildren:true, selected: page);
+                guidebookController.OpenGuidebook(dict, includeChildren:true, selected: page);
             }
         }
 

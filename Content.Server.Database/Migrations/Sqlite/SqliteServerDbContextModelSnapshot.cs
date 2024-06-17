@@ -1765,6 +1765,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("AdminWatchlistsLastEdited");
 
                     b.Navigation("AdminWatchlistsReceived");
+
+                    b.Navigation("JobWhitelists");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Preference", b =>

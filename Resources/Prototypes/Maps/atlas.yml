@@ -14,8 +14,6 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'ИСН'
         - type: StationJobs
-          overflowJobs:
-          - Passenger
           availableJobs:
             #service
             Captain: [ 1, 1 ]
@@ -68,3 +66,4 @@
             IAA: [ 0, 1 ]
             Coroner: [ 0, 1 ]
             BridgeOfficer: [ 0, 1 ]
+            Virologist: [ 1, 1 ]

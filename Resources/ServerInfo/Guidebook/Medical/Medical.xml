@@ -17,6 +17,6 @@
 <GuideEntityEmbed Entity="ChemDispenser"/>
 <GuideEntityEmbed Entity="LargeBeaker"/>
 <GuideEntityEmbed Entity="PillCanister"/>
-<GuideEntityEmbed Entity="ChemMaster"/>
+<GuideEntityEmbed Entity="chem_master"/>
 </Box>
 </Document>

@@ -32,6 +32,7 @@
   - Chapel
   - Hydroponics
   - Atmospherics
+  - Robotics
 
 - type: accessGroup
   id: CentcomAllAccess
@@ -66,7 +67,8 @@
   - Chapel
   - Hydroponics
   - Atmospherics
-
+  - Robotics
+  
 - type: accessGroup
   id: SpecOpsAllAccess
   tags:
@@ -101,3 +103,4 @@
   - Chapel
   - Hydroponics
   - Atmospherics
+  - Robotics

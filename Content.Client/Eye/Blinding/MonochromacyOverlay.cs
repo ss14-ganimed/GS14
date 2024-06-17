@@ -1,3 +1,4 @@
+using System.Numerics;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -47,7 +48,7 @@ namespace Content.Client.Eye.Blinding
 
             var worldHandle = args.WorldHandle;
             var viewport = args.WorldBounds;
-            worldHandle.SetTransform(Matrix3.Identity);
+            worldHandle.SetTransform(Matrix3x2.Identity);
             worldHandle.UseShader(_greyscaleShader);
             worldHandle.DrawRect(viewport, Color.White);
             worldHandle.UseShader(null);

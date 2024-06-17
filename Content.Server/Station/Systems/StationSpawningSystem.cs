@@ -23,6 +23,7 @@ using Content.Shared.StatusIcon;
 using JetBrains.Annotations;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
@@ -36,9 +37,9 @@ namespace Content.Server.Station.Systems;
 [PublicAPI]
 public sealed class StationSpawningSystem : SharedStationSpawningSystem
 {
+    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoidSystem = default!;
     [Dependency] private readonly IdCardSystem _cardSystem = default!;
     [Dependency] private readonly PdaSystem _pdaSystem = default!;
@@ -63,7 +64,15 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         _spawnerCallbacks = new Dictionary<SpawnPriorityPreference, Action<PlayerSpawningEvent>>()
         {
             { SpawnPriorityPreference.Arrivals, _arrivalsSystem.HandlePlayerSpawning },
-            { SpawnPriorityPreference.Cryosleep, _containerSpawnPointSystem.HandlePlayerSpawning }
+            {
+                SpawnPriorityPreference.Cryosleep, ev =>
+                {
+                    if (_arrivalsSystem.Forced)
+                        _arrivalsSystem.HandlePlayerSpawning(ev);
+                    else
+                        _containerSpawnPointSystem.HandlePlayerSpawning(ev);
+                }
+            }
         };
     }
 
@@ -184,7 +193,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         }
 
         var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
-        RaiseLocalEvent(entity.Value, ref gearEquippedEv, true);
+        RaiseLocalEvent(entity.Value, ref gearEquippedEv);
 
         if (profile != null)
         {

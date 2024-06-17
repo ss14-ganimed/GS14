@@ -18,3 +18,5 @@ ent-ActionToggleMagbootsSci = { ent-ActionBaseToggleMagboots }
     .desc = { ent-ActionBaseToggleMagboots.desc }
 ent-ActionToggleMagbootsSyndie = { ent-ActionBaseToggleMagboots }
     .desc = { ent-ActionBaseToggleMagboots.desc }
+ent-ClothingShoesBootsMoon = лунные сапоги
+    .desc = Специальные антигравитационные ботинки, разработанные с использованием специальной смеси геля из лунного камня. Отправлено из Нидерландов.

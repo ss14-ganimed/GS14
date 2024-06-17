@@ -84,6 +84,7 @@
   - type: Hands
     showInHands: false
     disableExplosionRecursion: true
+  - type: ComplexInteraction
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
@@ -125,6 +126,7 @@
     - Stun
     - KnockedDown
     - SlowedDown
+    - Flashed
   - type: TypingIndicator
     proto: robot
   - type: Speech
@@ -145,7 +147,7 @@
   - type: Lock
     locked: true
   - type: ActivatableUIRequiresLock
-  - type: Flashable
+  - type: LockedWiresPanel
   - type: Damageable
     damageContainer: Silicon
   - type: Destructible
@@ -280,3 +282,5 @@
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
+  - type: PointLight
+    color: "#dd200b"
