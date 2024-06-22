@@ -94,3 +94,7 @@
   id: RevenantAbilities
   name: store-category-abilities
 
+#Heretic
+- type: storeCategory
+  id: HereticAbilities
+  name: store-category-heretic-abilities

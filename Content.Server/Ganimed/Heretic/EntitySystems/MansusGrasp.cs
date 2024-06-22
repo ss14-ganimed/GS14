@@ -2,6 +2,7 @@
 using System.Linq;
 using Content.Server.Ganimed.Heretic.Components;
 using Content.Shared.Ganimed.Heretic;
+using Content.Shared.Ganimed.Heretic.Components;
 using Content.Shared.Damage;
 using Content.Shared.Tag;
 using Content.Shared.DoAfter;

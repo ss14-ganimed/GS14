@@ -1,0 +1,13 @@
+- type: listing
+  id: RevenantddDefile
+  name: revenant-defile-name
+  description: revenant-defile-desc
+  productAction: ActionRevenantDefile
+  cost:
+    HereticKnowledge: 1
+  categories:
+  - HereticAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
