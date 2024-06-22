@@ -56,7 +56,7 @@ public sealed class HereticRuleSystem : GameRuleSystem<HereticRuleComponent>
         storeComp.Categories.Add("HereticAbilities");
         storeComp.CurrencyWhitelist.Add("HereticKnowledge");
 
-        _actionsSystem.AddAction(uid, ref component.ActionContainer, "ActionRevenantShop");
+        _actionsSystem.AddAction(uid, ref component.ActionContainer, "ActionHereticShop");
 
         _antag.SendBriefing(uid, GetBriefing(), Color.Green, component.GreetingSound);
 

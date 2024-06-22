@@ -1,5 +1,7 @@
 /// Maded by Gorox for Enterprise. See CLA
 using System.Linq;
+using Content.Server.Store.Components;
+using Content.Server.Store.Systems;
 using Content.Server.Ganimed.Heretic.Components;
 using Content.Shared.Ganimed.Heretic;
 using Content.Shared.Ganimed.Heretic.Components;
@@ -9,7 +11,9 @@ using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Clothing;
+using Content.Shared.Store.Components;
 using Content.Shared.IdentityManagement;
+using Content.Shared.FixedPoint;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 
@@ -23,6 +27,7 @@ public sealed class MansusGraspSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly TransformSystem _transformSystem = default!;
+    [Dependency] private readonly StoreSystem _store = default!;
 
     public override void Initialize()
     {
@@ -75,6 +80,13 @@ public sealed class MansusGraspSystem : EntitySystem
        if (args.User != null && args.Target != null && TryComp<HereticComponent>(args.User, out var heretic))
        {
           heretic.Points += 1;
+
+          if (args.User != null && TryComp<StoreComponent>(args.User, out var storeComp))
+          {
+              _store.TryAddCurrency(new Dictionary<string, FixedPoint2>
+                  { {"HereticKnowledge", heretic.Points} }, args.User);
+          }
+
           EntityManager.AddComponent<HereticSucrificiedComponent>(args.Target.Value);
        }
     }
