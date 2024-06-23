@@ -63,15 +63,6 @@ public sealed class HereticRuleSystem : GameRuleSystem<HereticRuleComponent>
         _npcFactionSystem.RemoveFaction(mindId, "Nanotrasen", false);
         _npcFactionSystem.AddFaction(mindId, "Syndicate");
 
-        var objectives = Comp<HereticComponent>(uid).Objectives;
-        if (objectives == null || objectives.Count == 0)
-        {
-
-        }
-
-        var aliveObj = _objectives.GetRandomObjective(mindId, mind, "ThiefObjectiveGroups");
-        if (aliveObj != null) _mindSystem.AddObjective(mindId, mind, (EntityUid) aliveObj);
-
         return true;
     }
 

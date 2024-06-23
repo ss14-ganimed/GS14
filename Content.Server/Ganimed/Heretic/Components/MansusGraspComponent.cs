@@ -9,11 +9,4 @@ namespace Content.Server.Ganimed.Heretic.Components;
 [RegisterComponent]
 public sealed partial class MansusGraspComponent : Component
 {
-
-    [DataField("knifeTag", customTypeSerializer: typeof(PrototypeIdSerializer<TagPrototype>))]
-    public string Knife = "Knife";
-
-    [DataField("weapon", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string Weapon = "MobSlimesPet";
-
 }

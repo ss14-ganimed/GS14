@@ -9,6 +9,8 @@ namespace Content.Server.GameTicking.Rules.Components;
 [RegisterComponent, Access(typeof(HereticRuleSystem))]
 public sealed partial class HereticRuleComponent : Component
 {
+    public readonly List<EntityUid> HereticMinds = new();
+
     [DataField("prototypeId")]
     public ProtoId<AntagPrototype> PrototypeId = "Heretic";
 
@@ -16,7 +18,7 @@ public sealed partial class HereticRuleComponent : Component
     ///     Path to the heretic greeting sound.
     /// </summary>
     [DataField]
-    public SoundSpecifier GreetingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/traitor_start.ogg");
+    public SoundSpecifier GreetingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/ecult_op.ogg");
 
     [DataField] public EntityUid? ActionContainer;
 }

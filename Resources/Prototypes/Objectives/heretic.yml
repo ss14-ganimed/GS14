@@ -1,0 +1,27 @@
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: BaseHereticObjective
+  components:
+  - type: Objective
+    issuer: heretic
+  - type: RoleRequirement
+    roles:
+      components:
+      - HereticRole
+
+# kill
+
+- type: entity
+  parent: [BaseHereticObjective, BaseKillObjective]
+  id: HereticKillRandomPersonObjective
+  description: Do it however you like, just make sure they don't make it to centcom.
+  components:
+  - type: Objective
+    difficulty: 1.75
+    unique: false
+  - type: TargetObjective
+    title: objective-condition-kill-person-title
+  - type: PickRandomPerson
+  - type: KillPersonCondition
+    requireDead: true

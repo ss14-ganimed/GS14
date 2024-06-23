@@ -1,3 +1,13 @@
+# Heretic
+- type: weightedRandom
+  id: HereticObjectiveGroups
+  weights:
+    HereticObjectiveGroupKill: 1
+
+- type: weightedRandom
+  id: HereticObjectiveGroupKill
+  weights:
+    HereticKillRandomPersonObjective: 1
 # Traitor
 - type: weightedRandom
   id: TraitorObjectiveGroups

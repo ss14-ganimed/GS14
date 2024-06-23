@@ -18,5 +18,5 @@ public sealed partial class HereticComponent : Component
     public override bool SessionSpecific => true;
 
     [DataField("weapon", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string Weapon = "MobSlimesPet";
+    public string Weapon = "EldrichBlade";
 }
