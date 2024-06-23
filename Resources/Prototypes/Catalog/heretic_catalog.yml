@@ -1,13 +1,38 @@
 - type: listing
-  id: RevenantddDefile
-  name: revenant-defile-name
-  description: revenant-defile-desc
-  productAction: ActionRevenantDefile
+  id: AbyssPhase
+  name: heretic-phase-name
+  description: heretic-phase-desc
+  productAction: ActionAbyssPhase
   cost:
-    HereticKnowledge: 1
+    HereticKnowledge: 2
   categories:
   - HereticAbilities
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: VolcanoBlast
+  name: heretic-volkano-name
+  description: heretic-volkano-desc
+  productAction: ActionVulkanic
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: Stalker
+  name: heretic-stalker-name
+  description: heretic-stalker-desc
+  productAction: ActionSpawnStalker
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

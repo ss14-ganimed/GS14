@@ -9,6 +9,12 @@
   "states": [
     {
       "name": "grasp"
+    },
+    {
+      "name": "stalker"
+    },
+    {
+      "name": "phase"
     }
   ]
 }

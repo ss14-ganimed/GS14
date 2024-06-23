@@ -91,7 +91,7 @@ public sealed class MansusGraspSystem : EntitySystem
           if (args.User != null && TryComp<StoreComponent>(args.User, out var storeComp))
           {
               _store.TryAddCurrency(new Dictionary<string, FixedPoint2>
-                  { {"HereticKnowledge", heretic.Points} }, ent);
+                  { {"HereticKnowledge", 1} }, ent);
           }
 
           EnsureComp<HereticSucrificiedComponent>(target);

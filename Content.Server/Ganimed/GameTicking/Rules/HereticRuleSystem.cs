@@ -60,8 +60,8 @@ public sealed class HereticRuleSystem : GameRuleSystem<HereticRuleComponent>
 
         _antag.SendBriefing(uid, GetBriefing(), Color.Green, component.GreetingSound);
 
-        _npcFactionSystem.RemoveFaction(mindId, "Nanotrasen", false);
-        _npcFactionSystem.AddFaction(mindId, "Syndicate");
+        _npcFactionSystem.RemoveFaction(mindId, "Nanotrasen");
+        _npcFactionSystem.AddFaction(mindId, "Heretic");
 
         return true;
     }
