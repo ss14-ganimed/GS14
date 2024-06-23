@@ -34,26 +34,28 @@ public sealed class MansusGraspSystem : EntitySystem
 
         base.Initialize();
 
-        SubscribeLocalEvent<MansusGraspComponent, AfterInteractEvent>(OnAfterInteract);
-        SubscribeLocalEvent<MansusGraspComponent, SucrificeDoAfterEvent>(OnSucrifice);
+        SubscribeLocalEvent<HereticComponent, MansusGraspEvent>(OnAfterInteract);
+        SubscribeLocalEvent<HereticComponent, SucrificeDoAfterEvent>(OnSucrifice);
     }
 
-    private void OnAfterInteract(EntityUid uid, MansusGraspComponent component, ref AfterInteractEvent args)
+    private void OnAfterInteract(Entity<HereticComponent> ent, ref MansusGraspEvent args)
     {
-      if (args.Target != null && !EntityManager.HasComponent<HereticSucrificiedComponent>(args.Target.Value) && EntityManager.HasComponent<HereticCanSucrificiedComponent>(args.Target.Value))
+      var component = ent.Comp;
+
+      if (!EntityManager.HasComponent<HereticSucrificiedComponent>(args.Target) && EntityManager.HasComponent<HereticCanSucrificiedComponent>(args.Target))
       {
-         PrepSucrifice(uid, component, args.Target.Value, args.User);
+           PrepSucrifice(ent, args.Target, ent);
       }
-      else if (args.Target != null && _tag.HasTag(args.Target.Value, component.Knife))
+      else if (_tag.HasTag(args.Target, "Knife"))
       {
-           Spawn(component.Weapon, Transform(args.Target.Value).Coordinates);
-           EntityManager.DeleteEntity(args.Target.Value);
+           Spawn(component.Weapon, Transform(args.Target).Coordinates);
+           EntityManager.DeleteEntity(args.Target);
       }
     }
 
     //Sucriface
 
-    private void PrepSucrifice(EntityUid uid, MansusGraspComponent component, EntityUid target, EntityUid user)
+    private void PrepSucrifice(Entity<HereticComponent> ent, EntityUid target, EntityUid user)
     {
       if (target != null && TryComp<DamageableComponent>(target, out var damage))
       {
@@ -61,7 +63,7 @@ public sealed class MansusGraspSystem : EntitySystem
 
         if (damage.TotalDamage >= 200)
         {
-          var doAfterEventArgs = new DoAfterArgs(EntityManager, user, 5, new SucrificeDoAfterEvent(), uid, target: target, used: uid)
+          var doAfterEventArgs = new DoAfterArgs(EntityManager, user, 5, new SucrificeDoAfterEvent(), ent, target: target)
           {
               BreakOnWeightlessMove = true,
               BreakOnDamage = true,
@@ -75,19 +77,24 @@ public sealed class MansusGraspSystem : EntitySystem
       }
     }
 
-    private void OnSucrifice(EntityUid uid, MansusGraspComponent component, ref SucrificeDoAfterEvent args)
+    private void OnSucrifice(Entity<HereticComponent> ent, ref SucrificeDoAfterEvent args)
     {
-       if (args.User != null && args.Target != null && TryComp<HereticComponent>(args.User, out var heretic))
+       if (args.Handled || args.Args.Target == null)
+           return;
+
+       var target = args.Args.Target.Value;
+
+       if (ent != null && target != null && TryComp<HereticComponent>(ent, out var heretic))
        {
           heretic.Points += 1;
 
           if (args.User != null && TryComp<StoreComponent>(args.User, out var storeComp))
           {
               _store.TryAddCurrency(new Dictionary<string, FixedPoint2>
-                  { {"HereticKnowledge", heretic.Points} }, args.User);
+                  { {"HereticKnowledge", heretic.Points} }, ent);
           }
 
-          EntityManager.AddComponent<HereticSucrificiedComponent>(args.Target.Value);
+          EnsureComp<HereticSucrificiedComponent>(target);
        }
     }
 }

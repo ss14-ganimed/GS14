@@ -1,3 +1,4 @@
+/// Maded by Gorox for Enterprise. See CLA
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Mind;
 using Content.Server.Objectives;
@@ -56,7 +57,6 @@ public sealed class HereticRuleSystem : GameRuleSystem<HereticRuleComponent>
         storeComp.Categories.Add("HereticAbilities");
         storeComp.CurrencyWhitelist.Add("HereticKnowledge");
 
-        _actionsSystem.AddAction(uid, ref component.ActionContainer, "ActionHereticShop");
 
         _antag.SendBriefing(uid, GetBriefing(), Color.Green, component.GreetingSound);
 

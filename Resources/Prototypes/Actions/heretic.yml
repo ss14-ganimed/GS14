@@ -5,4 +5,18 @@
   components:
   - type: InstantAction
     icon: Interface/Actions/shop.png
+    itemIconStyle: NoItem
     event: !type:HereticShopActionEvent
+
+- type: entity
+  id: ActionMansusGrasp
+  name: Mansus Grasp
+  description: Mansus Grasp.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon: Interface/Actions/heretic/grasp.png
+    event: !type:MansusGraspEvent
+    useDelay: 5
+    canTargetSelf: false
+    range: 6

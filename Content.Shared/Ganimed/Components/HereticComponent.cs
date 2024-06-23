@@ -1,5 +1,8 @@
 /// Maded by Gorox for Enterprise. See CLA
 using Content.Shared.Antag;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Dictionary;
 
 namespace Content.Shared.Ganimed.Heretic.Components;
 
@@ -12,5 +15,8 @@ public sealed partial class HereticComponent : Component
     
     public List<EntityUid> Objectives;
 
-    public override bool SessionSpecific => true;    
+    public override bool SessionSpecific => true;
+
+    [DataField("weapon", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    public string Weapon = "MobSlimesPet";
 }

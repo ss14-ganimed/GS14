@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC0-1.0",
+  "copyright": "Taked from TG station https://github.com/EdgeLordExe/tgstation/blob/3ab53d4bdfce76d018ecfb84e91e09527faeebe2/icons/mob/actions/actions_ecult.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "grasp"
+    }
+  ]
+}

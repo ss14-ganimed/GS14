@@ -1,3 +1,4 @@
+/// Maded by Gorox for Enterprise. See CLA
 using System.Numerics;
 using Content.Server.Actions;
 using Content.Server.GameTicking;
@@ -8,6 +9,8 @@ using Content.Shared.Popups;
 using Content.Shared.Ganimed.Heretic.Components;
 using Content.Shared.Store.Components;
 using Content.Shared.Tag;
+using Content.Shared.Mind;
+using Content.Shared.Actions;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -17,10 +20,12 @@ namespace Content.Server.Ganimed.Heretic;
 
 public sealed partial class HereticSystem : EntitySystem
 {
+    [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly ActionsSystem _action = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly StoreSystem _store = default!;
     [Dependency] private readonly TagSystem _tag = default!;
+    [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string HereticShopId = "ActionHereticShop";
@@ -29,7 +34,17 @@ public sealed partial class HereticSystem : EntitySystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<HereticComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<HereticComponent, HereticShopActionEvent>(OnShop);
+    }
+
+    private void OnMapInit(Entity<HereticComponent> ent, ref MapInitEvent args)
+    {
+        if (_mind.TryGetMind(ent, out var mind, out _))
+        {
+            _actionContainer.AddAction(mind, "ActionMansusGrasp");
+            _actionContainer.AddAction(mind, "ActionHereticShop");
+        }
     }
 
     private void OnShop(EntityUid uid, HereticComponent component, HereticShopActionEvent args)
@@ -38,6 +53,4 @@ public sealed partial class HereticSystem : EntitySystem
             return;
         _store.ToggleUi(uid, uid, store);
     }
-
-
 }

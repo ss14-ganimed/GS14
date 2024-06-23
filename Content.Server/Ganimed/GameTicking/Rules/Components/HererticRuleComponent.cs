@@ -1,3 +1,4 @@
+/// Maded by Gorox for Enterprise. See CLA
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
