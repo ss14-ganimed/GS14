@@ -6,7 +6,34 @@
   cost:
     HereticKnowledge: 2
   categories:
-  - HereticAbilities
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: VoidBlast
+  name: heretic-voidblast-name
+  description: heretic-voidblast-desc
+  productAction: ActionVoidBlast
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: AristocratsWay
+  name: heretic-aristocrat-name
+  description: heretic-aristocrat-desc
+  icon: Interface/Actions/heretic/aristocrat.png
+  productEvent: !type:AristocratDoAfterEvent
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
@@ -19,7 +46,7 @@
   cost:
     HereticKnowledge: 2
   categories:
-  - HereticAbilities
+  - HereticAshAbilities
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1

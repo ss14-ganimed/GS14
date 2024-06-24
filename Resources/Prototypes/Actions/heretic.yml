@@ -59,6 +59,22 @@
       prototype: ProjectileDragonsBreath
 
 - type: entity
+  id: ActionVoidBlast
+  name: Void Blast
+  description: Void Blast.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 30
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    raiseOnUser: true
+    range: 60
+    icon: Interface/Actions/heretic/voidblast.png
+    event: !type:ProjectileSpellEvent
+      prototype: VoidBolt  
+
+- type: entity
   id: ActionSpawnStalker
   name: Summon Stalker
   description: This spell summons three Stalker to your aid! May or may not turn on user.

@@ -7,3 +7,8 @@ namespace Content.Shared.Ganimed.Heretic;
 public sealed partial class SucrificeDoAfterEvent : SimpleDoAfterEvent
 {
 }
+
+[Serializable, NetSerializable]
+public sealed partial class AristocratDoAfterEvent : SimpleDoAfterEvent
+{
+}

@@ -11,10 +11,19 @@
       "name": "grasp"
     },
     {
+      "name": "cold_grasp"
+    },
+    {
       "name": "stalker"
     },
     {
-      "name": "phase"
+      "name": "voidblast"
+    },
+    {
+      "name": "voidblast"
+    },
+    {
+      "name": "aristocrat"
     }
   ]
 }

@@ -17,6 +17,9 @@ public sealed partial class HereticComponent : Component
 
     public override bool SessionSpecific => true;
 
-    [DataField("weapon", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string Weapon = "EldrichBlade";
+    [DataField("path"), ViewVariables(VVAccess.ReadWrite)]
+    public string Path = "None";
+
+    [DataField("effect"), ViewVariables(VVAccess.ReadWrite)]
+    public string Effect = "None";
 }

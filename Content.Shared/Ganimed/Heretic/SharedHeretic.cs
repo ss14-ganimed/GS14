@@ -13,3 +13,6 @@ public sealed partial class MansusGraspEvent : EntityTargetActionEvent
 {
 }
 
+public sealed partial class ColdGraspEvent : EntityTargetActionEvent
+{
+}

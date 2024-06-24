@@ -249,7 +249,7 @@ public sealed partial class StoreSystem
         if (listing.ProductEvent != null)
         {
             if (!listing.RaiseProductEventOnUser)
-                RaiseLocalEvent(listing.ProductEvent);
+                RaiseLocalEvent(uid, listing.ProductEvent, true);
             else
                 RaiseLocalEvent(buyer, listing.ProductEvent);
         }

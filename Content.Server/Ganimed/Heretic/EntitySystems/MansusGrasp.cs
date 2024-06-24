@@ -46,10 +46,33 @@ public sealed class MansusGraspSystem : EntitySystem
       {
            PrepSucrifice(ent, args.Target, ent);
       }
-      else if (_tag.HasTag(args.Target, "Knife"))
+      else if (component.Path == "Void" && (_tag.HasTag(args.Target, "Knife")))
       {
-           Spawn(component.Weapon, Transform(args.Target).Coordinates);
+           Spawn("VoidEldrichBlade", Transform(args.Target).Coordinates);
            EntityManager.DeleteEntity(args.Target);
+      }
+      else if (component.Path == "None" && (_tag.HasTag(args.Target, "Knife")))
+      {
+           component.Path = "Void";
+           Spawn("VoidEldrichBlade", Transform(args.Target).Coordinates);
+           EntityManager.DeleteEntity(args.Target);
+
+           if (ent != null && TryComp<StoreComponent>(ent, out var storeComp))
+           storeComp.Categories.Add("HereticVoidAbilities");
+      }
+      else if (component.Path == "Ash" && (_tag.HasTag(args.Target, "Matchstick")))
+      {
+           Spawn("AshEldrichBlade", Transform(args.Target).Coordinates);
+           EntityManager.DeleteEntity(args.Target);
+      }
+      else if (component.Path == "None" && (_tag.HasTag(args.Target, "Matchstick")))
+      {
+           component.Path = "Ash";
+           Spawn("AshEldrichBlade", Transform(args.Target).Coordinates);
+           EntityManager.DeleteEntity(args.Target);
+
+           if (ent != null && TryComp<StoreComponent>(ent, out var storeComp))
+           storeComp.Categories.Add("HereticAshAbilities");
       }
     }
 
