@@ -93,6 +93,19 @@
     stock: 1
 
 - type: listing
+  id: ListingAshForm
+  name: heretic-ashform-name
+  description: heretic-ashform-desc
+  productAction: ActionAshForm
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
   id: Stalker
   name: heretic-stalker-name
   description: heretic-stalker-desc

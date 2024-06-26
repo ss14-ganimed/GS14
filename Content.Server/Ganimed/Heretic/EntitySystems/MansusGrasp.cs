@@ -46,6 +46,11 @@ public sealed class MansusGraspSystem : EntitySystem
       {
            PrepSucrifice(ent, args.Target, ent);
       }
+      else if (_tag.HasTag(args.Target, "Table"))
+      {
+           Spawn("ClothingOuterHereticHood", Transform(args.Target).Coordinates);
+           EntityManager.DeleteEntity(args.Target);
+      }
       else if (component.Path == "Void" && (_tag.HasTag(args.Target, "Knife")))
       {
            Spawn("VoidEldrichBlade", Transform(args.Target).Coordinates);

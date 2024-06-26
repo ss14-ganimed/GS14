@@ -102,3 +102,16 @@
       - id: MobHereticStalker
         amount: 1
       offset: 0, 1
+
+- type: entity
+  id: ActionAshForm
+  name: Ashen Shift
+  description: Ashen Shift.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 60
+    event: !type:PolymorphActionEvent
+      protoId: HereticAshForm
+    itemIconStyle: NoItem
+    icon: Interface/Actions/heretic/ash.png

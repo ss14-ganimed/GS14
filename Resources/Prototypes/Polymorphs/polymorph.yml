@@ -218,3 +218,15 @@
     revertOnCrit: false
     revertOnDeath: false
 
+- type: polymorph
+  id: HereticAshForm
+  configuration:
+    entity: AshForm #CLANG
+    transferName: true
+    transferDamage: false
+    inventory: None
+    duration: 4
+    forced: true
+    revertOnCrit: false
+    revertOnDeath: false
+
