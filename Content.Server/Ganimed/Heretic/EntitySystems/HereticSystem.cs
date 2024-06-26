@@ -3,6 +3,7 @@ using System.Numerics;
 using Content.Server.Temperature.Components;
 using Content.Server.Body.Components;
 using Content.Server.Actions;
+using Content.Server.Atmos.Components;
 using Content.Server.GameTicking;
 using Content.Server.Ganimed.Heretic.Components;
 using Content.Server.Store.Components;
@@ -44,6 +45,7 @@ public sealed partial class HereticSystem : EntitySystem
         SubscribeLocalEvent<HereticComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<HereticComponent, HereticShopActionEvent>(OnShop);
         SubscribeLocalEvent<HereticComponent, AristocratDoAfterEvent>(OnAristocrat);
+        SubscribeLocalEvent<HereticComponent, DemonDoAfterEvent>(OnDemon);
     }
 
     private void OnMapInit(Entity<HereticComponent> ent, ref MapInitEvent args)
@@ -70,5 +72,15 @@ public sealed partial class HereticSystem : EntitySystem
         }
 
         _entManager.RemoveComponent<RespiratorComponent>(uid);
+    }
+
+    private void OnDemon(EntityUid uid, HereticComponent component, DemonDoAfterEvent args)
+    {
+       if (TryComp<TemperatureComponent>(uid, out var tempComponent))
+        {
+            tempComponent.HeatDamageThreshold = 50000;
+        }
+
+        _entManager.RemoveComponent<FlammableComponent>(uid);
     }
 }

@@ -22,6 +22,19 @@
     range: 6
 
 - type: entity
+  id: ActionColdGrasp
+  name: Cold Grasp
+  description: Cold Grasp.
+  components:
+  - type: EntityTargetAction
+    useDelay: 30
+    range: 6
+    itemIconStyle: NoItem
+    icon: Interface/Actions/heretic/cold_grasp.png
+    event: !type:ColdGraspEvent
+    canTargetSelf: false
+
+- type: entity
   id: ActionAbyssPhase
   name: Abyss Phase
   description: Teleport to the clicked location.

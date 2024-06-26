@@ -12,3 +12,8 @@ public sealed partial class SucrificeDoAfterEvent : SimpleDoAfterEvent
 public sealed partial class AristocratDoAfterEvent : SimpleDoAfterEvent
 {
 }
+
+[Serializable, NetSerializable]
+public sealed partial class DemonDoAfterEvent : SimpleDoAfterEvent
+{
+}
