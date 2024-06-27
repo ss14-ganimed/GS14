@@ -10,8 +10,6 @@
       components:
       - HereticRole
 
-# kill
-
 - type: entity
   parent: [BaseHereticObjective, BaseKillObjective]
   id: HereticKillRandomPersonObjective
@@ -25,3 +23,32 @@
   - type: PickRandomPerson
   - type: KillPersonCondition
     requireDead: true
+
+- type: entity
+  parent: [BaseHereticObjective, BaseLivingObjective]
+  id: EscapeShuttleHereticObjective
+  name: Escape to centcom alive and unrestrained.
+  description: One of our undercover agents will debrief you when you arrive. Don't show up in cuffs.
+  components:
+  - type: Objective
+    difficulty: 1.3
+    icon:
+      sprite: Structures/Furniture/chairs.rsi
+      state: shuttle
+  - type: EscapeShuttleCondition
+
+#- type: entity
+#  parent: BaseHereticObjective
+#  id: PointsObjective
+#  components:
+#  - type: Objective
+#    difficulty: 1.3
+#    icon:
+#      sprite: Objects/Tools/emag.rsi
+#      state: icon
+#  - type: NumberObjective
+#    min: 10
+#    max: 20
+#    title: objective-condition-doorjack-title
+#    description: objective-condition-doorjack-description
+#  - type: HereticPointsCondition

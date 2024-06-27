@@ -3,11 +3,23 @@
   id: HereticObjectiveGroups
   weights:
     HereticObjectiveGroupKill: 1
+    HereticObjectiveGroupEscape: 1
+#    HereticObjectiveGroupPoints: 1
 
 - type: weightedRandom
   id: HereticObjectiveGroupKill
   weights:
     HereticKillRandomPersonObjective: 1
+
+#- type: weightedRandom
+#  id: HereticObjectiveGroupPoints
+#  weights:
+#    PointsObjective: 1
+
+- type: weightedRandom
+  id: HereticObjectiveGroupEscape
+  weights:
+    EscapeShuttleHereticObjective: 1
 # Traitor
 - type: weightedRandom
   id: TraitorObjectiveGroups

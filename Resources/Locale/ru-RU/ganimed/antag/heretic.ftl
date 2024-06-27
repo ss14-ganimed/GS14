@@ -9,6 +9,7 @@ heretic-briefing-fluff =
         Для получения знаний приносите в жертву членов экипажа, которых могут жаждать ваши темные покровители. 
 
 heretic-round-end-agent-name = еретик
+objective-issuer-heretic = [color=#006400]Еретик[/color]
 
 store-category-heretic-abilities = Знания
 store-category-heretic-void-abilities = Путь пустоты
