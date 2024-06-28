@@ -1,0 +1,119 @@
+- type: listing
+  id: AbyssPhase
+  name: heretic-phase-name
+  description: heretic-phase-desc
+  productAction: ActionAbyssPhase
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: VoidBlast
+  name: heretic-voidblast-name
+  description: heretic-voidblast-desc
+  productAction: ActionVoidBlast
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ColdGrasp
+  name: heretic-coldgrasp-name
+  description: heretic-coldgrasp-desc
+  productAction: ActionColdGrasp
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: AristocratsWay
+  name: heretic-aristocrat-name
+  description: heretic-aristocrat-desc
+  icon: Interface/Actions/heretic/aristocrat.png
+  productEvent: !type:AristocratDoAfterEvent
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: DemonWay
+  name: heretic-demon-name
+  description: heretic-demon-desc
+  icon: Interface/Actions/heretic/demon.png
+  productEvent: !type:DemonDoAfterEvent
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1    
+
+- type: listing
+  id: AshlordRite
+  name: heretic-ashlord-name
+  description: heretic-ashlord-desc
+  icon: { sprite: Clothing/Neck/Misc/fireneck.rsi, state: icon }
+  productEntity: HereticFireDome
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1 
+
+- type: listing
+  id: VolcanoBlast
+  name: heretic-volkano-name
+  description: heretic-volkano-desc
+  productAction: ActionVulkanic
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ListingAshForm
+  name: heretic-ashform-name
+  description: heretic-ashform-desc
+  productAction: ActionAshForm
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: Stalker
+  name: heretic-stalker-name
+  description: heretic-stalker-desc
+  productAction: ActionSpawnStalker
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

@@ -22,6 +22,8 @@
     rules:
     - id: Thief
       prob: 0.5
+    - id: Heretic
+      prob: 0.5
 
 - type: entity
   id: DeathMatch31
@@ -244,6 +246,38 @@
       mindComponents:
       - type: InitialInfectedRole
         prototype: InitialInfected
+
+- type: entity
+  abstract: true
+  parent: BaseGameRule
+  id: BaseHereticRule
+  components:
+  - type: AntagRandomObjectives
+    sets:
+    - groups: HereticObjectiveGroups
+    maxDifficulty: 5
+  - type: AntagSelection
+    agentName: heretic-round-end-agent-name
+
+- type: entity
+  id: Heretic
+  parent: BaseHereticRule
+  noSpawn: true
+  components:
+  - type: GameRule
+    minPlayers: 15
+  - type: HereticRule
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ Heretic ]
+      maxRange:
+      min: 1
+      max: 3
+      playerRatio: 15
+      lateJoinAdditional: true
+      mindComponents:
+      - type: HereticRole
+        prototype: Heretic
 
 # event schedulers
 - type: entity

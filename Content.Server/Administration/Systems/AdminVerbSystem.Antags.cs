@@ -22,6 +22,9 @@ public sealed partial class AdminVerbSystem
     private const string DefaultTraitorRule = "Traitor";
 
     [ValidatePrototypeId<EntityPrototype>]
+    private const string DefaultHereticRule = "Heretic";
+
+    [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultNukeOpRule = "LoneOpsSpawn";
 
     [ValidatePrototypeId<EntityPrototype>]
@@ -62,6 +65,20 @@ public sealed partial class AdminVerbSystem
             Message = Loc.GetString("admin-verb-make-traitor"),
         };
         args.Verbs.Add(traitor);
+
+        Verb heretic = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-heretic"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/Actions/heretic/grasp.png")),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<HereticRuleComponent>(targetPlayer, DefaultHereticRule);
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-make-heretic"),
+        };
+        args.Verbs.Add(heretic);
 
         Verb zombie = new()
         {

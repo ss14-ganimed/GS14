@@ -544,3 +544,23 @@
     sprite: Clothing/Head/Hoods/Coat/hoodweb.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Coat/hoodweb.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHereticHood
+  noSpawn: true
+  name: heretic hood
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hoods/heretic.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hoods/heretic.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.95

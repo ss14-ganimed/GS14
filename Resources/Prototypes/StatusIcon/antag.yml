@@ -59,3 +59,11 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Syndicate
+
+- type: statusIcon
+  id: Sucrifaced
+  priority: 10
+  locationPreference: Right
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: Heretic

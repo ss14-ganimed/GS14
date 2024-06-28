@@ -98,3 +98,28 @@
     - Toggle
     - On
     - Off
+
+- type: entity
+  name: fire necklace
+  description: Necklace.
+  id: HereticFireDome
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Neck
+  - type: Sprite
+    sprite: Clothing/Neck/Misc/fireneck.rsi
+    layers:
+      - state: icon
+  - type: ContainerContainer
+  - type: EnergyDomeGenerator
+    domePrototype: DomeSmallFire
+    turnOffSound: /Audio/Items/match_strike.ogg
+    turnOnSound: /Audio/Items/match_strike.ogg
+    parrySound: /Audio/Weapons/Guns/Hits/energy_meat1.ogg
+  - type: UseDelay
+    delay: 10.0
