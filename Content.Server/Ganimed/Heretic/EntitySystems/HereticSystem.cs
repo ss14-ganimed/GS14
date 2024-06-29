@@ -19,6 +19,7 @@ using Content.Shared.Store.Components;
 using Content.Shared.Tag;
 using Content.Shared.Mind;
 using Content.Shared.Actions;
+using Content.Shared.Hands.EntitySystems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -28,6 +29,7 @@ namespace Content.Server.Ganimed.Heretic;
 public sealed partial class HereticSystem : EntitySystem
 {
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly ActionsSystem _action = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
@@ -46,6 +48,7 @@ public sealed partial class HereticSystem : EntitySystem
         SubscribeLocalEvent<HereticComponent, HereticShopActionEvent>(OnShop);
         SubscribeLocalEvent<HereticComponent, AristocratDoAfterEvent>(OnAristocrat);
         SubscribeLocalEvent<HereticComponent, DemonDoAfterEvent>(OnDemon);
+        SubscribeLocalEvent<HereticComponent, CreateColdThrowingStarEvent>(OnCreateThrowingStar);
     }
 
     private void OnMapInit(Entity<HereticComponent> ent, ref MapInitEvent args)
@@ -82,5 +85,14 @@ public sealed partial class HereticSystem : EntitySystem
         }
 
         _entManager.RemoveComponent<FlammableComponent>(uid);
+    }
+
+    private void OnCreateThrowingStar(EntityUid uid, HereticComponent component, CreateColdThrowingStarEvent args)
+    {
+        args.Handled = true;
+        var user = args.Performer;
+
+        var star = Spawn("ThrowingStarHeretic", Transform(user).Coordinates);
+        _hands.TryPickupAnyHand(user, star);
     }
 }

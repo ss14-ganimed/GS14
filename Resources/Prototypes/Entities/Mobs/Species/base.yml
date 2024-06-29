@@ -205,6 +205,8 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
   - type: Puller
   - type: Speech
     speechSounds: Alto
@@ -240,10 +242,12 @@
   id: BaseMobSpeciesOrganic
   abstract: true
   components:
-  - type: UserInterface
-    interfaces:
-      enum.StoreUiKey.Key:
-        type: StoreBoundUserInterface
+  - type: HiddenDescription
+    entries:
+    - label: hidden-desc-sucriface-heretic
+      whitelistMind:
+        components:
+          - HereticRole
   - type: DiseaseCarrier
   - type: Barotrauma
     damage:
