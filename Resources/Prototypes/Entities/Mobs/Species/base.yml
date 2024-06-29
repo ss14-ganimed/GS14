@@ -205,6 +205,8 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
   - type: Puller
   - type: Speech
     speechSounds: Alto
@@ -240,10 +242,6 @@
   id: BaseMobSpeciesOrganic
   abstract: true
   components:
-  - type: UserInterface
-    interfaces:
-      enum.StoreUiKey.Key:
-        type: StoreBoundUserInterface
   - type: DiseaseCarrier
   - type: Barotrauma
     damage:

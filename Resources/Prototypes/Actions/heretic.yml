@@ -88,6 +88,24 @@
       prototype: VoidBolt  
 
 - type: entity
+  id: ActionColdBlast
+  name: Cold Blast
+  description: Cold Blast.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 60
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    raiseOnUser: true
+    range: 60
+    icon:
+      sprite: Structures/Specific/Anomalies/ice_anom.rsi
+      state: bullet
+    event: !type:ProjectileSpellEvent
+      prototype: ProjectileIcicle
+
+- type: entity
   id: ActionSpawnStalker
   name: Summon Stalker
   description: This spell summons three Stalker to your aid! May or may not turn on user.
@@ -115,3 +133,34 @@
       protoId: HereticAshForm
     itemIconStyle: NoItem
     icon: Interface/Actions/heretic/ash.png
+
+- type: entity
+  id: ActionCreateColdThrowingStar
+  name: Create throwing star
+  description: Ashen Shift.
+  components:
+  - type: InstantAction
+    useDelay: 25
+    icon:
+      sprite: Objects/Weapons/Throwable/throwing_star.rsi
+      state: cold
+    itemIconStyle: NoItem
+    priority: -10
+    event: !type:CreateColdThrowingStarEvent {}
+
+- type: entity
+  id: ActionForceCrystals
+  name: Forcecrystalls
+  description: Creates a magical barrier.
+  components:
+  - type: InstantAction
+    useDelay: 30
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+    icon:
+      sprite: Structures/Decoration/crystal.rsi
+      state: crystal_heretic
+    event: !type:InstantSpawnSpellEvent
+      prototype: WallCrystall
+      posData: !type:TargetInFront

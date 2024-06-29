@@ -25,6 +25,19 @@
     stock: 1
 
 - type: listing
+  id: ColdBlast
+  name: heretic-coldblast-name
+  description: heretic-coldblast-desc
+  productAction: ActionColdBlast
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1    
+
+- type: listing
   id: ColdGrasp
   name: heretic-coldgrasp-name
   description: heretic-coldgrasp-desc
@@ -43,6 +56,19 @@
   description: heretic-aristocrat-desc
   icon: Interface/Actions/heretic/aristocrat.png
   productEvent: !type:AristocratDoAfterEvent
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticVoidAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: ColdStarWay
+  name: heretic-coldstar-name
+  description: heretic-coldstar-desc
+  productAction: ActionCreateColdThrowingStar
   cost:
     HereticKnowledge: 2
   categories:
@@ -106,6 +132,19 @@
     stock: 1
 
 - type: listing
+  id: ListingCrystalBarrier
+  name: heretic-crystal-name
+  description: heretic-crystal-desc
+  productAction: ActionForceCrystals
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
   id: Stalker
   name: heretic-stalker-name
   description: heretic-stalker-desc
@@ -117,3 +156,17 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+
+- type: listing
+  id: MaskOfMadness
+  name: heretic-mask-name
+  description: heretic-mask-desc
+  icon: { sprite: Clothing/Mask/madness.rsi, state: icon }
+  productEntity: ClothingMaskMadness
+  cost:
+    HereticKnowledge: 2
+  categories:
+  - HereticAshAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1 
