@@ -67,6 +67,8 @@ heretic-ashform-desc = Кратковременное заклинание, ко
 heretic-stalker-name = Призыв сталкера
 heretic-stalker-desc = Призывает агрессивного монстра, которого можно убить только при помощи механического урона.
 
+hidden-desc-sucriface-heretic = [color=#006400]Он ещё не был принесен в жертву.[/color]
+
 ent-ClothingMaskMadness = маска безумия
     .desc = Странная маска, которая вызывает страх.
 ent-ThrowingStarHeretic = холодная звезда

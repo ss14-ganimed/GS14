@@ -242,6 +242,12 @@
   id: BaseMobSpeciesOrganic
   abstract: true
   components:
+  - type: HiddenDescription
+    entries:
+    - label: hidden-desc-sucriface-heretic
+      whitelistMind:
+        components:
+          - HereticRole
   - type: DiseaseCarrier
   - type: Barotrauma
     damage:

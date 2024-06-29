@@ -5,6 +5,7 @@ using Content.Server.Store.Systems;
 using Content.Server.Ganimed.Heretic.Components;
 using Content.Shared.Ganimed.Heretic;
 using Content.Shared.Ganimed.Heretic.Components;
+using Content.Server.Corvax.HiddenDescription;
 using Content.Shared.Damage;
 using Content.Shared.Tag;
 using Content.Shared.DoAfter;
@@ -123,6 +124,7 @@ public sealed class MansusGraspSystem : EntitySystem
           }
 
           EnsureComp<HereticSucrificiedComponent>(target);
+          EntityManager.RemoveComponent<HiddenDescriptionComponent>(target);
        }
     }
 }
