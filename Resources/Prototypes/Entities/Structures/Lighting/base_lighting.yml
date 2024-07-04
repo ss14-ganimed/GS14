@@ -10,7 +10,6 @@
   description: "An always powered light."
   suffix: Always powered
   components:
-  - type: EmergencyLight
   - type: MeleeSound
     soundGroups:
       Brute:
