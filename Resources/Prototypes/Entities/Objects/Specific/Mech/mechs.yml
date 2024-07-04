@@ -113,7 +113,7 @@
     baseState: ripley
     openState: ripley-open
     brokenState: ripley-broken
-    mechToPilotDamageMultiplier: 0.75
+    mechToPilotDamageMultiplier: 0.10
     equipmentWhitelist:
       tags:
       - ExoMech
@@ -312,7 +312,7 @@
     brokenState: marauder-broken
     airtight: true
     maxIntegrity: 500
-    mechToPilotDamageMultiplier: 0.35
+    mechToPilotDamageMultiplier: 0
     equipmentWhitelist:
       tags:
       - CombatMech
@@ -362,7 +362,7 @@
     brokenState: mauler-broken
     airtight: true
     maxIntegrity: 500
-    mechToPilotDamageMultiplier: 0.35
+    mechToPilotDamageMultiplier: 0
     equipmentWhitelist:
       tags:
       - CombatMech
@@ -412,7 +412,7 @@
     brokenState: gygax-broken
     airtight: true
     maxIntegrity: 250
-    mechToPilotDamageMultiplier: 0.35
+    mechToPilotDamageMultiplier: 0
     equipmentWhitelist:
       tags:
       - CombatMech
@@ -462,7 +462,7 @@
     brokenState: durand-broken
     airtight: true
     maxIntegrity: 400
-    mechToPilotDamageMultiplier: 0.35
+    mechToPilotDamageMultiplier: 0
     equipmentWhitelist:
       tags:
       - CombatMech
