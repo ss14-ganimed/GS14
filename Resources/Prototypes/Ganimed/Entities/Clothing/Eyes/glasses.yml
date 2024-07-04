@@ -156,10 +156,7 @@
   - type: GroupExamine
   - type: UseDelay
     delay: 4
-  - type: PNV
-  - type: ClothingGrant
-    component:
-    - type: NightVision
+  - type: NVD
 
 - type: entity
   parent: ClothingEyesNightVision
@@ -212,29 +209,3 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
-
-- type: entity
-  id: NVToggleAction
-  name: Switch NVD
-  description: Switches your NVD
-  noSpawn: true
-  components:
-  - type: InstantAction
-    useDelay: 2.5
-    icon:
-      sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
-      state: icon
-    event: !type:NVInstantActionEvent
-
-- type: entity
-  id: SwitchNightVision
-  name: Switch night vision
-  description: Switches your night vision
-  noSpawn: true
-  components:
-  - type: InstantAction
-    useDelay: 2.5
-    icon:
-      sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
-      state: icon
-    event: !type:NVInstantActionEvent

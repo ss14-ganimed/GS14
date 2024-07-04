@@ -1,6 +1,6 @@
 using Content.Shared.Construction.Components;
 using Content.Shared.Construction.EntitySystems;
-using Content.Shared.Mesons;
+using Content.Shared.NVD;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -8,9 +8,9 @@ using Robust.Shared.Enums;
 using Robust.Shared.Physics;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.Mesons;
+namespace Content.Client.NVD;
 
-public sealed class MesonsOverlay : Overlay
+public sealed class NVDOverlay : Overlay
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
@@ -28,34 +28,17 @@ public sealed class MesonsOverlay : Overlay
 
     private bool _enabled = false;
 
-    public MesonsOverlay()
+    public NVDOverlay()
     {
         IoCManager.InjectDependencies(this);
         _scanlineShader = _prototypeManager.Index<ShaderPrototype>("Scanline").InstanceUnique();
         _greyscaleShader = _prototypeManager.Index<ShaderPrototype>("GreyscaleFullscreen").InstanceUnique();
     }
 
-    public void SetSpritesVisible(bool visible)
-    {
-        var playerEntity = _playerManager.LocalSession?.AttachedEntity;
-
-        var query = _entityManager.EntityQueryEnumerator<MesonsNonviewableComponent>();
-
-        while (query.MoveNext(out var uid, out _))
-        {
-            if (!_entityManager.TryGetComponent(uid, out SpriteComponent? spriteComponent))
-                continue;
-
-            spriteComponent.Visible = uid == playerEntity || visible;
-        }
-    }
-
     public void SetEnabled(bool enabled)
     {
-        _eye.CurrentEye.DrawFov = !enabled;
+        _lightManager.DrawLighting = !enabled;
         _enabled = enabled;
-
-        SetSpritesVisible(!enabled);
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)
@@ -72,8 +55,6 @@ public sealed class MesonsOverlay : Overlay
             || playerEntity is null)
             draw = false;
 
-        SetSpritesVisible(!draw);
-
         return draw;
     }
 
@@ -86,18 +67,5 @@ public sealed class MesonsOverlay : Overlay
 
         if (playerEntity == null)
             return;
-
-
-        _scanlineShader.SetParameter("OVERLAY_COLOR", new Color(0f, 0.5f, 0f, 0.3f));
-        _greyscaleShader.SetParameter("SCREEN_TEXTURE", ScreenTexture);
-
-
-        var worldHandle = args.WorldHandle;
-        var viewport = args.WorldBounds;
-        worldHandle.UseShader(_greyscaleShader);
-        worldHandle.DrawRect(viewport, Color.White);
-        worldHandle.UseShader(_scanlineShader);
-        worldHandle.DrawRect(viewport, Color.White);
-        worldHandle.UseShader(null);
     }
 }
