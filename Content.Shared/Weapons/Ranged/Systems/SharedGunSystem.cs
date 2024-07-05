@@ -8,6 +8,7 @@ using Content.Shared.CombatMode;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Damage;
 using Content.Shared.Mech.Components;
+using Content.Shared.Mech.Equipment.Components;
 using Content.Shared.Examine;
 using Content.Shared.Gravity;
 using Content.Shared.Hands;
@@ -187,7 +188,8 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         if (EntityManager.TryGetComponent(entity, out HandsComponent? hands) &&
             hands.ActiveHandEntity is { } held &&
-            TryComp(held, out GunComponent? gun))
+            TryComp(held, out GunComponent? gun) &&
+            !TryComp<MechEquipmentComponent>(held, out var mechequpgun))
         {
             gunEntity = held;
             gunComp = gun;

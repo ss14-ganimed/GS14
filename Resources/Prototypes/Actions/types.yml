@@ -360,3 +360,15 @@
     iconOn: { sprite: Clothing/Eyes/Glasses/meson.rsi, state: icon_enabled }
     useDelay: 1
     event: !type:ToggleActionEvent
+
+- type: entity
+  id: ActionToggleNVD
+  name: Toggle NVD
+  description: Toggle your pair of NVD.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Clothing/Eyes/Glasses/ninjavisor.rsi, state: icon }
+    iconOn: { sprite: Clothing/Eyes/Glasses/ninjavisor.rsi, state: icon }
+    useDelay: 1
+    event: !type:ToggleActionEvent
