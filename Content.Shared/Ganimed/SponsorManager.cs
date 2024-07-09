@@ -14,7 +14,7 @@ public sealed class SponsorManager
 			{"Gorox", new DateTime(2024, 06, 30)},
 			{"watrushechnik", new DateTime(2024, 07, 05)},
 			{"Bezdnaa", new DateTime(2024, 06, 29)},
-            {"Hyper_B". new DateTime(2024, 07, 09)),  
+            {"Hyper_B", new DateTime(2024, 07, 09)),  
 		};
 
     public bool IsSponsor(ICommonSession? session)
