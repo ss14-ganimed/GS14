@@ -170,6 +170,18 @@
 
 - type: entity
   parent: IDCardStandard
+  id: VirologistIDCard
+  name: virologist ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idvirologist
+  - type: PresetIdCard
+    job: Virologist
+
+- type: entity
+  parent: IDCardStandard
   id: ParamedicIDCard
   name: paramedic ID card
   components:
@@ -313,7 +325,7 @@
         - state: idbartender
     - type: PresetIdCard
       job: Bartender
-      name: Pun Pun
+      name: Пун Пун
 
 - type: entity
   parent: IDCardStandard
@@ -442,6 +454,8 @@
     layers:
     - state: default
     - state: idbrigmedic
+  - type: PresetIdCard
+    job: Brigmedic
 
 - type: entity
   parent: IDCardStandard
@@ -455,7 +469,7 @@
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Central Commander
+    jobTitle: Офицер ЦК
     jobIcon: JobIconNanotrasen
   - type: Access
     groups:
@@ -465,6 +479,24 @@
 
 - type: entity
   parent: CentcomIDCard
+  id: SpecOpsIDCard
+  name: command officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idcentcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Офицер ШСО
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - SpecOpsAllAccess
+
+- type: entity
+  parent: SpecOpsIDCard
   id: ERTLeaderIDCard
   name: ERT leader ID card
   components:
@@ -473,12 +505,13 @@
     - state: gold
     - state: ert_commander
   - type: IdCard
-    jobTitle: ERT Company Commander
+    jobTitle: ОБР Лидер
+    jobIcon: JobIconERTLeader
   - type: Item
     heldPrefix: gold
 
 - type: entity
-  parent: ERTLeaderIDCard
+  parent: SpecOpsIDCard
   id: ERTChaplainIDCard
   name: ERT chaplain ID card
   components:
@@ -487,12 +520,13 @@
     - state: gold
     - state: ert_chaplain # we have the sprite for the id but dont have chaplain ERT equipment for now.
   - type: IdCard
-    jobTitle: ERT Soul Officer
+    jobTitle: ОБР Священник
+    jobIcon: JobIconERTChaplain
   - type: Item
     heldPrefix: blue
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: SpecOpsIDCard
   id: ERTEngineerIDCard
   name: ERT engineer ID card
   components:
@@ -501,10 +535,11 @@
     - state: gold
     - state: ert_engineer
   - type: IdCard
-    jobTitle: ERT Field Engineer
+    jobTitle: ОБР Инженер
+    jobIcon: JobIconERTEngineer
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: SpecOpsIDCard
   id: ERTJanitorIDCard
   name: ERT janitor ID card
   components:
@@ -513,10 +548,11 @@
     - state: gold
     - state: ert_janitor
   - type: IdCard
-    jobTitle: ERT Custodian
+    jobTitle: ОБР Кустодиал Специалист
+    jobIcon: JobIconERTJanitor
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: SpecOpsIDCard
   id: ERTMedicIDCard
   name: ERT medic ID card
   components:
@@ -525,10 +561,11 @@
     - state: gold
     - state: ert_medic
   - type: IdCard
-    jobTitle: ERT Medical Doctor
+    jobTitle: ОБР Медик
+    jobIcon: JobIconERTMedical
 
 - type: entity
-  parent: ERTChaplainIDCard
+  parent: SpecOpsIDCard
   id: ERTSecurityIDCard
   name: ERT security ID card
   components:
@@ -537,8 +574,9 @@
     - state: gold
     - state: ert_security
   - type: IdCard
-    jobTitle: ERT Field Officer
-
+    jobTitle: ОБР Офицер Безопасности
+    jobIcon: JobIconERTOfficer
+    
 - type: entity
   parent: IDCardStandard
   id: CentcomIDCardSyndie
@@ -552,7 +590,8 @@
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Central Commander
+    jobTitle: Офицер ЦК
+    jobIcon: JobIconCentCom
   - type: Access
     tags:
     - Maintenance
@@ -570,17 +609,40 @@
       job: Musician
 
 - type: entity
-  parent: CentcomIDCard
+  parent: SpecOpsIDCard
   id: CentcomIDCardDeathsquad
-  name: death squad ID card
+  name: deathsquad ID card
   components:
   - type: Sprite
     layers:
     - state: centcom
+    - state: idcentcom
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Centcom Agent
+    jobTitle: Оперативник МОГ Гамма-2
+    jobIcon: JobIconDeathSquad
+  - type: Access
+    groups:
+    - SpecOpsAllAccess
+
+- type: entity
+  parent: SpecOpsIDCard
+  id: CentcomIDCardSRT
+  name: SRT ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idcentcom
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Офицер ГСН
+    jobIcon: JobIconSRT
+  - type: Access
+    groups:
+    - SpecOpsAllAccess
 
 - type: entity
   name: passenger ID card
@@ -647,6 +709,11 @@
     - JobIconSecurityCadet
     - JobIconZookeeper
     - JobIconVisitor
+    - JobIconSeniorPhysician
+    - JobIconSeniorOfficer
+    - JobIconSeniorEngineer
+    - JobIconSeniorResearcher
+    jobIcon: JobIconCentCom
   - type: ActivatableUI
     key: enum.AgentIDCardUiKey.Key
     inHandsOnly: true
@@ -662,6 +729,22 @@
         type: AgentIDCardBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-AgentIDCard-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-AgentIDCard-research
+      jobRequired:
+        - ResearchAssistant
+        - SeniorResearcher
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
 
 - type: entity
   name: passenger ID card
@@ -774,7 +857,7 @@
     job: Detective
 
 - type: entity
-  parent: CentcomIDCard
+  parent: SpecOpsIDCard
   id: CBURNIDcard
   name: CBURN ID card
   suffix: CBURN
@@ -785,7 +868,7 @@
   - type: Item
     heldPrefix: blue
   - type: IdCard
-    jobTitle: Centcom Quarantine Officer
+    jobTitle: Агент РХБЗЗ
 
 - type: entity
   parent: IDCardStandard
@@ -799,6 +882,8 @@
     - state: idcluwne
   - type: IdCard
     jobTitle: Cluwne
+    jobIcon: JobIconCluwne
+    jobColor: "#AA0000"
   - type: Unremoveable
 
 - type: entity
@@ -840,6 +925,8 @@
     layers:
     - state: default
     - state: idseniorofficer
+  - type: PresetIdCard
+    job: SeniorOfficer
 
 - type: entity
   parent: IDCardStandard
@@ -867,3 +954,129 @@
     - CentralCommand
     - NuclearOperative
     - SyndicateAgent
+
+
+- type: entity
+  parent: PassengerIDCard
+  id: PrisonerIDCard
+  name: prisoner ID card
+  components:
+  - type: PresetIdCard
+    job: Prisoner
+  - type: Sprite
+    layers:
+    - state: orange
+    - state: idprisoner
+
+- type: entity
+  parent: PassengerIDCard
+  id: RoboticistIDCard
+  name: roboticist ID card
+  components:
+  - type: PresetIdCard
+    job: Roboticist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idroboticist
+
+- type: entity
+  parent: PassengerIDCard
+  id: IAAIDCard
+  name: internal affairs agent ID card
+  components:
+  - type: PresetIdCard
+    job: IAA
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idiaa
+
+- type: entity
+  parent: PassengerIDCard
+  id: BlueShieldIDCard
+  name: blue shield officer ID card
+  components:
+  - type: PresetIdCard
+    job: BlueShield
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idblueshield
+
+- type: entity
+  parent: PassengerIDCard
+  id: BridgeOfficerIDCard
+  name: bridge officer ID card
+  components:
+  - type: PresetIdCard
+    job: BridgeOfficer
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idbridgeofficer
+
+- type: entity
+  parent: PassengerIDCard
+  id: CoronerIDCard
+  name: coroner ID card
+  components:
+  - type: PresetIdCard
+    job: Coroner
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcoroner
+
+- type: entity
+  parent: IDCardStandard
+  id: TSFIDCard
+  name: TSF representative ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idtsf
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: Представитель ТСФ
+    jobIcon: JobIconTSF
+    jobColor: "#2A5760"
+  - type: Access
+    access:
+     - Maintenance
+
+- type: entity
+  parent: IDCardStandard
+  id: USSPIDCard1
+  name: USSP soldier representative ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: idusspsoldier
+  - type: IdCard
+    jobTitle: Солдат НРА СССП
+    jobIcon: JobIconUSSPSoldier
+    jobColor: "#f80000"
+  - type: Access
+    access:
+     - Maintenance
+
+- type: entity
+  parent: IDCardStandard
+  id: USSPIDCard2
+  name: USSP officer representative ID card.
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: idusspofficer
+  - type: IdCard
+    jobTitle: Офицер НРА СССП
+    jobIcon: JobIconUSSPOfficer
+    jobColor: "#840000"
+  - type: Access
+    access:
+     - Maintenance      

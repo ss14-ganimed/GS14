@@ -2,16 +2,17 @@
   id: Box
   mapName: 'Box Station'
   mapPath: /Maps/box.yml
-  minPlayers: 50
+  minPlayers: 30
+  maxPlayers: 65
   stations:
     Boxstation:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Box Station {1}'
+          mapNameTemplate: '{0} Бокс {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'TG'
+            prefixCreator: 'ИСН'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
         - type: StationJobs
@@ -59,4 +60,15 @@
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
-
+            #ent
+            SeniorPhysician: [ 0, 1 ]
+            SeniorEngineer: [ 0, 1 ]
+            SeniorResearcher: [ 0, 1 ]
+            SeniorOfficer: [ 0, 1 ]
+            BlueShield: [ 0, 1 ]
+            Roboticist: [ 0, 1 ]
+            Brigmedic: [ 0, 1 ]
+            IAA: [ 0, 1 ]
+            Coroner: [ 0, 1 ]
+            BridgeOfficer: [ 0, 1 ]
+            Virologist: [ 2, 2 ]

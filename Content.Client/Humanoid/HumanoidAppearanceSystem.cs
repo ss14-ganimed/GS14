@@ -173,6 +173,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 prototype,
                 profile.Appearance.SkinColor,
                 profile.Appearance.EyeColor,
+				profile.Appearance.SpeakerColor,
                 markings
             );
             markings.AddBack(prototype.MarkingCategory, new Marking(marking.MarkingId, markingColors));
@@ -183,9 +184,11 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         markings.EnsureDefault(
             profile.Appearance.SkinColor,
             profile.Appearance.EyeColor,
+			profile.Appearance.SpeakerColor,
             _markingManager);
 
         DebugTools.Assert(IsClientSide(uid));
+
 
         humanoid.MarkingSet = markings;
         humanoid.PermanentlyHidden = new HashSet<HumanoidVisualLayers>();
@@ -197,6 +200,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
+		humanoid.SpeakerColor = profile.Appearance.SpeakerColor;
 
         UpdateSprite(humanoid, Comp<SpriteComponent>(uid));
     }

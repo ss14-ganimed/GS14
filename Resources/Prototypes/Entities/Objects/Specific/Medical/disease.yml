@@ -6,6 +6,7 @@
   components:
   - type: Item
     size: Tiny
+  - type: DiseaseSwab
   - type: Sprite
     sprite: Objects/Specific/Medical/mouth_swab.rsi
     state: icon
@@ -48,6 +49,7 @@
   components:
   - type: Item
     size: Tiny
+  - type: DiseaseVaccine
   - type: Sprite
     sprite: Objects/Specific/Medical/medipen.rsi
     state: salpen

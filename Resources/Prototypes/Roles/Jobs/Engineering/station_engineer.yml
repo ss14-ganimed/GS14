@@ -2,11 +2,12 @@
   id: StationEngineer
   name: job-name-engineer
   description: job-description-engineer
+  color: "#EFB341"
   playTimeTracker: JobStationEngineer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 14400 #4 hrs
+      time: 18000 #5 hrs
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce
@@ -20,9 +21,15 @@
 - type: startingGear
   id: StationEngineerGear
   equipment:
+    head: ClothingHeadHatHardhatYellow
+    jumpsuit: ClothingUniformJumpsuitEngineering
+    back: ClothingBackpackEngineeringFilled
+    shoes: ClothingShoesBootsWork
+    outerClothing: ClothingOuterVestHazard
+    id: EngineerPDA
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
-  #storage:
-    #back:
-    #- Stuff
+  innerClothingSkirt: ClothingUniformJumpskirtEngineering
+  satchel: ClothingBackpackSatchelEngineeringFilled
+  duffelbag: ClothingBackpackDuffelEngineeringFilled

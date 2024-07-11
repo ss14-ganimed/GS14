@@ -10,8 +10,7 @@
     - Moth
     - Reptilian
     - SlimePerson
-    - Vox
-
+    - Skrell
 - type: guideEntry
   id: Arachnid
   name: species-name-arachnid
@@ -51,3 +50,8 @@
   id: Vox
   name: species-name-vox
   text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+  
+- type: guideEntry
+  id: Skrell
+  name: species-name-skrell
+  text: "/ServerInfo/Guidebook/Mobs/Skrell.xml"

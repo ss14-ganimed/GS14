@@ -3,6 +3,10 @@
   name: job-name-clown
   description: job-description-clown
   playTimeTracker: JobClown
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 10800 #3 hrs            
   startingGear: ClownGear
   icon: "JobIconClown"
   supervisors: job-supervisors-hop
@@ -28,12 +32,13 @@
 - type: startingGear
   id: ClownGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitClown
+    back: ClothingBackpackClownFilled
+    shoes: ClothingShoesClown
     mask: ClothingMaskClown
     pocket1: BikeHorn
     pocket2: ClownRecorder
     id: ClownPDA
     ears: ClothingHeadsetService
-  storage:
-    back:
-    - RubberStampClown
-    - CrayonRainbow
+  satchel: ClothingBackpackSatchelClownFilled
+  duffelbag: ClothingBackpackDuffelClownFilled

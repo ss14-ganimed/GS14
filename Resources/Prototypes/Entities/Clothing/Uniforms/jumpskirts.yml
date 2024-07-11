@@ -200,6 +200,17 @@
         sprite: Clothing/Uniforms/Jumpsuit/hos.rsi
 
 - type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtHoSOriginal
+  name: head of security's colorful jumpskirt
+  description: It's even redder and even crisper, perfect for a not-so-cheerful head.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/original_hos.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/original_hos.rsi
+
+- type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtHoSAlt
   name: head of security's turtleneck
@@ -220,6 +231,17 @@
     sprite: Clothing/Uniforms/Jumpskirt/hos_parade.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/hos_parade.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtHoSParadeMaleOriginal
+  name: head of security's parade uniform
+  description: A male head of security's luxury-wear, for special occasions.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/original_hos_parade.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/original_hos_parade.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -289,6 +311,17 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicOriginal
+  name: medical-security jumpskirt
+  description: This simple in design uniform is issued to personal with affinities to both medical and security. Strange choice of patterns nonetheless.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/original_brigmedic.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/original_brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtPrisoner
   name: prisoner jumpskirt
   description: Busted.
@@ -369,6 +402,17 @@
     sprite: Clothing/Uniforms/Jumpskirt/scientist.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/scientist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtScientistOriginal
+  name: scientist's plain jumpskirt
+  description: It's a less decorated scientist jumpskirt. It has minor markings that denote the wearer as a scientist.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/original_scientist.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/original_scientist.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -824,9 +868,9 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtOldDress
-  name: old dress
-  description: A worn-looking dress from a very long time ago.
+  id: ClothingUniformJumpskirtCentcomOfficial
+  name: CentCom officer's suitskirt
+  description: It's a suitskirt worn by CentCom's highest-tier Commanders.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpskirt/olddress.rsi
@@ -843,3 +887,41 @@
     sprite: Clothing/Uniforms/Jumpskirt/musician.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/musician.rsi
+    - type: Sprite
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_official.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_official.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtCentcomOfficer
+  name: CentCom turtleneck skirt
+  description: A skirt version of the CentCom turtleneck, rarer and more sought after than the original.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_officer.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_officer.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformColorJumpskirtRainbow
+  name: rainbow jumpskirt
+  description: A multi-colored jumpskirt!
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/rainbow.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/rainbow.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtPsychologist
+  name: psychologist suitskirt
+  description: I don't lose things. I place things in locations which later elude me.
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/psychologist.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/Uniforms/Jumpskirt/psychologist.rsi
+

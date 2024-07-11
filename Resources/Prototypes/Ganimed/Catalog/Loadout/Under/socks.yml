@@ -1,0 +1,62 @@
+- type: loadout
+  id: LoadoutShoesClothingUnderSocksCoder
+  category: loadout-category-under
+  cost: 1
+  exclusive: true
+  prototype: ClothingUnderSocksCoder
+
+- type: loadout
+  id: LoadoutShoesClothingUnderSocksBee
+  category: loadout-category-under
+  cost: 1
+  exclusive: true
+  prototype: ClothingUnderSocksBee
+
+- type: loadout
+  id: LoadoutClothingSocksWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksWhite
+
+- type: loadout
+  id: LoadoutClothingSocksBlack
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksBlack
+
+- type: loadout
+  id: LoadoutClothingSocksBrown
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksBrown
+
+- type: loadout
+  id: LoadoutClothingSocksGreen
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksGreen
+
+- type: loadout
+  id: LoadoutClothingSocksRed
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksRed
+
+- type: loadout
+  id: LoadoutClothingSocksBlue
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksBlue
+
+- type: loadout
+  id: LoadoutClothingSocksYellow
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingSocksYellow

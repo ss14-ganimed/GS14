@@ -319,6 +319,14 @@ public sealed partial class RevenantSystem
 
         args.Handled = true;
         // TODO: When disease refactor is in.
+
+
+        var emo = GetEntityQuery<Shared.Ganimed.Disease.DiseaseCarrierComponent>();
+        foreach (var ent in _lookup.GetEntitiesInRange(uid, component.BlightRadius))
+        {
+            if (emo.TryGetComponent(ent, out var comp))
+                EntityManager.System<Ganimed.Disease.DiseaseSystem>().TryAddDisease(ent, component.BlightDiseasePrototypeId, comp);
+        }
     }
 
     private void OnMalfunctionAction(EntityUid uid, RevenantComponent component, RevenantMalfunctionActionEvent args)

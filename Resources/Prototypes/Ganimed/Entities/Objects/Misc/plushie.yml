@@ -1,0 +1,63 @@
+﻿- type: entity
+  parent: BasePlushie
+  id: PlushieLizardHart
+  name: lizard plushie
+  description: An adorable stuffed toy that resembles a lizardperson. Made by CentCom as a token initiative to combat speciesism in work environments. "Welcome your new colleagues as you do this plush, with open arms!"
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Plushie/hart.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceThatMakesYouWeh
+        Quantity: 30
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 10
+
+- type: entity
+  parent: PlushieLizardHart
+  id: PlushieLizardMetaku
+  name: lizard plushie
+  description: An adorable stuffed toy that resembles a lizardperson. Made by CentCom as a token initiative to combat speciesism in work environments. "Welcome your new colleagues as you do this plush, with open arms!"
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Plushie/metaku.rsi
+    state: icon
+
+- type: entity
+  parent: PlushieLizardHart
+  id: PlushieLizardReesa
+  name: lizard plushie
+  description: An adorable stuffed toy that resembles a lizardperson. Made by CentCom as a token initiative to combat speciesism in work environments. "Welcome your new colleagues as you do this plush, with open arms!"
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Plushie/reesu.rsi
+    state: icon

@@ -9,6 +9,8 @@
     sprite: Clothing/Head/Hoods/Bio/general.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/general.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: BreathMask
   - type: IngestionBlocker
   - type: Tag
@@ -20,6 +22,8 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -31,8 +35,12 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/cmo.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -44,8 +52,12 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/janitor.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -57,8 +69,12 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/scientist.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -70,8 +86,12 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/security.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/security.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -83,8 +103,12 @@
   - type: IdentityBlocker
   - type: Sprite
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
+  - type: DiseaseProtection
+    protection: 0.15
   - type: Clothing
     sprite: Clothing/Head/Hoods/Bio/virology.rsi
+  - type: StaminaProtection
+    coefficient: 0.95
 
 - type: entity
   parent: ClothingHeadBase
@@ -162,6 +186,24 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: StaminaProtection
+    coefficient: 0.95
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodRadOriginal
+  name: old-fashioned radiation hood
+  description: A hood of the old hazmat suit, designed for protection from high radioactivity.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hoods/original_rad.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hoods/original_rad.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Radiation: 0.65
+        Heat: 0.95
 
 - type: entity
   parent: ClothingHeadBase
@@ -524,3 +566,23 @@
     sprite: Clothing/Head/Hoods/Coat/hoodweb.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/Coat/hoodweb.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHereticHood
+  noSpawn: true
+  name: heretic hood
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hoods/heretic.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hoods/heretic.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: StaminaProtection
+    coefficient: 0.95

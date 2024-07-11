@@ -34,10 +34,12 @@
   components:
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
-    startAudio:
-      path: /Audio/Announcements/announce.ogg
     weight: 8
     duration: 35
+    startAudio: # Corvax-Announcements
+      path: /Audio/Corvax/Announcements/flux.ogg
+      params:
+        volume: -4
   - type: AnomalySpawnRule
 
 - type: entity
@@ -50,10 +52,12 @@
       max:  30
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
-    startAudio:
-      path: /Audio/Announcements/announce.ogg
     weight: 8
     duration: 35
+    startAudio: # Corvax-Announcements
+      path: /Audio/Corvax/Announcements/blusp_anomalies.ogg
+      params:
+        volume: -4
   - type: BluespaceArtifactRule
 
 - type: entity
@@ -74,7 +78,7 @@
   - type: StationEvent
     weight: 7
     duration: 1
-    minimumPlayers: 15
+    minimumPlayers: 10
   - type: BreakerFlipRule
 
 - type: entity
@@ -147,8 +151,8 @@
     weight: 6
     duration: 1
     earliestStart: 30
-    reoccurrenceDelay: 20
-    minimumPlayers: 30
+    reoccurrenceDelay: 60
+    minimumPlayers: 20
   - type: NinjaSpawnRule
 
 - type: entity
@@ -159,7 +163,7 @@
     weight: 7.5
     duration: 1
     earliestStart: 45
-    minimumPlayers: 20
+    minimumPlayers: 15
   - type: RandomSpawnRule
     prototype: MobRevenant
 
@@ -180,9 +184,18 @@
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Announcements/gasleak_start.ogg # Corvax-Announcements
+      params:
+        volume: -4
     endAnnouncement: station-event-gas-leak-end-announcement
-    weight: 8
+    endAudio:
+      path: /Audio/Announcements/gasleak_end.ogg # Corvax-Announcements
+      params:
+        volume: -4
+    earliestStart: 10
+    minimumPlayers: 5
+    weight: 10
+    startDelay: 20
   - type: GasLeakRule
 
 - type: entity
@@ -203,10 +216,10 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
-    earliestStart: 15
-    weight: 6
-    duration: 50
+      path: /Audio/Announcements/infestation.ogg
+      params:
+        volume: -4
+    minimumPlayers: 15
   - type: VentCrittersRule
     entries:
     - id: MobMouse
@@ -252,9 +265,9 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
-    weight: 6
-    duration: 50
+      path: /Audio/Announcements/infestation.ogg
+      params:
+        volume: -4
   - type: VentCrittersRule
     entries:
     - id: MobCockroach
@@ -273,7 +286,8 @@
     startAudio:
       path: /Audio/Announcements/power_off.ogg
       params:
-       volume: -4
+        volume: -4
+    startDelay: 24
     duration: 60
     maxDuration: 120
   - type: PowerGridCheckRule
@@ -286,8 +300,10 @@
     weight: 8
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
-    startAudio:
-      path: /Audio/Announcements/attention.ogg
+    startAudio: # Corvax-Announcements
+      path: /Audio/Corvax/Announcements/comms_blackout.ogg
+      params:
+        volume: -4
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -313,9 +329,11 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/Announcements/ventclog.ogg # Corvax-Announcements
+      params:
+        volume: -4
     earliestStart: 15
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentClogRule
@@ -329,7 +347,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -350,7 +368,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -414,13 +432,14 @@
   id: LoneOpsSpawn
   components:
   - type: StationEvent
-    earliestStart: 35
-    weight: 5.5
-    minimumPlayers: 20
+    earliestStart: 45
+    weight: 5
+    minimumPlayers: 15
+    reoccurrenceDelay: 30
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
-    preloadedGrid: ShuttleStriker
+    mapPath: /Maps/Shuttles/striker.yml
   - type: NukeopsRule
     roundEndBehavior: Nothing
   - type: AntagSelection
@@ -450,7 +469,7 @@
   - type: StationEvent
     earliestStart: 30
     weight: 8
-    minimumPlayers: 15
+    minimumPlayers: 10
     maxOccurrences: 1 # can only happen once per round
     startAnnouncement: station-event-communication-interception
     startAudio:
@@ -497,8 +516,8 @@
       path: /Audio/Announcements/attention.ogg
     weight: 3.5
     duration: 1
-    earliestStart: 30
-    minimumPlayers: 20
+    earliestStart: 45
+    minimumPlayers: 15
   - type: ImmovableRodRule
     rodPrototypes:
     - id: ImmovableRodKeepTilesStill

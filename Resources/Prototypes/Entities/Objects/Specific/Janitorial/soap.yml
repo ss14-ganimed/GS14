@@ -22,7 +22,7 @@
     storedRotation: -90
   - type: Slippery
     paralyzeTime: 2
-    launchForwardsMultiplier: 1.5
+    launchForwardsMultiplier: 4
   - type: StepTrigger
     intersectRatio: 0.2
   - type: CollisionWake
@@ -62,6 +62,7 @@
     solution: soap
   - type: DeleteOnSolutionEmpty
     solution: soap
+  - type: PaintRemover
   - type: FlavorProfile
     flavors:
       - clean
@@ -222,7 +223,8 @@
     fillBaseName: omega-
   - type: Slippery
     paralyzeTime: 7
-    launchForwardsMultiplier: 3
+    launchForwardsMultiplier: 10
+  - type: StepTrigger
   - type: Item
     heldPrefix: omega
   - type: SolutionContainerManager

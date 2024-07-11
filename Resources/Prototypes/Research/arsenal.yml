@@ -46,6 +46,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserCarbine
+  - WeaponEnergyGun
 
 - type: technology
   id: NonlethalAmmunition
@@ -92,6 +93,7 @@
   tier: 1
   cost: 8000
   recipeUnlocks:
+  - ClothingEyesGlassesSecurity
   - Truncheon
   - TelescopicShield
   - HoloprojectorSecurity
@@ -128,6 +130,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponLaserCannon
+  - WeaponEnergySniperRifle
 
 - type: technology
   id: WaveParticleHarnessing
@@ -140,6 +143,7 @@
   cost: 10000
   recipeUnlocks:
   - WeaponXrayCannon
+  - WeaponImmolator
 
 - type: technology
   id: BasicShuttleArmament
@@ -163,6 +167,26 @@
   technologyPrerequisites:
   - SalvageWeapons
 
+- type: technology
+  id: MilitaryMachinery
+  name: research-technology-military-machinery
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: gygax
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - GygaxHarness
+  - GygaxLArm
+  - GygaxRArm
+  - GygaxLLeg
+  - GygaxRLeg
+  - GygaxCentralElectronics
+  - GygaxPeripheralsElectronics
+  - MechLaserWeapon
+  - MechScattershotWeapon
+
 # Tier 3
 
 - type: technology
@@ -177,6 +201,7 @@
   recipeUnlocks:
   - WeaponAdvancedLaser
   - PortableRecharger
+  - WeaponIonRifleGun
 
 - type: technology
   id: ExperimentalBatteryAmmo
@@ -205,3 +230,39 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+
+- type: technology
+  id: ModernCombatMechs
+  name: research-technology-modern-combat-mechs
+  icon:
+    sprite: Objects/Specific/Mech/mecha.rsi
+    state: durand
+  discipline: Arsenal
+  tier: 3
+  cost: 18000
+  recipeUnlocks:
+  - DurandHarness
+  - DurandLArm
+  - DurandRArm
+  - DurandLLeg
+  - DurandRLeg
+  - DurandCentralElectronics
+  - DurandPeripheralsElectronics
+  - MechSolarisLaserWeapon
+  - MechHadesWeapon
+  - MechMssileWeapon
+  - MechTeslaWeapon
+  technologyPrerequisites:
+  - MilitaryMachinery
+
+- type: technology
+  id: EnergyBarriers
+  name: research-technology-energy_barriers
+  icon: 
+    sprite: Objects/Tools/EnergyDome/reinhardt.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - EnergyDomeDirectionalTurtle

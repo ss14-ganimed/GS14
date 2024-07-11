@@ -1,4 +1,62 @@
+- type: latheRecipe
+  id: ClothingEyesGlassesMesonScanner
+  result: ClothingEyesGlassesMesonScanner
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 400
+    Gold: 100
+    Silver: 70
 
+- type: latheRecipe
+  id: ClothingEyesNightVision
+  result: ClothingEyesNightVision
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 300
+    Gold: 100
+    Silver: 50
+
+- type: latheRecipe
+  id: ClothingEyesNightVisionScience
+  result: ClothingEyesNightVisionScience
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 350
+    Gold: 150
+    Silver: 100
+
+- type: latheRecipe
+  id: ClothingEyesNightVisionMeson
+  result: ClothingEyesNightVisionMeson
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 350
+    Gold: 150
+    Silver: 100
+
+- type: latheRecipe
+  id: ClothingEyesNightVisionMedicine
+  result: ClothingEyesNightVisionMedicine
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 350
+    Gold: 150
+    Silver: 100
+
+- type: latheRecipe
+  id: ClothingEyesNightVisionSecurity
+  result: ClothingEyesNightVisionSecurity
+  completetime: 4
+  materials:
+    Steel: 250
+    Glass: 350
+    Gold: 150
+    Silver: 100
 # Jumpsuits/skirts
 - type: latheRecipe
   id: ClothingUniformJumpsuitColorGrey # Tide
@@ -762,6 +820,14 @@
     Durathread: 150
 
 - type: latheRecipe
+  id: ClothingNeckBridgeOfficerMantle
+  result: ClothingNeckBridgeOfficerMantle
+  completetime: 2.8
+  materials:
+    Cloth: 150
+    Durathread: 150
+
+- type: latheRecipe
   id: ClothingNeckMantleCE
   result: ClothingNeckMantleCE
   completetime: 2.8
@@ -788,6 +854,17 @@
 - type: latheRecipe
   id: ClothingNeckMantleHOS
   result: ClothingNeckMantleHOS
+  completetime: 2.8
+  materials:
+    Cloth: 200
+    Durathread: 150
+
+- type: latheRecipe # Corvax-Resprite: Old HOS mantle
+  id: ClothingNeckMantleHOSShoulder
+  icon:
+    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+    state: icon
+  result: ClothingNeckMantleHOSShoulder
   completetime: 2.8
   materials:
     Cloth: 200

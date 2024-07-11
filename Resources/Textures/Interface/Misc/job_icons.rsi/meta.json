@@ -21,10 +21,16 @@
             "name": "Borg"
         },
         {
+            "name": "Heretic"
+        },
+        {
             "name": "Boxer"
         },
         {
             "name": "AtmosphericTechnician"
+        },
+        {
+            "name": "CentCom"
         },
         {
             "name": "Nanotrasen"
@@ -79,6 +85,9 @@
         },
         {
             "name": "Clown"
+        },
+        {
+            "name": "Cluwne"
         },
         {
             "name": "Captain"
@@ -177,6 +186,52 @@
                 [1.0,1.0]
             ]
         },
+        {
+            "name": "BlueShield"
+        },
+        {
+            "name": "Coroner"
+        },
+        {
+            "name": "BridgeOfficer"
+        },
+        {
+            "name": "ERTLeader"
+        },
+        {
+            "name": "ERTOfficer"
+        },
+        {
+            "name": "ERTMedical"
+        },
+        {
+            "name": "ERTEngineer"
+        },
+        {
+            "name": "ERTJanitor"
+        },
+        {
+            "name": "ERTChaplain"
+        },
+        {
+            "name": "SRT"
+        },
+        {
+            "name": "DeathSquad"
+        },
+        {
+            "name": "TSF"
+        },
+        {
+            "name": "USSPOfficer"
+        },	
+        {
+            "name": "USSPSoldier"
+        },		
+        {
+            "name": "IAA"
+	},
+
         {
             "name": "Syndicate"
         },

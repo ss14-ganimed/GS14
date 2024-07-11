@@ -1,0 +1,413 @@
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWatermelon
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatWatermelon
+
+- type: loadout
+  id: LoadoutHeadFoodAmbrosiaVulgaris
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: FoodAmbrosiaVulgaris
+
+- type: loadout
+  id: LoadoutHeadFoodPoppy
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: FoodPoppy
+
+- type: loadout
+  id: LoadoutHeadFoodLily
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  prototype: FoodLily
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBeaverHat
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatBeaverHat
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatPaper
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatPaper
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWitch
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatWitch
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWitch1
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatWitch1
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWizard
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatWizard
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatHetmanHat
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatHetmanHat
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatCaptain
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingHeadHatCaptain
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatSantahat
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatSantahat
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatRedwizard
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatRedwizard
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBunny
+  category: loadout-category-head
+  cost: 1
+  exclusive: true
+  prototype: ClothingHeadHatBunny
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatPirateTricord
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatPirateTricord
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatPirate
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatPirate
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatGladiator
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatGladiator
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWarden
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Warden
+    - HeadOfSecurity
+    - SeniorOfficer
+    - Captain
+  prototype: ClothingHeadHatWarden
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWardenOriginal
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Warden
+    - HeadOfSecurity
+    - SeniorOfficer
+    - Captain
+  prototype: ClothingHeadHatWardenOriginal
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatChef
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Chef
+    - Bartender
+    - ServiceWorker
+  prototype: ClothingHeadHatChef
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWizardFake
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatWizardFake
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWeldingMaskPainted
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - AtmosphericTechnician
+    - StationEngineer
+    - Roboticist
+  prototype: ClothingHeadHatWeldingMaskPainted
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatCone
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatCone
+
+- type: loadout
+  id: LoadoutHeadClothingHeadFancyCrown
+  category: loadout-category-head
+  cost: 8
+  exclusive: true
+  prototype: ClothingHeadHatFancyCrown
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatXmasCrown
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatXmasCrown
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWelding
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - AtmosphericTechnician
+    - StationEngineer
+    - Roboticist
+  prototype: ClothingHeadHatWelding
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWeldingMaskFlame
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - AtmosphericTechnician
+    - StationEngineer
+    - Roboticist
+  prototype: ClothingHeadHatWeldingMaskFlame
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatWeldingMaskFlameBlue
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - AtmosphericTechnician
+    - StationEngineer
+    - Roboticist
+  prototype: ClothingHeadHatWeldingMaskFlameBlue
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatFedoraGrey
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatFedoraGrey
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatSombrero
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatSombrero
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatTacticalMaidHeadband
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingHeadHatTacticalMaidHeadband
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatUshanka
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatUshanka
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatFez
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatFez
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatVioletwizard
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatVioletwizard
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatHopcap
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - HeadOfPersonnel
+  prototype: ClothingHeadHatHopcap
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatHoshat
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingHeadHatHoshat
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatCapHoS
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingHeadHatCapHoS
+
+- type: loadout
+  id: LoadoutHeadClothingHeadHatCapcap
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingHeadHatCapcap
+
+- type: loadout
+  id: LoadoutHeadClothingHeadNurseHat
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - SeniorPhysician
+    - Chemist
+    - MedicalDoctor
+    - Virologist
+    - Psychologist
+    - MedicalIntern
+    - Paramedic
+    - Coroner
+    - Brigmedic
+  prototype: ClothingHeadNurseHat
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadSafari
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadSafari
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatBowlerHat
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatBowlerHat
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatSyndieMAA
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Captain
+    - HeadOfPersonnel
+    - HeadOfSecurity
+    - SecurityOfficer
+    - Warden
+    - IAA
+  prototype: ClothingHeadHatSyndieMAA
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatOutlawHat
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  prototype: ClothingHeadHatOutlawHat
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatCake
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  prototype: ClothingHeadHatCake
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatPlaguedoctor
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingHeadHatPlaguedoctor
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatJesterAlt
+  category: loadout-category-head
+  cost: 2
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Clown
+  prototype: ClothingHeadHatJesterAlt
+  
+- type: loadout
+  id: LoadoutHeadClothingHeadHatCapLeatherHoS
+  category: loadout-category-head
+  cost: 3
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - HeadOfSecurity
+  prototype: ClothingHeadHatCapLeatherHoS

@@ -1,0 +1,37 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  name: Ion rifle
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponIonRifleGun
+  description: A specialized rifle that fires ion charges capable of disrupting and interfering with electronic devices. The damage extends to all parts/components. It's huge, but it can be hung on your back and has a sniper scope.
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Sprite
+    sprite: Ganimed/Objects/Guns/Battery/ion_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Ganimed/Objects/Guns/Battery/ion_rifle.rsi
+  - type: Gun
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletEMP
+    fireCost: 200
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: StaticPrice
+    price: 500

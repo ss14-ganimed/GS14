@@ -23,7 +23,6 @@ public static partial class PoolManager
         (CCVars.GameRoleTimers.Name,          "false"),
         (CCVars.GameRoleWhitelist.Name,       "false"),
         (CCVars.GridFill.Name,                "false"),
-        (CCVars.PreloadGrids.Name,            "false"),
         (CCVars.ArrivalsShuttles.Name,        "false"),
         (CCVars.EmergencyShuttleEnabled.Name, "false"),
         (CCVars.ProcgenPreload.Name,          "false"),

@@ -1,0 +1,120 @@
+#license: CLA
+#copiryght: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakOrange
+  name: orange sunset cloak
+  description: Bright and comfy orange cloak with nice sun-colored accents. Stay warm while until your days set like a burning star.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Neck/Cloaks/orange.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakHieroglyphics
+  name: hieroglyphics cloak
+  description: A particularly charming trendy cloak inspired by the progressive Japan of the old days. Sometimes less is more. Do not forget it.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Neck/Cloaks/hieroglyphics.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakAtmosian
+  name: atmosian's cloak
+  description: The cloak of a legendary Atmosian.
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Neck/Cloaks/atmosian.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakGamer
+  name: legendary gamer's cloak
+  description: Worn by the most skilled professional gamers.
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/Neck/Cloaks/gamer.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakSec
+  name: security cloak
+  description: Worn by the most skilled professional security.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/sec.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingCloakMed
+  name: medical cloak
+  description: Worn by the most skilled professional surgery.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/med.rsi
+#long
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakRD
+  name: long research director cloak
+  description: RD cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/rd.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakCE
+  name: long chief engineer cloak
+  description: CE cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/ce.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakCap
+  name: long cap cloak
+  description: Cap cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/cap.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakCMO
+  name: long chief medical officer cloak
+  description: CMO cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/cmo.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakQM
+  name: long request officer cloak
+  description: QM cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/qm.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakHOP
+  name: long head of personal cloak
+  description: HOP cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/hop.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingLongCloakHOS
+  name: long head of security cloak
+  description: HOS cloak.
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/Neck/Cloaks/Long/hos.rsi

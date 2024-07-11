@@ -1,0 +1,107 @@
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterBioJanitor
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - Janitor
+  prototype: ClothingOuterBioJanitor
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterBioScientist
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingOuterBioScientist
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterBioGeneral
+  category: loadout-category-outerClothing
+  cost: 9
+  exclusive: true
+  prototype: ClothingOuterBioGeneral
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterBioSecurity
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Brigmedic
+    - BlueShield
+  prototype: ClothingOuterBioSecurity
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterBioCmo
+  category: loadout-category-outerClothing
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+  prototype: ClothingOuterBioCmo
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterBioVirology
+  category: loadout-category-outerClothing
+  cost: 6
+  exclusive: true
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalDoctor
+    - Virologist
+    - Psychologist
+    - MedicalIntern
+    - SeniorPhysician
+    - Coroner
+  prototype: ClothingOuterBioVirology
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitRad
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingOuterSuitRad
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterSuitRadOriginal
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingOuterSuitRadOriginal

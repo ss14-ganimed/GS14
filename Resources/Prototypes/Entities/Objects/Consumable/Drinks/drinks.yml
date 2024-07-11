@@ -2343,3 +2343,19 @@
     - type: Icon
       sprite: Objects/Consumable/Drinks/bloodglass.rsi
       state: icon
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkKvassGlass
+  name: kvass glass
+  description: A cool refreshing drink with a taste of socialism.
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        drink:
+          maxVol: 30
+          reagents:
+            - ReagentId: Kvass
+              Quantity: 30
+    - type: Sprite
+      sprite: Corvax/Objects/Consumable/Drinks/kvass.rsi

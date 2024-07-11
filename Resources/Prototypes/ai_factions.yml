@@ -54,6 +54,17 @@
   - Xeno
   - PetsNT
   - Zombie
+  - Heretic
+
+- type: npcFaction
+  id: Heretic
+  hostile:
+  - NanoTrasen
+  - SimpleHostile
+  - Xeno
+  - PetsNT
+  - Zombie
+  - Syndicate
 
 - type: npcFaction
   id: Xeno
@@ -83,3 +94,10 @@
   - Zombie
   - SimpleHostile
   - Dragon
+
+- type: npcFaction
+  id: XenoSlime
+  hostile:
+  - Passive
+  - PetsNT
+  - Zombie

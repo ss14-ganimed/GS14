@@ -10,6 +10,7 @@ using Content.Client.Parallax.Managers;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Screenshot;
 using Content.Client.Fullscreen;
+using Content.Client.Preferences;
 using Content.Client.Stylesheets;
 using Content.Client.Viewport;
 using Content.Client.Voting;
@@ -48,7 +49,6 @@ namespace Content.Client.IoC
             collection.Register<JobRequirementsManager>();
             collection.Register<DocumentParsingManager>();
             collection.Register<ContentReplayPlaybackManager, ContentReplayPlaybackManager>();
-            collection.Register<ISharedPlaytimeManager, JobRequirementsManager>();
             collection.Register<DebugMonitorManager>();
         }
     }

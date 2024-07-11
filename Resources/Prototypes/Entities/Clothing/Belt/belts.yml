@@ -223,6 +223,8 @@
         - WetFloorSign
         - HolosignProjector
         - Plunger
+        - LightReplacer
+        - JanicartKeys
       components:
         - LightReplacer
         - SmokeOnTrigger

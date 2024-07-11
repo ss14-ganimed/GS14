@@ -1,0 +1,153 @@
+# These are technically shoes for now, as we don't actually have underwear. But
+# I would cry if we didn't have them. -swept
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingUnderSocksBase
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      state: icon
+    - type: Clothing
+      slots:
+        - SOCKS
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderSocksBee
+  name: bee socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/bee.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/bee.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderSocksCoder
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+#base
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksWhite
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksBlack
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    color: "#3f3f3f"
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+          color: "#3f3f3f"
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksBlue
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    color: "#0089EF"
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+          color: "#0089EF"
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksBrown
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    color: "#723A02"
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+          color: "#723A02"
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksGreen
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    color: "#5ABF2F"
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+          color: "#5ABF2F"
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksRed
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    color: "#940000"
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+          color: "#940000"
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingSocksYellow
+  name: socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    color: "#EBE216"
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/socks.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+          color: "#EBE216"

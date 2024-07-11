@@ -65,6 +65,19 @@
     maxIntensity: 30
     canCreateVacuum: false
   - type: ExplodeOnTrigger
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+          - !type:ExplodeBehavior
+  - type: StickyVisualizer
+  - type: Appearance
   - type: HolidayVisuals
     holidays:
       festive:
@@ -72,6 +85,12 @@
   - type: HolidayRsiSwap
     sprite:
       festive: Objects/Weapons/Bombs/c4gift.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.Trigger.TriggerVisuals.VisualState:
+        base:
+          Primed: { state: primed }
+          Unprimed: { state: complete }
 
 - type: entity
   name: seismic charge

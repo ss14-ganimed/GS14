@@ -49,7 +49,9 @@ public sealed class SlippingTest : MovementTest
         // Moving at normal speeds does trigger a slip.
         await SetKey(EngineKeyFunctions.Walk, BoundKeyState.Up);
         await Move(DirectionFlag.West, 1f);
+#pragma warning disable NUnit2045
         Assert.That(sys.Slipped, Does.Contain(SEntMan.GetEntity(Player)));
+#pragma warning restore NUnit2045
         AssertComp<KnockedDownComponent>(true, Player);
     }
 }

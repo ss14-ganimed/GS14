@@ -42,6 +42,7 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+           
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -90,6 +91,7 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+           
 
 - type: entity
   id: AmmoTechFabCircuitboard
@@ -104,6 +106,8 @@
       stackRequirements:
         MatterBin: 1
         Manipulator: 1
+    - type: StealTarget
+      stealGroup: AmmoTechFabCircuitboard
 
 - type: entity
   id: MedicalTechFabCircuitboard
@@ -122,6 +126,7 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+           
     - type: StealTarget
       stealGroup: MedicalTechFabCircuitboard
 
@@ -141,6 +146,7 @@
       GlassBeaker:
         amount: 2
         defaultPrototype: Beaker
+         
 
 - type: entity
   parent: BaseMachineCircuitboard
@@ -221,6 +227,7 @@
         GlassBeaker:
           amount: 1
           defaultPrototype: Beaker
+           
 
 - type: entity
   id: DiagnoserMachineCircuitboard
@@ -237,6 +244,7 @@
       GlassBeaker:
         amount: 1
         defaultPrototype: Beaker
+         
     componentRequirements:
       BotanySwab:
         amount: 1
@@ -530,6 +538,7 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+           
 
 - type: entity
   id: ChemDispenserMachineCircuitboard
@@ -549,6 +558,7 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+           
 
 - type: entity
   id: BiomassReclaimerMachineCircuitboard
@@ -586,6 +596,7 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+           
 
 - type: entity
   id: SeedExtractorMachineCircuitboard
@@ -882,6 +893,7 @@
         GlassBeaker:
           amount: 1
           defaultPrototype: Beaker
+           
 
 - type: entity
   id: HotplateMachineCircuitboard
@@ -1155,6 +1167,7 @@
           GlassBeaker:
             amount: 1
             defaultPrototype: Beaker
+             
 
 - type: entity
   id: CargoTelepadMachineCircuitboard
@@ -1186,6 +1199,7 @@
           GlassBeaker:
             amount: 1
             defaultPrototype: Beaker
+             
 
 - type: entity
   id: TelecomServerCircuitboard

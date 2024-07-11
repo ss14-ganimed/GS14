@@ -88,6 +88,16 @@
   kind: source
   path: "/Textures/Shaders/paperstamp.swsl"
 
+- type: shader
+  id: Crispy
+  kind: source
+  path: "/Textures/Shaders/crispy.swsl"
+
+- type: shader
+  id: ChromaticAberration
+  kind: source
+  path: "/Textures/Shaders/chromoaberration.swsl"
+
 # Simple horizontal cut
 - type: shader
   id: HorizontalCut
@@ -99,3 +109,8 @@
   id: Cataracts
   kind: source
   path: "/Textures/Shaders/cataracts.swsl"
+
+- type: shader
+  id: Scanline
+  kind: source
+  path: "/Textures/Shaders/scanline.swsl"

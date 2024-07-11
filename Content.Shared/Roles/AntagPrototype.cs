@@ -44,7 +44,7 @@ public sealed partial class AntagPrototype : IPrototype
     /// </summary>
     // TODO ROLE TIMERS
     // Actually check if the requirements are met. Because apparently this is actually unused.
-    [DataField, Access(typeof(SharedRoleSystem), Other = AccessPermissions.None)]
+    [DataField("requirements")]
     public HashSet<JobRequirement>? Requirements;
 
     /// <summary>

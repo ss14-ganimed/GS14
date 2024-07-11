@@ -5,6 +5,8 @@
   children:
   - Jobs
   - Survival
+  - Chemicals
+  - AlertCode #не забыть возвращать при любых обновлениях гайдбука
   - Antagonists
   - Glossary
 

@@ -1,0 +1,121 @@
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBasicSlim
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Bartender
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBasicSlim
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBasic
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBasic
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorBasicOriginal
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterArmorBasicOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterDogi
+  category: loadout-category-outerClothing
+  cost: 7
+  exclusive: true
+  prototype: ClothingOuterDogi
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVest
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  prototype: ClothingOuterVest
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestDetective
+  category: loadout-category-outerClothing
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestDetective
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestDetectiveOriginal
+  category: loadout-category-outerClothing
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity
+    - Detective
+    - SeniorOfficer
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - IAA
+    - BlueShield
+    - Brigmedic
+  prototype: ClothingOuterVestDetectiveOriginal
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterArmorCaptanCarapace
+  category: loadout-category-outerClothing
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - Captain
+  prototype: ClothingOuterArmorCaptainCarapace
+
+- type: loadout
+  id: LoadoutOuterClothingClothingOuterVestArmorMedSec
+  category: loadout-category-outerClothing
+  cost: 4
+  exclusive: true
+  sponsorOnly: true
+  whitelistJobs:
+    - Brigmedic
+  prototype: ClothingOuterVestArmorMedSec

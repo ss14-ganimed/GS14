@@ -64,7 +64,7 @@
     maxCollectionSize: 50 #will be limited to the number of figures on the station anyway.
   - type: Objective
     difficulty: 0.25
-
+    
 - type: entity
   parent: BaseThiefStealCollectionObjective
   id: HeadCloakStealCollectionObjective
@@ -351,7 +351,7 @@
     stealGroup: ChemDispenser
   - type: Objective
     difficulty: 1
-
+    
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: XenoArtifactStealObjective
@@ -362,7 +362,7 @@
     stealGroup: XenoArtifact
   - type: Objective
     difficulty: 0.5
-
+    
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: FreezerHeaterStealObjective
@@ -373,7 +373,7 @@
     stealGroup: FreezerHeater
   - type: Objective
     difficulty: 0.5
-
+    
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: TegStealObjective
@@ -384,7 +384,7 @@
     stealGroup: Teg
   - type: Objective
     difficulty: 1
-
+    
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: BoozeDispenserStealObjective
@@ -395,7 +395,7 @@
     stealGroup: BoozeDispenser
   - type: Objective
     difficulty: 0.5
-
+    
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: AltarNanotrasenStealObjective
@@ -406,7 +406,7 @@
     stealGroup: AltarNanotrasen
   - type: Objective
     difficulty: 0.5
-
+    
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: PlantRDStealObjective
@@ -481,7 +481,7 @@
     stealGroup: AnimalRenault
   - type: Objective
     difficulty: 2
-
+    
 - type: entity
   parent: BaseThiefStealAnimalObjective
   id: ShivaStealObjective

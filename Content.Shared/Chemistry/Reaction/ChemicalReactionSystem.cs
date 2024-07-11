@@ -10,7 +10,6 @@ using Robust.Shared.Utility;
 using System.Collections.Frozen;
 using System.Linq;
 
-
 namespace Content.Shared.Chemistry.Reaction
 {
     public sealed class ChemicalReactionSystem : EntitySystem

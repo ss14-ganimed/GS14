@@ -8,12 +8,14 @@
   },
   "states": [
     {"name": "crypt_gray"},
+    {"name": "crypt_black"},
     {"name": "crypt_rusted"},
     {"name": "crypt_gold"},
     {"name": "crypt_orange"},
     {"name": "crypt_silver"},
     {"name": "crypt_red"},
     {"name": "crypt_blue"},
+	{"name": "crypt_red_ussp"},
     {"name": "common_label"},
     {"name": "cap_label"},
     {"name": "cargo_label"},
@@ -34,6 +36,13 @@
     {"name": "sci_label"},
     {"name": "sec_label"},
     {"name": "service_label"},
-    {"name": "synd_label"}
+    {"name": "deathsquad_label"},
+    {"name": "ert_label"},
+    {"name": "specops_label"},
+    {"name": "srt_label"},
+    {"name": "mtf_label"},
+    {"name": "tsf_label"},
+    {"name": "synd_label"},
+    {"name": "ussp_label"}
   ]
 }

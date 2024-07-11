@@ -106,6 +106,16 @@
     revertOnDeath: false
 
 - type: polymorph
+  id: SlimeVirusMorph
+  configuration:
+    entity: MobAdultSlimesBlue
+    forced: true
+    inventory: Transfer
+    transferName: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
   id: BreadMorph
   configuration:
     entity: FoodBreadPlain
@@ -176,6 +186,16 @@
     revertOnCrit: true
     duration: 20
 
+- type: polymorph
+  id: RandomSlimePerson
+  configuration:
+    forced: true
+    entity: RandomSlimePerson
+    transferName: false
+    inventory: None
+    revertOnDeath: false
+    revertOnCrit: false
+
 # Polymorphs for Wizards polymorph self spell
 - type: polymorph
   id: WizardSpider
@@ -197,3 +217,16 @@
     forced: true
     revertOnCrit: false
     revertOnDeath: false
+
+- type: polymorph
+  id: HereticAshForm
+  configuration:
+    entity: AshForm #CLANG
+    transferName: true
+    transferDamage: false
+    inventory: None
+    duration: 4
+    forced: true
+    revertOnCrit: false
+    revertOnDeath: false
+

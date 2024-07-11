@@ -1,0 +1,187 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatRedCoat
+  name: red old-fashioned coat
+  description: An outdated and worn-out piece of fashion. It still maintains some of it's charm and you almost feel an urge to smile.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/red_coat.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/red_coat.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatBlueCoat
+  name: blue high-fashioned coat
+  description: A premium-quality piece of fashion. Maintains high degree of it's charm and you almost feel an urge to smile. Also, comes packed with some armor!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/blue_coat.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/blue_coat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.75
+        Piercing: 0.80
+        Heat: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterNightDress
+  name: deep blue aquilegia dress 
+  description: A dress of futuristic dark neon tones and high royal court designs. Truly a dangerous mix of different times.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/nightdress.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/nightdress.rsi
+
+- type: entity
+  parent: ClothingOuterCoatLab
+  id: ClothingOuterCoatLabBrigmedic
+  name: brig lab coat
+  description: A high-sanity white clothing where it can easily be stained with red.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/labcoat_brigmedic.rsi
+    heldPrefix: open
+    state: icon-open
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/labcoat_brigmedic.rsi
+    equippedPrefix: open
+
+
+- type: entity
+  parent: ClothingOuterCoatLab
+  id: ClothingOuterCoatLabCoroner
+  name: coroner lab coat
+  description: A slightly sturdier than usual lab coat made not for the laboratories, but for the wet basements.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/labcoat_coroner.rsi
+    heldPrefix: open
+    state: icon-open
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/labcoat_coroner.rsi
+    equippedPrefix: open
+
+
+- type: entity
+  parent: ClothingOuterCoatLabCoroner
+  id: ClothingOuterCoatLabCoolCoroner
+  name: cobalt coroner lab coat
+  description: A well-kept lab coat usually worn for special occasions and management meetings. Not as if management isn't aware of your shady business.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/labcoat_coolcoroner.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/labcoat_coolcoroner.rsi
+
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterCoatBlueShield
+  name: blue shield heavy coat
+  description: Indeed quite heavy, it is mostly filled with sturdy synthetic nanofibers and works well to protect you from a bullet just as much as to protect you from the harsh winter. Bonus points for the extra fluffiness.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/coatblueshield.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/coatblueshield.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.7
+        Blunt: 0.7
+        Piercing: 0.75
+        Radiation: 0.7
+        Heat: 0.7
+        Caustic: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: StaminaProtection
+    coefficient: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatGoldenEraShortcoat
+  name: golden era shortcoat
+  description: A shortened version of an official black coat is made of durable fabric with gilded golden patterns.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/OuterClothing/Coats/goldenera_shortcoat.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/OuterClothing/Coats/goldenera_shortcoat.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterAtmosianBomberJacket
+  name: atmosian bomber jacket
+  description: A thick, well-worn atmosian leather bomber jacket.
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/atmosian.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/atmosian.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatHoSOvercoat
+  name: armored overcoat
+  description: Pretty old stuff for these times, bringing back old memories...
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/hos_overcoat.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/hos_overcoat.rsi
+    - type: Armor
+      modifiers:
+        coefficients:
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.4
+          Heat: 0.7
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatUSSPOvercoatBlack
+  name: old ussp armored overcoat
+  description: Pretty old stuff from USSP
+  suffix: Sponsor
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/ussp.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/ussp.rsi
+
+- type: entity
+  parent: ClothingOuterCoatHoSTrench
+  id: ClothingOuterCoatHoSReflective
+  name: reflective coat
+  description: Pretty old stuff for these times, bringing back old memories...
+  components:
+    - type: Sprite
+      sprite: Ganimed/Clothing/OuterClothing/coat_reflec.rsi
+    - type: Clothing
+      sprite: Ganimed/Clothing/OuterClothing/coat_reflec.rsi
+    - type: Reflect
+      reflectProb: 1
+      reflects:
+        - Energy
+    - type: Tag
+      tags:
+        - HighRiskItem
+    - type: StealTarget
+      stealGroup: ReflectiveCoat

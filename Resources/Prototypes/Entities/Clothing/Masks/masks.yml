@@ -133,6 +133,8 @@
     sprite: Clothing/Mask/medical.rsi
   - type: BreathMask
   - type: IngestionBlocker
+  - type: DiseaseProtection
+    protection: 0.10
   - type: Tag
     tags:
     - PetWearable
@@ -277,6 +279,8 @@
   - type: Clothing
     sprite: Clothing/Mask/sterile.rsi
   - type: IngestionBlocker
+  - type: DiseaseProtection
+    protection: 0.1
   - type: Item
     size: Tiny
   - type: IdentityBlocker
@@ -335,6 +339,19 @@
   - type: Clothing
     sprite: Clothing/Mask/cluwne.rsi
   - type: Unremoveable
+  - type: AddAccentClothing
+    accent: StutteringAccent
+
+- type: entity
+  parent: ClothingMaskClownBase
+  id: ClothingMaskCluwneRemoveable
+  name: cluwne face and hair
+  description: Cursed cluwne face and hair.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/cluwne.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/cluwne.rsi
   - type: AddAccentClothing
     accent: StutteringAccent
 
@@ -522,7 +539,7 @@
     - Snout
 
 - type: entity
-  parent: ClothingMaskBase
+  parent: ClothingMaskPullableBase
   id: ClothingMaskNeckGaiter
   name: neck gaiter
   description: Stylish neck gaiter for your neck, can protect from the cosmic wind?...
@@ -622,3 +639,21 @@
   - type: EyeProtection
   - type: BreathMask
   - type: IdentityBlocker
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskMadness
+  name: mask of madness
+  description: Madness.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/madness.rsi
+  - type: IdentityBlocker
+  - type: Clothing
+    sprite: Clothing/Mask/madness.rsi
+  - type: FlashImmunity
+  - type: BreathMask
+  - type: EyeProtection
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1

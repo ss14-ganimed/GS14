@@ -13,6 +13,9 @@
   id: AirSensor
 
 - type: Tag
+  id: Table
+
+- type: Tag
   id: Ambrosia
 
 - type: Tag
@@ -251,7 +254,7 @@
 
 - type: Tag
   id: BypassInteractionRangeChecks
-
+  
 - type: Tag
   id: CableCoil
 
@@ -937,6 +940,9 @@
   id: NoBlockAnchoring
 
 - type: Tag
+  id: NoPaint
+
+- type: Tag
   id: NozzleBackTank
 
 - type: Tag
@@ -1122,6 +1128,9 @@
 
 - type: Tag
   id: ShellShotgun
+
+- type: Tag
+  id: PelletShotgunFlare
 
 - type: Tag
   id: Shiv
@@ -1350,4 +1359,62 @@
 - type: Tag
   id: WriteIgnoreStamps
 
-# ALPHABETICAL
+- type: Tag
+  id: GlassesNearsight
+
+- type: Tag
+  id: GlassesMonochromacy
+
+- type: Tag
+  id: GlassesChromaticAberration
+
+- type: Tag
+  id:  boots
+
+- type: Tag
+  id: HidesHeadTop
+
+- type: Tag
+  id: HidesTail
+
+- type: Tag
+  id: CombatMech
+
+- type: Tag
+  id: ExoMech
+
+- type: Tag
+  id: GygaxPeripheralsControlModule
+
+- type: Tag
+  id: GygaxCentralControlModule
+
+- type: Tag
+  id: GygaxLArm
+
+- type: Tag
+  id: GygaxLLeg
+
+- type: Tag
+  id: GygaxRLeg
+
+- type: Tag
+  id: GygaxRArm
+
+- type: Tag
+  id: DurandPeripheralsControlModule
+
+- type: Tag
+  id: DurandCentralControlModule
+
+- type: Tag
+  id: DurandLArm
+
+- type: Tag
+  id: DurandLLeg
+
+- type: Tag
+  id: DurandRLeg
+
+- type: Tag
+  id: DurandRArm

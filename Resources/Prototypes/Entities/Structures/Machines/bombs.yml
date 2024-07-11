@@ -9,6 +9,7 @@
     - type: WiresVisuals
     - type: InteractionOutline
     - type: UserInterface
+    - type: MesonsNonviewable
       interfaces:
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface

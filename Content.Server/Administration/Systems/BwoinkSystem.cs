@@ -528,7 +528,7 @@ namespace Content.Server.Administration.Systems
         private static string GenerateAHelpMessage(string username, string message, bool admin, string roundTime, GameRunLevel roundState, bool playedSound, bool noReceivers = false)
         {
             var stringbuilder = new StringBuilder();
-
+            
             if (admin)
                 stringbuilder.Append(":outbox_tray:");
             else if (noReceivers)

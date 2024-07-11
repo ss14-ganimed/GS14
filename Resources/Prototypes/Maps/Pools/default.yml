@@ -1,18 +1,15 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
+  - Gemini
   - Atlas
   - Bagel
-  - Box
-  - Cluster
   - Core
-  - Fland
   - Marathon
   - Meta
   - Oasis
   - Omega
   - Origin
-  - Saltern
   - Packed
-  - Reach
-  #- Train
+  - Cluster
+  - Saltern

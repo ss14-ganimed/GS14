@@ -7,6 +7,7 @@ using Content.Server.Stunnable;
 using Content.Shared.Charges.Components;
 using Content.Shared.Charges.Systems;
 using Content.Shared.Eye.Blinding.Components;
+using Content.Shared.Ganimed.Components;
 using Content.Shared.Flash;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
@@ -121,6 +122,11 @@ namespace Content.Server.Flash
 
             if (attempt.Cancelled)
                 return;
+			
+			if (EntityManager.HasComponent<FelinidComponent>(target)) {
+				flashDuration *= 1.7f;
+				slowTo *= 0.8f;
+			}
 
             // don't paralyze, slowdown or convert to rev if the target is immune to flashes
             if (!_statusEffectsSystem.TryAddStatusEffect<FlashedComponent>(target, FlashedKey, TimeSpan.FromSeconds(flashDuration / 1000f), true))

@@ -1,0 +1,60 @@
+#license: CLA
+#copyright: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitUSSP
+  name: USSP jumpsuit
+  description: It looks like something communist.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Uniforms/ussp/ussp_form.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Uniforms/ussp/ussp_form.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon  
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Heat: 0.95        
+        Piercing: 0.95       
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitUSSPCommander
+  name: USSP commander jumpsuit
+  description: It looks like something very communist.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Uniforms/ussp/ussp_form_commander.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Uniforms/ussp/ussp_form_commander.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon  
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Heat: 0.9        
+        Piercing: 0.9   
+        
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretUSSP
+  name: ussp army beret 
+  description: It's military beret, it belongs to the USSP
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Uniforms/ussp/Ussp_beret.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Uniforms/ussp/Ussp_beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon       

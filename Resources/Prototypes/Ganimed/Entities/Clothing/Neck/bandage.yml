@@ -1,0 +1,53 @@
+#license: CLA
+#copiryght: https://github.com/ss14-ganimed/ENT14-Master/blob/master/CLA.txt
+
+- type: entity
+  parent: [ClothingNeckBase, BaseFoldable]
+  id: ClothingClothingNeckBaseFlippable
+  abstract: true
+  components:
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-flip-verb
+    foldVerbText: fold-flip-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+    foldedHeldPrefix: flipped
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_flipped
+      map: ["foldedLayer"]
+      visible: false
+      
+- type: entity
+  parent: ClothingClothingNeckBaseFlippable
+  id: ClothingNeckBaseFlipped
+  suffix: flipped
+  abstract: true
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+  - type: Item
+    heldPrefix: flipped
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+      visible: false
+    - state: icon_flipped
+      map: ["foldedLayer"]
+      visible: true
+      
+- type: entity
+  parent: ClothingNeckBaseFlipped
+  id: ClothingNeckRevBandage
+  name: red bandage
+  description: It's red bandage, you can tie it on your shoulder.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Neck/Bandage/revbandage.rsi

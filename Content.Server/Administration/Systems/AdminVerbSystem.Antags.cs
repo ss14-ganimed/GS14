@@ -23,6 +23,8 @@ public sealed partial class AdminVerbSystem
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultInitialInfectedRule = "Zombie";
+    
+    private const string DefaultHereticRule = "Heretic";
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string DefaultNukeOpRule = "LoneOpsSpawn";
@@ -78,7 +80,21 @@ public sealed partial class AdminVerbSystem
             Impact = LogImpact.High,
             Message = Loc.GetString("admin-verb-make-initial-infected"),
         };
+        
         args.Verbs.Add(initialInfected);
+        Verb heretic = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-heretic"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/Actions/heretic/grasp.png")),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<HereticRuleComponent>(targetPlayer, DefaultHereticRule);
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-make-heretic"),
+        };
+        args.Verbs.Add(heretic);
 
         Verb zombie = new()
         {

@@ -1,5 +1,36 @@
 - type: entity
   parent: BaseMob
+  id: AshForm
+  name: ash form
+  description: Boo!
+  noSpawn: true
+  components:
+  - type: CargoSellBlacklist
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 15
+        mask:
+        - GhostImpassable
+  - type: Examiner
+    skipChecks: true
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4
+    baseWalkSpeed: 4
+  - type: MovementIgnoreGravity
+  - type: Physics
+    bodyType: KinematicController
+    bodyStatus: InAir
+  - type: CanMoveInAir
+  - type: Tag
+    tags:
+    - BypassInteractionRangeChecks
+
+- type: entity
+  parent: BaseMob
   id: MobObserver
   name: observer
   description: Boo!

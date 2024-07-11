@@ -9,10 +9,14 @@
     sprite: Clothing/OuterClothing/Bio/general.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Bio/general.rsi
+  - type: DiseaseProtection
+    protection: 0.5
   - type: Armor
     modifiers:
       coefficients:
         Caustic: 0.5
+  - type: StaminaProtection
+    coefficient: 0.8
 
 - type: entity
   parent: ClothingOuterBioGeneral

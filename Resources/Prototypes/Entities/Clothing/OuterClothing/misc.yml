@@ -82,7 +82,7 @@
   parent: ClothingOuterBase
   id: ClothingOuterCardborg
   name: cardborg costume
-  description: An ordinary cardboard box with holes cut in the sides.
+  description: A handmade suit of cardboard boxes and holes.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Misc/cardborg.rsi
@@ -93,6 +93,19 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterCardborgOriginal
+  name: blocky cardborg costume
+  description: An ordinary cardboard box with holes cut in the sides.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Misc/original_cardborg.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Misc/original_cardborg.rsi
+  - type: TypingIndicatorClothing
+    proto: robot
 
 - type: entity
   parent: ClothingOuterBaseToggleable
@@ -384,3 +397,27 @@
     sprite: Clothing/OuterClothing/Misc/red_racoon.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/red_racoon.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterHereticHood
+  name: heretic hood
+  description: Hood.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Misc/heretic_hood.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Misc/heretic_hood.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: StaminaProtection
+    coefficient: 0.50
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHereticHood

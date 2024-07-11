@@ -1,22 +1,13 @@
-using System.IO;
 using System.Linq;
-using Content.Shared.CCVar;
 using Content.Shared.Decals;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Preferences;
-using Robust.Shared;
-using Robust.Shared.Configuration;
 using Robust.Shared.GameObjects.Components.Localization;
 using Robust.Shared.Network;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager;
-using Robust.Shared.Serialization.Markdown;
-using Robust.Shared.Utility;
-using YamlDotNet.RepresentationModel;
 
 namespace Content.Shared.Humanoid;
 
@@ -31,10 +22,8 @@ namespace Content.Shared.Humanoid;
 /// </summary>
 public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly ISerializationManager _serManager = default!;
     [Dependency] private readonly MarkingManager _markingManager = default!;
 
     [ValidatePrototypeId<SpeciesPrototype>]
@@ -46,37 +35,6 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         SubscribeLocalEvent<HumanoidAppearanceComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<HumanoidAppearanceComponent, ExaminedEvent>(OnExamined);
-    }
-
-    public DataNode ToDataNode(HumanoidCharacterProfile profile)
-    {
-        var export = new HumanoidProfileExport()
-        {
-            ForkId = _cfgManager.GetCVar(CVars.BuildForkId),
-            Profile = profile,
-        };
-
-        var dataNode = _serManager.WriteValue(export, alwaysWrite: true, notNullableOverride: true);
-        return dataNode;
-    }
-
-    public HumanoidCharacterProfile FromStream(Stream stream, ICommonSession session)
-    {
-        using var reader = new StreamReader(stream, EncodingHelpers.UTF8);
-        var yamlStream = new YamlStream();
-        yamlStream.Load(reader);
-
-        var root = yamlStream.Documents[0].RootNode;
-        var export = _serManager.Read<HumanoidProfileExport>(root.ToDataNode(), notNullableOverride: true);
-
-        /*
-         * Add custom handling here for forks / version numbers if you care.
-         */
-
-        var profile = export.Profile;
-        var collection = IoCManager.Instance;
-        profile.EnsureValid(session, collection!);
-        return profile;
     }
 
     private void OnInit(EntityUid uid, HumanoidAppearanceComponent humanoid, ComponentInit args)
@@ -313,7 +271,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     {
         if (profile == null)
             return;
-
+            
         if (!Resolve(uid, ref humanoid))
         {
             return;
@@ -322,6 +280,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SetSpecies(uid, profile.Species, false, humanoid);
         SetSex(uid, profile.Sex, false, humanoid);
         humanoid.EyeColor = profile.Appearance.EyeColor;
+        humanoid.SpeakerColor = profile.Appearance.SpeakerColor;
 
         SetSkinColor(uid, profile.Appearance.SkinColor, false);
 
@@ -372,6 +331,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
                 prototype,
                 profile.Appearance.SkinColor,
                 profile.Appearance.EyeColor,
+                profile.Appearance.SpeakerColor,
                 humanoid.MarkingSet
             );
             AddMarking(uid, marking.MarkingId, markingColors, false);
@@ -386,6 +346,11 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         humanoid.Age = profile.Age;
+		
+        // const string paletteId = "Material";
+        // var colors = _prototypeManager.Index<ColorPalettePrototype>(paletteId).Colors.Values.ToArray();
+        // var colorIdx = Math.Abs(profile.Name.GetHashCode() % colors.Length);
+        // humanoid.SpeakerColor = colors[colorIdx];
 
         Dirty(uid, humanoid);
     }
@@ -429,7 +394,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         {
             return;
         }
-        humanoid.MarkingSet.EnsureDefault(humanoid.SkinColor, humanoid.EyeColor, _markingManager);
+        humanoid.MarkingSet.EnsureDefault(humanoid.SkinColor, humanoid.EyeColor, humanoid.SpeakerColor, _markingManager);
     }
 
     /// <summary>

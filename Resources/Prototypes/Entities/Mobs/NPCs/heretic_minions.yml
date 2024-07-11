@@ -1,0 +1,89 @@
+- type: entity
+  parent: [ SimpleMobBase, MobCombat ]
+  id: BaseMobHeretic
+  name: aberrant flesh
+  description: A shambling mass of flesh, animated through anomalous energy.
+  abstract: true
+  components:
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - Heretic
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/heretic.rsi
+  - type: MovementAlwaysTouching
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 2.5
+  - type: MobState
+    allowedStates:
+    - Alive
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 100
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 100
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Piercing
+        damage: 100
+      behaviors:
+      - !type:GibBehavior { }
+  - type: Stamina
+    critThreshold: 50
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 8
+  - type: ReplacementAccent
+    accent: genericAggressive
+
+- type: entity
+  parent: BaseMobHeretic
+  id: MobHereticStalker
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: stalker
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: stalker
+      Critical:
+        Base: stalker
+      Dead:
+        Base: stalker
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 8

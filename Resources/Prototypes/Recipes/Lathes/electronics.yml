@@ -530,6 +530,46 @@
     Gold: 100
 
 - type: latheRecipe
+  id: GygaxCentralElectronics
+  result: GygaxCentralElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 200
+
+- type: latheRecipe
+  id: GygaxPeripheralsElectronics
+  result: GygaxPeripheralsElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 200
+
+- type: latheRecipe
+  id: DurandCentralElectronics
+  result: DurandCentralElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 600
+    Gold: 200
+
+- type: latheRecipe
+  id: DurandPeripheralsElectronics
+  result: DurandPeripheralsElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 600
+    Gold: 200
+
+- type: latheRecipe
   id: HonkerCentralElectronics
   result: HonkerCentralElectronics
   category: Circuitry
@@ -975,3 +1015,13 @@
   materials:
     Steel: 100
     Glass: 500
+     
+- type: latheRecipe
+  id: MachineBluespaceHarvesterCircuitboard
+  result: MachineBluespaceHarvesterCircuitboard
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 300     
+    Silver: 300

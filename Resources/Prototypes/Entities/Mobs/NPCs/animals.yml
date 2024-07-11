@@ -1242,9 +1242,6 @@
   - type: NpcFactionMember
     factions:
       - Passive
-  - type: HTN
-    rootTask:
-      task: SimpleHostileCompound
   - type: IdExaminable
   - type: Tag
     tags:

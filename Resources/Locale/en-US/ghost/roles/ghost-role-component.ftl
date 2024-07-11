@@ -201,21 +201,6 @@ ghost-role-information-syndicate-monkey-reinforcement-name = Syndicate Monkey Ag
 ghost-role-information-syndicate-monkey-reinforcement-description = Someone needs reinforcements. You, a trained monkey, will help them.
 ghost-role-information-syndicate-monkey-reinforcement-rules = You are a [color=red][bold]Team Antagonist[/bold][/color] with the agent who summoned you.
 
-ghost-role-information-lost-cargo-technical-name = Lost Cargo Technician
-ghost-role-information-lost-cargo-technical-description = Something went wrong and your cargo shuttle with the goods was beamed into the sector to another station.
-
-ghost-role-information-clown-troupe-name = Space Clown
-ghost-role-information-clown-troupe-description = You and your troupe have come to cheer up this station with your best jokes. Honk!
-
-ghost-role-information-traveling-chef-name = Traveling Chef
-ghost-role-information-traveling-chef-description = You are a chef on a traveling shuttle of exotic cuisine. Delight the station with delicious food!
-
-ghost-role-information-disaster-victim-name = Disaster Victim
-ghost-role-information-disaster-victim-description = You were rescued in an escape pod from another station that suffered a terrible fate. Perhaps you will be found and rescued.
-
-ghost-role-information-syndie-disaster-victim-name = Syndie Disaster Victim
-ghost-role-information-syndie-disaster-victim-description = You're a regular passenger from a syndicate station. Unfortunately, an evacuation pod has thrown you into an enemy sector.....
-
 ghost-role-information-syndicate-kobold-reinforcement-name = Syndicate Kobold Agent
 ghost-role-information-syndicate-kobold-reinforcement-description = Someone needs reinforcements. You, a trained kobold, will help them.
 ghost-role-information-syndicate-kobold-reinforcement-rules = You are a [color=red][bold]Team Antagonist[/bold][/color] with the agent who summoned you.

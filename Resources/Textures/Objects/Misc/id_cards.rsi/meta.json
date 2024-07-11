@@ -80,6 +80,9 @@
       "name": "idcook"
     },
     {
+      "name": "idbridgeofficer"
+    },
+    {
       "name": "idcurator"
     },
     {
@@ -182,6 +185,9 @@
       "name": "pirate"
     },
     {
+      "name": "red"
+    },	
+    {
       "name": "prisoner_001"
     },
     {
@@ -224,6 +230,24 @@
       "name": "idseniorofficer"
     },
     {
+      "name": "idiaa"
+    },
+    {
+      "name": "idcoroner"
+    },
+    {
+      "name": "idtsf"
+    },
+    {
+      "name": "idblueshield"
+    },
+    {
+      "name": "idusspofficer"
+    },
+    {
+      "name": "idusspsoldier"
+    },		
+    {
       "name": "gold-inhand-left",
       "directions": 4
     },
@@ -255,6 +279,14 @@
       "name": "orange-inhand-right",
       "directions": 4
     },
+    {
+      "name": "red-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "red-inhand-right",
+      "directions": 4
+    },		
     {
       "name": "blue-inhand-left",
       "directions": 4

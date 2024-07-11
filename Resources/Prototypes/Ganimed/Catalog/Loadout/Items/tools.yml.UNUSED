@@ -1,0 +1,270 @@
+- type: loadout
+  id: LoadoutItemsCrowbarRed
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: CrowbarRed
+
+- type: loadout
+  id: LoadoutItemsToolboxEmergencyFilled
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - StationEngineer
+    - SeniorEngineer
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+	- Roboticist
+  prototype: ToolboxEmergencyFilled
+
+- type: loadout
+  id: LoadoutItemsAcousticGuitarInstrument
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: AcousticGuitarInstrument
+
+- type: loadout
+  id: LoadoutItemsHandheldHealthAnalyzer
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - Psychologist
+    - MedicalIntern
+    - MedicalDoctor
+    - SeniorPhysician
+	- Coroner
+	- Brigmedic
+  prototype: ToolboxEmergencyFilled
+
+- type: loadout
+  id: LoadoutItemsMedkitFilled
+  category: loadout-category-items
+  cost: 5
+  exclusive: false
+  prototype: MedkitFilled
+
+- type: loadout
+  id: LoadoutItemsHolofanProjector
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - StationEngineer
+    - SeniorEngineer
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+  prototype: HolofanProjector
+
+- type: loadout
+  id: LoadoutItemsGasAnalyzer
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  whitelistJobs:
+    - StationEngineer
+    - SeniorEngineer
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+  prototype: GasAnalyzer
+
+- type: loadout
+  id: LoadoutItemsWrench
+  category: loadout-category-items
+  cost: 1
+  exclusive: false
+  prototype: Wrench
+
+- type: loadout
+  id: LoadoutItemsYellowOxygenTankFilled
+  category: loadout-category-items
+  cost: 5
+  exclusive: false
+  prototype: YellowOxygenTankFilled
+
+- type: loadout
+  id: LoadoutItemsForensicScanner
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  whitelistJobs:
+    - Detective
+	- HeadOfSecurity
+	- Warden
+	- SeniorOfficer
+	- BlueShield
+  prototype: ForensicScanner
+
+- type: loadout
+  id: LoadoutItemsLightReplacer
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - Janitor
+	- ServiceWorker
+	- TechnicalAssistant
+	- StationEngineer
+	- SeniorEngineer
+	- AtmosphericTechnician
+	- ChiefEngineer
+	- Roboticist
+  prototype: ForensicScanner
+
+- type: loadout
+  id: LoadoutItemsLantern
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: Lantern
+
+- type: loadout
+  id: LoadoutItemsMultitool
+  category: loadout-category-items
+  cost: 6
+  exclusive: false
+  prototype: Multitool
+
+- type: loadout
+  id: LoadoutItemsHandcuffs
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - SeniorOfficer
+	- BlueShield
+	- Brigmedic
+  prototype: Handcuffs
+
+- type: loadout
+  id: LoadoutItemsFireExtinguisher
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  prototype: FireExtinguisher
+
+- type: loadout
+  id: LoadoutItemsAppraisalTool
+  category: loadout-category-items
+  cost: 2
+  exclusive: false
+  prototype: AppraisalTool
+
+- type: loadout
+  id: LoadoutItemsRadioHandheld
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: RadioHandheld
+
+- type: loadout
+  id: LoadoutItemsHandheldCrewMonitor
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - Psychologist
+    - MedicalIntern
+    - MedicalDoctor
+    - SeniorPhysician
+	- Coroner
+	- Brigmedic
+	- BlueShield
+  prototype: HandheldCrewMonitor
+
+- type: loadout
+  id: LoadoutItemsCyberPen
+  category: loadout-category-items
+  cost: 7
+  exclusive: false
+  prototype: CyberPen
+
+- type: loadout
+  id: LoadoutItemsHandheldStationMap
+  category: loadout-category-items
+  cost: 7
+  exclusive: false
+  prototype: HandheldStationMap
+
+- type: loadout
+  id: LoadoutItemsHandLabeler
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  prototype: HandLabeler
+
+- type: loadout
+  id: LoadoutItemsSaxophoneInstrument
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - Musician
+  prototype: SaxophoneInstrument
+
+- type: loadout
+  id: LoadoutItemsAnomalyScanner
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - ResearchDirector
+    - Scientist
+    - ResearchAssistant
+    - SeniorResearcher
+	- Roboticist
+  prototype: AnomalyScanner
+
+- type: loadout
+  id: LoadoutItemsGeigerCounter
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  whitelistJobs:
+    - TechnicalAssistant
+    - StationEngineer
+    - AtmosphericTechnician
+    - SeniorEngineer
+    - ChiefEngineer
+    - ResearchDirector
+    - ResearchAssistant
+    - Scientist
+    - SeniorResearcher
+	- Roboticist
+  prototype: GeigerCounter
+
+- type: loadout
+  id: LoadoutItemsMopItem
+  category: loadout-category-items
+  cost: 3
+  exclusive: false
+  prototype: MopItem
+
+- type: loadout
+  id: LoadoutItemsBlackFountainPen
+  category: loadout-category-items
+  cost: 4
+  exclusive: false
+  prototype: BlackFountainPen
+  whitelistJobs:
+    - IAA
+	- Lawyer
+	- Captain
+	- HeadOfSecurity
+	- HeadOfPersonnel

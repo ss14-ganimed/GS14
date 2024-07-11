@@ -245,7 +245,7 @@ namespace Content.Server.GameTicking
                 HumanoidCharacterProfile profile;
                 if (_prefsManager.TryGetCachedPreferences(userId, out var preferences))
                 {
-                    profile = (HumanoidCharacterProfile) preferences.SelectedCharacter;
+                    profile = (HumanoidCharacterProfile) preferences.GetProfile(preferences.SelectedCharacterIndex);
                 }
                 else
                 {
@@ -293,6 +293,9 @@ namespace Content.Server.GameTicking
             AnnounceRound();
             UpdateInfoText();
             SendRoundStartedDiscordMessage();
+			
+			var roundStartedEvent = new RoundStartedEvent(RoundId);
+			RaiseLocalEvent(roundStartedEvent);
 
 #if EXCEPTION_TOLERANCE
             }
@@ -385,6 +388,9 @@ namespace Content.Server.GameTicking
                     contentPlayerData = playerData.ContentData();
                 }
                 // Finish
+				
+				//if (mind.Incognito)
+				//	continue;
 
                 var antag = _roles.MindIsAntagonist(mindId);
 
@@ -406,7 +412,7 @@ namespace Content.Server.GameTicking
                 {
                     // Note that contentPlayerData?.Name sticks around after the player is disconnected.
                     // This is as opposed to ply?.Name which doesn't.
-                    PlayerOOCName = contentPlayerData?.Name ?? "(IMPOSSIBLE: REGISTERED MIND WITH NO OWNER)",
+                    PlayerOOCName = mind.Incognito ? Loc.GetString("game-ticker-unknown-role") : contentPlayerData?.Name ?? Loc.GetString("game-ticker-unknown-role"),
                     // Character name takes precedence over current entity name
                     PlayerICName = playerIcName,
                     PlayerGuid = userId,

@@ -51,3 +51,32 @@
   # also limits the crew's use
   - type: TimedDespawn
     lifetime: 30
+
+- type: entity
+  parent: ThrowingStar
+  id: ThrowingStarHeretic
+  name: heretic throwing star
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Throwable/throwing_star.rsi
+    layers:
+    - state: cold
+      map: ["base"]
+  - type: TimedDespawn
+    lifetime: 20
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 5
+        reagents:
+        - ReagentId: MuteToxin
+          Quantity: 5
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionInjectOnEmbed
+    transferAmount: 5
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 5

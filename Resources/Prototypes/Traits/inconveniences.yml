@@ -1,0 +1,48 @@
+﻿- type: trait
+  id: LightweightDrunk
+  name: trait-lightweight-name
+  description: trait-lightweight-desc
+  components:
+    - type: LightweightDrunk
+      boozeStrengthMultiplier: 2
+
+- type: trait
+  id: Monochromatic
+  name: trait-monochromatic-name
+  description: trait-monochromatic-desc
+  components:
+    - type: Monochromacy
+  blacklist:
+    components:
+      - PermanentBlindness
+      - ChromaticAberration
+
+- type: trait
+  id: ChromaticAberration
+  name: trait-chromatic-aberration-name
+  description: trait-chromatic-aberration-desc
+  components:
+    - type: ChromaticAberration
+      setPreset: "Pick"
+  blacklist:
+    components:
+      - Monochromacy
+      - PermanentBlindness
+
+- type: trait
+  id: SocialAnxiety
+  name: trait-socialanxiety-name
+  description: trait-socialanxiety-desc
+  components:
+    - type: StutteringAccent
+      matchRandomProb: 0.1
+      fourRandomProb: 0
+      threeRandomProb: 0
+      cutRandomProb: 0
+
+- type: trait
+  id: Incognito
+  name: trait-incognito-name
+  description: trait-incognito-desc
+  components:
+    - type: SetIncognito

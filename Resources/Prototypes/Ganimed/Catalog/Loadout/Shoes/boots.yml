@@ -1,0 +1,149 @@
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsCombat
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - Captain
+    - BlueShield
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingShoesBootsCombat
+
+- type: loadout
+  id: LoadoutShoesClothingShoesGaloshes
+  category: loadout-category-shoes
+  cost: 4
+  exclusive: true
+  prototype: ClothingShoesGaloshes
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsMerc
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - SalvageSpecialist
+    - Quartermaster
+    - BlueShield
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingShoesBootsMerc
+
+- type: loadout
+  id: LoadoutShoesClothingShoesSwat
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingShoesSwat
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsSalvage
+  category: loadout-category-shoes
+  cost: 2
+  exclusive: true
+  whitelistJobs:
+    - SalvageSpecialist
+    - Quartermaster
+    - CargoTechnician
+    - Captain
+    - AtmosphericTechnician
+  prototype: ClothingShoesBootsSalvage
+
+- type: loadout
+  id: LoadoutShoesClothingShoesLeather
+  category: loadout-category-shoes
+  cost: 3
+  exclusive: true
+  prototype: ClothingShoesLeather
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsMag
+  category: loadout-category-shoes
+  cost: 5
+  exclusive: true
+  whitelistJobs:
+    - SalvageSpecialist
+    - Quartermaster
+    - ChiefEngineer
+    - SeniorEngineer
+    - StationEngineer
+    - AtmosphericTechnician
+    - ResearchDirector
+    - SeniorResearcher
+    - Roboticist
+  prototype: ClothingShoesBootsMag
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsJackSec
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - Captain
+    - SeniorOfficer
+    - HeadOfPersonnel
+    - BlueShield
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingShoesBootsJack
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsJackSecFilled
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - SecurityCadet
+    - SecurityOfficer
+    - Warden
+    - Detective
+    - HeadOfSecurity
+    - SeniorOfficer
+    - BlueShield
+    - Brigmedic
+    - BridgeOfficer
+  prototype: ClothingShoesBootsJackSecFilled
+
+- type: loadout
+  id: LoadoutShoesClothingShoesBootsWork
+  category: loadout-category-shoes
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - ChiefEngineer
+    - SeniorEngineer
+    - StationEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
+  prototype: ClothingShoesBootsWork

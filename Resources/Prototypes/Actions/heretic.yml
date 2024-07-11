@@ -1,0 +1,166 @@
+- type: entity
+  id: ActionHereticShop
+  name: Shop
+  description: Opens the ability shop.
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/shop.png
+    itemIconStyle: NoItem
+    event: !type:HereticShopActionEvent
+
+- type: entity
+  id: ActionMansusGrasp
+  name: Mansus Grasp
+  description: Mansus Grasp.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon: Interface/Actions/heretic/grasp.png
+    event: !type:MansusGraspEvent
+    useDelay: 5
+    canTargetSelf: false
+    range: 6
+
+- type: entity
+  id: ActionColdGrasp
+  name: Cold Grasp
+  description: Cold Grasp.
+  components:
+  - type: EntityTargetAction
+    useDelay: 30
+    range: 6
+    itemIconStyle: NoItem
+    icon: Interface/Actions/heretic/cold_grasp.png
+    event: !type:ColdGraspEvent
+    canTargetSelf: false
+
+- type: entity
+  id: ActionAbyssPhase
+  name: Abyss Phase
+  description: Teleport to the clicked location.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 15
+    range: 6
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/blink.ogg
+    itemIconStyle: NoItem
+    checkCanAccess: false
+    repeat: false
+    icon: Interface/Actions/heretic/phase.png
+    event: !type:TeleportSpellEvent
+
+- type: entity
+  id: ActionVulkanic
+  name: Volcano Blast
+  description: Fires an explosive fireball towards the clicked location.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 30
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    raiseOnUser: true
+    range: 60
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/fireball.ogg
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: fireball
+    event: !type:ProjectileSpellEvent
+      prototype: ProjectileDragonsBreath
+
+- type: entity
+  id: ActionVoidBlast
+  name: Void Blast
+  description: Void Blast.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 30
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    raiseOnUser: true
+    range: 60
+    icon: Interface/Actions/heretic/voidblast.png
+    event: !type:ProjectileSpellEvent
+      prototype: VoidBolt  
+
+- type: entity
+  id: ActionColdBlast
+  name: Cold Blast
+  description: Cold Blast.
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    useDelay: 60
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    raiseOnUser: true
+    range: 60
+    icon:
+      sprite: Structures/Specific/Anomalies/ice_anom.rsi
+      state: bullet
+    event: !type:ProjectileSpellEvent
+      prototype: ProjectileIcicle
+
+- type: entity
+  id: ActionSpawnStalker
+  name: Summon Stalker
+  description: This spell summons three Stalker to your aid! May or may not turn on user.
+  components:
+  - type: WorldTargetAction
+    useDelay: 120
+    range: 4
+    itemIconStyle: BigAction
+    icon: Interface/Actions/heretic/stalker.png
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: MobHereticStalker
+        amount: 1
+      offset: 0, 1
+
+- type: entity
+  id: ActionAshForm
+  name: Ashen Shift
+  description: Ashen Shift.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 60
+    event: !type:PolymorphActionEvent
+      protoId: HereticAshForm
+    itemIconStyle: NoItem
+    icon: Interface/Actions/heretic/ash.png
+
+- type: entity
+  id: ActionCreateColdThrowingStar
+  name: Create throwing star
+  description: Ashen Shift.
+  components:
+  - type: InstantAction
+    useDelay: 25
+    icon:
+      sprite: Objects/Weapons/Throwable/throwing_star.rsi
+      state: cold
+    itemIconStyle: NoItem
+    priority: -10
+    event: !type:CreateColdThrowingStarEvent {}
+
+- type: entity
+  id: ActionForceCrystals
+  name: Forcecrystalls
+  description: Creates a magical barrier.
+  components:
+  - type: InstantAction
+    useDelay: 30
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+    icon:
+      sprite: Structures/Decoration/crystal.rsi
+      state: crystal_heretic
+    event: !type:InstantSpawnSpellEvent
+      prototype: WallCrystall
+      posData: !type:TargetInFront

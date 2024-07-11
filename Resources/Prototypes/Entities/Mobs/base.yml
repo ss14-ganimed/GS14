@@ -46,6 +46,8 @@
   - type: RequireProjectileTarget
     active: False
 
+  - type: MesonsNonviewable
+  
 # Used for mobs that have health and can take damage.
 - type: entity
   save: false
@@ -92,6 +94,7 @@
       - ActionCritFakeDeath
       - ActionCritLastWords
   - type: Deathgasp
+  - type: XenoFood
   - type: HealthExaminable
     examinableTypes:
     - Blunt

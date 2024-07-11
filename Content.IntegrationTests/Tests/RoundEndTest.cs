@@ -12,7 +12,7 @@ namespace Content.IntegrationTests.Tests
     {
         private sealed class RoundEndTestSystem : EntitySystem
         {
-            public int RoundCount;
+            public int Count;
 
             public override void Initialize()
             {
@@ -22,7 +22,7 @@ namespace Content.IntegrationTests.Tests
 
             private void OnRoundEnd(RoundEndSystemChangedEvent ev)
             {
-                Interlocked.Increment(ref RoundCount);
+                Interlocked.Increment(ref Count);
             }
         }
 
@@ -43,7 +43,7 @@ namespace Content.IntegrationTests.Tests
             var ticker = sysManager.GetEntitySystem<GameTicker>();
             var roundEndSystem = sysManager.GetEntitySystem<RoundEndSystem>();
             var sys = server.System<RoundEndTestSystem>();
-            sys.RoundCount = 0;
+            sys.Count = 0;
 
             await server.WaitAssertion(() =>
             {
@@ -128,8 +128,8 @@ namespace Content.IntegrationTests.Tests
             async Task WaitForEvent()
             {
                 var timeout = Task.Delay(TimeSpan.FromSeconds(10));
-                var currentCount = Thread.VolatileRead(ref sys.RoundCount);
-                while (currentCount == Thread.VolatileRead(ref sys.RoundCount) && !timeout.IsCompleted)
+                var currentCount = Thread.VolatileRead(ref sys.Count);
+                while (currentCount == Thread.VolatileRead(ref sys.Count) && !timeout.IsCompleted)
                 {
                     await pair.RunTicksSync(5);
                 }

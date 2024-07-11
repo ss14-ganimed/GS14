@@ -271,6 +271,9 @@
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
+      - ClothingEyesNightVision
+      - ClothingEyesNightVisionMeson
+      - ClothingEyesNightVisionScience
       - PowerDrill
       - MiningDrill
       - AnomalyScanner
@@ -333,6 +336,11 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - EnergyDomeDirectionalTurtle
+      - ClothingEyesGlassesMesonDiagnostic
+      - ClothingEyesGlassesScienceMeson
+      - ClothingEyesGlassesTray
+      - ClothingEyesGlassesMesonScanner
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - BoxBeanbag
@@ -374,6 +382,10 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - WeaponEnergySniperRifle
+      - WeaponImmolator
+      - WeaponIonRifleGun
+      - WeaponEnergyGun
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -469,6 +481,10 @@
       - CargoTelepadMachineCircuitboard
       - RipleyCentralElectronics
       - RipleyPeripheralsElectronics
+      - GygaxCentralElectronics
+      - GygaxPeripheralsElectronics
+      - DurandCentralElectronics
+      - DurandPeripheralsElectronics
       - HonkerCentralElectronics
       - HonkerPeripheralsElectronics
       - HonkerTargetingElectronics
@@ -500,6 +516,7 @@
       - MassMediaCircuitboard
       - ReagentGrinderIndustrialMachineCircuitboard
       - JukeboxCircuitBoard
+      - MachineBluespaceHarvesterCircuitboard
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ShuttleGunDusterCircuitboard
@@ -630,6 +647,22 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+    - GygaxHarness
+    - GygaxLArm
+    - GygaxRArm
+    - GygaxLLeg
+    - GygaxRLeg
+    - DurandHarness
+    - DurandLArm
+    - DurandRArm
+    - DurandLLeg
+    - DurandRLeg
+    - MechLaserWeapon
+    - MechScattershotWeapon
+    - MechSolarisLaserWeapon
+    - MechHadesWeapon
+    - MechMssileWeapon
+    - MechTeslaWeapon
   - type: MaterialStorage
     whitelist:
       tags:
@@ -753,6 +786,7 @@
       - BoxShotgunIncendiary
       - BoxShotgunUranium
       - BoxShellTranquilizer
+      - ClothingEyesGlassesSecurity
       - ExplosivePayload
       - FlashPayload
       - GrenadeBlast
@@ -798,6 +832,11 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - ClothingEyesNightVisionSecurity
+      - WeaponEnergySniperRifle
+      - WeaponImmolator
+      - WeaponIonRifleGun
+      - WeaponEnergyGun
   - type: MaterialStorage
     whitelist:
       tags:
@@ -918,6 +957,7 @@
       - ClothingEyesGlassesChemical
       - WhiteCane
     dynamicRecipes:
+      - ClothingEyesNightVisionMedicine
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
@@ -1060,6 +1100,7 @@
       - ClothingNeckMantleCMO
       - ClothingNeckMantleHOP
       - ClothingNeckMantleHOS
+      - ClothingNeckMantleHOSShoulder # Corvax-Resprite: Old mantle
       - ClothingNeckMantleRD
       - ClothingNeckMantleQM
       - ClothingOuterWinterMusician
@@ -1158,6 +1199,7 @@
       board: OreProcessorMachineCircuitboard
     - type: MaterialStorage
       ignoreColor: true
+      canEjectStoredMaterials: false
       whitelist:
         tags:
           - Ore
