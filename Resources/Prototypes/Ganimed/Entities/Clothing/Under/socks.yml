@@ -151,3 +151,115 @@
       socks:
         - state: equipped-FEET
           color: "#EBE216"
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsBee
+  name: bee stockings
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/bee.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/bee.rsii
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET          
+        
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsCentCom
+  name: Centcom stockings
+  description: Forces your feet to act according to standard operating procedures.
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/Centcom.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/Centcom.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsDark
+  name: Dark stockings
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/dark.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/dark.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET         
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsFishnets
+  name: Fishnets stockings
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/fishnets.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/fishnets.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET           
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsHOS
+  name: HOS stockings
+  description: Turns you into a femboy...
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/safno.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/safno.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsWhite
+  name: White stockings
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/white.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/white.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderlongSocksDark
+  name: Dark long socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/longSocks/Dark.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/Dark.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderlongSocksWhite
+  name: White long socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/longSocks/White.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/White.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET           
