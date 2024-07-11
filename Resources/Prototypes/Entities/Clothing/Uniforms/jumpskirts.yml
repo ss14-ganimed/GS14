@@ -887,10 +887,6 @@
     sprite: Clothing/Uniforms/Jumpskirt/musician.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/musician.rsi
-    - type: Sprite
-      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_official.rsi
-    - type: Clothing
-      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_official.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase

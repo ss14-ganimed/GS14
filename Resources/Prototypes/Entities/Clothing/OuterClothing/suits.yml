@@ -326,6 +326,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCarp
     
+- type: entity
   parent: ClothingOuterBase
   id: ClothingOuterAerostaticBomberJacket
   name: aerostatic bomber jacket
