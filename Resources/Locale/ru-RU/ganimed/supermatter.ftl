@@ -1,15 +1,13 @@
-supermatter-examine-integrity = Целостность {$integrity}%
+supermatter-examine-integrity =
+    Целостность [color=yellow]{$integrity}%[/color].
 
-supermatter-announcement-sender = Система оповещений суперматерии
+supermatter-announcer = Система оповещений Суперматерии
 
-supermatter-announcement-safe =
-    Гиперструктура кристалла возвращается к безопасным рабочим параметрам. Система защиты от сбоев отключена.
-
-supermatter-announcement-danger =
+supermatter-warning =
     Внимание! Расслоение кристалла суперматерии: {$integrity}%
 
-supermatter-announcement-critical =
-    ВНИМАНИЕ! Уровень расслоения кристалла суперматерии достиг критического уровня! Целостность кристалла: {$integrity}%!!
+supermatter-emergency =
+    ОПАСНОСТЬ! Уровень расслоения кристалла суперматерии достиг критического уровня! Целостность кристалла: {$integrity}%!!
 
 supermatter-announcement-cc-tamper =
     Наша автоматическая аварийная система обнаружила, что структурная целостность кристалла суперматерии была нарушена в результате воздействия внешней силы.
@@ -18,20 +16,23 @@ supermatter-announcement-cc-tamper =
 supermatter-announcement-delam =
     НЕИЗБЕЖНОЕ РАССЛОЕНИЕ КРИСТАЛЛА. Целостность кристалла из сверхматерии достигла критической точки!!
 
-supermatter-announcement-delam-countdown =
+supermatter-seconds-before-delam =
     Расчетное время до расслаивания: {$seconds} секунд.
 
-supermatter-announcement-delam-explosion =
+supermatter-delam-explosion =
     Задействуем поле дестабилизационных щитов.
 
-supermatter-announcement-delam-singuloose =
+supermatter-delam-overmass =
     Формирование сингулярности неизбежно.
 
-supermatter-announcement-delam-tesla =
+supermatter-delam-tesla =
     Неизбежен выброс сжатой энергии.
 
-supermatter-announcement-delam-cascade =
+supermatter-delam-cascade =
     Превышены пределы частоты гармоник. Не удалось задействовать поле дестабилизации в случае аварии.
+
+supermatter-delam-cancel =
+    Гиперструктура кристалла вернулась к своему безопасному значению. Расслоение предотвращенно. Целостность: {$integrity}%.
 
 supermatter-tamper-begin = Вы начинаете осторожно откалывать кусочек от кристалла сверхматерии...
 
