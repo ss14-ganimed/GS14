@@ -132,6 +132,28 @@
     - Chef
 
 - type: entity
+  id: BookChefGaming
+  parent: BaseItem
+  name: How To Cook For Forty Spacemen
+  description: A book about cooking written by a space chef.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#e22541"
+    - state: decor_wingette
+    - state: icon_apple
+  - type: Tag
+    tags:
+    - Book
+  - type: GuideHelp
+    openOnActivation: true
+    guides:
+    - Chef
+
+- type: entity
   id: BookLeafLoversSecret
   parent: BaseItem
   name: leaf lover's secret
