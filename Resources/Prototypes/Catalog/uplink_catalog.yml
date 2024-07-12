@@ -1028,7 +1028,7 @@
   icon: { sprite: /Textures/Clothing/Back/Backpacks/backpack.rsi, state: icon }
   productEntity: StorageImplanter
   cost:
-    Telecrystal: 8
+    Telecrystal: 13
   categories:
     - UplinkImplants
   conditions:

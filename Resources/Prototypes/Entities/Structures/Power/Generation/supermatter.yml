@@ -6,6 +6,7 @@
     mode: SnapgridCenter
   components:
     - type: Supermatter
+    - type: SupermatterImmune
     - type: Transform
       anchored: true
       noRot: true
