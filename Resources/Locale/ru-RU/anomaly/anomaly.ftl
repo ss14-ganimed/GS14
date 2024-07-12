@@ -90,3 +90,4 @@ anomaly-behavior-inconstancy = [color=crimson]Обнаружено непост�
 anomaly-behavior-fast = [color=crimson]Частота пульсации сильно увеличена.[/color]
 anomaly-behavior-strenght = [color=crimson]Сила пульсации значительно увеличена.[/color]
 anomaly-behavior-moving = [color=crimson]Обнаружена нестабильность координат.[/color]
+anomaly-behavior-invisibility = Обнаружено искажение светового потока.
