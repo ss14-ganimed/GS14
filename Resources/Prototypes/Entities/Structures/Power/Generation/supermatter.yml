@@ -60,3 +60,8 @@
       totalIntensity: 10000.0
       intensitySlope: 4
       maxIntensity: 1000
+    - type: GuideHelp
+      guides: [ Supermatter, Power ]
+    - type: WarpPoint
+      follow: true
+      location: supermatter
