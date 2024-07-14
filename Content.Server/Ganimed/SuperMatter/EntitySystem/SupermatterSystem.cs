@@ -1,104 +1,78 @@
-using System.Linq;
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.Containers;
-using Robust.Shared.Physics;
-using Robust.Shared.Physics.Events;
-using Robust.Shared.Timing;
-using Robust.Server.GameObjects;
-using Content.Shared.Atmos;
-using Content.Shared.Interaction;
-using Content.Shared.Projectiles;
-using Content.Shared.Tag;
-using Content.Shared.Mobs.Components;
-using Content.Shared.Radiation.Components;
-using Content.Server.Audio;
 using Content.Server.Atmos.EntitySystems;
-using Content.Server.Chat.Systems;
-using Content.Server.Explosion.EntitySystems;
-using Content.Shared.Supermatter.Components;
-using Content.Shared.Supermatter.Systems;
+using Content.Server.Supermatter.Components;
+using Content.Shared.Atmos;
 using Content.Server.Lightning;
-using Content.Server.AlertLevel;
+using Content.Shared.Radiation.Components;
+using Content.Shared.Interaction;
+using Content.Server.Audio;
+using Content.Shared.Audio;
 using Content.Server.Station.Systems;
-using System.Text;
-using Content.Server.Kitchen.Components;
+using Content.Server.Station.Components;
+using Content.Server.Anomaly;
+using Content.Shared.Damage;
+using Content.Shared.Tag;
 using Content.Shared.DoAfter;
+using Content.Server.Popups;
+using Content.Shared.Supermatter;
+using Content.Server.Administration.Logs;
+using Robust.Shared.Physics.Events;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Random;
+using Content.Shared.Database;
+using Content.Server.Chat.Systems;
+using System.Text;
+using Content.Server.AlertLevel;
 using Content.Shared.Examine;
 using Content.Server.DoAfter;
-using Content.Server.Popups;
+using Content.Server.Explosion.EntitySystems;
 
-namespace Content.Server.Supermatter.Systems;
+namespace Content.Server.Supermatter.EntitySystems;
 
-public sealed class SupermatterSystem : SharedSupermatterSystem
+public sealed class SupermatterSystem : EntitySystem
 {
-    [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly ExplosionSystem _explosion = default!;
-    [Dependency] private readonly TransformSystem _xform = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly AmbientSoundSystem _ambient = default!;
-    [Dependency] private readonly TagSystem _tagSystem = default!;
+    [Dependency] private readonly AtmosphereSystem _atmos = default!;
+    [Dependency] private readonly SharedAudioSystem _sound = default!;
     [Dependency] private readonly LightningSystem _lightning = default!;
+    [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly AlertLevelSystem _alert = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly DoAfterSystem _doAfter = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
-
-    private DelamType _delamType = DelamType.Explosion;
+    [Dependency] private readonly AmbientSoundSystem _ambience = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private readonly AnomalySystem _anomaly = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly DoAfterSystem _doAfter = default!;
+    [Dependency] private readonly ExplosionSystem _explosion = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<SupermatterComponent, ComponentRemove>(OnComponentRemove);
-        SubscribeLocalEvent<SupermatterComponent, MapInitEvent>(OnMapInit);
-
-        SubscribeLocalEvent<SupermatterComponent, StartCollideEvent>(OnCollideEvent);
-        SubscribeLocalEvent<SupermatterComponent, InteractHandEvent>(OnHandInteract);
-        SubscribeLocalEvent<SupermatterComponent, InteractUsingEvent>(OnItemInteract);
-        SubscribeLocalEvent<SupermatterComponent, ExaminedEvent>(OnExamine);
+        SubscribeLocalEvent<SupermatterComponent, StartCollideEvent>(OnCollide);
+        SubscribeLocalEvent<SupermatterComponent, InteractUsingEvent>(OnClick);
         SubscribeLocalEvent<SupermatterComponent, SupermatterDoAfterEvent>(OnGetSliver);
-    }
-
-    private void OnComponentRemove(EntityUid uid, SupermatterComponent component, ComponentRemove args)
-    {
-        // turn off any ambient if component is removed (ex. entity deleted)
-        _ambient.SetAmbience(uid, false);
-        component.AudioStream = _audio.Stop(component.AudioStream);
-    }
-
-    private void OnMapInit(EntityUid uid, SupermatterComponent component, MapInitEvent args)
-    {
-        // Set the Sound
-        _ambient.SetAmbience(uid, true);
-
-        //Add Air to the initialized SM in the Map so it doesnt delam on default
-        var mix = _atmosphere.GetContainingMixture(uid, true, true);
-        mix?.AdjustMoles(Gas.Oxygen, Atmospherics.OxygenMolesStandard);
-        mix?.AdjustMoles(Gas.Nitrogen, Atmospherics.NitrogenMolesStandard);
+        SubscribeLocalEvent<SupermatterComponent, DamageChangedEvent>(OnGetHit);
+        SubscribeLocalEvent<SupermatterComponent, ExaminedEvent>(OnExamine);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        if (!_gameTiming.IsFirstTimePredicted)
-            return;
-
-        foreach (var sm in EntityManager.EntityQuery<SupermatterComponent>())
+        foreach (var sm in EntityQuery<SupermatterComponent>())
         {
             if (!sm.Activated)
                 return;
 
             var uid = sm.Owner;
-            sm.UpdateAccumulator += frameTime;
 
-            if (sm.UpdateAccumulator >= sm.UpdateTimer)
+            sm.DeltaTime = frameTime;
+            sm.UpdateTimerAccumulator += frameTime;
+
+            if (sm.UpdateTimerAccumulator >= sm.UpdateTimer)
             {
-                sm.UpdateAccumulator -= sm.UpdateTimer;
+                sm.UpdateTimerAccumulator = 0f;
                 Cycle(uid, sm);
             }
         }
@@ -106,524 +80,398 @@ public sealed class SupermatterSystem : SharedSupermatterSystem
 
     public void Cycle(EntityUid uid, SupermatterComponent sm)
     {
-        sm.ZapAccumulator++;
-        sm.YellAccumulator++;
+        sm.ZapTimerAccumulator++;
+        sm.AnnouncementTimerAccumulator++;
 
         ProcessAtmos(uid, sm);
-        HandleDamage(uid, sm);
 
-        if (sm.Damage >= sm.DelaminationPoint || sm.Delamming)
-            HandleDelamination(uid, sm);
-
-        HandleSoundLoop(uid, sm);
-
-        if (sm.ZapAccumulator >= sm.ZapTimer)
+        if (sm.ZapTimerAccumulator >= sm.ZapTimer)
         {
-            sm.ZapAccumulator -= sm.ZapTimer;
-            SupermatterZap(uid, sm);
+            sm.ZapTimerAccumulator = 0f;
+            ProcessPower(uid, sm);
         }
 
-        if (sm.YellAccumulator >= sm.YellTimer)
+        ProcessDamage(uid, sm);
+
+        // due to how damage calculation works, it will do the announcement only if sm is consistently taking damage
+        if (sm.Damage > sm.DamageArchive)
         {
-            sm.YellAccumulator -= sm.YellTimer;
-            HandleAnnouncements(uid, sm);
+            if (sm.AnnouncementTimerAccumulator > sm.AnnouncementTimer)
+            {
+                sm.AnnouncementTimerAccumulator = 0f;
+                var loc = "danger";
+                if (sm.Damage > sm.DamageEmergencyPoint)
+                    loc = "critical";
+
+                SupermatterAlert(uid, Loc.GetString($"supermatter-announcement-{loc}", ("integrity", sm.DelaminationPoint - sm.Damage)));
+            }
         }
+
+        if (sm.AreWeDelaming)
+            DelamCountdown(uid, sm);
+
+        ProcessWaste(uid, sm);
+
+        HandleSound(uid, sm);
     }
 
-    #region Processing
-
     /// <summary>
-    ///     Handle power and radiation output depending on atmospheric things.
+    ///     Calculate power based on gases absorbed.
     /// </summary>
     private void ProcessAtmos(EntityUid uid, SupermatterComponent sm)
     {
-        var mix = _atmosphere.GetContainingMixture(uid, true, true);
+        var mix = _atmos.GetContainingMixture((uid, Transform(uid)), true, true) ?? new();
+        var absorbedMix = mix?.RemoveRatio(sm.AbsorptionRatio) ?? new();
 
-        if (mix is not { })
+        // calculate gases
+        var gasPercentages = new float[Enum.GetValues(typeof(Gas)).Length];
+
+        var powerTransmissionRate = 0f;
+        var heatModifier = 0f;
+        var heatResistance = 0f;
+        var heatPowerGeneration = 0f;
+        var powerlossInhibition = 0f;
+
+        var moles = absorbedMix.TotalMoles;
+
+        if (moles <= SupermatterComponent.MinimumMoleCount)
             return;
 
-        var absorbedGas = mix.Remove(sm.GasEfficiency * mix.TotalMoles);
-        var moles = absorbedGas.TotalMoles;
-
-        if (!(moles > 0f))
-            return;
-
-        var gases = sm.GasStorage;
-        var facts = sm.GasDataFields;
-
-        //Lets get the proportions of the gasses in the mix for scaling stuff later
-        //They range between 0 and 1
-        gases = gases.ToDictionary(
-            gas => gas.Key,
-            gas => Math.Clamp(absorbedGas.GetMoles(gas.Key) / moles, 0, 1)
-        );
-
-        //No less then zero, and no greater then one, we use this to do explosions and heat to power transfer.
-        var powerRatio = gases.Sum(gas => gases[gas.Key] * facts[gas.Key].PowerMixRatio);
-
-        // Minimum value of -10, maximum value of 23. Affects plasma, o2 and heat output.
-        var heatModifier = gases.Sum(gas => gases[gas.Key] * facts[gas.Key].HeatPenalty);
-
-        // Minimum value of -10, maximum value of 23. Affects plasma, o2 and heat output.
-        var transmissionBonus = gases.Sum(gas => gases[gas.Key] * facts[gas.Key].TransmitModifier);
-
-        var h2OBonus = 1 - gases[Gas.WaterVapor] * 0.25f;
-
-        powerRatio = Math.Clamp(powerRatio, 0, 1);
-        heatModifier = Math.Max(heatModifier, 0.5f);
-        transmissionBonus *= h2OBonus;
-
-        // Effects the damage heat does to the crystal
-        sm.DynamicHeatResistance = 1f;
-
-        // more moles of gases are harder to heat than fewer,
-        // so let's scale heat damage around them
-        sm.MoleHeatPenaltyThreshold = (float) Math.Max(moles * sm.MoleHeatPenalty, 0.25);
-
-        // Ramps up or down in increments of 0.02 up to the proportion of co2
-        // Given infinite time, powerloss_dynamic_scaling = co2comp
-        // Some value between 0 and 1
-        if (moles > sm.PowerlossInhibitionMoleThreshold && gases[Gas.CarbonDioxide] > sm.PowerlossInhibitionGasThreshold)
+        for (int i = 0; i < gasPercentages.Length; i++)
         {
-            var co2powerloss = Math.Clamp(gases[Gas.CarbonDioxide] - sm.PowerlossDynamicScaling, -0.02f, 0.02f);
-            sm.PowerlossDynamicScaling = Math.Clamp(sm.PowerlossDynamicScaling + co2powerloss, 0f, 1f);
-        }
-        else
-        {
-            sm.PowerlossDynamicScaling = Math.Clamp(sm.PowerlossDynamicScaling - 0.05f, 0f, 1f);
-        }
+            var moleCount = absorbedMix.GetMoles(i);
 
-        // Ranges from 0 to 1(1-(value between 0 and 1 * ranges from 1 to 1.5(mol / 500)))
-        // We take the mol count, and scale it to be our inhibitor
-        var powerlossInhibitor =
-            Math.Clamp(
-                1 - sm.PowerlossDynamicScaling *
-                Math.Clamp(moles / sm.PowerlossInhibitionMoleBoostThreshold, 1f, 1.5f),
-                0f, 1f);
-
-        if (sm.MatterPower != 0) //We base our removed power off one 10th of the matter_power.
-        {
-            var removedMatter = Math.Max(sm.MatterPower / sm.MatterPowerConversion, 40);
-            //Adds at least 40 power
-            sm.Power = Math.Max(sm.Power + removedMatter, 0);
-            //Removes at least 40 matter power
-            sm.MatterPower = Math.Max(sm.MatterPower - removedMatter, 0);
-        }
-
-        //based on gas mix, makes the power more based on heat or less effected by heat
-        var tempFactor = powerRatio > 0.8 ? 50f : 30f;
-
-        //if there is more pluox and n2 then anything else, we receive no power increase from heat
-        sm.Power = Math.Max(absorbedGas.Temperature * tempFactor / Atmospherics.T0C * powerRatio + sm.Power, 0);
-
-        //Radiate stuff
-        if (TryComp<RadiationSourceComponent>(uid, out var rad))
-            rad.Intensity = sm.Power * Math.Max(0, 1f + transmissionBonus / 10f) * 0.003f;
-
-        //Power * 0.55 * a value between 1 and 0.8
-        var energy = sm.Power * sm.ReactionPowerModifier;
-
-        // Keep in mind we are only adding this temperature to (efficiency)% of the one tile the rock
-        // is on. An increase of 4*C @ 25% efficiency here results in an increase of 1*C / (#tilesincore) overall.
-        // Power * 0.55 * (some value between 1.5 and 23) / 5
-        absorbedGas.Temperature += energy * heatModifier * sm.ThermalReleaseModifier;
-        absorbedGas.Temperature = Math.Max(0,
-            Math.Min(absorbedGas.Temperature, sm.HeatThreshold * heatModifier));
-
-        // Release the waste
-        absorbedGas.AdjustMoles(Gas.Plasma, Math.Max(energy * heatModifier * sm.PlasmaReleaseModifier, 0f));
-        absorbedGas.AdjustMoles(Gas.Oxygen, Math.Max((energy + absorbedGas.Temperature * heatModifier - Atmospherics.T0C) * sm.OxygenReleaseEfficiencyModifier, 0f));
-
-        _atmosphere.Merge(mix, absorbedGas);
-
-        var powerReduction = (float) Math.Pow(sm.Power / 500, 3);
-
-        // After this point power is lowered
-        // This wraps around to the begining of the function
-        sm.Power = Math.Max(sm.Power - Math.Min(powerReduction * powerlossInhibitor, sm.Power * 0.83f * powerlossInhibitor), 0f);
-    }
-
-    /// <summary>
-    ///     Shoot lightning bolts depensing on accumulated power.
-    /// </summary>
-    private void SupermatterZap(EntityUid uid, SupermatterComponent sm)
-    {
-        // Divide power by it's threshold to get a value from 0 to 1, then multiply by the amount of possible lightnings
-        // Makes it pretty obvious that if SM is shooting out red lightnings something is wrong.
-        // And if it shoots too weak lightnings it means that it's underfed. Feed the SM :godo:
-        var zapPower = sm.Power / sm.PowerPenaltyThreshold * sm.LightningPrototypes.Length;
-        var zapPowerNorm = (int) Math.Clamp(zapPower, 0, sm.LightningPrototypes.Length - 1);
-        _lightning.ShootRandomLightnings(uid, 3.5f, sm.Power > sm.PowerPenaltyThreshold ? 3 : 1, sm.LightningPrototypes[zapPowerNorm]);
-    }
-
-    /// <summary>
-    ///     Handles environmental damage.
-    /// </summary>
-    private void HandleDamage(EntityUid uid, SupermatterComponent sm)
-    {
-        var xform = Transform(uid);
-        var indices = _xform.GetGridOrMapTilePosition(uid, xform);
-
-        sm.DamageArchived = sm.Damage;
-
-        var mix = _atmosphere.GetContainingMixture(uid, true, true);
-
-        // We're in space or there is no gas to process
-        if (!xform.GridUid.HasValue || mix is not { } || mix.TotalMoles == 0f)
-        {
-            sm.Damage += Math.Max(sm.Power / 1000 * sm.DamageIncreaseMultiplier, 0.1f);
-            return;
-        }
-
-        // Absorbed gas from surrounding area
-        var absorbedGas = mix.Remove(sm.GasEfficiency * mix.TotalMoles);
-        var moles = absorbedGas.TotalMoles;
-
-        var totalDamage = 0f;
-
-        var tempThreshold = Atmospherics.T0C + sm.HeatPenaltyThreshold;
-
-        // Temperature start to have a positive effect on damage after 350
-        var tempDamage = Math.Max(Math.Clamp(moles / 200f, .5f, 1f) * absorbedGas.Temperature - tempThreshold * sm.DynamicHeatResistance, 0f) * sm.MoleHeatThreshold / 150f * sm.DamageIncreaseMultiplier;
-        totalDamage += tempDamage;
-
-        // Power only starts affecting damage when it is above 5000
-        var powerDamage = Math.Max(sm.Power - sm.PowerPenaltyThreshold, 0f) / 500f * sm.DamageIncreaseMultiplier;
-        totalDamage += powerDamage;
-
-        // Molar count only starts affecting damage when it is above 1800
-        var moleDamage = Math.Max(moles - sm.MolePenaltyThreshold, 0) / 80 * sm.DamageIncreaseMultiplier;
-        totalDamage += moleDamage;
-
-        // Healing damage
-        if (moles < sm.MolePenaltyThreshold)
-        {
-            // left there a very small float value so that it doesn't eventually divide by 0.
-            var healHeatDamage = Math.Min(absorbedGas.Temperature - tempThreshold, 0.001f) / 150;
-            totalDamage += healHeatDamage;
-        }
-
-        // Check for space tiles next to SM
-        // TODO: change moles out for checking if adjacent tiles exist
-        var enumerator = _atmosphere.GetAdjacentTileMixtures(xform.GridUid.Value, indices, false, false);
-        while (enumerator.MoveNext(out var ind))
-        {
-            if (ind.TotalMoles != 0)
+            if (moleCount <= SupermatterComponent.MinimumMoleCount)
                 continue;
 
-            var integrity = GetIntegrity(sm);
+            gasPercentages[i] = moleCount / moles;
+            var smGas = sm.GasFacts[i];
 
-            // this is some magic number shit
-            var factor = integrity switch
-            {
-                < 10 => 0.0005f,
-                < 25 => 0.0009f,
-                < 45 => 0.005f,
-                < 75 => 0.002f,
-                _ => 0f
-            };
-
-            totalDamage += Math.Clamp(sm.Power * factor * sm.DamageIncreaseMultiplier, 0, sm.MaxSpaceExposureDamage);
-
-            break;
+            powerTransmissionRate += smGas.PowerTransmissionRate * gasPercentages[i];
+            heatModifier += smGas.HeatModifier * gasPercentages[i];
+            heatResistance += smGas.HeatResistance * gasPercentages[i];
+            heatPowerGeneration += smGas.HeatPowerGeneration * gasPercentages[i];
+            powerlossInhibition += smGas.PowerlossInhibition * gasPercentages[i];
         }
 
-        sm.Damage = Math.Min(sm.DamageArchived + sm.DamageHardcap * sm.DelaminationPoint, totalDamage);
+        heatPowerGeneration = Math.Clamp(heatPowerGeneration, 0, 1);
+        powerlossInhibition = Math.Clamp(powerlossInhibition, 0, 1);
+
+        sm.AbsorbedGasMix = absorbedMix;
+        sm.PowerTransmissionRate = powerTransmissionRate;
+        sm.GasHeatModifier = heatModifier;
+        sm.GasHeatResistance = heatResistance;
+        sm.HeatPowerGeneration = heatPowerGeneration;
+        sm.GasPowerlossInhibition = powerlossInhibition;
     }
-
     /// <summary>
-    ///     Handles announcements.
+    ///     Shoot lightning and radiate everything based on whatever power there is.
     /// </summary>
-    private void HandleAnnouncements(EntityUid uid, SupermatterComponent sm)
+    private void ProcessPower(EntityUid uid, SupermatterComponent sm)
     {
-        var message = string.Empty;
-        var global = false;
+        var powerHeat = sm.HeatPowerGeneration * sm.AbsorbedGasMix.Temperature * SupermatterComponent.GasHeatPowerScaling;
+        var powerloss = -1 * sm.GasPowerlossInhibition;
+        var atmosStrength = Math.Clamp((powerHeat + powerloss) * sm.PowerTransmissionRate, 0, 2);
 
-        var integrity = GetIntegrity(sm).ToString("0.00");
+        var damageStrength = Math.Clamp(sm.Damage / sm.DelaminationPoint, 0, 1);
+        var strength = Math.Clamp(atmosStrength + damageStrength, 0, 4);
 
-        // Special cases
-        if (sm.Damage < sm.DelaminationPoint && sm.Delamming)
+        sm.InternalEnergy = strength;
+        var lightningProto = sm.LightningPrototypeIDs[(int) Math.Clamp(strength, 0, 3)];
+
+        _sound.PlayPvs(SupermatterComponent.SupermatterZapSound, uid);
+        _lightning.ShootRandomLightnings(uid, 3, (int) strength < 1 ? 1 : (int) strength, lightningProto);
+        Comp<RadiationSourceComponent>(uid).Intensity = 1 + strength;
+    }
+    /// <summary>
+    ///     React to damage dealt by all doodads.
+    /// </summary>
+    private void ProcessDamage(EntityUid uid, SupermatterComponent sm)
+    {
+        var additiveTempBase = Atmospherics.T0C + SupermatterComponent.HeatPenaltyThreshold;
+        var tempLimitBase = additiveTempBase;
+        var tempLimitGas = sm.GasHeatResistance * additiveTempBase;
+        var tempLimitMoles = Math.Clamp(2 - sm.AbsorbedGasMix.TotalMoles / 100, 0, 1) * additiveTempBase;
+
+        sm.TempLimit = Math.Max(tempLimitBase + tempLimitGas + tempLimitMoles, Atmospherics.TCMB);
+
+        var damageExternal = sm.ExternalDamage * Math.Clamp((sm.DamageEmergencyPoint - sm.Damage) / sm.DamageEmergencyPoint, 0, 1);
+        sm.ExternalDamage = 0f;
+
+        var damageHeat = Math.Clamp((sm.AbsorbedGasMix.Temperature - sm.TempLimit) / 24000, 0, .15f);
+        var damagePower = Math.Clamp((sm.InternalEnergy - SupermatterComponent.PowerPenaltyThreshold) / 40000, 0, .1f);
+        var damageMoles = Math.Clamp((sm.AbsorbedGasMix.TotalMoles - SupermatterComponent.MolePenaltyThreshold) / 3200, 0, .1f);
+
+        var damageHealHeat = 0f;
+
+        if (sm.AbsorbedGasMix.TotalMoles > 0)
+            damageHealHeat = Math.Clamp((sm.AbsorbedGasMix.TotalMoles - sm.TempLimit) / 6000, -.1f, 0);
+
+        var totalDamage = damageExternal + damageHeat + damagePower + damageMoles + damageHealHeat;
+
+        sm.Damage += Math.Max(totalDamage, 0);
+
+        if (sm.Damage > sm.DelaminationPoint)
+            sm.AreWeDelaming = true;
+
+        if (sm.Damage > sm.DamageDangerPoint)
         {
-            message = Loc.GetString("supermatter-delam-cancel", ("integrity", integrity));
-            sm.DelamAnnounced = false;
-            global = true;
-        }
-        if (sm.Delamming && !sm.DelamAnnounced)
-        {
-            var sb = new StringBuilder();
-            var loc = string.Empty;
-            var alertLevel = "yellow";
-
-            switch (_delamType)
-            {
-                case DelamType.Explosion:
-                default:
-                    loc = "supermatter-delam-explosion";
-                    break;
-
-                case DelamType.Singulo:
-                    loc = "supermatter-delam-overmass";
-                    alertLevel = "delta";
-                    break;
-
-                case DelamType.Tesla:
-                    loc = "supermatter-delam-tesla";
-                    alertLevel = "delta";
-                    break;
-
-                case DelamType.Cascade:
-                    loc = "supermatter-delam-cascade";
-                    alertLevel = "delta";
-                    break;
-            }
-
-            var station = _station.GetOwningStation(uid);
-            if (station != null)
-                _alert.SetLevel((EntityUid) station, alertLevel, true, true, true, false);
-
-            sb.AppendLine(Loc.GetString(loc));
-            sb.AppendLine(Loc.GetString("supermatter-seconds-before-delam", ("seconds", sm.DelamTimer)));
-
-            message = sb.ToString();
-            global = true;
-            sm.DelamAnnounced = true;
-
-            SupermatterAnnouncement(uid, message, global);
+            if (_random.Prob(.0001f))
+                GenerateAnomaly(uid);
             return;
         }
+    }
+    /// <summary>
+    ///     Process waste, release hot plasma and oxygen.
+    /// </summary>
+    private void ProcessWaste(EntityUid uid, SupermatterComponent sm)
+    {
+        sm.WasteMultiplier = Math.Clamp(1f + sm.GasHeatModifier, .5f, float.PositiveInfinity);
+        var mix = _atmos.GetContainingMixture((uid, Transform(uid)), true, true) ?? new();
+        var mergeMix = sm.AbsorbedGasMix;
 
-        // We are not taking consistent damage. Engis not needed.
-        if (sm.Damage <= sm.DamageArchived)
+        mergeMix.Temperature += .65f * sm.WasteMultiplier * SupermatterComponent.ThermalReleaseModifier;
+        mergeMix.Temperature = Math.Clamp(mergeMix.Temperature, Atmospherics.TCMB, 2500 * sm.WasteMultiplier);
+
+        mergeMix.AdjustMoles(Gas.Plasma, Math.Max(.65f * sm.InternalEnergy * sm.WasteMultiplier * SupermatterComponent.PlasmaReleaseModifier, 0));
+        mergeMix.AdjustMoles(Gas.Oxygen, Math.Max((.65f + mergeMix.Temperature * sm.WasteMultiplier - Atmospherics.T0C) * SupermatterComponent.OxygenReleaseModifier, 0));
+
+        _atmos.Merge(mix, mergeMix);
+    }
+
+    /// <summary>
+    ///     Swaps out ambience sounds whether the SM is delamming or not.
+    /// </summary>
+    private void HandleSound(EntityUid uid, SupermatterComponent sm)
+    {
+        var ambienceComp = Comp<AmbientSoundComponent>(uid);
+
+        if (sm.AreWeDelaming)
+        {
+            if (sm.CurrentAmbience != sm.DelamAmbienceSound)
+                sm.CurrentAmbience = sm.DelamAmbienceSound;
+        }
+        else if (sm.CurrentAmbience != sm.CalmAmbienceSound)
+            sm.CurrentAmbience = sm.CalmAmbienceSound;
+
+        if (ambienceComp.Sound != sm.CurrentAmbience)
+            _ambience.SetSound(uid, sm.CurrentAmbience, ambienceComp);
+    }
+
+    /// <summary>
+    ///     Make console alerts, set station codes, etc. etc.
+    /// </summary>
+    /// <param name="customSender"> If true, the message will be sent from Central Command </param>
+    public void SupermatterAlert(EntityUid uid, string message, bool customSender = false)
+    {
+        _chat.DispatchStationAnnouncement(uid, message, customSender ? "Central Command" : Loc.GetString("supermatter-announcement-sender"), false, null, Color.Yellow);
+    }
+
+    private void GenerateAnomaly(EntityUid uid, float amount = 1)
+    {
+        var stationUid = _station.GetOwningStation(uid);
+
+        if (stationUid == null || !TryComp<StationDataComponent>(stationUid, out var data))
             return;
 
-        if (sm.Damage >= sm.WarningPoint)
-        {
-            message = Loc.GetString("supermatter-warning", ("integrity", integrity));
-            if (sm.Damage >= sm.EmergencyPoint)
-            {
-                message = Loc.GetString("supermatter-emergency", ("integrity", integrity));
-                global = true;
-            }
-        }
-        SupermatterAnnouncement(uid, message, global);
-    }
+        var grid = _station.GetLargestGrid(data);
 
-    /// <summary>
-    ///     Help the SM announce something.
-    /// </summary>
-    /// <param name="global">If true, does the station announcement.</param>
-    /// <param name="customSender">If true, sends the announcement from Central Command.</param>
-    public void SupermatterAnnouncement(EntityUid uid, string message, bool global = false, string? customSender = null)
-    {
-        if (global)
-        {
-            var sender = customSender != null ? customSender : Loc.GetString("supermatter-announcer");
-            _chat.DispatchStationAnnouncement(uid, message, sender, colorOverride: Color.Yellow);
-            return;
-        }
-        _chat.TrySendInGameICMessage(uid, message, InGameICChatType.Speak, hideChat: false, checkRadioPrefix: true);
-    }
-
-    /// <summary>
-    ///     Returns the integrity rounded to hundreds, e.g. 100.00%
-    /// </summary>
-    public float GetIntegrity(SupermatterComponent sm)
-    {
-        var integrity = sm.Damage / sm.DelaminationPoint;
-        integrity = (float) Math.Round(100 - integrity * 100, 2);
-        integrity = integrity < 0 ? 0 : integrity;
-        return integrity;
-    }
-
-    /// <summary>
-    ///     Decide on how to delaminate.
-    /// </summary>
-    public DelamType ChooseDelamType(EntityUid uid, SupermatterComponent sm)
-    {
-        var mix = _atmosphere.GetContainingMixture(uid, true, true);
-
-        if (mix is { })
-        {
-            var absorbedGas = mix.Remove(sm.GasEfficiency * mix.TotalMoles);
-            var moles = absorbedGas.TotalMoles;
-
-            if (moles >= sm.MolePenaltyThreshold)
-                return DelamType.Singulo;
-        }
-        if (sm.Power >= sm.PowerPenaltyThreshold)
-            return DelamType.Tesla;
-
-        // TODO: add resonance cascade when there's crazy conditions, or a destabilizing crystal :godo:
-
-        return DelamType.Explosion;
-    }
-
-    /// <summary>
-    ///     Handle the end of the station.
-    /// </summary>
-    private void HandleDelamination(EntityUid uid, SupermatterComponent sm)
-    {
-        var xform = Transform(uid);
-
-        _delamType = ChooseDelamType(uid, sm);
-
-        if (!sm.Delamming)
-        {
-            sm.Delamming = true;
-            HandleAnnouncements(uid, sm);
-        }
-        if (sm.Damage < sm.DelaminationPoint && sm.Delamming)
-        {
-            sm.Delamming = false;
-            HandleAnnouncements(uid, sm);
-        }
-
-        sm.DelamTimerAccumulator++;
-
-        if (sm.DelamTimerAccumulator < sm.DelamTimer)
+        if (grid == null)
             return;
 
-        switch (_delamType)
+        for (var i = 0; i < amount; i++)
+        {
+            _anomaly.SpawnOnRandomGridLocation((EntityUid) grid, "RandomAnomalySpawner");
+            _adminLogger.Add(LogType.Anomaly, LogImpact.Medium, $"An anomaly has been spawned by the supermatter crystal.");
+        }
+    }
+
+    /// <summary>
+    ///     Vaporizes the targeted uid.
+    /// </summary>
+    private void Vaporize(EntityUid uid, EntityUid smUid)
+    {
+        if (EntityManager.IsQueuedForDeletion(uid))
+            return;
+
+        _sound.PlayPvs(SupermatterComponent.VaporizeSound, smUid);
+        EntityManager.QueueDeleteEntity(uid);
+
+        // getting discombobulated by the SM is the same as permanent round removal so why not log that
+        _adminLogger.Add(LogType.Action, LogImpact.High, $"{EntityManager.ToPrettyString(uid):player} has been vaporized by the supermatter.");
+    }
+
+
+    /// <summary>
+    ///     Handle supermatter delamination and the end of the station.
+    /// </summary>
+    private void Delaminate(EntityUid uid, SupermatterComponent sm)
+    {
+        sm.PreferredDelamType = sm.PreferredDelamType ?? (int) ChooseDelam(sm);
+        Delaminate(uid, sm, (DelamType) sm.PreferredDelamType);
+    }
+
+    /// <summary>
+    ///     Handle supermatter delamination based on it's type.
+    /// </summary>
+    private void Delaminate(EntityUid uid, SupermatterComponent sm, DelamType type)
+    {
+        GenerateAnomaly(uid, _random.Next(2, 4));
+
+        var prototypeId = string.Empty;
+        switch (type)
         {
             case DelamType.Explosion:
             default:
-                _explosion.TriggerExplosive(uid);
-                break;
-
-            case DelamType.Singulo:
-                Spawn(sm.SingularityPrototypeId, xform.Coordinates);
-                break;
-
+                _explosion.TriggerExplosive(uid); return;
             case DelamType.Tesla:
-                Spawn(sm.TeslaPrototypeId, xform.Coordinates);
-                break;
-
-            case DelamType.Cascade:
-                Spawn(sm.SupermatterKudzuPrototypeId, xform.Coordinates);
-                break;
+                prototypeId = sm.TeslaPrototype; break;
+            case DelamType.Singularity:
+                prototypeId = sm.SingularityPrototype; break;
+            case DelamType.ResonanceCascade:
+                prototypeId = sm.SupermatterKudzuPrototype; break;
         }
+        if (string.IsNullOrWhiteSpace(prototypeId))
+            return;
+        EntityManager.SpawnEntity(prototypeId, Transform(uid).Coordinates);
     }
 
-    private void HandleSoundLoop(EntityUid uid, SupermatterComponent sm)
+    /// <summary>
+    ///     Choose a prefered delamination type. The supermatter is picky.
+    /// </summary>
+    private DelamType ChooseDelam(SupermatterComponent sm)
     {
-        var isAggressive = sm.Damage > sm.WarningPoint;
-        var isDelamming = sm.Damage > sm.DelaminationPoint;
+        if (sm.AbsorbedGasMix.TotalMoles >= SupermatterComponent.MolePenaltyThreshold)
+            return DelamType.Singularity;
 
-        if (!isAggressive && !isDelamming)
+        if (sm.InternalEnergy > SupermatterComponent.PowerPenaltyThreshold)
+            return DelamType.Tesla;
+
+        // todo: add resonance cascade when hypernob and antinob gases get added
+        // or a destabilizing crystal. bet it will take years :godo:
+
+        return DelamType.Explosion;
+    }
+    /// <summary>
+    ///     Handle the delamination countdown, alerts, etc.
+    /// </summary>
+    private void DelamCountdown(EntityUid uid, SupermatterComponent sm)
+    {
+        if (!sm.DelamAnnouncementHappened)
         {
-            sm.AudioStream = _audio.Stop(sm.AudioStream);
-            return;
+            var delamType = ChooseDelam(sm);
+            var stationUid = _station.GetStationInMap(Transform(uid).MapID);
+
+            var alertLevel = string.Empty;
+            var announcementLoc = string.Empty;
+
+            var sb = new StringBuilder();
+            sb.Append(Loc.GetString("supermatter-announcement-delam"));
+            switch (delamType)
+            {
+                case DelamType.Explosion:
+                default:
+                    announcementLoc = "supermatter-announcement-delam-explosion";
+                    alertLevel = "yellow";
+                    break;
+                case DelamType.Tesla:
+                    announcementLoc = "supermatter-announcement-delam-tesla";
+                    alertLevel = "delta";
+                    break;
+                case DelamType.Singularity:
+                    announcementLoc = "supermatter-announcement-delam-singuloose";
+                    alertLevel = "delta";
+                    break;
+                case DelamType.ResonanceCascade:
+                    announcementLoc = "supermatter-announcement-delam-cascade";
+                    alertLevel = "delta";
+                    break;
+            }
+            sb.AppendLine(" " + Loc.GetString(announcementLoc));
+            sb.Append(Loc.GetString("supermatter-announcement-delam-countdown", ("seconds", sm.DelamCountdownTimer)));
+            // make it cancellable in case there are crazy engineers that managed to contain the delam
+            if (stationUid != null)
+                _alert.SetLevel(stationUid.Value, alertLevel, true, true, true, false);
+
+            SupermatterAlert(uid, sb.ToString());
+
+            sm.DelamAnnouncementHappened = true;
         }
 
-        var smSound = isDelamming ? SuperMatterSound.Delam : SuperMatterSound.Aggressive;
-
-        if (sm.SmSound == smSound)
+        if (sm.Damage < sm.DelaminationPoint)
+        {
+            // yay!
+            sm.DelamCountdownAccumulator = 0;
+            sm.DelamAnnouncementHappened = false;
+            sm.AreWeDelaming = false;
+            SupermatterAlert(uid, Loc.GetString("supermatter-announcement-safe"));
             return;
-
-        sm.AudioStream = _audio.Stop(sm.AudioStream);
-        sm.SmSound = smSound;
+        }
+        if (sm.DelamCountdownAccumulator >= sm.DelamCountdownTimer) // uh oh
+            Delaminate(uid, sm);
+        sm.DelamCountdownAccumulator++;
     }
 
-    #endregion
 
 
-    #region Event Handlers
-
-    private void OnCollideEvent(EntityUid uid, SupermatterComponent sm, ref StartCollideEvent args)
+    private void OnCollide(EntityUid uid, SupermatterComponent sm, StartCollideEvent args)
     {
         if (!sm.Activated)
             sm.Activated = true;
 
-        var target = args.OtherEntity;
-        if (args.OtherBody.BodyType == BodyType.Static
-            || HasComp<SupermatterImmuneComponent>(target)
-            || _container.IsEntityInContainer(uid))
-            return;
-
-        if (TryComp<SupermatterFoodComponent>(target, out var food))
-            sm.Power += food.Energy;
-        else if (TryComp<ProjectileComponent>(target, out var projectile))
-            sm.Power += (float) projectile.Damage.GetTotal();
-        else
-            sm.Power++;
-
-        sm.MatterPower += HasComp<MobStateComponent>(target) ? 200 : 0;
-
-        if (!HasComp<ProjectileComponent>(target))
-        {
-            EntityManager.SpawnEntity("Ash", Transform(target).Coordinates);
-            _audio.PlayPvs(sm.DustSound, uid);
-        }
-
-        EntityManager.QueueDeleteEntity(target);
+        Vaporize(args.OtherEntity, uid);
     }
 
-    private void OnHandInteract(EntityUid uid, SupermatterComponent sm, ref InteractHandEvent args)
+    private void OnClick(EntityUid uid, SupermatterComponent sm, InteractUsingEvent args)
+    {
+        if (!TryComp<TagComponent>(args.Used, out var tags))
+            return;
+        foreach (var tag in tags.Tags)
+        {
+            if (tag.Id == "Knife")
+            {
+                _adminLogger.Add(LogType.Action, LogImpact.High, $"{EntityManager.ToPrettyString(uid):player} is trying to extract a sliver from the supermatter crystal.");
+                _popup.PopupClient(Loc.GetString("supermatter-tamper-begin"), args.User);
+
+                var dargs = new DoAfterArgs(EntityManager, uid, 30, new SupermatterDoAfterEvent(), args.Used)
+                {
+                    BreakOnDamage = true,
+                    BreakOnHandChange = true,
+                    BreakOnMove = true,
+                    BreakOnWeightlessMove = true,
+                    NeedHand = true,
+                    RequireCanInteract = true,
+                };
+                _doAfter.TryStartDoAfter(dargs);
+            }
+        }
+    }
+
+    private void OnGetSliver(EntityUid uid, SupermatterComponent sm, SupermatterDoAfterEvent args)
+    {
+        sm.Damage += 10; // your criminal actions will not go unnoticed
+        SupermatterAlert(uid, Loc.GetString("supermatter-announcement-tamper", ("integrity", (int) (100 - sm.Damage))));
+
+        Spawn(sm.SliverPrototype, _transform.GetMapCoordinates(args.User));
+        _popup.PopupClient(Loc.GetString("supermatter-tamper-end"), args.User);
+    }
+
+    private void OnGetHit(EntityUid uid, SupermatterComponent sm, DamageChangedEvent args)
     {
         if (!sm.Activated)
             sm.Activated = true;
 
-        var target = args.User;
+        sm.ExternalDamage += args.DamageDelta?.GetTotal().Value / 1000 ?? 0;
 
-        if (HasComp<SupermatterImmuneComponent>(target))
-            return;
-
-        sm.MatterPower += 200;
-
-        EntityManager.SpawnEntity("Ash", Transform(target).Coordinates);
-        _audio.PlayPvs(sm.DustSound, uid);
-        EntityManager.QueueDeleteEntity(target);
+        Cycle(uid, sm);
+        ProcessPower(uid, sm);
     }
 
-    private void OnItemInteract(EntityUid uid, SupermatterComponent sm, ref InteractUsingEvent args)
+    private void OnExamine(EntityUid uid, SupermatterComponent sm, ExaminedEvent args)
     {
-        if (!sm.Activated)
-            sm.Activated = true;
-
-        if (sm.SliverRemoved)
-            return;
-
-        if (!HasComp<SharpComponent>(args.Used))
-            return;
-
-        var dae = new DoAfterArgs(EntityManager, args.User, 30f, new SupermatterDoAfterEvent(), uid)
+        if (args.IsInDetailsRange) // get all close to it
         {
-            BreakOnDamage = true,
-            BreakOnHandChange = false,
-            BreakOnMove = true,
-            BreakOnWeightlessMove = false,
-            NeedHand = true,
-            RequireCanInteract = true,
-        };
-
-        _doAfter.TryStartDoAfter(dae);
-    }
-
-    private void OnGetSliver(EntityUid uid, SupermatterComponent sm, ref SupermatterDoAfterEvent args)
-    {
-        if (args.Cancelled)
-            return;
-
-        // your criminal actions will not go unnoticed
-        sm.Damage += sm.DelaminationPoint / 10;
-        sm.DamageArchived += sm.DelaminationPoint / 10;
-
-        var integrity = GetIntegrity(sm).ToString("0.00");
-        SupermatterAnnouncement(uid, Loc.GetString("supermatter-announcement-cc-tamper", ("integrity", integrity)), true, "Central Command");
-
-        Spawn(sm.SliverPrototypeId, _transform.GetMapCoordinates(args.User));
-
-        sm.DelamTimer /= 2;
-    }
-
-    private void OnExamine(EntityUid uid, SupermatterComponent sm, ref ExaminedEvent args)
-    {
-        // get all close and personal to it
-        if (args.IsInDetailsRange)
-        {
-            args.PushMarkup(Loc.GetString("supermatter-examine-integrity", ("integrity", GetIntegrity(sm).ToString("0.00"))));
+            args.PushMarkup(Loc.GetString("supermatter-examine-integrity", ("integrity", (int) (100 - sm.Damage))));
         }
     }
-
-    #endregion
 }

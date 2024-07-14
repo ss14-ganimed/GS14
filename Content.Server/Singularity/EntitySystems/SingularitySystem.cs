@@ -4,7 +4,7 @@ using Content.Server.Singularity.Events;
 using Content.Shared.Singularity.Components;
 using Content.Shared.Singularity.EntitySystems;
 using Content.Shared.Singularity.Events;
-using Content.Shared.Supermatter.Components;
+using Content.Server.Supermatter.Components;
 using Robust.Server.GameStates;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
