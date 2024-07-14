@@ -16,9 +16,6 @@
   id: Table
 
 - type: Tag
-  id: Laser
-  
-- type: Tag
   id: Ambrosia
 
 - type: Tag
