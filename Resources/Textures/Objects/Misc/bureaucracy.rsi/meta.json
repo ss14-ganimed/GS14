@@ -223,6 +223,15 @@
       "name": "paper_stamp-warden"
     },
     {
+      "name": "paper_stamp-psychologist"
+    },
+    {
+      "name": "paper_stamp-legal"
+    },
+    {
+      "name": "paper_stamp-iaa"
+    },
+    {
       "name": "paper_stamp-generic"
     }
   ]

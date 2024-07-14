@@ -6,15 +6,6 @@
   prototype: ClothingHeadHatHoodMoth
 
 - type: loadout
-  id: LoadoutHeadClothingHeadHatHoodCulthood
-  category: loadout-category-head
-  cost: 3
-  exclusive: true
-  whitelistJobs:
-    - Chaplain
-  prototype: ClothingHeadHatHoodCulthood
-
-- type: loadout
   id: LoadoutHeadClothingHeadHatHoodNunHood
   category: loadout-category-head
   cost: 3
@@ -27,42 +18,6 @@
   cost: 3
   exclusive: true
   prototype: ClothingHeadHatHoodGoliathCloak
-
-- type: loadout
-  id: LoadoutHeadClothingHeadHatHoodRad
-  category: loadout-category-head
-  cost: 5
-  exclusive: true
-  whitelistJobs:
-    - TechnicalAssistant
-    - StationEngineer
-    - AtmosphericTechnician
-    - SeniorEngineer
-    - ChiefEngineer
-    - ResearchDirector
-    - ResearchAssistant
-    - Scientist
-    - SeniorResearcher
-    - Roboticist
-  prototype: ClothingHeadHatHoodRad
-
-- type: loadout
-  id: LoadoutHeadClothingHeadHatHoodRadOriginal
-  category: loadout-category-head
-  cost: 5
-  exclusive: true
-  whitelistJobs:
-    - TechnicalAssistant
-    - StationEngineer
-    - AtmosphericTechnician
-    - SeniorEngineer
-    - ChiefEngineer
-    - ResearchDirector
-    - ResearchAssistant
-    - Scientist
-    - SeniorResearcher
-    - Roboticist
-  prototype: ClothingHeadHatHoodRadOriginal
 
 - type: loadout
   id: LoadoutHeadClothingHeadHatHoodBioGeneral
