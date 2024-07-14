@@ -184,9 +184,23 @@
     sprite: Clothing/Uniforms/Jumpskirt/hos.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/hos.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#C12D30"
+        sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+      - state: overlay-inhand-left
+        sprite: Clothing/Uniforms/Jumpsuit/hos.rsi
+      right:
+      - state: inhand-right
+        color: "#C12D30"
+        sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+      - state: overlay-inhand-right
+        sprite: Clothing/Uniforms/Jumpsuit/hos.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtHoSOriginal
   name: head of security's colorful jumpskirt
   description: It's even redder and even crisper, perfect for a not-so-cheerful head.
@@ -219,7 +233,7 @@
     sprite: Clothing/Uniforms/Jumpskirt/hos_parade.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtHoSParadeMaleOriginal
   name: head of security's parade uniform
   description: A male head of security's luxury-wear, for special occasions.
@@ -296,7 +310,7 @@
     sprite: Clothing/Uniforms/Jumpskirt/brigmedic.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtBrigmedicOriginal
   name: medical-security jumpskirt
   description: This simple in design uniform is issued to personal with affinities to both medical and security. Strange choice of patterns nonetheless.
@@ -390,7 +404,7 @@
     sprite: Clothing/Uniforms/Jumpskirt/scientist.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtScientistOriginal
   name: scientist's plain jumpskirt
   description: It's a less decorated scientist jumpskirt. It has minor markings that denote the wearer as a scientist.
@@ -421,6 +435,21 @@
     sprite: Clothing/Uniforms/Jumpskirt/security.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/security.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#C12D30"
+        sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+      - state: overlay-inhand-left
+        sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+      right:
+      - state: inhand-right
+        color: "#C12D30"
+        sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+      - state: overlay-inhand-right
+        sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -432,6 +461,21 @@
     sprite: Clothing/Uniforms/Jumpskirt/warden.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpskirt/warden.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#C12D30"
+        sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+      - state: overlay-inhand-left
+        sprite: Clothing/Uniforms/Jumpsuit/warden.rsi
+      right:
+      - state: inhand-right
+        color: "#C12D30"
+        sprite: Clothing/Uniforms/Jumpskirt/color.rsi
+      - state: overlay-inhand-right
+        sprite: Clothing/Uniforms/Jumpsuit/warden.rsi
+
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -828,10 +872,21 @@
   name: CentCom officer's suitskirt
   description: It's a suitskirt worn by CentCom's highest-tier Commanders.
   components:
-    - type: Sprite
-      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_official.rsi
-    - type: Clothing
-      sprite: Corvax/Clothing/Uniforms/Jumpskirt/centcom_official.rsi
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/olddress.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/olddress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtMusician
+  name: musician's skirt
+  description: A fancy skirt for the musically inclined. Perfect for any lounge act!
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/musician.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/musician.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase

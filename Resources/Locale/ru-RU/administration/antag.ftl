@@ -11,3 +11,5 @@ admin-verb-text-make-nuclear-operative = Сделать ядерным опер�
 admin-verb-text-make-pirate = Сделать пиратом
 admin-verb-text-make-head-rev = Сделать Главой революции
 admin-verb-text-make-thief = Сделать вором
+admin-verb-make-initial-infected = Сделать цель нулевым пациентом.
+admin-verb-text-make-initial-infected = Сделать нулевым пациентом

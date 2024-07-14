@@ -7,3 +7,4 @@ bwoink-system-typing-indicator =
        *[other] печатают
     }...
 admin-bwoink-play-sound = Бвоинк?
+bwoink-system-rate-limited = Система: вы отправляете сообщения слишком быстро.

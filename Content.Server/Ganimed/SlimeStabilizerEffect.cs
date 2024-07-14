@@ -1,10 +1,11 @@
 using Content.Server.Ganimed.XenoBiology.Components;
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Chemistry.ReagentEffects
 {
-    public sealed partial class SlimeStabilize : ReagentEffect
+    public sealed partial class SlimeStabilize : EntityEffect
     {
         [DataField]
         public float Amount;
@@ -15,9 +16,9 @@ namespace Content.Server.Chemistry.ReagentEffects
                 ("deltasign", MathF.Sign(Amount)),
                 ("amount", MathF.Abs(Amount)));
 
-        public override void Effect(ReagentEffectArgs args)
+        public override void Effect(EntityEffectBaseArgs args)
         {
-            if (args.EntityManager.TryGetComponent(args.SolutionEntity, out XenoBiologyComponent? temp))
+            if (args.EntityManager.TryGetComponent(args.TargetEntity, out XenoBiologyComponent? temp))
             {
                 if (temp.Mutationchance >= 0);
                  {

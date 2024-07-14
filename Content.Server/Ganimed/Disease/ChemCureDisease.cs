@@ -1,14 +1,15 @@
 using Content.Shared.Chemistry.Reagent;
 using Content.Server.Ganimed.Disease;
+using Content.Shared.EntityEffects;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server.Chemistry.ReagentEffects
+namespace Content.Server.EntityEffects.Effects
 {
     /// <summary>
     /// Default metabolism for medicine reagents.
     /// </summary>
-    public sealed partial class ChemCureDisease : ReagentEffect
+    public sealed partial class ChemCureDisease : EntityEffect
     {
         protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
             => Loc.GetString("reagent-effect-guidebook-adjust-cure",
@@ -20,14 +21,16 @@ namespace Content.Server.Chemistry.ReagentEffects
         [DataField("cureChance")]
         public float CureChance = 0.15f;
 
-        public override void Effect(ReagentEffectArgs args)
+        public override void Effect(EntityEffectBaseArgs args)
         {
             var cureChance = CureChance;
 
-            cureChance *= args.Scale;
+            if (args is EntityEffectReagentArgs reagentArgs) {
+            cureChance *= reagentArgs.Scale.Float();
+            }
 
             var ev = new CureDiseaseAttemptEvent(cureChance);
-            args.EntityManager.EventBus.RaiseLocalEvent(args.SolutionEntity, ev, false);
+            args.EntityManager.EventBus.RaiseLocalEvent(args.TargetEntity, ev, false);
         }
     }
 }

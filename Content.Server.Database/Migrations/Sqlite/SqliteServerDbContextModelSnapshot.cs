@@ -483,40 +483,47 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("assigned_user_id", (string)null);
                 });
 
-            modelBuilder.Entity("Content.Server.Database.BookTerminalEntry", b =>
+            modelBuilder.Entity("Content.Server.Database.BanTemplate", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
-                        .HasColumnName("book_terminal_entry_id");
+                        .HasColumnName("ban_template_id");
 
-                    b.Property<string>("Content")
+                    b.Property<bool>("AutoDelete")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("auto_delete");
+
+                    b.Property<int>("ExemptFlags")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("exempt_flags");
+
+                    b.Property<bool>("Hidden")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("hidden");
+
+                    b.Property<TimeSpan>("Length")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("length");
+
+                    b.Property<string>("Reason")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasColumnName("content");
+                        .HasColumnName("reason");
 
-                    b.Property<string>("Description")
+                    b.Property<int>("Severity")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("severity");
+
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasColumnName("description");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("name");
-
-                    b.Property<string>("StampState")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("stamp_state");
+                        .HasColumnName("title");
 
                     b.HasKey("Id")
-                        .HasName("PK_book_terminal_entry");
+                        .HasName("PK_ban_template");
 
-                    b.HasIndex("Id")
-                        .IsUnique();
-
-                    b.ToTable("book_terminal_entry", (string)null);
+                    b.ToTable("ban_template", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
@@ -563,6 +570,8 @@ namespace Content.Server.Database.Migrations.Sqlite
 
                     b.HasIndex("ServerId")
                         .HasDatabaseName("IX_connection_log_server_id");
+
+                    b.HasIndex("Time");
 
                     b.HasIndex("UserId");
 
