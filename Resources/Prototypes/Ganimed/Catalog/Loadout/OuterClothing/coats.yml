@@ -317,13 +317,6 @@
   prototype: ClothingOuterCoatJensen
 
 - type: loadout
-  id: LoadoutOuterClothingClothingOuterCoatInspector
-  category: loadout-category-outerClothing
-  cost: 3
-  exclusive: true
-  prototype: ClothingOuterCoatInspector
-
-- type: loadout
   id: LoadoutOuterClothingClothingOuterDameDane
   category: loadout-category-outerClothing
   cost: 1

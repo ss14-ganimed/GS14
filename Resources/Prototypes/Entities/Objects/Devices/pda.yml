@@ -879,6 +879,7 @@
     scanDelay: 0
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
+    notificationsEnabled: false
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge

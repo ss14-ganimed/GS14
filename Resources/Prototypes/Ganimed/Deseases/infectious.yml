@@ -21,6 +21,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: Ultravasculine
+    min: 4
 ###    - !type:DiseaseReagentCure ### In Loving Memory, Lean
 ###      reagent: Lean            ### 2022/03/12 - 2022/03/13
 
@@ -48,6 +49,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: SpaceCleaner
+    min: 4
 
 - type: disease
   id: SpaceFlu
@@ -110,6 +112,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: BeepskySmash
+    min: 4
 
 
 - type: disease
@@ -196,6 +199,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: BananaHonk
+    min: 4
     stages:
     - 0
     - 1
@@ -240,6 +244,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: DemonsBlood
+    min: 4
 
 - type: disease
   id: Plague
@@ -391,6 +396,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: Slime
+    min: 4
     stages:
     - 0
     - 1
@@ -415,6 +421,7 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: Ethylredoxrazine
+    min: 4
 
 - type: disease
   id: UraniumPlague
@@ -438,3 +445,4 @@
   - !type:DiseaseReagentCure
     reagent:
       ReagentId: Uranium
+    min: 4

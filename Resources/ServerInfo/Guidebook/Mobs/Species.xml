@@ -10,6 +10,7 @@
   <GuideEntityEmbed Entity="MobHuman" Caption="Человек"/>
   </Box>
   <Box>
+  <GuideEntityEmbed Entity="MobVox" Caption="Vox"/>
   <GuideEntityEmbed Entity="MobMoth" Caption="Ниан"/>
   <GuideEntityEmbed Entity="MobReptilian" Caption="Унатх"/>
   <GuideEntityEmbed Entity="MobSlimePerson" Caption="Слаймолюд"/>

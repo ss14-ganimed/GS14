@@ -22,6 +22,8 @@ public sealed partial class AdminVerbSystem
     private const string DefaultTraitorRule = "Traitor";
 
     [ValidatePrototypeId<EntityPrototype>]
+    private const string DefaultInitialInfectedRule = "Zombie";
+    
     private const string DefaultHereticRule = "Heretic";
 
     [ValidatePrototypeId<EntityPrototype>]
@@ -66,6 +68,20 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(traitor);
 
+        Verb initialInfected = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-initial-infected"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/job_icons.rsi"), "InitialInfected"),
+            Act = () =>
+            {
+                _antag.ForceMakeAntag<ZombieRuleComponent>(targetPlayer, DefaultInitialInfectedRule);
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-make-initial-infected"),
+        };
+        
+        args.Verbs.Add(initialInfected);
         Verb heretic = new()
         {
             Text = Loc.GetString("admin-verb-text-make-heretic"),

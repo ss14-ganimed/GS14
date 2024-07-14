@@ -122,3 +122,5 @@ barsign-prototype-description-empbarsign = Что-то пошло совсем �
 ## SignOff
 
 barsign-prototype-description-sign-off = Этот знак, похоже, не включен.
+barsign-ui-menu = Настройка вывески бара
+barsign-ui-set-label = Выбрать вывеску:

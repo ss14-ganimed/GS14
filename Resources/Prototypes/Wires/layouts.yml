@@ -4,6 +4,7 @@
   - !type:PowerWireAction
   - !type:PowerWireAction
     pulseTimeout: 15
+  - !type:LogWireAction
   - !type:DoorBoltWireAction
   - !type:DoorBoltLightWireAction
   - !type:DoorTimingWireAction
@@ -73,6 +74,7 @@
   wires:
   - !type:PowerWireAction
   - !type:AccessWireAction
+  - !type:LogWireAction
   - !type:VendingMachineContrabandWireAction
   - !type:VendingMachineEjectItemWireAction
   - !type:SpeechWireAction
@@ -82,6 +84,7 @@
   wires:
   - !type:PowerWireAction
   - !type:AccessWireAction
+  - !type:LogWireAction
   - !type:AirAlarmPanicWire
   - !type:AtmosMonitorDeviceNetWire
 
@@ -137,6 +140,7 @@
   - !type:PowerWireAction
   - !type:PowerWireAction
     pulseTimeout: 15
+  - !type:LogWireAction
   - !type:DoorBoltWireAction
   - !type:DoorBoltLightWireAction
   - !type:DoorTimingWireAction

@@ -22,6 +22,10 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - HeadTop
+    - HeadSide
   - type: StaminaProtection
     coefficient: 0.95
 
@@ -118,6 +122,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
   - type: StaminaProtection
     coefficient: 0.9
 
@@ -174,6 +180,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
 
 #Templar Helmet
 - type: entity
@@ -253,6 +261,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
 
 #Atmos Fire Helmet
 - type: entity
@@ -282,6 +292,8 @@
     slots:
     - Hair
     - Snout
+    - HeadTop
+    - HeadSide
   - type: BreathMask
 
 #Chitinous Helmet

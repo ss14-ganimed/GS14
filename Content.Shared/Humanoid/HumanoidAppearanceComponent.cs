@@ -23,6 +23,9 @@ public sealed partial class HumanoidAppearanceComponent : Component
     [DataField, AutoNetworkedField]
     public HashSet<HumanoidVisualLayers> PermanentlyHidden = new();
 
+    [DataField]
+    public HashSet<HumanoidVisualLayers> HideLayersOnEquip = [HumanoidVisualLayers.Hair];
+
     // Couldn't these be somewhere else?
 	[ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]

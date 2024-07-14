@@ -24,3 +24,5 @@ roles-antag-terminator-name = Экстерминатор
 roles-antag-terminator-objective = Убейте цель любой ценой, от этого зависит будущее.
 roles-antag-dragon-name = Космический дракон
 roles-antag-dragon-objective = Создайте армию карпов для захвата квадранта.
+roles-antag-syndicate-agent-sleeper-name = Спящий агент Синдиката
+roles-antag-syndicate-agent-sleeper-objective = Разновидность агента Синдиката, который может активироваться и начать действие в любой момент смены.

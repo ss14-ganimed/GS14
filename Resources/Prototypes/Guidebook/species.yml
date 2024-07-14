@@ -47,6 +47,11 @@
   text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"
 
 - type: guideEntry
+  id: Vox
+  name: species-name-vox
+  text: "/ServerInfo/Guidebook/Mobs/Vox.xml"
+  
+- type: guideEntry
   id: Skrell
   name: species-name-skrell
   text: "/ServerInfo/Guidebook/Mobs/Skrell.xml"
