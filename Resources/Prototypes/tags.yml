@@ -13,6 +13,9 @@
   id: AirSensor
 
 - type: Tag
+  id: Laser
+
+- type: Tag
   id: Table
 
 - type: Tag
