@@ -339,7 +339,6 @@
         prob: 0.8
       - id: ClothingBeltSecurityFilled
       - id: ClothingHeadsetAltSecurity
-      - id: ClothingEyesGlassesSecurity
       - id: ClothingShoesBootsJackSecFilled
       - id: CigarGoldCase
         prob: 0.50

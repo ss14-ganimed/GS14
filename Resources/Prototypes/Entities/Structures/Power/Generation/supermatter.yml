@@ -63,6 +63,3 @@
       maxIntensity: 1000
     - type: GuideHelp
       guides: [ Supermatter, Power ]
-    - type: WarpPoint
-      follow: true
-      location: supermatter

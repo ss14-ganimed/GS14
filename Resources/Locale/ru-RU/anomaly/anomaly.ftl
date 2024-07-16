@@ -11,22 +11,22 @@ anomaly-scanner-component-scan-complete = Сканирование заверш�
 anomaly-scanner-ui-title = сканер аномалий
 anomaly-scanner-no-anomaly = Нет просканированной аномалии.
 anomaly-scanner-severity-percentage = Текущая опасность: [color=gray]{ $percent }[/color]
-anomaly-scanner-severity-percentage-unknown = Текущая опасность: [color=red]ERROR[/color]
+anomaly-scanner-severity-percentage-unknown = Текущая опасность: [color=red]ОШИБКА[/color]
 anomaly-scanner-stability-low = Текущее состояние аномалии: [color=gold]Распад[/color]
 anomaly-scanner-stability-medium = Текущее состояние аномалии: [color=forestgreen]Стабильное[/color]
 anomaly-scanner-stability-high = Текущее состояние аномалии: [color=crimson]Рост[/color]
-nomaly-scanner-stability-unknown = Текущее состояние аномалии: [color=red]ERROR[/color]
+anomaly-scanner-stability-unknown = Текущее состояние аномалии: [color=red]ОШИБКА[/color]
 anomaly-scanner-point-output = Пассивная генерация очков: [color=gray]{ $point }[/color]
-anomaly-scanner-point-output-unknown = Пассивная генерация очков: [color=red]ERROR[/color]
+anomaly-scanner-point-output-unknown = Пассивная генерация очков: [color=red]ОШИБКА[/color]
 anomaly-scanner-particle-readout = Анализ реакции на частицы:
 anomaly-scanner-particle-danger = - [color=crimson]Опасный тип:[/color] { $type }
-anomaly-scanner-particle-transformation = - [color=#6b75fa]Тип трансформации:[/color] {$type}
-anomaly-scanner-particle-danger-unknown = - [color=crimson]Опасный тип::[/color] [color=red]ERROR[/color]
-anomaly-scanner-particle-unstable-unknown = - [color=plum]Нестабильный тип:[/color] [color=red]ERROR[/color]
-anomaly-scanner-particle-containment-unknown = - [color=goldenrod]Сдерживающий тип:[/color] [color=red]ERROR[/color]
-anomaly-scanner-particle-transformation-unknown = - [color=#6b75fa]Тип трансформации:[/color] [color=red]ERROR[/color]
 anomaly-scanner-particle-unstable = - [color=plum]Нестабильный тип:[/color] { $type }
 anomaly-scanner-particle-containment = - [color=goldenrod]Сдерживающий тип:[/color] { $type }
+anomaly-scanner-particle-transformation = - [color=#6b75fa]Трансформирующий тип:[/color] { $type }
+anomaly-scanner-particle-danger-unknown = - [color=crimson]Опасный тип:[/color] [color=red]ОШИБКА[/color]
+anomaly-scanner-particle-unstable-unknown = - [color=plum]Нестабильный тип:[/color] [color=red]ОШИБКА[/color]
+anomaly-scanner-particle-containment-unknown = - [color=goldenrod]Сдерживающий тип:[/color] [color=red]ОШИБКА[/color]
+anomaly-scanner-particle-transformation-unknown = - [color=#6b75fa]Трансформирующий тип:[/color] [color=red]ОШИБКА[/color]
 anomaly-scanner-pulse-timer = Время до следующего импульса: [color=gray]{ $time }[/color]
 anomaly-gorilla-core-slot-name = Ядро аномалии
 anomaly-gorilla-charge-none = Внутри нет [bold]ядра аномалии[/bold].
@@ -72,22 +72,21 @@ anomaly-command-supercritical = Целевая аномалия переходи
 # Flavor text on the footer
 anomaly-generator-flavor-left = Аномалия может возникнуть внутри оператора.
 anomaly-generator-flavor-right = v1.1
-
-anomaly-behavior-unknown = [color=red]ERROR. Информация недоступна.[/color]
-anomaly-behavior-title = анализ отклонений поведения:
-anomaly-behavior-point =[color=gold]Аномалия дает {$mod}% очков[/color] 
-anomaly-behavior-safe = [color=forestgreen]Аномалия чрезвычайно стабильна.   Крайне редкие пульсации.[/color]
-anomaly-behavior-slow = [color=forestgreen]Частота пульсаций гораздо реже[/color]
-anomaly-behavior-light = [color=forestgreen]Мощность пульсации значительно снижена.[/color]
-anomaly-behavior-balanced = Отклонений в поведении не обнаружено. 
-anomaly-behavior-delayed-force = Частота пульсаций сильно снижается, но их мощность увеличивается. 
-anomaly-behavior-rapid = Частота пульсации значительно выше, но ее сила ослаблена. 
+anomaly-behavior-unknown = [color=red]ОШИБКА. Невозможно считать.[/color]
+anomaly-behavior-title = Анализ отклонений поведения:
+anomaly-behavior-point = [color=gold]Аномалия генерирует { $mod }% очков[/color]
+anomaly-behavior-safe = [color=forestgreen]Аномалия чрезвычайно стабильна. Крайне редкие импульсы.[/color]
+anomaly-behavior-slow = [color=forestgreen]Частота импульсов значительно снижена.[/color]
+anomaly-behavior-light = [color=forestgreen]Мощность импульсов значительно снижена.[/color]
+anomaly-behavior-balanced = Отклонения поведения не обнаружены.
+anomaly-behavior-delayed-force = Частота пульсаций значительно снижена, но их сила повышена.
+anomaly-behavior-rapid = Частота пульсаций значительно повышена, но их сила снижена.
 anomaly-behavior-reflect = Обнаружено защитное покрытие.
 anomaly-behavior-nonsensivity = Обнаружена слабая реакция на частицы.
-anomaly-behavior-sensivity = Обнаружена усиленная реакция на частицы.
-anomaly-behavior-secret = Обнаружено вмешательство. Некоторые данные не могут быть прочитаны 
-anomaly-behavior-inconstancy = [color=crimson]Обнаружено непостоянство. Типы частиц могут меняться со временем.[/color]
-anomaly-behavior-fast = [color=crimson]Частота пульсации сильно увеличена.[/color]
-anomaly-behavior-strenght = [color=crimson]Сила пульсации значительно увеличена.[/color]
-anomaly-behavior-moving = [color=crimson]Обнаружена нестабильность координат.[/color]
+anomaly-behavior-sensivity = Обнаружена сильная реакция на частицы.
 anomaly-behavior-invisibility = Обнаружено искажение светового потока.
+anomaly-behavior-secret = Обнаружены помехи. Некоторые данные не могут быть считаны
+anomaly-behavior-inconstancy = [color=crimson]Обнаружено непостоянство. Со временем типы частиц могут поменяться.[/color]
+anomaly-behavior-fast = [color=crimson]Частота импульсов значительно повышена.[/color]
+anomaly-behavior-strenght = [color=crimson]Мощность импульсов значительно повышена.[/color]
+anomaly-behavior-moving = [color=crimson]Обнаружена координатная нестабильность.[/color]

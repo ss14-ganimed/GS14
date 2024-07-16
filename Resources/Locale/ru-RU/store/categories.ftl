@@ -14,7 +14,7 @@ store-category-job = Работа
 store-category-pointless = Безделушки
 # Revenant
 store-category-abilities = Способности
-
+# Wizard
 store-caregory-spellbook-offensive = Атакующие заклинания
 store-caregory-spellbook-defensive = Защитные заклинания
 store-caregory-spellbook-utility = Вспомогательные заклинания

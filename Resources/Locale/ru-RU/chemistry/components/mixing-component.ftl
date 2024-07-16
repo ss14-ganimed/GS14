@@ -8,6 +8,7 @@ mixing-verb-electrolysis = электролиз
 mixing-verb-holy = благословение
 mixing-verb-stir = метод стир
 mixing-verb-shake = метод шейк
+
 ## Entity
 
 default-mixing-success = Вы смешиваете { $mixed } при помощи { $mixer }
