@@ -1298,3 +1298,29 @@
         Cold: 10
   - type: TimedDespawn
     lifetime: 3
+
+- type: entity
+  id: BulletPlasmacutterCharge
+  name: charge bolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Reflective
+    reflective:
+      - Energy
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: purple
+  - type: Projectile
+    damage:
+      types:
+        Heat: 10
+        Structural: 10
+    penetrationScore: 6
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: GatheringProjectile
+    amount: 10

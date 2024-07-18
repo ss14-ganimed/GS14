@@ -68,9 +68,14 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             _sharedCameraRecoil.KickCamera(target, direction);
         }
 
-        component.DamagedEntity = true;
+        if (component.PenetrationScore > 0)
+        {
+            component.DamagedEntity = false;
+        }
+        else
+           component.DamagedEntity = true;
 
-        if (component.DeleteOnCollide)
+        if (component.DeleteOnCollide && component.DamagedEntity)
             QueueDel(uid);
 
         if (component.ImpactEffect != null && TryComp(uid, out TransformComponent? xform))

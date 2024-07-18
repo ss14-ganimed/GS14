@@ -8,8 +8,9 @@
     state: handdrill
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 10000
   recipeUnlocks:
+  - WeaponPlasmaCutter
   - MiningDrill
   - BorgModuleMining
   - OreProcessorIndustrialMachineCircuitboard
