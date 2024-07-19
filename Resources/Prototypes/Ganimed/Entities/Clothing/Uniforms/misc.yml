@@ -85,7 +85,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtCoronerBlack
   name: black coroner jumpskirt
   description: Total overhaul vastly different from the usual coroner uniform. Personel freak out when they can't see you from the shadows.
@@ -113,7 +113,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtBrigmedicBlack
   name: black brigmedic jumpskirt
   description: Total overhaul vastly different from the usual brigmedic uniform. It is generally a bad idea to be bright if you are on a battlefield.

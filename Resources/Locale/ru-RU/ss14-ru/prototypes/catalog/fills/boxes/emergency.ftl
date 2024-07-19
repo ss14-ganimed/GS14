@@ -34,3 +34,6 @@ ent-BoxSurvivalSyndicate = расширенный аварийный запас
 ent-BoxSurvivalSyndicateNitrogen = { ent-BoxSurvivalSyndicate }
     .suffix = Синдикат Азот N2
     .desc = { ent-BoxSurvivalSyndicate.desc }
+ent-BoxSurvivalBrigmedic = аварийный запас
+    .desc = Коробка с базовым набором для выживания.
+    .suffix = Бригмедик, MedSec
