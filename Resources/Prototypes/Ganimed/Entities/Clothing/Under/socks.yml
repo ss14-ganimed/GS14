@@ -235,6 +235,34 @@
     clothingVisuals:
       socks:
         - state: equipped-FEET
+        
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsSky
+  name: Light striped stockings
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/sky.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/sky.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET        
+
+- type: entity
+  parent: ClothingUnderSocksBase
+  id: ClothingUnderStockingsCat
+  name: Cat stockings
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Ganimed/Clothing/Under/Socks/stockings/cat.rsi
+  - type: Clothing
+    sprite: Ganimed/Clothing/Under/Socks/stockings/cat.rsi
+    clothingVisuals:
+      socks:
+        - state: equipped-FEET 
 
 - type: entity
   parent: ClothingUnderSocksBase
