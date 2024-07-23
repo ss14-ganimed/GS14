@@ -48,6 +48,21 @@
   cost: 0
   exclusive: true 
   prototype: ClothingUnderStockingsWhite
+  
+- type: loadout
+  id: LoadoutClothingUnderStockingsCat 
+  category: loadout-category-under
+  cost: 1
+  exclusive: true
+  sponsorOnly: true  
+  prototype: ClothingUnderStockingsCat
+
+- type: loadout
+  id: LoadoutClothingUnderStockingsSky 
+  category: loadout-category-under
+  cost: 0
+  exclusive: true 
+  prototype: ClothingUnderStockingsSky    
 
 - type: loadout
   id: LoadoutClothingSocksWhite
