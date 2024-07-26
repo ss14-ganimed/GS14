@@ -1,0 +1,6 @@
+- type: loadout
+  id: LoadoutNeckClothingNeckRevBandage
+  category: loadout-category-neck
+  cost: 0
+  exclusive: true
+  prototype: ClothingNeckRevBandage

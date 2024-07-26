@@ -11,6 +11,58 @@
   cost: 1
   exclusive: true
   prototype: ClothingUnderSocksBee
+  
+- type: loadout
+  id: LoadoutClothingUnderStockingsBee
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderStockingsBee  
+
+- type: loadout
+  id: LoadoutClothingUnderStockingsDark
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderStockingsDark  
+
+- type: loadout
+  id: LoadoutClothingUnderStockingsFishnets
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderStockingsFishnets  
+
+- type: loadout
+  id: LoadoutClothingUnderStockingsHOS
+  category: loadout-category-under
+  cost: 1
+  exclusive: true
+  whitelistJobs:
+    - HeadOfSecurity  
+  prototype: ClothingUnderStockingsHOS 
+
+- type: loadout
+  id: LoadoutClothingUnderStockingsWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true 
+  prototype: ClothingUnderStockingsWhite
+  
+- type: loadout
+  id: LoadoutClothingUnderStockingsCat 
+  category: loadout-category-under
+  cost: 1
+  exclusive: true
+  sponsorOnly: true  
+  prototype: ClothingUnderStockingsCat
+
+- type: loadout
+  id: LoadoutClothingUnderStockingsSky 
+  category: loadout-category-under
+  cost: 0
+  exclusive: true 
+  prototype: ClothingUnderStockingsSky    
 
 - type: loadout
   id: LoadoutClothingSocksWhite
@@ -60,3 +112,17 @@
   cost: 0
   exclusive: true
   prototype: ClothingSocksYellow
+  
+- type: loadout
+  id: LoadoutClothingUnderlongSocksDark
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderlongSocksDark
+  
+- type: loadout
+  id: LoadoutClothingUnderlongSocksWhite
+  category: loadout-category-under
+  cost: 0
+  exclusive: true
+  prototype: ClothingUnderlongSocksWhite  
