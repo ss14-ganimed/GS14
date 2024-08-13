@@ -1,0 +1,29 @@
+- type: entity
+  id: WeaponPlasmaCutter
+  parent: BaseItem
+  name: plasmacutter
+  description: Plasma cutter
+  components:
+  - type: Sprite
+    sprite: Ganimed/Objects/Guns/Battery/cutter.rsi
+    layers:
+    - state: icon
+  - type: Gun
+    fireRate: 0.8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: AmmoCounter
+  - type: Appearance
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+    rechargeSound:
+      path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BulletPlasmacutterCharge
+    capacity: 1
+    count: 1
+  - type: StaticPrice
+    price: 200
