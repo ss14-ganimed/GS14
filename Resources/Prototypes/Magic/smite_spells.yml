@@ -18,3 +18,21 @@
       state: gib
     event: !type:SmiteSpellEvent
       speech: action-speech-spell-smite
+
+- type: entity
+  id: ActionGhoul
+  name: SmiteGhoul
+  description: Instantly gibs a ghoul.
+  components:
+  - type: EntityTargetAction
+    useDelay: 1
+    itemIconStyle: BigAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: true
+    interactOnMiss: false
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: gib
+    event: !type:SmiteSpellEvent

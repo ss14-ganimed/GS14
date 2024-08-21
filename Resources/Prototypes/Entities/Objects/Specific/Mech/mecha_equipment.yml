@@ -68,6 +68,9 @@
     - collection: TrollAnimals
     - collection: TrollBeeping
     - collection: TrollEsword
+  - type: Tag
+    tags:
+    - FunMech
   - type: UIFragment
     ui: !type:MechSoundboardUi
   - type: UseDelay
