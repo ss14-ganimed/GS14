@@ -342,6 +342,7 @@
   - type: Fiber
     fiberMaterial: fibers-insulative
     fiberColor: fibers-yellow
+  - type: Ghoul
 
 - type: entity
   parent: ClothingHandsButcherable
