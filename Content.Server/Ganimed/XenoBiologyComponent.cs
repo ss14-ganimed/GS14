@@ -1,4 +1,4 @@
-/// Maded by Gorox for Enterprise. See CLA
+/// Maded by Gorox CC-BY-SA 3.0
 using Content.Server.Ganimed.XenoBiology.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;

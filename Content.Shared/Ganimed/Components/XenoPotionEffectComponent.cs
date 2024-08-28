@@ -1,4 +1,4 @@
-/// Maded by Gorox for Enterprise. See CLA
+/// Maded by Gorox CC-BY-SA 3.0
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 

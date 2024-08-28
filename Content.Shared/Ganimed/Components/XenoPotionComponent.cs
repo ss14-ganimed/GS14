@@ -1,4 +1,4 @@
-/// Maded by Gorox for Enterprise. See CLA
+/// Maded by Gorox CC-BY-SA 3.0
 namespace Content.Shared.Ganimed.XenoPotion.Components;
 
 [RegisterComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
