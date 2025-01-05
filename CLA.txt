@@ -1,56 +1,58 @@
-Предисловие
-После получения копии лицензионного объекта любым способом любое лицо может использовать его, если оно
-принимает и соглашается со всеми условиями настоящей лицензии. Нарушение лицензионных условий дает нам
-(Лицензиару) право применять методы правовой и технологической защиты с использованием
-DMCA и/или другое законодательство государств, под юрисдикцией которых находятся хостинг-провайдеры
-и другие информационные посредники, предоставляющие услуги нарушителям
-условий настоящей лицензии. Принятие условий настоящей лицензии означает окончательное заключение
-между вами и Enterprise действует простая неисключительная лицензия на безвозмездной основе, именуемая
-в дальнейшем "Соглашение". Соглашение не содержит положений, регулирующих вопросы
-, связанные с обработкой персональных данных.
+Preamble
+Upon receipt of a copy of the license object by any means, any person can use it if he 
+accepts and agrees to all the terms of this license. Violation of the license terms grants us 
+(the Licensor) the right to apply methods of legal and technological protection using the 
+DMCA and/or other legislation of the states under whose jurisdiction hosting providers 
+and other information intermediaries are located, providing services to violators of the 
+terms of this license. Acceptance of the terms of this license means a definitive conclusion 
+between you and Enterprise of a gratuitous simple non–exclusive license, hereinafter referred 
+to as the "Agreement". The Agreement does not include provisions regulating issues 
+related to the processing of personal data.
 
-Определения.
+Definitions.
 
-Сборка - это объект соглашения, результат оригинальной авторской работы коллектива
-авторов (далее именуемого "Компания"), сложный объект интеллектуальной собственности
-– видеоигра, включающая, но не ограничивающаяся этим, исходный код, объектный код, инструменты, игровые ресурсы,
-спецификации, дизайн пользовательского интерфейса, элементы повествования и другие креативные элементы, основанные на
-доработка и перевод на русский язык открытой версии "Космической станции 14" и
-художественное видение авторов. Набор отдельных элементов - это сборка. Любые элементы, отличные
-от оригинальных, являются объектами авторского права и/или смежных прав, созданными
-творческим трудом коллектива.
-Вклад – означает любую оригинальную авторскую работу участников, включая любые
-модификации или дополнения к сборке (любой исходный код, объектный код, исправления, инструмент,
-образец, графику, ресурсы, спецификации, руководства, документацию), которая намеренно
-предоставляется Лицензиатом Лицензиару. Для целей настоящего определения
-отправка означает любую форму электронного, устного или письменного сообщения, отправляемого Лицензиару
-или его представителям, включая, но не ограничиваясь этим, сообщения в электронных списках рассылки,
-системах контроля исходного кода и системах отслеживания проблем, управляемых Лицензиатом или от его имени.
-Компании с целью обсуждения или улучшения программного обеспечения или проектной документации
-и содера. Сообщения, в отношении которых в письменной форме прямо указано, что они "не являются
-вкладом" не будет считаться вкладом. При внесении вклада в
-Сборку, Участник предоставляет Компании простую, бесплатную, безотзывную, неисключительную
-лицензию на весь период действия прав Участника на Вклад
-, предусмотренных законодательством государства-юрисдикции Участника
-и/или международным законодательством для определенных форм вклада.
-Лицензиары – Егор Белоречев (Discord - smeshinka112) и Иван Романов (Discord - yuoko).
-Лицензиаты - Siberia Server Space Station 14. (Право на коммерческое использование и публичный хостинг, но не распространение)
-Объем предоставляемых прав.
+A build is an object of Agreement, the result of the original author's work of a team of 
+authors (hereinafter referred to as the "Company"), a complex intellectual property object 
+– a video game that including, but not limited to, source, object code, tools, game assets, 
+specifications, UI/UX design, elements of narrative and other creative character based on 
+the revision and translation into Russian of the open version of Space Station 14 and the 
+artistic vision of the authors. The set of individual elements is a Build. Any elements other 
+than the original elements are objects of copyright and/or related rights created by the 
+creative work of the collective.
+Contribution – means any original author's work of Contributors, including any 
+modifications or additions to the Build (any source code, object code, correction, tool, 
+sample, graphics, assets, specifications, manuals, documentation), which is intentionally 
+provided from the Licensee to the Licensor. For the purposes of this definition, 
+submission means any form of electronic, oral or written communication sent to Licensor 
+or its representatives, including, but not limited to, messages on electronic mailing lists, 
+source code control systems and issue tracking systems operated by or on behalf of the 
+Company for the purposes of discussing or improving software or project documentation 
+and soder. Communications for which it is explicitly stated in writing as "Not a 
+contribution" will not be considered a contribution. When providing a Contribution to the 
+Build, the Contributor provides the Company with a simple, free, irrevocable, non-exclusive
+license for the entire period of validity of the Contributor's rights to the Contribution provided
+for by the legislation of the state-jurisdiction of the Contributor 
+and/or international legislation for certain forms of Contribution.
+Licensor – Enterprise. Authorized representative of the Licensors on the issue of granting 
+permits, legal and technical issues – Egor Belorechev (Discord - smeshinka112) and Ivan Romanov (Discord - yuoko).
+Licensees are Siberia Server Space Station 14. (The right to commercial use and public hosting, but not distribution).
 
-Лицензия предоставляет неограниченному кругу лиц право копировать и вносить изменения
-исключительно с целью улучшения игры и при условии дальнейшей передачи таких
-изменений в Enterprise на условиях вклада, а также для непубличного размещения и
-запуска сборки на компьютере Лицензиата в целях улучшения игры. цель некоммерческого использования
-по прямому назначению (предоставление доступа игрокам и игровому процессу). Эта лицензия
-прямо запрещает коммерческое использование, публичный хостинг, а также нелицензионное использование. Использование
-Сборки или ее элементов в нарушение условий настоящей Лицензии предоставляет Лицензиару
-право обратиться к хостинг-провайдеру и другим лицам - информационным посредникам
-с просьбой заблокировать хостинг. Лицензиат может осуществлять публичный хостинг Сборки только в том случае, если он получит
-прямое разрешение от Лицензиара.
+The scope of the rights granted.
 
-Оговорка о типах лицензий.
+The license grants an unlimited number of persons the right to copy and make changes 
+solely for the purpose of improving the game and subject to the further transfer of such 
+changes to Enterprise on the terms of the Contribution, as well as for non-public hosting and 
+launching the Build on the Licensee's computer for the purpose of non-commercial use 
+for its intended purpose (providing access to Players and the Game process). This license 
+expressly prohibits commercial use, public hosting, as well as non-licensed use. The use 
+of the Build or its elements in violation of the terms of this License grants the Licensor 
+the right to contact the hosting provider and other persons - information intermediaries 
+to block hosting. The Licensee can carry out public hosting of the Build only if he receives 
+direct permission from the Licensor.
 
-Отдельные элементы сборки (графика, звуки, исходный код) могут распространяться по
-лицензии, отличной от этой, с одобрения Лицензиара. Большинство активов лицензированы в соответствии с CC-BY-SA 3.0, если только
-указано иное. Ресурсы имеют свою собственную лицензию и авторские права в файле метаданных. Если
-тип лицензии не указан, такие файлы распространяются на условиях этой лицензии.
+A reservation about the types of licenses.
+
+Individual elements of the Build (graphics, sounds, source code) may be distributed under 
+a license other than this one. Most assets are licensed under CC-BY-SA 3.0 unless 
+otherwise specified. Assets have their own license and copyright in the metadata file. If 
+the license type is not specified, such files are distributed under the terms of this license.
